@@ -3,7 +3,8 @@ name: build
 description: >-
   Figma-to-code workflow for this project. Use when the user invokes
   `/build <figma-link>` or asks to build a page, section, card, or component
-  from a Figma design URL.
+  from a Figma design URL. Builds one section at a time and requires a
+  pixel-perfect Figma match before moving to the next section.
 disable-model-invocation: true
 ---
 
@@ -14,6 +15,20 @@ Convert a Figma frame into production React/Next.js code for this repository.
 **Invocation:** `/build <figma-link>`
 
 The link may point to any frame: a full page, section, card, component, or part of a component. Always start by asking the scoping questions below before writing code.
+
+## Core rule — one section at a time, match Figma perfectly
+
+**Never build an entire page in one pass.** Work section by section:
+
+1. Identify all sections in the page (from Figma metadata).
+2. Build **only the first section** (or the section the user names).
+3. Match that section **as closely as possible** to the Figma screenshot — spacing, typography, colors, layout, assets, and component states.
+4. **Stop** after that section. Tell the user which section is done and which is next.
+5. Wait for the user to review. They will say `/build` again (or ask to fix/match) for the same section or approve and move on.
+6. If the section is not a perfect match, refine it against Figma until it is — **do not start the next section** until the current one is approved.
+7. Repeat for each section until the full page is complete.
+
+**Figma fidelity is mandatory for every section.** A section is not done when code compiles — it is done when it visually matches the Figma design for that frame.
 
 ---
 
@@ -58,12 +73,26 @@ If the URL has **no `node-id`**, ask the user for a node-specific link. Do not g
 
 ## Step 2 — Fetch and analyze the design
 
-1. Call Figma MCP **`get_design_context`** with `fileKey`, `nodeId`, `clientLanguages: "typescript"`, `clientFrameworks: "react,nextjs"`.
-2. Review the returned screenshot, reference code, metadata, and asset download URLs.
-3. Call **`get_code_connect_map`** when available — prefer mapped codebase components over generated markup.
-4. Identify the layout hierarchy: sections, cards, text, buttons, icons, content images, and decorative backgrounds.
+### Full page link (`page` frame type)
 
-Treat Figma output as **reference only**. Adapt to this project's stack and components.
+1. Call **`get_metadata`** or **`get_design_context`** on the page node to list child section frames and their `nodeId`s.
+2. Present the section list to the user (name + node ID + order).
+3. Fetch design context for **only the current section's `nodeId`** — not the whole page at once.
+4. If the page is too large for one `get_design_context` call, always split by section sublayer.
+
+### Single section / card / component link
+
+1. Call Figma MCP **`get_design_context`** with `fileKey`, `nodeId`, `clientLanguages: "typescript"`, `clientFrameworks: "react,nextjs"`.
+2. Call **`get_screenshot`** on the same node for visual comparison while building.
+
+### For every build (all frame types)
+
+1. Review the returned screenshot, reference code, metadata, and asset download URLs.
+2. Call **`get_code_connect_map`** when available — prefer mapped codebase components over generated markup.
+3. Identify the layout hierarchy: sections, cards, text, buttons, icons, content images, and decorative backgrounds.
+4. Note exact values from Figma: font sizes, font weights, line heights, gaps, padding, border radius, gradients, and image positions.
+
+Treat Figma output as **reference only**. Adapt to this project's stack and components — but the **visual result must match Figma**.
 
 ---
 
@@ -79,15 +108,33 @@ Treat Figma output as **reference only**. Adapt to this project's stack and comp
 
 ### Sections
 
-**Always** wrap section content in:
+**Always** wrap section content in `PrimarySection`, then place all layout/content inside a `.container` div as the **direct child** (or wrapping all children):
 
 ```tsx
 import PrimarySection from '@/components/sections/primary-section';
 
 <PrimarySection bg="section-N" className="...">
-  {/* section content */}
+  <div className="container">
+    {/* all section content goes here */}
+  </div>
 </PrimarySection>
 ```
+
+**Container rules (strict):**
+
+- **DO** use the `.container` class on an inner wrapper inside every `PrimarySection`.
+- **DO** put headings, grids, cards, images, and CTAs inside `.container` — not directly on `PrimarySection`.
+- **DO** use `.container` in the site header and footer too.
+- **DO NOT** replace `.container` with ad-hoc `mx-auto max-w-[1440px]` classes.
+- **DO NOT** skip `.container` even when a section has a full-bleed background — the background stays on `PrimarySection`; content stays in `.container`.
+
+The `.container` class is defined in `app/globals.css`:
+
+```
+mx-auto w-full max-w-[1440px] px-6 lg:px-0
+```
+
+Matches the Figma 1440px content width with responsive side padding.
 
 Available `bg` keys (read `components/sections/primary-section.tsx` for the current list):
 
@@ -202,8 +249,18 @@ app/{route}/
 ```
 
 - `{route}` = kebab-case (e.g. `pricing`, `about-us`). Home uses `app/page.tsx` with `app/_components/` if sections are split out.
-- Each section file exports one default component wrapped in `PrimarySection`.
+- Each section file exports one default component wrapped in `PrimarySection` with a `.container` inside.
 - `page.tsx` imports and stacks sections in design order.
+- **Build and wire one section file at a time.** Add the new import to `page.tsx` only after the current section matches Figma.
+- Keep a running section tracker and report progress after each section:
+
+```
+Page build progress:
+- [x] Hero section — matched ✓
+- [ ] Stats section — next
+- [ ] Services section
+- [ ] ...
+```
 
 ### `section`
 
@@ -242,23 +299,41 @@ Place relative to scope:
 
 ---
 
-## Step 8 — Implementation checklist
+## Step 8 — Section build loop (mandatory)
 
-Copy and track progress:
+For each section, repeat this loop until the user approves:
 
 ```
-Build progress:
-- [ ] Scoping questions answered
-- [ ] Figma design fetched (get_design_context)
-- [ ] Layout analyzed; sections/cards identified
-- [ ] Section bg keys chosen (no Figma backgrounds downloaded)
+Current section: {section-name}
+Section build progress:
+- [ ] Figma design fetched for this section only (get_design_context + get_screenshot)
+- [ ] Layout analyzed against Figma screenshot
+- [ ] Section bg key chosen (no Figma backgrounds downloaded)
 - [ ] Card bg keys chosen (no Figma backgrounds downloaded)
 - [ ] Icons/content images downloaded with SEO names
-- [ ] Files created at correct paths
-- [ ] PrimarySection / PrimaryCard used for all sections/cards
-- [ ] Target page updated (if not a new page)
-- [ ] Lint clean
+- [ ] Section file created at correct path
+- [ ] PrimarySection + .container used
+- [ ] PrimaryCard used for all cards in section
+- [ ] Spacing, typography, colors match Figma
+- [ ] Asset sizes and positions match Figma
+- [ ] Responsive layout checked
+- [ ] Lint clean on touched files
+- [ ] Visually compared to Figma screenshot — match confirmed
+- [ ] User approved — ready for next section
 ```
+
+**After each section:**
+
+1. Run `npm run lint` on touched files.
+2. Compare the built section against the Figma `get_screenshot` output — fix any visual gaps.
+3. Report: section name, what was built, what matches, and **which section is next**.
+4. **Stop.** Do not begin the next section until the user runs `/build` again or explicitly approves.
+
+**When the user says "match Figma" or `/build` on the same section:**
+
+- Re-fetch `get_design_context` and `get_screenshot` for that section's node.
+- Diff the implementation against the screenshot: spacing, font sizes, colors, image placement, button styles, card borders.
+- Fix until the section is a pixel-accurate match, then stop again.
 
 ### Code quality
 
@@ -266,19 +341,25 @@ Build progress:
 - Prefer semantic HTML (`section` content inside `PrimarySection`, headings in order).
 - Keep components small; one section per file for pages.
 - Use `@/` path alias for imports.
+- Use exact copy text from Figma — do not paraphrase headings or labels.
 
 ---
 
-## Step 9 — Verify
+## Step 9 — Verify (per section, before marking done)
 
 1. Run `npm run lint` on touched files.
 2. Confirm no new files under `public/images/backgrounds/`.
-3. Confirm every section uses `PrimarySection` and every card uses `PrimaryCard`.
-4. Confirm downloaded assets are named descriptively and referenced correctly.
+3. Confirm the section uses `PrimarySection` and every card uses `PrimaryCard`.
+4. Confirm the section has a `.container` div wrapping its content.
+5. Confirm downloaded assets are named descriptively and referenced correctly.
+6. **Side-by-side check:** implementation matches the Figma screenshot for this section's `nodeId`.
+7. **Do not proceed** to the next section until checks 1–6 pass and the user approves.
 
 ---
 
-## Example invocation
+## Example invocations
+
+### Single section
 
 ```
 /build https://www.figma.com/design/AbCdEf/My-Page?node-id=12-34
@@ -286,18 +367,41 @@ Build progress:
 
 1. Ask: frame type → `section`
 2. Ask: target page → `pricing`
-3. Fetch design for node `12:34`
-4. Create `app/pricing/_components/hero-section.tsx` with `PrimarySection bg="section-2"`
+3. Fetch design + screenshot for node `12:34`
+4. Create `app/pricing/_components/hero-section.tsx` with `PrimarySection bg="section-2"` and a `.container` inside
 5. Download icons to `public/images/icons/pricing-*.svg`
-6. Import section in `app/pricing/page.tsx`
+6. Match spacing/typography/colors to Figma screenshot
+7. Import section in `app/pricing/page.tsx`
+8. Run lint, report done, **stop**
+
+### Full page (section-by-section)
+
+```
+/build https://www.figma.com/design/AbCdEf/Home-Page?node-id=1-2
+```
+
+1. Ask: frame type → `page`
+2. Fetch page metadata → list sections: Hero, Stats, Services, About, …
+3. Build **Hero only** (first section `nodeId`)
+4. Match hero to Figma perfectly → lint → report → **stop**
+5. User reviews, says `/build` → build **Stats** section
+6. User says "match Figma" on Stats → refine Stats until perfect → **stop**
+7. Repeat until all sections are built and approved
 
 ---
 
 ## Anti-patterns (do not do)
 
+- Building multiple sections in one pass when the frame type is `page`
+- Moving to the next section before the current section matches Figma
+- Marking a section done without comparing against the Figma screenshot
+- Skipping `get_screenshot` visual comparison for the current section
+- Approximating spacing, font sizes, or colors instead of matching Figma values
 - Using `<section>` or `<div>` with custom background instead of `PrimarySection`
+- Placing section content directly on `PrimarySection` without a `.container` wrapper
+- Using `mx-auto max-w-[1440px]` instead of the `.container` class
 - Using a raw card container instead of `PrimaryCard`
 - Exporting Figma background images into the repo
-- Applying `bg-gradient-*` or arbitrary `bg-[url(...)]` on section/card wrappers outside the allowed keys
+- Applying `bg-gradient-*` or arbitrary background-url utilities on section/card wrappers outside the allowed keys
 - Skipping scoping questions and guessing file paths
 - Leaving Figma asset URLs in source instead of downloading content images locally
