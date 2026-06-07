@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 type SectionHeadingProps = {
@@ -18,22 +19,42 @@ export default function SectionHeading({
   return (
     <div
       className={cn(
-        'flex flex-col gap-4',
+        'flex flex-col',
+        subtitle ? 'gap-[18px]' : 'gap-4',
         align === 'center' && 'items-center text-center',
         className,
       )}
     >
-      <div className="flex flex-col gap-1">
-        <span className="text-gradient text-sm font-semibold uppercase tracking-wide">
-          {badge}
-        </span>
-        <span className="h-2 w-24 rounded-full bg-gradient-to-r from-[#ad26ff] to-[#ff3f85] opacity-60" />
+      <div
+        className={cn(
+          'flex flex-col gap-4',
+          align === 'center' && 'items-center',
+        )}
+      >
+        <div
+          className={cn(
+            'flex flex-col gap-1',
+            align === 'center' && 'items-center',
+          )}
+        >
+          <span className="text-gradient text-[22px] font-semibold leading-[1.45]">
+            {badge}
+          </span>
+          <Image
+            src="/images/our-services/ui/underline.svg"
+            alt=""
+            aria-hidden
+            width={131}
+            height={8}
+            className="h-2 w-[131px]"
+          />
+        </div>
+        <h2 className="max-w-[961px] text-[28px] font-semibold leading-[1.35] tracking-[0.36px] text-[#071431] sm:text-[32px] lg:text-[36px]">
+          {title}
+        </h2>
       </div>
-      <h2 className="max-w-4xl text-3xl font-semibold leading-tight tracking-tight text-[#071431] md:text-4xl lg:text-[36px] lg:leading-[1.35]">
-        {title}
-      </h2>
       {subtitle ? (
-        <p className="max-w-3xl text-base leading-relaxed text-[#404a60] md:text-lg">
+        <p className="max-w-[1090px] text-lg leading-normal text-[#404a60]">
           {subtitle}
         </p>
       ) : null}

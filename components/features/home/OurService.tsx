@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
+import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
 
 const GRADIENT_TEXT =
@@ -604,7 +605,7 @@ function PlatformIcon({
 
 function ServiceNumberBadge({ number }: { number: string }) {
   return (
-    <div className="relative flex size-11 shrink-0 items-center justify-center">
+    <div className="relative flex size-[44px] shrink-0 items-center justify-center">
       <Image
         src="/images/our-services/ui/hex-number.svg"
         alt=""
@@ -635,8 +636,8 @@ function PlatformTab({
       onClick={onSelect}
       aria-pressed={isActive}
       className={cn(
-        'flex w-full flex-col items-start justify-center rounded-lg px-4 py-2.5 transition-all xl:max-w-[220px]',
-        !isActive && 'border-[0.5px] border-[#8f2acd]',
+        'flex w-full flex-col items-start justify-center rounded-[8px] px-[16px] py-[10px] transition-all',
+        !isActive && 'border-[0.5px] border-solid border-[#8f2acd]',
       )}
       style={{
         backgroundImage: isActive ? ACTIVE_TAB_BG : INACTIVE_TAB_BG,
@@ -652,7 +653,7 @@ function PlatformTab({
         />
         <span
           className={cn(
-            'whitespace-nowrap text-lg font-semibold leading-normal',
+            'whitespace-nowrap text-[18px] font-semibold leading-normal',
             isActive ? 'text-white' : 'text-[#343e56]',
           )}
         >
@@ -670,8 +671,9 @@ export default function OurService() {
 
   return (
     <PrimarySection
-      bg="section-8"
-      className="overflow-hidden py-16 lg:py-20 xl:px-[240px]"
+      id="services"
+      bg="section-2"
+      className="overflow-hidden py-20 lg:py-20"
     >
       <div className="pointer-events-none absolute -left-16 bottom-24 hidden blur-[2px] lg:block xl:-left-20">
         <div className="-rotate-[21deg]">
@@ -697,66 +699,32 @@ export default function OurService() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-center gap-12">
-        <header className="flex max-w-[1090px] flex-col items-center gap-[18px] text-center">
-          <div className="flex flex-col items-center gap-4">
-            <div className="flex flex-col items-start gap-1">
-              <p
-                className={cn(
-                  'text-[22px] font-semibold leading-[1.45]',
-                  GRADIENT_TEXT,
-                )}
-              >
-                our services
-              </p>
-              <Image
-                src="/images/our-services/ui/underline.svg"
-                alt=""
-                aria-hidden
-                width={131}
-                height={8}
-                className="h-2 w-[131px]"
-              />
-            </div>
-            <h2 className="max-w-[961px] text-[28px] font-semibold leading-[1.35] tracking-[0.36px] text-[#071431] sm:text-[32px] lg:text-[36px]">
-              Powerful{' '}
-              <span className={GRADIENT_TEXT}>SMM Services</span> for Fast
-              Growth
-            </h2>
-          </div>
-          <p className="max-w-[1090px] text-lg leading-normal text-[#404a60]">
-            Explore our comprehensive range of social media marketing services
-            designed to help you grow your presence across all major platforms.
-            From Facebook to TikTok. we&apos;ve got you covered.
-          </p>
-        </header>
+      <div className="container relative z-10 flex flex-col items-center gap-12">
+        <SectionHeading
+          badge="our services"
+          title={
+            <>
+              Powerful <span className={GRADIENT_TEXT}>SMM Services</span> for
+              Fast Growth
+            </>
+          }
+          subtitle="Explore our comprehensive range of social media marketing services designed to help you grow your presence across all major platforms. From Facebook to TikTok. we've got you covered."
+        />
 
         <div className="flex w-full flex-col gap-9">
-          <div className="flex flex-col gap-[18px]">
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-6">
-              {platforms.slice(0, 6).map((platform) => (
-                <PlatformTab
-                  key={platform.id}
-                  platform={platform}
-                  isActive={activePlatformId === platform.id}
-                  onSelect={() => setActivePlatformId(platform.id)}
-                />
-              ))}
-            </div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-6">
-              {platforms.slice(6).map((platform) => (
-                <PlatformTab
-                  key={platform.id}
-                  platform={platform}
-                  isActive={activePlatformId === platform.id}
-                  onSelect={() => setActivePlatformId(platform.id)}
-                />
-              ))}
-            </div>
+          <div className="grid w-full grid-cols-2 gap-[18px] sm:grid-cols-3 xl:grid-cols-6">
+            {platforms.map((platform) => (
+              <PlatformTab
+                key={platform.id}
+                platform={platform}
+                isActive={activePlatformId === platform.id}
+                onSelect={() => setActivePlatformId(platform.id)}
+              />
+            ))}
           </div>
 
-          <article className="flex flex-col items-stretch gap-8 rounded-xl border border-[#d181ff] px-5 py-7 lg:flex-row lg:items-center lg:justify-between lg:gap-6 lg:px-7 lg:pr-8">
-            <div className="relative mx-auto h-[320px] w-full max-w-[571px] shrink-0 overflow-hidden rounded-2xl sm:h-[420px] lg:h-[496px]">
+          <article className="flex flex-col items-center justify-between gap-8 rounded-[12px] border border-[#d181ff] py-7 pl-7 pr-8 lg:flex-row">
+            <div className="relative h-[320px] w-full max-w-[571px] shrink-0 overflow-hidden rounded-2xl sm:h-[420px] lg:h-[496px]">
               <div
                 className="absolute inset-0 rounded-2xl"
                 style={{
@@ -791,7 +759,7 @@ export default function OurService() {
                 >
                   {activePlatform.marketingTitle}
                 </h3>
-                <p className="text-base font-medium leading-normal text-[#222e48]">
+                <p className="text-base font-medium leading-normal text-[#222e48] md:text-[16px]">
                   {activePlatform.description}
                 </p>
               </div>
@@ -801,10 +769,10 @@ export default function OurService() {
                   {activePlatform.services.map((service) => (
                     <li
                       key={service.number}
-                      className="flex items-start gap-2"
+                      className="flex items-center gap-2"
                     >
                       <ServiceNumberBadge number={service.number} />
-                      <p className="pt-2.5 text-base leading-normal">
+                      <p className="text-[16px] leading-normal">
                         <span
                           className={cn('font-medium', GRADIENT_TEXT)}
                         >
