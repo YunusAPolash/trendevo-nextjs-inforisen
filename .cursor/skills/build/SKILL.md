@@ -3,7 +3,9 @@ name: build
 description: >-
   Figma-to-code workflow for this project. Use when the user invokes
   `/build <figma-link>` or asks to build a page, section, card, or component
-  from a Figma design URL.
+  from a Figma design URL. Full pages are built one section at a time:
+  list sections first, build section 1 completely, pause for user review,
+  then proceed section by section.
 disable-model-invocation: true
 ---
 
@@ -14,6 +16,8 @@ Convert a Figma frame into production React/Next.js code for this repository.
 **Invocation:** `/build <figma-link>`
 
 The link may point to any frame: a full page, section, card, component, or part of a component. Always start by asking the scoping questions below before writing code.
+
+**Important:** Full-page builds are done **one section at a time**. Never implement an entire page in a single pass — that leads to rushed, incomplete output. List all sections first, build section 1 completely, pause for review, then proceed section by section.
 
 ---
 
@@ -42,6 +46,60 @@ Record answers before fetching Figma or creating files.
 
 ---
 
+## Page builds — section-by-section workflow
+
+**Apply this workflow whenever Question 1 answer is `page`.** Do not skip or compress it.
+
+### Phase A — Discover sections (no code yet)
+
+1. Parse the Figma URL and call **`get_design_context`** on the **full page frame**.
+2. From the screenshot, metadata, and layout hierarchy, **list every major section** on the page in top-to-bottom order.
+3. Present the numbered list to the user before writing any code. Example:
+
+   ```
+   Sections on this page:
+   1. Hero
+   2. Logo strip
+   3. Features grid
+   4. Testimonials
+   5. CTA
+   6. FAQ
+   ```
+
+4. Ask the user to confirm the list or correct names/order. Wait for confirmation.
+
+### Phase B — Build one section at a time
+
+Work through the list **sequentially**. For each section:
+
+1. **Scope to that section only** — fetch or re-read design context for just that section's node if a child `node-id` is available; otherwise crop mentally to that section from the page frame.
+2. **Build it completely** — follow Steps 3–9 below for this single section: wrappers, assets, file creation, lint. Do not stub or placeholder future sections.
+3. **Wire into the page** — create or update `app/{route}/page.tsx` to import the section(s) built so far, in order. Leave unbuilt sections out until their turn.
+4. **Stop and report** — tell the user which section is done, which file(s) were created/updated, and what section comes next.
+5. **Wait for review** — do not start the next section until the user approves or requests fixes.
+6. **Apply fixes** — if the user asks for changes, fix that section until they are satisfied.
+7. **Advance** — only after the current section is approved, move to the next section in the list and repeat from step 1.
+
+### Phase C — Page complete
+
+When every section is built and approved:
+
+- Confirm `page.tsx` imports all sections in design order.
+- Run a final lint pass on all touched files.
+
+### Rules for page builds
+
+- **DO** build one section fully per iteration (layout, typography, spacing, assets, wrappers).
+- **DO** pause after each section for user review.
+- **DO** keep a running section checklist and mark items complete as you go.
+- **DO NOT** create skeleton/placeholder files for sections you have not built yet.
+- **DO NOT** attempt to implement multiple sections in one response unless the user explicitly asks to batch them.
+- **DO NOT** move to the next section while the current one has open fix requests.
+
+For `section`, `card`, or `component` frame types, skip this workflow and build the single frame in one pass (Steps 1–9 as usual).
+
+---
+
 ## Step 1 — Parse the Figma URL
 
 Extract `fileKey` and `nodeId` from the link:
@@ -62,6 +120,8 @@ If the URL has **no `node-id`**, ask the user for a node-specific link. Do not g
 2. Review the returned screenshot, reference code, metadata, and asset download URLs.
 3. Call **`get_code_connect_map`** when available — prefer mapped codebase components over generated markup.
 4. Identify the layout hierarchy: sections, cards, text, buttons, icons, content images, and decorative backgrounds.
+
+**For `page` frames:** use this step in Phase A to produce the section list. During Phase B, repeat this step scoped to **only the current section** before coding it.
 
 Treat Figma output as **reference only**. Adapt to this project's stack and components.
 
@@ -208,20 +268,20 @@ If the design includes UI that cannot be built from existing primitives:
 
 ### `page`
 
-Create an App Router route and colocate section components:
+Create an App Router route and colocate section components. **Build incrementally** — one section file per iteration, not all at once:
 
 ```
 app/{route}/
-├── page.tsx                 # composes all section components
+├── page.tsx                 # composes section components as they are built
 └── _components/
-    ├── hero-section.tsx
-    ├── features-section.tsx
-    └── ...                  # one file per major section from the design
+    ├── hero-section.tsx     # built in iteration 1
+    ├── features-section.tsx # built in iteration 2
+    └── ...                  # one file per major section, added one at a time
 ```
 
 - `{route}` = kebab-case (e.g. `pricing`, `about-us`). Home uses `app/page.tsx` with `app/_components/` if sections are split out.
 - Each section file exports one default component wrapped in `PrimarySection` with a `.container` inside.
-- `page.tsx` imports and stacks sections in design order.
+- `page.tsx` imports and stacks only the sections built so far; add the next import after each section is approved.
 
 ### `section`
 
@@ -262,7 +322,34 @@ Place relative to scope:
 
 ## Step 8 — Implementation checklist
 
-Copy and track progress:
+### Page builds — track at two levels
+
+**Page-level (once, in Phase A):**
+
+```
+Page build progress:
+- [ ] Scoping questions answered
+- [ ] Full-page Figma design fetched
+- [ ] Section list identified and confirmed with user
+```
+
+**Per-section (repeat in Phase B for each section):**
+
+```
+Section: {name} ({n} of {total})
+- [ ] Design fetched/analyzed for this section only
+- [ ] Section bg key chosen (no Figma backgrounds downloaded)
+- [ ] Card bg keys chosen (no Figma backgrounds downloaded)
+- [ ] Icons/content images downloaded with SEO names
+- [ ] Section file created at correct path
+- [ ] PrimarySection / PrimaryCard used
+- [ ] `.container` wrapper inside `PrimarySection`
+- [ ] Wired into page.tsx
+- [ ] Lint clean
+- [ ] User reviewed and approved ← required before next section
+```
+
+### Single frame builds (`section`, `card`, `component`)
 
 ```
 Build progress:
@@ -298,7 +385,24 @@ Build progress:
 
 ---
 
-## Example invocation
+## Example invocations
+
+### Full page (section-by-section)
+
+```
+/build https://www.figma.com/design/AbCdEf/Pricing-Page?node-id=1-2
+```
+
+1. Ask: frame type → `page`
+2. Fetch design for node `1:2`
+3. List sections: Hero, Logo strip, Features, Pricing table, FAQ, CTA
+4. User confirms the list
+5. **Iteration 1:** Build Hero only → `app/pricing/_components/hero-section.tsx`, wire into `page.tsx`, stop for review
+6. User approves (or requests fixes → fix → approve)
+7. **Iteration 2:** Build Logo strip → `logo-strip-section.tsx`, update `page.tsx`, stop for review
+8. Repeat until all sections are done
+
+### Single section
 
 ```
 /build https://www.figma.com/design/AbCdEf/My-Page?node-id=12-34
@@ -315,6 +419,9 @@ Build progress:
 
 ## Anti-patterns (do not do)
 
+- Building an entire page in one pass when frame type is `page`
+- Creating placeholder/skeleton section files for sections not yet built
+- Starting the next section before the current one is user-approved
 - Using `<section>` or `<div>` with custom background instead of `PrimarySection`
 - Placing section content directly on `PrimarySection` without a `.container` wrapper
 - Using `mx-auto max-w-[1440px]` instead of the `.container` class
