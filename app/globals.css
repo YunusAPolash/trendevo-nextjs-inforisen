@@ -147,6 +147,10 @@
   .border-brand {
     @apply border-[#cb7ef7];
   }
+
+  .container {
+    @apply mx-auto w-full max-w-[1440px] px-6 lg:px-0;
+  }
 }
 
 @keyframes marquee {

@@ -23,7 +23,7 @@ const socialIcons = [
 
 export default function HeroSection() {
   return (
-    <PrimarySection bg="section-1" className="overflow-hidden px-0 py-0 lg:py-0">
+    <PrimarySection bg="section-1" className="overflow-hidden py-0 lg:py-0">
       <SiteHeader />
       <div className="relative mx-auto grid max-w-[1440px] gap-10 px-6 pb-16 pt-10 lg:grid-cols-2 lg:items-center lg:gap-8 lg:px-0 lg:pb-24 lg:pt-12">
         <div className="flex flex-col gap-6 lg:gap-8">

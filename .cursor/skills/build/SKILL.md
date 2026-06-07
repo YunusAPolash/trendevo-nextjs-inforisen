@@ -79,15 +79,33 @@ Treat Figma output as **reference only**. Adapt to this project's stack and comp
 
 ### Sections
 
-**Always** wrap section content in:
+**Always** wrap section content in `PrimarySection`, then place all layout/content inside a `.container` div as the **direct child** (or wrapping all children):
 
 ```tsx
 import PrimarySection from '@/components/sections/primary-section';
 
 <PrimarySection bg="section-N" className="...">
-  {/* section content */}
+  <div className="container">
+    {/* all section content goes here */}
+  </div>
 </PrimarySection>
 ```
+
+**Container rules (strict):**
+
+- **DO** use the `.container` class on an inner wrapper inside every `PrimarySection`.
+- **DO** put headings, grids, cards, images, and CTAs inside `.container` — not directly on `PrimarySection`.
+- **DO** use `.container` in the site header and footer too.
+- **DO NOT** replace `.container` with ad-hoc `mx-auto max-w-[1440px]` classes.
+- **DO NOT** skip `.container` even when a section has a full-bleed background — the background stays on `PrimarySection`; content stays in `.container`.
+
+The `.container` class is defined in `app/globals.css`:
+
+```
+mx-auto w-full max-w-[1440px] px-6 lg:px-0
+```
+
+Matches the Figma 1440px content width with responsive side padding.
 
 Available `bg` keys (read `components/sections/primary-section.tsx` for the current list):
 
@@ -202,7 +220,7 @@ app/{route}/
 ```
 
 - `{route}` = kebab-case (e.g. `pricing`, `about-us`). Home uses `app/page.tsx` with `app/_components/` if sections are split out.
-- Each section file exports one default component wrapped in `PrimarySection`.
+- Each section file exports one default component wrapped in `PrimarySection` with a `.container` inside.
 - `page.tsx` imports and stacks sections in design order.
 
 ### `section`
@@ -256,6 +274,7 @@ Build progress:
 - [ ] Icons/content images downloaded with SEO names
 - [ ] Files created at correct paths
 - [ ] PrimarySection / PrimaryCard used for all sections/cards
+- [ ] Every section has a `.container` wrapper inside `PrimarySection`
 - [ ] Target page updated (if not a new page)
 - [ ] Lint clean
 ```
@@ -274,7 +293,8 @@ Build progress:
 1. Run `npm run lint` on touched files.
 2. Confirm no new files under `public/images/backgrounds/`.
 3. Confirm every section uses `PrimarySection` and every card uses `PrimaryCard`.
-4. Confirm downloaded assets are named descriptively and referenced correctly.
+4. Confirm every `PrimarySection` has a `.container` div wrapping its content.
+5. Confirm downloaded assets are named descriptively and referenced correctly.
 
 ---
 
@@ -287,7 +307,7 @@ Build progress:
 1. Ask: frame type → `section`
 2. Ask: target page → `pricing`
 3. Fetch design for node `12:34`
-4. Create `app/pricing/_components/hero-section.tsx` with `PrimarySection bg="section-2"`
+4. Create `app/pricing/_components/hero-section.tsx` with `PrimarySection bg="section-2"` and a `.container` inside
 5. Download icons to `public/images/icons/pricing-*.svg`
 6. Import section in `app/pricing/page.tsx`
 
@@ -296,6 +316,8 @@ Build progress:
 ## Anti-patterns (do not do)
 
 - Using `<section>` or `<div>` with custom background instead of `PrimarySection`
+- Placing section content directly on `PrimarySection` without a `.container` wrapper
+- Using `mx-auto max-w-[1440px]` instead of the `.container` class
 - Using a raw card container instead of `PrimaryCard`
 - Exporting Figma background images into the repo
 - Applying `bg-gradient-*` or arbitrary `bg-[url(...)]` on section/card wrappers outside the allowed keys
