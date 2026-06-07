@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
+import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
 import { cn } from '@/lib/utils';
 
@@ -14,9 +15,6 @@ const ACTIVE_TAB_BG =
 
 const INACTIVE_TAB_BG =
   'linear-gradient(111.82deg, rgba(214, 144, 255, 0.08) 4.77%, rgba(215, 148, 255, 0.08) 39.51%, rgba(179, 100, 226, 0.08) 74.24%)';
-
-const CTA_GRADIENT =
-  'linear-gradient(105.27deg, rgb(209, 129, 255) 2.85%, rgb(255, 99, 190) 90.53%)';
 
 type ServiceItem = {
   number: string;
@@ -673,7 +671,7 @@ export default function OurService() {
   return (
     <PrimarySection
       bg="section-8"
-      className="overflow-hidden bg-white py-16 lg:py-20 xl:px-[240px]"
+      className="overflow-hidden py-16 lg:py-20 xl:px-[240px]"
     >
       <div className="pointer-events-none absolute -left-16 bottom-24 hidden blur-[2px] lg:block xl:-left-20">
         <div className="-rotate-[21deg]">
@@ -820,13 +818,9 @@ export default function OurService() {
                   ))}
                 </ul>
 
-                <button
-                  type="button"
-                  className="relative inline-flex h-[50px] items-center justify-center self-start overflow-hidden rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] py-2.5 text-base font-semibold leading-normal text-white transition-opacity hover:opacity-90"
-                  style={{ backgroundImage: CTA_GRADIENT }}
-                >
+                <PrimaryButton type="button" className="self-start">
                   View {activePlatform.label} Services
-                </button>
+                </PrimaryButton>
               </div>
             </div>
           </article>
