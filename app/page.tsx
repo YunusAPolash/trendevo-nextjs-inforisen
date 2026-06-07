@@ -1,10 +1,14 @@
+import PrimaryCard from '@/components/cards/primary-card';
+import PrimarySection from '@/components/sections/primary-section';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className='flex items-center justify-center h-screen'>
-      The Trendevo AI platform is a powerful tool that allows you to create and
-      manage your own AI models.
-    </div>
+    <PrimarySection
+      bg="section-2"
+      className="flex items-center justify-center h-screen"
+    >
+      <PrimaryCard bg="card-2">This is a card</PrimaryCard>
+    </PrimarySection>
   );
 }
