@@ -13,10 +13,10 @@ const avatars = [
 
 export default function HeroSection() {
   return (
-    <PrimarySection bg="section-1" className="overflow-hidden px-0 pb-0 ">
-      <div className="container relative min-h-[600px] pb-16 lg:min-h-[862px] lg:pb-24">
-        <div className="relative z-10 flex max-w-[762px] flex-col gap-6 pt-[154px] lg:gap-8 lg:pt-[198px]">
-          <div className="inline-flex w-fit items-center gap-2 rounded-lg border-l-2 border-[#cb7ef7] bg-white py-2 pl-1.5 pr-3">
+    <PrimarySection bg="section-1" className="overflow-hidden px-0 pb-0">
+      <div className="mx-auto grid max-w-[1440px] gap-10 px-6 pt-[154px] lg:grid-cols-2 lg:items-end lg:gap-8 lg:pt-[198px]">
+        <div className="flex min-w-0 flex-col gap-6 lg:max-w-[762px] lg:gap-8 lg:self-start">
+          <div className="flex w-full max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border-l-2 border-[#cb7ef7] bg-white py-2 pl-1.5 pr-3 sm:w-fit">
             <div className="flex -space-x-3">
               {avatars.map((src, index) => (
                 <Image
@@ -58,7 +58,7 @@ export default function HeroSection() {
               measurable growth in reach, engagement, and online visibility
               across global markets.
             </p>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <Image
                 src="/images/icons/hero-fire-icon.png"
                 alt=""
@@ -87,7 +87,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-10 w-full max-w-[669px] lg:absolute lg:top-[134px] lg:right-0 lg:mt-0 lg:w-[669px]">
+        <div className="mx-auto w-full min-w-0 max-w-[669px] lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end">
           <Image
             src="/images/hero/hero-illustration.png"
             alt="TrendEvo platform user with social media icons and analytics"
@@ -95,7 +95,7 @@ export default function HeroSection() {
             height={728}
             priority
             sizes="(max-width: 1024px) 100vw, 669px"
-            className="h-auto w-full"
+            className="block h-auto w-full"
           />
         </div>
       </div>

@@ -15,7 +15,7 @@ import OurService from '@/components/features/home/OurService';
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-clip">
       <HeroSection />
       <StatsSection />
       <OurService />
