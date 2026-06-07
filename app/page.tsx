@@ -15,7 +15,7 @@ import WorkingProcessSection from '@/app/_components/working-process-section';
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-clip">
       <HeroSection />
       <StatsSection />
       <ServicesSection />

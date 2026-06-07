@@ -39,8 +39,11 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <PrimarySection className="bg-[#f8f8f8] px-6 py-20 lg:px-0">
-      <div className="mx-auto flex max-w-[1440px] flex-wrap justify-center gap-6 xl:flex-nowrap xl:justify-between">
+    <PrimarySection
+      id="stats"
+      className="relative z-10 bg-[#f8f8f8] px-0 py-20"
+    >
+      <div className="mx-auto flex w-full max-w-[1440px] flex-wrap justify-center gap-6 px-6 min-[1416px]:flex-nowrap min-[1416px]:justify-between lg:px-0">
         {stats.map((stat) => (
           <PrimaryCard
             key={stat.label}
