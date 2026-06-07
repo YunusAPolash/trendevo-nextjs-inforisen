@@ -1,14 +1,37 @@
-import PrimaryCard from '@/components/cards/primary-card';
-import PrimarySection from '@/components/sections/primary-section';
-import Image from 'next/image';
+import AboutSection from '@/app/_components/about-section';
+import AdvantagesSection from '@/app/_components/advantages-section';
+import CtaSection from '@/app/_components/cta-section';
+import FaqSection from '@/app/_components/faq-section';
+import FooterSection from '@/app/_components/footer-section';
+import HeroSection from '@/app/_components/hero-section';
+import PaymentMethodsSection from '@/app/_components/payment-methods-section';
+import PlatformMarqueeSection from '@/app/_components/platform-marquee-section';
+import PricingSection from '@/app/_components/pricing-section';
+import ServicesSection from '@/app/_components/services-section';
+import StatsSection from '@/app/_components/stats-section';
+import TestimonialsSection from '@/app/_components/testimonials-section';
+import WhyChooseUsSection from '@/app/_components/why-choose-us-section';
+import WorkingProcessSection from '@/app/_components/working-process-section';
 
 export default function Home() {
   return (
-    <PrimarySection
-      bg="section-2"
-      className="flex items-center justify-center h-screen"
-    >
-      <PrimaryCard bg="card-2">This is a card</PrimaryCard>
-    </PrimarySection>
+    <main>
+      <HeroSection />
+      <StatsSection />
+      <ServicesSection />
+      <AboutSection />
+      <WorkingProcessSection />
+      <WhyChooseUsSection />
+      <PaymentMethodsSection />
+      <PlatformMarqueeSection />
+      <AdvantagesSection />
+      <PricingSection />
+      <TestimonialsSection />
+      <div id="faq">
+        <FaqSection />
+      </div>
+      <CtaSection />
+      <FooterSection />
+    </main>
   );
 }
