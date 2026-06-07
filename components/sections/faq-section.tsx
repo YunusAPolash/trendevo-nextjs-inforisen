@@ -110,7 +110,7 @@ export default function FaqSection({
           <p className="max-w-3xl text-lg leading-relaxed text-[#404a60]">{subtitle}</p>
         </div>
 
-        <div className="relative z-10 grid gap-6 lg:grid-cols-2">
+        <div className="relative z-10 grid items-start gap-6 lg:grid-cols-2">
           <FaqColumn items={leftColumn} columnId="left" />
           <FaqColumn items={rightColumn} columnId="right" />
         </div>

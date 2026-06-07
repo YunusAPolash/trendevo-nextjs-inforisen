@@ -77,7 +77,7 @@ function FaqAccordionContent({
     <AccordionPrimitive.Content
       data-slot="accordion-content"
       className={cn(
-        'relative z-10 overflow-hidden px-5 pb-5 text-base leading-relaxed text-[#404a60] data-[state=closed]:hidden',
+        'relative z-10 overflow-hidden px-5 pb-5 text-base leading-relaxed text-[#404a60] data-closed:hidden',
         className,
       )}
       {...props}
