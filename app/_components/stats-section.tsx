@@ -32,7 +32,7 @@ const stats = [
 export default function StatsSection() {
   return (
     <PrimarySection bg="section-3" className="bg-[#f8f8f8]">
-      <div className="mx-auto grid max-w-[1440px] gap-6 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="container grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {stats.map((stat) => (
           <PrimaryCard
             key={stat.label}

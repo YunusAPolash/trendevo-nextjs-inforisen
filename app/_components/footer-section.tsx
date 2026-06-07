@@ -26,7 +26,7 @@ const footerLinks = {
 export default function FooterSection() {
   return (
     <PrimarySection bg="section-3" className="border-t border-[#ff7fc1]/20">
-      <footer className="mx-auto max-w-[1440px]">
+      <footer className="container">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Link href="/" className="relative mb-6 inline-block h-[42px] w-[132px]">

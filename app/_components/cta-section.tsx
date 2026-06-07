@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 export default function CtaSection() {
   return (
     <PrimarySection bg="section-8">
-      <div className="mx-auto grid max-w-[1440px] items-center gap-10 lg:grid-cols-2">
+      <div className="container grid items-center gap-10 lg:grid-cols-2">
         <div className="relative mx-auto aspect-[427/594] w-full max-w-[427px] lg:mx-0">
           <Image
             src="/images/hero/hero-character.png"

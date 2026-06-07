@@ -675,7 +675,7 @@ export default function OurService() {
       bg="section-2"
       className="overflow-hidden py-20 lg:py-20"
     >
-      <div className="pointer-events-none absolute -left-16 bottom-24 hidden blur-[2px] lg:block xl:-left-20">
+      <div className="pointer-events-none absolute -left-16 bottom-0 lg:bottom-24 hidden blur-[2px] lg:block xl:-left-20">
         <div className="-rotate-[21deg]">
           <Image
             src="/images/our-services/decorations/facebook-left.png"

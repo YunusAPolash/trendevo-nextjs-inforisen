@@ -29,7 +29,7 @@ const advantages = [
 export default function AdvantagesSection() {
   return (
     <PrimarySection bg="section-5">
-      <div className="mx-auto flex max-w-[1440px] flex-col gap-12">
+      <div className="container flex flex-col gap-12">
         <SectionHeading
           badge="ADVANTAGES"
           title="Advantages of using our panel services"

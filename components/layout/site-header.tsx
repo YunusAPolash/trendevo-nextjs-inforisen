@@ -35,7 +35,7 @@ export default function SiteHeader({ className }: { className?: string }) {
         className,
       )}
     >
-      <div className="mx-auto flex h-[80px] max-w-[1440px] items-center justify-between px-6 lg:px-0">
+      <div className="container flex h-[80px] items-center justify-between">
         <Link href="/" className="relative h-[42px] w-[132px] shrink-0">
           <Image
             src="/images/icons/trendevo-logo.png"

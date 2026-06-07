@@ -26,7 +26,7 @@ export default function FaqSection() {
 
   return (
     <PrimarySection bg="section-7">
-      <div className="mx-auto flex max-w-[1440px] flex-col gap-12">
+      <div className="container flex flex-col gap-12">
         <SectionHeading
           badge="FAQ"
           title={
