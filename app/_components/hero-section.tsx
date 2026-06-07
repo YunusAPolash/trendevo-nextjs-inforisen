@@ -13,16 +13,9 @@ const avatars = [
 
 export default function HeroSection() {
   return (
-<<<<<<< HEAD
-    <PrimarySection bg="section-1" className="overflow-hidden py-0 lg:py-0">
-      <SiteHeader />
-      <div className="relative mx-auto grid max-w-[1440px] gap-10 px-6 pb-16 pt-10 lg:grid-cols-2 lg:items-center lg:gap-8 lg:px-0 lg:pb-24 lg:pt-12">
-        <div className="flex flex-col gap-6 lg:gap-8">
-=======
-    <PrimarySection bg="section-1" className="overflow-hidden px-0 pb-0">
-      <div className="relative mx-auto min-h-[600px] max-w-[1440px] px-6 pb-16 lg:min-h-[862px] lg:px-0 lg:pb-24">
+    <PrimarySection bg="section-1" className="overflow-hidden px-0 pb-0 ">
+      <div className="container relative min-h-[600px] pb-16 lg:min-h-[862px] lg:pb-24">
         <div className="relative z-10 flex max-w-[762px] flex-col gap-6 pt-[154px] lg:gap-8 lg:pt-[198px]">
->>>>>>> 4bf9f333ef34d2337398599077ed0355d8115097
           <div className="inline-flex w-fit items-center gap-2 rounded-lg border-l-2 border-[#cb7ef7] bg-white py-2 pl-1.5 pr-3">
             <div className="flex -space-x-3">
               {avatars.map((src, index) => (

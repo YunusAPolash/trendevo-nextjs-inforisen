@@ -149,9 +149,11 @@
   }
 
   .container {
-    @apply mx-auto w-full max-w-[1440px] px-6 lg:px-0;
+    @apply mx-auto w-full max-w-[1440px] px-6 lg:px-8;
   }
 }
+
+
 
 @keyframes marquee {
   from {
