@@ -7,49 +7,67 @@ const stats = [
     value: '1.2M+',
     label: 'Total Completed Orders',
     icon: '/images/stats/stats-orders-icon.png',
-    bg: 'card-1' as const,
+    width: 167,
+    height: 150,
+    displayWidth: 111,
   },
   {
     value: '2,500+',
     label: 'Total Services Available',
     icon: '/images/stats/stats-services-icon.png',
-    bg: 'card-2' as const,
+    width: 152,
+    height: 150,
+    displayWidth: 101,
   },
   {
     value: '50K+',
     label: 'Total Users',
     icon: '/images/stats/stats-users-icon.png',
-    bg: 'card-1' as const,
+    width: 188,
+    height: 150,
+    displayWidth: 125,
   },
   {
     value: '75%',
     label: 'Customer Satisfaction Rate',
     icon: '/images/stats/stats-satisfaction-icon.png',
-    bg: 'card-2' as const,
+    width: 144,
+    height: 150,
+    displayWidth: 96,
   },
-];
+] as const;
 
 export default function StatsSection() {
   return (
-    <PrimarySection bg="section-3" className="bg-[#f8f8f8]">
-      <div className="mx-auto grid max-w-[1440px] gap-6 sm:grid-cols-2 xl:grid-cols-4">
+    <PrimarySection className="bg-[#f8f8f8] px-6 py-20 lg:px-0">
+      <div className="mx-auto flex max-w-[1440px] flex-wrap justify-center gap-6 xl:flex-nowrap xl:justify-between">
         {stats.map((stat) => (
           <PrimaryCard
             key={stat.label}
-            bg={stat.bg}
-            className="border border-[#ff7fc1]/50 border-l-[3px] border-l-[#ff7fc1] bg-white p-6"
+            bg="card-1"
+            className="w-full max-w-[336px] shrink-0 items-start overflow-hidden rounded-[18px] border border-[#ff7fc1]/50 border-t-[0.5px] border-r-[0.5px] border-b-[0.5px] border-l-[3px] border-l-[#ff7fc1] bg-white p-6 ring-0"
           >
-            <Image
-              src={stat.icon}
-              alt=""
-              width={100}
-              height={100}
-              className="mb-4 h-20 w-auto object-contain"
-            />
-            <p className="text-[32px] font-semibold leading-none text-[#232323]">
-              {stat.value}
-            </p>
-            <p className="text-gradient mt-3 text-xl font-semibold">{stat.label}</p>
+            <div
+              className="relative h-[100px] shrink-0"
+              style={{ width: stat.displayWidth }}
+            >
+              <Image
+                src={stat.icon}
+                alt=""
+                width={stat.width}
+                height={stat.height}
+                className="size-full object-contain object-left"
+                unoptimized
+              />
+            </div>
+            <div className="flex w-full flex-col gap-3">
+              <p className="text-[32px] font-semibold leading-none text-[#232323]">
+                {stat.value}
+              </p>
+              <p className="text-gradient text-xl font-semibold leading-normal tracking-[0.2px]">
+                {stat.label}
+              </p>
+            </div>
           </PrimaryCard>
         ))}
       </div>
