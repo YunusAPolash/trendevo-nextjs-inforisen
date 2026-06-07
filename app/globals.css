@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@source not "../.agents";
-@source not "../.cursor";
+@import "tailwindcss" source(none);
+@source "./**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -128,5 +128,32 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-[#ad26ff] to-[#ff3f85] bg-clip-text text-transparent;
+  }
+
+  .bg-brand-gradient {
+    background-image: linear-gradient(
+      102deg,
+      rgb(209, 129, 255) 2.85%,
+      rgb(255, 99, 190) 90.53%
+    );
+  }
+
+  .border-brand {
+    @apply border-[#cb7ef7];
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
