@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @source not "../.agents";
+@source not "../.cursor";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
