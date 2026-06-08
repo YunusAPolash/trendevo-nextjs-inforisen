@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -13,14 +16,26 @@ const navLinks = [
 ];
 
 export default function SiteHeader({ className }: { className?: string }) {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full border-b border-white/20 bg-white/40 backdrop-blur-xl',
+        'fixed top-0 right-0 left-0 z-50 w-full transition-all duration-300',
+        scrolled
+          ? 'border-b border-white/20 bg-white/40 backdrop-blur-xl'
+          : 'border-b border-transparent bg-transparent',
         className,
       )}
     >
-      <div className="mx-auto flex h-[92px] max-w-[1440px] items-center justify-between px-6 lg:px-0">
+      <div className="container flex h-[80px] items-center justify-between">
         <Link href="/" className="relative h-[42px] w-[132px] shrink-0">
           <Image
             src="/images/icons/trendevo-logo.png"

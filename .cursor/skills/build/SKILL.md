@@ -116,10 +116,7 @@ If the URL has **no `node-id`**, ask the user for a node-specific link. Do not g
 
 ## Step 2 — Fetch and analyze the design
 
-1. Call Figma MCP **`get_design_context`** with `fileKey`, `nodeId`, `clientLanguages: "typescript"`, `clientFrameworks: "react,nextjs"`.
-2. Review the returned screenshot, reference code, metadata, and asset download URLs.
-3. Call **`get_code_connect_map`** when available — prefer mapped codebase components over generated markup.
-4. Identify the layout hierarchy: sections, cards, text, buttons, icons, content images, and decorative backgrounds.
+### Full page link (`page` frame type)
 
 **For `page` frames:** use this step in Phase A to produce the section list. During Phase B, repeat this step scoped to **only the current section** before coding it.
 
@@ -131,7 +128,7 @@ Treat Figma output as **reference only**. Adapt to this project's stack and comp
 
 - Read `AGENTS.md` and relevant guides in `node_modules/next/dist/docs/` before writing Next.js code.
 - Stack: **Next.js App Router**, **React 19**, **Tailwind CSS v4**, **shadcn/ui**, `@/lib/utils` `cn()`.
-- Reuse existing UI from `components/ui/` (e.g. `Button`) when they match the design.
+- Reuse existing UI from `components/ui/` (e.g. `Button`, `SectionHeading`) when they match the design.
 
 ---
 
@@ -207,6 +204,38 @@ When adding a section or card:
 - **DO NOT** download section or card backgrounds from Figma.
 - **DO NOT** add custom gradients, inline `backgroundImage`, or new files under `public/images/backgrounds/`.
 - **DO NOT** use any wrapper other than `PrimarySection` / `PrimaryCard` for sections and cards.
+
+### Section headings
+
+When a Figma section has the standard header pattern — gradient badge label, underline, main title, optional subtitle — **always** use `SectionHeading` from `components/ui/section-heading.tsx`. Do not hand-roll duplicate header markup.
+
+```tsx
+import SectionHeading from '@/components/ui/section-heading';
+
+<SectionHeading
+  badge="Why Choose Us"
+  title={
+    <>
+      Why <span className="text-gradient">Choose Us</span>
+    </>
+  }
+  subtitle="Boost your social media growth with our fast, reliable..."
+/>
+```
+
+**SectionHeading rules (strict):**
+
+- **DO** use `SectionHeading` for every section that has a badge + title header in Figma (Services, Why Choose Us, Pricing, FAQ, Working Process, etc.).
+- **DO** pass gradient words inside `title` via `<span className="text-gradient">...</span>`.
+- **DO** use exact badge, title, and subtitle copy from Figma.
+- **DO** override typography only when Figma differs from defaults, using optional props:
+  - `underlineSrc` / `underlineWidth` — when the underline asset or width differs per section
+  - `titleClassName` — when title size/tracking differs (e.g. `48px` headings)
+  - `subtitleClassName` — when subtitle color, weight, or max-width differs
+- **DO NOT** rebuild the badge + underline + title block inline when `SectionHeading` applies.
+- **DO NOT** skip `SectionHeading` on hero sections — hero uses its own layout and is exempt.
+
+Default underline: `/images/our-services/ui/underline.svg` (131px). Download a section-specific underline to `public/images/{section}/underline.svg` when Figma shows a different width.
 
 ---
 
@@ -320,7 +349,7 @@ Place relative to scope:
 
 ---
 
-## Step 8 — Implementation checklist
+## Step 8 — Section build loop (mandatory)
 
 ### Page builds — track at two levels
 
@@ -343,6 +372,7 @@ Section: {name} ({n} of {total})
 - [ ] Icons/content images downloaded with SEO names
 - [ ] Section file created at correct path
 - [ ] PrimarySection / PrimaryCard used
+- [ ] `SectionHeading` used for section header (when Figma has badge + title pattern)
 - [ ] `.container` wrapper inside `PrimarySection`
 - [ ] Wired into page.tsx
 - [ ] Lint clean
@@ -352,19 +382,37 @@ Section: {name} ({n} of {total})
 ### Single frame builds (`section`, `card`, `component`)
 
 ```
-Build progress:
-- [ ] Scoping questions answered
-- [ ] Figma design fetched (get_design_context)
-- [ ] Layout analyzed; sections/cards identified
-- [ ] Section bg keys chosen (no Figma backgrounds downloaded)
+Current section: {section-name}
+Section build progress:
+- [ ] Figma design fetched for this section only (get_design_context + get_screenshot)
+- [ ] Layout analyzed against Figma screenshot
+- [ ] Section bg key chosen (no Figma backgrounds downloaded)
 - [ ] Card bg keys chosen (no Figma backgrounds downloaded)
 - [ ] Icons/content images downloaded with SEO names
-- [ ] Files created at correct paths
-- [ ] PrimarySection / PrimaryCard used for all sections/cards
-- [ ] Every section has a `.container` wrapper inside `PrimarySection`
-- [ ] Target page updated (if not a new page)
-- [ ] Lint clean
+- [ ] Section file created at correct path
+- [ ] PrimarySection + .container used
+- [ ] SectionHeading used for section header (when Figma has badge + title pattern)
+- [ ] PrimaryCard used for all cards in section
+- [ ] Spacing, typography, colors match Figma
+- [ ] Asset sizes and positions match Figma
+- [ ] Responsive layout checked
+- [ ] Lint clean on touched files
+- [ ] Visually compared to Figma screenshot — match confirmed
+- [ ] User approved — ready for next section
 ```
+
+**After each section:**
+
+1. Run `npm run lint` on touched files.
+2. Compare the built section against the Figma `get_screenshot` output — fix any visual gaps.
+3. Report: section name, what was built, what matches, and **which section is next**.
+4. **Stop.** Do not begin the next section until the user runs `/build` again or explicitly approves.
+
+**When the user says "match Figma" or `/build` on the same section:**
+
+- Re-fetch `get_design_context` and `get_screenshot` for that section's node.
+- Diff the implementation against the screenshot: spacing, font sizes, colors, image placement, button styles, card borders.
+- Fix until the section is a pixel-accurate match, then stop again.
 
 ### Code quality
 
@@ -372,35 +420,24 @@ Build progress:
 - Prefer semantic HTML (`section` content inside `PrimarySection`, headings in order).
 - Keep components small; one section per file for pages.
 - Use `@/` path alias for imports.
+- Use exact copy text from Figma — do not paraphrase headings or labels.
 
 ---
 
-## Step 9 — Verify
+## Step 9 — Verify (per section, before marking done)
 
 1. Run `npm run lint` on touched files.
 2. Confirm no new files under `public/images/backgrounds/`.
-3. Confirm every section uses `PrimarySection` and every card uses `PrimaryCard`.
-4. Confirm every `PrimarySection` has a `.container` div wrapping its content.
-5. Confirm downloaded assets are named descriptively and referenced correctly.
+3. Confirm the section uses `PrimarySection` and every card uses `PrimaryCard`.
+4. Confirm the section has a `.container` div wrapping its content.
+5. Confirm `SectionHeading` is used wherever the Figma section has a badge + title header (not hand-rolled).
+6. Confirm downloaded assets are named descriptively and referenced correctly.
+7. **Side-by-side check:** implementation matches the Figma screenshot for this section's `nodeId`.
+8. **Do not proceed** to the next section until checks 1–7 pass and the user approves.
 
 ---
 
 ## Example invocations
-
-### Full page (section-by-section)
-
-```
-/build https://www.figma.com/design/AbCdEf/Pricing-Page?node-id=1-2
-```
-
-1. Ask: frame type → `page`
-2. Fetch design for node `1:2`
-3. List sections: Hero, Logo strip, Features, Pricing table, FAQ, CTA
-4. User confirms the list
-5. **Iteration 1:** Build Hero only → `app/pricing/_components/hero-section.tsx`, wire into `page.tsx`, stop for review
-6. User approves (or requests fixes → fix → approve)
-7. **Iteration 2:** Build Logo strip → `logo-strip-section.tsx`, update `page.tsx`, stop for review
-8. Repeat until all sections are done
 
 ### Single section
 
@@ -410,10 +447,26 @@ Build progress:
 
 1. Ask: frame type → `section`
 2. Ask: target page → `pricing`
-3. Fetch design for node `12:34`
+3. Fetch design + screenshot for node `12:34`
 4. Create `app/pricing/_components/hero-section.tsx` with `PrimarySection bg="section-2"` and a `.container` inside
 5. Download icons to `public/images/icons/pricing-*.svg`
-6. Import section in `app/pricing/page.tsx`
+6. Match spacing/typography/colors to Figma screenshot
+7. Import section in `app/pricing/page.tsx`
+8. Run lint, report done, **stop**
+
+### Full page (section-by-section)
+
+```
+/build https://www.figma.com/design/AbCdEf/Home-Page?node-id=1-2
+```
+
+1. Ask: frame type → `page`
+2. Fetch page metadata → list sections: Hero, Stats, Services, About, …
+3. Build **Hero only** (first section `nodeId`)
+4. Match hero to Figma perfectly → lint → report → **stop**
+5. User reviews, says `/build` → build **Stats** section
+6. User says "match Figma" on Stats → refine Stats until perfect → **stop**
+7. Repeat until all sections are built and approved
 
 ---
 
@@ -425,8 +478,9 @@ Build progress:
 - Using `<section>` or `<div>` with custom background instead of `PrimarySection`
 - Placing section content directly on `PrimarySection` without a `.container` wrapper
 - Using `mx-auto max-w-[1440px]` instead of the `.container` class
+- Hand-rolling section headers (badge + underline + title) instead of `SectionHeading`
 - Using a raw card container instead of `PrimaryCard`
 - Exporting Figma background images into the repo
-- Applying `bg-gradient-*` or arbitrary `bg-[url(...)]` on section/card wrappers outside the allowed keys
+- Applying `bg-gradient-*` or arbitrary background-url utilities on section/card wrappers outside the allowed keys
 - Skipping scoping questions and guessing file paths
 - Leaving Figma asset URLs in source instead of downloading content images locally

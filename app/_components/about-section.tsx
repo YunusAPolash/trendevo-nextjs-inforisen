@@ -19,7 +19,7 @@ const metrics = [
 export default function AboutSection() {
   return (
     <PrimarySection id="about" bg="section-2">
-      <div className="mx-auto grid max-w-[1440px] items-center gap-12 lg:grid-cols-2">
+      <div className="container grid items-center gap-12 lg:grid-cols-2">
         <div className="space-y-8">
           <div className="space-y-4">
             <div>

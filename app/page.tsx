@@ -10,19 +10,19 @@ import HeroSection from '@/app/_components/hero-section';
 import PaymentMethodsSection from '@/app/_components/payment-methods-section';
 import PlatformMarqueeSection from '@/app/_components/platform-marquee-section';
 import PricingSection from '@/app/_components/pricing-section';
-import ServicesSection from '@/app/_components/services-section';
 import StatsSection from '@/app/_components/stats-section';
 import TestimonialsSection from '@/app/_components/testimonials-section';
 import WhyChooseUsSection from '@/app/_components/why-choose-us-section';
 import WorkingProcessSection from '@/app/_components/working-process-section';
 import FaqSection from '@/components/sections/faq-section';
+import OurService from '@/components/features/home/OurService';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <StatsSection />
-      <ServicesSection />
+      <OurService />
       <AboutSection />
       <WorkingProcessSection />
       <WhyChooseUsSection />

@@ -24,7 +24,7 @@ export default function PrimarySection({
 }: React.ComponentPropsWithoutRef<'section'> & { bg?: SectionBgKey }) {
   return (
     <section
-      className={cn('relative isolate px-4 lg:py-32', className)}
+      className={cn('relative isolate px-4 ', className)}
       style={style}
       {...props}
     >

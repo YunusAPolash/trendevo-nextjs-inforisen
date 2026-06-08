@@ -32,7 +32,7 @@ const steps = [
 export default function WorkingProcessSection() {
   return (
     <PrimarySection id="how-it-works" bg="section-6">
-      <div className="mx-auto flex max-w-[1440px] flex-col gap-12">
+      <div className="container flex flex-col gap-12">
         <SectionHeading
           badge="WORKING PROCESS"
           title="Grow Your Socials in 4 Simple Steps"

@@ -13,7 +13,7 @@ export default function PlatformMarqueeSection() {
   const items = [...platforms, ...platforms];
 
   return (
-    <section className="overflow-hidden border-y border-[#ff7fc1]/20 bg-white py-4">
+    <section className="w-full overflow-hidden border-y border-[#ff7fc1]/20 bg-white py-4">
       <div className="flex animate-[marquee_30s_linear_infinite] gap-8">
         {items.map((platform, index) => (
           <div
