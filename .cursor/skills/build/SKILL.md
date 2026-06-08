@@ -128,7 +128,7 @@ Treat Figma output as **reference only**. Adapt to this project's stack and comp
 
 - Read `AGENTS.md` and relevant guides in `node_modules/next/dist/docs/` before writing Next.js code.
 - Stack: **Next.js App Router**, **React 19**, **Tailwind CSS v4**, **shadcn/ui**, `@/lib/utils` `cn()`.
-- Reuse existing UI from `components/ui/` (e.g. `Button`) when they match the design.
+- Reuse existing UI from `components/ui/` (e.g. `Button`, `SectionHeading`) when they match the design.
 
 ---
 
@@ -204,6 +204,38 @@ When adding a section or card:
 - **DO NOT** download section or card backgrounds from Figma.
 - **DO NOT** add custom gradients, inline `backgroundImage`, or new files under `public/images/backgrounds/`.
 - **DO NOT** use any wrapper other than `PrimarySection` / `PrimaryCard` for sections and cards.
+
+### Section headings
+
+When a Figma section has the standard header pattern — gradient badge label, underline, main title, optional subtitle — **always** use `SectionHeading` from `components/ui/section-heading.tsx`. Do not hand-roll duplicate header markup.
+
+```tsx
+import SectionHeading from '@/components/ui/section-heading';
+
+<SectionHeading
+  badge="Why Choose Us"
+  title={
+    <>
+      Why <span className="text-gradient">Choose Us</span>
+    </>
+  }
+  subtitle="Boost your social media growth with our fast, reliable..."
+/>
+```
+
+**SectionHeading rules (strict):**
+
+- **DO** use `SectionHeading` for every section that has a badge + title header in Figma (Services, Why Choose Us, Pricing, FAQ, Working Process, etc.).
+- **DO** pass gradient words inside `title` via `<span className="text-gradient">...</span>`.
+- **DO** use exact badge, title, and subtitle copy from Figma.
+- **DO** override typography only when Figma differs from defaults, using optional props:
+  - `underlineSrc` / `underlineWidth` — when the underline asset or width differs per section
+  - `titleClassName` — when title size/tracking differs (e.g. `48px` headings)
+  - `subtitleClassName` — when subtitle color, weight, or max-width differs
+- **DO NOT** rebuild the badge + underline + title block inline when `SectionHeading` applies.
+- **DO NOT** skip `SectionHeading` on hero sections — hero uses its own layout and is exempt.
+
+Default underline: `/images/our-services/ui/underline.svg` (131px). Download a section-specific underline to `public/images/{section}/underline.svg` when Figma shows a different width.
 
 ---
 
@@ -340,6 +372,7 @@ Section: {name} ({n} of {total})
 - [ ] Icons/content images downloaded with SEO names
 - [ ] Section file created at correct path
 - [ ] PrimarySection / PrimaryCard used
+- [ ] `SectionHeading` used for section header (when Figma has badge + title pattern)
 - [ ] `.container` wrapper inside `PrimarySection`
 - [ ] Wired into page.tsx
 - [ ] Lint clean
@@ -358,6 +391,7 @@ Section build progress:
 - [ ] Icons/content images downloaded with SEO names
 - [ ] Section file created at correct path
 - [ ] PrimarySection + .container used
+- [ ] SectionHeading used for section header (when Figma has badge + title pattern)
 - [ ] PrimaryCard used for all cards in section
 - [ ] Spacing, typography, colors match Figma
 - [ ] Asset sizes and positions match Figma
@@ -396,9 +430,10 @@ Section build progress:
 2. Confirm no new files under `public/images/backgrounds/`.
 3. Confirm the section uses `PrimarySection` and every card uses `PrimaryCard`.
 4. Confirm the section has a `.container` div wrapping its content.
-5. Confirm downloaded assets are named descriptively and referenced correctly.
-6. **Side-by-side check:** implementation matches the Figma screenshot for this section's `nodeId`.
-7. **Do not proceed** to the next section until checks 1–6 pass and the user approves.
+5. Confirm `SectionHeading` is used wherever the Figma section has a badge + title header (not hand-rolled).
+6. Confirm downloaded assets are named descriptively and referenced correctly.
+7. **Side-by-side check:** implementation matches the Figma screenshot for this section's `nodeId`.
+8. **Do not proceed** to the next section until checks 1–7 pass and the user approves.
 
 ---
 
@@ -443,6 +478,7 @@ Section build progress:
 - Using `<section>` or `<div>` with custom background instead of `PrimarySection`
 - Placing section content directly on `PrimarySection` without a `.container` wrapper
 - Using `mx-auto max-w-[1440px]` instead of the `.container` class
+- Hand-rolling section headers (badge + underline + title) instead of `SectionHeading`
 - Using a raw card container instead of `PrimaryCard`
 - Exporting Figma background images into the repo
 - Applying `bg-gradient-*` or arbitrary background-url utilities on section/card wrappers outside the allowed keys

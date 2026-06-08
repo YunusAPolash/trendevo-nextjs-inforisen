@@ -1,7 +1,10 @@
 import AboutSection from '@/app/_components/about-section';
 import AdvantagesSection from '@/app/_components/advantages-section';
 import CtaSection from '@/app/_components/cta-section';
-import { homeFaqHeading, homeFaqItems } from '@/app/_components/home-faq-content';
+import {
+  homeFaqHeading,
+  homeFaqItems,
+} from '@/app/_components/home-faq-content';
 import FooterSection from '@/app/_components/footer-section';
 import HeroSection from '@/app/_components/hero-section';
 import PaymentMethodsSection from '@/app/_components/payment-methods-section';
@@ -16,7 +19,7 @@ import OurService from '@/components/features/home/OurService';
 
 export default function Home() {
   return (
-    <main className="overflow-x-clip">
+    <>
       <HeroSection />
       <StatsSection />
       <OurService />
@@ -37,7 +40,6 @@ export default function Home() {
         />
       </div>
       <CtaSection />
-      <FooterSection />
-    </main>
+    </>
   );
 }

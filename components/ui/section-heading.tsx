@@ -7,7 +7,14 @@ type SectionHeadingProps = {
   subtitle?: string;
   className?: string;
   align?: 'center' | 'left';
+  underlineSrc?: string;
+  underlineWidth?: number;
+  titleClassName?: string;
+  subtitleClassName?: string;
 };
+
+const DEFAULT_UNDERLINE_SRC = '/images/our-services/ui/underline.svg';
+const DEFAULT_UNDERLINE_WIDTH = 131;
 
 export default function SectionHeading({
   badge,
@@ -15,6 +22,10 @@ export default function SectionHeading({
   subtitle,
   className,
   align = 'center',
+  underlineSrc = DEFAULT_UNDERLINE_SRC,
+  underlineWidth = DEFAULT_UNDERLINE_WIDTH,
+  titleClassName,
+  subtitleClassName,
 }: SectionHeadingProps) {
   return (
     <div
@@ -41,20 +52,31 @@ export default function SectionHeading({
             {badge}
           </span>
           <Image
-            src="/images/our-services/ui/underline.svg"
+            src={underlineSrc}
             alt=""
             aria-hidden
-            width={131}
+            width={underlineWidth}
             height={8}
-            className="h-2 w-[131px]"
+            className="h-2"
+            style={{ width: underlineWidth }}
           />
         </div>
-        <h2 className="max-w-[961px] text-[28px] font-semibold leading-[1.35] tracking-[0.36px] text-[#071431] sm:text-[32px] lg:text-[36px]">
+        <h2
+          className={cn(
+            'max-w-[961px] text-[28px] font-semibold leading-[1.35] tracking-[0.36px] text-[#071431] sm:text-[32px] lg:text-[36px]',
+            titleClassName,
+          )}
+        >
           {title}
         </h2>
       </div>
       {subtitle ? (
-        <p className="max-w-[1090px] text-lg leading-normal text-[#404a60]">
+        <p
+          className={cn(
+            'max-w-[1090px] text-lg leading-normal text-[#404a60]',
+            subtitleClassName,
+          )}
+        >
           {subtitle}
         </p>
       ) : null}

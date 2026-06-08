@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
-import { homeFaqHeading, homeFaqItems } from '@/app/_components/home-faq-content';
+import {
+  homeFaqHeading,
+  homeFaqItems,
+} from '@/app/_components/home-faq-content';
 import FooterSection from '@/app/_components/footer-section';
 import TermsContentSection from '@/app/(legal)/_components/content-section';
 import TermsHeroSection from '@/app/(legal)/_components/hero-section';
@@ -12,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <main>
+    <>
       <TermsHeroSection />
       <TermsContentSection />
       <FaqSection
@@ -21,7 +24,6 @@ export default function TermsOfServicePage() {
         subtitle={homeFaqHeading.subtitle}
         items={homeFaqItems}
       />
-      <FooterSection />
-    </main>
+    </>
   );
 }
