@@ -4,11 +4,7 @@ import type { ReactNode } from 'react';
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
-
-const CARD_HEIGHT = 230;
-const CARD_GAP = 64;
-const COLUMN_HEIGHT = CARD_HEIGHT * 2 + CARD_GAP;
-const CENTER_IMAGE_HEIGHT = 555;
+import { cn } from '@/lib/utils';
 
 const leftAdvantages = [
   {
@@ -80,11 +76,15 @@ function AdvantageCard({
   return (
     <PrimaryCard
       bg="card-3"
-      className={`relative overflow-hidden rounded-xl px-4 py-6 ring-0 ${grow ? 'min-h-0 flex-1' : 'shrink-0'}`}
-      style={grow ? undefined : { height: CARD_HEIGHT }}
+      className={cn(
+        'relative overflow-hidden rounded-xl px-4 py-6 ring-0',
+        grow
+          ? 'lg:min-h-0 lg:flex-1'
+          : 'lg:h-[230px] lg:shrink-0',
+      )}
     >
-      <div className="relative z-10 flex flex-col gap-4">
-        <div className="flex items-center gap-2">
+      <div className="relative z-10 flex min-w-0 flex-col gap-4">
+        <div className="flex min-w-0 items-start gap-2">
           <div
             className="h-[34px] w-[6px] shrink-0 rounded-[9.5px]"
             style={{
@@ -92,7 +92,7 @@ function AdvantageCard({
                 'linear-gradient(91.07deg, #cb7ef7 4.77%, #ff9bc1 39.51%, #ee4fac 74.24%)',
             }}
           />
-          <h3 className="max-w-[314px] text-lg font-semibold leading-normal text-[#13203b]">
+          <h3 className="min-w-0 flex-1 text-lg font-semibold leading-normal text-[#13203b]">
             {title}
           </h3>
         </div>
@@ -106,8 +106,11 @@ function AdvantageCard({
 
 export default function AdvantagesSection() {
   return (
-    <PrimarySection bg="section-4" className="overflow-visible bg-white py-[84px]">
-      <div className="container flex flex-col items-center gap-16">
+    <PrimarySection
+      bg="section-4"
+      className="overflow-x-hidden bg-white py-12 sm:py-16 lg:py-[84px]"
+    >
+      <div className="container flex min-w-0 flex-col items-center gap-10 sm:gap-12 lg:gap-16">
         <SectionHeading
           badge="ADVANTAGES"
           title={
@@ -123,11 +126,8 @@ export default function AdvantagesSection() {
           subtitleClassName="max-w-[868px] font-medium text-[#4f586d]"
         />
 
-        <div className="flex w-full flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-          <div
-            className="flex w-full max-w-[454px] flex-col lg:w-[454px] lg:shrink-0"
-            style={{ gap: CARD_GAP, height: COLUMN_HEIGHT }}
-          >
+        <div className="flex w-full min-w-0 flex-col items-center gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-6 xl:gap-10">
+          <div className="flex w-full min-w-0 max-w-[454px] flex-col gap-6 lg:h-[524px] lg:gap-16">
             {leftAdvantages.map((item, index) => (
               <AdvantageCard
                 key={`left-${index}`}
@@ -137,25 +137,19 @@ export default function AdvantagesSection() {
             ))}
           </div>
 
-          <div
-            className="relative w-full max-w-[434px] shrink-0 lg:w-[434px]"
-            style={{ height: CENTER_IMAGE_HEIGHT }}
-          >
+          <div className="relative mx-auto h-[260px] w-full min-w-0 max-w-[320px] shrink-0 sm:h-[360px] sm:max-w-[380px] lg:mx-0 lg:h-[555px] lg:max-w-[434px]">
             <Image
               src="/images/advantages/advantage.png"
               alt="SMM panel advantages illustration"
               fill
-              sizes="400px"
+              sizes="(max-width: 640px) 320px, (max-width: 1024px) 380px, 434px"
               quality={100}
-              className="object-cover object-bottom"
+              className="object-contain object-bottom lg:object-cover"
               priority
             />
           </div>
 
-          <div
-            className="flex w-full max-w-[454px] flex-col lg:w-[454px] lg:shrink-0"
-            style={{ gap: CARD_GAP, height: COLUMN_HEIGHT }}
-          >
+          <div className="flex w-full min-w-0 max-w-[454px] flex-col gap-6 lg:h-[524px] lg:gap-16">
             {rightAdvantages.map((item, index) => (
               <AdvantageCard
                 key={`right-${index}`}
