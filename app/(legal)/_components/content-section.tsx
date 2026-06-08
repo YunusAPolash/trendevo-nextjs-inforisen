@@ -59,7 +59,7 @@ export default function TermsContentSection() {
           <p className="text-sm font-medium text-[#1a1a1a]">
             These Terms of Service apply to all users of smmsun.com and should
             be read alongside our{' '}
-            <Link href="#" className="text-[#8f2acd] hover:underline">
+            <Link href="/privacy-policy" className="text-[#8f2acd] hover:underline">
               Privacy Policy
             </Link>{' '}
             and{' '}
@@ -395,7 +395,7 @@ export default function TermsContentSection() {
         <ContentBlock number={12} title="Privacy and Data Protection">
           <p>
             Your use of SMMSun is also governed by our{' '}
-            <Link href="#" className="text-[#8f2acd] hover:underline">
+            <Link href="/privacy-policy" className="text-[#8f2acd] hover:underline">
               Privacy Policy
             </Link>
             , which explains in detail what personal data we collect, how we use
