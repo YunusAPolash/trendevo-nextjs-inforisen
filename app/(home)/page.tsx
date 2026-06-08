@@ -7,6 +7,7 @@ import {
 } from '@/app/(home)/_components/home-faq-content';
 import FooterSection from '@/app/(home)/_components/footer-section';
 import HeroSection from '@/app/(home)/_components/hero-section';
+import HomeBlog from '@/app/(home)/_components/home-blog';
 import PaymentMethodsSection from '@/app/(home)/_components/payment-methods-section';
 import PlatformMarqueeSection from '@/app/(home)/_components/platform-marquee-section';
 import PricingSection from '@/app/(home)/_components/pricing-section';
@@ -39,6 +40,8 @@ export default function Home() {
           items={homeFaqItems}
         />
       </div>
+      <HomeBlog />
+      
       <CtaSection />
     </>
   );
