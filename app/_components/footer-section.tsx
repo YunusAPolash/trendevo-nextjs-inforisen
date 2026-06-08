@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ChevronDown } from 'lucide-react';
 import PrimarySection from '@/components/sections/primary-section';
 import { cn } from '@/lib/utils';
 
@@ -48,11 +47,27 @@ const serviceLinks = [
 ];
 
 const socialLinks = [
-  { label: 'Facebook', href: '#', iconSrc: '/images/icons/footer-social-facebook.webp' },
-  { label: 'Instagram', href: '#', iconSrc: '/images/icons/footer-social-instagram.webp' },
+  {
+    label: 'Facebook',
+    href: '#',
+    iconSrc: '/images/icons/footer-social-facebook.webp',
+  },
+  {
+    label: 'Instagram',
+    href: '#',
+    iconSrc: '/images/icons/footer-social-instagram.webp',
+  },
   { label: 'X', href: '#', iconSrc: '/images/icons/footer-social-x.webp' },
-  { label: 'LinkedIn', href: '#', iconSrc: '/images/icons/footer-social-linkedin.webp' },
-  { label: 'YouTube', href: '#', iconSrc: '/images/icons/footer-social-youtube.webp' },
+  {
+    label: 'LinkedIn',
+    href: '#',
+    iconSrc: '/images/icons/footer-social-linkedin.webp',
+  },
+  {
+    label: 'YouTube',
+    href: '#',
+    iconSrc: '/images/icons/footer-social-youtube.webp',
+  },
 ] as const;
 
 const contactIconGradient =
@@ -68,14 +83,20 @@ function FooterColumn({
   className?: string;
 }) {
   return (
-    <div className={cn('flex flex-col gap-[18px]', className)}>
-      <h3 className="text-xl font-semibold tracking-[0.2px] text-[#13203b]">{title}</h3>
+    <div className={cn('flex w-auto shrink-0 flex-col gap-[18px]', className)}>
+      <h3 className="text-xl font-semibold tracking-[0.2px] text-[#13203b]">
+        {title}
+      </h3>
       {children}
     </div>
   );
 }
 
-function FooterLinkList({ links }: { links: { label: string; href: string }[] }) {
+function FooterLinkList({
+  links,
+}: {
+  links: { label: string; href: string }[];
+}) {
   return (
     <ul className="flex flex-col gap-4">
       {links.map((link) => (
@@ -119,7 +140,7 @@ function SocialLink({
         alt=""
         width={18}
         height={18}
-        className="relative z-10 size-7 object-contain"
+        className="relative z-10 size-6 object-contain"
         aria-hidden
       />
     </Link>
@@ -143,7 +164,9 @@ function ContactRow({
       >
         <Image src={iconSrc} alt={iconAlt} width={16} height={16} />
       </div>
-      <div className="text-sm font-medium leading-relaxed text-[#13203b]">{children}</div>
+      <div className="text-sm font-medium leading-relaxed text-[#13203b]">
+        {children}
+      </div>
     </div>
   );
 }
@@ -151,8 +174,8 @@ function ContactRow({
 export default function FooterSection() {
   return (
     <PrimarySection
-      bg="section-8"
-      className="overflow-hidden rounded-t-3xl py-12 lg:py-[60px] lg:px-4"
+      bg="section-9"
+      className="mx-12 mb-10 overflow-hidden rounded-t-3  xl py-12 lg:py-[60px] lg:px-4"
     >
       <footer className="container flex flex-col gap-10">
         <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:justify-between">
@@ -168,15 +191,18 @@ export default function FooterSection() {
               </Link>
               <p className="text-sm font-medium leading-relaxed text-[#313131]">
                 Trend Evo Panel is a trusted{' '}
-                <span className="text-gradient">SMM panel in Bangladesh</span>, offering fast,
-                secure, and affordable social media growth services for all major platforms. With
-                support for bKash and Nagad, plus a fully automated, user-friendly system, we make
+                <span className="text-gradient">SMM panel in Bangladesh</span>,
+                offering fast, secure, and affordable social media growth
+                services for all major platforms. With support for bKash and
+                Nagad, plus a fully automated, user-friendly system, we make
                 growing your online presence simple and effective.
               </p>
             </div>
 
             <div className="flex flex-col gap-3.5">
-              <p className="text-xl font-semibold tracking-[0.2px] text-[#13203b]">Follow Us</p>
+              <p className="text-xl font-semibold tracking-[0.2px] text-[#13203b]">
+                Follow Us
+              </p>
               <div className="flex flex-wrap gap-1.5">
                 {socialLinks.map((social) => (
                   <SocialLink
@@ -190,7 +216,7 @@ export default function FooterSection() {
             </div>
           </div>
 
-          <div className="grid flex-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-8">
+          <div className="flex flex-1 flex-wrap items-start justify-between gap-y-10 xl:flex-nowrap">
             <FooterColumn title="Quick Links">
               <FooterLinkList links={quickLinks} />
             </FooterColumn>
@@ -209,24 +235,40 @@ export default function FooterSection() {
                   <li key={label}>
                     <Link
                       href="/#services"
-                      className="flex items-center justify-between gap-2 text-sm font-medium text-[#222e48] transition-colors hover:text-[#13203b]"
+                      className="flex items-center justify-between text-sm font-medium text-[#222e48] transition-colors hover:text-[#13203b]"
                     >
                       <span>{label}</span>
-                      <ChevronDown className="size-[22px] shrink-0 text-[#8f2acd]" />
+                      <Image
+                        src="/images/icons/footer-service-chevron.svg"
+                        alt=""
+                        width={22}
+                        height={22}
+                        className="size-[22px] shrink-0 rotate-180"
+                        aria-hidden
+                      />
                     </Link>
                   </li>
                 ))}
               </ul>
             </FooterColumn>
 
-            <FooterColumn title="Contact Information" className="sm:col-span-2 lg:col-span-3 xl:col-span-1">
+            <FooterColumn title="Contact Information">
               <div className="flex flex-col gap-[15px]">
-                <ContactRow iconSrc="/images/icons/footer-email-icon.svg" iconAlt="Email">
-                  <a href="mailto:info@trendevo.com" className="hover:underline">
+                <ContactRow
+                  iconSrc="/images/icons/footer-email-icon.svg"
+                  iconAlt="Email"
+                >
+                  <a
+                    href="mailto:info@trendevo.com"
+                    className="hover:underline"
+                  >
                     info@trendevo.com
                   </a>
                 </ContactRow>
-                <ContactRow iconSrc="/images/icons/footer-phone-icon.svg" iconAlt="Phone">
+                <ContactRow
+                  iconSrc="/images/icons/footer-phone-icon.svg"
+                  iconAlt="Phone"
+                >
                   <a href="tel:+880188888877777" className="hover:underline">
                     +880188888877777
                   </a>
