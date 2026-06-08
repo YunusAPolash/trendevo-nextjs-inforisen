@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import SiteHeader from '@/components/layout/site-header';
 import FooterSection from './(home)/_components/footer-section';
+
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -40,6 +42,7 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex flex-col">
+        <SiteHeader className="border-b border-white/30 bg-white/50" />
         <main>{children}</main>
         <FooterSection />
       </body>
