@@ -1,6 +1,5 @@
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
-import SiteHeader from '@/components/layout/site-header';
 
 type HeroSectionProps = {
   titlePrefix: string;
@@ -16,8 +15,7 @@ export default function HeroSection({
   lastUpdated,
 }: HeroSectionProps) {
   return (
-    <PrimarySection className="overflow-hidden bg-[#FCF8FF] py-0 lg:py-0">
-      <SiteHeader className="border-b border-white/30 bg-white/50" />
+    <PrimarySection className="overflow-hidden bg-[#FCF8FF] pb-0 pt-20 lg:pb-0">
       <PrimaryCard
         bg="card-3"
         className="container flex flex-col items-center gap-8 rounded-none bg-[#FCF8FF] bg-[length:100%_100%] py-12 text-center lg:py-14"

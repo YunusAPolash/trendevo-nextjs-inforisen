@@ -1,0 +1,52 @@
+import Image from 'next/image';
+
+type ArticleHeroSectionProps = {
+  postedAt?: string;
+  titleHighlight?: string;
+  titleRest?: string;
+  featuredImageSrc?: string;
+  featuredImageAlt?: string;
+};
+
+export default function ArticleHeroSection({
+  postedAt = '16 March 2026',
+  titleHighlight = 'SMM Panel Vs. Organic Social Media',
+  titleRest = 'Growth: Which Works Better in Bangladesh?',
+  featuredImageSrc = '/images/blog-details/blog-details-hero-featured-image.webp',
+  featuredImageAlt = 'Team reviewing social media growth analytics in an office',
+}: ArticleHeroSectionProps) {
+  return (
+    <div className="flex flex-col gap-10">
+      <div className="flex max-w-[683px] flex-col gap-[26px]">
+        <div className="inline-flex w-fit items-center gap-2 rounded-lg border border-[#e2b0ff] bg-[linear-gradient(9.59deg,rgb(251,245,255)_10.39%,rgb(255,250,252)_58.1%,rgb(238,209,255)_126.5%)] px-4 py-2">
+          <Image
+            src="/images/icons/blog-details-posted-at-clock.webp"
+            alt=""
+            width={21}
+            height={20}
+            aria-hidden
+          />
+          <span className="text-base font-semibold text-gradient whitespace-pre">
+            {`Posted At :  ${postedAt}`}
+          </span>
+        </div>
+
+        <h1 className="text-[32px] font-semibold leading-normal text-[#0c070f]">
+          <span className="block text-gradient">{titleHighlight}</span>
+          <span className="block">{titleRest}</span>
+        </h1>
+      </div>
+
+      <div className="relative h-[280px] w-full overflow-hidden rounded-3xl sm:h-[320px] lg:h-[374px]">
+        <Image
+          src={featuredImageSrc}
+          alt={featuredImageAlt}
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="(max-width: 1024px) 100vw, 1075px"
+        />
+      </div>
+    </div>
+  );
+}
