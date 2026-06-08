@@ -12,7 +12,7 @@ const navLinks = [
   { label: 'About Us', href: '#about' },
   { label: 'How it works', href: '#how-it-works' },
   { label: 'Blog', href: '#blog' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Contact Us', href: '/contact-us' },
 ];
 
 export default function SiteHeader({ className }: { className?: string }) {
