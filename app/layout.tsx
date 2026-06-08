@@ -1,25 +1,25 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
-import "./globals.css";
-import SiteHeader from "@/components/layout/site-header";
-import { cn } from "@/lib/utils";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono, Inter } from 'next/font/google';
+import './globals.css';
+import { cn } from '@/lib/utils';
+import FooterSection from './_components/footer-section';
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "TrendEvo | Trusted SMM Panel",
+  title: 'TrendEvo | Trusted SMM Panel',
   description:
-    "TrendEvo is a next-generation SMM panel delivering fast, secure social media growth for brands, creators, and agencies in Bangladesh.",
+    'TrendEvo is a next-generation SMM panel delivering fast, secure social media growth for brands, creators, and agencies in Bangladesh.',
 };
 
 export default function RootLayout({
@@ -30,11 +30,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
+      className={cn(
+        'h-full',
+        'antialiased',
+        geistSans.variable,
+        geistMono.variable,
+        'font-sans',
+        inter.variable,
+      )}
     >
-      <body className="flex min-h-screen flex-col">
-        <SiteHeader />
-        {children}
+      <body className="min-h-full flex flex-col">
+        <main>{children}</main>
+        <FooterSection />
       </body>
     </html>
   );
