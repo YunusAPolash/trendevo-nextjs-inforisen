@@ -43,12 +43,12 @@ export default function StatsSection() {
       id="stats"
       className="relative z-10 bg-[#f8f8f8] px-0 py-20"
     >
-      <div className="mx-auto flex w-full max-w-[1440px] flex-wrap justify-center gap-6 px-6 min-[1416px]:flex-nowrap min-[1416px]:justify-between lg:px-0">
+      <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
         {stats.map((stat) => (
           <PrimaryCard
             key={stat.label}
             bg="card-1"
-            className="w-full max-w-[336px] shrink-0 items-start overflow-hidden rounded-[18px] border border-[#ff7fc1]/50 border-t-[0.5px] border-r-[0.5px] border-b-[0.5px] border-l-[3px] border-l-[#ff7fc1] bg-white p-6 ring-0"
+            className="w-full items-start overflow-hidden rounded-[18px] border border-[#ff7fc1]/50 border-t-[0.5px] border-r-[0.5px] border-b-[0.5px] border-l-[3px] border-l-[#ff7fc1] bg-white p-6 ring-0"
           >
             <div
               className="relative h-[100px] shrink-0"

@@ -1,5 +1,5 @@
 import CtaSection from '@/components/sections/cta-section';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
 
 export default function HomeCtaSection() {
   return (
@@ -14,15 +14,15 @@ export default function HomeCtaSection() {
       description="Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly."
       buttonsOutlet={
         <>
-          <Button className="bg-brand-gradient h-[50px] rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] font-semibold text-white hover:opacity-90">
+          <PrimaryButton type="button" className="min-w-[160px]">
             Register Now
-          </Button>
-          <Button
-            variant="outline"
-            className="h-[50px] rounded-[10px] border-[#d181ff] bg-white/25 px-6 font-semibold text-gradient hover:bg-white/40"
+          </PrimaryButton>
+          <button
+            type="button"
+            className="inline-flex h-[50px] min-w-[180px] cursor-pointer items-center justify-center rounded-[10px] border border-[#d181ff] bg-white/25 px-[18px] text-base font-semibold text-gradient transition hover:bg-white/40"
           >
             See all Services
-          </Button>
+          </button>
         </>
       }
     />
