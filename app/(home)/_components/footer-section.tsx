@@ -27,8 +27,8 @@ const smmPanelLinks = [
 
 const companyLinks = [
   { label: 'Terms Of Services', href: '/terms-of-service' },
-  { label: 'Privacy Policy', href: '/#privacy' },
-  { label: 'Refund Policy', href: '/#refund' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Refund Policy', href: '/refund-policy' },
   { label: 'FAQs', href: '/#faq' },
   { label: 'Contact Us', href: '/#contact' },
 ];

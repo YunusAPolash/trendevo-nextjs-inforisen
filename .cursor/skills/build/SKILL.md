@@ -6,7 +6,7 @@ description: >-
   from a Figma design URL. Full pages are built one section at a time:
   list sections first, build section 1 completely, pause for user review,
   then proceed section by section.
-disable-model-invocation: true
+disable-model-invocation: false
 ---
 
 # Build (Figma → Code)
