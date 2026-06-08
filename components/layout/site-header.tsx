@@ -94,7 +94,7 @@ export default function SiteHeader({ className }: { className?: string }) {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 xl:flex">
+        <nav className="hidden min-[1100px]:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.label}
@@ -111,8 +111,8 @@ export default function SiteHeader({ className }: { className?: string }) {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3 md:gap-6">
-          <div className="hidden items-center gap-4 md:flex">
+        <div className="flex items-center gap-3 min-[1100px]:gap-6">
+          <div className="hidden items-center gap-4 min-[1100px]:flex">
             <div className="flex items-center gap-2 rounded-full border border-[#d57ff9]/30 bg-[#ffe9f5] px-2 py-1">
               <span className="text-[10px] font-medium text-[#424242]">Light</span>
             </div>
@@ -124,7 +124,7 @@ export default function SiteHeader({ className }: { className?: string }) {
             </Link>
           </div>
 
-          <Button className="bg-brand-gradient hidden h-10 rounded-[10px] border-0 px-4 text-base font-semibold text-white hover:opacity-90 sm:inline-flex">
+          <Button className="bg-brand-gradient hidden h-10 rounded-[10px] border-0 px-4 text-base font-semibold text-white hover:opacity-90 min-[1100px]:inline-flex">
             Create account
           </Button>
 
@@ -134,7 +134,7 @@ export default function SiteHeader({ className }: { className?: string }) {
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav"
             onClick={() => setMobileOpen((open) => !open)}
-            className="flex size-10 cursor-pointer items-center justify-center rounded-[10px] border border-[#d57ff9]/30 bg-white/60 xl:hidden"
+            className="flex size-10 cursor-pointer items-center justify-center rounded-[10px] border border-[#d57ff9]/30 bg-white/60 min-[1100px]:hidden"
           >
             <MenuIcon open={mobileOpen} />
           </button>
@@ -144,7 +144,7 @@ export default function SiteHeader({ className }: { className?: string }) {
       <div
         id="mobile-nav"
         className={cn(
-          'overflow-hidden border-t border-white/20 bg-white/80 backdrop-blur-xl transition-[max-height,opacity] duration-300 xl:hidden',
+          'overflow-hidden border-t border-white/20 bg-white/80 backdrop-blur-xl transition-[max-height,opacity] duration-300 min-[1100px]:hidden',
           mobileOpen ? 'max-h-[calc(100dvh-80px)] opacity-100' : 'max-h-0 opacity-0',
         )}
       >

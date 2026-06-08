@@ -71,7 +71,7 @@ function AdvantageCard({
   return (
     <PrimaryCard
       bg="card-3"
-      className="relative overflow-visible rounded-xl px-4 py-6 ring-0"
+      className="relative w-full overflow-visible rounded-xl px-4 py-6 ring-0"
     >
       <div className="relative z-10 flex min-w-0 flex-col gap-4">
         <div className="flex min-w-0 items-start gap-2">
@@ -116,8 +116,8 @@ export default function AdvantagesSection() {
           subtitleClassName="max-w-[868px] font-medium text-[#4f586d]"
         />
 
-        <div className="flex w-full min-w-0 flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6 xl:gap-10">
-          <div className="flex w-full min-w-0 max-w-[454px] flex-col gap-6 lg:gap-16">
+        <div className="flex w-full min-w-0 flex-col items-stretch gap-6 sm:gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6 xl:gap-10">
+          <div className="flex w-full min-w-0 flex-col gap-6 lg:max-w-[454px] lg:gap-16">
             {leftAdvantages.map((item, index) => (
               <AdvantageCard
                 key={`left-${index}`}
@@ -127,19 +127,19 @@ export default function AdvantagesSection() {
             ))}
           </div>
 
-          <div className="relative mx-auto h-[260px] w-full min-w-0 max-w-[320px] shrink-0 overflow-hidden rounded-[24px] sm:h-[360px] sm:max-w-[380px] lg:mx-0 lg:h-[555px] lg:max-w-[500px] lg:rounded-[30px]">
+          <div className="relative aspect-[434/555] w-full min-w-0 shrink-0 overflow-hidden rounded-[24px] lg:aspect-auto lg:h-[555px] lg:max-w-[434px] lg:rounded-[30px]">
             <Image
               src="/images/advantages/advantage.png"
               alt="SMM panel advantages illustration"
               fill
-              sizes="(max-width: 640px) 320px, (max-width: 1024px) 380px, 434px"
+              sizes="(max-width: 1024px) 100vw, 434px"
               quality={100}
               className="object-contain object-bottom"
               priority
             />
           </div>
 
-          <div className="flex w-full min-w-0 max-w-[454px] flex-col gap-6 lg:gap-16">
+          <div className="flex w-full min-w-0 flex-col gap-6 lg:max-w-[454px] lg:gap-16">
             {rightAdvantages.map((item, index) => (
               <AdvantageCard
                 key={`right-${index}`}
