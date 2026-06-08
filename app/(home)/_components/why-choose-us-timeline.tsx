@@ -13,12 +13,12 @@ const TIMELINE_MARKER_GRADIENT =
 
 function TimelineMarker({ number }: { number: string }) {
   return (
-    <div className="relative flex size-[107px] shrink-0 items-center justify-center rounded-full bg-[rgba(234,230,255,0.16)] p-2.5">
+    <div className="relative flex size-[88px] shrink-0 items-center justify-center rounded-full bg-[rgba(234,230,255,0.16)] p-2 xl:size-[107px]">
       <div
-        className="flex size-[85px] items-center justify-center rounded-full p-5"
+        className="flex size-[68px] items-center justify-center rounded-full p-4 xl:size-[85px] xl:p-5"
         style={{ backgroundImage: TIMELINE_MARKER_GRADIENT }}
       >
-        <span className="text-[32px] font-medium leading-[43px] text-white">
+        <span className="text-2xl font-medium leading-none text-white xl:text-[32px] xl:leading-[43px]">
           {number}
         </span>
       </div>
@@ -54,10 +54,10 @@ function TimelineStepper() {
 
 export function WhyChooseUsDesktopTimeline() {
   return (
-    <div className="hidden w-full max-w-[1440px] grid-cols-[minmax(0,1fr)_107px_minmax(0,1fr)] items-stretch gap-x-4 xl:grid xl:gap-x-6">
-      <div className="flex flex-col gap-7">
+    <div className="hidden w-full min-w-0 max-w-[1440px] grid-cols-[minmax(0,1fr)_88px_minmax(0,1fr)] items-stretch gap-x-3 lg:grid xl:grid-cols-[minmax(0,1fr)_107px_minmax(0,1fr)] xl:gap-x-6">
+      <div className="flex min-w-0 flex-col gap-5 xl:gap-7">
         {leftFeatures.map((feature) => (
-          <div key={feature.title} className="flex flex-1 flex-col">
+          <div key={feature.title} className="flex min-w-0 flex-1 flex-col">
             <WhyChooseUsCard {...feature} />
           </div>
         ))}
@@ -65,9 +65,9 @@ export function WhyChooseUsDesktopTimeline() {
 
       <TimelineStepper />
 
-      <div className="flex flex-col gap-7">
+      <div className="flex min-w-0 flex-col gap-5 xl:gap-7">
         {rightFeatures.map((feature) => (
-          <div key={feature.title} className="flex flex-1 flex-col">
+          <div key={feature.title} className="flex min-w-0 flex-1 flex-col">
             <WhyChooseUsCard {...feature} />
           </div>
         ))}

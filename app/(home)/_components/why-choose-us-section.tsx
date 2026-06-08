@@ -29,7 +29,7 @@ export default function WhyChooseUsSection() {
 
         <WhyChooseUsDesktopTimeline />
 
-        <div className="flex w-full flex-col gap-7 xl:hidden">
+        <div className="flex w-full flex-col gap-7 lg:hidden">
           {timelineSteps.map((step, index) => (
             <div key={step} className="flex flex-col gap-7">
               <WhyChooseUsCard {...leftFeatures[index]} />
