@@ -10,6 +10,8 @@ const GRADIENT_TEXT =
 const STEP_CARD_GRADIENT =
   'linear-gradient(33.8deg, rgb(251, 245, 255) 10.387%, rgb(255, 250, 252) 58.1%, rgb(247, 172, 255) 126.5%)';
 
+const CARD_CONTENT_BASE = 'px-8 py-10 pb-12 lg:py-0';
+
 const steps = [
   {
     number: '01',
@@ -18,7 +20,7 @@ const steps = [
       'Sign up quickly using your email or social login and get instant access to all TrendEvo services. Manage and track your orders easily from a single dashboard.',
     highlighted: true,
     corner: 'tl' as const,
-    contentClassName: 'lg:pl-[100px] lg:pt-[43px]',
+    contentClassName: `${CARD_CONTENT_BASE} lg:pt-[43px] lg:pl-[max(2rem,18%)] lg:pr-[max(2rem,13%)]`,
   },
   {
     number: '02',
@@ -26,7 +28,7 @@ const steps = [
     description:
       'Deposit funds securely via credit/debit card, bank transfer, or cryptocurrency. Your wallet is credited instantly so you can start placing orders immediately.',
     highlighted: false,
-    contentClassName: 'lg:pl-12 lg:pt-10',
+    contentClassName: `${CARD_CONTENT_BASE} lg:pt-10 lg:pl-[max(2rem,8.5%)] lg:pr-8`,
   },
   {
     number: '03',
@@ -34,7 +36,7 @@ const steps = [
     description:
       'Select from Instagram, TikTok, YouTube, or Facebook services with clear pricing, delivery times, and reliability stats. Pick the package that fits your growth goals perfectly.',
     highlighted: false,
-    contentClassName: 'lg:pl-12 lg:pt-12',
+    contentClassName: `${CARD_CONTENT_BASE} lg:pt-12 lg:pl-[max(2rem,8.5%)] lg:pr-8`,
   },
   {
     number: '04',
@@ -43,7 +45,7 @@ const steps = [
       'Enter your account details, select the desired quantity, and submit your order. Real-time validation ensures everything is accurate and ready to process quickly.',
     highlighted: true,
     corner: 'br' as const,
-    contentClassName: 'lg:pl-16 lg:pt-[52px]',
+    contentClassName: `${CARD_CONTENT_BASE} lg:pt-[52px] lg:pl-[max(2rem,11.5%)] lg:pr-[max(2rem,13%)]`,
   },
 ];
 
@@ -77,33 +79,36 @@ const LINE_HORIZONTAL_SRC = '/images/working-process/card-border-top.svg';
 
 type BorderEdge = 'top' | 'bottom' | 'left' | 'right';
 
-const EDGE_POSITION: Record<BorderEdge, string> = {
+const EDGE_ANCHOR: Record<BorderEdge, string> = {
   top: 'top-0',
   bottom: 'bottom-0',
   left: 'left-0',
   right: 'right-0',
 };
 
+const EDGE_CENTER: Record<'horizontal' | 'vertical', string> = {
+  horizontal: 'left-1/2 -translate-x-1/2',
+  vertical: 'top-1/2 -translate-y-1/2',
+};
+
 function CardBorder({
-  length,
   axis,
   edge,
-  className,
+  sizeClassName,
 }: {
-  length: number;
   axis: 'horizontal' | 'vertical';
   edge: BorderEdge;
-  className?: string;
+  sizeClassName: string;
 }) {
   if (axis === 'vertical') {
     return (
       <div
         className={cn(
           'pointer-events-none absolute z-[1] w-[3px]',
-          EDGE_POSITION[edge],
-          className,
+          EDGE_ANCHOR[edge],
+          EDGE_CENTER.vertical,
+          sizeClassName,
         )}
-        style={{ height: length }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -122,10 +127,10 @@ function CardBorder({
     <div
       className={cn(
         'pointer-events-none absolute z-[1] h-[3px]',
-        EDGE_POSITION[edge],
-        className,
+        EDGE_ANCHOR[edge],
+        EDGE_CENTER.horizontal,
+        sizeClassName,
       )}
-      style={{ width: length }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -147,14 +152,12 @@ function HighlightedCardBorders({ corner }: { corner: 'tl' | 'br' }) {
         <CardBorder
           axis="horizontal"
           edge="bottom"
-          length={346}
-          className="right-[101px] max-lg:right-8"
+          sizeClassName="w-[72%] max-w-[346px]"
         />
         <CardBorder
           axis="vertical"
           edge="right"
-          length={215}
-          className="top-[54px]"
+          sizeClassName="h-[65%] max-h-[215px]"
         />
       </>
     );
@@ -165,14 +168,12 @@ function HighlightedCardBorders({ corner }: { corner: 'tl' | 'br' }) {
       <CardBorder
         axis="horizontal"
         edge="top"
-        length={346}
-        className="right-[106px] max-lg:right-8"
+        sizeClassName="w-[72%] max-w-[346px]"
       />
       <CardBorder
         axis="vertical"
         edge="left"
-        length={346}
-        className="top-[23px]"
+        sizeClassName="h-[65%] max-h-[346px]"
       />
     </>
   );
@@ -207,7 +208,7 @@ function ProcessStepCard({
           aria-hidden
           width={166}
           height={166}
-          className="pointer-events-none absolute -left-[111px] -top-[49px] z-0 size-[166px] opacity-40"
+          className="pointer-events-none absolute -left-[80px] -top-[40px] z-0 size-[166px] opacity-40"
           unoptimized
         />
       ) : null}
@@ -219,38 +220,40 @@ function ProcessStepCard({
           aria-hidden
           width={166}
           height={166}
-          className="pointer-events-none absolute left-[509px] top-[223px] z-0 size-[166px] opacity-40"
+          className="pointer-events-none absolute -bottom-[40px] -right-[80px] z-0 size-[166px] opacity-40"
           unoptimized
         />
       ) : null}
 
       <div
         className={cn(
-          'relative z-10 flex h-full flex-col gap-6 p-8 lg:gap-[30px] lg:p-0',
+          'relative z-10 flex h-full w-full flex-col gap-6 lg:gap-[30px]',
           contentClassName,
         )}
       >
-        <div className="flex flex-col gap-1">
-          <span
-            className={cn(
-              'text-[40px] font-bold leading-[1.3] lg:text-[48px]',
-              GRADIENT_TEXT,
-            )}
-          >
-            {number}
-          </span>
-          <h3
-            className={cn(
-              'text-xl font-semibold leading-normal lg:text-[22px]',
-              GRADIENT_TEXT,
-            )}
-          >
-            {title}
-          </h3>
+        <div className="flex w-full min-w-0 max-w-[385px] flex-col gap-6 lg:gap-[30px]">
+          <div className="flex flex-col gap-1">
+            <span
+              className={cn(
+                'text-[40px] font-bold leading-[1.3] lg:text-[48px]',
+                GRADIENT_TEXT,
+              )}
+            >
+              {number}
+            </span>
+            <h3
+              className={cn(
+                'text-xl font-semibold leading-normal lg:text-[22px]',
+                GRADIENT_TEXT,
+              )}
+            >
+              {title}
+            </h3>
+          </div>
+          <p className="text-base font-medium leading-normal text-[#071431]">
+            {description}
+          </p>
         </div>
-        <p className="max-w-[385px] text-base font-medium leading-normal text-[#071431]">
-          {description}
-        </p>
       </div>
     </article>
   );
