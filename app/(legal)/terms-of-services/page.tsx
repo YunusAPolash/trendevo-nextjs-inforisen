@@ -15,16 +15,15 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <main>
+    <>
       <TermsHeroSection />
       <TermsContentSection />
-      {/* <FaqSection
+      <FaqSection
         label={homeFaqHeading.label}
         title={homeFaqHeading.title}
         subtitle={homeFaqHeading.subtitle}
         items={homeFaqItems}
-      /> */}
-      <FooterSection />
-    </main>
+      />
+    </>
   );
 }

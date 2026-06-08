@@ -175,7 +175,7 @@ export default function FooterSection() {
   return (
     <PrimarySection
       bg="section-9"
-      className="mx-12 mb-10 overflow-hidden rounded-t-3  xl py-12 lg:py-[60px] lg:px-4"
+      className="rounded-3xl mx-12 my-10 overflow-hidden rounded-t-3  xl py-12 lg:py-[60px] lg:px-4"
     >
       <footer className="container flex flex-col gap-10">
         <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:justify-between">
