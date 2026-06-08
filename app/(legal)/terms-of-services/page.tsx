@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import {
   homeFaqHeading,
   homeFaqItems,
-} from '@/app/_components/home-faq-content';
-import FooterSection from '@/app/_components/footer-section';
+} from '@/app/(home)/_components/home-faq-content';
+import FooterSection from '@/app/(home)/_components/footer-section';
 import TermsContentSection from '@/app/(legal)/_components/content-section';
 import TermsHeroSection from '@/app/(legal)/_components/hero-section';
 import FaqSection from '@/components/sections/faq-section';
