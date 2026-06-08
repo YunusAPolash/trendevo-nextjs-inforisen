@@ -28,7 +28,6 @@ type Platform = {
   label: string;
   icon: string;
   iconClassName?: string;
-  composedIcon?: boolean;
   marketingTitle: string;
   description: string;
   services: ServiceItem[];
@@ -401,7 +400,6 @@ const platforms: Platform[] = [
     id: 'soundcloud',
     label: 'SoundCloud',
     icon: '/images/our-services/platforms/soundcloud.png',
-    composedIcon: true,
     marketingTitle: 'SoundCloud Marketing Services',
     description:
       'Elevate your SoundCloud profile with plays, followers, and reposts that help your tracks gain traction.',
@@ -481,8 +479,7 @@ const platforms: Platform[] = [
   {
     id: 'website-traffic',
     label: 'Website Traffic',
-    icon: '/images/our-services/platforms/website-traffic.png',
-    composedIcon: true,
+    icon: '/images/our-services/platforms/web.png',
     marketingTitle: 'Website Traffic Services',
     description:
       'Drive targeted visitors to your website with high-quality traffic that improves rankings, conversions, and online visibility.',
@@ -521,12 +518,62 @@ const platforms: Platform[] = [
   },
 ];
 
-function WebsiteTrafficIcon() {
+function HexBgIcon({ className }: { className?: string }) {
   return (
-    <div className="relative h-[17px] w-[20.621px] shrink-0">
-      <Image src="/images/our-services/platforms/wt-5.svg" alt="" aria-hidden fill className="object-contain" unoptimized />
-      <Image src="/images/our-services/platforms/wt-7.svg" alt="" aria-hidden fill className="object-contain mix-blend-overlay" unoptimized />
-      <Image src="/images/our-services/platforms/wt-8.svg" alt="" aria-hidden fill className="object-contain mix-blend-overlay" unoptimized />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="33"
+      height="37"
+      viewBox="0 0 33 37"
+      fill="none"
+      aria-hidden
+      className={className}
+    >
+      <path
+        d="M13.5039 0.890625C15.3294 -0.163308 17.5788 -0.163308 19.4043 0.890625L29.8584 6.92676C31.6838 7.98065 32.8085 9.92836 32.8086 12.0361V24.1084C32.8085 26.2162 31.6838 28.1639 29.8584 29.2178L19.4043 35.2539C17.5788 36.3078 15.3294 36.3078 13.5039 35.2539L3.0498 29.2178C1.22441 28.1639 0.0996928 26.2162 0.0996094 24.1084V12.0361C0.0996928 9.92836 1.22441 7.98065 3.0498 6.92676L13.5039 0.890625Z"
+        fill="white"
+        stroke="#C081E6"
+        strokeWidth="1"
+      />
+    </svg>
+  );
+}
+
+function ServiceSectionDecorations() {
+  return (
+    <div
+      aria-hidden
+      className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-full max-w-[1920px] -translate-x-1/2 lg:block"
+    >
+      {/* Figma 1524:19711 — bottom-left, top 711px in 1111px frame (631px below py-80 content) */}
+      <div className="absolute left-[-4.36%] top-[631px] flex h-[273.534px] w-[272.958px] items-center justify-center">
+        <div className="-rotate-[21deg]">
+          <div className="relative h-[212px] w-[211px] overflow-hidden blur-[2px]">
+            <Image
+              src="/images/our-services/decorations/facebook-left.png"
+              alt=""
+              aria-hidden
+              width={2000}
+              height={2000}
+              className="absolute left-[-26.42%] top-[-24.18%] h-[148.81%] w-[149.7%] max-w-none"
+              unoptimized
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Figma 1524:19712 — top-right, top 107px in 1111px frame (27px below py-80 content) */}
+      <div className="absolute left-[91.5625%] top-[27px] h-[212px] w-[217.591px] overflow-hidden blur-[2px]">
+        <Image
+          src="/images/our-services/decorations/facebook-right.png"
+          alt=""
+          aria-hidden
+          width={2000}
+          height={2000}
+          className="absolute left-[-23.27%] top-[-24.25%] h-[146.52%] w-[142.76%] max-w-none"
+          unoptimized
+        />
+      </div>
     </div>
   );
 }
@@ -535,60 +582,16 @@ function PlatformIcon({
   src,
   label,
   className,
-  composedIcon,
-  platformId,
 }: {
   src: string;
   label: string;
   className?: string;
-  composedIcon?: boolean;
-  platformId?: string;
 }) {
   const isSvg = src.endsWith('.svg');
 
-  if (composedIcon && platformId === 'soundcloud') {
-    return (
-      <div className="relative size-[38px] shrink-0">
-        <Image
-          src={src}
-          alt=""
-          aria-hidden
-          fill
-          className="object-contain"
-          unoptimized
-        />
-        <span className="sr-only">{label}</span>
-      </div>
-    );
-  }
-
-  if (composedIcon && platformId === 'website-traffic') {
-    return (
-      <div className="relative flex size-[38px] shrink-0 items-center justify-center p-[9px]">
-        <Image
-          src="/images/our-services/ui/hex-tab.svg"
-          alt=""
-          aria-hidden
-          width={38}
-          height={38}
-          className="absolute left-1/2 top-1/2 size-[38px] -translate-x-1/2 -translate-y-1/2"
-        />
-        <WebsiteTrafficIcon />
-        <span className="sr-only">{label}</span>
-      </div>
-    );
-  }
-
   return (
     <div className="relative flex size-[38px] shrink-0 items-center justify-center p-[9px]">
-      <Image
-        src="/images/our-services/ui/hex-tab.svg"
-        alt=""
-        aria-hidden
-        width={38}
-        height={38}
-        className="absolute left-1/2 top-1/2 size-[38px] -translate-x-1/2 -translate-y-1/2"
-      />
+      <HexBgIcon className="absolute left-1/2 top-1/2 size-[38px] -translate-x-1/2 -translate-y-1/2" />
       <Image
         src={src}
         alt=""
@@ -648,8 +651,6 @@ function PlatformTab({
           src={platform.icon}
           label={platform.label}
           className={platform.iconClassName}
-          composedIcon={platform.composedIcon}
-          platformId={platform.id}
         />
         <span
           className={cn(
@@ -675,29 +676,7 @@ export default function OurService() {
       bg="section-2"
       className="overflow-hidden py-20 lg:py-20"
     >
-      <div className="pointer-events-none absolute -left-16 bottom-0 lg:bottom-24 hidden blur-[2px] lg:block xl:-left-20">
-        <div className="-rotate-[21deg]">
-          <Image
-            src="/images/our-services/decorations/facebook-left.png"
-            alt=""
-            aria-hidden
-            width={211}
-            height={212}
-            className="h-[212px] w-[211px] object-contain"
-          />
-        </div>
-      </div>
-
-      <div className="pointer-events-none absolute -right-4 top-24 hidden blur-[2px] lg:block">
-        <Image
-          src="/images/our-services/decorations/facebook-right.png"
-          alt=""
-          aria-hidden
-          width={218}
-          height={212}
-          className="h-[212px] w-[218px] object-contain"
-        />
-      </div>
+      <ServiceSectionDecorations />
 
       <div className="container relative z-10 flex flex-col items-center gap-12">
         <SectionHeading
@@ -725,27 +704,14 @@ export default function OurService() {
 
           <article className="flex flex-col items-center justify-between gap-8 rounded-[12px] border border-[#d181ff] py-7 pl-7 pr-8 lg:flex-row">
             <div className="relative h-[320px] w-full max-w-[571px] shrink-0 overflow-hidden rounded-2xl sm:h-[420px] lg:h-[496px]">
-              <div
-                className="absolute inset-0 rounded-2xl"
-                style={{
-                  backgroundImage:
-                    'linear-gradient(180deg, rgb(250, 241, 255) 0%, rgb(235, 201, 255) 122.71%)',
-                }}
-              />
               <Image
-                src="/images/our-services/decorations/hero-bg.png"
+                src="/images/our-services/decorations/hero-illustration.png"
                 alt=""
                 aria-hidden
                 fill
-                className="object-cover opacity-80 blur-[2px]"
-              />
-              <Image
-                src="/images/our-services/decorations/hero-character.png"
-                alt=""
-                aria-hidden
-                fill
-                className="object-contain object-bottom"
+                className="object-contain"
                 priority
+                sizes="(max-width: 1024px) 100vw, 571px"
               />
             </div>
 

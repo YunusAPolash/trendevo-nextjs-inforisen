@@ -14,7 +14,7 @@ export default function PrimaryButton({
   return (
     <Button
       className={cn(
-        'h-[50px] rounded-[10px] border-[1.5px] border-[#cc7aff] bg-transparent px-[18px] text-base font-semibold text-white hover:opacity-90',
+        'h-[50px] cursor-pointer rounded-[10px] border-[1.5px] border-[#cc7aff] bg-transparent px-[18px] text-base font-semibold text-white hover:opacity-90',
         className,
       )}
       style={{ backgroundImage: primaryButtonGradient, ...style }}
