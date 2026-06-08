@@ -1,7 +1,7 @@
 import AboutSection from '@/app/_components/about-section';
 import AdvantagesSection from '@/app/_components/advantages-section';
 import CtaSection from '@/app/_components/cta-section';
-import FaqSection from '@/app/_components/faq-section';
+import { homeFaqHeading, homeFaqItems } from '@/app/_components/home-faq-content';
 import FooterSection from '@/app/_components/footer-section';
 import HeroSection from '@/app/_components/hero-section';
 import PaymentMethodsSection from '@/app/_components/payment-methods-section';
@@ -11,6 +11,7 @@ import StatsSection from '@/app/_components/stats-section';
 import TestimonialsSection from '@/app/_components/testimonials-section';
 import WhyChooseUsSection from '@/app/_components/why-choose-us-section';
 import WorkingProcessSection from '@/app/_components/working-process-section';
+import FaqSection from '@/components/sections/faq-section';
 import OurService from '@/components/features/home/OurService';
 
 export default function Home() {
@@ -28,7 +29,12 @@ export default function Home() {
       <PricingSection />
       <TestimonialsSection />
       <div id="faq">
-        <FaqSection />
+        <FaqSection
+          label={homeFaqHeading.label}
+          title={homeFaqHeading.title}
+          subtitle={homeFaqHeading.subtitle}
+          items={homeFaqItems}
+        />
       </div>
       <CtaSection />
       <FooterSection />
