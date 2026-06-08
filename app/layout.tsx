@@ -42,7 +42,7 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex flex-col">
-        <SiteHeader className="border-b border-white/30 bg-white/50" />
+        <SiteHeader />
         <main>{children}</main>
         <FooterSection />
       </body>

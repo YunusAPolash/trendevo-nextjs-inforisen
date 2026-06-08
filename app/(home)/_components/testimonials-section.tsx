@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -394,6 +394,38 @@ function FeaturedReviewCard({ onPlay }: { onPlay: () => void }) {
   );
 }
 
+function ScrollMoreHint({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label="Scroll to see more reviews"
+      className="absolute inset-x-0 bottom-0 z-20 flex cursor-pointer flex-col items-center gap-1 pb-2 pt-6"
+    >
+      <span className="text-xs font-medium text-[#8f2acd]">More reviews below</span>
+      <span className="flex size-7 animate-bounce items-center justify-center rounded-full border border-[#d18dfa]/40 bg-white/90 shadow-sm">
+        <svg
+          aria-hidden
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="text-[#8f2acd]"
+        >
+          <path
+            d="M3.5 4.75L7 8.25L10.5 4.75"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </span>
+    </button>
+  );
+}
+
 function ScrollableReviewColumn({
   reviews,
   className,
@@ -401,17 +433,54 @@ function ScrollableReviewColumn({
   reviews: readonly TextReview[];
   className?: string;
 }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [hasMoreBelow, setHasMoreBelow] = useState(reviews.length > 2);
+
+  const updateScrollState = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    setHasMoreBelow(el.scrollHeight - el.scrollTop - el.clientHeight > 12);
+  }, []);
+
+  useEffect(() => {
+    updateScrollState();
+
+    const el = scrollRef.current;
+    if (!el) return;
+
+    el.addEventListener('scroll', updateScrollState, { passive: true });
+    window.addEventListener('resize', updateScrollState);
+
+    return () => {
+      el.removeEventListener('scroll', updateScrollState);
+      window.removeEventListener('resize', updateScrollState);
+    };
+  }, [updateScrollState, reviews.length]);
+
+  const scrollToNext = () => {
+    scrollRef.current?.scrollBy({
+      top: REVIEW_CARD_HEIGHT + REVIEW_CARD_GAP,
+      behavior: 'smooth',
+    });
+  };
+
+  const showScrollHint = hasMoreBelow && reviews.length > 2;
+
   return (
     <div
-      className={cn('min-h-0 min-w-0', className)}
+      className={cn('relative min-h-0 min-w-0', className)}
       style={{ height: REVIEW_COLUMN_HEIGHT }}
     >
       <div
+        ref={scrollRef}
         className={cn(
-          'flex h-full min-h-0 flex-col gap-[18px] overflow-y-auto overscroll-y-contain pr-1',
+          'flex h-full min-h-0 flex-col overflow-y-auto overscroll-y-contain pr-1 scroll-smooth',
           '[scrollbar-width:thin] [scrollbar-color:rgba(209,129,255,0.45)_transparent]',
           '[&::-webkit-scrollbar]:w-1.5',
           '[&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#d18dfa]/50',
+          showScrollHint &&
+            '[mask-image:linear-gradient(to_bottom,black_calc(100%-56px),transparent_100%)]',
         )}
         style={{ gap: REVIEW_CARD_GAP }}
       >
@@ -419,6 +488,16 @@ function ScrollableReviewColumn({
           <TextReviewCard key={review.id} {...review} />
         ))}
       </div>
+
+      {showScrollHint ? (
+        <>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-t from-[#fdf5ff] via-[#fdf5ff]/85 to-transparent"
+          />
+          <ScrollMoreHint onClick={scrollToNext} />
+        </>
+      ) : null}
     </div>
   );
 }
