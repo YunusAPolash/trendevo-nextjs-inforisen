@@ -13,16 +13,14 @@ const TIMELINE_MARKER_GRADIENT =
 
 function TimelineMarker({ number }: { number: string }) {
   return (
-    <div className="relative flex size-[88px] shrink-0 items-center justify-center rounded-full bg-[rgba(234,230,255,0.16)] p-2 xl:size-[107px]">
-      <div
-        className="flex size-[68px] items-center justify-center rounded-full p-4 xl:size-[85px] xl:p-5"
-        style={{ backgroundImage: TIMELINE_MARKER_GRADIENT }}
-      >
-        <span className="text-2xl font-medium leading-none text-white xl:text-[32px] xl:leading-[43px]">
-          {number}
-        </span>
-      </div>
-    </div>
+    <div
+    className="flex size-[68px] items-center justify-center rounded-full p-4 xl:size-[85px] xl:p-5"
+    style={{ backgroundImage: TIMELINE_MARKER_GRADIENT }}
+  >
+    <span className="text-2xl font-medium leading-none text-white xl:text-[32px] xl:leading-[43px]">
+      {number}
+    </span>
+  </div>
   );
 }
 
@@ -30,7 +28,7 @@ function TimelineVLine() {
   return (
     <div
       aria-hidden
-      className="min-h-10 w-2.5 flex-1"
+      className="min-h- w-2.5 flex-1"
       style={{ backgroundImage: TIMELINE_LINE_GRADIENT }}
     />
   );

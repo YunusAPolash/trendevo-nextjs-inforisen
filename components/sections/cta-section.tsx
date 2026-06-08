@@ -26,7 +26,7 @@ export default function CtaSection({
 }: CtaSectionProps) {
   return (
     <PrimarySection
-      className={cn('overflow-x-hidden py-16', className)}
+      className={cn('py-16', className)}
     >
       <div className="container">
         <div className="relative">

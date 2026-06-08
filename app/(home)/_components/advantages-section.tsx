@@ -4,8 +4,6 @@ import type { ReactNode } from 'react';
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
-import { cn } from '@/lib/utils';
-
 const leftAdvantages = [
   {
     title: (
@@ -50,7 +48,6 @@ const rightAdvantages = [
         </p>
       </>
     ),
-    grow: true,
   },
   {
     title: (
@@ -67,21 +64,14 @@ const rightAdvantages = [
 function AdvantageCard({
   title,
   description,
-  grow = false,
 }: {
   title: ReactNode;
   description: ReactNode;
-  grow?: boolean;
 }) {
   return (
     <PrimaryCard
       bg="card-3"
-      className={cn(
-        'relative overflow-hidden rounded-xl px-4 py-6 ring-0',
-        grow
-          ? 'lg:min-h-0 lg:flex-1'
-          : 'lg:h-[230px] lg:shrink-0',
-      )}
+      className="relative overflow-visible rounded-xl px-4 py-6 ring-0"
     >
       <div className="relative z-10 flex min-w-0 flex-col gap-4">
         <div className="flex min-w-0 items-start gap-2">
@@ -126,8 +116,8 @@ export default function AdvantagesSection() {
           subtitleClassName="max-w-[868px] font-medium text-[#4f586d]"
         />
 
-        <div className="flex w-full min-w-0 flex-col items-center gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-6 xl:gap-10">
-          <div className="flex w-full min-w-0 max-w-[454px] flex-col gap-6 lg:h-[524px] lg:gap-16">
+        <div className="flex w-full min-w-0 flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6 xl:gap-10">
+          <div className="flex w-full min-w-0 max-w-[454px] flex-col gap-6 lg:gap-16">
             {leftAdvantages.map((item, index) => (
               <AdvantageCard
                 key={`left-${index}`}
@@ -137,7 +127,7 @@ export default function AdvantagesSection() {
             ))}
           </div>
 
-          <div className="relative mx-auto h-[260px] w-full min-w-0 max-w-[320px] shrink-0 overflow-hidden rounded-[24px] sm:h-[360px] sm:max-w-[380px] lg:mx-0 lg:h-[555px] lg:max-w-[434px] lg:rounded-[30px]">
+          <div className="relative mx-auto h-[260px] w-full min-w-0 max-w-[320px] shrink-0 overflow-hidden rounded-[24px] sm:h-[360px] sm:max-w-[380px] lg:mx-0 lg:h-[555px] lg:max-w-[500px] lg:rounded-[30px]">
             <Image
               src="/images/advantages/advantage.png"
               alt="SMM panel advantages illustration"
@@ -149,13 +139,12 @@ export default function AdvantagesSection() {
             />
           </div>
 
-          <div className="flex w-full min-w-0 max-w-[454px] flex-col gap-6 lg:h-[524px] lg:gap-16">
+          <div className="flex w-full min-w-0 max-w-[454px] flex-col gap-6 lg:gap-16">
             {rightAdvantages.map((item, index) => (
               <AdvantageCard
                 key={`right-${index}`}
                 title={item.title}
                 description={item.description}
-                grow={'grow' in item ? item.grow : false}
               />
             ))}
           </div>
