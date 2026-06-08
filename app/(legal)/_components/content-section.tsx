@@ -2,72 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
+import {
+  ContentBlock,
+  ListItem,
+  SectionBadge,
+  cardClassName,
+} from '@/app/(legal)/_components/primitives';
 import { cn } from '@/lib/utils';
-
-const cardClassName =
-  'rounded-2xl border border-[#e6e6e6] bg-white p-8 shadow-[0_1px_1px_rgba(0,0,0,0.05)] lg:p-10';
-
-function SectionBadge({ number }: { number: number }) {
-  return (
-    <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#f5f5f5] text-lg font-semibold text-[#8f2acd]">
-      {number}
-    </span>
-  );
-}
-
-function TermsBlock({
-  number,
-  title,
-  children,
-  className,
-}: {
-  number?: number;
-  title: string;
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <PrimaryCard
-      className={cn(cardClassName, 'gap-4 bg-white p-8 lg:p-10', className)}
-    >
-      <div className="flex flex-wrap items-center gap-3">
-        {number !== undefined ? <SectionBadge number={number} /> : null}
-        <h2 className="text-xl font-semibold text-[#8f2acd] lg:text-2xl">
-          {title}
-        </h2>
-      </div>
-      <div className="space-y-4 text-base font-medium leading-relaxed text-[#535353]">
-        {children}
-      </div>
-    </PrimaryCard>
-  );
-}
-
-function ListItem({
-  icon,
-  iconBg,
-  children,
-}: {
-  icon: string;
-  iconBg?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <li className="flex gap-4">
-      <span
-        className={cn(
-          'flex size-8 shrink-0 items-center justify-center rounded-full',
-          iconBg,
-        )}
-      >
-        <Image src={icon} alt="" width={20} height={20} className="size-5" />
-      </span>
-      <span className="text-base leading-relaxed text-[#535353]">
-        {children}
-      </span>
-    </li>
-  );
-}
 
 const youMayItems = [
   'Use SMMSun to grow the social media presence of accounts and content that you own or manage with the account owner\u2019s consent.',
@@ -122,7 +63,7 @@ export default function TermsContentSection() {
               Privacy Policy
             </Link>{' '}
             and{' '}
-            <Link href="#" className="text-[#8f2acd] hover:underline">
+            <Link href="/refund-policy" className="text-[#8f2acd] hover:underline">
               Refund Policy
             </Link>
             .
@@ -150,7 +91,7 @@ export default function TermsContentSection() {
           </p>
         </PrimaryCard>
 
-        <TermsBlock number={1} title="Who We Are and What Trend evo Does">
+        <ContentBlock number={1} title="Who We Are and What Trend evo Does">
           <p>
             SMMSun is a social media marketing panel operating through
             smmsun.com. We are based in Bangladesh and have been serving users
@@ -169,9 +110,9 @@ export default function TermsContentSection() {
             By creating an account and using SMMSun, you enter into a binding
             agreement with us under these Terms of Service.
           </p>
-        </TermsBlock>
+        </ContentBlock>
 
-        <TermsBlock number={2} title="Eligibility — Who Can Use Trend Evo">
+        <ContentBlock number={2} title="Eligibility — Who Can Use Trend Evo">
           <p>To use SMMSun, you must meet the following conditions.</p>
           <p>
             You must be at least 18 years of age. SMMSun is not intended for use
@@ -196,9 +137,9 @@ export default function TermsContentSection() {
             represent that you have the authority to bind that entity to these
             terms.
           </p>
-        </TermsBlock>
+        </ContentBlock>
 
-        <TermsBlock number={3} title="Account Registration and Security">
+        <ContentBlock number={3} title="Account Registration and Security">
           <p>
             Creating an account on SMMSun is free. You will need to provide a
             valid email address and create a password to register.
@@ -227,9 +168,9 @@ export default function TermsContentSection() {
             signs of fraudulent activity, abuse of our platform, or violation of
             these terms.
           </p>
-        </TermsBlock>
+        </ContentBlock>
 
-        <TermsBlock
+        <ContentBlock
           number={4}
           title="Our Services — What We Offer and How They Work"
         >
@@ -259,9 +200,9 @@ export default function TermsContentSection() {
             parties whose algorithms, policies, and technical systems are
             outside our control.
           </p>
-        </TermsBlock>
+        </ContentBlock>
 
-        <TermsBlock number={5} title="Payments, Pricing, and Account Balance">
+        <ContentBlock number={5} title="Payments, Pricing, and Account Balance">
           <p>
             All prices on SMMSun are displayed in Bangladeshi Taka (BDT) unless
             otherwise stated. Prices are inclusive of all applicable fees from
@@ -284,7 +225,7 @@ export default function TermsContentSection() {
             funds are added to your SMMSun balance, they can be used for
             services on our platform but cannot be transferred back to your
             bKash, Nagad, or other payment account. Please refer to our{' '}
-            <Link href="#" className="text-[#8f2acd] hover:underline">
+            <Link href="/refund-policy" className="text-[#8f2acd] hover:underline">
               Refund Policy
             </Link>{' '}
             for full details on when account credits are issued.
@@ -294,7 +235,7 @@ export default function TermsContentSection() {
             Price changes will be reflected on the services page and do not
             affect orders already placed and confirmed.
           </p>
-        </TermsBlock>
+        </ContentBlock>
 
         <PrimaryCard className={cn(cardClassName, 'gap-10 bg-white')}>
           <div className="space-y-4">
@@ -372,7 +313,7 @@ export default function TermsContentSection() {
           </div>
         </PrimaryCard>
 
-        <TermsBlock number={9} title="Third-Party Social Media Platforms">
+        <ContentBlock number={9} title="Third-Party Social Media Platforms">
           <p>
             SMMSun provides services that interact with third-party social media
             platforms including but not limited to Facebook, Instagram, TikTok,
@@ -401,9 +342,9 @@ export default function TermsContentSection() {
             those terms and to use our services in a manner consistent with your
             own assessment of any platform-side risk.
           </p>
-        </TermsBlock>
+        </ContentBlock>
 
-        <TermsBlock number={10} title="Limitation of Liability">
+        <ContentBlock number={10} title="Limitation of Liability">
           <p>
             SMMSun provides social media growth services on an as-available
             basis. While we work hard to deliver every order accurately and on
@@ -430,9 +371,9 @@ export default function TermsContentSection() {
             removal, or reduction in organic reach, whether or not such action
             is related to your use of our services.
           </p>
-        </TermsBlock>
+        </ContentBlock>
 
-        <TermsBlock number={11} title="Intellectual Property">
+        <ContentBlock number={11} title="Intellectual Property">
           <p>
             All content on smmsun.com, including our logo, platform design,
             written content, service descriptions, and technical systems, is the
@@ -449,9 +390,9 @@ export default function TermsContentSection() {
             feedback, you grant us a limited, non-exclusive right to use that
             content for the purpose of providing and improving our services.
           </p>
-        </TermsBlock>
+        </ContentBlock>
 
-        <TermsBlock number={12} title="Privacy and Data Protection">
+        <ContentBlock number={12} title="Privacy and Data Protection">
           <p>
             Your use of SMMSun is also governed by our{' '}
             <Link href="#" className="text-[#8f2acd] hover:underline">
@@ -466,9 +407,9 @@ export default function TermsContentSection() {
             practices as described in the Privacy Policy. We encourage you to
             read it in full before registering.
           </p>
-        </TermsBlock>
+        </ContentBlock>
 
-        <TermsBlock number={13} title="Account Suspension and Termination">
+        <ContentBlock number={13} title="Account Suspension and Termination">
           <p>
             SMMSun reserves the right to suspend or terminate any account at our
             discretion in the following circumstances. Violation of any section
@@ -496,9 +437,9 @@ export default function TermsContentSection() {
             terms, any remaining account balance may be forfeited and will not
             be refunded.
           </p>
-        </TermsBlock>
+        </ContentBlock>
 
-        <TermsBlock number={14} title="Account Suspension and Termination">
+        <ContentBlock number={14} title="Account Suspension and Termination">
           <p>
             SMMSun may update these Terms of Service from time to time as our
             platform grows, as new services are added, or as legal requirements
@@ -516,9 +457,9 @@ export default function TermsContentSection() {
             should stop using SMMSun and contact our support team to close your
             account.
           </p>
-        </TermsBlock>
+        </ContentBlock>
 
-        <TermsBlock number={15} title="Governing Law and Jurisdiction">
+        <ContentBlock number={15} title="Governing Law and Jurisdiction">
           <p>
             These Terms of Service are governed by and construed in accordance
             with the laws of Bangladesh. Any dispute arising from or related to
@@ -536,7 +477,7 @@ export default function TermsContentSection() {
             </Link>{' '}
             page.
           </p>
-        </TermsBlock>
+        </ContentBlock>
       </div>
     </PrimarySection>
   );

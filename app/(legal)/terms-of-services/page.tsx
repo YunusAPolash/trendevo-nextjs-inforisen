@@ -3,9 +3,8 @@ import {
   homeFaqHeading,
   homeFaqItems,
 } from '@/app/_components/home-faq-content';
-import FooterSection from '@/app/_components/footer-section';
 import TermsContentSection from '@/app/(legal)/_components/content-section';
-import TermsHeroSection from '@/app/(legal)/_components/hero-section';
+import HeroSection from '@/app/(legal)/_components/hero-section';
 import FaqSection from '@/components/sections/faq-section';
 export const metadata: Metadata = {
   title: 'Terms of Service | TrendEvo',
@@ -16,7 +15,12 @@ export const metadata: Metadata = {
 export default function TermsOfServicePage() {
   return (
     <>
-      <TermsHeroSection />
+      <HeroSection
+        titlePrefix="Terms Of"
+        titleHighlight="Services"
+        description="Before registering and ordering services, it is important to read and understand the Terms of Service carefully. By using the services offered by smmxp.org, you agree to abide by these terms."
+        lastUpdated="24/03/2026"
+      />
       <TermsContentSection />
       <FaqSection
         label={homeFaqHeading.label}
