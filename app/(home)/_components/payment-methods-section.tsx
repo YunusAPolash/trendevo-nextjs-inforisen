@@ -11,7 +11,7 @@ const PAYMENT_METHODS_IMAGE = {
 
 export default function PaymentMethodsSection() {
   return (
-    <PrimarySection bg="section-8" className="overflow-x-hidden py-[84px]">
+    <PrimarySection bg="section-6" className="overflow-x-hidden py-[84px]">
       <div className="pointer-events-none absolute top-[-90px] xl:top-0 left-[-52px] z-0 hidden opacity-[0.7] lg:block">
         <Image
           src="/images/payment-methods/threed-icon.png"
