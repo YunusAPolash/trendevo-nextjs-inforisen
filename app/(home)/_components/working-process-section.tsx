@@ -263,7 +263,7 @@ export default function WorkingProcessSection() {
   return (
     <PrimarySection
       id="how-it-works"
-      bg="section-6"
+      bg="section-4"
       className="overflow-hidden py-[84px]"
     >
       <div className="container flex flex-col items-center gap-16">

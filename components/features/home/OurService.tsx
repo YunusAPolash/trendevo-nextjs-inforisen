@@ -539,31 +539,14 @@ function HexBgIcon({ className }: { className?: string }) {
   );
 }
 
-function ServiceSectionDecorations() {
+function ServiceTopRightDecoration() {
   return (
     <div
       aria-hidden
       className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-full max-w-[1920px] -translate-x-1/2 lg:block"
     >
-      {/* Figma 1524:19711 — bottom-left, top 711px in 1111px frame (631px below py-80 content) */}
-      <div className="absolute left-[-4.36%] top-[631px] flex h-[273.534px] w-[272.958px] items-center justify-center">
-        <div className="-rotate-[21deg]">
-          <div className="relative h-[212px] w-[211px] overflow-hidden blur-[2px]">
-            <Image
-              src="/images/our-services/decorations/facebook-left.png"
-              alt=""
-              aria-hidden
-              width={2000}
-              height={2000}
-              className="absolute left-[-26.42%] top-[-24.18%] h-[148.81%] w-[149.7%] max-w-none"
-              unoptimized
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Figma 1524:19712 — top-right, top 107px in 1111px frame (27px below py-80 content) */}
-      <div className="absolute left-[91.5625%] top-[27px] h-[212px] w-[217.591px] overflow-hidden blur-[2px]">
+      {/* Figma 1524:19712 — top-right at top 107px in 1920px frame */}
+      <div className="absolute left-[91.5625%] top-[107px] h-[212px] w-[217.591px] overflow-hidden blur-[2px]">
         <Image
           src="/images/our-services/decorations/facebook-right.png"
           alt=""
@@ -573,6 +556,30 @@ function ServiceSectionDecorations() {
           className="absolute left-[-23.27%] top-[-24.25%] h-[146.52%] w-[142.76%] max-w-none"
           unoptimized
         />
+      </div>
+    </div>
+  );
+}
+
+function ServiceBottomLeftDecoration() {
+  return (
+    <div
+      aria-hidden
+      className="pointer-events-none absolute bottom-[88px] left-[calc((100%-100vw)/2-84px)] z-0 hidden h-[274px] w-[273px] items-center justify-center lg:flex"
+    >
+      {/* Figma 1524:19711 — anchored to service card, left -83.66px at 1920px */}
+      <div className="-rotate-[21deg]">
+        <div className="relative h-[212px] w-[211px] overflow-hidden blur-[2px]">
+          <Image
+            src="/images/our-services/decorations/facebook-left.png"
+            alt=""
+            aria-hidden
+            width={2000}
+            height={2000}
+            className="absolute left-[-26.42%] top-[-24.18%] h-[148.81%] w-[149.7%] max-w-none"
+            unoptimized
+          />
+        </div>
       </div>
     </div>
   );
@@ -676,7 +683,7 @@ export default function OurService() {
       bg="section-2"
       className="overflow-hidden py-20 lg:py-20"
     >
-      <ServiceSectionDecorations />
+      <ServiceTopRightDecoration />
 
       <div className="container relative z-10 flex flex-col items-center gap-12">
         <SectionHeading
@@ -702,7 +709,10 @@ export default function OurService() {
             ))}
           </div>
 
-          <article className="flex flex-col items-center justify-between gap-8 rounded-[12px] border border-[#d181ff] py-7 pl-7 pr-8 lg:flex-row">
+          <div className="relative">
+            <ServiceBottomLeftDecoration />
+
+            <article className="relative z-10 flex flex-col items-center justify-between gap-8 rounded-[12px] border border-[#d181ff] py-7 pl-7 pr-8 lg:flex-row">
             <div className="relative h-[320px] w-full max-w-[571px] shrink-0 overflow-hidden rounded-2xl sm:h-[420px] lg:h-[496px]">
               <Image
                 src="/images/our-services/decorations/hero-illustration.png"
@@ -757,7 +767,8 @@ export default function OurService() {
                 </PrimaryButton>
               </div>
             </div>
-          </article>
+            </article>
+          </div>
         </div>
       </div>
     </PrimarySection>

@@ -137,14 +137,14 @@ export default function AdvantagesSection() {
             ))}
           </div>
 
-          <div className="relative mx-auto h-[260px] w-full min-w-0 max-w-[320px] shrink-0 sm:h-[360px] sm:max-w-[380px] lg:mx-0 lg:h-[555px] lg:max-w-[434px]">
+          <div className="relative mx-auto h-[260px] w-full min-w-0 max-w-[320px] shrink-0 overflow-hidden rounded-[24px] sm:h-[360px] sm:max-w-[380px] lg:mx-0 lg:h-[555px] lg:max-w-[434px] lg:rounded-[30px]">
             <Image
               src="/images/advantages/advantage.png"
               alt="SMM panel advantages illustration"
               fill
               sizes="(max-width: 640px) 320px, (max-width: 1024px) 380px, 434px"
               quality={100}
-              className="object-contain object-bottom lg:object-cover"
+              className="object-contain object-bottom"
               priority
             />
           </div>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import PrimaryCard from '@/components/cards/primary-card';
+import { cn } from '@/lib/utils';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 
@@ -118,12 +119,63 @@ function WhyChooseUsCard({ title, icon, iconWidth, iconHeight }: Feature) {
 
 function TimelineMarker({ number }: { number: string }) {
   return (
-    <div className="flex w-[107px] items-center justify-center rounded-full bg-[rgba(234,230,255,0.16)] p-2.5">
+    <div className="relative z-10 flex w-[107px] shrink-0 items-center justify-center rounded-full bg-[rgba(234,230,255,0.16)] p-2.5">
       <div className="bg-brand-gradient flex w-[85px] items-center justify-center rounded-full p-5">
         <span className="text-[32px] font-medium leading-[43px] text-white">
           {number}
         </span>
       </div>
+    </div>
+  );
+}
+
+function TimelineRail({
+  number,
+  position,
+  row,
+}: {
+  number: string;
+  position: 'first' | 'middle' | 'last';
+  row: 1 | 2 | 3;
+}) {
+  return (
+    <div
+      className={cn(
+        'relative z-10 col-start-2 flex items-center justify-center self-stretch',
+        row === 1 && 'row-start-1',
+        row === 2 && 'row-start-2',
+        row === 3 && 'row-start-3',
+      )}
+    >
+      {(position === 'middle' || position === 'last') && (
+        <div
+          aria-hidden
+          className="bg-brand-gradient pointer-events-none absolute -top-3.5 bottom-1/2 left-1/2 w-2.5 -translate-x-1/2"
+        />
+      )}
+
+      {(position === 'first' || position === 'middle') && (
+        <div
+          aria-hidden
+          className="bg-brand-gradient pointer-events-none absolute top-1/2 -bottom-3.5 left-1/2 w-2.5 -translate-x-1/2"
+        />
+      )}
+
+      {position === 'first' && (
+        <div
+          aria-hidden
+          className="bg-brand-gradient pointer-events-none absolute top-1/2 left-1/2 h-10 w-2.5 -translate-x-1/2 -translate-y-full rounded-t-full"
+        />
+      )}
+
+      {position === 'last' && (
+        <div
+          aria-hidden
+          className="bg-brand-gradient pointer-events-none absolute top-1/2 left-1/2 h-10 w-2.5 -translate-x-1/2 rounded-b-full"
+        />
+      )}
+
+      <TimelineMarker number={number} />
     </div>
   );
 }
@@ -146,20 +198,11 @@ export default function WhyChooseUsSection() {
           subtitleClassName="max-w-[924px] font-medium leading-normal text-[#4f586d]"
         />
 
-        <div className="relative hidden w-full max-w-[1440px] grid-cols-[minmax(0,600px)_107px_minmax(0,600px)] grid-rows-3 gap-x-6 gap-y-7 lg:grid">
-          <div
-            aria-hidden
-            className="pointer-events-none relative col-start-2 row-start-1 row-span-3"
-          >
-            <div className="bg-brand-gradient absolute bottom-[100px] left-1/2 top-[100px] w-2.5 -translate-x-1/2 rounded-full" />
-          </div>
-
+        <div className="relative hidden w-full max-w-[1440px] grid-cols-[minmax(0,1fr)_107px_minmax(0,1fr)] grid-rows-3 gap-x-4 gap-y-7 xl:grid xl:gap-x-6">
           <div className="col-start-1 row-start-1 self-center">
             <WhyChooseUsCard {...leftFeatures[0]} />
           </div>
-          <div className="relative z-10 col-start-2 row-start-1 flex items-center justify-center self-center">
-            <TimelineMarker number={timelineSteps[0]} />
-          </div>
+          <TimelineRail number={timelineSteps[0]} position="first" row={1} />
           <div className="col-start-3 row-start-1 self-center">
             <WhyChooseUsCard {...rightFeatures[0]} />
           </div>
@@ -167,9 +210,7 @@ export default function WhyChooseUsSection() {
           <div className="col-start-1 row-start-2 self-center">
             <WhyChooseUsCard {...leftFeatures[1]} />
           </div>
-          <div className="relative z-10 col-start-2 row-start-2 flex items-center justify-center self-center">
-            <TimelineMarker number={timelineSteps[1]} />
-          </div>
+          <TimelineRail number={timelineSteps[1]} position="middle" row={2} />
           <div className="col-start-3 row-start-2 self-center">
             <WhyChooseUsCard {...rightFeatures[1]} />
           </div>
@@ -177,15 +218,13 @@ export default function WhyChooseUsSection() {
           <div className="col-start-1 row-start-3 self-center">
             <WhyChooseUsCard {...leftFeatures[2]} />
           </div>
-          <div className="relative z-10 col-start-2 row-start-3 flex items-center justify-center self-center">
-            <TimelineMarker number={timelineSteps[2]} />
-          </div>
+          <TimelineRail number={timelineSteps[2]} position="last" row={3} />
           <div className="col-start-3 row-start-3 self-center">
             <WhyChooseUsCard {...rightFeatures[2]} />
           </div>
         </div>
 
-        <div className="flex w-full flex-col gap-7 lg:hidden">
+        <div className="flex w-full flex-col gap-7 xl:hidden">
           {timelineSteps.map((step, index) => (
             <div key={step} className="flex flex-col gap-7">
               <WhyChooseUsCard {...leftFeatures[index]} />
