@@ -153,8 +153,8 @@ export default function AdvantagesSection() {
           </div>
 
           <div
-            className="flex w-full max-w-[454px] flex-col justify-between lg:w-[454px] lg:shrink-0"
-            style={{ height: COLUMN_HEIGHT }}
+            className="flex w-full max-w-[454px] flex-col lg:w-[454px] lg:shrink-0"
+            style={{ gap: CARD_GAP, height: COLUMN_HEIGHT }}
           >
             {rightAdvantages.map((item, index) => (
               <AdvantageCard
