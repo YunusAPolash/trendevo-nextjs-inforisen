@@ -16,7 +16,7 @@ export default function HeroSection({
   lastUpdated,
 }: HeroSectionProps) {
   return (
-    <PrimarySection className="overflow-hidden bg-[#FCF8FF] py-0 lg:py-0">
+    <PrimarySection className="overflow-hidden py-0 lg:py-0">
       <SiteHeader className="border-b border-white/30 bg-white/50" />
       <PrimaryCard
         bg="card-3"

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
-import FooterSection from './_components/footer-section';
+import FooterSection from './(home)/_components/footer-section';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 

@@ -11,17 +11,20 @@ const leftFeatures = [
   {
     title: 'Cheapest SMM Panel',
     icon: '/images/why-choose-us/cheapest-smm-panel-icon.png',
-    iconClassName: 'h-10 w-[43px] object-cover',
+    iconWidth: 43,
+    iconHeight: 40,
   },
   {
     title: 'Fast & Reliable Delivery',
     icon: '/images/why-choose-us/fast-delivery-icon.png',
-    iconClassName: 'size-10 object-cover',
+    iconWidth: 40,
+    iconHeight: 40,
   },
   {
     title: 'Multitude of Services',
     icon: '/images/why-choose-us/multitude-services-icon.png',
-    iconClassName: 'h-[30px] w-[57px] object-cover',
+    iconWidth: 57,
+    iconHeight: 30,
   },
 ] as const;
 
@@ -29,17 +32,20 @@ const rightFeatures = [
   {
     title: 'Real-time & Data',
     icon: '/images/why-choose-us/realtime-data-icon.png',
-    iconClassName: 'h-10 w-[43px] object-cover',
+    iconWidth: 43,
+    iconHeight: 40,
   },
   {
     title: 'Bulk Orders Provide',
     icon: '/images/why-choose-us/bulk-orders-icon.png',
-    iconClassName: 'h-10 w-[46px] object-cover',
+    iconWidth: 46,
+    iconHeight: 40,
   },
   {
     title: '24/7 Dedicated Customer Support',
     icon: '/images/why-choose-us/customer-support-icon.png',
-    iconClassName: 'h-10 w-[47px] object-cover',
+    iconWidth: 47,
+    iconHeight: 40,
   },
 ] as const;
 
@@ -48,26 +54,18 @@ const timelineSteps = ['01', '02', '03'] as const;
 type Feature = {
   title: string;
   icon: string;
-  iconClassName: string;
+  iconWidth: number;
+  iconHeight: number;
 };
 
-function WhyChooseUsCard({ title, icon, iconClassName }: Feature) {
+function WhyChooseUsCard({ title, icon, iconWidth, iconHeight }: Feature) {
   return (
     <PrimaryCard
-      bg="card-1"
+      bg="card-2"
       className="relative gap-0 overflow-hidden rounded-2xl border-[0.7px] border-solid border-[#ffcbe5] p-0 px-4 py-3.5 ring-0"
     >
       <div className="relative overflow-hidden">
-        <div className="relative h-0 w-full overflow-visible">
-          <Image
-            src="/images/why-choose-us/card-pattern.png"
-            alt=""
-            aria-hidden
-            width={773}
-            height={483}
-            className="pointer-events-none relative left-[-103px] top-[-193px] h-[483px] w-[773px] max-w-none object-cover opacity-60"
-          />
-        </div>
+       
         <div className="relative z-10 flex flex-col gap-[18px]">
         <div className="relative flex size-[77px] shrink-0 items-center justify-center gap-2.5 px-[13px] py-3.5">
           <Image
@@ -78,14 +76,20 @@ function WhyChooseUsCard({ title, icon, iconClassName }: Feature) {
             height={77}
             className="absolute inset-0 size-[77px]"
           />
-          <Image
-            src={icon}
-            alt=""
-            aria-hidden
-            width={40}
-            height={40}
-            className={`relative z-10 ${iconClassName}`}
-          />
+          <div
+            className="relative z-10 shrink-0"
+            style={{ width: iconWidth, height: iconHeight }}
+          >
+            <Image
+              src={icon}
+              alt=""
+              aria-hidden
+              fill
+              sizes={`${Math.max(iconWidth, iconHeight)}px`}
+              quality={100}
+              className="object-cover"
+            />
+          </div>
         </div>
 
         <div className="flex flex-col gap-2.5">
