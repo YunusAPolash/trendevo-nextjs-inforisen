@@ -32,58 +32,78 @@ const socialIcons = [
 
 export default function HeroSection() {
   return (
-    <PrimarySection bg="section-1" className="overflow-hidden pt-28 pb-16 lg:pb-20">
-      <div className="container">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-8">
-          <div className="flex max-w-[762px] flex-col gap-[34px]">
-            <div className="flex flex-col gap-7">
-              <h1 className="text-4xl font-semibold leading-[1.35] tracking-wide text-[#071431] sm:text-5xl lg:text-[48px]">
-                Connect with Trend Evo for Expert
-                <span className="text-gradient"> SMM Panel Support</span>
-              </h1>
-              <p className="max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56]">
-                We are committed to delivering top-notch SMM panel services with smooth
-                order processing, real-time support, and proven strategies to help you
-                achieve consistent growth across all social media platforms.
-              </p>
-            </div>
+    <PrimarySection bg="section-1" className="overflow-hidden px-0 pb-0">
+      <div className="mx-auto grid max-w-[1440px] gap-8 px-6 pt-28 sm:gap-10 sm:pt-36 md:pt-40 lg:grid-cols-2 lg:items-end lg:gap-8 lg:pt-[154px] xl:pt-[198px]">
+        <div className="flex min-w-0 flex-col gap-6 lg:max-w-[762px] lg:gap-8 lg:self-center">
+          <div className="space-y-6">
+            <h1 className="text-[28px] font-semibold leading-[1.35] tracking-tight text-[#071431] sm:text-4xl md:text-5xl">
+              Connect with Trend Evo for Expert
+              <span className="text-gradient"> SMM Panel Support</span>
+            </h1>
+            <p className="max-w-2xl text-sm leading-relaxed text-[#343e56] sm:text-base md:text-lg">
+              We are committed to delivering top-notch SMM panel services with smooth
+              order processing, real-time support, and proven strategies to help you
+              achieve consistent growth across all social media platforms.
+            </p>
+          </div>
 
-            <Button className="bg-brand-gradient h-[50px] w-fit rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] text-base font-semibold text-white hover:opacity-90">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+            <Button className="bg-brand-gradient h-10 shrink-0 rounded-[10px] border-[1.5px] border-[#cc7aff] px-4 text-sm font-semibold text-white hover:opacity-90 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]">
               Get Started Now
               <span className="ml-2 flex size-8 items-center justify-center rounded-full bg-white/10">
                 <ArrowRight className="size-4" aria-hidden />
               </span>
             </Button>
           </div>
+        </div>
 
-          <div className="relative mx-auto w-full max-w-[583px]">
-            <div className="relative aspect-[583/648] w-full">
-              <Image
-                src="/images/contact-us/contact-us-hero-character.webp"
-                alt="TrendEvo support specialist pointing to contact options"
-                fill
-                priority
-                className="object-contain object-bottom"
-                sizes="(max-width: 1024px) 100vw, 583px"
-              />
-            </div>
+        <div className="relative mx-auto w-full min-w-0 max-w-[583px] lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute bottom-[6.94%] left-[1.37%] z-0 aspect-square w-[95.54%]"
+          >
+            <Image
+              src="/images/contact-us/contact-us-hero-ring.svg"
+              alt=""
+              fill
+              unoptimized
+              className="object-contain"
+            />
+          </div>
 
-            <div className="absolute inset-x-0 bottom-0 rounded-[20px] bg-white/5 px-4 py-5 backdrop-blur-sm">
-              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-                {socialIcons.map((icon) => (
-                  <div
-                    key={icon.label}
-                    className="relative size-16 overflow-hidden rounded-xl sm:size-20"
-                  >
+          <Image
+            src="/images/contact-us/contact-us-hero-character.webp"
+            alt="TrendEvo support specialist pointing to contact options"
+            width={583}
+            height={648}
+            priority
+            sizes="(max-width: 1024px) 100vw, 583px"
+            className="relative z-10 block h-auto w-full"
+          />
+
+          <div className="absolute bottom-0 left-[4.12%] z-20 w-[92.97%] overflow-visible">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 h-32 rounded-[20px] bg-white/[0.04]  backdrop-blur-md backdrop-saturate-150"
+            />
+            <div className="relative grid h-32 grid-cols-6 items-end gap-1 overflow-visible px-4 pb-4 sm:gap-3 sm:px-5 sm:pb-5">
+              {socialIcons.map((icon, index) => (
+                <div
+                  key={icon.label}
+                  className="contact-hero-icon-wave flex justify-center"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <div className="relative size-16 overflow-hidden rounded-xl sm:size-20">
                     <Image
                       src={icon.src}
                       alt={icon.label}
                       fill
                       className="object-cover"
+                      sizes="80px"
                     />
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

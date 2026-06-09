@@ -153,6 +153,16 @@
     @apply mx-auto w-full max-w-[1440px] px-6 lg:px-8;
   }
 
+  .contact-hero-icon-wave {
+    animation: contact-icon-wave 2s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact-hero-icon-wave {
+      animation: none;
+    }
+  }
 }
 
 
@@ -172,5 +182,15 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes contact-icon-wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
   }
 }
