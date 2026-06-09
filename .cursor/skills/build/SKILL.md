@@ -304,20 +304,27 @@ Download from Figma asset URLs (via shell `curl` or equivalent) for:
 | Icons | `public/images/icons/` |
 | Photos, avatars, illustrations | `public/images/{context}/` (e.g. `public/images/hero/`, `public/images/reviews/`) |
 
-**SEO-friendly naming:** derive filenames from nearby text or semantic role in the design.
+**SEO-friendly naming:** name every downloaded image after its **visible title or label** in Figma — not the Figma layer name or export hash.
+
+**Priority order:**
+
+1. **Card / tile icons** — use the card title in kebab-case (e.g. card titled `Facebook Page Follower` → `facebook-page-follower.png`).
+2. **Section / feature images** — use the section or feature name (e.g. `decorative-facebook-left.png`).
+3. **Everything else** — use the nearest heading, badge, or semantic role in the design.
 
 ```
-{section-or-feature}-{role}-{short-description}.{ext}
+{title-or-label-in-kebab-case}.{ext}
 ```
 
 Examples:
 
+- Card icon titled `Facebook Page Like` → `facebook-page-like.png`
+- Card icon titled `Facebook Story Views` → `facebook-story-views.png`
 - `pricing-check-icon.svg`
 - `hero-platform-dashboard.webp`
 - `reviews-sarah-mitchell-avatar.webp`
-- `features-ai-automation-icon.svg`
 
-Use kebab-case, lowercase, no spaces. Prefer `.svg` for icons, `.webp` or `.png` for photos.
+Use kebab-case, lowercase, no spaces. Prefer `.svg` for icons, `.webp` or `.png` for photos. **Never** keep Figma auto-generated names like `imgi_191_1-view-3d-icon` or `Screenshot 2026-03-29`.
 
 Reference assets with Next.js `Image` or static paths from `/images/...`. Add meaningful `alt` text from the design copy.
 

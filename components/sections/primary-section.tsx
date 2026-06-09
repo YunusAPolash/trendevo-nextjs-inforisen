@@ -12,6 +12,7 @@ const sectionBackgroundClasses = {
   'section-8': "bg-[url('/images/backgrounds/section-bg-8.svg')]",
   'section-9': "bg-[url('/images/backgrounds/section-bg-9.svg')]",
   'section-10': "bg-[url('/images/backgrounds/section-bg-10.svg')]",
+  'section-15': "bg-[url('/images/backgrounds/section-bg-15.svg')]",
   'section-11': "bg-[url('/images/backgrounds/section-bg-11.svg')]",
   'section-13': "bg-[url('/images/backgrounds/section-bg-13.svg')]",
 } as const;
