@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
+import CtaSection from '@/components/sections/cta-section';
+import FaqSection from '@/components/sections/faq-section';
 import HeroSection from '@/components/sections/hero-section';
 import ServiceWorkingProcessSection from '@/components/sections/service-working-process-section';
 import TestimonialsSection from '@/components/sections/testimonials-section';
 import { Button } from '@/components/ui/button';
 import { facebookPageFollowersTrustBadge } from './_components/hero-content';
 import OrderFormSection from './_components/order-form-section';
+import { facebookPageFollowersCta } from './_components/cta-content';
+import {
+  facebookPageFollowersFaqHeading,
+  facebookPageFollowersFaqItems,
+} from './_components/faq-content';
 import {
   facebookPageFollowersWorkingProcessHeading,
   facebookPageFollowersWorkingProcessSteps,
@@ -35,9 +42,8 @@ export default function FacebookPageFollowersPage() {
         trustBadge={facebookPageFollowersTrustBadge}
         title={
           <>
-            Buy{' '}
-            <span className="text-gradient">Facebook Followers</span> in Real,
-            Fast &amp; Affordable price.
+            Buy <span className="text-gradient">Facebook Followers</span> in
+            Real, Fast &amp; Affordable price.
           </>
         }
         description="Growing a Facebook page can be tough. Consistent content and smart promotion are key, but results can be slow. At TrendEvo, we provide solutions to help your Facebook page thrive with real followers and engagement."
@@ -64,22 +70,7 @@ export default function FacebookPageFollowersPage() {
         }}
       />
       <OrderFormSection />
-      <ServiceWorkingProcessSection
-        badge={facebookPageFollowersWorkingProcessHeading.badge}
-        underlineSrc={facebookPageFollowersWorkingProcessHeading.underlineSrc}
-        underlineWidth={
-          facebookPageFollowersWorkingProcessHeading.underlineWidth
-        }
-        title={facebookPageFollowersWorkingProcessHeading.title}
-        subtitle={facebookPageFollowersWorkingProcessHeading.subtitle}
-        titleClassName={
-          facebookPageFollowersWorkingProcessHeading.titleClassName
-        }
-        subtitleClassName={
-          facebookPageFollowersWorkingProcessHeading.subtitleClassName
-        }
-        steps={facebookPageFollowersWorkingProcessSteps}
-      />
+
       <TestimonialsSection
         sectionBackground={facebookPageFollowersTestimonialsSectionBackground}
         badge={facebookPageFollowersTestimonialsHeading.badge}
@@ -99,6 +90,33 @@ export default function FacebookPageFollowersPage() {
         featuredReview={facebookPageFollowersTestimonialsFeaturedReview}
         videoReviews={facebookPageFollowersTestimonialsVideoReviews}
         defaultTab="video"
+      />
+      <ServiceWorkingProcessSection
+        badge={facebookPageFollowersWorkingProcessHeading.badge}
+        underlineSrc={facebookPageFollowersWorkingProcessHeading.underlineSrc}
+        underlineWidth={
+          facebookPageFollowersWorkingProcessHeading.underlineWidth
+        }
+        title={facebookPageFollowersWorkingProcessHeading.title}
+        subtitle={facebookPageFollowersWorkingProcessHeading.subtitle}
+        titleClassName={
+          facebookPageFollowersWorkingProcessHeading.titleClassName
+        }
+        subtitleClassName={
+          facebookPageFollowersWorkingProcessHeading.subtitleClassName
+        }
+        steps={facebookPageFollowersWorkingProcessSteps}
+      />
+      <FaqSection
+        label={facebookPageFollowersFaqHeading.label}
+        title={facebookPageFollowersFaqHeading.title}
+        subtitle={facebookPageFollowersFaqHeading.subtitle}
+        items={facebookPageFollowersFaqItems}
+      />
+      <CtaSection
+        title={facebookPageFollowersCta.title}
+        description={facebookPageFollowersCta.description}
+        buttonsOutlet={facebookPageFollowersCta.buttonsOutlet}
       />
     </>
   );
