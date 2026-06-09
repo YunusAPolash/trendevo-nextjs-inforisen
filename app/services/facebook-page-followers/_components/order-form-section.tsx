@@ -206,7 +206,7 @@ export default function OrderFormSection() {
   const totalAmount = useMemo(() => quantity * PRICE_PER_UNIT, [quantity]);
 
   return (
-    <PrimarySection bg="section-12" className="py-16 lg:py-[60px]">
+    <PrimarySection bg="section-13" className="py-16 lg:py-[60px]">
       <div className="container flex justify-center">
         <PrimaryCard
           bg="card-8"
