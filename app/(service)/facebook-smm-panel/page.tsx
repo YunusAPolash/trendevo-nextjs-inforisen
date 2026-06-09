@@ -6,6 +6,11 @@ import ServiceLeading from '@/components/serviceSmmPanel/service-leading';
 import ServiceWorkingProcess from '@/components/serviceSmmPanel/service-workingProcess';
 import SocialService from '@/components/serviceSmmPanel/social-service';
 import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
+import {
+  facebookFaqHeading,
+  facebookFaqItems,
+} from '@/components/serviceSmmPanel/service-faq-content';
+import FaqSection from '@/components/sections/faq-section';
 
 export const metadata: Metadata = {
   title: 'Facebook SMM Panel | TrendEvo',
@@ -41,6 +46,12 @@ export default function FacebookSmmPanelPage() {
       <ServiceAdvantage />
       <ServiceWorkingProcess />
       <ServiceLeading />
+      <FaqSection
+        label={facebookFaqHeading.label}
+        title={facebookFaqHeading.title}
+        subtitle={facebookFaqHeading.subtitle}
+        items={facebookFaqItems}
+      />
     </>
   );
 }
