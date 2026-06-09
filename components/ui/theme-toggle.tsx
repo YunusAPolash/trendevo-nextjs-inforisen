@@ -1,6 +1,6 @@
 'use client';
 
-import { Icon } from '@iconify/react';
+import { Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 import { cn } from '@/lib/utils';
@@ -105,14 +105,11 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
           height: KNOB_SIZE,
         }}
       >
-        <Icon
-          icon={
-            isLight
-              ? 'material-symbols:clear-day'
-              : 'material-symbols:dark-mode'
-          }
-          className="size-[18px] text-white"
-        />
+        {isLight ? (
+          <Sun className="size-[18px] text-white" aria-hidden />
+        ) : (
+          <Moon className="size-[18px] text-white" aria-hidden />
+        )}
       </span>
     </button>
   );

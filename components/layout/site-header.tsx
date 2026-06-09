@@ -24,9 +24,9 @@ const navLinks: {
 }[] = [
   { label: 'Home', href: '/', icon: Home, active: true },
   { label: 'Services', href: '/services', icon: LayoutGrid },
-  { label: 'About Us', href: '#about', icon: Users },
+  { label: 'About Us', href: '/about-us', icon: Users },
   { label: 'How it works', href: '#how-it-works', icon: CircleHelp },
-  { label: 'Blog', href: '#blog', icon: BookOpen },
+  { label: 'Blog', href: '/blog', icon: BookOpen },
   { label: 'Contact Us', href: '/contact-us', icon: Mail },
 ];
 

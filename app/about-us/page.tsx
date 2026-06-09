@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { ArrowRight } from 'lucide-react';
 import {
   homeFaqHeading,
   homeFaqItems,
-} from '@/app/_components/home-faq-content';
+} from '@/app/(home)/_components/home-faq-content';
 import CtaSection from '@/components/sections/cta-section';
 import FaqSection from '@/components/sections/faq-section';
+import HeroSection from '@/components/sections/hero-section';
+import { heroSocialIcons } from '@/content/hero-social-icons';
 import { Button } from '@/components/ui/button';
-import HeroSection from './_components/hero-section';
 import MissionVisionSection from './_components/mission-vision-section';
 import StatsMarqueeSection from './_components/stats-marquee-section';
 import TrustSection from './_components/trust-section';
@@ -21,7 +23,44 @@ export const metadata: Metadata = {
 export default function AboutUsPage() {
   return (
     <>
-      <HeroSection />
+      <HeroSection
+        bg="section-1"
+        variant="wide"
+        eyebrow="Who We Are"
+        title={
+          <>
+            Trend Evo –{' '}
+            <span className="text-gradient">Trusted SMM Panel</span> for
+            Growing Businesses & Creators
+          </>
+        }
+        description={
+          <>
+            Fast, reliable, and affordable{' '}
+            <span className="text-gradient">SMM services</span> to grow your
+            social media presence. From Facebook and Instagram to TikTok and
+            YouTube, Rendevo helps businesses and creators achieve real
+            results. We provide trusted solutions and support to simplify
+            social media marketing and boost growth.
+          </>
+        }
+        actions={
+          <Button className="bg-brand-gradient h-[50px] w-fit rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] text-base font-semibold text-white hover:opacity-90">
+            Get Started Now
+            <span className="ml-2 flex size-8 items-center justify-center rounded-full bg-white/10">
+              <ArrowRight className="size-4" aria-hidden />
+            </span>
+          </Button>
+        }
+        illustration={{
+          src: '/images/about/about-hero-character.png',
+          alt: 'TrendEvo specialist representing trusted SMM panel services',
+          width: 547,
+          height: 673,
+          maxWidthClassName: 'max-w-[547px]',
+        }}
+        socialIcons={heroSocialIcons}
+      />
       <MissionVisionSection />
       <StatsMarqueeSection />
       <TrustSection />
