@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import {
   homeFaqHeading,
   homeFaqItems,
-} from '@/app/_components/home-faq-content';
+} from '@/app/(home)/_components/home-faq-content';
 import HeroSection from '@/app/(legal)/_components/hero-section';
 import ContentSection from '@/app/(legal)/privacy-policy/_components/content-section';
 import FaqSection from '@/components/sections/faq-section';
