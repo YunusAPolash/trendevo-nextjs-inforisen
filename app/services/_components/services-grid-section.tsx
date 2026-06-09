@@ -36,7 +36,7 @@ const services = [
   {
     backgroundGradient:
       'linear-gradient(28.46deg, rgb(254, 249, 255) 8.11%, rgba(229, 239, 255, 0.46) 56.5%, rgb(96, 213, 240) 125.88%)',
-    iconSrc: '/images/services/telegram-smm-panel.png',
+    iconSrc: '/images/services/telegram-smm-panel-icon.png',
     iconAlt: 'Telegram',
     title: 'Telegram SMM Panel',
   },
