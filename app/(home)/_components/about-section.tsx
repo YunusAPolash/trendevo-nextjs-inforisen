@@ -18,19 +18,19 @@ const metricRows = [
     {
       value: '06+',
       label: 'Years of Digital Marketing Experience',
-      labelClassName: 'w-[164px]',
+      labelClassName: 'w-auto sm:w-[164px]',
     },
     {
       value: '100k+',
       label: 'Orders Delivered Successfully',
-      labelClassName: 'w-[130px]',
+      labelClassName: 'w-auto sm:w-[130px]',
     },
   ],
   [
     {
       value: '50K+',
       label: 'Active Users & Businesses Served',
-      labelClassName: 'w-[164px]',
+      labelClassName: 'w-auto sm:w-[164px]',
     },
     {
       value: '98%',
@@ -42,7 +42,12 @@ const metricRows = [
 ] as const;
 
 function MetricDivider() {
-  return <span className="h-[45px] w-px shrink-0 bg-[#d9d9e3]" aria-hidden />;
+  return (
+    <span
+      className="hidden h-[45px] w-px shrink-0 bg-[#d9d9e3] sm:block"
+      aria-hidden
+    />
+  );
 }
 
 function MetricItem({
@@ -60,21 +65,21 @@ function MetricItem({
     <div className="flex items-center gap-2">
       <span
         className={cn(
-          'text-[32px] font-semibold leading-[1.3] sm:text-[40px]',
+          'text-2xl font-semibold leading-[1.3] sm:text-[32px] md:text-[40px]',
           GRADIENT_TEXT,
         )}
       >
         {value}
       </span>
       {splitLabel ? (
-        <p className="text-sm font-medium leading-[1.5] text-[#404a60]">
+        <p className="text-xs font-medium leading-[1.5] text-[#404a60] sm:text-sm">
           <span className="block">Customer Satisfaction</span>
           <span className="block">Rate</span>
         </p>
       ) : (
         <p
           className={cn(
-            'text-sm font-medium leading-[1.5] text-[#404a60]',
+            'text-xs font-medium leading-[1.5] text-[#404a60] sm:text-sm',
             labelClassName,
           )}
         >
@@ -90,17 +95,17 @@ export default function AboutSection() {
     <PrimarySection
       id="about"
       bg="section-10"
-      className="overflow-hidden py-20 lg:py-20"
+      className="overflow-hidden py-12 sm:py-16 lg:py-20"
     >
-      <div className="container flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex w-full max-w-[777px] flex-col gap-[38px]">
-          <div className="flex flex-col gap-[28px]">
-            <div className="flex flex-col gap-8">
-              <div className="flex max-w-[642px] flex-col gap-7">
+      <div className="container flex flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+        <div className="flex w-full max-w-[777px] flex-col gap-6 sm:gap-8 lg:gap-[38px]">
+          <div className="flex flex-col gap-5 sm:gap-7 lg:gap-[28px]">
+            <div className="flex flex-col gap-5 sm:gap-6 lg:gap-8">
+              <div className="flex max-w-[642px] flex-col gap-4 sm:gap-6 lg:gap-7">
                 <div className="flex flex-col gap-1">
                   <span
                     className={cn(
-                      'text-[22px] font-semibold leading-[1.45]',
+                      'text-lg font-semibold leading-[1.45] sm:text-[22px]',
                       GRADIENT_TEXT,
                     )}
                   >
@@ -112,11 +117,11 @@ export default function AboutSection() {
                     aria-hidden
                     width={114}
                     height={8}
-                    className="h-2 w-[114px]"
+                    className="h-1.5 w-[90px] sm:h-2 sm:w-[114px]"
                   />
                 </div>
 
-                <h2 className="text-[32px] font-semibold leading-[1.35] tracking-[0.48px] text-[#13203b] sm:text-[40px] lg:text-[48px]">
+                <h2 className="text-2xl font-semibold leading-[1.35] tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]">
                   <span className="block">
                     Your Trusted{' '}
                     <span className={GRADIENT_TEXT}>Social Media</span>
@@ -125,37 +130,40 @@ export default function AboutSection() {
                 </h2>
               </div>
 
-              <p className="max-w-[642px] text-lg font-medium leading-normal text-[#404a60] sm:text-[22px] sm:leading-[1.5]">
+              <p className="max-w-[642px] text-sm font-medium leading-normal text-[#404a60] sm:text-base md:text-lg lg:text-[22px] lg:leading-[1.5]">
                 A reliable SMM platform designed to deliver fast, secure, and
                 high-quality social media growth for individuals, businesses, and
                 resellers.
               </p>
             </div>
 
-            <div className="flex flex-col gap-[38px]">
-              <ul className="flex max-w-[671px] flex-col gap-[18px]">
+            <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[38px]">
+              <ul className="flex max-w-[671px] flex-col gap-3 sm:gap-4 lg:gap-[18px]">
                 {features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2">
+                  <li
+                    key={feature}
+                    className="flex items-start gap-2 sm:items-center"
+                  >
                     <Image
                       src="/images/icons/check.svg"
                       alt=""
                       aria-hidden
                       width={24}
                       height={24}
-                      className="size-6 shrink-0"
+                      className="mt-0.5 size-5 shrink-0 sm:mt-0 sm:size-6"
                     />
-                    <span className="text-base font-medium leading-normal text-[#071431] sm:text-[20px]">
+                    <span className="text-sm font-medium leading-normal text-[#071431] sm:text-base md:text-lg lg:text-[20px]">
                       {feature}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <div className="flex flex-col justify-center gap-6">
+              <div className="flex flex-col justify-center gap-4 sm:gap-6">
                 {metricRows.map((row, rowIndex) => (
                   <div
                     key={rowIndex}
-                    className="flex flex-wrap items-center gap-6 sm:gap-8"
+                    className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 md:gap-8"
                   >
                     <MetricItem {...row[0]} />
                     <MetricDivider />
@@ -168,7 +176,7 @@ export default function AboutSection() {
 
           <PrimaryButton
             type="button"
-            className="h-[52px] w-fit gap-2 self-start px-[18px] text-[18px] font-semibold leading-[1.5] border-none"
+            className="h-10 w-fit gap-2 self-start border-none px-4 text-sm font-semibold leading-[1.5] sm:h-11 sm:px-5 sm:text-base md:h-[52px] md:px-[18px] md:text-[18px]"
           >
             Discover More
             <Image
@@ -177,13 +185,13 @@ export default function AboutSection() {
               aria-hidden
               width={24}
               height={24}
-              className="size-6 shrink-0"
+              className="size-5 shrink-0 sm:size-6"
               unoptimized
             />
           </PrimaryButton>
         </div>
 
-        <div className="relative mx-auto aspect-[594/736] w-full max-w-[594px] shrink-0">
+        <div className="relative mx-auto aspect-[594/736] w-full max-w-[320px] shrink-0 sm:max-w-[440px] lg:max-w-[594px]">
           <Image
             src="/images/about/your-trusted-social-media-growth-partner.png"
             alt="TrendEvo growth partner"

@@ -40,8 +40,8 @@ const homeBlogPosts: BlogPost[] = [
 
 export default function HomeBlog() {
   return (
-    <PrimarySection bg="section-1" className="py-20" id="blog">
-      <div className="container flex flex-col items-center gap-12">
+    <PrimarySection bg="section-1" className="py-12 sm:py-16 lg:py-20" id="blog">
+      <div className="container flex flex-col items-center gap-8 sm:gap-12">
         <SectionHeading
           badge="BLOG"
           title={
@@ -53,11 +53,11 @@ export default function HomeBlog() {
           subtitle="Smart strategies and expert insights to help you grow faster on social media. Learn how to boost engagement, reach the right audience, and turn followers into customers."
           underlineSrc="/images/blog/underline.svg"
           underlineWidth={60}
-          titleClassName="text-[32px] sm:text-[40px] lg:text-[48px] tracking-[0.48px] max-w-[961px]"
-          subtitleClassName="max-w-[996px] font-normal text-[#404a60]"
+          titleClassName="max-w-[961px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]"
+          subtitleClassName="max-w-[996px] text-sm font-normal text-[#404a60] sm:text-base md:text-lg"
         />
 
-        <div className="grid w-full gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid w-full gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
           {homeBlogPosts.map((post) => (
             <BlogPostCard key={post.slug} post={post} />
           ))}

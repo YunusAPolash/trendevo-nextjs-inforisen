@@ -11,8 +11,8 @@ const PAYMENT_METHODS_IMAGE = {
 
 export default function PaymentMethodsSection() {
   return (
-    <PrimarySection bg="section-6" className="overflow-x-hidden py-[84px]">
-      <div className="pointer-events-none absolute top-[-90px] xl:top-0 left-[-52px] z-0 hidden opacity-[0.7] lg:block">
+    <PrimarySection bg="section-6" className="overflow-x-hidden py-12 sm:py-16 lg:py-[84px]">
+      <div className="pointer-events-none absolute top-[-90px] left-[-52px] z-0 hidden opacity-[0.7] lg:block xl:top-0">
         <Image
           src="/images/payment-methods/threed-icon.png"
           alt=""
@@ -25,7 +25,7 @@ export default function PaymentMethodsSection() {
         />
       </div>
 
-      <div className="container relative z-10 flex flex-col items-center gap-16">
+      <div className="container relative z-10 flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
         <SectionHeading
           badge="Payment Methods"
           title={
@@ -37,8 +37,8 @@ export default function PaymentMethodsSection() {
           subtitle="Choose from 10+ secure and convenient payment methods to pay your way. Enjoy fast, hassle-free transactions and get instant access to all our services."
           underlineSrc="/images/payment-methods/underline.svg"
           underlineWidth={193}
-          titleClassName="text-[32px] sm:text-[40px] lg:text-[48px] tracking-[0.48px] max-w-[1000px]"
-          subtitleClassName="max-w-[924px] font-medium text-[#4f586d]"
+          titleClassName="max-w-[1000px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]"
+          subtitleClassName="max-w-[924px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg"
         />
 
         <Image

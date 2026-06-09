@@ -26,7 +26,7 @@ export default function CtaSection({
 }: CtaSectionProps) {
   return (
     <PrimarySection
-      className={cn('py-16', className)}
+      className={cn('py-12 sm:py-16', className)}
     >
       <div className="container">
         <div className="relative">
@@ -44,7 +44,7 @@ export default function CtaSection({
             </div>
           </div>
 
-          <div className="relative min-h-[486px] overflow-hidden rounded-[24px]">
+          <div className="relative overflow-hidden rounded-[20px] sm:rounded-[24px] lg:min-h-[486px]">
             <div
               aria-hidden
               className="absolute inset-0"
@@ -72,11 +72,11 @@ export default function CtaSection({
               />
             </div>
 
-            <div className="relative z-10 flex min-h-[486px] flex-col lg:grid lg:grid-cols-[minmax(0,427px)_minmax(0,732px)] lg:items-stretch lg:justify-between lg:gap-12">
+            <div className="relative z-10 flex flex-col lg:min-h-[486px] lg:grid lg:grid-cols-[minmax(0,427px)_minmax(0,732px)] lg:items-stretch lg:justify-between lg:gap-12">
               <div aria-hidden className="hidden lg:block" />
 
-              <div className="flex flex-col gap-[34px] px-6 py-10 lg:col-start-2 lg:justify-center lg:px-[66px] lg:py-[72px]">
-                <div className="relative flex flex-col gap-8">
+              <div className="flex flex-col gap-6 px-4 py-8 sm:gap-[34px] sm:px-6 sm:py-10 lg:col-start-2 lg:justify-center lg:px-[66px] lg:py-[72px]">
+                <div className="relative flex flex-col gap-5 sm:gap-8">
                   <div className="pointer-events-none absolute -left-8 top-[-75px] hidden h-[485px] w-[min(934px,120%)] opacity-[0.06] lg:block">
                     <Image
                       src="/images/cta/cta-world-map.png"
@@ -89,29 +89,28 @@ export default function CtaSection({
                     />
                   </div>
 
-                  <h2 className="relative z-10 text-[32px] font-semibold leading-[1.35] tracking-[0.48px] text-[#313131] sm:text-[40px] lg:text-[48px]">
+                  <h2 className="relative z-10 text-2xl font-semibold leading-[1.35] tracking-[0.48px] text-[#313131] sm:text-[32px] md:text-[40px] lg:text-[48px]">
                     {title}
                   </h2>
-                  <p className="relative z-10 text-base font-normal leading-normal text-[#13203b]">
+                  <p className="relative z-10 text-sm font-normal leading-normal text-[#13203b] sm:text-base">
                     {description}
                   </p>
                 </div>
 
                 {buttonsOutlet ? (
-                  <div className="relative z-10 flex flex-wrap items-center gap-3">
+                  <div className="relative z-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
                     {buttonsOutlet}
                   </div>
                 ) : null}
               </div>
 
-              <div className="relative mt-auto h-[min(420px,58vw)] w-full max-w-[380px] self-center overflow-visible px-6 pb-6 lg:hidden">
+              <div className="relative mx-auto mt-4 h-[220px] w-full max-w-[280px] shrink-0 pb-2 sm:mt-6 sm:h-[280px] sm:max-w-[340px] sm:pb-4 md:h-[320px] md:max-w-[380px] lg:hidden">
                 <Image
                   src={imageSrc}
                   alt={imageAlt}
-                  width={552}
-                  height={594}
-                  className="absolute bottom-0 left-1/2 h-[115%] w-[129.17%] max-w-none -translate-x-[40%]"
-                  sizes="(max-width: 640px) 320px, 380px"
+                  fill
+                  className="object-contain object-bottom"
+                  sizes="(max-width: 640px) 280px, 380px"
                 />
               </div>
             </div>

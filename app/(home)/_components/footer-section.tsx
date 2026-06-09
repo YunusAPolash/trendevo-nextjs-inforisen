@@ -83,8 +83,8 @@ function FooterColumn({
   className?: string;
 }) {
   return (
-    <div className={cn('flex w-auto shrink-0 flex-col gap-[18px]', className)}>
-      <h3 className="text-xl font-semibold tracking-[0.2px] text-[#13203b]">
+    <div className={cn('flex w-full shrink-0 flex-col gap-3 sm:gap-[18px] xl:w-auto', className)}>
+      <h3 className="text-base font-semibold tracking-[0.2px] text-[#13203b] sm:text-lg md:text-xl">
         {title}
       </h3>
       {children}
@@ -98,12 +98,12 @@ function FooterLinkList({
   links: { label: string; href: string }[];
 }) {
   return (
-    <ul className="flex flex-col gap-4">
+    <ul className="flex flex-col gap-2.5 sm:gap-4">
       {links.map((link) => (
         <li key={link.label}>
           <Link
             href={link.href}
-            className="text-sm font-medium text-[#222e48] transition-colors hover:text-[#13203b]"
+            className="text-[13px] font-medium leading-snug text-[#222e48] transition-colors hover:text-[#13203b] sm:text-sm sm:leading-normal"
           >
             {link.label}
           </Link>
@@ -126,7 +126,7 @@ function SocialLink({
     <Link
       href={href}
       aria-label={label}
-      className="relative flex size-10 shrink-0 items-center justify-center"
+      className="relative flex size-9 shrink-0 items-center justify-center sm:size-10"
     >
       <Image
         src="/images/icons/footer-social-hex-bg.svg"
@@ -140,7 +140,7 @@ function SocialLink({
         alt=""
         width={18}
         height={18}
-        className="relative z-10 size-6 object-contain"
+        className="relative z-10 size-5 object-contain sm:size-6"
         aria-hidden
       />
     </Link>
@@ -164,7 +164,7 @@ function ContactRow({
       >
         <Image src={iconSrc} alt={iconAlt} width={16} height={16} />
       </div>
-      <div className="text-sm font-medium leading-relaxed text-[#13203b]">
+      <div className="text-[13px] font-medium leading-relaxed text-[#13203b] sm:text-sm">
         {children}
       </div>
     </div>
@@ -175,13 +175,13 @@ export default function FooterSection() {
   return (
     <PrimarySection
       bg="section-9"
-      className="rounded-3xl mx-12 my-10 overflow-hidden rounded-t-3  xl py-12 lg:py-[60px] lg:px-4"
+      className="mx-3 my-5 overflow-hidden rounded-2xl px-3 py-8 sm:mx-6 sm:my-8 sm:rounded-3xl sm:px-4 sm:py-12 lg:mx-12 lg:my-10 lg:py-[60px]"
     >
-      <footer className="container flex flex-col gap-10">
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:justify-between">
-          <div className="flex max-w-[339px] flex-col gap-6">
-            <div className="flex flex-col gap-[18px]">
-              <Link href="/" className="relative inline-block h-12 w-[152px]">
+      <footer className="max-w-[1440px] mx-auto flex flex-col gap-6 px-0 sm:gap-10">
+        <div className="flex flex-col gap-6 sm:gap-10 xl:flex-row xl:items-start xl:justify-between">
+          <div className="flex w-full max-w-[339px] flex-col gap-4 border-b border-[#d99aff]/25 pb-6 sm:gap-6 sm:border-0 sm:pb-0">
+            <div className="flex flex-col gap-3 sm:gap-[18px]">
+              <Link href="/" className="relative inline-block h-10 w-[130px] sm:h-12 sm:w-[152px]">
                 <Image
                   src="/images/icons/trendevo-logo.png"
                   alt="TrendEvo"
@@ -189,7 +189,7 @@ export default function FooterSection() {
                   className="object-contain object-left"
                 />
               </Link>
-              <p className="text-sm font-medium leading-relaxed text-[#313131]">
+              <p className="text-[13px] font-medium leading-relaxed text-[#313131] sm:text-sm">
                 Trend Evo Panel is a trusted{' '}
                 <span className="text-gradient">SMM panel in Bangladesh</span>,
                 offering fast, secure, and affordable social media growth
@@ -199,11 +199,11 @@ export default function FooterSection() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3.5">
-              <p className="text-xl font-semibold tracking-[0.2px] text-[#13203b]">
+            <div className="flex flex-col gap-2.5 sm:gap-3.5">
+              <p className="text-base font-semibold tracking-[0.2px] text-[#13203b] sm:text-lg md:text-xl">
                 Follow Us
               </p>
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-1 sm:gap-1.5">
                 {socialLinks.map((social) => (
                   <SocialLink
                     key={social.label}
@@ -216,26 +216,26 @@ export default function FooterSection() {
             </div>
           </div>
 
-          <div className="flex flex-1 flex-wrap items-start justify-between gap-y-10 xl:flex-nowrap">
+          <div className="flex flex-1 flex-col gap-6 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 md:grid-cols-3 md:gap-y-10 xl:flex xl:flex-nowrap xl:items-start xl:justify-between">
             <FooterColumn title="Quick Links">
               <FooterLinkList links={quickLinks} />
-            </FooterColumn>
-
-            <FooterColumn title="Smm Panel">
-              <FooterLinkList links={smmPanelLinks} />
             </FooterColumn>
 
             <FooterColumn title="Company">
               <FooterLinkList links={companyLinks} />
             </FooterColumn>
 
-            <FooterColumn title="Our Services">
-              <ul className="flex flex-col gap-4">
+            <FooterColumn title="Smm Panel" className="sm:col-span-2 md:col-span-1">
+              <FooterLinkList links={smmPanelLinks} />
+            </FooterColumn>
+
+            <FooterColumn title="Our Services" className="sm:col-span-2 md:col-span-1">
+              <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 sm:gap-x-4 sm:gap-y-4 xl:flex xl:flex-col">
                 {serviceLinks.map((label) => (
                   <li key={label}>
                     <Link
                       href="/#services"
-                      className="flex items-center justify-between text-sm font-medium text-[#222e48] transition-colors hover:text-[#13203b]"
+                      className="flex items-center justify-between gap-2 text-[13px] font-medium leading-snug text-[#222e48] transition-colors hover:text-[#13203b] sm:text-sm sm:leading-normal"
                     >
                       <span>{label}</span>
                       <Image
@@ -243,7 +243,7 @@ export default function FooterSection() {
                         alt=""
                         width={22}
                         height={22}
-                        className="size-[22px] shrink-0 rotate-180"
+                        className="size-[18px] shrink-0 rotate-180 sm:size-[22px]"
                         aria-hidden
                       />
                     </Link>
@@ -252,8 +252,11 @@ export default function FooterSection() {
               </ul>
             </FooterColumn>
 
-            <FooterColumn title="Contact Information">
-              <div className="flex flex-col gap-[15px]">
+            <FooterColumn
+              title="Contact Information"
+              className="border-t border-[#d99aff]/25 pt-6 sm:col-span-2 sm:border-0 sm:pt-0 md:col-span-1 xl:col-span-1"
+            >
+              <div className="flex flex-col gap-3 sm:gap-[15px]">
                 <ContactRow
                   iconSrc="/images/icons/footer-email-icon.svg"
                   iconAlt="Email"
@@ -288,12 +291,12 @@ export default function FooterSection() {
           </div>
         </div>
 
-        <div className="relative flex min-h-[83px] items-center justify-center overflow-hidden rounded-[18px] border border-[#d99aff]/50 bg-white px-6 py-6">
+        <div className="relative flex min-h-[64px] items-center justify-center overflow-hidden rounded-xl border border-[#d99aff]/50 bg-white px-3 py-4 sm:min-h-[83px] sm:rounded-[18px] sm:px-6 sm:py-6">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 opacity-40 bg-[url('/images/footer/footer-copyright-pattern.webp')] bg-cover bg-center"
           />
-          <p className="relative text-center text-lg font-medium text-[#313131]">
+          <p className="relative text-center text-xs font-medium leading-snug text-[#313131] sm:text-sm md:text-lg">
             Copyright 2024-2026 Trend Evo | All Right Reserved
           </p>
         </div>

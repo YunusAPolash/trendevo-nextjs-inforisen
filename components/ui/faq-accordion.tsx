@@ -52,16 +52,16 @@ function FaqAccordionTrigger({
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          'group/faq-trigger relative z-10 flex w-full flex-1 items-center gap-4 px-5 py-[15px] text-left outline-none hover:no-underline disabled:pointer-events-none disabled:opacity-50',
+          'group/faq-trigger relative z-10 flex w-full flex-1 items-center gap-3 px-4 py-3 text-left outline-none hover:no-underline disabled:pointer-events-none disabled:opacity-50 sm:gap-4 sm:px-5 sm:py-[15px]',
           className,
         )}
         {...props}
       >
-        <span className="flex-1 text-lg font-semibold leading-snug text-[#232323]">
+        <span className="flex-1 text-base font-semibold leading-snug text-[#232323] sm:text-lg">
           {children}
         </span>
-        <span className="bg-brand-gradient flex size-10 shrink-0 items-center justify-center rounded-full transition-transform duration-200 group-data-[state=open]/faq-trigger:rotate-45">
-          <Plus className="size-[25px] text-white" strokeWidth={2.5} />
+        <span className="bg-brand-gradient flex size-8 shrink-0 items-center justify-center rounded-full transition-transform duration-200 group-data-[state=open]/faq-trigger:rotate-45 sm:size-10">
+          <Plus className="size-5 text-white sm:size-[25px]" strokeWidth={2.5} />
         </span>
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
@@ -77,7 +77,7 @@ function FaqAccordionContent({
     <AccordionPrimitive.Content
       data-slot="accordion-content"
       className={cn(
-        'relative z-10 overflow-hidden px-5 pb-5 text-base leading-relaxed text-[#404a60] data-closed:hidden',
+        'relative z-10 overflow-hidden px-4 pb-4 text-sm leading-relaxed text-[#404a60] data-closed:hidden sm:px-5 sm:pb-5 sm:text-base',
         className,
       )}
       {...props}

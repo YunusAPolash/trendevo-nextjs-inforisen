@@ -21,8 +21,6 @@ const ACTIVE_TAB_BG =
 const REVIEW_QUOTE =
   'This platform helped us boost our brand visibility significantly. The results are real and the process is super easy. Five stars!';
 
-/** 2 visible cards: 260px + 18px gap + 260px */
-const REVIEW_COLUMN_HEIGHT = 538;
 const REVIEW_CARD_HEIGHT = 260;
 const REVIEW_CARD_GAP = 18;
 
@@ -239,13 +237,13 @@ function ReviewTabSwitcher({
   onChange: (tab: ReviewTab) => void;
 }) {
   return (
-    <div className="rounded-xl border-[0.6px] border-[#f0d8ff] bg-[rgba(202,115,255,0.04)] p-2">
-      <div className="flex flex-wrap items-center justify-center gap-3">
+    <div className="w-full max-w-full rounded-xl border-[0.6px] border-[#f0d8ff] bg-[rgba(202,115,255,0.04)] p-1.5 sm:p-2">
+      <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-3">
         <button
           type="button"
           onClick={() => onChange('customer')}
           className={cn(
-            'flex cursor-pointer items-center justify-center gap-1 rounded-lg border-[0.3px] border-[#d18dfa] px-6 py-3 transition-all',
+            'flex w-full cursor-pointer items-center justify-center gap-1 rounded-lg border-[0.3px] border-[#d18dfa] px-4 py-2.5 transition-all sm:w-auto sm:px-6 sm:py-3',
             activeTab !== 'customer' && 'bg-white',
           )}
           style={activeTab === 'customer' ? { backgroundImage: ACTIVE_TAB_BG } : undefined}
@@ -257,13 +255,13 @@ function ReviewTabSwitcher({
             width={24}
             height={24}
             className={cn(
-              'size-6 shrink-0',
+              'size-5 shrink-0 sm:size-6',
               activeTab === 'customer' && 'brightness-0 invert',
             )}
           />
           <span
             className={cn(
-              'text-base font-medium',
+              'text-sm font-medium sm:text-base',
               activeTab === 'customer' ? 'text-white' : 'text-[#8f2acd]',
             )}
           >
@@ -274,7 +272,7 @@ function ReviewTabSwitcher({
           type="button"
           onClick={() => onChange('video')}
           className={cn(
-            'flex cursor-pointer items-center justify-center gap-1 rounded-lg border-[0.3px] border-[#d18dfa] px-6 py-3 transition-all',
+            'flex w-full cursor-pointer items-center justify-center gap-1 rounded-lg border-[0.3px] border-[#d18dfa] px-4 py-2.5 transition-all sm:w-auto sm:px-6 sm:py-3',
             activeTab !== 'video' && 'bg-white',
           )}
           style={activeTab === 'video' ? { backgroundImage: ACTIVE_TAB_BG } : undefined}
@@ -286,13 +284,13 @@ function ReviewTabSwitcher({
             width={24}
             height={24}
             className={cn(
-              'size-6 shrink-0',
+              'size-5 shrink-0 sm:size-6',
               activeTab === 'video' && 'brightness-0 invert',
             )}
           />
           <span
             className={cn(
-              'text-base font-medium',
+              'text-sm font-medium sm:text-base',
               activeTab === 'video' ? 'text-white' : 'text-[#8f2acd]',
             )}
           >
@@ -335,7 +333,7 @@ function TextReviewCard({ name, role, avatar, quote }: TextReview) {
         className="pointer-events-none absolute bottom-[7px] right-[19px] h-[78px] w-[90px] -scale-y-100 rotate-180"
       />
 
-      <div className="relative flex h-full flex-col justify-center gap-[34px] px-6 py-5 sm:px-8">
+      <div className="relative flex h-full flex-col justify-center gap-4 px-6 py-5 sm:gap-6 sm:px-8 md:gap-[34px]">
         <div className="border-b border-dashed border-[#c1c4cc] pb-4">
           <StarRating className="mb-[19px]" />
           <p className="text-sm font-medium leading-normal text-[#364153]">{quote}</p>
@@ -349,8 +347,7 @@ function TextReviewCard({ name, role, avatar, quote }: TextReview) {
 function FeaturedReviewCard({ onPlay }: { onPlay: () => void }) {
   return (
     <article
-      className="relative mx-auto w-full min-w-0 max-w-[464px] overflow-hidden rounded-[30px] xl:mx-0 xl:max-w-none xl:flex-1"
-      style={{ height: REVIEW_COLUMN_HEIGHT }}
+      className="relative mx-auto h-[380px] w-full min-w-0 max-w-[464px] overflow-hidden rounded-[30px] sm:h-[460px] xl:mx-0 xl:h-[538px] xl:max-w-none xl:flex-1"
     >
       <Image
         src={featuredReview.image}
@@ -469,8 +466,10 @@ function ScrollableReviewColumn({
 
   return (
     <div
-      className={cn('relative min-h-0 min-w-0', className)}
-      style={{ height: REVIEW_COLUMN_HEIGHT }}
+      className={cn(
+        'relative h-[380px] min-h-0 min-w-0 sm:h-[460px] xl:h-[538px]',
+        className,
+      )}
     >
       <div
         ref={scrollRef}
@@ -530,7 +529,7 @@ function VideoReviewCard({
   onPlay,
 }: (typeof videoReviews)[number] & { onPlay: () => void }) {
   return (
-    <article className="relative mx-auto h-[340px] w-full max-w-[336px] overflow-hidden rounded-2xl p-2.5">
+    <article className="relative mx-auto h-[300px] w-full max-w-[336px] overflow-hidden rounded-2xl p-2.5 sm:h-[340px]">
       <Image
         src={thumbnail}
         alt=""
@@ -702,10 +701,10 @@ export default function TestimonialsSection() {
   const closeVideo = () => setActiveVideoId(null);
 
   return (
-    <PrimarySection className="overflow-hidden py-20" style={{ backgroundImage: SECTION_GRADIENT }}>
+    <PrimarySection className="overflow-hidden py-12 sm:py-16 lg:py-20" style={{ backgroundImage: SECTION_GRADIENT }}>
       <SectionDecorations />
 
-      <div className="container relative z-10 flex flex-col items-center gap-12">
+      <div className="container relative z-10 flex flex-col items-center gap-8 sm:gap-12">
         <SectionHeading
           badge="TESTIMONIALS"
           underlineSrc="/images/testimonials/underline.svg"
@@ -716,8 +715,8 @@ export default function TestimonialsSection() {
             </>
           }
           subtitle="Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers."
-          titleClassName="max-w-none whitespace-normal text-center text-[32px] tracking-[0.48px] text-[#071431] sm:text-[40px] lg:text-[48px]"
-          subtitleClassName="max-w-[996px] text-center text-lg leading-normal text-[#404a60]"
+          titleClassName="max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] sm:text-[32px] md:text-[40px] lg:text-[48px]"
+          subtitleClassName="max-w-[996px] text-center text-sm leading-normal text-[#404a60] sm:text-base md:text-lg"
         />
 
         <ReviewTabSwitcher activeTab={activeTab} onChange={setActiveTab} />

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Fragment } from 'react';
 
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
@@ -10,7 +11,8 @@ const GRADIENT_TEXT =
 const STEP_CARD_GRADIENT =
   'linear-gradient(33.8deg, rgb(251, 245, 255) 10.387%, rgb(255, 250, 252) 58.1%, rgb(247, 172, 255) 126.5%)';
 
-const CARD_CONTENT_BASE = 'px-8 py-10 pb-12 lg:py-0';
+const CARD_CONTENT_BASE =
+  'px-4 py-6 pb-8 sm:px-6 sm:py-8 sm:pb-10 lg:px-8 lg:py-0';
 
 const steps = [
   {
@@ -49,9 +51,9 @@ const steps = [
   },
 ];
 
-function ProcessCenterHub() {
+function ProcessCenterHub({ className }: { className?: string }) {
   return (
-    <div className="relative size-[180px]">
+    <div className={cn('relative size-[120px] sm:size-[150px] lg:size-[180px]', className)}>
       <Image
         src="/images/working-process/outer-circlesvg.svg"
         alt=""
@@ -67,7 +69,7 @@ function ProcessCenterHub() {
         aria-hidden
         width={78}
         height={78}
-        className="absolute left-1/2 top-1/2 size-[77px] -translate-x-1/2 -translate-y-1/2"
+        className="absolute left-1/2 top-1/2 size-[42px] -translate-x-1/2 -translate-y-1/2 sm:size-[58px] lg:size-[77px]"
         unoptimized
       />
     </div>
@@ -148,7 +150,7 @@ function CardBorder({
 function HighlightedCardBorders({ corner }: { corner: 'tl' | 'br' }) {
   if (corner === 'tl') {
     return (
-      <>
+      <div className="hidden lg:contents">
         <CardBorder
           axis="horizontal"
           edge="bottom"
@@ -159,12 +161,12 @@ function HighlightedCardBorders({ corner }: { corner: 'tl' | 'br' }) {
           edge="right"
           sizeClassName="h-[65%] max-h-[215px]"
         />
-      </>
+      </div>
     );
   }
 
   return (
-    <>
+    <div className="hidden lg:contents">
       <CardBorder
         axis="horizontal"
         edge="top"
@@ -175,7 +177,7 @@ function HighlightedCardBorders({ corner }: { corner: 'tl' | 'br' }) {
         edge="left"
         sizeClassName="h-[65%] max-h-[346px]"
       />
-    </>
+    </div>
   );
 }
 
@@ -190,10 +192,10 @@ function ProcessStepCard({
   return (
     <article
       className={cn(
-        'relative min-h-[280px] lg:min-h-[330px]',
+        'relative min-h-0 sm:min-h-[240px] lg:min-h-[330px]',
         highlighted
-          ? 'overflow-hidden rounded-bl-[24px] rounded-tr-[24px]'
-          : 'overflow-hidden',
+          ? 'overflow-visible rounded-2xl lg:overflow-hidden lg:rounded-none lg:rounded-bl-[24px] lg:rounded-tr-[24px]'
+          : 'overflow-hidden rounded-2xl border border-[#ead4fb]/70 bg-white/50 lg:rounded-none lg:border-0 lg:bg-transparent',
       )}
       style={highlighted ? { backgroundImage: STEP_CARD_GRADIENT } : undefined}
     >
@@ -208,7 +210,7 @@ function ProcessStepCard({
           aria-hidden
           width={166}
           height={166}
-          className="pointer-events-none absolute -left-[80px] -top-[40px] z-0 size-[166px] opacity-40"
+          className="pointer-events-none absolute left-0 top-0 z-0 size-20 opacity-50 sm:size-28 sm:opacity-40 md:-left-[60px] md:-top-8 md:size-[140px] lg:-left-[80px] lg:-top-[40px] lg:size-[166px]"
           unoptimized
         />
       ) : null}
@@ -220,22 +222,22 @@ function ProcessStepCard({
           aria-hidden
           width={166}
           height={166}
-          className="pointer-events-none absolute -bottom-[40px] -right-[80px] z-0 size-[166px] opacity-40"
+          className="pointer-events-none absolute bottom-0 right-0 z-0 size-20 opacity-50 sm:size-28 sm:opacity-40 md:-bottom-8 md:-right-[60px] md:size-[140px] lg:-bottom-[40px] lg:-right-[80px] lg:size-[166px]"
           unoptimized
         />
       ) : null}
 
       <div
         className={cn(
-          'relative z-10 flex h-full w-full flex-col gap-6 lg:gap-[30px]',
+          'relative z-10 flex h-full w-full flex-col gap-4 sm:gap-6 lg:gap-[30px]',
           contentClassName,
         )}
       >
-        <div className="flex w-full min-w-0 max-w-[385px] flex-col gap-6 lg:gap-[30px]">
+        <div className="flex w-full min-w-0 max-w-[385px] flex-col gap-4 sm:gap-6 lg:gap-[30px]">
           <div className="flex flex-col gap-1">
             <span
               className={cn(
-                'text-[40px] font-bold leading-[1.3] lg:text-[48px]',
+                'text-3xl font-bold leading-[1.3] sm:text-[40px] lg:text-[48px]',
                 GRADIENT_TEXT,
               )}
             >
@@ -243,14 +245,14 @@ function ProcessStepCard({
             </span>
             <h3
               className={cn(
-                'text-xl font-semibold leading-normal lg:text-[22px]',
+                'text-lg font-semibold leading-normal sm:text-xl lg:text-[22px]',
                 GRADIENT_TEXT,
               )}
             >
               {title}
             </h3>
           </div>
-          <p className="text-base font-medium leading-normal text-[#071431]">
+          <p className="text-sm font-medium leading-normal text-[#071431] sm:text-base">
             {description}
           </p>
         </div>
@@ -264,9 +266,9 @@ export default function WorkingProcessSection() {
     <PrimarySection
       id="how-it-works"
       bg="section-4"
-      className="overflow-hidden py-[84px]"
+      className="overflow-hidden py-12 sm:py-16 lg:py-[84px]"
     >
-      <div className="container flex flex-col items-center gap-16">
+      <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
         <SectionHeading
           badge="WORKING PROCESS"
           underlineSrc="/images/working-process/underline.svg"
@@ -278,8 +280,9 @@ export default function WorkingProcessSection() {
             </>
           }
           subtitle="A simple and efficient process designed to deliver fast and reliable results. Just place your order, and our system will handle the rest to help grow your social media presence smoothly."
-          titleClassName="max-w-none whitespace-normal text-center text-[32px] tracking-[0.48px] text-[#13203b] sm:text-[40px] lg:text-[48px]"
-          subtitleClassName="max-w-[868px] text-center text-lg text-[#4f586d]"
+          titleClassName="max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]"
+          subtitleClassName="max-w-[868px] px-1 text-center text-sm text-[#4f586d] sm:px-0 sm:text-base md:text-lg"
+          className="gap-3 sm:gap-4"
         />
 
         <div className="relative w-full max-w-[1198px]">
@@ -287,9 +290,16 @@ export default function WorkingProcessSection() {
             <ProcessCenterHub />
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-x-[78px] lg:gap-y-[52px]">
-            {steps.map((step) => (
-              <ProcessStepCard key={step.number} {...step} />
+          <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:gap-x-[78px] lg:gap-y-[52px]">
+            {steps.map((step, index) => (
+              <Fragment key={step.number}>
+                <ProcessStepCard {...step} />
+                {index === 1 ? (
+                  <div className="flex items-center justify-center py-2 md:col-span-2 lg:hidden">
+                    <ProcessCenterHub />
+                  </div>
+                ) : null}
+              </Fragment>
             ))}
           </div>
         </div>

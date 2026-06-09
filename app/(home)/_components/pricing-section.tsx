@@ -100,30 +100,31 @@ function PlatformTab({
     <button
       type="button"
       onClick={onClick}
+      aria-label={label}
       className={cn(
-        'flex w-full flex-col items-start justify-center rounded-[8px] px-[16px] py-[10px] transition-all sm:w-[220px]',
+        'flex w-full items-center justify-center rounded-[8px] px-2 py-2 transition-all sm:w-[220px] sm:px-3 sm:py-2.5 md:px-[16px] md:py-[10px]',
         !isActive && 'border-[0.5px] border-solid border-[#8f2acd]',
       )}
       style={{
         backgroundImage: isActive ? ACTIVE_TAB_BG : INACTIVE_TAB_BG,
       }}
     >
-      <span className="flex w-full items-center justify-center gap-2">
-        <span className="relative flex size-[38px] shrink-0 items-center justify-center p-[9px]">
-          <HexBgIcon className="absolute left-1/2 top-1/2 size-[38px] -translate-x-1/2 -translate-y-1/2" />
+      <span className="flex w-full items-center justify-center gap-0 sm:gap-2">
+        <span className="relative flex size-8 shrink-0 items-center justify-center p-1.5 sm:size-[38px] sm:p-[9px]">
+          <HexBgIcon className="absolute left-1/2 top-1/2 size-8 -translate-x-1/2 -translate-y-1/2 sm:size-[38px]" />
           <Image
             src={icon}
             alt=""
             aria-hidden
             width={20}
             height={20}
-            className="relative z-10 size-5 object-contain"
+            className="relative z-10 size-4 object-contain sm:size-5"
           />
           <span className="sr-only">{label}</span>
         </span>
         <span
           className={cn(
-            'whitespace-nowrap text-[18px] font-semibold leading-normal',
+            'hidden whitespace-nowrap text-sm font-semibold leading-normal sm:inline md:text-[18px]',
             isActive ? 'text-white' : 'text-[#343e56]',
           )}
         >
@@ -150,7 +151,7 @@ function PricingCard({
   ];
 
   return (
-    <article className="relative flex h-full w-full min-w-[min(100%,280px)] max-w-[464px] flex-[1_1_320px] flex-col gap-6 overflow-visible rounded-3xl border-[0.7px] border-[#ffc0e4] bg-white pb-12 xl:max-w-none xl:flex-1 xl:basis-0">
+    <article className="relative flex h-full w-full min-w-0 max-w-[464px] flex-[1_1_100%] flex-col gap-4 overflow-visible rounded-3xl border-[0.7px] border-[#ffc0e4] bg-white pb-8 sm:min-w-[min(100%,280px)] sm:flex-[1_1_320px] sm:gap-6 sm:pb-12 xl:max-w-none xl:flex-1 xl:basis-0">
       <Image
         src="/images/pricing/card-instagram.png"
         alt=""
@@ -161,7 +162,7 @@ function PricingCard({
       />
 
       <div
-        className="relative flex w-full flex-col gap-6 overflow-hidden rounded-t-3xl border-x border-t border-[#ffc0e4] px-6 py-7"
+        className="relative flex w-full flex-col gap-4 overflow-hidden rounded-t-3xl border-x border-t border-[#ffc0e4] px-4 py-5 sm:gap-6 sm:px-6 sm:py-7"
         style={{
           backgroundImage:
             planType === 'professional'
@@ -181,8 +182,8 @@ function PricingCard({
           />
         ) : null}
 
-        <div className="relative z-10 flex flex-col gap-[22px]">
-          <div className="flex flex-col gap-[5px]">
+        <div className="relative z-10 flex flex-col gap-4 sm:gap-[22px]">
+          <div className="flex flex-col gap-1 sm:gap-[5px]">
             <div className="flex items-center gap-2">
               <Image
                 src={
@@ -194,20 +195,22 @@ function PricingCard({
                 aria-hidden
                 width={24}
                 height={24}
-                className="size-6 shrink-0"
+                className="size-5 shrink-0 sm:size-6"
               />
-              <p className="text-2xl font-medium leading-[1.48] text-[#13203b]">{name}</p>
+              <p className="text-xl font-medium leading-[1.48] text-[#13203b] sm:text-2xl">
+                {name}
+              </p>
             </div>
-            <p className="text-base font-medium leading-normal text-[#404a60]">
+            <p className="text-sm font-medium leading-normal text-[#404a60] sm:text-base">
               {description}
             </p>
           </div>
 
           <p className="tracking-[0.48px] text-[#222e48]">
-            <span className="text-[36px] font-semibold leading-[1.35] sm:text-[48px]">
+            <span className="text-3xl font-semibold leading-[1.35] sm:text-[36px] md:text-[48px]">
               {price}
             </span>
-            <span className="text-xl font-medium leading-[1.48] text-[#5b6477] sm:text-2xl">
+            <span className="text-lg font-medium leading-[1.48] text-[#5b6477] sm:text-xl md:text-2xl">
               /month
             </span>
           </p>
@@ -216,7 +219,7 @@ function PricingCard({
         <button
           type="button"
           className={cn(
-            'relative z-10 flex h-[50px] w-full items-center justify-center overflow-hidden rounded-[10px] border-[1.5px] px-[18px] py-2.5 text-base font-semibold',
+            'relative z-10 flex h-10 w-full items-center justify-center overflow-hidden rounded-[10px] border-[1.5px] px-4 py-2 text-sm font-semibold sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]',
             featured
               ? 'border-[#cc7aff] bg-brand-gradient text-white'
               : 'border-[#d181ff] bg-transparent',
@@ -234,7 +237,7 @@ function PricingCard({
         </button>
       </div>
 
-      <ul className="flex flex-col gap-4 px-6">
+      <ul className="flex flex-col gap-3 px-4 sm:gap-4 sm:px-6">
         {planFeatures.map((feature) => (
           <li key={feature.label} className="flex items-center gap-2">
             <Image
@@ -248,7 +251,7 @@ function PricingCard({
                 'size' in feature && feature.size === 24 ? 'size-6' : 'size-5',
               )}
             />
-            <span className="text-lg font-medium leading-normal text-[#0c070f]">
+            <span className="text-sm font-medium leading-normal text-[#0c070f] sm:text-base md:text-lg">
               {feature.label}
             </span>
           </li>
@@ -263,9 +266,9 @@ export default function PricingSection() {
     useState<(typeof platforms)[number]['id']>('instagram');
 
   return (
-    <PrimarySection bg="section-11" className="py-20">
-      <div className="container flex flex-col items-center gap-16">
-        <div className="flex flex-col items-center gap-[34px]">
+    <PrimarySection bg="section-11" className="overflow-x-hidden py-12 sm:py-16 lg:py-20">
+      <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
+        <div className="flex w-full flex-col items-center gap-6 sm:gap-8 lg:gap-[34px]">
           <SectionHeading
             badge="PRICING"
             underlineSrc="/images/pricing/underline.svg"
@@ -277,11 +280,11 @@ export default function PricingSection() {
               </>
             }
             subtitle="Simple, Clear, and Affordable for Everyone. We make social media growth easy without high costs. Our prices are clear, fair, and fit every budget."
-            titleClassName="max-w-none whitespace-normal text-center text-[32px] tracking-[0.48px] text-[#071431] sm:text-[40px] lg:text-[48px]"
-            subtitleClassName="max-w-[1090px] text-center text-lg leading-normal text-[#404a60]"
+            titleClassName="max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] sm:text-[32px] md:text-[40px] lg:text-[48px]"
+            subtitleClassName="max-w-[1090px] text-center text-sm leading-normal text-[#404a60] sm:text-base md:text-lg"
           />
 
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          <div className="grid w-full max-w-[360px] grid-cols-2 gap-2 sm:flex sm:max-w-none sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 md:gap-6">
             {platforms.map((platform) => (
               <PlatformTab
                 key={platform.id}
@@ -294,7 +297,7 @@ export default function PricingSection() {
           </div>
         </div>
 
-        <div className="flex w-full max-w-[1440px] flex-wrap items-end justify-center gap-6 xl:flex-nowrap xl:justify-between">
+        <div className="flex w-full max-w-[1440px] flex-col items-stretch justify-center gap-5 sm:flex-row sm:flex-wrap sm:items-end sm:gap-6 xl:flex-nowrap xl:justify-between">
           {plans.map((plan, index) => (
             <PricingCard key={`${plan.name}-${plan.planType}-${index}`} {...plan} />
           ))}

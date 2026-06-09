@@ -597,15 +597,18 @@ function PlatformIcon({
   const isSvg = src.endsWith('.svg');
 
   return (
-    <div className="relative flex size-[38px] shrink-0 items-center justify-center p-[9px]">
-      <HexBgIcon className="absolute left-1/2 top-1/2 size-[38px] -translate-x-1/2 -translate-y-1/2" />
+    <div className="relative flex size-8 shrink-0 items-center justify-center p-1.5 sm:size-[38px] sm:p-[9px]">
+      <HexBgIcon className="absolute left-1/2 top-1/2 size-8 -translate-x-1/2 -translate-y-1/2 sm:size-[38px]" />
       <Image
         src={src}
         alt=""
         aria-hidden
         width={20}
         height={20}
-        className={cn('relative z-10 size-5 object-contain', className)}
+        className={cn(
+          'relative z-10 size-4 object-contain sm:size-5',
+          className,
+        )}
         unoptimized={isSvg}
       />
       <span className="sr-only">{label}</span>
@@ -615,16 +618,16 @@ function PlatformIcon({
 
 function ServiceNumberBadge({ number }: { number: string }) {
   return (
-    <div className="relative flex size-[44px] shrink-0 items-center justify-center">
+    <div className="relative flex size-9 shrink-0 items-center justify-center sm:size-[44px]">
       <Image
         src="/images/our-services/ui/hex-number.svg"
         alt=""
         aria-hidden
         width={38}
         height={38}
-        className="absolute left-1/2 top-1/2 size-[38px] -translate-x-1/2 -translate-y-1/2"
+        className="absolute left-1/2 top-1/2 size-8 -translate-x-1/2 -translate-y-1/2 sm:size-[38px]"
       />
-      <span className="relative z-10 text-base font-semibold leading-normal text-white">
+      <span className="relative z-10 text-sm font-semibold leading-normal text-white sm:text-base">
         {number}
       </span>
     </div>
@@ -645,15 +648,16 @@ function PlatformTab({
       type="button"
       onClick={onSelect}
       aria-pressed={isActive}
+      aria-label={platform.label}
       className={cn(
-        'flex w-full flex-col items-start justify-center rounded-[8px] px-[16px] py-[10px] transition-all',
+        'flex w-full items-center justify-center rounded-[8px] px-2 py-2 transition-all sm:px-3 sm:py-2.5 md:px-[16px] md:py-[10px]',
         !isActive && 'border-[0.5px] border-solid border-[#8f2acd]',
       )}
       style={{
         backgroundImage: isActive ? ACTIVE_TAB_BG : INACTIVE_TAB_BG,
       }}
     >
-      <div className="flex w-full items-center justify-center gap-2">
+      <div className="flex w-full items-center justify-center gap-0 sm:gap-2">
         <PlatformIcon
           src={platform.icon}
           label={platform.label}
@@ -661,7 +665,7 @@ function PlatformTab({
         />
         <span
           className={cn(
-            'whitespace-nowrap text-[18px] font-semibold leading-normal',
+            'hidden text-center text-xs font-semibold leading-tight sm:inline sm:whitespace-nowrap sm:text-sm md:text-[18px]',
             isActive ? 'text-white' : 'text-[#343e56]',
           )}
         >
@@ -681,11 +685,11 @@ export default function OurService() {
     <PrimarySection
       id="services"
       bg="section-2"
-      className="overflow-hidden py-20 lg:py-20"
+      className="overflow-hidden py-12 sm:py-16 lg:py-20"
     >
       <ServiceTopRightDecoration />
 
-      <div className="container relative z-10 flex flex-col items-center gap-12">
+      <div className="container relative z-10 flex flex-col items-center gap-8 sm:gap-10 lg:gap-12">
         <SectionHeading
           badge="our services"
           title={
@@ -695,10 +699,12 @@ export default function OurService() {
             </>
           }
           subtitle="Explore our comprehensive range of social media marketing services designed to help you grow your presence across all major platforms. From Facebook to TikTok. we've got you covered."
+          titleClassName="text-2xl sm:text-[28px] lg:text-[36px]"
+          subtitleClassName="text-sm sm:text-base md:text-lg"
         />
 
-        <div className="flex w-full flex-col gap-9">
-          <div className="grid w-full grid-cols-2 gap-[18px] sm:grid-cols-3 xl:grid-cols-6">
+        <div className="flex w-full flex-col gap-6 sm:gap-8 lg:gap-9">
+          <div className="grid w-full grid-cols-3 gap-2 sm:gap-3 md:gap-[18px] xl:grid-cols-6">
             {platforms.map((platform) => (
               <PlatformTab
                 key={platform.id}
@@ -712,43 +718,43 @@ export default function OurService() {
           <div className="relative">
             <ServiceBottomLeftDecoration />
 
-            <article className="relative z-10 flex flex-col items-center justify-between gap-8 rounded-[12px] border border-[#d181ff] py-7 pl-7 pr-8 lg:flex-row">
-            <div className="relative h-[320px] w-full max-w-[571px] shrink-0 overflow-hidden rounded-2xl sm:h-[420px] lg:h-[496px]">
+            <article className="relative z-10 flex flex-col items-center justify-between gap-6 rounded-[12px] border border-[#d181ff] p-4 sm:gap-8 sm:p-6 lg:flex-row lg:py-7 lg:pl-7 lg:pr-8">
+            <div className="relative h-[220px] w-full max-w-[571px] shrink-0 overflow-hidden rounded-2xl sm:h-[320px] md:h-[420px] lg:h-[496px]">
               <Image
                 src="/images/our-services/decorations/hero-illustration.png"
                 alt=""
                 aria-hidden
                 fill
-                className="object-contain"
+                className="object-cover"
                 priority
                 sizes="(max-width: 1024px) 100vw, 571px"
               />
             </div>
 
-            <div className="flex w-full max-w-[745px] flex-col gap-[18px]">
-              <div className="flex flex-col gap-[18px]">
+            <div className="flex w-full max-w-[745px] flex-col gap-4 sm:gap-[18px]">
+              <div className="flex flex-col gap-3 sm:gap-[18px]">
                 <h3
                   className={cn(
-                    'text-[28px] font-semibold leading-none',
+                    'text-xl font-semibold leading-tight sm:text-2xl md:text-[28px] md:leading-none',
                     GRADIENT_TEXT,
                   )}
                 >
                   {activePlatform.marketingTitle}
                 </h3>
-                <p className="text-base font-medium leading-normal text-[#222e48] md:text-[16px]">
+                <p className="text-sm font-medium leading-normal text-[#222e48] sm:text-base">
                   {activePlatform.description}
                 </p>
               </div>
 
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4 sm:gap-6">
                 <ul className="flex flex-col gap-2">
                   {activePlatform.services.map((service) => (
                     <li
                       key={service.number}
-                      className="flex items-center gap-2"
+                      className="flex items-start gap-2 sm:items-center"
                     >
                       <ServiceNumberBadge number={service.number} />
-                      <p className="text-[16px] leading-normal">
+                      <p className="text-sm leading-normal sm:text-base">
                         <span
                           className={cn('font-medium', GRADIENT_TEXT)}
                         >
@@ -762,7 +768,10 @@ export default function OurService() {
                   ))}
                 </ul>
 
-                <PrimaryButton type="button" className="self-start">
+                <PrimaryButton
+                  type="button"
+                  className="h-10 self-start px-4 text-sm sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]"
+                >
                   View {activePlatform.label} Services
                 </PrimaryButton>
               </div>

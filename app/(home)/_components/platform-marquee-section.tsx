@@ -65,7 +65,7 @@ function PlatformMarqueeItem(platform: Platform) {
   const iconSize = 'iconSize' in platform ? platform.iconSize : 25;
   const fullFrame = 'fullFrame' in platform ? platform.fullFrame : false;
   return (
-    <div className="flex shrink-0 items-center gap-2">
+    <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
       {fullFrame ? (
         <Image
           src={icon}
@@ -75,17 +75,17 @@ function PlatformMarqueeItem(platform: Platform) {
           height={48}
           quality={100}
           sizes="48px"
-          className="size-12 shrink-0 object-contain"
+          className="size-9 shrink-0 object-contain sm:size-12"
         />
       ) : (
-        <div className="relative flex size-12 shrink-0 items-center justify-center">
+        <div className="relative flex size-9 shrink-0 items-center justify-center sm:size-12">
           <Image
             src="/images/platform-marquee/hex-icon.svg"
             alt=""
             aria-hidden
             width={48}
             height={48}
-            className="absolute inset-0 size-12"
+            className="absolute inset-0 size-9 sm:size-12"
           />
           <div
             className="relative z-10 shrink-0 overflow-hidden"
@@ -103,7 +103,7 @@ function PlatformMarqueeItem(platform: Platform) {
           </div>
         </div>
       )}
-      <span className="text-lg font-semibold whitespace-nowrap text-white">
+      <span className="text-sm font-semibold whitespace-nowrap text-white sm:text-base md:text-lg">
         {name}
       </span>
     </div>
@@ -115,13 +115,13 @@ export default function PlatformMarqueeSection() {
 
   return (
     <section
-      className="w-full overflow-hidden p-4"
+      className="w-full overflow-hidden p-3 sm:p-4"
       style={{
         backgroundImage:
           'linear-gradient(162.58deg, #cb7ef7 2.88%, #ff9bc1 54.16%, #ff5fbd 111.2%)',
       }}
     >
-      <div className="flex w-max animate-[marquee_80s_linear_infinite] items-center gap-12">
+      <div className="flex w-max animate-[marquee_80s_linear_infinite] items-center gap-8 sm:gap-12">
         {items.map((platform, index) => (
           <PlatformMarqueeItem key={`${platform.name}-${index}`} {...platform} />
         ))}

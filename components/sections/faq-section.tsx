@@ -37,7 +37,7 @@ function splitFaqColumns(items: FaqItem[]) {
 
 function FaqColumn({ items, columnId }: { items: FaqItem[]; columnId: string }) {
   return (
-    <div className="rounded-xl border border-[#f2e9f8] bg-[rgba(143,42,205,0.1)] p-4">
+    <div className="rounded-xl border border-[#f2e9f8] bg-[rgba(143,42,205,0.1)] p-3 sm:p-4">
       <FaqAccordion type="single" collapsible>
         {items.map((item, index) => (
           <FaqAccordionItem key={item.question} value={`${columnId}-${index}`}>
@@ -70,8 +70,8 @@ export default function FaqSection({
   const [leftColumn, rightColumn] = splitFaqColumns(items);
 
   return (
-    <PrimarySection bg={bg} className={cn('overflow-hidden py-16 lg:py-20', className)}>
-      <div className="container relative flex flex-col gap-12">
+    <PrimarySection bg={bg} className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}>
+      <div className="container relative flex flex-col gap-8 sm:gap-12">
         <Image
           src="/images/faq/faq-decorative-purple-question.webp"
           alt=""
@@ -92,7 +92,7 @@ export default function FaqSection({
         <div className="relative z-10 mx-auto flex max-w-[996px] flex-col items-center gap-[18px] text-center">
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-col items-center gap-1">
-              <span className="text-gradient text-[22px] font-semibold leading-snug">
+              <span className="text-gradient text-lg font-semibold leading-snug sm:text-[22px]">
                 {label}
               </span>
               <Image
@@ -103,20 +103,20 @@ export default function FaqSection({
                 className="h-2 w-11"
               />
             </div>
-            <h2 className="text-4xl font-semibold leading-[1.35] tracking-wide text-[#071431] md:text-5xl">
+            <h2 className="text-2xl font-semibold leading-[1.35] tracking-wide text-[#071431] sm:text-4xl md:text-5xl">
               {title}
             </h2>
           </div>
-          <p className="max-w-3xl text-lg leading-relaxed text-[#404a60]">{subtitle}</p>
+          <p className="max-w-3xl text-sm leading-relaxed text-[#404a60] sm:text-base md:text-lg">{subtitle}</p>
         </div>
 
-        <div className="relative z-10 grid items-start gap-6 lg:grid-cols-2">
+        <div className="relative z-10 grid items-start gap-4 sm:gap-6 lg:grid-cols-2">
           <FaqColumn items={leftColumn} columnId="left" />
           <FaqColumn items={rightColumn} columnId="right" />
         </div>
 
         <div
-          className="relative z-10 mx-auto w-full max-w-4xl rounded-[14px] border border-[#d181ff]/60 px-7 py-[22px]"
+          className="relative z-10 mx-auto w-full max-w-4xl rounded-[14px] border border-[#d181ff]/60 px-4 py-4 sm:px-7 sm:py-[22px]"
           style={{
             backgroundImage:
               'linear-gradient(119.56deg, rgb(255, 255, 255) 3.42%, rgb(255, 243, 253) 55.68%, rgb(255, 255, 255) 107.93%)',
@@ -132,13 +132,13 @@ export default function FaqSection({
                   height={34}
                   className="size-9 rotate-[-20deg] object-contain"
                 />
-                <h3 className="text-gradient text-base font-medium">{ctaTitle}</h3>
+                <h3 className="text-gradient text-sm font-medium sm:text-base">{ctaTitle}</h3>
               </div>
-              <p className="text-base leading-relaxed text-[#071431]">{ctaSubtitle}</p>
+              <p className="text-sm leading-relaxed text-[#071431] sm:text-base">{ctaSubtitle}</p>
             </div>
             <Button
               asChild
-              className="bg-brand-gradient h-[50px] shrink-0 rounded-xl border-0 px-5 text-base font-semibold text-white shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] hover:opacity-90"
+              className="bg-brand-gradient h-10 w-full shrink-0 rounded-xl border-0 px-5 text-sm font-semibold text-white shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] hover:opacity-90 sm:h-[50px] sm:w-auto sm:text-base"
             >
               <Link href={ctaButtonHref}>{ctaButtonLabel}</Link>
             </Button>

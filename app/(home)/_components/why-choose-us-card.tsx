@@ -16,21 +16,21 @@ export function WhyChooseUsCard({
   return (
     <PrimaryCard
       bg="card-2"
-      className="relative gap-0 overflow-hidden rounded-2xl border-[0.7px] border-solid border-[#ffcbe5] p-0 px-4 py-3.5 ring-0"
+      className="relative gap-0 overflow-hidden rounded-2xl border-[0.7px] border-solid border-[#ffcbe5] p-0 px-3 py-3 ring-0 sm:px-4 sm:py-3.5"
     >
       <div className="relative overflow-hidden">
-        <div className="relative z-10 flex flex-col gap-[18px]">
-          <div className="relative flex size-[77px] shrink-0 items-center justify-center gap-2.5 px-[13px] py-3.5">
+        <div className="relative z-10 flex flex-col gap-3 sm:gap-[18px]">
+          <div className="relative flex size-14 shrink-0 items-center justify-center gap-2.5 px-2 py-2 sm:size-[77px] sm:px-[13px] sm:py-3.5">
             <Image
               src="/images/why-choose-us/hex-icon.svg"
               alt=""
               aria-hidden
               width={77}
               height={77}
-              className="absolute inset-0 size-[77px]"
+              className="absolute inset-0 size-14 sm:size-[77px]"
             />
             <div
-              className="relative z-10 shrink-0"
+              className="relative z-10 shrink-0 scale-[0.72] sm:scale-100"
               style={{ width: iconWidth, height: iconHeight }}
             >
               <Image
@@ -45,21 +45,21 @@ export function WhyChooseUsCard({
             </div>
           </div>
 
-          <div className="flex flex-col gap-2.5">
-            <div className="flex items-center gap-1.5">
+          <div className="flex flex-col gap-2 sm:gap-2.5">
+            <div className="flex items-start gap-1.5 sm:items-center">
               <Image
                 src="/images/why-choose-us/title-bullet.svg"
                 alt=""
                 aria-hidden
                 width={12}
                 height={12}
-                className="size-3 shrink-0"
+                className="mt-1 size-2.5 shrink-0 sm:mt-0 sm:size-3"
               />
-              <h3 className="text-[22px] font-semibold leading-none text-[#343e56]">
+              <h3 className="text-lg font-semibold leading-tight text-[#343e56] sm:text-xl md:text-[22px] md:leading-none">
                 {title}
               </h3>
             </div>
-            <p className="text-base leading-normal text-[#313131]">
+            <p className="text-sm leading-normal text-[#313131] sm:text-base">
               {CARD_DESCRIPTION}
             </p>
           </div>

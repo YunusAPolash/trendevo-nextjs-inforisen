@@ -14,7 +14,7 @@ const avatars = [
 export default function HeroSection() {
   return (
     <PrimarySection bg="section-1" className="overflow-hidden px-0 pb-0">
-      <div className="mx-auto grid max-w-[1440px] gap-10 px-6 pt-[154px] lg:grid-cols-2 lg:items-end lg:gap-8 lg:pt-[198px]">
+      <div className="mx-auto grid max-w-[1440px] gap-8 px-6 pt-28 sm:gap-10 sm:pt-36 md:pt-40 lg:grid-cols-2 lg:items-end lg:gap-8 lg:pt-[154px] xl:pt-[198px]">
         <div className="flex min-w-0 flex-col gap-6 lg:max-w-[762px] lg:gap-8 lg:self-start">
           <div className="flex w-full max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border-l-2 border-[#cb7ef7] bg-white py-2 pl-1.5 pr-3 sm:w-fit">
             <div className="flex -space-x-3">
@@ -43,14 +43,14 @@ export default function HeroSection() {
           </div>
 
           <div className="space-y-6">
-            <h1 className="text-4xl font-semibold leading-[1.35] tracking-tight text-[#071431] md:text-5xl">
+            <h1 className="text-[28px] font-semibold leading-[1.35] tracking-tight text-[#071431] sm:text-4xl md:text-5xl">
               Trusted{' '}
               <span className="text-gradient">SMM Panel</span>
               <br />
               High-Speed Delivery With{' '}
               <span className="text-gradient">Secure Services</span>
             </h1>
-            <p className="max-w-2xl text-lg leading-relaxed text-[#313131]">
+            <p className="max-w-2xl text-sm leading-relaxed text-[#313131] sm:text-base md:text-lg">
               <span className="text-gradient font-medium">TrendEvo</span> is a
               next-generation viral growth platform crafted to help brands,
               creators, and agencies unlock their full digital potential. We
@@ -74,14 +74,14 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
             <Button
               variant="outline"
-              className="h-[50px] w-[180px] shrink-0 rounded-[10px] border-[#cb7ef7] bg-white/25 px-[18px] text-base font-semibold text-gradient hover:bg-white/40"
+              className="h-10 shrink-0 rounded-[10px] border-[#cb7ef7] bg-white/25 px-4 text-sm font-semibold text-gradient hover:bg-white/40 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:w-[180px] md:px-[18px]"
             >
               Sign In
             </Button>
-            <Button className="bg-brand-gradient h-[50px] shrink-0 rounded-[10px] border-0 px-[18px] text-base font-semibold text-white hover:opacity-90">
+            <Button className="bg-brand-gradient h-10 shrink-0 rounded-[10px] border-0 px-4 text-sm font-semibold text-white hover:opacity-90 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]">
               Create an Account
             </Button>
           </div>

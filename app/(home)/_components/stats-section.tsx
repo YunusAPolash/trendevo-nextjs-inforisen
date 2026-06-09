@@ -10,6 +10,8 @@ const stats = [
     width: 167,
     height: 150,
     displayWidth: 111,
+    mobileDisplayWidth: 80,
+    tabletDisplayWidth: 96,
   },
   {
     value: '2,500+',
@@ -18,6 +20,8 @@ const stats = [
     width: 152,
     height: 150,
     displayWidth: 101,
+    mobileDisplayWidth: 73,
+    tabletDisplayWidth: 87,
   },
   {
     value: '50K+',
@@ -26,6 +30,8 @@ const stats = [
     width: 188,
     height: 150,
     displayWidth: 125,
+    mobileDisplayWidth: 90,
+    tabletDisplayWidth: 108,
   },
   {
     value: '75%',
@@ -34,6 +40,8 @@ const stats = [
     width: 144,
     height: 150,
     displayWidth: 96,
+    mobileDisplayWidth: 69,
+    tabletDisplayWidth: 83,
   },
 ] as const;
 
@@ -41,18 +49,22 @@ export default function StatsSection() {
   return (
     <PrimarySection
       id="stats"
-      className="relative z-10 bg-[#f8f8f8] px-0 py-20"
+      className="relative z-10 bg-[#f8f8f8] px-0 py-12 sm:py-16 lg:py-20"
     >
       <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
         {stats.map((stat) => (
           <PrimaryCard
             key={stat.label}
             bg="card-1"
-            className="w-full items-start overflow-hidden rounded-[18px] border border-[#ff7fc1]/50 border-t-[0.5px] border-r-[0.5px] border-b-[0.5px] border-l-[3px] border-l-[#ff7fc1] bg-white p-6 ring-0"
+            className="w-full items-start overflow-hidden rounded-[18px] border border-[#ff7fc1]/50 border-t-[0.5px] border-r-[0.5px] border-b-[0.5px] border-l-[3px] border-l-[#ff7fc1] bg-white p-4 ring-0 sm:p-6"
           >
             <div
-              className="relative h-[100px] shrink-0"
-              style={{ width: stat.displayWidth }}
+              className="relative h-[72px] w-[var(--stat-icon-w)] shrink-0 sm:h-[86px] sm:w-[var(--stat-icon-w-sm)] md:h-[100px] md:w-[var(--stat-icon-w-md)]"
+              style={{
+                ['--stat-icon-w' as string]: `${stat.mobileDisplayWidth}px`,
+                ['--stat-icon-w-sm' as string]: `${stat.tabletDisplayWidth}px`,
+                ['--stat-icon-w-md' as string]: `${stat.displayWidth}px`,
+              }}
             >
               <Image
                 src={stat.icon}
@@ -63,11 +75,11 @@ export default function StatsSection() {
                 unoptimized
               />
             </div>
-            <div className="flex w-full flex-col gap-3">
-              <p className="text-[32px] font-semibold leading-none text-[#232323]">
+            <div className="flex w-full flex-col gap-2 sm:gap-3">
+              <p className="text-2xl font-semibold leading-none text-[#232323] sm:text-[28px] md:text-[32px]">
                 {stat.value}
               </p>
-              <p className="text-gradient text-xl font-semibold leading-normal tracking-[0.2px]">
+              <p className="text-gradient text-base font-semibold leading-normal tracking-[0.2px] sm:text-lg md:text-xl">
                 {stat.label}
               </p>
             </div>

@@ -25,17 +25,17 @@ function TimelineMarker({ number }: { number: string }) {
   return (
     <div
       data-dot
-      className="relative z-10 flex size-[88px] shrink-0 items-center justify-center p-2 xl:size-[107px]"
+      className="relative z-10 flex size-[72px] shrink-0 items-center justify-center p-1.5 lg:size-[88px] lg:p-2 xl:size-[107px]"
     >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 rounded-full border border-white/50 bg-white/[0.1] shadow-[inset_0_1px_2px_rgba(255,255,255,0.65)] backdrop-blur-xl backdrop-saturate-200"
       />
       <div
-        className="relative z-10 flex size-[68px] items-center justify-center rounded-full p-4 xl:size-[85px] xl:p-5"
+        className="relative z-10 flex size-14 items-center justify-center rounded-full p-3 lg:size-[68px] lg:p-4 xl:size-[85px] xl:p-5"
         style={{ backgroundImage: TIMELINE_MARKER_GRADIENT }}
       >
-        <span className="text-2xl font-medium leading-none text-white xl:text-[32px] xl:leading-[43px]">
+        <span className="text-xl font-medium leading-none text-white lg:text-2xl xl:text-[32px] xl:leading-[43px]">
           {number}
         </span>
       </div>
@@ -142,7 +142,7 @@ export function WhyChooseUsDesktopTimeline() {
   return (
     <div
       ref={layoutRef}
-      className="relative hidden w-full min-w-0 max-w-[1440px] flex-col gap-5 lg:flex xl:gap-7"
+      className="relative hidden w-full min-w-0 max-w-[1440px] flex-col gap-4 lg:flex lg:gap-5 xl:gap-7"
     >
       {rail ? (
         <div
@@ -160,7 +160,7 @@ export function WhyChooseUsDesktopTimeline() {
       {timelineSteps.map((step, index) => (
         <div
           key={step}
-          className="relative grid grid-cols-[minmax(0,1fr)_88px_minmax(0,1fr)] items-center gap-x-3 xl:grid-cols-[minmax(0,1fr)_107px_minmax(0,1fr)] xl:gap-x-6"
+          className="relative grid grid-cols-[minmax(0,1fr)_72px_minmax(0,1fr)] items-center gap-x-2 lg:grid-cols-[minmax(0,1fr)_88px_minmax(0,1fr)] lg:gap-x-3 xl:grid-cols-[minmax(0,1fr)_107px_minmax(0,1fr)] xl:gap-x-6"
         >
           <WhyChooseUsCard {...leftFeatures[index]} />
           <div className="flex items-center justify-center py-2.5">

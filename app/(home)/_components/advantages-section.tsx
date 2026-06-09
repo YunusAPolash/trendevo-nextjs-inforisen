@@ -71,22 +71,22 @@ function AdvantageCard({
   return (
     <PrimaryCard
       bg="card-3"
-      className="relative w-full overflow-visible rounded-xl px-4 py-6 ring-0"
+      className="relative w-full overflow-visible rounded-xl px-3 py-5 ring-0 sm:px-4 sm:py-6"
     >
-      <div className="relative z-10 flex min-w-0 flex-col gap-4">
+      <div className="relative z-10 flex min-w-0 flex-col gap-3 sm:gap-4">
         <div className="flex min-w-0 items-start gap-2">
           <div
-            className="h-[34px] w-[6px] shrink-0 rounded-[9.5px]"
+            className="h-7 w-1 shrink-0 rounded-[9.5px] sm:h-[34px] sm:w-[6px]"
             style={{
               backgroundImage:
                 'linear-gradient(91.07deg, #cb7ef7 4.77%, #ff9bc1 39.51%, #ee4fac 74.24%)',
             }}
           />
-          <h3 className="min-w-0 flex-1 text-lg font-semibold leading-normal text-[#13203b]">
+          <h3 className="min-w-0 flex-1 text-base font-semibold leading-snug text-[#13203b] sm:text-lg sm:leading-normal">
             {title}
           </h3>
         </div>
-        <div className="text-sm font-medium leading-normal text-[#343e56]">
+        <div className="text-xs font-medium leading-normal text-[#343e56] sm:text-sm">
           {description}
         </div>
       </div>
@@ -112,8 +112,8 @@ export default function AdvantagesSection() {
           subtitle="We provide SMM services on almost every social media platform. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!"
           underlineSrc="/images/advantages/underline.svg"
           underlineWidth={150}
-          titleClassName="text-[32px] sm:text-[40px] lg:text-[48px] tracking-[0.48px] text-[#13203b] whitespace-normal"
-          subtitleClassName="max-w-[868px] font-medium text-[#4f586d]"
+          titleClassName="whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]"
+          subtitleClassName="max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg"
         />
 
         <div className="flex w-full min-w-0 flex-col items-stretch gap-6 sm:gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6 xl:gap-10">
