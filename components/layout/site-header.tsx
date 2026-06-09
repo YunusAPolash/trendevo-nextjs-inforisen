@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -113,9 +114,7 @@ export default function SiteHeader({ className }: { className?: string }) {
 
         <div className="flex items-center gap-3 min-[1100px]:gap-6">
           <div className="hidden items-center gap-4 min-[1100px]:flex">
-            <div className="flex items-center gap-2 rounded-full border border-[#d57ff9]/30 bg-[#ffe9f5] px-2 py-1">
-              <span className="text-[10px] font-medium text-[#424242]">Light</span>
-            </div>
+            <ThemeToggle />
             <Link
               href="#sign-in"
               className="text-base font-medium text-[#343e56] hover:text-[#071431]"
@@ -166,9 +165,9 @@ export default function SiteHeader({ className }: { className?: string }) {
           ))}
 
           <div className="mt-4 flex flex-col gap-3 border-t border-[#f0d8ff] pt-4">
-            <div className="flex items-center justify-between rounded-lg border border-[#d57ff9]/30 bg-[#ffe9f5] px-3 py-2.5">
+            <div className="flex items-center justify-between rounded-lg border border-[#d57ff9]/30 bg-[#ffe9f5]/60 px-3 py-2.5">
               <span className="text-sm font-medium text-[#424242]">Theme</span>
-              <span className="text-xs font-medium text-[#8f2acd]">Light</span>
+              <ThemeToggle />
             </div>
 
             <Link
