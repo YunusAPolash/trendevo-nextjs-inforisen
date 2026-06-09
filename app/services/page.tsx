@@ -5,6 +5,7 @@ import HeroSection from '@/components/sections/hero-section';
 import { heroSocialIcons } from '@/content/hero-social-icons';
 import { Button } from '@/components/ui/button';
 import ServicesGridSection from './_components/services-grid-section';
+import PrimaryButton from '@/components/buttons/primary-button';
 
 export const metadata: Metadata = {
   title: 'Services | TrendEvo',
@@ -39,12 +40,7 @@ export default function ServicesPage() {
         }
         descriptionClassName="max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56]"
         actions={
-          <Button className="bg-brand-gradient h-[50px] w-fit rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] text-base font-semibold text-white hover:opacity-90">
-            Get Started Now
-            <span className="ml-2 flex size-8 items-center justify-center rounded-full bg-white/10">
-              <ArrowRight className="size-4" aria-hidden />
-            </span>
-          </Button>
+          <PrimaryButton showArrow className='w-fit'>Get Started Now</PrimaryButton>
         }
         illustration={{
           src: '/images/services/service-hero-character.png',
