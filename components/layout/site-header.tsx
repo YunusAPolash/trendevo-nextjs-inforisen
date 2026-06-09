@@ -7,6 +7,7 @@ import {
   LayoutGrid,
   Mail,
   Users,
+  type LucideIcon,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,13 +16,18 @@ import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { cn } from '@/lib/utils';
 
-const navLinks = [
-  { label: 'Home', href: '/', active: true, icon: Home },
-  { label: 'Services', href: '#services', active: false, icon: LayoutGrid },
-  { label: 'About Us', href: '#about', active: false, icon: Users },
-  { label: 'How it works', href: '#how-it-works', active: false, icon: CircleHelp },
-  { label: 'Blog', href: '#blog', active: false, icon: BookOpen },
-  { label: 'Contact Us', href: '#contact', active: false, icon: Mail },
+const navLinks: {
+  label: string;
+  href: string;
+  icon: LucideIcon;
+  active?: boolean;
+}[] = [
+  { label: 'Home', href: '/', icon: Home, active: true },
+  { label: 'Services', href: '/services', icon: LayoutGrid },
+  { label: 'About Us', href: '#about', icon: Users },
+  { label: 'How it works', href: '#how-it-works', icon: CircleHelp },
+  { label: 'Blog', href: '#blog', icon: BookOpen },
+  { label: 'Contact Us', href: '/contact-us', icon: Mail },
 ];
 
 function MenuIcon({ open, light = false }: { open: boolean; light?: boolean }) {
