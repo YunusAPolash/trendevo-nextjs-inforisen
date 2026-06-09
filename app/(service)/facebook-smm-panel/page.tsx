@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
 
 import ServiceHero from '@/components/serviceSmmPanel/ServiceHero';
+import ServiceAdvantage from '@/components/serviceSmmPanel/service-advantage';
+import ServiceLeading from '@/components/serviceSmmPanel/service-leading';
+import ServiceWorkingProcess from '@/components/serviceSmmPanel/service-workingProcess';
+import SocialService from '@/components/serviceSmmPanel/social-service';
+import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
 
 export const metadata: Metadata = {
   title: 'Facebook SMM Panel | TrendEvo',
@@ -31,6 +36,11 @@ export default function FacebookSmmPanelPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <ServiceHero />
+      <SocialService />
+      <StatsMarqueeSection />
+      <ServiceAdvantage />
+      <ServiceWorkingProcess />
+      <ServiceLeading />
     </>
   );
 }

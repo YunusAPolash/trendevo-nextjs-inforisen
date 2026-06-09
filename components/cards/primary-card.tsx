@@ -7,6 +7,9 @@ const cardBackgroundClasses = {
   'card-3': "bg-[url('/images/backgrounds/card-bg-3.svg')]",
   'card-4': "bg-[url('/images/backgrounds/card-bg-4.svg')]",
   'card-5': "bg-[url('/images/backgrounds/card-bg-5.png')]",
+  'card-7': "bg-[url('/images/backgrounds/card-bg-7.svg')]",
+  'card-9': "bg-[url('/images/backgrounds/card-bg-9.svg')]",
+  'card-10': "bg-[url('/images/backgrounds/card-bgg-10.svg')]",
 } as const;
 
 export type CardBgKey = keyof typeof cardBackgroundClasses;
