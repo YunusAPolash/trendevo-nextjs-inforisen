@@ -25,7 +25,7 @@ import TestimonialsSection from '@/components/sections/testimonials-section';
 import WhyChooseUsSection from '@/app/(home)/_components/why-choose-us-section';
 import WorkingProcessSection from '@/app/(home)/_components/working-process-section';
 import FaqSection from '@/components/sections/faq-section';
-import OurService from '@/components/features/home/OurService';
+import OurService from '@/app/(home)/_components/our-service';
 
 export default function Home() {
   return (
