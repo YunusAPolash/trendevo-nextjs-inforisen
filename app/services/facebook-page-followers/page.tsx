@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import CtaSection from '@/components/sections/cta-section';
 import FaqSection from '@/components/sections/faq-section';
 import HeroSection from '@/components/sections/hero-section';
+import ServiceLeading from '@/components/sections/service-leading';
 import ServiceWorkingProcessSection from '@/components/sections/service-working-process-section';
 import TestimonialsSection from '@/components/sections/testimonials-section';
 import { Button } from '@/components/ui/button';
@@ -107,6 +108,8 @@ export default function FacebookPageFollowersPage() {
         }
         steps={facebookPageFollowersWorkingProcessSteps}
       />
+      <ServiceLeading slug="facebook-page-followers" />
+      <ServiceLeading slug="facebook-page-followers-related-services" />
       <FaqSection
         label={facebookPageFollowersFaqHeading.label}
         title={facebookPageFollowersFaqHeading.title}

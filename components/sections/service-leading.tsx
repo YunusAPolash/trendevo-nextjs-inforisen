@@ -15,10 +15,14 @@ function LeadingCard({
   title,
   description,
   icon,
-  iconWidth,
-  iconHeight,
+  iconWidth = 40,
+  iconHeight = 40,
+  iconClassName,
+  iconWrapperClassName,
+  iconFrameSrc,
+  hexIconSrc,
   className,
-}: ServiceLeadingFeature & { className?: string }) {
+}: ServiceLeadingFeature & { hexIconSrc: string; className?: string }) {
   return (
     <PrimaryCard
       bg="card-10"
@@ -29,28 +33,47 @@ function LeadingCard({
     >
       <div className="relative z-10 flex flex-col gap-[18px]">
         <div className="relative flex size-[77px] shrink-0 items-center justify-center">
-          <Image
-            src="/images/why-choose-us/hex-icon.svg"
-            alt=""
-            aria-hidden
-            width={77}
-            height={77}
-            className="absolute inset-0 size-[77px]"
-          />
-          <div
-            className="relative z-10 shrink-0"
-            style={{ width: iconWidth, height: iconHeight }}
-          >
+          {iconFrameSrc ? (
             <Image
-              src={icon}
+              src={iconFrameSrc}
               alt=""
               aria-hidden
-              width={iconWidth}
-              height={iconHeight}
-              quality={100}
-              className="size-full object-contain"
+              width={77}
+              height={77}
+              className="size-[77px] object-contain"
+              unoptimized
             />
-          </div>
+          ) : (
+            <>
+              <Image
+                src={hexIconSrc}
+                alt=""
+                aria-hidden
+                width={77}
+                height={77}
+                className="absolute inset-0 size-[77px]"
+                unoptimized={hexIconSrc.endsWith('.png')}
+              />
+              <div
+                className={cn(
+                  'relative z-10 shrink-0',
+                  iconWrapperClassName,
+                )}
+                style={{ width: iconWidth, height: iconHeight }}
+              >
+                <Image
+                  src={icon!}
+                  alt=""
+                  aria-hidden
+                  width={iconWidth}
+                  height={iconHeight}
+                  quality={100}
+                  unoptimized
+                  className={cn('size-full object-contain', iconClassName)}
+                />
+              </div>
+            </>
+          )}
         </div>
 
         <div className="flex flex-col gap-3">
@@ -87,7 +110,11 @@ export default function ServiceLeading({ slug }: ServiceLeadingProps) {
     bottomRowFeatures,
     titleClassName,
     subtitleClassName,
+    underlineSrc,
+    underlineWidth,
   } = getServiceLeadingContent(slug);
+
+  const hexIconSrc = '/images/why-choose-us/hex-icon.svg';
 
   return (
     <PrimarySection className="relative overflow-hidden py-16 sm:py-20">
@@ -106,22 +133,48 @@ export default function ServiceLeading({ slug }: ServiceLeadingProps) {
           badge={badge}
           title={title}
           subtitle={subtitle}
+          underlineSrc={underlineSrc}
+          underlineWidth={underlineWidth}
           titleClassName={titleClassName}
           subtitleClassName={subtitleClassName}
         />
 
         <div className="flex flex-col gap-8 lg:gap-10">
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div
+            className={cn(
+              'grid gap-6',
+              topRowFeatures.length >= 3
+                ? 'sm:grid-cols-2 lg:grid-cols-3'
+                : 'lg:grid-cols-2',
+            )}
+          >
             {topRowFeatures.map((feature) => (
-              <LeadingCard key={feature.title} {...feature} />
+              <LeadingCard
+                key={feature.title}
+                {...feature}
+                hexIconSrc={hexIconSrc}
+              />
             ))}
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-            {bottomRowFeatures.map((feature) => (
-              <LeadingCard key={feature.title} {...feature} />
-            ))}
-          </div>
+          {bottomRowFeatures.length > 0 ? (
+            <div
+              className={cn(
+                'grid gap-6',
+                bottomRowFeatures.length === 2
+                  ? 'sm:grid-cols-2'
+                  : 'sm:grid-cols-2 xl:grid-cols-3',
+              )}
+            >
+              {bottomRowFeatures.map((feature) => (
+                <LeadingCard
+                  key={feature.title}
+                  {...feature}
+                  hexIconSrc={hexIconSrc}
+                />
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </PrimarySection>
