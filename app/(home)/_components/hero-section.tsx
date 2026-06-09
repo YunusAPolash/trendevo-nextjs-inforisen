@@ -58,7 +58,7 @@ export default function HeroSection() {
               measurable growth in reach, engagement, and online visibility
               across global markets.
             </p>
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex gap-2">
               <Image
                 src="/images/icons/hero-fire-icon.png"
                 alt=""
@@ -66,7 +66,7 @@ export default function HeroSection() {
                 height={24}
                 className="size-6 shrink-0"
               />
-              <p className="text-base text-[#313131]">
+              <p className="text-base text-[#313131] text-sm leading-relaxed text-[#313131] sm:text-base md:text-lg">
                 Enjoy up to{' '}
                 <span className="font-semibold text-[#fc7f4d]">30%</span> bonus on
                 every deposit, starting at only $1.
