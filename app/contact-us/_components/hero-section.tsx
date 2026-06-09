@@ -84,22 +84,22 @@ export default function HeroSection() {
           <div className="absolute bottom-0 left-[4.12%] z-20 w-[92.97%] overflow-visible">
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 h-32 rounded-[20px] bg-white/[0.04]  backdrop-blur-md backdrop-saturate-150"
+              className="pointer-events-none absolute inset-0 h-20 rounded-[20px] bg-white/[0.04] backdrop-blur-md backdrop-saturate-150 sm:h-24 lg:h-28"
             />
-            <div className="relative grid h-32 grid-cols-6 items-end gap-1 overflow-visible px-4 pb-4 sm:gap-3 sm:px-5 sm:pb-5">
+            <div className="relative grid h-20 grid-cols-6 items-center gap-0.5 overflow-visible px-2 py-2 sm:h-24 sm:gap-2 sm:px-4 sm:py-3 lg:h-28 lg:gap-3 lg:px-5 lg:pb-4">
               {socialIcons.map((icon, index) => (
                 <div
                   key={icon.label}
-                  className="contact-hero-icon-wave flex justify-center"
+                  className="contact-hero-icon-wave flex shrink-0 justify-center self-center"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <div className="relative size-16 overflow-hidden rounded-xl sm:size-20">
+                  <div className="relative aspect-square w-full max-w-9 shrink-0 overflow-hidden rounded-lg sm:max-w-14 sm:rounded-xl md:max-w-16 lg:max-w-20">
                     <Image
                       src={icon.src}
                       alt={icon.label}
                       fill
-                      className="object-cover"
-                      sizes="80px"
+                      className="object-contain"
+                      sizes="(max-width: 640px) 36px, (max-width: 1024px) 56px, 80px"
                     />
                   </div>
                 </div>
