@@ -3,7 +3,11 @@ import type { Metadata } from 'next';
 import ServiceHero from '@/components/serviceSmmPanel/ServiceHero';
 import ServiceAdvantage from '@/components/serviceSmmPanel/service-advantage';
 import ServiceLeading from '@/components/serviceSmmPanel/service-leading';
-import ServiceWorkingProcess from '@/components/serviceSmmPanel/service-workingProcess';
+import ServiceWorkingProcessSection from '@/components/sections/service-working-process-section';
+import {
+  facebookSmmPanelWorkingProcessHeading,
+  facebookSmmPanelWorkingProcessSteps,
+} from './_components/working-process-content';
 import SocialService from '@/components/serviceSmmPanel/social-service';
 import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
 
@@ -39,7 +43,16 @@ export default function FacebookSmmPanelPage() {
       <SocialService />
       <StatsMarqueeSection />
       <ServiceAdvantage />
-      <ServiceWorkingProcess />
+      <ServiceWorkingProcessSection
+        badge={facebookSmmPanelWorkingProcessHeading.badge}
+        title={facebookSmmPanelWorkingProcessHeading.title}
+        subtitle={facebookSmmPanelWorkingProcessHeading.subtitle}
+        titleClassName={facebookSmmPanelWorkingProcessHeading.titleClassName}
+        subtitleClassName={
+          facebookSmmPanelWorkingProcessHeading.subtitleClassName
+        }
+        steps={facebookSmmPanelWorkingProcessSteps}
+      />
       <ServiceLeading />
     </>
   );

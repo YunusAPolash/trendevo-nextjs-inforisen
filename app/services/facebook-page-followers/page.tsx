@@ -1,9 +1,14 @@
 import type { Metadata } from 'next';
 import HeroSection from '@/components/sections/hero-section';
+import ServiceWorkingProcessSection from '@/components/sections/service-working-process-section';
 import TestimonialsSection from '@/components/sections/testimonials-section';
 import { Button } from '@/components/ui/button';
 import { facebookPageFollowersTrustBadge } from './_components/hero-content';
 import OrderFormSection from './_components/order-form-section';
+import {
+  facebookPageFollowersWorkingProcessHeading,
+  facebookPageFollowersWorkingProcessSteps,
+} from './_components/working-process-content';
 import {
   facebookPageFollowersTestimonialsAssets,
   facebookPageFollowersTestimonialsFeaturedReview,
@@ -59,6 +64,22 @@ export default function FacebookPageFollowersPage() {
         }}
       />
       <OrderFormSection />
+      <ServiceWorkingProcessSection
+        badge={facebookPageFollowersWorkingProcessHeading.badge}
+        underlineSrc={facebookPageFollowersWorkingProcessHeading.underlineSrc}
+        underlineWidth={
+          facebookPageFollowersWorkingProcessHeading.underlineWidth
+        }
+        title={facebookPageFollowersWorkingProcessHeading.title}
+        subtitle={facebookPageFollowersWorkingProcessHeading.subtitle}
+        titleClassName={
+          facebookPageFollowersWorkingProcessHeading.titleClassName
+        }
+        subtitleClassName={
+          facebookPageFollowersWorkingProcessHeading.subtitleClassName
+        }
+        steps={facebookPageFollowersWorkingProcessSteps}
+      />
       <TestimonialsSection
         sectionBackground={facebookPageFollowersTestimonialsSectionBackground}
         badge={facebookPageFollowersTestimonialsHeading.badge}
