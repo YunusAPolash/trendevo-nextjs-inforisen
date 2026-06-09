@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import {
   homeFaqHeading,
   homeFaqItems,
-} from '@/app/_components/home-faq-content';
+} from '@/app/(home)/_components/home-faq-content';
 import CtaSection from '@/components/sections/cta-section';
 import FaqSection from '@/components/sections/faq-section';
 import { Button } from '@/components/ui/button';
