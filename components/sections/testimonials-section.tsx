@@ -178,7 +178,7 @@ function ReviewTabSwitcher({
   onChange: (tab: ReviewTab) => void;
 }) {
   return (
-    <div className="w-full max-w-full rounded-xl border-[0.6px] border-[#f0d8ff] bg-[rgba(202,115,255,0.04)] p-1.5 sm:p-2">
+    <div className="w-fit max-w-full rounded-xl border-[0.6px] border-[#f0d8ff] bg-[rgba(202,115,255,0.04)] p-1.5 sm:p-2">
       <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-3">
         <button
           type="button"

@@ -1,8 +1,19 @@
 import type { Metadata } from 'next';
 import HeroSection from '@/components/sections/hero-section';
+import TestimonialsSection from '@/components/sections/testimonials-section';
 import { Button } from '@/components/ui/button';
 import { facebookPageFollowersTrustBadge } from './_components/hero-content';
 import OrderFormSection from './_components/order-form-section';
+import {
+  facebookPageFollowersTestimonialsAssets,
+  facebookPageFollowersTestimonialsFeaturedReview,
+  facebookPageFollowersTestimonialsHeading,
+  facebookPageFollowersTestimonialsLeftTextReviews,
+  facebookPageFollowersTestimonialsRightTextReviews,
+  facebookPageFollowersTestimonialsSectionBackground,
+  facebookPageFollowersTestimonialsTabLabels,
+  facebookPageFollowersTestimonialsVideoReviews,
+} from './_components/testimonials-content';
 
 export const metadata: Metadata = {
   title: 'Buy Facebook Page Followers | TrendEvo',
@@ -48,6 +59,26 @@ export default function FacebookPageFollowersPage() {
         }}
       />
       <OrderFormSection />
+      <TestimonialsSection
+        sectionBackground={facebookPageFollowersTestimonialsSectionBackground}
+        badge={facebookPageFollowersTestimonialsHeading.badge}
+        underlineSrc={facebookPageFollowersTestimonialsHeading.underlineSrc}
+        underlineWidth={facebookPageFollowersTestimonialsHeading.underlineWidth}
+        title={facebookPageFollowersTestimonialsHeading.title}
+        subtitle={facebookPageFollowersTestimonialsHeading.subtitle}
+        titleClassName={facebookPageFollowersTestimonialsHeading.titleClassName}
+        subtitleClassName={
+          facebookPageFollowersTestimonialsHeading.subtitleClassName
+        }
+        customerTabLabel={facebookPageFollowersTestimonialsTabLabels.customer}
+        videoTabLabel={facebookPageFollowersTestimonialsTabLabels.video}
+        assets={facebookPageFollowersTestimonialsAssets}
+        leftTextReviews={facebookPageFollowersTestimonialsLeftTextReviews}
+        rightTextReviews={facebookPageFollowersTestimonialsRightTextReviews}
+        featuredReview={facebookPageFollowersTestimonialsFeaturedReview}
+        videoReviews={facebookPageFollowersTestimonialsVideoReviews}
+        defaultTab="video"
+      />
     </>
   );
 }
