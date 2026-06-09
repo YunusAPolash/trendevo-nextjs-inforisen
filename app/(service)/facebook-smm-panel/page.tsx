@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import ServiceHero from '@/components/serviceSmmPanel/ServiceHero';
 import ServiceAdvantage from '@/components/serviceSmmPanel/service-advantage';
-import ServiceLeading from '@/components/serviceSmmPanel/service-leading';
+import ServiceLeading from '@/components/sections/service-leading';
 import ServiceWorkingProcessSection from '@/components/sections/service-working-process-section';
 import {
   facebookSmmPanelWorkingProcessHeading,

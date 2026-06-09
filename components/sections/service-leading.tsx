@@ -9,7 +9,7 @@ import {
   getServiceLeadingContent,
   type ServiceLeadingFeature,
   type ServiceLeadingSlug,
-} from './service-leading-content';
+} from '../serviceSmmPanel/service-leading-content';
 
 function LeadingCard({
   title,
