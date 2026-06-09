@@ -45,7 +45,7 @@ export default function AboutSection() {
             {features.map((feature) => (
               <li key={feature} className="flex items-start gap-3">
                 <Image
-                  src="/images/icons/check-icon.png"
+                  src="/images/icons/check-icon.svg"
                   alt=""
                   width={24}
                   height={24}

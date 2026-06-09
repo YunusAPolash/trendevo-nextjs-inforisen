@@ -3,9 +3,11 @@ name: build
 description: >-
   Figma-to-code workflow for this project. Use when the user invokes
   `/build <figma-link>` or asks to build a page, section, card, or component
-  from a Figma design URL. Full pages are built one section at a time:
-  list sections first, build section 1 completely, pause for user review,
-  then proceed section by section.
+  from a Figma design URL. Automatically detects frame type (page, section,
+  card, component) and target route from Figma metadata and project context —
+  never asks the user. Full pages are built one section at a time: list sections
+  first, build section 1 completely, pause for user review, then proceed section
+  by section.
 disable-model-invocation: false
 ---
 
@@ -15,40 +17,78 @@ Convert a Figma frame into production React/Next.js code for this repository.
 
 **Invocation:** `/build <figma-link>`
 
-The link may point to any frame: a full page, section, card, component, or part of a component. Always start by asking the scoping questions below before writing code.
+The link may point to any frame: a full page, section, card, component, or part of a component. **Do not ask the user what frame type it is** — detect it automatically (Step 0) before writing code.
 
 **Important:** Full-page builds are done **one section at a time**. Never implement an entire page in a single pass — that leads to rushed, incomplete output. List all sections first, build section 1 completely, pause for review, then proceed section by section.
 
 ---
 
-## Step 0 — Ask scoping questions
+## Step 0 — Auto-detect frame type and target page
 
-Use **AskQuestion** (or ask conversationally if unavailable).
+**Never use AskQuestion or conversational prompts to ask what frame type this is or which page to use.** Infer both from Figma metadata, the screenshot, and project context. Proceed immediately once detection is done.
 
-### Question 1 — What frame is this?
+### 0a — Parse URL and fetch structure
 
-**Prompt:** What frame is this?
+1. Parse the Figma URL (Step 1) to get `fileKey` and `nodeId`.
+2. Call **`get_metadata`** on the linked `nodeId` to read the node name, type, dimensions, parent chain, and direct children.
+3. Call **`get_design_context`** (and rely on its screenshot) on the same `nodeId` for visual confirmation.
 
-**Options:**
-- `page`
-- `section`
-- `card`
-- `component` (any component / part of a component)
+If metadata and screenshot disagree, trust the **screenshot + child layout** over the frame name alone.
 
-### Question 2 — Target page (only if answer ≠ page)
+### 0b — Classify frame type
 
-**Prompt:** In which page should this be added?
+Assign exactly one type: `page` | `section` | `card` | `component`. Use the **first matching rule** in this order:
 
-**Options:**
-- `let-me-type` — user provides the route or page name (e.g. `home`, `/pricing`, `about`)
+| Type | Detect when |
+|------|-------------|
+| **`page`** | The node is a top-level page frame or a direct child of a Figma `PAGE` node; **or** it has **3+** major sibling frames stacked vertically at full content width (~1440px); **or** its height is very tall (typically ≥ 2000px) with multiple distinct content bands (hero, body sections, footer); **or** the frame/file name contains `page` (e.g. `Home Page`, `Services & Pricing Page`). |
+| **`section`** | A single full-width vertical slice with one cohesive purpose (hero, features grid, FAQ, CTA, testimonials, etc.); typically one `PrimarySection`-sized band; **or** the name contains `section`, `hero`, `footer`, `cta`, `faq`, `testimonials`, `pricing`, `grid`, `banner`; **or** it is one of several same-width siblings under a page parent. |
+| **`card`** | A bounded, repeatable tile (pricing plan, service panel, testimonial card, contact detail card); smaller than a section (typically &lt; 600px tall); **or** the name contains `card`; **or** it sits inside a grid/list of similar siblings. |
+| **`component`** | Everything else: atomic UI (button group, badge, stat block, filter chip, avatar row, form field, part of a card). Small, not full-width, or a nested child with no section-level layout. |
 
-Record answers before fetching Figma or creating files.
+**Tie-breakers:**
+
+- Parent is a `page` frame and this node is one of many vertical children → `section` (not `page`).
+- User linked a child `node-id` inside a larger page → classify **that node**, not the parent page.
+- A frame named `Hero Section` linked directly → `section`, even if it is tall.
+
+### 0c — Infer target page (when type ≠ `page`)
+
+Resolve the App Router route **without asking the user**. Apply rules in order; stop at the first confident match:
+
+1. **User message** — explicit route or page name in the `/build` message or surrounding chat (e.g. "for pricing", `/services/pricing`).
+2. **IDE / chat context** — recently viewed or open files under `app/{route}/` (e.g. open `app/services/pricing/page.tsx` → target `services/pricing`).
+3. **Figma parent chain** — walk metadata parents; the nearest ancestor named like a page (`Home`, `Services & Pricing`, `Contact Us`) maps to a route.
+4. **Figma file / frame name** — kebab-case the page-level frame or file name and match an existing `app/**/page.tsx` route.
+5. **Existing routes** — list `app/**/page.tsx` and pick the closest semantic match to the Figma page or section name.
+
+**Route mapping examples:**
+
+| Figma name | Route |
+|------------|-------|
+| `Home`, `Home Page` | `/` → `app/page.tsx`, sections in `app/_components/` |
+| `Services & Pricing`, `Pricing` | `services/pricing` |
+| `Contact Us` | `contact-us` |
+| `Blog` | `blog` |
+| `Privacy Policy` | `privacy-policy` (under `(legal)/`) |
+
+If no match is found after all rules, derive a new kebab-case route from the Figma page name and create it (only for `page` builds). For `section` / `card` / `component`, prefer the parent page frame name over inventing a new route.
+
+### 0d — Announce and record (no confirmation gate)
+
+Before writing code, state your detection in one short block — **do not wait for approval**:
+
+```
+Detected: section → services/pricing (from parent frame "Services & Pricing Page", node "Heading Section")
+```
+
+Then continue to the workflow for that type. Only revisit detection if the user explicitly corrects you.
 
 ---
 
 ## Page builds — section-by-section workflow
 
-**Apply this workflow whenever Question 1 answer is `page`.** Do not skip or compress it.
+**Apply this workflow whenever Step 0 detects type `page`.** Do not skip or compress it.
 
 ### Phase A — Discover sections (no code yet)
 
@@ -314,7 +354,7 @@ app/{route}/
 
 ### `section`
 
-Add to the target page from Question 2:
+Add to the target page inferred in Step 0c:
 
 ```
 app/{target-page}/_components/{section-name}-section.tsx
@@ -357,7 +397,7 @@ Place relative to scope:
 
 ```
 Page build progress:
-- [ ] Scoping questions answered
+- [ ] Frame type and target page auto-detected (Step 0)
 - [ ] Full-page Figma design fetched
 - [ ] Section list identified and confirmed with user
 ```
@@ -445,14 +485,13 @@ Section build progress:
 /build https://www.figma.com/design/AbCdEf/My-Page?node-id=12-34
 ```
 
-1. Ask: frame type → `section`
-2. Ask: target page → `pricing`
-3. Fetch design + screenshot for node `12:34`
-4. Create `app/pricing/_components/hero-section.tsx` with `PrimarySection bg="section-2"` and a `.container` inside
-5. Download icons to `public/images/icons/pricing-*.svg`
-6. Match spacing/typography/colors to Figma screenshot
-7. Import section in `app/pricing/page.tsx`
-8. Run lint, report done, **stop**
+1. `get_metadata` + `get_design_context` on node `12:34` → detect `section` (name "Hero Section", parent "Pricing Page") → target `services/pricing`
+2. Announce: `Detected: section → services/pricing`
+3. Create `app/services/pricing/_components/hero-section.tsx` with `PrimarySection bg="section-2"` and a `.container` inside
+4. Download icons to `public/images/icons/pricing-*.svg`
+5. Match spacing/typography/colors to Figma screenshot
+6. Import section in `app/services/pricing/page.tsx`
+7. Run lint, report done, **stop**
 
 ### Full page (section-by-section)
 
@@ -460,13 +499,14 @@ Section build progress:
 /build https://www.figma.com/design/AbCdEf/Home-Page?node-id=1-2
 ```
 
-1. Ask: frame type → `page`
-2. Fetch page metadata → list sections: Hero, Stats, Services, About, …
-3. Build **Hero only** (first section `nodeId`)
-4. Match hero to Figma perfectly → lint → report → **stop**
-5. User reviews, says `/build` → build **Stats** section
-6. User says "match Figma" on Stats → refine Stats until perfect → **stop**
-7. Repeat until all sections are built and approved
+1. `get_metadata` on node `1:2` → detect `page` (5 vertical section children, ~6000px tall) → target `/`
+2. Announce: `Detected: page → / (Home Page)`
+3. List sections from metadata: Hero, Stats, Services, About, …
+4. Build **Hero only** (first section `nodeId`)
+5. Match hero to Figma perfectly → lint → report → **stop**
+6. User reviews, says `/build` → build **Stats** section
+7. User says "match Figma" on Stats → refine Stats until perfect → **stop**
+8. Repeat until all sections are built and approved
 
 ---
 
@@ -482,5 +522,6 @@ Section build progress:
 - Using a raw card container instead of `PrimaryCard`
 - Exporting Figma background images into the repo
 - Applying `bg-gradient-*` or arbitrary background-url utilities on section/card wrappers outside the allowed keys
-- Skipping scoping questions and guessing file paths
+- Asking the user what frame type or target page to use instead of auto-detecting (Step 0)
+- Skipping `get_metadata` and guessing file paths from the URL alone
 - Leaving Figma asset URLs in source instead of downloading content images locally
