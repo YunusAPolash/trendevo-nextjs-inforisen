@@ -30,7 +30,7 @@ const companyLinks = [
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Refund Policy', href: '/refund-policy' },
   { label: 'FAQs', href: '/#faq' },
-  { label: 'Contact Us', href: '/#contact' },
+  { label: 'Contact Us', href: '/contact-us' },
 ];
 
 const serviceLinks = [

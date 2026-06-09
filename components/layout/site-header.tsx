@@ -17,11 +17,16 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { label: 'Home', href: '/', active: true, icon: Home },
-  { label: 'Services', href: '#services', active: false, icon: LayoutGrid },
-  { label: 'About Us', href: '#about', active: false, icon: Users },
-  { label: 'How it works', href: '#how-it-works', active: false, icon: CircleHelp },
-  { label: 'Blog', href: '#blog', active: false, icon: BookOpen },
-  { label: 'Contact Us', href: '#contact', active: false, icon: Mail },
+  { label: 'Services', href: '/services', active: false, icon: LayoutGrid },
+  { label: 'About Us', href: '/about-us', active: false, icon: Users },
+  {
+    label: 'How it works',
+    href: '#how-it-works',
+    active: false,
+    icon: CircleHelp,
+  },
+  { label: 'Blog', href: '/blog', active: false, icon: BookOpen },
+  { label: 'Contact Us', href: '/contact-us', active: false, icon: Mail },
 ];
 
 function MenuIcon({ open, light = false }: { open: boolean; light?: boolean }) {
