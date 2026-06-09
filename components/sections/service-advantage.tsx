@@ -5,53 +5,11 @@ import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
 
-const leftAdvantages = [
-  {
-    step: '01',
-    title: 'Fast Follower and Page Growth',
-    description:
-      'We help to bring potential followers to your profile or page via targeted marketing on Facebook. It also boosts your visits and reaches.',
-    icon: '/images/service-smm-panel/fast-follower-and-page-growth.png',
-  },
-  {
-    step: '02',
-    title: 'Targeted Audience Expansion',
-    description:
-      'You can do better with your content to get millions of views with our Facebook SMM panel. This also makes it easier to meet targeted people.',
-    icon: '/images/service-smm-panel/targeted-audience-expansion.png',
-  },
-  {
-    step: '03',
-    title: 'Time-Saving Growth',
-    description:
-      'You can manage all your Facebook profiles or pages in one place using our service. It also makes it faster to expand the follower base with no real effort.',
-    icon: '/images/service-smm-panel/time-saving-growth.png',
-  },
-] as const;
-
-const rightAdvantages = [
-  {
-    step: '04',
-    title: 'Fast Likes, Comments & Shares',
-    description:
-      'You can make your brand get better engagement with followers and likes using our Facebook SMM panel. This also makes your business look reliable among people.',
-    icon: '/images/service-smm-panel/fast-likes-comments-and-shares.png',
-  },
-  {
-    step: '05',
-    title: 'Social Proof and Credibility',
-    description:
-      'With our service, you can build trust and reliability by getting real likes, shares, or positive comments on your posts.',
-    icon: '/images/service-smm-panel/social-proof-and-credibility.png',
-  },
-  {
-    step: '06',
-    title: 'Community Growth in Private Groups',
-    description:
-      'With our help, your community can grow in a private group. Your private group can get more visibility means more opportunities to attract new buyers and followers.',
-    icon: '/images/service-smm-panel/community-growth-in-private-groups.png',
-  },
-] as const;
+import {
+  getServiceAdvantageContent,
+  type ServiceAdvantageItem,
+  type ServiceAdvantageSlug,
+} from '../serviceSmmPanel/service-advantage-content';
 
 function StepBadge({
   step,
@@ -89,7 +47,7 @@ function StepBadge({
   );
 }
 
-function AdvantageTimeline({ steps }: { steps: readonly string[] }) {
+function AdvantageTimeline({ steps }: { steps: string[] }) {
   return (
     <div className="relative flex w-14 shrink-0 self-stretch sm:w-20 lg:w-[107px]">
       <div
@@ -113,12 +71,7 @@ function AdvantageCard({
   description,
   icon,
   className,
-}: {
-  title: string;
-  description: string;
-  icon: string;
-  className?: string;
-}) {
+}: Omit<ServiceAdvantageItem, 'step'> & { className?: string }) {
   return (
     <PrimaryCard
       bg="card-3"
@@ -169,11 +122,7 @@ function AdvantageCard({
   );
 }
 
-function AdvantageColumn({
-  advantages,
-}: {
-  advantages: typeof leftAdvantages | typeof rightAdvantages;
-}) {
+function AdvantageColumn({ advantages }: { advantages: ServiceAdvantageItem[] }) {
   return (
     <div className="flex w-full min-w-0 flex-col gap-7 lg:max-w-[580px]">
       {advantages.map(({ step, ...advantage }) => (
@@ -183,7 +132,21 @@ function AdvantageColumn({
   );
 }
 
-export default function ServiceAdvantage() {
+type ServiceAdvantageProps = {
+  slug: ServiceAdvantageSlug;
+};
+
+export default function ServiceAdvantage({ slug }: ServiceAdvantageProps) {
+  const {
+    badge,
+    title,
+    subtitle,
+    leftAdvantages,
+    rightAdvantages,
+    titleClassName,
+    subtitleClassName,
+  } = getServiceAdvantageContent(slug);
+
   return (
     <PrimarySection bg="section-4" className="relative overflow-hidden py-16 sm:py-20">
       <Image
@@ -205,16 +168,11 @@ export default function ServiceAdvantage() {
 
       <div className="container relative flex flex-col gap-10 sm:gap-12 lg:gap-16">
         <SectionHeading
-          badge="Advantages"
-          title={
-            <>
-              Advantages of Using{' '}
-              <span className="text-gradient">Facebook SMM Panel</span>
-            </>
-          }
-          subtitle="A Facebook SMM panel helps businesses grow followers, likes, and engagement quickly and efficiently, saving time and boosting online presence."
-          titleClassName="whitespace-normal text-2xl tracking-[0.48px] max-w-[1200px] sm:text-[32px] md:text-[40px] lg:text-[48px]"
-          subtitleClassName="max-w-[1064px] text-base sm:text-lg"
+          badge={badge}
+          title={title}
+          subtitle={subtitle}
+          titleClassName={titleClassName}
+          subtitleClassName={subtitleClassName}
         />
 
         <div className="flex w-full flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-6">
