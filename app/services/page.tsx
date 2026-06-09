@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import { ArrowRight } from 'lucide-react';
 import CtaSection from '@/components/sections/cta-section';
+import HeroSection from '@/components/sections/hero-section';
+import { heroSocialIcons } from '@/content/hero-social-icons';
 import { Button } from '@/components/ui/button';
-import HeroSection from './_components/hero-section';
 import ServicesGridSection from './_components/services-grid-section';
 
 export const metadata: Metadata = {
@@ -13,7 +15,46 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <HeroSection />
+      <HeroSection
+        bg="section-1"
+        variant="wide-responsive"
+        decoration="services"
+        leftColumnClassName="gap-6 lg:gap-8 lg:self-center"
+        title={
+          <>
+            Boost Your Social Media Growth with{' '}
+            <span className="text-gradient">Trend Evo Services</span>
+          </>
+        }
+        titleClassName="text-4xl font-semibold leading-[1.35] tracking-wide text-[#313131] sm:text-5xl lg:text-[48px]"
+        description={
+          <>
+            Boost your social media growth with Trend Evo. Reach more followers on{' '}
+            <span className="text-gradient">
+              Instagram, Facebook, YouTube, and TikTok
+            </span>
+            . Engage your audience like never before with reliable, fast services.
+            Take your online presence to the next level and grow confidently.
+          </>
+        }
+        descriptionClassName="max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56]"
+        actions={
+          <Button className="bg-brand-gradient h-[50px] w-fit rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] text-base font-semibold text-white hover:opacity-90">
+            Get Started Now
+            <span className="ml-2 flex size-8 items-center justify-center rounded-full bg-white/10">
+              <ArrowRight className="size-4" aria-hidden />
+            </span>
+          </Button>
+        }
+        illustration={{
+          src: '/images/services/service-hero-character.png',
+          alt: 'TrendEvo specialist presenting social media growth services',
+          width: 468,
+          height: 581,
+          maxWidthClassName: 'max-w-[468px]',
+        }}
+        socialIcons={heroSocialIcons}
+      />
       <ServicesGridSection />
       <CtaSection
         title={

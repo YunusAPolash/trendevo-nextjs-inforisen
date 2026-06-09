@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
+import { ArrowRight } from 'lucide-react';
 import CtaSection from '@/components/sections/cta-section';
+import HeroSection from '@/components/sections/hero-section';
+import { heroSocialIcons } from '@/content/hero-social-icons';
 import { Button } from '@/components/ui/button';
 import ContactDetailsSection from './_components/contact-details-section';
-import HeroSection from './_components/hero-section';
 
 export const metadata: Metadata = {
   title: 'Contact Us | TrendEvo',
@@ -13,7 +15,37 @@ export const metadata: Metadata = {
 export default function ContactUsPage() {
   return (
     <>
-      <HeroSection />
+      <HeroSection
+        bg="section-1"
+        variant="wide-responsive"
+        decoration="contact"
+        leftColumnClassName="gap-6 lg:gap-8 lg:self-center"
+        title={
+          <>
+            Connect with Trend Evo for Expert
+            <span className="text-gradient"> SMM Panel Support</span>
+          </>
+        }
+        titleClassName="text-[28px] font-semibold leading-[1.35] tracking-tight text-[#071431] sm:text-4xl md:text-5xl"
+        description="We are committed to delivering top-notch SMM panel services with smooth order processing, real-time support, and proven strategies to help you achieve consistent growth across all social media platforms."
+        descriptionClassName="max-w-2xl text-sm leading-relaxed text-[#343e56] sm:text-base md:text-lg"
+        actions={
+          <Button className="bg-brand-gradient h-10 shrink-0 rounded-[10px] border-[1.5px] border-[#cc7aff] px-4 text-sm font-semibold text-white hover:opacity-90 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]">
+            Get Started Now
+            <span className="ml-2 flex size-8 items-center justify-center rounded-full bg-white/10">
+              <ArrowRight className="size-4" aria-hidden />
+            </span>
+          </Button>
+        }
+        illustration={{
+          src: '/images/contact-us/contact-us-hero-character.webp',
+          alt: 'TrendEvo support specialist pointing to contact options',
+          width: 583,
+          height: 648,
+          maxWidthClassName: 'max-w-[583px]',
+        }}
+        socialIcons={heroSocialIcons}
+      />
       <ContactDetailsSection />
       <CtaSection
         title={
