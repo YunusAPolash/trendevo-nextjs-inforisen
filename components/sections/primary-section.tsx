@@ -17,15 +17,27 @@ const sectionBackgroundClasses = {
   'section-12': "bg-[url('/images/backgrounds/section-bg-12.svg')]",
 } as const;
 
+const sectionDarkBackgroundClasses = {
+  'section-1-dark':
+    "dark:bg-[url('/images/backgrounds/section-bg-1-dark.svg')]",
+  'section-2-dark':
+    "dark:bg-[url('/images/backgrounds/section-bg-2-dark.svg')]",
+} as const;
+
 export type SectionBgKey = keyof typeof sectionBackgroundClasses;
+export type SectionDarkBgKey = keyof typeof sectionDarkBackgroundClasses;
 
 export default function PrimarySection({
   className,
   bg,
+  darkBg,
   style,
   children,
   ...props
-}: React.ComponentPropsWithoutRef<'section'> & { bg?: SectionBgKey }) {
+}: React.ComponentPropsWithoutRef<'section'> & {
+  bg?: SectionBgKey;
+  darkBg?: SectionDarkBgKey;
+}) {
   return (
     <section
       className={cn('relative isolate px-4 ', className)}
@@ -36,8 +48,9 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            'absolute inset-0 bg-cover bg-center bg-no-repeat',
+            'absolute inset-0 bg-cover bg-top bg-no-repeat',
             sectionBackgroundClasses[bg],
+            darkBg && sectionDarkBackgroundClasses[darkBg],
           )}
         />
       ) : null}

@@ -666,7 +666,7 @@ function PlatformTab({
         <span
           className={cn(
             'hidden text-center text-xs font-semibold leading-tight sm:inline sm:whitespace-nowrap sm:text-sm md:text-[18px]',
-            isActive ? 'text-white' : 'text-[#343e56]',
+            isActive ? 'text-white' : 'text-[#343e56] dark:text-[#ebecef]',
           )}
         >
           {platform.label}
@@ -685,6 +685,7 @@ export default function OurService() {
     <PrimarySection
       id="services"
       bg="section-2"
+      darkBg="section-2-dark"
       className="overflow-hidden py-12 sm:py-16 lg:py-20"
     >
       <ServiceTopRightDecoration />
@@ -699,8 +700,8 @@ export default function OurService() {
             </>
           }
           subtitle="Explore our comprehensive range of social media marketing services designed to help you grow your presence across all major platforms. From Facebook to TikTok. we've got you covered."
-          titleClassName="text-2xl sm:text-[28px] lg:text-[36px]"
-          subtitleClassName="text-sm sm:text-base md:text-lg"
+          titleClassName="text-2xl sm:text-[28px] lg:text-[36px] dark:text-[#efedf1]"
+          subtitleClassName="text-sm sm:text-base md:text-lg dark:text-[#f5f6f7]"
         />
 
         <div className="flex w-full flex-col gap-6 sm:gap-8 lg:gap-9">
@@ -718,7 +719,7 @@ export default function OurService() {
           <div className="relative">
             <ServiceBottomLeftDecoration />
 
-            <article className="relative z-10 flex flex-col items-center justify-between gap-6 rounded-[12px] border border-[#d181ff] p-4 sm:gap-8 sm:p-6 lg:flex-row lg:py-7 lg:pl-7 lg:pr-8">
+            <article className="relative z-10 flex flex-col items-center justify-between gap-6 rounded-[12px] border border-[#d181ff] p-4 sm:gap-8 sm:p-6 lg:flex-row lg:py-7 lg:pl-7 lg:pr-8 dark:border-[rgba(143,42,205,0.7)]">
             <div className="relative h-[220px] w-full max-w-[571px] shrink-0 overflow-hidden rounded-2xl sm:h-[320px] md:h-[420px] lg:h-[496px]">
               <Image
                 src="/images/our-services/decorations/hero-illustration.png"
@@ -741,7 +742,7 @@ export default function OurService() {
                 >
                   {activePlatform.marketingTitle}
                 </h3>
-                <p className="text-sm font-medium leading-normal text-[#222e48] sm:text-base">
+                <p className="text-sm font-medium leading-normal text-[#222e48] sm:text-base dark:text-white">
                   {activePlatform.description}
                 </p>
               </div>
@@ -760,7 +761,7 @@ export default function OurService() {
                         >
                           {service.title}{' '}
                         </span>
-                        <span className="font-medium text-[#404a60]">
+                        <span className="font-medium text-[#404a60] dark:text-[#ebecef]">
                           {service.description}
                         </span>
                       </p>

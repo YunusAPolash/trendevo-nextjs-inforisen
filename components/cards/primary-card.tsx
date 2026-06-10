@@ -13,7 +13,12 @@ const cardBackgroundClasses = {
   'card-8': "bg-[url('/images/backgrounds/card-bg-8.svg')]",
 } as const;
 
+const cardDarkBackgroundClasses = {
+  'card-1-dark': "dark:bg-[url('/images/backgrounds/card-bg-1-dark.svg')]",
+} as const;
+
 export type CardBgKey = keyof typeof cardBackgroundClasses;
+export type CardDarkBgKey = keyof typeof cardDarkBackgroundClasses;
 
 const cardBaseClassName =
   'group/card flex flex-col gap-4 overflow-hidden rounded-xl bg-card py-4 text-sm text-card-foreground ring-1 ring-foreground/10 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl';
@@ -21,9 +26,13 @@ const cardBaseClassName =
 export default function PrimaryCard({
   className,
   bg,
+  darkBg,
   style,
   ...props
-}: React.ComponentProps<'article'> & { bg?: CardBgKey }) {
+}: React.ComponentProps<'article'> & {
+  bg?: CardBgKey;
+  darkBg?: CardDarkBgKey;
+}) {
   return (
     <article
       data-slot="card"
@@ -31,6 +40,7 @@ export default function PrimaryCard({
         cardBaseClassName,
         'p-6 ring-0 bg-cover bg-center bg-no-repeat',
         bg && cardBackgroundClasses[bg],
+        darkBg && cardDarkBackgroundClasses[darkBg],
         className,
       )}
       style={style}
