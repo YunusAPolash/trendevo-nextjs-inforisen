@@ -63,17 +63,20 @@ export default function MissionVisionSection() {
             </div>
           </div>
 
-          <div className="flex w-full min-w-0 flex-col gap-10">
-            <div className="flex w-full min-w-0 flex-col gap-7">
-              <div className="flex w-full min-w-0 flex-col gap-8">
-                <h2 className="w-full min-w-0 text-3xl font-semibold leading-snug break-words text-[#13203b] sm:text-4xl lg:text-5xl">
-                  Our{' '}
-                  <span className="text-gradient">Mission & Vision</span>
-                </h2>
-                <p className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl">
-                  {platformDescription}
-                </p>
-              </div>
+          <div className="flex w-full max-w-3xl shrink-0 flex-col gap-10">
+            <div className="flex flex-col gap-7">
+              <SectionHeading
+                align="left"
+                badge="ABOUT US"
+                title={
+                  <>
+                    Our <span className="text-gradient">Mission & Vision</span>
+                  </>
+                }
+                subtitle={platformDescription}
+                titleClassName="max-w-2xl text-4xl leading-snug tracking-wide text-[#13203b] lg:text-5xl"
+                subtitleClassName="max-w-2xl text-xl font-medium"
+              />
 
               <div className="flex w-full min-w-0 flex-col gap-10">
                 <FeatureList idPrefix="mission" />

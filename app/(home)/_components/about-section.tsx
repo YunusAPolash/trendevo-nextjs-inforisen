@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
+import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
 
 const GRADIENT_TEXT =
@@ -102,40 +103,23 @@ export default function AboutSection() {
         <div className="flex w-full max-w-[777px] flex-col gap-6 sm:gap-8 lg:gap-[38px]">
           <div className="flex flex-col gap-5 sm:gap-7 lg:gap-[28px]">
             <div className="flex flex-col gap-5 sm:gap-6 lg:gap-8">
-              <div className="flex max-w-[642px] flex-col gap-4 sm:gap-6 lg:gap-7">
-                <div className="flex flex-col gap-1">
-                  <span
-                    className={cn(
-                      'text-lg font-semibold leading-[1.45] sm:text-[22px]',
-                      GRADIENT_TEXT,
-                    )}
-                  >
-                    ABOUT US
-                  </span>
-                  <Image
-                    src="/images/our-services/ui/underline.svg"
-                    alt=""
-                    aria-hidden
-                    width={114}
-                    height={8}
-                    className="h-1.5 w-[90px] sm:h-2 sm:w-[114px]"
-                  />
-                </div>
-
-                <h2 className="text-2xl font-semibold leading-[1.35] tracking-[0.48px] text-[#13203b] dark:text-[#efedf1] sm:text-[32px] md:text-[40px] lg:text-[48px]">
-                  <span className="block">
-                    Your Trusted{' '}
-                    <span className={GRADIENT_TEXT}>Social Media</span>
-                  </span>
-                  <span className="block">Growth Partner</span>
-                </h2>
-              </div>
-
-              <p className="max-w-[642px] text-sm font-medium leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg lg:text-[22px] lg:leading-[1.5]">
-                A reliable SMM platform designed to deliver fast, secure, and
-                high-quality social media growth for individuals, businesses, and
-                resellers.
-              </p>
+              <SectionHeading
+                align="left"
+                badge="ABOUT US"
+                underlineWidth={114}
+                title={
+                  <>
+                    <span className="block">
+                      Your Trusted{' '}
+                      <span className={GRADIENT_TEXT}>Social Media</span>
+                    </span>
+                    <span className="block">Growth Partner</span>
+                  </>
+                }
+                subtitle="A reliable SMM platform designed to deliver fast, secure, and high-quality social media growth for individuals, businesses, and resellers."
+                titleClassName="max-w-[642px] text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]"
+                subtitleClassName="max-w-[642px] text-sm font-medium sm:text-base md:text-lg lg:text-[22px] lg:leading-[1.5]"
+              />
             </div>
 
             <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[38px]">
