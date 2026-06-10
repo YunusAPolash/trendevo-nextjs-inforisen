@@ -48,5 +48,11 @@ export const facebookPageFollowersFaqData: FaqSectionData = {
   title: 'gt<Frequently> Asked Questions',
   subtitle:
     'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+  bg: 'section-7',
+  ctaTitle: 'Still have questions?',
+  ctaSubtitle:
+    "Can't find the answer you're looking for? Please gt<get in touch> with our team.",
+  ctaButtonLabel: 'Get in Touch',
+  ctaButtonHref: '#contact',
   items: facebookPageFollowersFaqItems,
 };

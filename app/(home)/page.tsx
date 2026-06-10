@@ -28,11 +28,8 @@ export default function Home() {
       <AdvantagesSection />
       <PricingSection />
       <TestimonialsSection data={pageData.testimonials} />
-      <div id="faq">
-        <FaqSection data={pageData.faq} />
-      </div>
+      <FaqSection data={pageData.faq} />
       <HomeBlog />
-      
       <CtaSection />
     </>
   );

@@ -24,12 +24,12 @@ export type FaqSectionData = {
   title: string;
   subtitle: string;
   items: FaqItem[];
-  bg?: SectionBgKey;
+  bg: SectionBgKey;
   className?: string;
-  ctaTitle?: string;
-  ctaSubtitle?: string;
-  ctaButtonLabel?: string;
-  ctaButtonHref?: string;
+  ctaTitle: string;
+  ctaSubtitle: string;
+  ctaButtonLabel: string;
+  ctaButtonHref: string;
 };
 
 export type FaqSectionProps = {
@@ -57,23 +57,14 @@ function FaqColumn({ items, columnId }: { items: FaqItem[]; columnId: string }) 
 }
 
 export default function FaqSection({ data }: FaqSectionProps) {
-  const {
-    label,
-    title,
-    subtitle,
-    items,
-    bg = 'section-7',
-    className,
-    ctaTitle = 'Still have questions?',
-    ctaSubtitle =
-      "Can't find the answer you're looking for? Please gt<get in touch> with our team.",
-    ctaButtonLabel = 'Get in Touch',
-    ctaButtonHref = '#contact',
-  } = data;
+  const { label, title, subtitle, items } = data;
   const [leftColumn, rightColumn] = splitFaqColumns(items);
 
   return (
-    <PrimarySection bg={bg} className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}>
+    <PrimarySection
+      bg={data.bg}
+      className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', data.className)}
+    >
       <div className="container relative flex flex-col gap-8 sm:gap-12">
         <Image
           src="/images/faq/faq-decorative-purple-question.webp"
@@ -126,18 +117,18 @@ export default function FaqSection({ data }: FaqSectionProps) {
                   className="size-9 rotate-[-20deg] object-contain"
                 />
                 <h3 className="text-gradient text-sm font-medium sm:text-base">
-                  {renderText(ctaTitle)}
+                  {renderText(data.ctaTitle)}
                 </h3>
               </div>
               <p className="text-sm leading-relaxed text-[#071431] sm:text-base">
-                {renderText(ctaSubtitle)}
+                {renderText(data.ctaSubtitle)}
               </p>
             </div>
             <Button
               asChild
               className="bg-brand-gradient h-10 w-full shrink-0 rounded-xl border-0 px-5 text-sm font-semibold text-white shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] hover:opacity-90 sm:h-[50px] sm:w-auto sm:text-base"
             >
-              <Link href={ctaButtonHref}>{ctaButtonLabel}</Link>
+              <Link href={data.ctaButtonHref}>{data.ctaButtonLabel}</Link>
             </Button>
           </div>
         </div>
