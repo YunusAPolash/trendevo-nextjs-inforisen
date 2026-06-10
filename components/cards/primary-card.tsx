@@ -17,10 +17,12 @@ const cardBackgroundClasses = {
 const cardDarkBackgroundClasses = {
   'card-1-dark': "bg-[url('/images/backgrounds/card-bg-1-dark.svg')]",
   'card-2-dark': "bg-[url('/images/backgrounds/card-bg-2-dark.svg')]",
+  'card-3-dark': "bg-[url('/images/backgrounds/card-bg-3-dark.svg')]",
+  'card-4-dark': "bg-[url('/images/backgrounds/card-bg-4-dark.svg')]",
 } as const;
 
 const cardBackgroundLayerClassName =
-  'pointer-events-none absolute inset-0 rounded-[inherit] bg-cover bg-center bg-no-repeat';
+  'pointer-events-none absolute inset-0 -z-10 rounded-[inherit] bg-cover bg-center bg-no-repeat';
 
 export type CardBgKey = keyof typeof cardBackgroundClasses;
 export type CardDarkBgKey = keyof typeof cardDarkBackgroundClasses;
@@ -47,7 +49,7 @@ export default function PrimaryCard({
       className={cn(
         cardBaseClassName,
         'p-6 ring-0',
-        hasBackground && 'relative',
+        hasBackground && 'relative bg-transparent',
         className,
       )}
       style={style}

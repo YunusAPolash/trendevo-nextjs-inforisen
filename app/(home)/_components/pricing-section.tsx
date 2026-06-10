@@ -125,7 +125,7 @@ function PlatformTab({
         <span
           className={cn(
             'hidden whitespace-nowrap text-sm font-semibold leading-normal sm:inline md:text-[18px]',
-            isActive ? 'text-white' : 'text-[#343e56]',
+            isActive ? 'text-white' : 'text-[#343e56] dark:text-[#ebecef]',
           )}
         >
           {label}
@@ -151,7 +151,17 @@ function PricingCard({
   ];
 
   return (
-    <article className="relative flex h-full w-full min-w-0 max-w-[464px] flex-[1_1_100%] flex-col gap-4 overflow-visible rounded-3xl border-[0.7px] border-[#ffc0e4] bg-white pb-8 sm:min-w-[min(100%,280px)] sm:flex-[1_1_320px] sm:gap-6 sm:pb-12 xl:max-w-none xl:flex-1 xl:basis-0">
+    <article className="relative isolate flex h-full w-full min-w-0 max-w-[464px] flex-[1_1_100%] flex-col gap-4 overflow-visible rounded-3xl border-[0.7px] border-[#ffc0e4] bg-white pb-8 dark:border-[#5c3d72] dark:bg-transparent sm:min-w-[min(100%,280px)] sm:flex-[1_1_320px] sm:gap-6 sm:pb-12 xl:max-w-none xl:flex-1 xl:basis-0">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0 hidden overflow-hidden rounded-3xl dark:block"
+      >
+        <img
+          src="/images/backgrounds/card-bg-4-dark.svg"
+          alt=""
+          className="size-full object-cover"
+        />
+      </div>
       <Image
         src="/images/pricing/card-instagram.png"
         alt=""
@@ -161,15 +171,17 @@ function PricingCard({
         className="pointer-events-none absolute right-4 top-[-14px] z-20 h-[72px] w-[64px] sm:right-6 sm:top-[-18px] sm:h-[93px] sm:w-[83px]"
       />
 
-      <div
-        className="relative flex w-full flex-col gap-4 overflow-hidden rounded-t-3xl border-x border-t border-[#ffc0e4] px-4 py-5 sm:gap-6 sm:px-6 sm:py-7"
-        style={{
-          backgroundImage:
-            planType === 'professional'
-              ? CARD_HEADER_GRADIENT_PRO
-              : CARD_HEADER_GRADIENT_BASIC,
-        }}
-      >
+      <div className="relative z-10 flex w-full flex-col gap-4 overflow-hidden rounded-t-3xl border-x border-t border-[#ffc0e4] px-4 py-5 dark:border-[#5c3d72] sm:gap-6 sm:px-6 sm:py-7">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 dark:hidden"
+          style={{
+            backgroundImage:
+              planType === 'professional'
+                ? CARD_HEADER_GRADIENT_PRO
+                : CARD_HEADER_GRADIENT_BASIC,
+          }}
+        />
         {featured ? (
           <Image
             src="/images/pricing/card-halftone.png"
@@ -177,7 +189,7 @@ function PricingCard({
             aria-hidden
             width={703}
             height={703}
-            className="pointer-events-none absolute -left-2.5 -top-[432px] size-[703px] object-cover opacity-[0.08]"
+            className="pointer-events-none absolute -left-2.5 -top-[432px] size-[703px] object-cover opacity-[0.08] dark:hidden"
             unoptimized
           />
         ) : null}
@@ -195,22 +207,25 @@ function PricingCard({
                 aria-hidden
                 width={24}
                 height={24}
-                className="size-5 shrink-0 sm:size-6"
+                className={cn(
+                  'size-5 shrink-0 sm:size-6',
+                  planType === 'basic' && 'dark:invert dark:brightness-0',
+                )}
               />
-              <p className="text-xl font-medium leading-[1.48] text-[#13203b] sm:text-2xl">
+              <p className="text-xl font-medium leading-[1.48] text-[#13203b] dark:text-white sm:text-2xl">
                 {name}
               </p>
             </div>
-            <p className="text-sm font-medium leading-normal text-[#404a60] sm:text-base">
+            <p className="text-sm font-medium leading-normal text-[#404a60] dark:text-[#ebecef] sm:text-base">
               {description}
             </p>
           </div>
 
-          <p className="tracking-[0.48px] text-[#222e48]">
+          <p className="tracking-[0.48px] text-[#222e48] dark:text-white">
             <span className="text-3xl font-semibold leading-[1.35] sm:text-[36px] md:text-[48px]">
               {price}
             </span>
-            <span className="text-lg font-medium leading-[1.48] text-[#5b6477] sm:text-xl md:text-2xl">
+            <span className="text-lg font-medium leading-[1.48] text-[#5b6477] dark:text-[#c1c4cc] sm:text-xl md:text-2xl">
               /month
             </span>
           </p>
@@ -237,7 +252,7 @@ function PricingCard({
         </button>
       </div>
 
-      <ul className="flex flex-col gap-3 px-4 sm:gap-4 sm:px-6">
+      <ul className="relative z-10 flex flex-col gap-3 px-4 sm:gap-4 sm:px-6">
         {planFeatures.map((feature) => (
           <li key={feature.label} className="flex items-center gap-2">
             <Image
@@ -251,7 +266,7 @@ function PricingCard({
                 'size' in feature && feature.size === 24 ? 'size-6' : 'size-5',
               )}
             />
-            <span className="text-sm font-medium leading-normal text-[#0c070f] sm:text-base md:text-lg">
+            <span className="text-sm font-medium leading-normal text-[#0c070f] dark:text-[#ebecef] sm:text-base md:text-lg">
               {feature.label}
             </span>
           </li>
@@ -266,7 +281,11 @@ export default function PricingSection() {
     useState<(typeof platforms)[number]['id']>('instagram');
 
   return (
-    <PrimarySection bg="section-11" className="overflow-x-hidden py-12 sm:py-16 lg:py-20">
+    <PrimarySection
+      bg="section-11"
+      darkBg="section-11-dark"
+      className="overflow-x-hidden py-12 sm:py-16 lg:py-20 dark:bg-transparent"
+    >
       <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
         <div className="flex w-full flex-col items-center gap-6 sm:gap-8 lg:gap-[34px]">
           <SectionHeading
@@ -280,8 +299,9 @@ export default function PricingSection() {
               </>
             }
             subtitle="Simple, Clear, and Affordable for Everyone. We make social media growth easy without high costs. Our prices are clear, fair, and fit every budget."
-            titleClassName="max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] sm:text-[32px] md:text-[40px] lg:text-[48px]"
-            subtitleClassName="max-w-[1090px] text-center text-sm leading-normal text-[#404a60] sm:text-base md:text-lg"
+            badgeClassName="dark:bg-none dark:bg-clip-border dark:text-white"
+            titleClassName="max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[40px] lg:text-[48px]"
+            subtitleClassName="max-w-[1090px] text-center text-sm leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg"
           />
 
           <div className="grid w-full max-w-[360px] grid-cols-2 gap-2 sm:flex sm:max-w-none sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 md:gap-6">

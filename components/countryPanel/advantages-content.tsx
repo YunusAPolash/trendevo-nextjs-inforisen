@@ -105,7 +105,8 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
       },
     ],
     sectionBg: 'section-4',
-    sectionClassName: 'overflow-x-hidden bg-white py-12 sm:py-16 lg:py-[84px]',
+    sectionClassName:
+      'overflow-x-hidden bg-white py-12 sm:py-16 lg:py-[84px] dark:bg-transparent',
   },
   'smm-panel-uk': {
     badge: 'ADVANTAGES',
@@ -184,7 +185,8 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
       },
     ],
     sectionBg: 'section-4',
-    sectionClassName: 'overflow-x-hidden bg-white py-12 sm:py-16 lg:py-[84px]',
+    sectionClassName:
+      'overflow-x-hidden bg-white py-12 sm:py-16 lg:py-[84px] dark:bg-transparent',
   },
   'smm-panel-bangladesh': {
     badge: 'ADVANTAGES',
@@ -263,7 +265,8 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
       },
     ],
     sectionBg: 'section-4',
-    sectionClassName: 'overflow-x-hidden bg-white py-12 sm:py-16 lg:py-[84px]',
+    sectionClassName:
+      'overflow-x-hidden bg-white py-12 sm:py-16 lg:py-[84px] dark:bg-transparent',
   },
 };
 

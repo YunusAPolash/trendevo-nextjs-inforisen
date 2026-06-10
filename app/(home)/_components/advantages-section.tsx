@@ -2,6 +2,7 @@ import Image from 'next/image';
 import type { ReactNode } from 'react';
 
 import PrimaryCard from '@/components/cards/primary-card';
+import { cn } from '@/lib/utils';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import {
@@ -19,10 +20,11 @@ function AdvantageCard({
   return (
     <PrimaryCard
       bg="card-3"
-      className="relative w-full overflow-visible rounded-xl px-3 py-5 ring-0 sm:px-4 sm:py-6"
+      darkBg="card-3-dark"
+      className="relative w-full overflow-hidden rounded-xl px-3 py-5 ring-0 sm:px-4 sm:py-6 dark:rounded-[12px]"
     >
       <div className="relative z-10 flex min-w-0 flex-col gap-3 sm:gap-4">
-        <div className="flex min-w-0 items-start gap-2">
+        <div className="flex min-w-0 items-start gap-2 sm:gap-2">
           <div
             className="h-7 w-1 shrink-0 rounded-[9.5px] sm:h-[34px] sm:w-[6px]"
             style={{
@@ -30,11 +32,11 @@ function AdvantageCard({
                 'linear-gradient(91.07deg, #cb7ef7 4.77%, #ff9bc1 39.51%, #ee4fac 74.24%)',
             }}
           />
-          <h3 className="min-w-0 flex-1 text-base font-semibold leading-snug text-[#13203b] sm:text-lg sm:leading-normal">
+          <h3 className="min-w-0 flex-1 text-base font-semibold leading-snug text-[#13203b] sm:text-lg sm:leading-normal dark:text-white">
             {title}
           </h3>
         </div>
-        <div className="text-xs font-medium leading-normal text-[#343e56] sm:text-sm">
+        <div className="text-xs font-medium leading-normal text-[#343e56] sm:text-sm dark:text-[#ebecef]">
           {description}
         </div>
       </div>
@@ -65,7 +67,11 @@ export default function AdvantagesSection({
   } = getAdvantagesContent(slug);
 
   return (
-    <PrimarySection bg={sectionBg} className={sectionClassName}>
+    <PrimarySection
+      bg={sectionBg}
+      darkBg="section-4-dark"
+      className={sectionClassName}
+    >
       <div className="container flex min-w-0 flex-col items-center gap-10 sm:gap-12 lg:gap-16">
         <SectionHeading
           badge={badge}
@@ -73,8 +79,9 @@ export default function AdvantagesSection({
           subtitle={subtitle}
           underlineSrc={underlineSrc}
           underlineWidth={underlineWidth}
-          titleClassName={titleClassName}
-          subtitleClassName={subtitleClassName}
+          badgeClassName="dark:bg-none dark:bg-clip-border dark:text-white"
+          titleClassName={cn(titleClassName, 'dark:text-[#efedf1]')}
+          subtitleClassName={cn(subtitleClassName, 'dark:text-[#c1c4cc]')}
         />
 
         <div className="flex w-full min-w-0 flex-col items-stretch gap-6 sm:gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6 xl:gap-10">
