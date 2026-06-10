@@ -14,7 +14,21 @@ const cardBackgroundClasses = {
   'card-11': "bg-[url('/images/backgrounds/card-bg-11.svg')]",
 } as const;
 
+const cardDarkBackgroundClasses = {
+  'card-1-dark': "bg-[url('/images/backgrounds/card-bg-1-dark.svg')]",
+  'card-2-dark': "bg-[url('/images/backgrounds/card-bg-2-dark.svg')]",
+  'card-9-dark': "bg-[url('/images/backgrounds/card-bg-9-dark.svg')]",
+  'card-10-dark': "bg-[url('/images/backgrounds/card-bg-10-dark.svg')]",
+  'card-8-dark': "bg-[url('/images/backgrounds/card-bg-8-dark.svg')]",
+} as const;
+
+const cardBackgroundLayerClassName =
+  'pointer-events-none absolute inset-0 rounded-[inherit] bg-cover bg-center bg-no-repeat';
+
+const defaultDarkBackgroundClassName = 'bg-[#190A21]';
+
 export type CardBgKey = keyof typeof cardBackgroundClasses;
+export type CardDarkBgKey = keyof typeof cardDarkBackgroundClasses;
 
 const cardBaseClassName =
   'group/card flex flex-col gap-4 overflow-hidden rounded-xl bg-card py-4 text-sm text-card-foreground ring-1 ring-foreground/10 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl';
@@ -22,20 +36,58 @@ const cardBaseClassName =
 export default function PrimaryCard({
   className,
   bg,
+  darkBg,
   style,
+  children,
   ...props
-}: React.ComponentProps<'article'> & { bg?: CardBgKey }) {
+}: React.ComponentProps<'article'> & {
+  bg?: CardBgKey;
+  darkBg?: CardDarkBgKey;
+}) {
+  const hasBackground = Boolean(bg || darkBg);
+
   return (
     <article
       data-slot="card"
       className={cn(
         cardBaseClassName,
-        'p-6 ring-0 bg-cover bg-center bg-no-repeat',
-        bg && cardBackgroundClasses[bg],
+        'p-6 ring-0',
+        hasBackground && 'relative',
         className,
       )}
       style={style}
       {...props}
-    />
+    >
+      {bg ? (
+        <div
+          aria-hidden
+          className={cn(
+            cardBackgroundLayerClassName,
+            cardBackgroundClasses[bg],
+            'dark:hidden',
+          )}
+        />
+      ) : null}
+      {darkBg ? (
+        <div
+          aria-hidden
+          className={cn(
+            cardBackgroundLayerClassName,
+            'hidden dark:block',
+            cardDarkBackgroundClasses[darkBg],
+          )}
+        />
+      ) : bg ? (
+        <div
+          aria-hidden
+          className={cn(
+            cardBackgroundLayerClassName,
+            'hidden dark:block',
+            defaultDarkBackgroundClassName,
+          )}
+        />
+      ) : null}
+      {children}
+    </article>
   );
 }

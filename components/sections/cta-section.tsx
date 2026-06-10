@@ -7,6 +7,9 @@ import { cn } from '@/lib/utils';
 const CTA_GRADIENT =
   'linear-gradient(219.3deg, rgb(255, 213, 245) 8.67%, rgb(254, 251, 255) 41.83%, rgb(236, 205, 255) 89.38%)';
 
+const CTA_CARD_DARK_BG =
+  "bg-[url('/images/backgrounds/section-bgg-12-dark.svg')]";
+
 type CtaSectionProps = {
   title: ReactNode;
   description: string;
@@ -47,11 +50,19 @@ export default function CtaSection({
           <div className="relative overflow-hidden rounded-[20px] sm:rounded-[24px] lg:min-h-[486px]">
             <div
               aria-hidden
-              className="absolute inset-0"
+              className="absolute inset-0 dark:hidden"
               style={{ backgroundImage: CTA_GRADIENT }}
             />
 
-            <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
+            <div
+              aria-hidden
+              className={cn(
+                'absolute inset-0 hidden bg-cover bg-center bg-no-repeat dark:block',
+                CTA_CARD_DARK_BG,
+              )}
+            />
+
+            <div className="pointer-events-none absolute inset-0 opacity-[0.06] dark:hidden">
               <Image
                 src="/images/cta/cta-hex-pattern-1.png"
                 alt=""
@@ -77,7 +88,7 @@ export default function CtaSection({
 
               <div className="flex flex-col gap-6 px-4 py-8 sm:gap-[34px] sm:px-6 sm:py-10 lg:col-start-2 lg:justify-center lg:px-[66px] lg:py-[72px]">
                 <div className="relative flex flex-col gap-5 sm:gap-8">
-                  <div className="pointer-events-none absolute -left-8 top-[-75px] hidden h-[485px] w-[min(934px,120%)] opacity-[0.06] lg:block">
+                  <div className="pointer-events-none absolute -left-8 top-[-75px] hidden h-[485px] w-[min(934px,120%)] opacity-[0.06] lg:block dark:lg:hidden">
                     <Image
                       src="/images/cta/cta-world-map.png"
                       alt=""
@@ -89,16 +100,16 @@ export default function CtaSection({
                     />
                   </div>
 
-                  <h2 className="relative z-10 text-2xl font-semibold leading-[1.35] tracking-[0.48px] text-[#313131] sm:text-[32px] md:text-[40px] lg:text-[48px]">
+                  <h2 className="relative z-10 text-2xl font-semibold leading-[1.35] tracking-[0.48px] text-[#313131] sm:text-[32px] md:text-[40px] lg:text-[48px] dark:text-white">
                     {title}
                   </h2>
-                  <p className="relative z-10 text-sm font-normal leading-normal text-[#13203b] sm:text-base">
+                  <p className="relative z-10 text-sm font-normal leading-normal text-[#13203b] sm:text-base dark:text-white">
                     {description}
                   </p>
                 </div>
 
                 {buttonsOutlet ? (
-                  <div className="relative z-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
+                  <div className="relative z-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center [&>button:nth-child(2)]:dark:border-[#CB7EF7] [&>button:nth-child(2)]:dark:bg-[#FFFFFF1A] [&>button:nth-child(2)]:dark:bg-none [&>button:nth-child(2)]:dark:bg-clip-border [&>button:nth-child(2)]:dark:text-white [&>button:nth-child(2)]:dark:hover:bg-[rgba(255,255,255,0.15)]">
                     {buttonsOutlet}
                   </div>
                 ) : null}

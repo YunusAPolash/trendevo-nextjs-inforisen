@@ -8,7 +8,10 @@ import {
   FaqAccordionItem,
   FaqAccordionTrigger,
 } from '@/components/ui/faq-accordion';
-import PrimarySection, { type SectionBgKey } from '@/components/sections/primary-section';
+import PrimarySection, {
+  type SectionBgKey,
+  type SectionDarkBgKey,
+} from '@/components/sections/primary-section';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -23,6 +26,7 @@ export type FaqSectionProps = {
   subtitle: string;
   items: FaqItem[];
   bg?: SectionBgKey;
+  darkBg?: SectionDarkBgKey;
   className?: string;
   ctaTitle?: string;
   ctaSubtitle?: React.ReactNode;
@@ -37,7 +41,7 @@ function splitFaqColumns(items: FaqItem[]) {
 
 function FaqColumn({ items, columnId }: { items: FaqItem[]; columnId: string }) {
   return (
-    <div className="rounded-xl border border-[#f2e9f8] bg-[rgba(143,42,205,0.1)] p-3 sm:p-4">
+    <div className="rounded-xl border border-[#f2e9f8] bg-[rgba(143,42,205,0.1)] p-3 sm:p-4 dark:border-[rgba(215,148,255,0)] dark:bg-[rgba(112,23,165,0.11)]">
       <FaqAccordion type="single" collapsible>
         {items.map((item, index) => (
           <FaqAccordionItem key={item.question} value={`${columnId}-${index}`}>
@@ -56,6 +60,7 @@ export default function FaqSection({
   subtitle,
   items,
   bg = 'section-7',
+  darkBg = 'section-4-dark',
   className,
   ctaTitle = 'Still have questions?',
   ctaSubtitle = (
@@ -70,7 +75,11 @@ export default function FaqSection({
   const [leftColumn, rightColumn] = splitFaqColumns(items);
 
   return (
-    <PrimarySection bg={bg} className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}>
+    <PrimarySection
+      bg={bg}
+      darkBg={darkBg}
+      className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
+    >
       <div className="container relative flex flex-col gap-8 sm:gap-12">
         <Image
           src="/images/faq/faq-decorative-purple-question.webp"
@@ -103,11 +112,13 @@ export default function FaqSection({
                 className="h-2 w-11"
               />
             </div>
-            <h2 className="text-2xl font-semibold leading-[1.35] tracking-wide text-[#071431] sm:text-4xl md:text-5xl">
+            <h2 className="text-2xl font-semibold leading-[1.35] tracking-wide text-[#071431] sm:text-4xl md:text-5xl dark:text-[#efedf1]">
               {title}
             </h2>
           </div>
-          <p className="max-w-3xl text-sm leading-relaxed text-[#404a60] sm:text-base md:text-lg">{subtitle}</p>
+          <p className="max-w-3xl text-sm leading-relaxed text-[#404a60] sm:text-base md:text-lg dark:text-[#dfe0e4]">
+            {subtitle}
+          </p>
         </div>
 
         <div className="relative z-10 grid items-start gap-4 sm:gap-6 lg:grid-cols-2">
@@ -116,11 +127,11 @@ export default function FaqSection({
         </div>
 
         <div
-          className="relative z-10 mx-auto w-full max-w-4xl rounded-[14px] border border-[#d181ff]/60 px-4 py-4 sm:px-7 sm:py-[22px]"
-          style={{
-            backgroundImage:
-              'linear-gradient(119.56deg, rgb(255, 255, 255) 3.42%, rgb(255, 243, 253) 55.68%, rgb(255, 255, 255) 107.93%)',
-          }}
+          className={cn(
+            'relative z-10 mx-auto w-full max-w-4xl rounded-[14px] border border-[#d181ff]/60 px-4 py-4 sm:px-7 sm:py-[22px]',
+            'bg-[linear-gradient(119.56deg,rgb(255,255,255)_3.42%,rgb(255,243,253)_55.68%,rgb(255,255,255)_107.93%)]',
+            'dark:border-[#8a22c8]/60 dark:bg-[#260d35] dark:bg-none',
+          )}
         >
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div className="space-y-1.5">
@@ -134,7 +145,9 @@ export default function FaqSection({
                 />
                 <h3 className="text-gradient text-sm font-medium sm:text-base">{ctaTitle}</h3>
               </div>
-              <p className="text-sm leading-relaxed text-[#071431] sm:text-base">{ctaSubtitle}</p>
+              <p className="text-sm leading-relaxed text-[#071431] sm:text-base dark:text-white">
+                {ctaSubtitle}
+              </p>
             </div>
             <Button
               asChild

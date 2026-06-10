@@ -24,7 +24,7 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     title: (
       <>
         Trend Evo –{' '}
-        <span className="text-gradient">Trusted SMM Panel</span> for Growing
+        <span className="text-gradient">Trusted SMM Panel </span> for Growing
         Businesses &amp; Creators
       </>
     ),
@@ -41,7 +41,7 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/country/uk/hero-illustration.png',
+      src: '/images/country/uk/trenevo-trusted-smm-panel.png',
       alt: 'TrendEvo user holding the UK flag with a rocket representing social media growth',
       width: 952,
       height: 1062,

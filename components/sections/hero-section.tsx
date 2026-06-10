@@ -115,7 +115,7 @@ const illustrationWrapClassByVariant: Record<HeroLayoutVariant, string> = {
     'mx-auto w-full min-w-0 max-w-[669px] lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end',
   'wide-responsive':
     'relative mx-auto w-full min-w-0 max-w-[581px] overflow-visible lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end',
-  wide: 'relative mx-auto w-full min-w-0 lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end',
+  wide: 'relative mx-auto w-full min-w-0 overflow-visible lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end',
   content: 'relative mx-auto w-full',
 };
 

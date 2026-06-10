@@ -49,14 +49,15 @@ export default function StatsSection() {
   return (
     <PrimarySection
       id="stats"
-      className="relative z-10 bg-[#f8f8f8] px-0 py-12 sm:py-16 lg:py-20"
+      className="relative z-10 bg-[#f8f8f8] px-0 py-12 sm:py-16 lg:py-20 dark:bg-[#1f0b2b]"
     >
       <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
         {stats.map((stat) => (
           <PrimaryCard
             key={stat.label}
             bg="card-1"
-            className="w-full items-start overflow-hidden rounded-[18px] border border-[#ff7fc1]/50 border-t-[0.5px] border-r-[0.5px] border-b-[0.5px] border-l-[3px] border-l-[#ff7fc1] bg-white p-4 ring-0 sm:p-6"
+            darkBg="card-1-dark"
+            className="w-full items-start overflow-hidden rounded-[18px] border border-[#ff7fc1]/50 border-t-[0.5px] border-r-[0.5px] border-b-[0.5px] border-l-[3px] border-l-[#ff7fc1] p-4 ring-0 sm:p-6 dark:border-[#9214de] dark:border-t-[0.5px] dark:border-r-[0.5px] dark:border-b-[0.5px] dark:border-l-[3px]"
           >
             <div
               className="relative h-[72px] w-[var(--stat-icon-w)] shrink-0 sm:h-[86px] sm:w-[var(--stat-icon-w-sm)] md:h-[100px] md:w-[var(--stat-icon-w-md)]"
@@ -76,7 +77,7 @@ export default function StatsSection() {
               />
             </div>
             <div className="flex w-full flex-col gap-2 sm:gap-3">
-              <p className="text-2xl font-semibold leading-none text-[#232323] sm:text-[28px] md:text-[32px]">
+              <p className="text-2xl font-semibold leading-none text-[#232323] sm:text-[28px] md:text-[32px] dark:text-white">
                 {stat.value}
               </p>
               <p className="text-gradient text-base font-semibold leading-normal tracking-[0.2px] sm:text-lg md:text-xl">
