@@ -5,6 +5,7 @@ import { ChevronDown } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
+import SectionHeading from '@/components/ui/section-heading';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -213,36 +214,28 @@ export default function OrderFormSection() {
           className="relative w-full max-w-[796px] overflow-hidden rounded-[24px] border border-[rgba(203,126,247,0.45)] p-6 shadow-none ring-0 ring-offset-0 sm:p-10 lg:p-[50px]"
         >
           <div className="relative z-10 flex flex-col gap-[30px]">
-            <div className="flex w-full flex-col items-center gap-4 text-center">
-              <div className="flex flex-col items-center gap-1">
-                <span className="text-gradient text-[22px] font-semibold leading-[1.45]">
-                  Facebook Services
+            <SectionHeading
+              badge="Facebook Services"
+              underlineSrc="/images/facebook-page-followers/facebook-page-followers-order-form-underline.svg"
+              underlineWidth={203}
+              title={
+                <span className="flex flex-wrap items-center justify-center gap-[8px]">
+                  <span className="text-[32px] font-semibold leading-none text-[#1a1a1a]">
+                    Order Facebook
+                  </span>
+                  <span
+                    className="flex size-[54px] shrink-0 items-center justify-center rounded-[27px] border border-[#d181ff] bg-[linear-gradient(93.46deg,rgba(209,129,255,0.1)_2.85%,rgba(255,99,190,0.1)_90.53%)] pb-3 pl-[13px] pr-3 pt-[13px]"
+                    aria-hidden
+                  >
+                    <FacebookIcon variant="title" alt="Facebook" />
+                  </span>
+                  <span className="text-gradient text-[32px] font-semibold leading-none">
+                    Followers
+                  </span>
                 </span>
-                <Image
-                  src="/images/facebook-page-followers/facebook-page-followers-order-form-underline.svg"
-                  alt=""
-                  width={203}
-                  height={8}
-                  unoptimized
-                  className="h-2 w-[203px]"
-                />
-              </div>
-
-              <div className="flex flex-wrap items-center justify-center gap-[8px]">
-                <h2 className="text-[32px] font-semibold leading-none text-[#1a1a1a]">
-                  Order Facebook
-                </h2>
-                <span
-                  className="flex size-[54px] shrink-0 items-center justify-center rounded-[27px] border border-[#d181ff] bg-[linear-gradient(93.46deg,rgba(209,129,255,0.1)_2.85%,rgba(255,99,190,0.1)_90.53%)] pb-3 pl-[13px] pr-3 pt-[13px]"
-                  aria-hidden
-                >
-                  <FacebookIcon variant="title" alt="Facebook" />
-                </span>
-                <h2 className="text-gradient text-[32px] font-semibold leading-none">
-                  Followers
-                </h2>
-              </div>
-            </div>
+              }
+              titleClassName="max-w-none text-[32px] leading-none"
+            />
 
             <div className="relative z-10 flex w-full min-w-0 flex-col gap-6 overflow-visible">
               <div className="grid gap-[15px] sm:grid-cols-2">

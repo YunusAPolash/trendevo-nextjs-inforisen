@@ -2,6 +2,7 @@
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import PrimarySection from '@/components/sections/primary-section';
+import SectionHeading from '@/components/ui/section-heading';
 import BlogPostCard, { type BlogPost } from '@/app/blog/_components/blog-post-card';
 
 const relatedPosts: BlogPost[] = [
@@ -45,9 +46,13 @@ export default function RelatedBlogsSection() {
     <PrimarySection bg="section-5" className="py-16 lg:py-20">
       <div className="container">
         <div className="mb-7 flex items-center justify-between gap-4">
-          <h2 className="text-[28px] font-semibold text-[#313131]">
-            Related Blogs
-          </h2>
+          <SectionHeading
+            align="left"
+            badge="BLOG"
+            title="Related Blogs"
+            titleClassName="text-[28px] text-[#313131]"
+            className="gap-3"
+          />
           <div className="flex items-center gap-3">
             <button
               type="button"

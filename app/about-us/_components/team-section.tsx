@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronsRight } from 'lucide-react';
 import PrimarySection from '@/components/sections/primary-section';
+import SectionHeading from '@/components/ui/section-heading';
 import { Button } from '@/components/ui/button';
 
 const checklistItems = [
@@ -51,10 +52,17 @@ export default function TeamSection() {
           <div className="flex w-full max-w-3xl shrink-0 flex-col gap-9">
             <div className="flex flex-col gap-7">
               <div className="flex flex-col gap-8">
-                <h2 className="text-4xl font-semibold leading-snug tracking-wide text-[#13203b] lg:text-5xl">
-                  The Team Behind T
-                  <span className="text-gradient">RendEvo</span>
-                </h2>
+                <SectionHeading
+                  align="left"
+                  badge="OUR TEAM"
+                  title={
+                    <>
+                      The Team Behind T
+                      <span className="text-gradient">RendEvo</span>
+                    </>
+                  }
+                  titleClassName="text-4xl leading-snug tracking-wide text-[#13203b] lg:text-5xl"
+                />
 
                 <p className="text-xl font-medium leading-normal text-[#404a60]">
                   <span className="text-gradient font-semibold">RendEvo</span>

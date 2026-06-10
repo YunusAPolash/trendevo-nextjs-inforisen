@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import PrimarySection from '@/components/sections/primary-section';
+import SectionHeading from '@/components/ui/section-heading';
 import ContactDetailCard from './contact-detail-card';
 
 export default function ContactDetailsSection() {
@@ -38,17 +39,13 @@ export default function ContactDetailsSection() {
 
         <div className="container relative">
           <div className="relative flex flex-col items-center gap-10 sm:gap-12 lg:gap-16">
-            <div className="max-w-[1083px] space-y-4 px-1 text-center sm:space-y-5">
-            <h2 className="text-[28px] font-semibold leading-[1.35] tracking-tight text-[#13203b] sm:text-4xl lg:text-[48px] lg:tracking-wide">
-              Contact Details
-            </h2>
-            <p className="text-sm font-medium leading-relaxed text-[#404a60] sm:text-base lg:text-lg">
-              Get in touch with us. We’re here to answer your questions and provide
-              guidance whenever you need it. Fast, friendly, and reliable support is
-              always just a message away, ensuring you get the help you need without
-              delay.
-            </p>
-            </div>
+            <SectionHeading
+              badge="CONTACT US"
+              title="Contact Details"
+              subtitle="Get in touch with us. We’re here to answer your questions and provide guidance whenever you need it. Fast, friendly, and reliable support is always just a message away, ensuring you get the help you need without delay."
+              titleClassName="text-[28px] tracking-tight text-[#13203b] sm:text-4xl lg:text-[48px] lg:tracking-wide"
+              subtitleClassName="max-w-[1083px] px-1 text-sm font-medium sm:text-base lg:text-lg"
+            />
 
             <div className="grid w-full max-w-[1440px] grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2 xl:grid-cols-3 [&>*:last-child]:lg:col-span-2 [&>*:last-child]:lg:mx-auto [&>*:last-child]:lg:max-w-[463px] [&>*:last-child]:xl:col-span-1 [&>*:last-child]:xl:mx-0 [&>*:last-child]:xl:max-w-none">
             <ContactDetailCard

@@ -9,6 +9,7 @@ import {
   FaqAccordionTrigger,
 } from '@/components/ui/faq-accordion';
 import PrimarySection, { type SectionBgKey } from '@/components/sections/primary-section';
+import SectionHeading from '@/components/ui/section-heading';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -89,26 +90,16 @@ export default function FaqSection({
           className="pointer-events-none absolute -right-12 top-8 hidden w-40 rotate-[1.5deg] opacity-90 lg:block xl:w-52"
         />
 
-        <div className="relative z-10 mx-auto flex max-w-[996px] flex-col items-center gap-[18px] text-center">
-          <div className="flex flex-col items-center gap-4">
-            <div className="flex flex-col items-center gap-1">
-              <span className="text-gradient text-lg font-semibold leading-snug sm:text-[22px]">
-                {label}
-              </span>
-              <Image
-                src="/images/icons/faq-badge-underline.svg"
-                alt=""
-                width={44}
-                height={8}
-                className="h-2 w-11"
-              />
-            </div>
-            <h2 className="text-2xl font-semibold leading-[1.35] tracking-wide text-[#071431] sm:text-4xl md:text-5xl">
-              {title}
-            </h2>
-          </div>
-          <p className="max-w-3xl text-sm leading-relaxed text-[#404a60] sm:text-base md:text-lg">{subtitle}</p>
-        </div>
+        <SectionHeading
+          badge={label}
+          title={title}
+          subtitle={subtitle}
+          underlineSrc="/images/icons/faq-badge-underline.svg"
+          underlineWidth={44}
+          titleClassName="max-w-[996px] text-2xl tracking-wide sm:text-4xl md:text-5xl"
+          subtitleClassName="max-w-3xl text-sm sm:text-base md:text-lg"
+          className="relative z-10 mx-auto"
+        />
 
         <div className="relative z-10 grid items-start gap-4 sm:gap-6 lg:grid-cols-2">
           <FaqColumn items={leftColumn} columnId="left" />

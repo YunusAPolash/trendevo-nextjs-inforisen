@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ChevronsRight } from 'lucide-react';
 import PrimarySection from '@/components/sections/primary-section';
+import SectionHeading from '@/components/ui/section-heading';
 import { Button } from '@/components/ui/button';
 
 const features = [
@@ -75,15 +76,18 @@ export default function MissionVisionSection() {
 
           <div className="flex w-full max-w-3xl shrink-0 flex-col gap-10">
             <div className="flex flex-col gap-7">
-              <div className="flex max-w-2xl flex-col gap-8">
-                <h2 className="text-4xl font-semibold leading-snug tracking-wide text-[#13203b] lg:text-5xl">
-                  Our{' '}
-                  <span className="text-gradient">Mission & Vision</span>
-                </h2>
-                <p className="text-xl font-medium leading-normal text-[#404a60]">
-                  {platformDescription}
-                </p>
-              </div>
+              <SectionHeading
+                align="left"
+                badge="ABOUT US"
+                title={
+                  <>
+                    Our <span className="text-gradient">Mission & Vision</span>
+                  </>
+                }
+                subtitle={platformDescription}
+                titleClassName="max-w-2xl text-4xl leading-snug tracking-wide text-[#13203b] lg:text-5xl"
+                subtitleClassName="max-w-2xl text-xl font-medium"
+              />
 
               <div className="flex flex-col gap-10">
                 <FeatureList idPrefix="mission" />
