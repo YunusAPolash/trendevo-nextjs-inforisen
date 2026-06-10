@@ -124,7 +124,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/advantages/advantages-character.png',
+      src: '/images/advantages/advantage-of-uk.png',
       alt: 'UK SMM panel advantages illustration with globe',
     },
     leftAdvantages: [

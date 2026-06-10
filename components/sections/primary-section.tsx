@@ -16,6 +16,8 @@ const sectionBackgroundClasses = {
   'section-11': "bg-[url('/images/backgrounds/section-bg-11.svg')]",
   'section-13': "bg-[url('/images/backgrounds/section-bg-13.svg')]",
   'section-14': "bg-[url('/images/backgrounds/section-bg-14.svg')]",
+  'section-16': "bg-[url('/images/backgrounds/section-bg-16.png')]",
+  'section-17': "bg-[url('/images/backgrounds/section-bg-17.svg')]",
 } as const;
 
 export type SectionBgKey = keyof typeof sectionBackgroundClasses;

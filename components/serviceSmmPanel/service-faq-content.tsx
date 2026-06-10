@@ -1,4 +1,23 @@
+import type { ReactNode } from 'react';
+
 import type { FaqItem } from '@/components/sections/faq-section';
+
+export type ServiceFaqHeading = {
+  label: string;
+  title: ReactNode;
+  subtitle: string;
+};
+
+export type ServiceFaqContent = {
+  items: FaqItem[];
+  heading: ServiceFaqHeading;
+};
+
+export type ServiceFaqSlug =
+  | 'facebook-smm-panel'
+  | 'instagram-smm-panel'
+  | 'telegram-smm-panel'
+  | 'smm-panel-uk';
 
 export const facebookFaqItems: FaqItem[] = [
   {
@@ -191,3 +210,90 @@ export const telegramFaqHeading = {
   subtitle:
     'Find quick answers about Telegram SMM services, delivery, payments, and support on TrendEvo.',
 };
+
+export const smmPanelUkFaqItems: FaqItem[] = [
+  {
+    question: 'What is an SMM panel for the UK?',
+    answer:
+      'An SMM panel for the UK is a platform where businesses, creators, and agencies can order social media marketing services such as followers, likes, views, and engagement. TrendEvo provides a trusted UK-focused panel with fast delivery, affordable pricing, and reliable support.',
+  },
+  {
+    question: 'How fast will my SMM order be delivered in the UK?',
+    answer:
+      'Most orders on TrendEvo start processing within minutes after payment. Delivery speed depends on the service and quantity, but our system is built for quick, reliable fulfillment so UK clients can grow their social presence without delays.',
+  },
+  {
+    question: 'Are followers, likes, and views real?',
+    answer:
+      'TrendEvo focuses on authentic engagement that helps your profiles grow naturally. Our services are designed to improve visibility, credibility, and reach across platforms like Instagram, Facebook, TikTok, and YouTube.',
+  },
+  {
+    question: 'Is TrendEvo safe to use for UK businesses and creators?',
+    answer:
+      'Yes. We use secure order processing and never ask for your social media passwords. Your account details stay protected, and our team monitors orders to ensure safe, compliant delivery for UK users.',
+  },
+  {
+    question: 'What SMM services does TrendEvo offer for UK clients?',
+    answer:
+      'TrendEvo offers a wide range of services for the UK market, including Instagram followers and likes, Facebook page engagement, TikTok views, YouTube subscribers, and more — all available from one easy-to-use dashboard.',
+  },
+  {
+    question: 'What payment methods can I use in the UK?',
+    answer:
+      'TrendEvo supports multiple secure payment options for UK users, including cards, PayPal, and cryptocurrencies. All transactions are encrypted and processed safely so you can top up and order with confidence.',
+  },
+  {
+    question: 'What happens if my order drops?',
+    answer:
+      'If an order drops within the guarantee period, contact our support team. We review eligible cases and provide refill or resolution according to the service terms.',
+  },
+  {
+    question: 'Do you offer 24/7 support for UK SMM services?',
+    answer:
+      'Yes. Our support team is available around the clock to help UK clients with orders, delivery updates, payments, and account guidance whenever you need assistance.',
+  },
+  {
+    question: 'Can I resell SMM services in the UK?',
+    answer:
+      'Yes. TrendEvo supports resellers and agencies with ready-made services, flexible packages, and scalable ordering so you can grow your own SMM business under your brand.',
+  },
+  {
+    question: 'How do I place an SMM order on TrendEvo?',
+    answer:
+      'Create a free account, add funds, choose your service, enter your profile or post link, select a package, and complete payment. You can track order status in real time from your dashboard.',
+  },
+];
+
+export const smmPanelUkFaqHeading: ServiceFaqHeading = {
+  label: 'FAQ',
+  title: (
+    <>
+      Frequently Asked <span className="text-gradient">Questions</span> for UK
+    </>
+  ),
+  subtitle:
+    'Find quick answers about TrendEvo SMM panel services in the UK — delivery, payments, safety, and support.',
+};
+
+const serviceFaqContent: Record<ServiceFaqSlug, ServiceFaqContent> = {
+  'facebook-smm-panel': {
+    items: facebookFaqItems,
+    heading: facebookFaqHeading,
+  },
+  'instagram-smm-panel': {
+    items: instagramFaqItems,
+    heading: instagramFaqHeading,
+  },
+  'telegram-smm-panel': {
+    items: telegramFaqItems,
+    heading: telegramFaqHeading,
+  },
+  'smm-panel-uk': {
+    items: smmPanelUkFaqItems,
+    heading: smmPanelUkFaqHeading,
+  },
+};
+
+export function getServiceFaqContent(slug: ServiceFaqSlug): ServiceFaqContent {
+  return serviceFaqContent[slug];
+}

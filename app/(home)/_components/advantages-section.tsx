@@ -77,8 +77,8 @@ export default function AdvantagesSection({
           subtitleClassName={subtitleClassName}
         />
 
-        <div className="flex w-full min-w-0 flex-col items-stretch gap-6 sm:gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6 xl:gap-10">
-          <div className="flex w-full min-w-0 flex-col gap-6 lg:max-w-[454px] lg:gap-16">
+        <div className="flex w-full min-w-0 flex-col items-stretch gap-6 sm:gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-6 xl:gap-10">
+          <div className="flex w-full min-w-0 flex-col justify-end gap-6 lg:max-w-[454px] lg:gap-16">
             {leftAdvantages.map((item, index) => (
               <AdvantageCard
                 key={`left-${index}`}
@@ -100,7 +100,7 @@ export default function AdvantagesSection({
             />
           </div>
 
-          <div className="flex w-full min-w-0 flex-col gap-6 lg:max-w-[454px] lg:gap-16">
+          <div className="flex w-full min-w-0 flex-col justify-end gap-6 lg:max-w-[454px] lg:gap-16">
             {rightAdvantages.map((item, index) => (
               <AdvantageCard
                 key={`right-${index}`}

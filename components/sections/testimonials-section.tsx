@@ -6,7 +6,9 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import PrimarySection from '@/components/sections/primary-section';
+import PrimarySection, {
+  type SectionBgKey,
+} from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import YoutubeVideoModal from '@/components/ui/youtube-video-modal';
 import { cn } from '@/lib/utils';
@@ -57,7 +59,8 @@ export type TestimonialAssets = {
 };
 
 export type TestimonialsSectionProps = {
-  sectionBackground: string;
+  sectionBackground?: string;
+  sectionBg?: SectionBgKey;
   badge: string;
   underlineSrc: string;
   underlineWidth: number;
@@ -73,6 +76,8 @@ export type TestimonialsSectionProps = {
   featuredReview: TestimonialFeaturedReview;
   videoReviews: TestimonialVideoReview[];
   defaultTab?: 'customer' | 'video';
+  showTabSwitcher?: boolean;
+  showSectionDecorations?: boolean;
   className?: string;
 };
 
@@ -687,6 +692,7 @@ function SectionDecorations({ playOrbSrc }: { playOrbSrc: string }) {
 
 export default function TestimonialsSection({
   sectionBackground,
+  sectionBg,
   badge,
   underlineSrc,
   underlineWidth,
@@ -702,6 +708,8 @@ export default function TestimonialsSection({
   featuredReview,
   videoReviews,
   defaultTab = 'video',
+  showTabSwitcher = true,
+  showSectionDecorations = true,
   className,
 }: TestimonialsSectionProps) {
   const [activeTab, setActiveTab] = useState<ReviewTab>(defaultTab);
@@ -712,10 +720,13 @@ export default function TestimonialsSection({
 
   return (
     <PrimarySection
+      bg={sectionBg}
       className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
-      style={{ backgroundImage: sectionBackground }}
+      style={sectionBg ? undefined : { backgroundImage: sectionBackground }}
     >
-      <SectionDecorations playOrbSrc={assets.playOrbSrc} />
+      {showSectionDecorations ? (
+        <SectionDecorations playOrbSrc={assets.playOrbSrc} />
+      ) : null}
 
       <div className="container relative z-10 flex flex-col items-center gap-8 sm:gap-12">
         <SectionHeading
@@ -728,15 +739,17 @@ export default function TestimonialsSection({
           subtitleClassName={subtitleClassName}
         />
 
-        <ReviewTabSwitcher
-          activeTab={activeTab}
-          customerTabLabel={customerTabLabel}
-          videoTabLabel={videoTabLabel}
-          assets={assets}
-          onChange={setActiveTab}
-        />
+        {showTabSwitcher ? (
+          <ReviewTabSwitcher
+            activeTab={activeTab}
+            customerTabLabel={customerTabLabel}
+            videoTabLabel={videoTabLabel}
+            assets={assets}
+            onChange={setActiveTab}
+          />
+        ) : null}
 
-        {activeTab === 'customer' ? (
+        {activeTab === 'customer' || !showTabSwitcher ? (
           <CustomerReviewsGrid
             leftTextReviews={leftTextReviews}
             rightTextReviews={rightTextReviews}
