@@ -80,7 +80,7 @@ export default function StatsSection() {
               <p className="text-2xl font-semibold leading-none text-[#232323] sm:text-[28px] md:text-[32px] dark:text-white">
                 {stat.value}
               </p>
-              <p className="text-gradient text-base font-semibold leading-normal tracking-[0.2px] sm:text-lg md:text-xl">
+              <p className="text-gradient text-base font-semibold leading-normal tracking-[0.2px] sm:text-lg md:text-xl dark:bg-none dark:bg-clip-border dark:text-[#ebecef]">
                 {stat.label}
               </p>
             </div>

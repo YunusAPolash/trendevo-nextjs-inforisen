@@ -20,10 +20,12 @@ const cardDarkBackgroundClasses = {
   'card-9-dark': "bg-[url('/images/backgrounds/card-bg-9-dark.svg')]",
   'card-10-dark': "bg-[url('/images/backgrounds/card-bg-10-dark.svg')]",
   'card-8-dark': "bg-[url('/images/backgrounds/card-bg-8-dark.svg')]",
+  'card-3-dark': "bg-[url('/images/backgrounds/card-bg-3-dark.svg')]",
+  'card-4-dark': "bg-[url('/images/backgrounds/card-bg-4-dark.svg')]",
 } as const;
 
 const cardBackgroundLayerClassName =
-  'pointer-events-none absolute inset-0 rounded-[inherit] bg-cover bg-center bg-no-repeat';
+  'pointer-events-none absolute inset-0 -z-10 rounded-[inherit] bg-cover bg-center bg-no-repeat';
 
 const defaultDarkBackgroundClassName = 'bg-[#190A21]';
 
@@ -52,7 +54,7 @@ export default function PrimaryCard({
       className={cn(
         cardBaseClassName,
         'p-6 ring-0',
-        hasBackground && 'relative',
+        hasBackground && 'relative bg-transparent',
         className,
       )}
       style={style}

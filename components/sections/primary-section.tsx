@@ -34,6 +34,8 @@ const sectionDarkBackgroundClasses = {
   'section-12-dark': "bg-[url('/images/backgrounds/section-bgg-12-dark.svg')]",
   'section-footer-dark':
     "bg-[url('/images/backgrounds/section-bg-footer.png')]",
+  'section-11-dark':
+    "bg-[url('/images/backgrounds/section-bg-11-dark.svg')]",
 } as const;
 
 const sectionBackgroundLayerClassName =
