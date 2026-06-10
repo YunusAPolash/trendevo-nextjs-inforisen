@@ -11,11 +11,21 @@ import PaymentMethodsSection from '@/app/(home)/_components/payment-methods-sect
 import PlatformMarqueeSection from '@/app/(home)/_components/platform-marquee-section';
 import PricingSection from '@/app/(home)/_components/pricing-section';
 import StatsSection from '@/app/(home)/_components/stats-section';
-import TestimonialsSection from '@/app/(home)/_components/testimonials-section';
+import {
+  homeTestimonialsAssets,
+  homeTestimonialsFeaturedReview,
+  homeTestimonialsHeading,
+  homeTestimonialsLeftTextReviews,
+  homeTestimonialsRightTextReviews,
+  homeTestimonialsSectionBackground,
+  homeTestimonialsTabLabels,
+  homeTestimonialsVideoReviews,
+} from '@/app/(home)/_components/home-testimonials-content';
+import TestimonialsSection from '@/components/sections/testimonials-section';
 import WhyChooseUsSection from '@/app/(home)/_components/why-choose-us-section';
 import WorkingProcessSection from '@/app/(home)/_components/working-process-section';
 import FaqSection from '@/components/sections/faq-section';
-import OurService from '@/components/features/home/OurService';
+import OurService from '@/app/(home)/_components/our-service';
 
 export default function Home() {
   return (
@@ -30,7 +40,24 @@ export default function Home() {
       <PlatformMarqueeSection />
       <AdvantagesSection />
       <PricingSection />
-      <TestimonialsSection />
+      <TestimonialsSection
+        sectionBackground={homeTestimonialsSectionBackground}
+        badge={homeTestimonialsHeading.badge}
+        underlineSrc={homeTestimonialsHeading.underlineSrc}
+        underlineWidth={homeTestimonialsHeading.underlineWidth}
+        title={homeTestimonialsHeading.title}
+        subtitle={homeTestimonialsHeading.subtitle}
+        titleClassName={homeTestimonialsHeading.titleClassName}
+        subtitleClassName={homeTestimonialsHeading.subtitleClassName}
+        customerTabLabel={homeTestimonialsTabLabels.customer}
+        videoTabLabel={homeTestimonialsTabLabels.video}
+        assets={homeTestimonialsAssets}
+        leftTextReviews={homeTestimonialsLeftTextReviews}
+        rightTextReviews={homeTestimonialsRightTextReviews}
+        featuredReview={homeTestimonialsFeaturedReview}
+        videoReviews={homeTestimonialsVideoReviews}
+        defaultTab="video"
+      />
       <div id="faq">
         <FaqSection
           label={homeFaqHeading.label}

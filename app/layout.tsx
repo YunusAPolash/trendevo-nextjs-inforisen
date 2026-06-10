@@ -6,7 +6,6 @@ import { ThemeProvider } from '@/components/theme-provider';
 import SiteHeader from '@/components/layout/site-header';
 import FooterSection from './(home)/_components/footer-section';
 
-
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 const geistSans = Geist({

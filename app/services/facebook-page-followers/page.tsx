@@ -1,8 +1,32 @@
 import type { Metadata } from 'next';
+import CtaSection from '@/components/sections/cta-section';
+import FaqSection from '@/components/sections/faq-section';
 import HeroSection from '@/components/sections/hero-section';
+import ServiceLeading from '@/components/sections/service-leading';
+import ServiceWorkingProcessSection from '@/components/sections/service-working-process-section';
+import TestimonialsSection from '@/components/sections/testimonials-section';
 import { Button } from '@/components/ui/button';
 import { facebookPageFollowersTrustBadge } from './_components/hero-content';
 import OrderFormSection from './_components/order-form-section';
+import { facebookPageFollowersCta } from './_components/cta-content';
+import {
+  facebookPageFollowersFaqHeading,
+  facebookPageFollowersFaqItems,
+} from './_components/faq-content';
+import {
+  facebookPageFollowersWorkingProcessHeading,
+  facebookPageFollowersWorkingProcessSteps,
+} from './_components/working-process-content';
+import {
+  facebookPageFollowersTestimonialsAssets,
+  facebookPageFollowersTestimonialsFeaturedReview,
+  facebookPageFollowersTestimonialsHeading,
+  facebookPageFollowersTestimonialsLeftTextReviews,
+  facebookPageFollowersTestimonialsRightTextReviews,
+  facebookPageFollowersTestimonialsSectionBackground,
+  facebookPageFollowersTestimonialsTabLabels,
+  facebookPageFollowersTestimonialsVideoReviews,
+} from './_components/testimonials-content';
 
 export const metadata: Metadata = {
   title: 'Buy Facebook Page Followers | TrendEvo',
@@ -19,9 +43,8 @@ export default function FacebookPageFollowersPage() {
         trustBadge={facebookPageFollowersTrustBadge}
         title={
           <>
-            Buy{' '}
-            <span className="text-gradient">Facebook Followers</span> in Real,
-            Fast &amp; Affordable price.
+            Buy <span className="text-gradient">Facebook Followers</span> in
+            Real, Fast &amp; Affordable price.
           </>
         }
         description="Growing a Facebook page can be tough. Consistent content and smart promotion are key, but results can be slow. At TrendEvo, we provide solutions to help your Facebook page thrive with real followers and engagement."
@@ -48,6 +71,56 @@ export default function FacebookPageFollowersPage() {
         }}
       />
       <OrderFormSection />
+
+      <TestimonialsSection
+        sectionBackground={facebookPageFollowersTestimonialsSectionBackground}
+        badge={facebookPageFollowersTestimonialsHeading.badge}
+        underlineSrc={facebookPageFollowersTestimonialsHeading.underlineSrc}
+        underlineWidth={facebookPageFollowersTestimonialsHeading.underlineWidth}
+        title={facebookPageFollowersTestimonialsHeading.title}
+        subtitle={facebookPageFollowersTestimonialsHeading.subtitle}
+        titleClassName={facebookPageFollowersTestimonialsHeading.titleClassName}
+        subtitleClassName={
+          facebookPageFollowersTestimonialsHeading.subtitleClassName
+        }
+        customerTabLabel={facebookPageFollowersTestimonialsTabLabels.customer}
+        videoTabLabel={facebookPageFollowersTestimonialsTabLabels.video}
+        assets={facebookPageFollowersTestimonialsAssets}
+        leftTextReviews={facebookPageFollowersTestimonialsLeftTextReviews}
+        rightTextReviews={facebookPageFollowersTestimonialsRightTextReviews}
+        featuredReview={facebookPageFollowersTestimonialsFeaturedReview}
+        videoReviews={facebookPageFollowersTestimonialsVideoReviews}
+        defaultTab="video"
+      />
+      <ServiceWorkingProcessSection
+        badge={facebookPageFollowersWorkingProcessHeading.badge}
+        underlineSrc={facebookPageFollowersWorkingProcessHeading.underlineSrc}
+        underlineWidth={
+          facebookPageFollowersWorkingProcessHeading.underlineWidth
+        }
+        title={facebookPageFollowersWorkingProcessHeading.title}
+        subtitle={facebookPageFollowersWorkingProcessHeading.subtitle}
+        titleClassName={
+          facebookPageFollowersWorkingProcessHeading.titleClassName
+        }
+        subtitleClassName={
+          facebookPageFollowersWorkingProcessHeading.subtitleClassName
+        }
+        steps={facebookPageFollowersWorkingProcessSteps}
+      />
+      <ServiceLeading slug="facebook-page-followers" />
+      <ServiceLeading slug="facebook-page-followers-related-services" />
+      <FaqSection
+        label={facebookPageFollowersFaqHeading.label}
+        title={facebookPageFollowersFaqHeading.title}
+        subtitle={facebookPageFollowersFaqHeading.subtitle}
+        items={facebookPageFollowersFaqItems}
+      />
+      <CtaSection
+        title={facebookPageFollowersCta.title}
+        description={facebookPageFollowersCta.description}
+        buttonsOutlet={facebookPageFollowersCta.buttonsOutlet}
+      />
     </>
   );
 }

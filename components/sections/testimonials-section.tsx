@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import type { ReactNode } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,146 +13,78 @@ import { cn } from '@/lib/utils';
 
 import 'swiper/css';
 
-const SECTION_GRADIENT =
-  'linear-gradient(68.23deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)';
-
 const ACTIVE_TAB_BG =
   'linear-gradient(105.41deg, rgb(209, 129, 255) 2.85%, rgb(255, 99, 190) 90.53%)';
-
-const REVIEW_QUOTE =
-  'This platform helped us boost our brand visibility significantly. The results are real and the process is super easy. Five stars!';
 
 const REVIEW_CARD_HEIGHT = 260;
 const REVIEW_CARD_GAP = 18;
 
-/** Replace with your YouTube Shorts / Reels video IDs */
-const YOUTUBE_REEL_VIDEO_ID = 'LXb3EKWsInQ';
+export type TestimonialTextReview = {
+  id: string;
+  name: string;
+  role: string;
+  avatar: string;
+  quote: string;
+};
 
-const videoReviews = [
-  {
-    id: 'video-1',
-    name: 'Seam Rahman',
-    role: 'Business Owner',
-    thumbnail: '/images/testimonials/video-thumb-1.png',
-    avatar: '/images/testimonials/avatar-1.png',
-    youtubeVideoId: YOUTUBE_REEL_VIDEO_ID,
-  },
-  {
-    id: 'video-2',
-    name: 'Ariyan Khan',
-    role: 'Business Owner',
-    thumbnail: '/images/testimonials/video-thumb-2.png',
-    avatar: '/images/testimonials/avatar-2.png',
-    youtubeVideoId: YOUTUBE_REEL_VIDEO_ID,
-  },
-  {
-    id: 'video-3',
-    name: 'Lisa',
-    role: 'Business Owner',
-    thumbnail: '/images/testimonials/video-thumb-3.png',
-    avatar: '/images/testimonials/avatar-3.png',
-    youtubeVideoId: YOUTUBE_REEL_VIDEO_ID,
-  },
-  {
-    id: 'video-4',
-    name: 'Tamanna',
-    role: 'Business Owner',
-    thumbnail: '/images/testimonials/video-thumb-4.png',
-    avatar: '/images/testimonials/avatar-4.png',
-    youtubeVideoId: YOUTUBE_REEL_VIDEO_ID,
-  },
-  {
-    id: 'video-5',
-    name: 'Rafi Islam',
-    role: 'Business Owner',
-    thumbnail: '/images/testimonials/video-thumb-1.png',
-    avatar: '/images/testimonials/avatar-3.png',
-    youtubeVideoId: YOUTUBE_REEL_VIDEO_ID,
-  },
-  {
-    id: 'video-6',
-    name: 'Nadia Ahmed',
-    role: 'Business Owner',
-    thumbnail: '/images/testimonials/video-thumb-2.png',
-    avatar: '/images/testimonials/avatar-4.png',
-    youtubeVideoId: YOUTUBE_REEL_VIDEO_ID,
-  },
-] as const;
+export type TestimonialVideoReview = {
+  id: string;
+  name: string;
+  role: string;
+  thumbnail: string;
+  avatar: string;
+  youtubeVideoId: string;
+};
 
-const leftTextReviews = [
-  {
-    id: 'left-1',
-    name: 'Seam Rahman',
-    role: 'Business Owner',
-    avatar: '/images/testimonials/avatar-1.png',
-    quote: REVIEW_QUOTE,
-  },
-  {
-    id: 'left-2',
-    name: 'Seam Rahman',
-    role: 'Business Owner',
-    avatar: '/images/testimonials/avatar-1.png',
-    quote: REVIEW_QUOTE,
-  },
-  {
-    id: 'left-3',
-    name: 'Rafi Islam',
-    role: 'Business Owner',
-    avatar: '/images/testimonials/avatar-3.png',
-    quote: REVIEW_QUOTE,
-  },
-  {
-    id: 'left-4',
-    name: 'Nadia Ahmed',
-    role: 'Business Owner',
-    avatar: '/images/testimonials/avatar-4.png',
-    quote: REVIEW_QUOTE,
-  },
-] as const;
+export type TestimonialFeaturedReview = {
+  name: string;
+  role: string;
+  avatar: string;
+  image: string;
+  quote: string;
+  youtubeVideoId: string;
+};
 
-const rightTextReviews = [
-  {
-    id: 'right-1',
-    name: 'Seam Rahman',
-    role: 'Business Owner',
-    avatar: '/images/testimonials/avatar-1.png',
-    quote: REVIEW_QUOTE,
-  },
-  {
-    id: 'right-2',
-    name: 'Ariyan Khan',
-    role: 'Business Owner',
-    avatar: '/images/testimonials/avatar-2.png',
-    quote: REVIEW_QUOTE,
-  },
-  {
-    id: 'right-3',
-    name: 'Lisa',
-    role: 'Business Owner',
-    avatar: '/images/testimonials/avatar-3.png',
-    quote: REVIEW_QUOTE,
-  },
-  {
-    id: 'right-4',
-    name: 'Tamanna',
-    role: 'Business Owner',
-    avatar: '/images/testimonials/avatar-4.png',
-    quote: REVIEW_QUOTE,
-  },
-] as const;
+export type TestimonialAssets = {
+  starIconSrc: string;
+  verifyBadgeSrc: string;
+  customerReviewTabIconSrc: string;
+  videoReviewTabIconSrc: string;
+  quoteOpenSrc: string;
+  quoteCloseSrc: string;
+  playIconSrc: string;
+  playOrbSrc: string;
+};
 
-const featuredReview = {
-  name: 'Ariyena Islam',
-  role: 'Business Owner',
-  avatar: '/images/testimonials/avatar-2.png',
-  image: '/images/testimonials/featured-review.png',
-  quote: REVIEW_QUOTE,
-  youtubeVideoId: YOUTUBE_REEL_VIDEO_ID,
-} as const;
+export type TestimonialsSectionProps = {
+  sectionBackground: string;
+  badge: string;
+  underlineSrc: string;
+  underlineWidth: number;
+  title: ReactNode;
+  subtitle: string;
+  titleClassName?: string;
+  subtitleClassName?: string;
+  customerTabLabel: string;
+  videoTabLabel: string;
+  assets: TestimonialAssets;
+  leftTextReviews: TestimonialTextReview[];
+  rightTextReviews: TestimonialTextReview[];
+  featuredReview: TestimonialFeaturedReview;
+  videoReviews: TestimonialVideoReview[];
+  defaultTab?: 'customer' | 'video';
+  className?: string;
+};
 
 type ReviewTab = 'customer' | 'video';
 
-function StarRating({ className }: { className?: string }) {
+function StarRating({
+  starIconSrc,
+  className,
+}: {
+  starIconSrc: string;
+  className?: string;
+}) {
   return (
     <div
       className={cn(
@@ -163,7 +96,7 @@ function StarRating({ className }: { className?: string }) {
         {Array.from({ length: 5 }).map((_, index) => (
           <Image
             key={index}
-            src="/images/testimonials/star-icon.svg"
+            src={starIconSrc}
             alt=""
             aria-hidden
             width={16}
@@ -180,11 +113,13 @@ function AuthorInfo({
   name,
   role,
   avatar,
+  verifyBadgeSrc,
   variant = 'light',
 }: {
   name: string;
   role: string;
   avatar: string;
+  verifyBadgeSrc: string;
   variant?: 'light' | 'dark';
 }) {
   return (
@@ -208,7 +143,7 @@ function AuthorInfo({
             {name}
           </p>
           <Image
-            src="/images/testimonials/verify-badge.svg"
+            src={verifyBadgeSrc}
             alt=""
             aria-hidden
             width={18}
@@ -231,13 +166,19 @@ function AuthorInfo({
 
 function ReviewTabSwitcher({
   activeTab,
+  customerTabLabel,
+  videoTabLabel,
+  assets,
   onChange,
 }: {
   activeTab: ReviewTab;
+  customerTabLabel: string;
+  videoTabLabel: string;
+  assets: TestimonialAssets;
   onChange: (tab: ReviewTab) => void;
 }) {
   return (
-    <div className="w-full max-w-full rounded-xl border-[0.6px] border-[#f0d8ff] bg-[rgba(202,115,255,0.04)] p-1.5 sm:p-2">
+    <div className="w-fit max-w-full rounded-xl border-[0.6px] border-[#f0d8ff] bg-[rgba(202,115,255,0.04)] p-1.5 sm:p-2">
       <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-3">
         <button
           type="button"
@@ -249,7 +190,7 @@ function ReviewTabSwitcher({
           style={activeTab === 'customer' ? { backgroundImage: ACTIVE_TAB_BG } : undefined}
         >
           <Image
-            src="/images/testimonials/customer-review-icon.svg"
+            src={assets.customerReviewTabIconSrc}
             alt=""
             aria-hidden
             width={24}
@@ -265,7 +206,7 @@ function ReviewTabSwitcher({
               activeTab === 'customer' ? 'text-white' : 'text-[#8f2acd]',
             )}
           >
-            Customer Reviews
+            {customerTabLabel}
           </span>
         </button>
         <button
@@ -278,7 +219,7 @@ function ReviewTabSwitcher({
           style={activeTab === 'video' ? { backgroundImage: ACTIVE_TAB_BG } : undefined}
         >
           <Image
-            src="/images/testimonials/clapperboard-icon.svg"
+            src={assets.videoReviewTabIconSrc}
             alt=""
             aria-hidden
             width={24}
@@ -294,7 +235,7 @@ function ReviewTabSwitcher({
               activeTab === 'video' ? 'text-white' : 'text-[#8f2acd]',
             )}
           >
-            Video Reviews
+            {videoTabLabel}
           </span>
         </button>
       </div>
@@ -302,22 +243,20 @@ function ReviewTabSwitcher({
   );
 }
 
-type TextReview = {
-  id: string;
-  name: string;
-  role: string;
-  avatar: string;
-  quote: string;
-};
-
-function TextReviewCard({ name, role, avatar, quote }: TextReview) {
+function TextReviewCard({
+  review,
+  assets,
+}: {
+  review: TestimonialTextReview;
+  assets: TestimonialAssets;
+}) {
   return (
     <article
       className="relative w-full shrink-0 overflow-hidden rounded-[30px] border border-[#f7deff] bg-[#f4e3fd]"
       style={{ height: REVIEW_CARD_HEIGHT }}
     >
       <Image
-        src="/images/testimonials/quote-open.svg"
+        src={assets.quoteOpenSrc}
         alt=""
         aria-hidden
         width={90}
@@ -325,7 +264,7 @@ function TextReviewCard({ name, role, avatar, quote }: TextReview) {
         className="pointer-events-none absolute left-[19px] top-[6px] h-[78px] w-[90px]"
       />
       <Image
-        src="/images/testimonials/quote-close.svg"
+        src={assets.quoteCloseSrc}
         alt=""
         aria-hidden
         width={90}
@@ -335,20 +274,34 @@ function TextReviewCard({ name, role, avatar, quote }: TextReview) {
 
       <div className="relative flex h-full flex-col justify-center gap-4 px-6 py-5 sm:gap-6 sm:px-8 md:gap-[34px]">
         <div className="border-b border-dashed border-[#c1c4cc] pb-4">
-          <StarRating className="mb-[19px]" />
-          <p className="text-sm font-medium leading-normal text-[#364153]">{quote}</p>
+          <StarRating starIconSrc={assets.starIconSrc} className="mb-[19px]" />
+          <p className="text-sm font-medium leading-normal text-[#364153]">
+            {review.quote}
+          </p>
         </div>
-        <AuthorInfo name={name} role={role} avatar={avatar} variant="dark" />
+        <AuthorInfo
+          name={review.name}
+          role={review.role}
+          avatar={review.avatar}
+          verifyBadgeSrc={assets.verifyBadgeSrc}
+          variant="dark"
+        />
       </div>
     </article>
   );
 }
 
-function FeaturedReviewCard({ onPlay }: { onPlay: () => void }) {
+function FeaturedReviewCard({
+  featuredReview,
+  assets,
+  onPlay,
+}: {
+  featuredReview: TestimonialFeaturedReview;
+  assets: TestimonialAssets;
+  onPlay: () => void;
+}) {
   return (
-    <article
-      className="relative mx-auto h-[380px] w-full min-w-0 max-w-[464px] overflow-hidden rounded-[30px] sm:h-[460px] xl:mx-0 xl:h-[538px] xl:max-w-none xl:flex-1"
-    >
+    <article className="relative mx-auto h-[380px] w-full min-w-0 max-w-[464px] overflow-hidden rounded-[30px] sm:h-[460px] xl:mx-0 xl:h-[538px] xl:max-w-none xl:flex-1">
       <Image
         src={featuredReview.image}
         alt=""
@@ -358,7 +311,10 @@ function FeaturedReviewCard({ onPlay }: { onPlay: () => void }) {
         unoptimized
       />
 
-      <StarRating className="absolute left-6 top-5 z-10" />
+      <StarRating
+        starIconSrc={assets.starIconSrc}
+        className="absolute left-6 top-5 z-10"
+      />
 
       <button
         type="button"
@@ -367,7 +323,7 @@ function FeaturedReviewCard({ onPlay }: { onPlay: () => void }) {
         className="absolute left-1/2 top-1/2 z-10 flex size-16 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-[32px] bg-white/12 p-4 transition hover:bg-white/20"
       >
         <Image
-          src="/images/testimonials/play-icon.svg"
+          src={assets.playIconSrc}
           alt=""
           aria-hidden
           width={33}
@@ -381,6 +337,7 @@ function FeaturedReviewCard({ onPlay }: { onPlay: () => void }) {
           name={featuredReview.name}
           role={featuredReview.role}
           avatar={featuredReview.avatar}
+          verifyBadgeSrc={assets.verifyBadgeSrc}
           variant="dark"
         />
         <p className="mt-3 text-xs font-medium leading-normal text-[#40454e]">
@@ -425,9 +382,11 @@ function ScrollMoreHint({ onClick }: { onClick: () => void }) {
 
 function ScrollableReviewColumn({
   reviews,
+  assets,
   className,
 }: {
-  reviews: readonly TextReview[];
+  reviews: TestimonialTextReview[];
+  assets: TestimonialAssets;
   className?: string;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -484,7 +443,7 @@ function ScrollableReviewColumn({
         style={{ gap: REVIEW_CARD_GAP }}
       >
         {reviews.map((review) => (
-          <TextReviewCard key={review.id} {...review} />
+          <TextReviewCard key={review.id} review={review} assets={assets} />
         ))}
       </div>
 
@@ -501,20 +460,38 @@ function ScrollableReviewColumn({
   );
 }
 
-function CustomerReviewsGrid({ onPlayFeatured }: { onPlayFeatured: () => void }) {
+function CustomerReviewsGrid({
+  leftTextReviews,
+  rightTextReviews,
+  featuredReview,
+  assets,
+  onPlayFeatured,
+}: {
+  leftTextReviews: TestimonialTextReview[];
+  rightTextReviews: TestimonialTextReview[];
+  featuredReview: TestimonialFeaturedReview;
+  assets: TestimonialAssets;
+  onPlayFeatured: () => void;
+}) {
   return (
     <div className="grid w-full max-w-[1440px] grid-cols-1 gap-[18px] xl:grid-cols-3 xl:items-start">
       <ScrollableReviewColumn
         reviews={leftTextReviews}
+        assets={assets}
         className="order-2 xl:order-1 xl:max-w-[464px] xl:flex-1"
       />
 
       <div className="order-1 xl:order-2">
-        <FeaturedReviewCard onPlay={onPlayFeatured} />
+        <FeaturedReviewCard
+          featuredReview={featuredReview}
+          assets={assets}
+          onPlay={onPlayFeatured}
+        />
       </div>
 
       <ScrollableReviewColumn
         reviews={rightTextReviews}
+        assets={assets}
         className="order-3 xl:max-w-[464px] xl:flex-1"
       />
     </div>
@@ -522,16 +499,18 @@ function CustomerReviewsGrid({ onPlayFeatured }: { onPlayFeatured: () => void })
 }
 
 function VideoReviewCard({
-  name,
-  role,
-  thumbnail,
-  avatar,
+  review,
+  assets,
   onPlay,
-}: (typeof videoReviews)[number] & { onPlay: () => void }) {
+}: {
+  review: TestimonialVideoReview;
+  assets: TestimonialAssets;
+  onPlay: () => void;
+}) {
   return (
     <article className="relative mx-auto h-[300px] w-full max-w-[336px] overflow-hidden rounded-2xl p-2.5 sm:h-[340px]">
       <Image
-        src={thumbnail}
+        src={review.thumbnail}
         alt=""
         fill
         sizes="(max-width: 768px) 85vw, 336px"
@@ -544,7 +523,7 @@ function VideoReviewCard({
       <div className="absolute left-2.5 top-[11px] rounded-md bg-white/10 px-2 py-1.5">
         <div className="flex items-center gap-1">
           <Image
-            src="/images/testimonials/star-icon.svg"
+            src={assets.starIconSrc}
             alt=""
             aria-hidden
             width={16}
@@ -558,11 +537,11 @@ function VideoReviewCard({
       <button
         type="button"
         onClick={onPlay}
-        aria-label={`Play ${name}'s video review`}
+        aria-label={`Play ${review.name}'s video review`}
         className="absolute left-1/2 top-1/2 flex size-[42px] -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-[21px] bg-white/12 p-2.5 transition hover:bg-white/20"
       >
         <Image
-          src="/images/testimonials/play-icon.svg"
+          src={assets.playIconSrc}
           alt=""
           aria-hidden
           width={22}
@@ -572,7 +551,13 @@ function VideoReviewCard({
       </button>
 
       <div className="absolute bottom-5 left-3 flex items-center gap-2">
-        <AuthorInfo name={name} role={role} avatar={avatar} variant="light" />
+        <AuthorInfo
+          name={review.name}
+          role={review.role}
+          avatar={review.avatar}
+          verifyBadgeSrc={assets.verifyBadgeSrc}
+          variant="light"
+        />
       </div>
     </article>
   );
@@ -610,7 +595,15 @@ function TestimonialsPagination({
   );
 }
 
-function VideoReviewsSlider({ onPlay }: { onPlay: (videoId: string) => void }) {
+function VideoReviewsSlider({
+  videoReviews,
+  assets,
+  onPlay,
+}: {
+  videoReviews: TestimonialVideoReview[];
+  assets: TestimonialAssets;
+  onPlay: (videoId: string) => void;
+}) {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -642,7 +635,8 @@ function VideoReviewsSlider({ onPlay }: { onPlay: (videoId: string) => void }) {
         {videoReviews.map((review) => (
           <SwiperSlide key={review.id}>
             <VideoReviewCard
-              {...review}
+              review={review}
+              assets={assets}
               onPlay={() => onPlay(review.youtubeVideoId)}
             />
           </SwiperSlide>
@@ -654,18 +648,17 @@ function VideoReviewsSlider({ onPlay }: { onPlay: (videoId: string) => void }) {
   );
 }
 
-function SectionDecorations() {
+function SectionDecorations({ playOrbSrc }: { playOrbSrc: string }) {
   return (
     <div
       aria-hidden
       className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-full max-w-[1920px] -translate-x-1/2 lg:block"
     >
-      {/* Bottom-left — crop transparent PNG padding so the orb sits flush at the edge */}
       <div className="absolute bottom-10 left-[-4.36%] flex h-[220px] w-[209px] items-center justify-center">
         <div className="rotate-[3.48deg]">
           <div className="relative h-[212px] w-[211px] overflow-hidden blur-[3px]">
             <Image
-              src="/images/testimonials/play-orb.png"
+              src={playOrbSrc}
               alt=""
               aria-hidden
               width={2000}
@@ -677,10 +670,9 @@ function SectionDecorations() {
         </div>
       </div>
 
-      {/* Top-right — anchored to the section edge, not overlapping heading copy */}
       <div className="absolute left-[91.5625%] top-[27px] h-[212px] w-[217.591px] overflow-hidden blur-[3px]">
         <Image
-          src="/images/testimonials/play-orb.png"
+          src={playOrbSrc}
           alt=""
           aria-hidden
           width={2000}
@@ -693,40 +685,71 @@ function SectionDecorations() {
   );
 }
 
-export default function TestimonialsSection() {
-  const [activeTab, setActiveTab] = useState<ReviewTab>('video');
+export default function TestimonialsSection({
+  sectionBackground,
+  badge,
+  underlineSrc,
+  underlineWidth,
+  title,
+  subtitle,
+  titleClassName,
+  subtitleClassName,
+  customerTabLabel,
+  videoTabLabel,
+  assets,
+  leftTextReviews,
+  rightTextReviews,
+  featuredReview,
+  videoReviews,
+  defaultTab = 'video',
+  className,
+}: TestimonialsSectionProps) {
+  const [activeTab, setActiveTab] = useState<ReviewTab>(defaultTab);
   const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
 
   const openVideo = (videoId: string) => setActiveVideoId(videoId);
   const closeVideo = () => setActiveVideoId(null);
 
   return (
-    <PrimarySection className="overflow-hidden py-12 sm:py-16 lg:py-20" style={{ backgroundImage: SECTION_GRADIENT }}>
-      <SectionDecorations />
+    <PrimarySection
+      className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
+      style={{ backgroundImage: sectionBackground }}
+    >
+      <SectionDecorations playOrbSrc={assets.playOrbSrc} />
 
       <div className="container relative z-10 flex flex-col items-center gap-8 sm:gap-12">
         <SectionHeading
-          badge="TESTIMONIALS"
-          underlineSrc="/images/testimonials/underline.svg"
-          underlineWidth={169}
-          title={
-            <>
-              What Our <span className="text-gradient">Client Say</span>
-            </>
-          }
-          subtitle="Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers."
-          titleClassName="max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] sm:text-[32px] md:text-[40px] lg:text-[48px]"
-          subtitleClassName="max-w-[996px] text-center text-sm leading-normal text-[#404a60] sm:text-base md:text-lg"
+          badge={badge}
+          underlineSrc={underlineSrc}
+          underlineWidth={underlineWidth}
+          title={title}
+          subtitle={subtitle}
+          titleClassName={titleClassName}
+          subtitleClassName={subtitleClassName}
         />
 
-        <ReviewTabSwitcher activeTab={activeTab} onChange={setActiveTab} />
+        <ReviewTabSwitcher
+          activeTab={activeTab}
+          customerTabLabel={customerTabLabel}
+          videoTabLabel={videoTabLabel}
+          assets={assets}
+          onChange={setActiveTab}
+        />
 
         {activeTab === 'customer' ? (
           <CustomerReviewsGrid
+            leftTextReviews={leftTextReviews}
+            rightTextReviews={rightTextReviews}
+            featuredReview={featuredReview}
+            assets={assets}
             onPlayFeatured={() => openVideo(featuredReview.youtubeVideoId)}
           />
         ) : (
-          <VideoReviewsSlider onPlay={openVideo} />
+          <VideoReviewsSlider
+            videoReviews={videoReviews}
+            assets={assets}
+            onPlay={openVideo}
+          />
         )}
       </div>
 

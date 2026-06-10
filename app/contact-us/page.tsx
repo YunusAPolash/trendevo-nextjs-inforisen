@@ -5,6 +5,7 @@ import HeroSection from '@/components/sections/hero-section';
 import { heroSocialIcons } from '@/content/hero-social-icons';
 import { Button } from '@/components/ui/button';
 import ContactDetailsSection from './_components/contact-details-section';
+import PrimaryButton from '@/components/buttons/primary-button';
 
 export const metadata: Metadata = {
   title: 'Contact Us | TrendEvo',
@@ -30,12 +31,7 @@ export default function ContactUsPage() {
         description="We are committed to delivering top-notch SMM panel services with smooth order processing, real-time support, and proven strategies to help you achieve consistent growth across all social media platforms."
         descriptionClassName="max-w-2xl text-sm leading-relaxed text-[#343e56] sm:text-base md:text-lg"
         actions={
-          <Button className="bg-brand-gradient h-10 shrink-0 rounded-[10px] border-[1.5px] border-[#cc7aff] px-4 text-sm font-semibold text-white hover:opacity-90 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]">
-            Get Started Now
-            <span className="ml-2 flex size-8 items-center justify-center rounded-full bg-white/10">
-              <ArrowRight className="size-4" aria-hidden />
-            </span>
-          </Button>
+         <PrimaryButton showArrow className='w-fit'>Get Started Now</PrimaryButton>
         }
         illustration={{
           src: '/images/contact-us/contact-us-hero-character.webp',
