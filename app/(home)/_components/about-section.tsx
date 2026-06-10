@@ -44,7 +44,7 @@ const metricRows = [
 function MetricDivider() {
   return (
     <span
-      className="hidden h-[45px] w-px shrink-0 bg-[#d9d9e3] sm:block"
+      className="hidden h-[45px] w-px shrink-0 bg-[#d9d9e3] dark:bg-[#454a56] sm:block"
       aria-hidden
     />
   );
@@ -72,14 +72,14 @@ function MetricItem({
         {value}
       </span>
       {splitLabel ? (
-        <p className="text-xs font-medium leading-[1.5] text-[#404a60] sm:text-sm">
+        <p className="text-xs font-medium leading-[1.5] text-[#404a60] dark:text-[#dfe0e4] sm:text-sm">
           <span className="block">Customer Satisfaction</span>
           <span className="block">Rate</span>
         </p>
       ) : (
         <p
           className={cn(
-            'text-xs font-medium leading-[1.5] text-[#404a60] sm:text-sm',
+            'text-xs font-medium leading-[1.5] text-[#404a60] dark:text-[#dfe0e4] sm:text-sm',
             labelClassName,
           )}
         >
@@ -95,6 +95,7 @@ export default function AboutSection() {
     <PrimarySection
       id="about"
       bg="section-10"
+      darkBg="section-10-dark"
       className="overflow-hidden py-12 sm:py-16 lg:py-20"
     >
       <div className="container flex flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
@@ -121,7 +122,7 @@ export default function AboutSection() {
                   />
                 </div>
 
-                <h2 className="text-2xl font-semibold leading-[1.35] tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]">
+                <h2 className="text-2xl font-semibold leading-[1.35] tracking-[0.48px] text-[#13203b] dark:text-[#efedf1] sm:text-[32px] md:text-[40px] lg:text-[48px]">
                   <span className="block">
                     Your Trusted{' '}
                     <span className={GRADIENT_TEXT}>Social Media</span>
@@ -130,7 +131,7 @@ export default function AboutSection() {
                 </h2>
               </div>
 
-              <p className="max-w-[642px] text-sm font-medium leading-normal text-[#404a60] sm:text-base md:text-lg lg:text-[22px] lg:leading-[1.5]">
+              <p className="max-w-[642px] text-sm font-medium leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg lg:text-[22px] lg:leading-[1.5]">
                 A reliable SMM platform designed to deliver fast, secure, and
                 high-quality social media growth for individuals, businesses, and
                 resellers.
@@ -152,7 +153,7 @@ export default function AboutSection() {
                       height={24}
                       className="mt-0.5 size-5 shrink-0 sm:mt-0 sm:size-6"
                     />
-                    <span className="text-sm font-medium leading-normal text-[#071431] sm:text-base md:text-lg lg:text-[20px]">
+                    <span className="text-sm font-medium leading-normal text-[#071431] dark:text-[#dfe0e4] sm:text-base md:text-lg lg:text-[20px]">
                       {feature}
                     </span>
                   </li>

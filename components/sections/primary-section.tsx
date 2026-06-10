@@ -19,11 +19,17 @@ const sectionBackgroundClasses = {
 } as const;
 
 const sectionDarkBackgroundClasses = {
-  'section-1-dark':
-    "dark:bg-[url('/images/backgrounds/section-bg-1-dark.svg')]",
-  'section-2-dark':
-    "dark:bg-[url('/images/backgrounds/section-bg-2-dark.svg')]",
+  'section-1-dark': "bg-[url('/images/backgrounds/section-bg-1-dark.svg')]",
+  'section-2-dark': "bg-[url('/images/backgrounds/section-bg-2-dark.svg')]",
+  'section-10-dark':
+    "bg-[url('/images/backgrounds/section-bg-10-dark.svg')]",
+  'section-4-dark': "bg-[url('/images/backgrounds/section-bg-4-dark.svg')]",
+  'section-7-dark': "bg-[url('/images/backgrounds/section-bg-7-dark.svg')]",
+  'section-6-dark': "bg-[url('/images/backgrounds/section-bg-6-dark.svg')]",
 } as const;
+
+const sectionBackgroundLayerClassName =
+  'absolute inset-0 bg-cover bg-top bg-no-repeat';
 
 export type SectionBgKey = keyof typeof sectionBackgroundClasses;
 export type SectionDarkBgKey = keyof typeof sectionDarkBackgroundClasses;
@@ -49,9 +55,19 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            'absolute inset-0 bg-cover bg-top bg-no-repeat',
+            sectionBackgroundLayerClassName,
             sectionBackgroundClasses[bg],
-            darkBg && sectionDarkBackgroundClasses[darkBg],
+            darkBg && 'dark:hidden',
+          )}
+        />
+      ) : null}
+      {darkBg ? (
+        <div
+          aria-hidden
+          className={cn(
+            sectionBackgroundLayerClassName,
+            'hidden dark:block',
+            sectionDarkBackgroundClasses[darkBg],
           )}
         />
       ) : null}

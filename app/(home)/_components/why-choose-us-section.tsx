@@ -11,7 +11,11 @@ import { WhyChooseUsDesktopTimeline } from '@/app/(home)/_components/why-choose-
 
 export default function WhyChooseUsSection() {
   return (
-    <PrimarySection bg="section-7" className="overflow-x-hidden py-12 sm:py-16 lg:py-20">
+    <PrimarySection
+      bg="section-7"
+      darkBg="section-7-dark"
+      className="overflow-x-hidden py-12 sm:py-16 lg:py-20"
+    >
       <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
         <SectionHeading
           badge="Why Choose Us"
@@ -23,8 +27,9 @@ export default function WhyChooseUsSection() {
           subtitle="Boost your social media growth with our fast, reliable, and high-quality SMM services. We provide secure delivery, competitive pricing, and trusted support to help your brand grow faster."
           underlineSrc="/images/why-choose-us/underline.svg"
           underlineWidth={169}
-          titleClassName="text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]"
-          subtitleClassName="max-w-[924px] text-sm font-medium leading-normal text-[#4f586d] sm:text-base md:text-lg"
+          badgeClassName="dark:bg-none dark:bg-clip-border dark:text-white"
+          titleClassName="text-2xl tracking-[0.48px] text-[#13203b] dark:text-white sm:text-[32px] md:text-[40px] lg:text-[48px]"
+          subtitleClassName="max-w-[924px] text-sm font-medium leading-normal text-[#4f586d] dark:text-white sm:text-base md:text-lg"
         />
 
         <WhyChooseUsDesktopTimeline />

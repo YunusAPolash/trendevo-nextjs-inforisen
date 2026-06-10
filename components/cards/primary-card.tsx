@@ -15,8 +15,12 @@ const cardBackgroundClasses = {
 } as const;
 
 const cardDarkBackgroundClasses = {
-  'card-1-dark': "dark:bg-[url('/images/backgrounds/card-bg-1-dark.svg')]",
+  'card-1-dark': "bg-[url('/images/backgrounds/card-bg-1-dark.svg')]",
+  'card-2-dark': "bg-[url('/images/backgrounds/card-bg-2-dark.svg')]",
 } as const;
+
+const cardBackgroundLayerClassName =
+  'pointer-events-none absolute inset-0 rounded-[inherit] bg-cover bg-center bg-no-repeat';
 
 export type CardBgKey = keyof typeof cardBackgroundClasses;
 export type CardDarkBgKey = keyof typeof cardDarkBackgroundClasses;
@@ -29,23 +33,47 @@ export default function PrimaryCard({
   bg,
   darkBg,
   style,
+  children,
   ...props
 }: React.ComponentProps<'article'> & {
   bg?: CardBgKey;
   darkBg?: CardDarkBgKey;
 }) {
+  const hasBackground = Boolean(bg || darkBg);
+
   return (
     <article
       data-slot="card"
       className={cn(
         cardBaseClassName,
-        'p-6 ring-0 bg-cover bg-center bg-no-repeat',
-        bg && cardBackgroundClasses[bg],
-        darkBg && cardDarkBackgroundClasses[darkBg],
+        'p-6 ring-0',
+        hasBackground && 'relative',
         className,
       )}
       style={style}
       {...props}
-    />
+    >
+      {bg ? (
+        <div
+          aria-hidden
+          className={cn(
+            cardBackgroundLayerClassName,
+            cardBackgroundClasses[bg],
+            darkBg && 'dark:hidden',
+          )}
+        />
+      ) : null}
+      {darkBg ? (
+        <div
+          aria-hidden
+          className={cn(
+            cardBackgroundLayerClassName,
+            'hidden dark:block',
+            cardDarkBackgroundClasses[darkBg],
+          )}
+        />
+      ) : null}
+      {children}
+    </article>
   );
 }

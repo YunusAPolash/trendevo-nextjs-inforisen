@@ -1,15 +1,22 @@
 import Image from 'next/image';
 import { Fragment } from 'react';
 
+import WorkingProcessOuterCircleDark from '@/app/(home)/_components/working-process-outer-circle-dark';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
 
 const GRADIENT_TEXT =
-  'bg-gradient-to-r from-[#ad26ff] to-[#ff3f85] bg-clip-text text-transparent';
+  'w-fit bg-gradient-to-r from-[#ad26ff] to-[#ff3f85] bg-clip-text text-transparent';
 
-const STEP_CARD_GRADIENT =
+const STEP_CARD_GRADIENT_LIGHT =
   'linear-gradient(33.8deg, rgb(251, 245, 255) 10.387%, rgb(255, 250, 252) 58.1%, rgb(247, 172, 255) 126.5%)';
+
+const STEP_CARD_GRADIENT_DARK_TL =
+  'linear-gradient(129.26deg, rgba(36, 16, 46, 0.35) 60.67%, rgba(136, 66, 173, 0.35) 96.45%)';
+
+const STEP_CARD_GRADIENT_DARK_BR =
+  'linear-gradient(-48.65deg, rgba(36, 16, 46, 0.35) 57.82%, rgba(116, 51, 148, 0.35) 96.94%)';
 
 const CARD_CONTENT_BASE =
   'px-4 py-6 pb-8 sm:px-6 sm:py-8 sm:pb-10 lg:px-8 lg:py-0';
@@ -53,31 +60,43 @@ const steps = [
 
 function ProcessCenterHub({ className }: { className?: string }) {
   return (
-    <div className={cn('relative size-[120px] sm:size-[150px] lg:size-[180px]', className)}>
-      <Image
-        src="/images/working-process/outer-circlesvg.svg"
-        alt=""
-        aria-hidden
-        width={188}
-        height={180}
-        className="absolute inset-0 size-full motion-safe:animate-[spin_12s_linear_infinite]"
-        unoptimized
-      />
+    <div
+      className={cn(
+        'relative size-[120px] overflow-visible sm:size-[150px] lg:size-[180px]',
+        className,
+      )}
+    >
+      <div className="pointer-events-none absolute inset-0 motion-safe:animate-[spin_12s_linear_infinite] dark:hidden">
+        <Image
+          src="/images/working-process/outer-circlesvg.svg"
+          alt=""
+          aria-hidden
+          width={188}
+          height={180}
+          className="absolute left-1/2 top-1/2 h-full w-auto max-w-none -translate-x-1/2 -translate-y-1/2"
+          unoptimized
+        />
+      </div>
+      <div className="pointer-events-none absolute inset-0 hidden motion-safe:animate-[spin_12s_linear_infinite] dark:block">
+        <WorkingProcessOuterCircleDark className="absolute left-1/2 top-1/2 h-full w-auto -translate-x-1/2 -translate-y-1/2" />
+      </div>
       <Image
         src="/images/working-process/inner-hub.svg"
         alt=""
         aria-hidden
         width={78}
         height={78}
-        className="absolute left-1/2 top-1/2 size-[42px] -translate-x-1/2 -translate-y-1/2 sm:size-[58px] lg:size-[77px]"
+        className="absolute left-1/2 top-1/2 z-10 size-[42px] -translate-x-1/2 -translate-y-1/2 sm:size-[58px] lg:size-[77px]"
         unoptimized
       />
     </div>
   );
 }
 
-const LINE_VERTICAL_SRC = '/images/working-process/Line4.svg';
-const LINE_HORIZONTAL_SRC = '/images/working-process/card-border-top.svg';
+const LINE_VERTICAL_LIGHT = '/images/working-process/Line4.svg';
+const LINE_HORIZONTAL_LIGHT = '/images/working-process/card-border-top.svg';
+const LINE_VERTICAL_DARK = '/images/working-process/dark/card-border-side.svg';
+const LINE_HORIZONTAL_DARK = '/images/working-process/dark/card-border-top.svg';
 
 type BorderEdge = 'top' | 'bottom' | 'left' | 'right';
 
@@ -102,6 +121,11 @@ function CardBorder({
   edge: BorderEdge;
   sizeClassName: string;
 }) {
+  const lightSrc = axis === 'vertical' ? LINE_VERTICAL_LIGHT : LINE_HORIZONTAL_LIGHT;
+  const darkSrc = axis === 'vertical' ? LINE_VERTICAL_DARK : LINE_HORIZONTAL_DARK;
+  const intrinsicWidth = axis === 'vertical' ? 3 : 346;
+  const intrinsicHeight = axis === 'vertical' ? 215 : 3;
+
   if (axis === 'vertical') {
     return (
       <div
@@ -114,12 +138,21 @@ function CardBorder({
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={LINE_VERTICAL_SRC}
+          src={lightSrc}
           alt=""
           aria-hidden
-          width={3}
-          height={215}
-          className="block h-full w-full max-w-none"
+          width={intrinsicWidth}
+          height={intrinsicHeight}
+          className="block h-full w-full max-w-none dark:hidden"
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={darkSrc}
+          alt=""
+          aria-hidden
+          width={intrinsicWidth}
+          height={intrinsicHeight}
+          className="hidden h-full w-full max-w-none dark:block"
         />
       </div>
     );
@@ -136,12 +169,21 @@ function CardBorder({
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={LINE_HORIZONTAL_SRC}
+        src={lightSrc}
         alt=""
         aria-hidden
-        width={346}
-        height={3}
-        className="block h-full w-full max-w-none"
+        width={intrinsicWidth}
+        height={intrinsicHeight}
+        className="block h-full w-full max-w-none dark:hidden"
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={darkSrc}
+        alt=""
+        aria-hidden
+        width={intrinsicWidth}
+        height={intrinsicHeight}
+        className="hidden h-full w-full max-w-none dark:block"
       />
     </div>
   );
@@ -175,10 +217,18 @@ function HighlightedCardBorders({ corner }: { corner: 'tl' | 'br' }) {
       <CardBorder
         axis="vertical"
         edge="left"
-        sizeClassName="h-[65%] max-h-[346px]"
+        sizeClassName="h-[65%] max-h-[215px]"
       />
     </div>
   );
+}
+
+function getHighlightedCardStyle(corner: 'tl' | 'br') {
+  return {
+    '--step-card-light': STEP_CARD_GRADIENT_LIGHT,
+    '--step-card-dark':
+      corner === 'tl' ? STEP_CARD_GRADIENT_DARK_TL : STEP_CARD_GRADIENT_DARK_BR,
+  } as React.CSSProperties;
 }
 
 function ProcessStepCard({
@@ -194,37 +244,59 @@ function ProcessStepCard({
       className={cn(
         'relative min-h-0 sm:min-h-[240px] lg:min-h-[330px]',
         highlighted
-          ? 'overflow-visible rounded-2xl lg:overflow-hidden lg:rounded-none lg:rounded-bl-[24px] lg:rounded-tr-[24px]'
-          : 'overflow-hidden rounded-2xl border border-[#ead4fb]/70 bg-white/50 lg:rounded-none lg:border-0 lg:bg-transparent',
+          ? 'overflow-visible rounded-2xl border border-[#ead4fb]/70 [background-image:var(--step-card-light)] dark:border-[rgba(143,42,205,0.3)] dark:[background-image:var(--step-card-dark)] lg:overflow-hidden lg:rounded-none lg:rounded-bl-[24px] lg:rounded-tr-[24px] lg:border-0 dark:lg:border-0'
+          : 'overflow-hidden rounded-2xl border border-[#ead4fb]/70 bg-white/50 dark:border-[rgba(143,42,205,0.25)] dark:bg-transparent lg:rounded-none lg:border-0 lg:bg-transparent',
       )}
-      style={highlighted ? { backgroundImage: STEP_CARD_GRADIENT } : undefined}
+      style={highlighted && corner ? getHighlightedCardStyle(corner) : undefined}
     >
       {highlighted && corner ? (
         <HighlightedCardBorders corner={corner} />
       ) : null}
 
       {corner === 'tl' ? (
-        <Image
-          src="/images/working-process/card-corner-tl.svg"
-          alt=""
-          aria-hidden
-          width={166}
-          height={166}
-          className="pointer-events-none absolute left-0 top-0 z-0 size-20 opacity-50 sm:size-28 sm:opacity-40 md:-left-[60px] md:-top-8 md:size-[140px] lg:-left-[80px] lg:-top-[40px] lg:size-[166px]"
-          unoptimized
-        />
+        <>
+          <Image
+            src="/images/working-process/card-corner-tl.svg"
+            alt=""
+            aria-hidden
+            width={166}
+            height={166}
+            className="pointer-events-none absolute left-0 top-0 z-0 size-20 opacity-50 dark:hidden sm:size-28 sm:opacity-40 md:-left-[60px] md:-top-8 md:size-[140px] lg:-left-[80px] lg:-top-[40px] lg:size-[166px]"
+            unoptimized
+          />
+          <Image
+            src="/images/working-process/dark/card-corner-tl.svg"
+            alt=""
+            aria-hidden
+            width={166}
+            height={166}
+            className="pointer-events-none absolute left-0 top-0 z-0 hidden size-20 opacity-50 dark:block sm:size-28 sm:opacity-40 md:-left-[60px] md:-top-8 md:size-[140px] lg:-left-[80px] lg:-top-[40px] lg:size-[166px]"
+            unoptimized
+          />
+        </>
       ) : null}
 
       {corner === 'br' ? (
-        <Image
-          src="/images/working-process/card-corner-br.svg"
-          alt=""
-          aria-hidden
-          width={166}
-          height={166}
-          className="pointer-events-none absolute bottom-0 right-0 z-0 size-20 opacity-50 sm:size-28 sm:opacity-40 md:-bottom-8 md:-right-[60px] md:size-[140px] lg:-bottom-[40px] lg:-right-[80px] lg:size-[166px]"
-          unoptimized
-        />
+        <>
+          <Image
+            src="/images/working-process/card-corner-br.svg"
+            alt=""
+            aria-hidden
+            width={166}
+            height={166}
+            className="pointer-events-none absolute bottom-0 right-0 z-0 size-20 opacity-50 dark:hidden sm:size-28 sm:opacity-40 md:-bottom-8 md:-right-[60px] md:size-[140px] lg:-bottom-[40px] lg:-right-[80px] lg:size-[166px]"
+            unoptimized
+          />
+          <Image
+            src="/images/working-process/dark/card-corner-br.svg"
+            alt=""
+            aria-hidden
+            width={166}
+            height={166}
+            className="pointer-events-none absolute bottom-0 right-0 z-0 hidden size-20 opacity-50 dark:block sm:size-28 sm:opacity-40 md:-bottom-8 md:-right-[60px] md:size-[140px] lg:-bottom-[40px] lg:-right-[80px] lg:size-[166px]"
+            unoptimized
+          />
+        </>
       ) : null}
 
       <div
@@ -252,7 +324,7 @@ function ProcessStepCard({
               {title}
             </h3>
           </div>
-          <p className="text-sm font-medium leading-normal text-[#071431] sm:text-base">
+          <p className="text-sm font-medium leading-normal text-[#071431] dark:text-white sm:text-base">
             {description}
           </p>
         </div>
@@ -266,6 +338,7 @@ export default function WorkingProcessSection() {
     <PrimarySection
       id="how-it-works"
       bg="section-4"
+      darkBg="section-4-dark"
       className="overflow-hidden py-12 sm:py-16 lg:py-[84px]"
     >
       <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
@@ -280,8 +353,8 @@ export default function WorkingProcessSection() {
             </>
           }
           subtitle="A simple and efficient process designed to deliver fast and reliable results. Just place your order, and our system will handle the rest to help grow your social media presence smoothly."
-          titleClassName="max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]"
-          subtitleClassName="max-w-[868px] px-1 text-center text-sm text-[#4f586d] sm:px-0 sm:text-base md:text-lg"
+          titleClassName="max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#13203b] dark:text-[#efedf1] sm:text-[32px] md:text-[40px] lg:text-[48px]"
+          subtitleClassName="max-w-[868px] px-1 text-center text-sm text-[#4f586d] dark:text-[#c1c4cc] sm:px-0 sm:text-base md:text-lg"
           className="gap-3 sm:gap-4"
         />
 

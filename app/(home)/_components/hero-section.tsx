@@ -29,7 +29,7 @@ export default function HeroSection() {
                   alt=""
                   width={24}
                   height={24}
-                  className="size-6 rounded-full border border-white object-cover"
+                  className="size-6 rounded-full border border-white object-cover dark:border-[0.5px]"
                 />
               ))}
             </div>
@@ -81,10 +81,10 @@ export default function HeroSection() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-            <div className="inline-flex h-10 shrink-0 rounded-[10px] bg-brand-gradient p-px sm:h-11 md:h-[50px] md:w-[180px]">
+            <div className="inline-flex h-10 shrink-0 rounded-[10px] bg-brand-gradient p-px sm:h-11 md:h-[50px] md:w-[180px] dark:bg-transparent dark:p-0">
               <button
                 type="button"
-                className="flex h-full w-full items-center justify-center rounded-[9px] bg-white px-4 text-sm transition-colors hover:bg-white/95 sm:px-5 sm:text-base md:px-[18px] dark:bg-[#231a2b] dark:hover:bg-[#2d2436]"
+                className="flex h-full w-full items-center justify-center rounded-[9px] border border-transparent bg-white px-4 text-sm transition-colors hover:bg-white/95 sm:px-5 sm:text-base md:px-[18px] dark:rounded-[10px] dark:border-[#cb7ef7] dark:bg-[rgba(104,104,104,0.11)] dark:hover:bg-[rgba(104,104,104,0.16)]"
               >
                 <span className="font-semibold text-gradient dark:bg-none dark:bg-clip-border dark:text-white">
                   Sign In

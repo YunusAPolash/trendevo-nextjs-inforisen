@@ -1,0 +1,22 @@
+<svg width="600" height="232" viewBox="0 0 600 232" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_card2_dark)">
+<rect width="600" height="232" fill="#170521"/>
+<g filter="url(#filter_glow_tr)" style="mix-blend-mode:plus-lighter">
+<circle cx="603.5" cy="-31.5" r="110.5" fill="#D152FF"/>
+</g>
+<g filter="url(#filter_glow_bl)" style="mix-blend-mode:plus-lighter">
+<ellipse cx="-4.5" cy="246.5" rx="20.5" ry="110.5" fill="#D152FF"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_card2_dark">
+<rect width="600" height="232" rx="16" fill="white"/>
+</clipPath>
+<filter id="filter_glow_tr" x="283" y="-352" width="641" height="641" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feGaussianBlur stdDeviation="100"/>
+</filter>
+<filter id="filter_glow_bl" x="-325" y="-74" width="641" height="641" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feGaussianBlur stdDeviation="100"/>
+</filter>
+</defs>
+</svg>
