@@ -136,7 +136,7 @@ function SocialLink({
         aria-hidden
       />
       <Image
-        src="/images/icons/footer-social-hex-bg-dark.svg"
+        src="/images/icons/footer-hex.png"
         alt=""
         fill
         className="hidden object-contain dark:block"
@@ -186,7 +186,7 @@ export default function FooterSection() {
     <PrimarySection
       bg="section-9"
       darkBg="section-footer-dark"
-      className="mx-3 my-5 overflow-hidden rounded-2xl px-3 py-8 sm:mx-6 sm:my-8 sm:rounded-3xl sm:px-4 sm:py-12 lg:mx-12 lg:my-10 lg:py-[60px]"
+      className="mx-3 my-5 overflow-hidden rounded-2xl px-3 py-8 sm:mx-6 sm:my-8 sm:rounded-3xl sm:px-4 sm:py-12 lg:mx-12 lg:my-10 lg:py-[60px] bg-[100%_100%]"
     >
       <footer className="mx-auto flex max-w-[1440px] flex-col gap-6 px-0 sm:gap-10">
         <div className="grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-10 2xl:grid-cols-6 2xl:gap-x-6">
