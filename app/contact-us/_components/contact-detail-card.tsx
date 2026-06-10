@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-import PrimaryCard from '@/components/cards/primary-card';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -27,22 +26,22 @@ export default function ContactDetailCard({
   buttonClassName,
 }: ContactDetailCardProps) {
   return (
-    <PrimaryCard
-      bg="card-1"
+    <article
       className={cn(
-        'h-full gap-6 rounded-2xl border border-dashed bg-white p-5 ring-0',
+        'flex h-auto w-full flex-col gap-5 rounded-[16px] border border-dashed bg-transparent p-4 sm:gap-6 sm:p-5 xl:h-full',
         borderColor,
       )}
     >
-      <div className="relative flex size-[120px] items-center justify-center">
+      <div className="relative flex size-[100px] shrink-0 items-center justify-center sm:size-[120px]">
         <Image
           src="/images/contact-us/contact-us-icon-hex-bg.svg"
           alt=""
           fill
           aria-hidden
+          unoptimized
           className="object-contain"
         />
-        <div className="relative z-10 h-[68px] w-[68px]">
+        <div className="relative z-10 h-14 w-14 sm:h-[68px] sm:w-[68px]">
           <Image
             src={iconSrc}
             alt={iconAlt}
@@ -54,17 +53,17 @@ export default function ContactDetailCard({
 
       <div className="flex flex-1 flex-col gap-6">
         <div className="space-y-[18px]">
-          <h2 className="text-2xl font-bold text-[#13203b]">{title}</h2>
+          <h3 className="text-xl font-bold leading-tight text-[#13203b] sm:text-2xl">{title}</h3>
           <div className="space-y-2">
-            <p className="text-sm leading-relaxed text-[#343e56]">{description}</p>
-            <div className="text-base leading-relaxed">{detail}</div>
+            <p className="text-sm leading-[1.6] text-[#343e56]">{description}</p>
+            <div className="text-base leading-[1.6]">{detail}</div>
           </div>
         </div>
 
         {buttonLabel ? (
           <Button
             className={cn(
-              'h-[50px] w-fit rounded-[10px] px-[18px] text-base font-semibold text-white hover:opacity-90',
+              'mt-auto h-11 w-full justify-center rounded-[10px] px-4 text-sm font-semibold text-white hover:opacity-90 sm:h-[50px] sm:w-fit sm:justify-start sm:px-[18px] sm:text-base',
               buttonClassName,
             )}
           >
@@ -73,6 +72,6 @@ export default function ContactDetailCard({
           </Button>
         ) : null}
       </div>
-    </PrimaryCard>
+    </article>
   );
 }
