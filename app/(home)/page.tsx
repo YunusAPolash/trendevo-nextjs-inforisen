@@ -7,7 +7,7 @@ import PaymentMethodsSection from '@/app/(home)/_components/payment-methods-sect
 import PlatformMarqueeSection from '@/app/(home)/_components/platform-marquee-section';
 import PricingSection from '@/app/(home)/_components/pricing-section';
 import StatsSection from '@/app/(home)/_components/stats-section';
-import { pageData } from '@/app/(home)/pageData';
+import { data as homePageData } from '@/app/(home)/page-data';
 import TestimonialsSection from '@/components/sections/testimonials-section';
 import WhyChooseUsSection from '@/app/(home)/_components/why-choose-us-section';
 import WorkingProcessSection from '@/app/(home)/_components/working-process-section';
@@ -27,8 +27,8 @@ export default function Home() {
       <PlatformMarqueeSection />
       <AdvantagesSection />
       <PricingSection />
-      <TestimonialsSection data={pageData.testimonials} />
-      <FaqSection data={pageData.faq} />
+      <TestimonialsSection data={homePageData.testimonials} />
+      <FaqSection data={homePageData.faq} />
       <HomeBlog />
       <CtaSection />
     </>

@@ -1,4 +1,7 @@
-import type { FaqItem, FaqSectionData } from '@/components/sections/faq-section';
+import type {
+  FaqItem,
+  FaqSectionData,
+} from '@/components/sections/faq-section';
 import type { TestimonialsSectionData } from '@/components/sections/testimonials-section';
 
 type SEO = {
@@ -224,7 +227,7 @@ const homeTestimonialQuote =
 
 const homeYoutubeReelVideoId = 'LXb3EKWsInQ';
 
-export const pageData: HomePageData = {
+export const data: HomePageData = {
   seo: {
     title: 'TrendEvo | Trusted SMM Panel',
     description:
@@ -332,7 +335,8 @@ export const pageData: HomePageData = {
           {
             number: '01',
             title: 'Facebook Post Likes-',
-            description: 'Boost post engagement and credibility with real likes.',
+            description:
+              'Boost post engagement and credibility with real likes.',
           },
           {
             number: '02',
@@ -373,7 +377,8 @@ export const pageData: HomePageData = {
           {
             number: '01',
             title: 'Instagram Followers-',
-            description: 'Increase your follower count with real, active users.',
+            description:
+              'Increase your follower count with real, active users.',
           },
           {
             number: '02',
@@ -1060,8 +1065,7 @@ export const pageData: HomePageData = {
     },
     leftItems: [
       {
-        title:
-          'Lowest-Cost gt<SMM> and gt<Social Media> Marketing Services',
+        title: 'Lowest-Cost gt<SMM> and gt<Social Media> Marketing Services',
         description:
           'Affordable SMM services let businesses, freelancers, and creators grow online fast. Gain likes, followers, and engagement across Instagram, Facebook, and Twitter. Start small, test, and scale campaigns while boosting reach and visibility—maximizing results without overspending.',
       },
@@ -1074,14 +1078,12 @@ export const pageData: HomePageData = {
     ],
     rightItems: [
       {
-        title:
-          'Multiple gt<Safe Payment> Options for gt<SMM> Orders',
+        title: 'Multiple gt<Safe Payment> Options for gt<SMM> Orders',
         description:
           'Enjoy multiple safe payment options, including cards, PayPal, and cryptocurrencies.All transactions are secure, encrypted, and fraud-protected for peace of mind.\n\nFocus on growing your social media presence without any payment worries.',
       },
       {
-        title:
-          '24/7 Live Support for All gt<SMM Services> What You Needs',
+        title: '24/7 Live Support for All gt<SMM Services> What You Needs',
         description:
           'Get 24/7 live support for all your SMM and Instagram panel needs.Instant help ensures smooth campaigns, quick issue resolution, and peace of mind.Focus on growth while experts are always ready to assist.',
       },
@@ -1332,11 +1334,6 @@ export const pageData: HomePageData = {
     subtitle:
       'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
     bg: 'section-7',
-    ctaTitle: 'Still have questions?',
-    ctaSubtitle:
-      "Can't find the answer you're looking for? Please gt<get in touch> with our team.",
-    ctaButtonLabel: 'Get in Touch',
-    ctaButtonHref: '#contact',
     items: [
       {
         question: 'What is an SMM panel and how does TrendEvo work?',

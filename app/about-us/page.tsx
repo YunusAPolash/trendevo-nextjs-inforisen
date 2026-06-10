@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
-import { pageData } from '@/app/(home)/pageData';
 import CtaSection from '@/components/sections/cta-section';
 import FaqSection from '@/components/sections/faq-section';
 import HeroSection from '@/components/sections/hero-section';
@@ -62,7 +61,7 @@ export default function AboutUsPage() {
       <StatsMarqueeSection />
       <TrustSection />
       <TeamSection />
-      <FaqSection data={pageData.faq} />
+      <FaqSection />
       <CtaSection
         title={
           <>

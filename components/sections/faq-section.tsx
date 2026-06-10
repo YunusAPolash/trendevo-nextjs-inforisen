@@ -20,20 +20,16 @@ export type FaqItem = {
 };
 
 export type FaqSectionData = {
-  label: string;
-  title: string;
-  subtitle: string;
-  items: FaqItem[];
-  bg: SectionBgKey;
+  label?: string;
+  title?: string;
+  subtitle?: string;
+  items?: FaqItem[];
+  bg?: SectionBgKey;
   className?: string;
-  ctaTitle: string;
-  ctaSubtitle: string;
-  ctaButtonLabel: string;
-  ctaButtonHref: string;
 };
 
 export type FaqSectionProps = {
-  data: FaqSectionData;
+  data?: FaqSectionData;
 };
 
 function splitFaqColumns(items: FaqItem[]) {
@@ -56,14 +52,22 @@ function FaqColumn({ items, columnId }: { items: FaqItem[]; columnId: string }) 
   );
 }
 
-export default function FaqSection({ data }: FaqSectionProps) {
-  const { label, title, subtitle, items } = data;
+export default function FaqSection({ data = {} }: FaqSectionProps) {
+  const {
+    label = 'FAQ',
+    title = 'gt<Frequently> Asked Questions',
+    subtitle = 'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+    items = [],
+    bg = 'section-7',
+    className,
+  } = data;
   const [leftColumn, rightColumn] = splitFaqColumns(items);
+  const hasFaqItems = items.length > 0;
 
   return (
     <PrimarySection
-      bg={data.bg}
-      className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', data.className)}
+      bg={bg}
+      className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
     >
       <div className="container relative flex flex-col gap-8 sm:gap-12">
         <Image
@@ -94,10 +98,12 @@ export default function FaqSection({ data }: FaqSectionProps) {
           className="relative z-10 mx-auto"
         />
 
-        <div className="relative z-10 grid items-start gap-4 sm:gap-6 lg:grid-cols-2">
-          <FaqColumn items={leftColumn} columnId="left" />
-          <FaqColumn items={rightColumn} columnId="right" />
-        </div>
+        {hasFaqItems ? (
+          <div className="relative z-10 grid items-start gap-4 sm:gap-6 lg:grid-cols-2">
+            <FaqColumn items={leftColumn} columnId="left" />
+            <FaqColumn items={rightColumn} columnId="right" />
+          </div>
+        ) : null}
 
         <div
           className="relative z-10 mx-auto w-full max-w-4xl rounded-[14px] border border-[#d181ff]/60 px-4 py-4 sm:px-7 sm:py-[22px]"
@@ -117,18 +123,20 @@ export default function FaqSection({ data }: FaqSectionProps) {
                   className="size-9 rotate-[-20deg] object-contain"
                 />
                 <h3 className="text-gradient text-sm font-medium sm:text-base">
-                  {renderText(data.ctaTitle)}
+                  Still have questions?
                 </h3>
               </div>
               <p className="text-sm leading-relaxed text-[#071431] sm:text-base">
-                {renderText(data.ctaSubtitle)}
+                {renderText(
+                  "Can't find the answer you're looking for? Please gt<get in touch> with our team.",
+                )}
               </p>
             </div>
             <Button
               asChild
               className="bg-brand-gradient h-10 w-full shrink-0 rounded-xl border-0 px-5 text-sm font-semibold text-white shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] hover:opacity-90 sm:h-[50px] sm:w-auto sm:text-base"
             >
-              <Link href={data.ctaButtonHref}>{data.ctaButtonLabel}</Link>
+              <Link href="#contact">Get in Touch</Link>
             </Button>
           </div>
         </div>
