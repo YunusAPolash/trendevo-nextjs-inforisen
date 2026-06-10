@@ -28,6 +28,7 @@ type Platform = {
   label: string;
   icon: string;
   iconClassName?: string;
+  decorationImage: string;
   marketingTitle: string;
   description: string;
   services: ServiceItem[];
@@ -38,6 +39,7 @@ const platforms: Platform[] = [
     id: 'facebook',
     label: 'Facebook',
     icon: '/images/our-services/platforms/facebook.png',
+    decorationImage: '/images/our-services/decorations/facebook-right.png',
     marketingTitle: 'Facebook Marketing Services',
     description:
       'Boost your brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -79,6 +81,7 @@ const platforms: Platform[] = [
     id: 'instagram',
     label: 'Instagram',
     icon: '/images/our-services/platforms/instagram.png',
+    decorationImage: '/images/our-services/decorations/instagram-service.png',
     marketingTitle: 'Instagram Marketing Services',
     description:
       'Grow your Instagram presence with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -120,6 +123,7 @@ const platforms: Platform[] = [
     label: 'X (Twitter)',
     icon: '/images/our-services/platforms/twitter.png',
     iconClassName: 'scale-150',
+    decorationImage: '/images/our-services/decorations/twitter-service.png',
     marketingTitle: 'X (Twitter) Marketing Services',
     description:
       'Amplify your voice on X with followers, retweets, and engagement that positions your brand at the center of trending conversations.',
@@ -160,6 +164,7 @@ const platforms: Platform[] = [
     id: 'youtube',
     label: 'YouTube',
     icon: '/images/our-services/platforms/youtube.png',
+    decorationImage: '/images/our-services/decorations/youtube-service.png',
     marketingTitle: 'YouTube Marketing Services',
     description:
       'Accelerate channel growth with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -200,6 +205,7 @@ const platforms: Platform[] = [
     id: 'tiktok',
     label: 'TikTok',
     icon: '/images/our-services/platforms/tiktok.png',
+    decorationImage: '/images/our-services/decorations/tiktok-service.png',
     marketingTitle: 'TikTok Marketing Services',
     description:
       'Go viral faster with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -240,6 +246,7 @@ const platforms: Platform[] = [
     id: 'linkedin',
     label: 'LinkedIn',
     icon: '/images/our-services/platforms/linkedin.png',
+    decorationImage: '/images/our-services/decorations/lindein-service.png',
     marketingTitle: 'LinkedIn Marketing Services',
     description:
       'Strengthen your professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -280,6 +287,7 @@ const platforms: Platform[] = [
     id: 'telegram',
     label: 'Telegram',
     icon: '/images/our-services/platforms/telegram.png',
+    decorationImage: '/images/our-services/decorations/telegram-service.png',
     marketingTitle: 'Telegram Marketing Services',
     description:
       'Grow your Telegram channel or group with members and engagement that builds an active, responsive community.',
@@ -320,6 +328,7 @@ const platforms: Platform[] = [
     id: 'discord',
     label: 'Discord',
     icon: '/images/our-services/platforms/discord.png',
+    decorationImage: '/images/our-services/decorations/discord-service.png',
     marketingTitle: 'Discord Marketing Services',
     description:
       'Build thriving Discord communities with members, online activity, and engagement that keeps your server active.',
@@ -360,6 +369,7 @@ const platforms: Platform[] = [
     id: 'spotify',
     label: 'Spotify',
     icon: '/images/our-services/platforms/spotify.png',
+    decorationImage: '/images/our-services/decorations/spotify-service.png',
     marketingTitle: 'Spotify Marketing Services',
     description:
       'Increase your music reach with Spotify plays, followers, and playlist placements that grow your listener base.',
@@ -400,6 +410,7 @@ const platforms: Platform[] = [
     id: 'soundcloud',
     label: 'SoundCloud',
     icon: '/images/our-services/platforms/soundcloud.png',
+    decorationImage: '/images/our-services/decorations/soundcloud-service.png',
     marketingTitle: 'SoundCloud Marketing Services',
     description:
       'Elevate your SoundCloud profile with plays, followers, and reposts that help your tracks gain traction.',
@@ -440,6 +451,7 @@ const platforms: Platform[] = [
     id: 'snapchat',
     label: 'Snapchat',
     icon: '/images/our-services/platforms/snapchat.png',
+    decorationImage: '/images/our-services/decorations/snapchat-service.png',
     marketingTitle: 'Snapchat Marketing Services',
     description:
       'Grow your Snapchat presence with followers, views, and story engagement that connects you with a younger audience.',
@@ -480,6 +492,8 @@ const platforms: Platform[] = [
     id: 'website-traffic',
     label: 'Website Traffic',
     icon: '/images/our-services/platforms/web.png',
+    decorationImage:
+      '/images/our-services/decorations/website-traffic-service.png',
     marketingTitle: 'Website Traffic Services',
     description:
       'Drive targeted visitors to your website with high-quality traffic that improves rankings, conversions, and online visibility.',
@@ -539,44 +553,46 @@ function HexBgIcon({ className }: { className?: string }) {
   );
 }
 
-function ServiceTopRightDecoration() {
+function ServiceTopRightDecoration({ imageSrc }: { imageSrc: string }) {
   return (
     <div
       aria-hidden
       className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-full max-w-[1920px] -translate-x-1/2 lg:block"
     >
-      {/* Figma 1524:19712 — top-right at top 107px in 1920px frame */}
       <div className="absolute left-[91.5625%] top-[107px] h-[212px] w-[217.591px] overflow-hidden blur-[2px]">
-        <Image
-          src="/images/our-services/decorations/facebook-right.png"
-          alt=""
-          aria-hidden
-          width={2000}
-          height={2000}
-          className="absolute left-[-23.27%] top-[-24.25%] h-[146.52%] w-[142.76%] max-w-none"
-          unoptimized
-        />
+        <div className="relative size-full">
+          <Image
+            key={imageSrc}
+            src={imageSrc}
+            alt=""
+            aria-hidden
+            fill
+            className="object-contain object-center"
+            sizes="218px"
+            unoptimized
+          />
+        </div>
       </div>
     </div>
   );
 }
 
-function ServiceBottomLeftDecoration() {
+function ServiceBottomLeftDecoration({ imageSrc }: { imageSrc: string }) {
   return (
     <div
       aria-hidden
       className="pointer-events-none absolute bottom-[88px] left-[calc((100%-100vw)/2-84px)] z-0 hidden h-[274px] w-[273px] items-center justify-center lg:flex"
     >
-      {/* Figma 1524:19711 — anchored to service card, left -83.66px at 1920px */}
       <div className="-rotate-[21deg]">
         <div className="relative h-[212px] w-[211px] overflow-hidden blur-[2px]">
           <Image
-            src="/images/our-services/decorations/facebook-left.png"
+            key={imageSrc}
+            src={imageSrc}
             alt=""
             aria-hidden
-            width={2000}
-            height={2000}
-            className="absolute left-[-26.42%] top-[-24.18%] h-[148.81%] w-[149.7%] max-w-none"
+            fill
+            className="object-contain object-center"
+            sizes="211px"
             unoptimized
           />
         </div>
@@ -687,7 +703,7 @@ export default function OurService() {
       bg="section-2"
       className="overflow-hidden py-12 sm:py-16 lg:py-20"
     >
-      <ServiceTopRightDecoration />
+      <ServiceTopRightDecoration imageSrc={activePlatform.decorationImage} />
 
       <div className="container relative z-10 flex flex-col items-center gap-8 sm:gap-10 lg:gap-12">
         <SectionHeading
@@ -716,7 +732,7 @@ export default function OurService() {
           </div>
 
           <div className="relative">
-            <ServiceBottomLeftDecoration />
+            <ServiceBottomLeftDecoration imageSrc={activePlatform.decorationImage} />
 
             <article className="relative z-10 flex flex-col items-center justify-between gap-6 rounded-[12px] border border-[#d181ff] p-4 sm:gap-8 sm:p-6 lg:flex-row lg:py-7 lg:pl-7 lg:pr-8">
             <div className="relative h-[220px] w-full max-w-[571px] shrink-0 overflow-hidden rounded-2xl sm:h-[320px] md:h-[420px] lg:h-[496px]">

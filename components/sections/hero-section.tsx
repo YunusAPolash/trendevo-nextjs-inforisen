@@ -453,7 +453,9 @@ export default function HeroSection({
   return (
     <PrimarySection
       bg={bg}
-      className={cn(sectionClassByVariant[variant], sectionClassName)}
+      className={cn(sectionClassByVariant[variant], sectionClassName)
+        
+      }
     >
       {isContentVariant ? <div className="container">{grid}</div> : grid}
     </PrimarySection>
