@@ -2,13 +2,17 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import {
   FaqAccordion,
   FaqAccordionContent,
   FaqAccordionItem,
   FaqAccordionTrigger,
 } from '@/components/ui/faq-accordion';
-import PrimarySection, { type SectionBgKey } from '@/components/sections/primary-section';
+import PrimarySection, {
+  type SectionBgKey,
+  type SectionDarkBgKey,
+} from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -21,10 +25,11 @@ export type FaqItem = {
 
 export type FaqSectionData = {
   label?: string;
-  title?: string;
+  title?: string | ReactNode;
   subtitle?: string;
   items?: FaqItem[];
   bg?: SectionBgKey;
+  darkBg?: SectionDarkBgKey;
   className?: string;
 };
 
@@ -39,7 +44,7 @@ function splitFaqColumns(items: FaqItem[]) {
 
 function FaqColumn({ items, columnId }: { items: FaqItem[]; columnId: string }) {
   return (
-    <div className="rounded-xl border border-[#f2e9f8] bg-[rgba(143,42,205,0.1)] p-3 sm:p-4">
+    <div className="rounded-xl border border-[#f2e9f8] bg-[rgba(143,42,205,0.1)] p-3 sm:p-4 dark:border-[rgba(215,148,255,0)] dark:bg-[rgba(112,23,165,0.11)]">
       <FaqAccordion type="single" collapsible>
         {items.map((item, index) => (
           <FaqAccordionItem key={item.question} value={`${columnId}-${index}`}>
@@ -59,6 +64,7 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
     subtitle = 'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
     items = [],
     bg = 'section-7',
+    darkBg = 'section-4-dark',
     className,
   } = data;
   const [leftColumn, rightColumn] = splitFaqColumns(items);
@@ -67,6 +73,7 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
   return (
     <PrimarySection
       bg={bg}
+      darkBg={darkBg}
       className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
     >
       <div className="container relative flex flex-col gap-8 sm:gap-12">
@@ -106,11 +113,11 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
         ) : null}
 
         <div
-          className="relative z-10 mx-auto w-full max-w-4xl rounded-[14px] border border-[#d181ff]/60 px-4 py-4 sm:px-7 sm:py-[22px]"
-          style={{
-            backgroundImage:
-              'linear-gradient(119.56deg, rgb(255, 255, 255) 3.42%, rgb(255, 243, 253) 55.68%, rgb(255, 255, 255) 107.93%)',
-          }}
+          className={cn(
+            'relative z-10 mx-auto w-full max-w-4xl rounded-[14px] border border-[#d181ff]/60 px-4 py-4 sm:px-7 sm:py-[22px]',
+            'bg-[linear-gradient(119.56deg,rgb(255,255,255)_3.42%,rgb(255,243,253)_55.68%,rgb(255,255,255)_107.93%)]',
+            'dark:border-[#8a22c8]/60 dark:bg-[#260d35] dark:bg-none',
+          )}
         >
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div className="space-y-1.5">
@@ -126,7 +133,7 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
                   Still have questions?
                 </h3>
               </div>
-              <p className="text-sm leading-relaxed text-[#071431] sm:text-base">
+              <p className="text-sm leading-relaxed text-[#071431] sm:text-base dark:text-white">
                 {renderText(
                   "Can't find the answer you're looking for? Please gt<get in touch> with our team.",
                 )}

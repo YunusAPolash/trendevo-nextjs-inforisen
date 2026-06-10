@@ -22,6 +22,7 @@ export default function AboutUsPage() {
       <HeroSection
         bg="section-1"
         variant="wide"
+        decoration="contact"
         eyebrow="Who We Are"
         title={
           <>
@@ -49,7 +50,7 @@ export default function AboutUsPage() {
           </Button>
         }
         illustration={{
-          src: '/images/about/about-hero-character.png',
+          src: '/images/about/about-team-character.png',
           alt: 'TrendEvo specialist representing trusted SMM panel services',
           width: 547,
           height: 673,

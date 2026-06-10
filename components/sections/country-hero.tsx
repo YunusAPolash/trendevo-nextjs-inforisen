@@ -21,11 +21,14 @@ export default function CountryHero({ slug }: CountryHeroProps) {
 
   return (
     <HeroSection
+    sectionClassName=""
       bg="section-1"
       variant="wide-responsive"
       eyebrow={eyebrow}
       title={title}
       description={description}
+  
+
       actions={
         <div className="flex flex-wrap items-center gap-3">
           <Button

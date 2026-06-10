@@ -3,7 +3,6 @@ import Image from 'next/image';
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
-import { cn } from '@/lib/utils';
 
 import {
   getCountryWhyContent,
@@ -84,24 +83,6 @@ function ColumnConnector({ src }: { src: string }) {
   );
 }
 
-function FeatureColumn({
-  features,
-  connectorSrc,
-  className,
-}: {
-  features: [CountryWhyFeature, CountryWhyFeature];
-  connectorSrc: string;
-  className?: string;
-}) {
-  return (
-    <div className={cn('flex w-full min-w-0 flex-col items-center gap-4', className)}>
-      <CountryWhyCard {...features[0]} />
-      <ColumnConnector src={connectorSrc} />
-      <CountryWhyCard {...features[1]} />
-    </div>
-  );
-}
-
 type CountryWhyProps = {
   slug: CountryWhySlug;
 };
@@ -143,28 +124,38 @@ export default function CountryWhy({ slug }: CountryWhyProps) {
           subtitleClassName={subtitleClassName}
         />
 
-        <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
-          <FeatureColumn
-            features={leftFeatures}
-            connectorSrc="/images/country/uk/why-column-connector-left.svg"
-            className="lg:max-w-[696px]"
-          />
+        <div className="relative flex w-full flex-col gap-6 sm:gap-8">
+          <div className="grid w-full gap-6 sm:gap-14 lg:grid-cols-2">
+            <CountryWhyCard {...leftFeatures[0]} />
+            <CountryWhyCard {...rightFeatures[0]} />
+          </div>
 
-          <div className="relative z-10 flex shrink-0 justify-center">
+          <div className="relative z-10 flex w-full justify-center ">
             <Image
               src={centerFlag.src}
               alt={centerFlag.alt}
               width={centerFlag.width}
               height={centerFlag.height}
-              className="h-[130px] w-[180px] rounded-[20px] object-cover xl:w-[150px]"
+              className="h-[120px] w-[120px] shrink-0 rounded-[20px] object-cover xl:w-[150px]"
             />
           </div>
 
-          <FeatureColumn
-            features={rightFeatures}
-            connectorSrc="/images/country/uk/why-column-connector-right.svg"
-            className="lg:max-w-[696px]"
-          />
+          <div className="grid w-full gap-6 sm:gap-14 lg:grid-cols-2">
+            <CountryWhyCard {...leftFeatures[1]} />
+            <CountryWhyCard {...rightFeatures[1]} />
+          </div>
+
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 top-0 bottom-0 hidden lg:grid lg:grid-cols-2 lg:gap-8"
+          >
+            <div className="flex items-center justify-center">
+              <ColumnConnector src="/images/country/uk/why-column-connector-left.svg" />
+            </div>
+            <div className="flex items-center justify-center">
+              <ColumnConnector src="/images/country/uk/why-column-connector-right.svg" />
+            </div>
+          </div>
         </div>
       </div>
     </PrimarySection>

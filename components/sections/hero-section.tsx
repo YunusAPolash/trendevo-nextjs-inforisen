@@ -115,7 +115,7 @@ const illustrationWrapClassByVariant: Record<HeroLayoutVariant, string> = {
     'mx-auto w-full min-w-0 max-w-[669px] lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end',
   'wide-responsive':
     'relative mx-auto w-full min-w-0 max-w-[581px] overflow-visible lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end',
-  wide: 'relative mx-auto w-full min-w-0 lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end',
+  wide: 'relative mx-auto w-full min-w-0 overflow-visible lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end',
   content: 'relative mx-auto w-full',
 };
 
@@ -453,7 +453,9 @@ export default function HeroSection({
   return (
     <PrimarySection
       bg={bg}
-      className={cn(sectionClassByVariant[variant], sectionClassName)}
+      className={cn(sectionClassByVariant[variant], sectionClassName)
+        
+      }
     >
       {isContentVariant ? <div className="container">{grid}</div> : grid}
     </PrimarySection>

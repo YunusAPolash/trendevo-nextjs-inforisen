@@ -13,6 +13,7 @@ type SectionHeadingProps = {
   underlineWidth?: number;
   titleClassName?: string;
   subtitleClassName?: string;
+  badgeClassName?: string;
 };
 
 const DEFAULT_UNDERLINE_SRC = '/images/our-services/ui/underline.svg';
@@ -32,6 +33,7 @@ export default function SectionHeading({
   underlineWidth = DEFAULT_UNDERLINE_WIDTH,
   titleClassName,
   subtitleClassName,
+  badgeClassName,
 }: SectionHeadingProps) {
   return (
     <div
@@ -54,7 +56,12 @@ export default function SectionHeading({
             align === 'center' && 'items-center',
           )}
         >
-          <span className="text-gradient text-[22px] font-semibold leading-[1.45]">
+          <span
+            className={cn(
+              'text-gradient text-[22px] font-semibold leading-[1.45]',
+              badgeClassName,
+            )}
+          >
             {badge}
           </span>
           <Image

@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import { ThemeProvider } from '@/components/theme-provider';
 import SiteHeader from '@/components/layout/site-header';
 import FooterSection from './(home)/_components/footer-section';
-
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -42,17 +42,17 @@ export default function RootLayout({
         inter.variable,
       )}
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})();`,
-          }}
-        />
-      </head>
       <body className="min-h-full flex flex-col">
-        <SiteHeader />
-        <main>{children}</main>
-        <FooterSection />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SiteHeader />
+          <main>{children}</main>
+          <FooterSection />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -25,9 +25,10 @@ function LeadingCard({
 }: ServiceLeadingFeature & { hexIconSrc: string; className?: string }) {
   return (
     <PrimaryCard
-      bg="card-10"
+      bg="card-8"
+      darkBg="card-8-dark"
       className={cn(
-        'relative flex min-h-[300px] flex-col justify-center gap-0 overflow-hidden rounded-2xl border border-[#e7abff]/70 p-0 px-4 py-3.5 ring-0',
+        'relative flex min-h-[300px] flex-col justify-center gap-0 overflow-hidden rounded-2xl border border-[#e7abff]/70 p-0 px-4 py-3.5 ring-0 dark:border-white/20',
         className,
       )}
     >
@@ -51,8 +52,16 @@ function LeadingCard({
                 aria-hidden
                 width={77}
                 height={77}
-                className="absolute inset-0 size-[77px]"
+                className="absolute inset-0 size-[77px] dark:hidden"
                 unoptimized={hexIconSrc.endsWith('.png')}
+              />
+              <Image
+                src="/images/why-choose-us/hex-icon-dark.svg"
+                alt=""
+                aria-hidden
+                width={77}
+                height={77}
+                className="absolute inset-0 hidden size-[77px] dark:block"
               />
               <div
                 className={cn(
@@ -86,11 +95,13 @@ function LeadingCard({
               height={12}
               className="size-3 shrink-0"
             />
-            <h3 className="text-lg font-semibold leading-none text-[#343e56] sm:text-[22px]">
+            <h3 className="text-lg font-semibold leading-none text-[#343e56] sm:text-[22px] dark:text-white">
               {title}
             </h3>
           </div>
-          <p className="text-base leading-normal text-[#313131]">{description}</p>
+          <p className="text-base leading-normal text-[#313131] dark:text-[#dfe0e4]">
+            {description}
+          </p>
         </div>
       </div>
     </PrimaryCard>
@@ -117,14 +128,18 @@ export default function ServiceLeading({ slug }: ServiceLeadingProps) {
   const hexIconSrc = '/images/why-choose-us/hex-icon.svg';
 
   return (
-    <PrimarySection className="relative overflow-hidden py-16 sm:py-20">
+    <PrimarySection
+      bg="section-11"
+      darkBg="section-13-dark"
+      className="relative overflow-hidden py-16 sm:py-20"
+    >
       <Image
         src="/images/service-smm-panel/leading-decorative-wave.svg"
         alt=""
         aria-hidden
         width={1000}
         height={932}
-        className="pointer-events-none absolute left-[-30%] top-[-50%] hidden h-auto w-[min(120vw,1000px)] rotate-[1.3deg] opacity-90 lg:block"
+        className="pointer-events-none absolute left-[-30%] top-[-50%] hidden h-auto w-[min(120vw,1000px)] rotate-[1.3deg] opacity-90 lg:block dark:hidden"
         unoptimized
       />
 
@@ -135,8 +150,15 @@ export default function ServiceLeading({ slug }: ServiceLeadingProps) {
           subtitle={subtitle}
           underlineSrc={underlineSrc}
           underlineWidth={underlineWidth}
-          titleClassName={titleClassName}
-          subtitleClassName={subtitleClassName}
+          badgeClassName="dark:bg-none dark:bg-clip-border dark:text-white"
+          titleClassName={cn(
+            titleClassName,
+            'text-[#13203b] dark:text-[#efedf1]',
+          )}
+          subtitleClassName={cn(
+            subtitleClassName,
+            'text-[#4f586d] dark:text-[#c1c4cc]',
+          )}
         />
 
         <div className="flex flex-col gap-8 lg:gap-10">

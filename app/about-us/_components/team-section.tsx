@@ -14,37 +14,23 @@ const checklistItems = [
 
 export default function TeamSection() {
   return (
-    <PrimarySection bg="section-4" className="overflow-hidden">
+    <PrimarySection bg="section-4" className="overflow-x-hidden">
       <div className="container py-16 lg:py-21">
-        <div className="relative flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
-          <div className="relative mx-auto aspect-567/698 w-full max-w-xl shrink-0 overflow-visible lg:mx-0">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+          <div className="relative mx-auto aspect-[567/698] w-full max-w-xl overflow-hidden lg:mx-0 lg:max-w-none">
             <div
               aria-hidden
               className="pointer-events-none absolute bottom-0 left-0 z-0 hidden h-28 w-full rounded-2xl bg-white/35 lg:block"
             />
 
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -left-56 top-0 z-10 hidden h-full w-full overflow-visible lg:block"
-            >
-              <Image
-                src="/images/about/about-team-character.png"
-                alt=""
-                width={952}
-                height={1024}
-                className="absolute inset-0 h-full w-full scale-110 object-cover object-top"
-                sizes="576px"
-              />
-            </div>
-
-            <div className="relative z-20 h-full w-full overflow-visible">
+            <div className="relative z-20 h-full w-full">
               <Image
                 src="/images/about/about-team-character.png"
                 alt="TrendEvo team specialist representing digital marketing expertise"
-                width={952}
-                height={1024}
-                className="absolute inset-0 h-full w-full scale-110 object-cover object-top"
-                sizes="576px"
+                fill
+                priority
+                className="object-contain object-bottom"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -64,7 +50,7 @@ export default function TeamSection() {
                   titleClassName="text-4xl leading-snug tracking-wide text-[#13203b] lg:text-5xl"
                 />
 
-                <p className="text-xl font-medium leading-normal text-[#404a60]">
+                <p className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl">
                   <span className="text-gradient font-semibold">RendEvo</span>
                   {
                     ' is powered by a skilled team of digital marketing specialists, software engineers, social media strategists, and customer success experts. Each member shares a single mission: to help '
@@ -77,7 +63,7 @@ export default function TeamSection() {
                   }
                 </p>
 
-                <p className="text-xl font-medium leading-normal text-[#404a60]">
+                <p className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl">
                   {'Our founder, '}
                   <span className="text-gradient font-semibold">
                     Seam Rahman
@@ -96,18 +82,21 @@ export default function TeamSection() {
                 </p>
               </div>
 
-              <ul className="flex max-w-3xl flex-col gap-4.5">
+              <ul className="flex w-full min-w-0 flex-col gap-4.5">
                 {checklistItems.map((item) => (
-                  <li key={item} className="flex items-center gap-2">
+                  <li
+                    key={item}
+                    className="flex w-full min-w-0 items-start gap-2"
+                  >
                     <Image
                       src="/images/icons/check-icon.svg"
                       alt=""
                       width={24}
                       height={24}
-                      className="size-6 shrink-0"
+                      className="mt-0.5 size-6 shrink-0"
                       aria-hidden
                     />
-                    <span className="text-xl font-medium leading-normal text-[#071431]">
+                    <span className="min-w-0 flex-1 text-base font-medium leading-normal break-words text-[#071431] sm:text-lg lg:text-xl">
                       {item}
                     </span>
                   </li>
@@ -117,11 +106,11 @@ export default function TeamSection() {
 
             <Button
               asChild
-              className="bg-brand-gradient h-13 w-fit gap-2 rounded-lg border-2 border-[#cc7aff] px-4.5 text-lg font-semibold text-white hover:opacity-90"
+              className="bg-brand-gradient h-13 w-fit max-w-full gap-2 rounded-lg border-2 border-[#cc7aff] px-4.5 text-lg font-semibold text-white hover:opacity-90"
             >
               <Link href="/services">
                 Our Services
-                <ChevronsRight className="size-6" aria-hidden />
+                <ChevronsRight className="size-6 shrink-0" aria-hidden />
               </Link>
             </Button>
           </div>

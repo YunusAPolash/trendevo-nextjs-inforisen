@@ -13,7 +13,8 @@ export type CtaServiceContent = {
 export type CtaServiceSlug =
   | 'facebook-smm-panel'
   | 'instagram-smm-panel'
-  | 'telegram-smm-panel';
+  | 'telegram-smm-panel'
+  | 'smm-panel-uk';
 
 export const ctaServiceContent: Record<CtaServiceSlug, CtaServiceContent> = {
   'facebook-smm-panel': {
@@ -58,6 +59,21 @@ export const ctaServiceContent: Record<CtaServiceSlug, CtaServiceContent> = {
     secondaryButtonLabel: 'See all Services',
     imageSrc: '/images/cta/cta-character.png',
     imageAlt: 'Start growing your Telegram channel with TrendEvo',
+  },
+  'smm-panel-uk': {
+    title: (
+      <>
+        Ready to{' '}
+        <span className="text-gradient">Grow Your Social Media in the UK</span>{' '}
+        with TrendEvo
+      </>
+    ),
+    description:
+      'Join thousands of UK businesses and creators growing faster with TrendEvo. Get started in under 60 seconds with fast delivery, real engagement, and 24/7 support tailored for the UK market.',
+    primaryButtonLabel: 'Get Started Now',
+    secondaryButtonLabel: 'See all Services',
+    imageSrc: '/images/cta/cta-character.png',
+    imageAlt: 'Start growing your social media presence in the UK with TrendEvo',
   },
 };
 
