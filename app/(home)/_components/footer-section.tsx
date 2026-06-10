@@ -70,8 +70,8 @@ const socialLinks = [
   },
 ] as const;
 
-const contactIconGradient =
-  'linear-gradient(48.65deg, rgb(206, 206, 206) 10.387%, rgb(255, 255, 255) 58.1%, rgb(253, 161, 255) 126.5%)';
+const contactIconLightGradient =
+  'bg-[linear-gradient(48.65deg,rgb(206,206,206)_10.387%,rgb(255,255,255)_58.1%,rgb(253,161,255)_126.5%)]';
 
 function FooterColumn({
   title,
@@ -84,7 +84,7 @@ function FooterColumn({
 }) {
   return (
     <div className={cn('flex min-w-0 w-full flex-col gap-3 sm:gap-[18px]', className)}>
-      <h3 className="text-base font-semibold tracking-[0.2px] text-[#13203b] sm:text-lg xl:text-xl">
+      <h3 className="text-base font-semibold tracking-[0.2px] text-[#13203b] sm:text-lg xl:text-xl dark:text-white">
         {title}
       </h3>
       {children}
@@ -103,7 +103,7 @@ function FooterLinkList({
         <li key={link.label}>
           <Link
             href={link.href}
-            className="text-[13px] font-medium leading-snug text-[#222e48] transition-colors hover:text-[#13203b] sm:text-sm sm:leading-normal"
+            className="text-[13px] font-medium leading-snug text-[#222e48] transition-colors hover:text-[#13203b] sm:text-sm sm:leading-normal dark:text-[#ebecef] dark:hover:text-white"
           >
             {link.label}
           </Link>
@@ -132,7 +132,14 @@ function SocialLink({
         src="/images/icons/footer-social-hex-bg.svg"
         alt=""
         fill
-        className="object-contain"
+        className="object-contain dark:hidden"
+        aria-hidden
+      />
+      <Image
+        src="/images/icons/footer-social-hex-bg-dark.svg"
+        alt=""
+        fill
+        className="hidden object-contain dark:block"
         aria-hidden
       />
       <Image
@@ -159,12 +166,15 @@ function ContactRow({
   return (
     <div className="flex min-w-0 items-start gap-2.5">
       <div
-        className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-white/75"
-        style={{ backgroundImage: contactIconGradient }}
+        className={cn(
+          'flex size-8 shrink-0 items-center justify-center rounded-lg border border-white/75',
+          contactIconLightGradient,
+          'dark:border-white/20 dark:bg-[rgba(255,255,255,0.09)] dark:bg-none',
+        )}
       >
         <Image src={iconSrc} alt={iconAlt} width={16} height={16} />
       </div>
-      <div className="min-w-0 flex-1 text-[13px] font-medium leading-relaxed break-words text-[#13203b] sm:text-sm">
+      <div className="min-w-0 flex-1 text-[13px] font-medium leading-relaxed break-words text-[#13203b] sm:text-sm dark:text-[#ebecef]">
         {children}
       </div>
     </div>
@@ -175,11 +185,12 @@ export default function FooterSection() {
   return (
     <PrimarySection
       bg="section-9"
+      darkBg="section-footer-dark"
       className="mx-3 my-5 overflow-hidden rounded-2xl px-3 py-8 sm:mx-6 sm:my-8 sm:rounded-3xl sm:px-4 sm:py-12 lg:mx-12 lg:my-10 lg:py-[60px]"
     >
       <footer className="mx-auto flex max-w-[1440px] flex-col gap-6 px-0 sm:gap-10">
         <div className="grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-10 2xl:grid-cols-6 2xl:gap-x-6">
-          <div className="flex w-full flex-col gap-4 border-b border-[#d99aff]/25 pb-6 sm:gap-6 sm:border-0 sm:pb-0 2xl:max-w-[339px]">
+          <div className="flex w-full flex-col gap-4 border-b border-[#d99aff]/25 pb-6 sm:gap-6 sm:border-0 sm:pb-0 2xl:max-w-[339px] dark:border-white/20">
             <div className="flex flex-col gap-3 sm:gap-[18px]">
               <Link href="/" className="relative inline-block h-10 w-[130px] sm:h-12 sm:w-[152px]">
                 <Image
@@ -189,7 +200,7 @@ export default function FooterSection() {
                   className="object-contain object-left"
                 />
               </Link>
-              <p className="text-[13px] font-medium leading-relaxed text-[#313131] sm:text-sm">
+              <p className="text-[13px] font-medium leading-relaxed text-[#313131] sm:text-sm dark:text-[#ebecef]">
                 Trend Evo Panel is a trusted{' '}
                 <span className="text-gradient">SMM panel in Bangladesh</span>,
                 offering fast, secure, and affordable social media growth
@@ -200,7 +211,7 @@ export default function FooterSection() {
             </div>
 
             <div className="flex flex-col gap-2.5 sm:gap-3.5">
-              <p className="text-base font-semibold tracking-[0.2px] text-[#13203b] sm:text-lg xl:text-xl">
+              <p className="text-base font-semibold tracking-[0.2px] text-[#13203b] sm:text-lg xl:text-xl dark:text-white">
                 Follow Us
               </p>
               <div className="flex flex-wrap gap-1 sm:gap-1.5">
@@ -234,7 +245,7 @@ export default function FooterSection() {
                 <li key={label}>
                   <Link
                     href="/#services"
-                    className="flex items-center justify-between gap-2 text-[13px] font-medium leading-snug text-[#222e48] transition-colors hover:text-[#13203b] sm:text-sm sm:leading-normal"
+                    className="flex items-center justify-between gap-2 text-[13px] font-medium leading-snug text-[#222e48] transition-colors hover:text-[#13203b] sm:text-sm sm:leading-normal dark:text-[#ebecef] dark:hover:text-white"
                   >
                     <span>{label}</span>
                     <Image
@@ -242,7 +253,7 @@ export default function FooterSection() {
                       alt=""
                       width={22}
                       height={22}
-                      className="size-[18px] shrink-0 rotate-180 sm:size-[22px]"
+                      className="size-[18px] shrink-0 rotate-180 sm:size-[22px] dark:invert"
                       aria-hidden
                     />
                   </Link>
@@ -253,7 +264,7 @@ export default function FooterSection() {
 
           <FooterColumn
             title="Contact Information"
-            className="border-t border-[#d99aff]/25 pt-6 sm:col-span-2 sm:border-0 sm:pt-0 lg:col-span-1"
+            className="border-t border-[#d99aff]/25 pt-6 sm:col-span-2 sm:border-0 sm:pt-0 lg:col-span-1 dark:border-white/20"
           >
             <div className="flex flex-col gap-3 sm:gap-[15px]">
               <ContactRow
@@ -292,12 +303,12 @@ export default function FooterSection() {
           </FooterColumn>
         </div>
 
-        <div className="relative flex min-h-[44px] items-center justify-center overflow-hidden rounded-lg border border-[#d99aff]/50 bg-white px-2 py-2 sm:min-h-[64px] sm:rounded-xl sm:px-4 sm:py-4 md:min-h-[83px] md:rounded-[18px] md:px-6 md:py-6">
+        <div className="relative flex min-h-[44px] items-center justify-center overflow-hidden rounded-lg border border-[#d99aff]/50 bg-white px-2 py-2 sm:min-h-[64px] sm:rounded-xl sm:px-4 sm:py-4 md:min-h-[83px] md:rounded-[18px] md:px-6 md:py-6 dark:border-white/20 dark:bg-[rgba(255,255,255,0.06)]">
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 opacity-40 bg-[url('/images/footer/footer-copyright-pattern.webp')] bg-cover bg-center"
+            className="pointer-events-none absolute inset-0 opacity-40 bg-[url('/images/footer/footer-copyright-pattern.webp')] bg-cover bg-center dark:hidden"
           />
-          <p className="relative text-center text-[10px] font-medium leading-tight text-[#313131] sm:text-xs sm:leading-snug md:text-sm lg:text-lg">
+          <p className="relative text-center text-[10px] font-medium leading-tight text-[#313131] sm:text-xs sm:leading-snug md:text-sm lg:text-lg dark:text-[#eac8ff]">
             Copyright 2024-2026 Trend Evo | All Right Reserved
           </p>
         </div>
