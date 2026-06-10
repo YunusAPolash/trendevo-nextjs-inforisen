@@ -13,10 +13,14 @@ const avatars = [
 
 export default function HeroSection() {
   return (
-    <PrimarySection bg="section-1" className="overflow-hidden px-0 pb-0">
+    <PrimarySection
+      bg="section-1"
+      darkBg="section-1-dark"
+      className="overflow-hidden px-0 pb-0"
+    >
       <div className="container grid gap-8 pt-28 sm:gap-10 sm:pt-36 md:pt-40 lg:grid-cols-2 lg:items-end lg:gap-8 lg:pt-[154px] xl:pt-[198px]">
         <div className="flex min-w-0 flex-col gap-6 lg:max-w-[762px] lg:gap-8 lg:self-start">
-          <div className="flex w-full max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border-l-2 border-[#cb7ef7] bg-white py-2 pl-1.5 pr-3 sm:w-fit">
+          <div className="flex w-full max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border-l-2 border-[#cb7ef7] bg-white py-2 pl-1.5 pr-3 backdrop-blur-none sm:w-fit dark:bg-white/[0.07] dark:backdrop-blur-[10px]">
             <div className="flex -space-x-3">
               {avatars.map((src, index) => (
                 <Image
@@ -25,7 +29,7 @@ export default function HeroSection() {
                   alt=""
                   width={24}
                   height={24}
-                  className="size-6 rounded-full border border-white object-cover"
+                  className="size-6 rounded-full border border-white object-cover dark:border-[0.5px]"
                 />
               ))}
             </div>
@@ -36,21 +40,23 @@ export default function HeroSection() {
               height={15}
               className="size-4 shrink-0"
             />
-            <span className="text-gradient text-sm font-medium">(4.8)</span>
-            <span className="text-gradient text-sm font-medium">
+            <span className="text-gradient text-sm font-medium dark:bg-none dark:bg-clip-border dark:text-white">
+              (4.8)
+            </span>
+            <span className="text-gradient text-sm font-medium dark:bg-none dark:bg-clip-border dark:text-white">
               Trusted by 50,000+ Users in Bangladesh
             </span>
           </div>
 
           <div className="space-y-6">
-            <h1 className="text-[28px] font-semibold leading-[1.35] tracking-tight text-[#071431] sm:text-4xl md:text-5xl">
+            <h1 className="text-[28px] font-semibold leading-[1.35] tracking-tight text-[#071431] sm:text-4xl md:text-5xl dark:text-[#efefef]">
               Trusted{' '}
               <span className="text-gradient">SMM Panel</span>
               <br />
               High-Speed Delivery With{' '}
               <span className="text-gradient">Secure Services</span>
             </h1>
-            <p className="max-w-2xl text-sm leading-relaxed text-[#313131] sm:text-base md:text-lg">
+            <p className="max-w-2xl text-sm leading-relaxed text-[#313131] sm:text-base md:text-lg dark:text-[#ebecef]">
               <span className="text-gradient font-medium">TrendEvo</span> is a
               next-generation viral growth platform crafted to help brands,
               creators, and agencies unlock their full digital potential. We
@@ -66,7 +72,7 @@ export default function HeroSection() {
                 height={24}
                 className="size-6 shrink-0"
               />
-              <p className="text-base text-[#313131] text-sm leading-relaxed text-[#313131] sm:text-base md:text-lg">
+              <p className="text-base text-sm leading-relaxed text-[#313131] sm:text-base md:text-lg dark:text-white">
                 Enjoy up to{' '}
                 <span className="font-semibold text-[#fc7f4d]">30%</span> bonus on
                 every deposit, starting at only $1.
@@ -75,13 +81,17 @@ export default function HeroSection() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-            <Button
-              variant="outline"
-              className="h-10 shrink-0 rounded-[10px] border-[#cb7ef7] bg-white/25 px-4 text-sm font-semibold text-gradient hover:bg-white/40 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:w-[180px] md:px-[18px]"
-            >
-              Sign In
-            </Button>
-            <Button className="bg-brand-gradient h-10 shrink-0 rounded-[10px] border-0 px-4 text-sm font-semibold text-white hover:opacity-90 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]">
+            <div className="inline-flex h-10 shrink-0 rounded-[10px] bg-brand-gradient p-px sm:h-11 md:h-[50px] md:w-[180px] dark:bg-transparent dark:p-0">
+              <button
+                type="button"
+                className="flex h-full w-full items-center justify-center rounded-[9px] border border-transparent bg-white px-4 text-sm transition-colors hover:bg-white/95 sm:px-5 sm:text-base md:px-[18px] dark:rounded-[10px] dark:border-[#cb7ef7] dark:bg-[rgba(104,104,104,0.11)] dark:hover:bg-[rgba(104,104,104,0.16)]"
+              >
+                <span className="font-semibold text-gradient dark:bg-none dark:bg-clip-border dark:text-white">
+                  Sign In
+                </span>
+              </button>
+            </div>
+            <Button className="bg-brand-gradient h-10 shrink-0 rounded-[10px] border-0 px-4 text-sm font-semibold text-white hover:opacity-90 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px] dark:border-[1.5px] dark:border-[#cc7aff]">
               Create an Account
             </Button>
           </div>

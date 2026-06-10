@@ -16,7 +16,8 @@ export function WhyChooseUsCard({
   return (
     <PrimaryCard
       bg="card-2"
-      className="relative gap-0 overflow-hidden rounded-2xl border-[0.7px] border-solid border-[#ffcbe5] p-0 px-3 py-3 ring-0 sm:px-4 sm:py-3.5"
+      darkBg="card-2-dark"
+      className="relative gap-0 overflow-hidden rounded-2xl border-[0.7px] border-solid border-[#ffcbe5] p-0 px-3 py-3 ring-0 dark:border-white/20 sm:px-4 sm:py-3.5"
     >
       <div className="relative overflow-hidden">
         <div className="relative z-10 flex flex-col gap-3 sm:gap-[18px]">
@@ -27,7 +28,15 @@ export function WhyChooseUsCard({
               aria-hidden
               width={77}
               height={77}
-              className="absolute inset-0 size-14 sm:size-[77px]"
+              className="absolute inset-0 size-14 sm:size-[77px] dark:hidden"
+            />
+            <Image
+              src="/images/why-choose-us/hex-icon-dark.svg"
+              alt=""
+              aria-hidden
+              width={77}
+              height={77}
+              className="absolute inset-0 hidden size-14 sm:size-[77px] dark:block"
             />
             <div
               className="relative z-10 shrink-0 scale-[0.72] sm:scale-100"
@@ -55,11 +64,11 @@ export function WhyChooseUsCard({
                 height={12}
                 className="mt-1 size-2.5 shrink-0 sm:mt-0 sm:size-3"
               />
-              <h3 className="text-lg font-semibold leading-tight text-[#343e56] sm:text-xl md:text-[22px] md:leading-none">
+              <h3 className="text-lg font-semibold leading-tight text-[#343e56] dark:text-white sm:text-xl md:text-[22px] md:leading-none">
                 {title}
               </h3>
             </div>
-            <p className="text-sm leading-normal text-[#313131] sm:text-base">
+            <p className="text-sm leading-normal text-[#313131] dark:text-white sm:text-base">
               {CARD_DESCRIPTION}
             </p>
           </div>

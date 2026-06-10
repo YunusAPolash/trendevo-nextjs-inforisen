@@ -1,6 +1,12 @@
 'use client';
 
-import { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import {
+  useCallback,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+} from 'react';
 
 import { WhyChooseUsCard } from '@/app/(home)/_components/why-choose-us-card';
 import {
@@ -9,11 +15,14 @@ import {
   timelineSteps,
 } from '@/app/(home)/_components/why-choose-us-data';
 
-const TIMELINE_LINE_GRADIENT =
+const TIMELINE_LINE_GRADIENT_LIGHT =
   'linear-gradient(90.06deg, rgb(209, 129, 255) 2.85%, rgb(255, 99, 190) 90.53%)';
 
-const TIMELINE_MARKER_GRADIENT =
+const TIMELINE_MARKER_GRADIENT_LIGHT =
   'linear-gradient(93.44deg, rgb(209, 129, 255) 2.85%, rgb(255, 99, 190) 90.53%)';
+
+const TIMELINE_MARKER_GRADIENT_DARK =
+  'linear-gradient(93.44deg, rgba(153, 28, 226, 0.036) 2.848%, rgba(124, 12, 78, 0.02) 90.525%)';
 
 type TimelineRail = {
   x: number;
@@ -29,13 +38,23 @@ function TimelineMarker({ number }: { number: string }) {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 rounded-full border border-white/50 bg-white/[0.1] shadow-[inset_0_1px_2px_rgba(255,255,255,0.65)] backdrop-blur-xl backdrop-saturate-200"
+        className="pointer-events-none absolute inset-0 rounded-full border border-white/50 bg-white/[0.1] shadow-[inset_0_1px_2px_rgba(255,255,255,0.65)] backdrop-blur-xl backdrop-saturate-200 dark:border-white/30 dark:bg-[rgba(234,230,255,0.16)] dark:shadow-[inset_0_1px_3px_rgba(255,255,255,0.42),inset_0_-2px_10px_rgba(255,255,255,0.08)] dark:backdrop-blur-[20px] dark:backdrop-saturate-150"
       />
       <div
-        className="relative z-10 flex size-14 items-center justify-center rounded-full p-3 lg:size-[68px] lg:p-4 xl:size-[85px] xl:p-5"
-        style={{ backgroundImage: TIMELINE_MARKER_GRADIENT }}
+        aria-hidden
+        className="pointer-events-none absolute inset-[10%] hidden rounded-full bg-gradient-to-b from-white/10 via-transparent to-white/10 opacity-70 dark:block"
+      />
+      <div
+        className="relative z-10 flex size-14 items-center justify-center rounded-full border border-transparent p-3 [--marker-gradient:var(--marker-gradient-light)] shadow-none dark:border-white/25 dark:shadow-[inset_0_0_10px_rgba(255,255,255,0.1),inset_2px_0_5px_rgba(255,255,255,0.12),inset_-2px_0_5px_rgba(255,255,255,0.12)] dark:[--marker-gradient:var(--marker-gradient-dark)] dark:backdrop-blur-sm lg:size-[68px] lg:p-4 xl:size-[85px] xl:p-5"
+        style={
+          {
+            '--marker-gradient-light': TIMELINE_MARKER_GRADIENT_LIGHT,
+            '--marker-gradient-dark': TIMELINE_MARKER_GRADIENT_DARK,
+            backgroundImage: 'var(--marker-gradient)',
+          } as CSSProperties
+        }
       >
-        <span className="text-xl font-medium leading-none text-white lg:text-2xl xl:text-[32px] xl:leading-[43px]">
+        <span className="relative z-10 text-xl font-medium leading-none text-white lg:text-2xl xl:text-[32px] xl:leading-[43px]">
           {number}
         </span>
       </div>
@@ -147,13 +166,16 @@ export function WhyChooseUsDesktopTimeline() {
       {rail ? (
         <div
           aria-hidden
-          className="pointer-events-none absolute w-2.5 -translate-x-1/2 rounded-full"
-          style={{
-            left: rail.x,
-            top: rail.y1,
-            height: rail.y2 - rail.y1,
-            backgroundImage: TIMELINE_LINE_GRADIENT,
-          }}
+          className="pointer-events-none absolute z-[1] w-2.5 -translate-x-1/2 rounded-full [--line-gradient:var(--line-gradient-light)] dark:bg-white/25 dark:[--line-gradient:none]"
+          style={
+            {
+              left: rail.x,
+              top: rail.y1,
+              height: rail.y2 - rail.y1,
+              '--line-gradient-light': TIMELINE_LINE_GRADIENT_LIGHT,
+              backgroundImage: 'var(--line-gradient)',
+            } as CSSProperties
+          }
         />
       ) : null}
 

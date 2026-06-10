@@ -1,5 +1,10 @@
 import Image from 'next/image';
 
+import {
+  PlatformMarqueeHexIcon,
+  PlatformMarqueeSoundCloudLogo,
+} from '@/app/(home)/_components/platform-marquee-hex-icon';
+
 const platforms = [
   {
     name: 'Instagram',
@@ -65,28 +70,15 @@ function PlatformMarqueeItem(platform: Platform) {
   const iconSize = 'iconSize' in platform ? platform.iconSize : 25;
   const fullFrame = 'fullFrame' in platform ? platform.fullFrame : false;
   return (
-    <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+    <div className="flex shrink-0 items-center gap-2">
       {fullFrame ? (
-        <Image
-          src={icon}
-          alt=""
-          aria-hidden
-          width={48}
-          height={48}
-          quality={100}
-          sizes="48px"
-          className="size-9 shrink-0 object-contain sm:size-12"
-        />
+        <div className="relative size-9 shrink-0 sm:size-12">
+          <PlatformMarqueeHexIcon className="absolute inset-0 h-full w-full" />
+          <PlatformMarqueeSoundCloudLogo className="relative z-10 h-full w-full" />
+        </div>
       ) : (
         <div className="relative flex size-9 shrink-0 items-center justify-center sm:size-12">
-          <Image
-            src="/images/platform-marquee/hex-icon.svg"
-            alt=""
-            aria-hidden
-            width={48}
-            height={48}
-            className="absolute inset-0 size-9 sm:size-12"
-          />
+          <PlatformMarqueeHexIcon className="absolute inset-0 h-full w-full" />
           <div
             className="relative z-10 shrink-0 overflow-hidden"
             style={{ width: iconSize, height: iconSize }}
@@ -103,7 +95,7 @@ function PlatformMarqueeItem(platform: Platform) {
           </div>
         </div>
       )}
-      <span className="text-sm font-semibold whitespace-nowrap text-white sm:text-base md:text-lg">
+      <span className="text-lg font-semibold leading-normal whitespace-nowrap text-white dark:text-[#dfe0e4]">
         {name}
       </span>
     </div>
@@ -114,14 +106,16 @@ export default function PlatformMarqueeSection() {
   const items = [...platforms, ...platforms];
 
   return (
-    <section
-      className="w-full overflow-hidden p-3 sm:p-4"
-      style={{
-        backgroundImage:
-          'linear-gradient(162.58deg, #cb7ef7 2.88%, #ff9bc1 54.16%, #ff5fbd 111.2%)',
-      }}
-    >
-      <div className="flex w-max animate-[marquee_80s_linear_infinite] items-center gap-8 sm:gap-12">
+    <section className="relative w-full overflow-hidden p-4">
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[linear-gradient(162.58deg,#cb7ef7_2.88%,#ff9bc1_54.16%,#ff5fbd_111.2%)] dark:hidden"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 hidden bg-[#1e0628] backdrop-blur-[2px] dark:block"
+      />
+      <div className="relative flex w-max animate-[marquee_80s_linear_infinite] items-center gap-8 sm:gap-12">
         {items.map((platform, index) => (
           <PlatformMarqueeItem key={`${platform.name}-${index}`} {...platform} />
         ))}

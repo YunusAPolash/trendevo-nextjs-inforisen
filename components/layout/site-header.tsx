@@ -31,7 +31,7 @@ const navLinks: {
 ];
 
 function MenuIcon({ open, light = false }: { open: boolean; light?: boolean }) {
-  const barColor = light ? 'bg-white' : 'bg-[#343e56]';
+  const barColor = light ? 'bg-white' : 'bg-[#343e56] dark:bg-white';
 
   return (
     <span
@@ -98,7 +98,7 @@ export default function SiteHeader({ className }: { className?: string }) {
       className={cn(
         'fixed top-0 right-0 left-0 z-50 w-full transition-all duration-300',
         showHeaderBg
-          ? 'border-b border-white/30 bg-white/50 backdrop-blur-xl'
+          ? 'border-b border-white/30 bg-white/50 backdrop-blur-xl dark:border-white/10 dark:bg-[#0d0611]/70'
           : 'border-b border-transparent bg-transparent backdrop-blur-none',
         className,
       )}
@@ -123,7 +123,7 @@ export default function SiteHeader({ className }: { className?: string }) {
                 'text-base font-medium transition-colors',
                 link.active
                   ? 'text-gradient'
-                  : 'text-[#343e56] hover:text-[#071431]',
+                  : 'text-[#343e56] hover:text-[#071431] dark:text-white dark:hover:text-white/90',
               )}
             >
               {link.label}
@@ -134,12 +134,16 @@ export default function SiteHeader({ className }: { className?: string }) {
         <div className="flex items-center gap-3 min-[1100px]:gap-6">
           <div className="hidden items-center gap-4 min-[1100px]:flex">
             <ThemeToggle />
-            <Link
-              href="#sign-in"
-              className="text-base font-medium text-[#343e56] hover:text-[#071431]"
-            >
-              Sign In
-            </Link>
+            <div className="inline-flex h-10 shrink-0 rounded-[10px] bg-brand-gradient p-px">
+              <Link
+                href="#sign-in"
+                className="flex h-full items-center justify-center rounded-[9px] bg-white px-4 text-base font-semibold transition-colors hover:bg-white/95 dark:bg-[#231a2b] dark:hover:bg-[#2d2436]"
+              >
+                <span className="text-gradient dark:bg-none dark:bg-clip-border dark:text-white">
+                  Sign In
+                </span>
+              </Link>
+            </div>
           </div>
 
           <Button className="bg-brand-gradient hidden h-10 rounded-[10px] border-0 px-4 text-base font-semibold text-white hover:opacity-90 min-[1100px]:inline-flex">
