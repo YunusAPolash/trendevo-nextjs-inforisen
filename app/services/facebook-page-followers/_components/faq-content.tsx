@@ -1,6 +1,6 @@
-import type { FaqItem } from '@/components/sections/faq-section';
+import type { FaqItem, FaqSectionData } from '@/components/sections/faq-section';
 
-export const facebookPageFollowersFaqItems: FaqItem[] = [
+const facebookPageFollowersFaqItems: FaqItem[] = [
   {
     question: 'What is an SMM Panel?',
     answer:
@@ -43,14 +43,10 @@ export const facebookPageFollowersFaqItems: FaqItem[] = [
   },
 ];
 
-export const facebookPageFollowersFaqHeading = {
+export const facebookPageFollowersFaqData: FaqSectionData = {
   label: 'FAQ',
-  title: (
-    <>
-      <span className="text-gradient">Frequently</span>
-      {' Asked Questions'}
-    </>
-  ),
+  title: 'gt<Frequently> Asked Questions',
   subtitle:
     'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+  items: facebookPageFollowersFaqItems,
 };

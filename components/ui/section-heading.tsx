@@ -1,9 +1,11 @@
 import Image from 'next/image';
+import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
+import { renderText } from '@/lib/utils/renderText';
 
 type SectionHeadingProps = {
   badge: string;
-  title: React.ReactNode;
+  title: string | ReactNode;
   subtitle?: string;
   className?: string;
   align?: 'center' | 'left';
@@ -15,6 +17,10 @@ type SectionHeadingProps = {
 
 const DEFAULT_UNDERLINE_SRC = '/images/our-services/ui/underline.svg';
 const DEFAULT_UNDERLINE_WIDTH = 131;
+
+function renderHeadingText(value: string | ReactNode): ReactNode {
+  return typeof value === 'string' ? renderText(value) : value;
+}
 
 export default function SectionHeading({
   badge,
@@ -67,7 +73,7 @@ export default function SectionHeading({
             titleClassName,
           )}
         >
-          {title}
+          {renderHeadingText(title)}
         </h2>
       </div>
       {subtitle ? (
@@ -77,7 +83,7 @@ export default function SectionHeading({
             subtitleClassName,
           )}
         >
-          {subtitle}
+          {renderText(subtitle)}
         </p>
       ) : null}
     </div>

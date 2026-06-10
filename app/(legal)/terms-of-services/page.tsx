@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 
 import TermsContentSection from '@/app/(legal)/_components/content-section';
 import HeroSection from '@/app/(legal)/_components/hero-section';
+import { pageData } from '@/app/(home)/pageData';
 import FaqSection from '@/components/sections/faq-section';
-import { homeFaqHeading, homeFaqItems } from '@/app/(home)/_components/home-faq-content';
 export const metadata: Metadata = {
   title: 'Terms of Service | TrendEvo',
   description:
@@ -20,12 +20,7 @@ export default function TermsOfServicePage() {
         lastUpdated="24/03/2026"
       />
       <TermsContentSection />
-      <FaqSection
-        label={homeFaqHeading.label}
-        title={homeFaqHeading.title}
-        subtitle={homeFaqHeading.subtitle}
-        items={homeFaqItems}
-      />
+      <FaqSection data={pageData.faq} />
     </>
   );
 }

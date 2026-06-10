@@ -3,12 +3,13 @@ import type {
   TestimonialFeaturedReview,
   TestimonialTextReview,
   TestimonialVideoReview,
+  TestimonialsSectionData,
 } from '@/components/sections/testimonials-section';
 
-export const facebookPageFollowersTestimonialsSectionBackground =
+const facebookPageFollowersTestimonialsSectionBackground =
   'linear-gradient(64.26deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)';
 
-export const facebookPageFollowersTestimonialsAssets: TestimonialAssets = {
+const facebookPageFollowersTestimonialsAssets: TestimonialAssets = {
   starIconSrc: '/images/testimonials/star-icon.svg',
   verifyBadgeSrc: '/images/testimonials/verify-badge.svg',
   customerReviewTabIconSrc: '/images/testimonials/customer-review-icon.svg',
@@ -24,7 +25,7 @@ const facebookReviewQuote =
 
 const facebookYoutubeReelVideoId = 'LXb3EKWsInQ';
 
-export const facebookPageFollowersTestimonialsVideoReviews: TestimonialVideoReview[] =
+const facebookPageFollowersTestimonialsVideoReviews: TestimonialVideoReview[] =
   [
     {
       id: 'video-1',
@@ -76,7 +77,7 @@ export const facebookPageFollowersTestimonialsVideoReviews: TestimonialVideoRevi
     },
   ];
 
-export const facebookPageFollowersTestimonialsLeftTextReviews: TestimonialTextReview[] =
+const facebookPageFollowersTestimonialsLeftTextReviews: TestimonialTextReview[] =
   [
     {
       id: 'left-1',
@@ -108,7 +109,7 @@ export const facebookPageFollowersTestimonialsLeftTextReviews: TestimonialTextRe
     },
   ];
 
-export const facebookPageFollowersTestimonialsRightTextReviews: TestimonialTextReview[] =
+const facebookPageFollowersTestimonialsRightTextReviews: TestimonialTextReview[] =
   [
     {
       id: 'right-1',
@@ -140,7 +141,7 @@ export const facebookPageFollowersTestimonialsRightTextReviews: TestimonialTextR
     },
   ];
 
-export const facebookPageFollowersTestimonialsFeaturedReview: TestimonialFeaturedReview =
+const facebookPageFollowersTestimonialsFeaturedReview: TestimonialFeaturedReview =
   {
     name: 'Ariyena Islam',
     role: 'Business Owner',
@@ -150,24 +151,39 @@ export const facebookPageFollowersTestimonialsFeaturedReview: TestimonialFeature
     youtubeVideoId: facebookYoutubeReelVideoId,
   };
 
-export const facebookPageFollowersTestimonialsTabLabels = {
+const facebookPageFollowersTestimonialsTabLabels = {
   customer: 'Customer Reviews',
   video: 'Video Reviews',
 } as const;
 
-export const facebookPageFollowersTestimonialsHeading = {
+const facebookPageFollowersTestimonialsHeading = {
   badge: 'TESTIMONIALS',
   underlineSrc: '/images/testimonials/underline.svg',
   underlineWidth: 169,
-  title: (
-    <>
-      Facebook Panel <span className="text-gradient">Reviews</span>
-    </>
-  ),
+  title: 'Facebook Panel gt<Reviews>',
   subtitle:
     'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
   titleClassName:
     'max-w-none whitespace-normal text-center text-2xl tracking-[0.36px] text-[#071431] sm:text-[32px] md:text-[36px] lg:text-[36px]',
   subtitleClassName:
     'max-w-[996px] text-center text-sm leading-normal text-[#404a60] sm:text-base md:text-lg',
+};
+
+export const facebookPageFollowersTestimonialsData: TestimonialsSectionData = {
+  sectionBackground: facebookPageFollowersTestimonialsSectionBackground,
+  badge: facebookPageFollowersTestimonialsHeading.badge,
+  underlineSrc: facebookPageFollowersTestimonialsHeading.underlineSrc,
+  underlineWidth: facebookPageFollowersTestimonialsHeading.underlineWidth,
+  title: facebookPageFollowersTestimonialsHeading.title,
+  subtitle: facebookPageFollowersTestimonialsHeading.subtitle,
+  titleClassName: facebookPageFollowersTestimonialsHeading.titleClassName,
+  subtitleClassName: facebookPageFollowersTestimonialsHeading.subtitleClassName,
+  customerTabLabel: facebookPageFollowersTestimonialsTabLabels.customer,
+  videoTabLabel: facebookPageFollowersTestimonialsTabLabels.video,
+  assets: facebookPageFollowersTestimonialsAssets,
+  leftTextReviews: facebookPageFollowersTestimonialsLeftTextReviews,
+  rightTextReviews: facebookPageFollowersTestimonialsRightTextReviews,
+  featuredReview: facebookPageFollowersTestimonialsFeaturedReview,
+  videoReviews: facebookPageFollowersTestimonialsVideoReviews,
+  defaultTab: 'video',
 };

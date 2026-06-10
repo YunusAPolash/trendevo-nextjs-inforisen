@@ -1,8 +1,5 @@
 import type { Metadata } from 'next';
-import {
-  homeFaqHeading,
-  homeFaqItems,
-} from '@/app/(home)/_components/home-faq-content';
+import { pageData } from '@/app/(home)/pageData';
 import HeroSection from '@/app/(legal)/_components/hero-section';
 import ContentSection from '@/app/(legal)/privacy-policy/_components/content-section';
 import FaqSection from '@/components/sections/faq-section';
@@ -23,12 +20,7 @@ export default function PrivacyPolicyPage() {
         lastUpdated="24/03/2026"
       />
       <ContentSection />
-      <FaqSection
-        label={homeFaqHeading.label}
-        title={homeFaqHeading.title}
-        subtitle={homeFaqHeading.subtitle}
-        items={homeFaqItems}
-      />
+      <FaqSection data={pageData.faq} />
     </>
   );
 }

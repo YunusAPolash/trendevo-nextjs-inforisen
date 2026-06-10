@@ -1,6 +1,6 @@
-import type { FaqItem } from '@/components/sections/faq-section';
+import type { FaqItem, FaqSectionData } from '@/components/sections/faq-section';
 
-export const facebookFaqItems: FaqItem[] = [
+const facebookFaqItems: FaqItem[] = [
   {
     question: 'What is a Facebook SMM panel?',
     answer:
@@ -53,15 +53,12 @@ export const facebookFaqItems: FaqItem[] = [
   },
 ];
 
-export const facebookFaqHeading = {
+export const facebookFaqData: FaqSectionData = {
   label: 'FAQ',
-  title: (
-    <>
-      Frequently Asked <span className="text-gradient">Questions</span>
-    </>
-  ),
+  title: 'Frequently Asked gt<Questions>',
   subtitle:
     'Find quick answers about Facebook SMM services, delivery, payments, and support on TrendEvo.',
+  items: facebookFaqItems,
 };
 
 export const instagramFaqItems: FaqItem[] = [

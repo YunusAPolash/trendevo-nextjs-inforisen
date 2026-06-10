@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
-import {
-  homeFaqHeading,
-  homeFaqItems,
-} from '@/app/(home)/_components/home-faq-content';
+import { pageData } from '@/app/(home)/pageData';
 import CtaSection from '@/components/sections/cta-section';
 import FaqSection from '@/components/sections/faq-section';
 import HeroSection from '@/components/sections/hero-section';
@@ -65,12 +62,7 @@ export default function AboutUsPage() {
       <StatsMarqueeSection />
       <TrustSection />
       <TeamSection />
-      <FaqSection
-        label={homeFaqHeading.label}
-        title={homeFaqHeading.title}
-        subtitle={homeFaqHeading.subtitle}
-        items={homeFaqItems}
-      />
+      <FaqSection data={pageData.faq} />
       <CtaSection
         title={
           <>

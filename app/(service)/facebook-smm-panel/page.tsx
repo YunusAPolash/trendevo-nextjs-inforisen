@@ -10,10 +10,7 @@ import {
 } from './_components/working-process-content';
 import SocialService from '@/components/sections/social-service';
 import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
-import {
-  facebookFaqHeading,
-  facebookFaqItems,
-} from '@/components/serviceSmmPanel/service-faq-content';
+import { facebookFaqData } from '@/components/serviceSmmPanel/service-faq-content';
 import PrimaryButton from '@/components/buttons/primary-button';
 import CtaSection from '@/components/sections/cta-section';
 import FaqSection from '@/components/sections/faq-section';
@@ -64,12 +61,7 @@ export default function FacebookSmmPanelPage() {
         steps={facebookSmmPanelWorkingProcessSteps}
       />
       <ServiceLeading slug="facebook-smm-panel" />
-      <FaqSection
-        label={facebookFaqHeading.label}
-        title={facebookFaqHeading.title}
-        subtitle={facebookFaqHeading.subtitle}
-        items={facebookFaqItems}
-      />
+      <FaqSection data={facebookFaqData} />
       <CtaSection
         title={facebookCtaContent.title}
         description={facebookCtaContent.description}

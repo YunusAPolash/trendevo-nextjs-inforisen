@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import type { ReactNode } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -56,12 +55,12 @@ export type TestimonialAssets = {
   playOrbSrc: string;
 };
 
-export type TestimonialsSectionProps = {
+export type TestimonialsSectionData = {
   sectionBackground: string;
   badge: string;
   underlineSrc: string;
   underlineWidth: number;
-  title: ReactNode;
+  title: string;
   subtitle: string;
   titleClassName?: string;
   subtitleClassName?: string;
@@ -74,6 +73,10 @@ export type TestimonialsSectionProps = {
   videoReviews: TestimonialVideoReview[];
   defaultTab?: 'customer' | 'video';
   className?: string;
+};
+
+export type TestimonialsSectionProps = {
+  data: TestimonialsSectionData;
 };
 
 type ReviewTab = 'customer' | 'video';
@@ -685,25 +688,26 @@ function SectionDecorations({ playOrbSrc }: { playOrbSrc: string }) {
   );
 }
 
-export default function TestimonialsSection({
-  sectionBackground,
-  badge,
-  underlineSrc,
-  underlineWidth,
-  title,
-  subtitle,
-  titleClassName,
-  subtitleClassName,
-  customerTabLabel,
-  videoTabLabel,
-  assets,
-  leftTextReviews,
-  rightTextReviews,
-  featuredReview,
-  videoReviews,
-  defaultTab = 'video',
-  className,
-}: TestimonialsSectionProps) {
+export default function TestimonialsSection({ data }: TestimonialsSectionProps) {
+  const {
+    sectionBackground,
+    badge,
+    underlineSrc,
+    underlineWidth,
+    title,
+    subtitle,
+    titleClassName,
+    subtitleClassName,
+    customerTabLabel,
+    videoTabLabel,
+    assets,
+    leftTextReviews,
+    rightTextReviews,
+    featuredReview,
+    videoReviews,
+    defaultTab = 'video',
+    className,
+  } = data;
   const [activeTab, setActiveTab] = useState<ReviewTab>(defaultTab);
   const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
 

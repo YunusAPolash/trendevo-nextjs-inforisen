@@ -12,23 +12,28 @@ import PrimarySection, { type SectionBgKey } from '@/components/sections/primary
 import SectionHeading from '@/components/ui/section-heading';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { renderText } from '@/lib/utils/renderText';
 
 export type FaqItem = {
   question: string;
   answer: string;
 };
 
-export type FaqSectionProps = {
+export type FaqSectionData = {
   label: string;
-  title: React.ReactNode;
+  title: string;
   subtitle: string;
   items: FaqItem[];
   bg?: SectionBgKey;
   className?: string;
   ctaTitle?: string;
-  ctaSubtitle?: React.ReactNode;
+  ctaSubtitle?: string;
   ctaButtonLabel?: string;
   ctaButtonHref?: string;
+};
+
+export type FaqSectionProps = {
+  data: FaqSectionData;
 };
 
 function splitFaqColumns(items: FaqItem[]) {
@@ -42,8 +47,8 @@ function FaqColumn({ items, columnId }: { items: FaqItem[]; columnId: string }) 
       <FaqAccordion type="single" collapsible>
         {items.map((item, index) => (
           <FaqAccordionItem key={item.question} value={`${columnId}-${index}`}>
-            <FaqAccordionTrigger>{item.question}</FaqAccordionTrigger>
-            <FaqAccordionContent>{item.answer}</FaqAccordionContent>
+            <FaqAccordionTrigger>{renderText(item.question)}</FaqAccordionTrigger>
+            <FaqAccordionContent>{renderText(item.answer)}</FaqAccordionContent>
           </FaqAccordionItem>
         ))}
       </FaqAccordion>
@@ -51,23 +56,20 @@ function FaqColumn({ items, columnId }: { items: FaqItem[]; columnId: string }) 
   );
 }
 
-export default function FaqSection({
-  label,
-  title,
-  subtitle,
-  items,
-  bg = 'section-7',
-  className,
-  ctaTitle = 'Still have questions?',
-  ctaSubtitle = (
-    <>
-      Can&apos;t find the answer you&apos;re looking for? Please{' '}
-      <span className="text-gradient font-semibold">get in touch</span> with our team.
-    </>
-  ),
-  ctaButtonLabel = 'Get in Touch',
-  ctaButtonHref = '#contact',
-}: FaqSectionProps) {
+export default function FaqSection({ data }: FaqSectionProps) {
+  const {
+    label,
+    title,
+    subtitle,
+    items,
+    bg = 'section-7',
+    className,
+    ctaTitle = 'Still have questions?',
+    ctaSubtitle =
+      "Can't find the answer you're looking for? Please gt<get in touch> with our team.",
+    ctaButtonLabel = 'Get in Touch',
+    ctaButtonHref = '#contact',
+  } = data;
   const [leftColumn, rightColumn] = splitFaqColumns(items);
 
   return (
@@ -123,9 +125,13 @@ export default function FaqSection({
                   height={34}
                   className="size-9 rotate-[-20deg] object-contain"
                 />
-                <h3 className="text-gradient text-sm font-medium sm:text-base">{ctaTitle}</h3>
+                <h3 className="text-gradient text-sm font-medium sm:text-base">
+                  {renderText(ctaTitle)}
+                </h3>
               </div>
-              <p className="text-sm leading-relaxed text-[#071431] sm:text-base">{ctaSubtitle}</p>
+              <p className="text-sm leading-relaxed text-[#071431] sm:text-base">
+                {renderText(ctaSubtitle)}
+              </p>
             </div>
             <Button
               asChild
