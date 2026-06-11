@@ -40,6 +40,16 @@ const sectionDarkBackgroundClasses = {
     "bg-[url('/images/backgrounds/testimonial-bg-dark.svg')]",
   'section-blog-dark':
     "bg-[url('/images/backgrounds/blog-page-bg-dark.svg')]",
+  'section-18-dark':
+    "bg-[url('/images/backgrounds/section-bg-18-dark.svg')]",
+  'section-19-dark':
+    "bg-[url('/images/backgrounds/section-bg-19-dark.svg')]",
+  'section-20-dark':
+    "bg-[url('/images/backgrounds/section-bg-20-dark.svg')]",
+  'section-21-dark':
+    "bg-[url('/images/backgrounds/section-bg-21-dark.svg')]",
+  'section-22-dark':
+    "bg-[url('/images/backgrounds/section-bg-22-dark.svg')]",
 } as const;
 
 const sectionBackgroundLayerClassName =

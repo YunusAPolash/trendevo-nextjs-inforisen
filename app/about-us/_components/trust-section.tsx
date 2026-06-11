@@ -57,14 +57,18 @@ function TrustColumn({
 
 export default function TrustSection() {
   return (
-    <PrimarySection bg="section-12" className="overflow-hidden py-16 lg:py-20">
+    <PrimarySection
+      bg="section-12"
+      darkBg="section-12-dark"
+      className="overflow-hidden py-16 lg:py-20"
+    >
       <div className="container flex flex-col items-center gap-16">
         <div className="flex max-w-6xl flex-col items-center gap-6 text-center">
-          <h2 className="text-4xl font-semibold leading-snug tracking-wide text-[#13203b] lg:text-5xl">
+          <h2 className="text-4xl font-semibold leading-snug tracking-wide text-[#13203b] lg:text-5xl dark:text-[#efedf1]">
             Why Businesss Owner{' '}
             <span className="text-gradient">Trust us</span>
           </h2>
-          <p className="max-w-6xl text-xl font-medium leading-normal text-[#404a60]">
+          <p className="max-w-6xl text-xl font-medium leading-normal text-[#404a60] dark:text-[#c1c4cc]">
             Business owners trust us for delivering measurable growth with
             transparent, reliable services. Our dedicated support and commitment
             to excellence give businesses the confidence to succeed.

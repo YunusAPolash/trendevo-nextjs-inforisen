@@ -60,7 +60,7 @@ export default function FaqSection({
   subtitle,
   items,
   bg = 'section-7',
-  darkBg = 'section-4-dark',
+  darkBg = 'section-21-dark',
   className,
   ctaTitle = 'Still have questions?',
   ctaSubtitle = (

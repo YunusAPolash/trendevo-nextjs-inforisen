@@ -52,7 +52,7 @@ export default function RelatedBlogsSection() {
             <button
               type="button"
               aria-label="Previous related blogs"
-              className="flex size-[38px] items-center justify-center rounded-full border border-[#d181ff] bg-white text-[#d181ff]"
+              className="flex size-[38px] items-center justify-center rounded-full border border-[#d181ff] bg-white text-[#d181ff] dark:border-transparent dark:bg-[rgba(255,255,255,0.19)] dark:text-white"
             >
               <ChevronLeft className="size-6" aria-hidden />
             </button>

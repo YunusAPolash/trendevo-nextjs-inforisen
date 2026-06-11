@@ -69,7 +69,7 @@ export default function AdvantagesSection({
   return (
     <PrimarySection
       bg={sectionBg}
-      darkBg="section-4-dark"
+      darkBg="section-19-dark"
       className={sectionClassName}
     >
       <div className="container flex min-w-0 flex-col items-center gap-10 sm:gap-12 lg:gap-16">

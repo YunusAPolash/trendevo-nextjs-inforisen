@@ -338,7 +338,7 @@ export default function WorkingProcessSection() {
     <PrimarySection
       id="how-it-works"
       bg="section-4"
-      darkBg="section-4-dark"
+      darkBg="section-18-dark"
       className="overflow-hidden py-12 sm:py-16 lg:py-[84px]"
     >
       <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">

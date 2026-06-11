@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import type { ReactNode } from 'react';
-import PrimarySection, { type SectionBgKey } from '@/components/sections/primary-section';
+import PrimarySection, {
+  type SectionBgKey,
+  type SectionDarkBgKey,
+} from '@/components/sections/primary-section';
 import { cn } from '@/lib/utils';
 
 export type HeroSocialIcon = {
@@ -31,6 +34,7 @@ export type HeroLayoutVariant = 'standard' | 'wide' | 'wide-responsive' | 'conte
 
 export type HeroSectionProps = {
   bg: SectionBgKey;
+  darkBg?: SectionDarkBgKey;
   variant?: HeroLayoutVariant;
   decoration?: HeroDecorationPreset;
   sectionClassName?: string;
@@ -94,20 +98,22 @@ const leftColumnClassByVariant: Record<HeroLayoutVariant, string> = {
 
 const titleClassByVariant: Record<HeroLayoutVariant, string> = {
   standard:
-    'text-[28px] font-semibold leading-[1.35] tracking-tight text-[#071431] sm:text-4xl md:text-5xl',
+    'text-[28px] font-semibold leading-[1.35] tracking-tight text-[#071431] sm:text-4xl md:text-5xl dark:text-[#efedf1]',
   'wide-responsive':
-    'text-[28px] font-semibold leading-[1.35] tracking-[0.48px] text-[#313131] sm:text-4xl md:text-5xl',
-  wide: 'text-4xl font-semibold leading-[1.35] tracking-wide text-[#313131] sm:text-5xl lg:text-[48px]',
+    'text-[28px] font-semibold leading-[1.35] tracking-[0.48px] text-[#313131] sm:text-4xl md:text-5xl dark:text-[#efedf1]',
+  wide: 'text-4xl font-semibold leading-[1.35] tracking-wide text-[#313131] sm:text-5xl lg:text-[48px] dark:text-[#efedf1]',
   content:
-    'text-4xl font-semibold leading-[1.35] tracking-wide text-[#313131] sm:text-5xl lg:text-[48px]',
+    'text-4xl font-semibold leading-[1.35] tracking-wide text-[#313131] sm:text-5xl lg:text-[48px] dark:text-[#efedf1]',
 };
 
 const descriptionClassByVariant: Record<HeroLayoutVariant, string> = {
-  standard: 'max-w-2xl text-sm leading-relaxed text-[#313131] sm:text-base md:text-lg',
+  standard:
+    'max-w-2xl text-sm leading-relaxed text-[#313131] sm:text-base md:text-lg dark:text-[#c1c4cc]',
   'wide-responsive':
-    'max-w-[762px] text-base font-medium leading-[1.5] text-[#343e56] sm:text-lg',
-  wide: 'max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56]',
-  content: 'max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56]',
+    'max-w-[762px] text-base font-medium leading-[1.5] text-[#343e56] sm:text-lg dark:text-[#c1c4cc]',
+  wide: 'max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56] dark:text-[#c1c4cc]',
+  content:
+    'max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56] dark:text-[#c1c4cc]',
 };
 
 const illustrationWrapClassByVariant: Record<HeroLayoutVariant, string> = {
@@ -303,6 +309,7 @@ function HeroIllustrationBlock({
 
 export default function HeroSection({
   bg,
+  darkBg,
   variant = 'standard',
   decoration,
   sectionClassName,
@@ -338,7 +345,7 @@ export default function HeroSection({
       {eyebrow ? (
         <p
           className={cn(
-            'text-gradient text-2xl font-semibold leading-[1.45]',
+            'text-gradient text-2xl font-semibold leading-[1.45] dark:bg-none dark:bg-clip-border dark:text-white',
             eyebrowClassName,
           )}
         >
@@ -453,9 +460,8 @@ export default function HeroSection({
   return (
     <PrimarySection
       bg={bg}
-      className={cn(sectionClassByVariant[variant], sectionClassName)
-        
-      }
+      darkBg={darkBg}
+      className={cn(sectionClassByVariant[variant], sectionClassName)}
     >
       {isContentVariant ? <div className="container">{grid}</div> : grid}
     </PrimarySection>

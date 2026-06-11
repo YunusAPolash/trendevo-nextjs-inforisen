@@ -25,6 +25,7 @@ export default function AboutUsPage() {
     <>
       <HeroSection
         bg="section-1"
+        darkBg="section-1-dark"
         variant="wide"
         decoration="contact"
         eyebrow="Who We Are"
@@ -71,6 +72,8 @@ export default function AboutUsPage() {
         title={homeFaqHeading.title}
         subtitle={homeFaqHeading.subtitle}
         items={homeFaqItems}
+        bg="section-7"
+        darkBg="section-21-dark"
       />
       <CtaSection
         title={

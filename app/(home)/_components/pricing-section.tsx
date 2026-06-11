@@ -283,7 +283,7 @@ export default function PricingSection() {
   return (
     <PrimarySection
       bg="section-11"
-      darkBg="section-11-dark"
+      darkBg="section-20-dark"
       className="overflow-x-hidden py-12 sm:py-16 lg:py-20 dark:bg-transparent"
     >
       <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">

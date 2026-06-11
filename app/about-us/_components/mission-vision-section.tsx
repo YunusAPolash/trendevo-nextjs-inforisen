@@ -28,7 +28,7 @@ function FeatureList({ idPrefix }: { idPrefix: string }) {
             className="mt-0.5 size-6 shrink-0"
             aria-hidden
           />
-          <span className="min-w-0 flex-1 text-base font-medium leading-normal break-words text-[#071431] sm:text-lg">
+          <span className="min-w-0 flex-1 text-base font-medium leading-normal break-words text-[#071431] sm:text-lg dark:text-[#dfe0e4]">
             {feature}
           </span>
         </li>
@@ -39,7 +39,11 @@ function FeatureList({ idPrefix }: { idPrefix: string }) {
 
 export default function MissionVisionSection() {
   return (
-    <PrimarySection bg="section-4" className="overflow-x-hidden">
+    <PrimarySection
+      bg="section-4"
+      darkBg="section-4-dark"
+      className="overflow-x-hidden"
+    >
       <div className="container py-16 lg:py-20">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-12 xl:gap-16">
           <div className="relative mx-auto aspect-[567/698] w-full max-w-xl overflow-hidden lg:mx-0 lg:max-w-none">
@@ -65,11 +69,11 @@ export default function MissionVisionSection() {
           <div className="flex w-full min-w-0 flex-col gap-10">
             <div className="flex w-full min-w-0 flex-col gap-7">
               <div className="flex w-full min-w-0 flex-col gap-8">
-                <h2 className="w-full min-w-0 text-3xl font-semibold leading-snug break-words text-[#13203b] sm:text-4xl lg:text-5xl">
+                <h2 className="w-full min-w-0 text-3xl font-semibold leading-snug break-words text-[#13203b] sm:text-4xl lg:text-5xl dark:text-[#efedf1]">
                   Our{' '}
                   <span className="text-gradient">Mission & Vision</span>
                 </h2>
-                <p className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl">
+                <p className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl dark:text-[#c1c4cc]">
                   {platformDescription}
                 </p>
               </div>
@@ -78,7 +82,7 @@ export default function MissionVisionSection() {
                 <FeatureList idPrefix="mission" />
 
                 <div className="flex w-full min-w-0 flex-col gap-6">
-                  <p className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl">
+                  <p className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl dark:text-[#c1c4cc]">
                     {platformDescription}
                   </p>
                   <FeatureList idPrefix="vision" />
