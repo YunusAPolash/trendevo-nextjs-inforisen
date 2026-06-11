@@ -36,6 +36,8 @@ const sectionDarkBackgroundClasses = {
     "bg-[url('/images/backgrounds/section-bg-footer.png')]",
   'section-11-dark':
     "bg-[url('/images/backgrounds/section-bg-11-dark.svg')]",
+  'section-testimonials-dark':
+    "bg-[url('/images/backgrounds/testimonial-bg-dark.svg')]",
 } as const;
 
 const sectionBackgroundLayerClassName =
@@ -50,12 +52,14 @@ export default function PrimarySection({
   className,
   bg,
   darkBg,
+  lightBackgroundImage,
   style,
   children,
   ...props
 }: React.ComponentPropsWithoutRef<'section'> & {
   bg?: SectionBgKey;
   darkBg?: SectionDarkBgKey;
+  lightBackgroundImage?: string;
 }) {
   return (
     <section
@@ -71,6 +75,15 @@ export default function PrimarySection({
             sectionBackgroundClasses[bg],
             'dark:hidden',
           )}
+        />
+      ) : lightBackgroundImage ? (
+        <div
+          aria-hidden
+          className={cn(
+            sectionBackgroundLayerClassName,
+            darkBg && 'dark:hidden',
+          )}
+          style={{ backgroundImage: lightBackgroundImage }}
         />
       ) : null}
       {darkBg ? (

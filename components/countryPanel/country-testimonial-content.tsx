@@ -58,15 +58,15 @@ export const countryTestimonialContent: Record<
     underlineWidth: 169,
     title: (
       <>
-        What Our <span className="text-gradient">Client Say in UK</span>
+        What Our <span className="text-gradient">Clients Say in UK</span>
       </>
     ),
     subtitle:
       'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
     titleClassName:
-      'max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] sm:text-[32px] md:text-[40px] lg:text-[48px]',
+      'max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName:
-      'max-w-[996px] text-center text-sm leading-normal text-[#404a60] sm:text-base md:text-lg',
+      'max-w-[996px] text-center text-sm leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg',
     customerTabLabel: 'Customer Reviews',
     videoTabLabel: 'Video Reviews',
     assets: ukTestimonialAssets,
@@ -131,15 +131,15 @@ export const countryTestimonialContent: Record<
     title: (
       <>
         What Our{' '}
-        <span className="text-gradient">Client Say in Bangladesh</span>
+        <span className="text-gradient">Clients Say in Bangladesh</span>
       </>
     ),
     subtitle:
       'Discover what our Bangladeshi clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
     titleClassName:
-      'max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] sm:text-[32px] md:text-[40px] lg:text-[48px]',
+      'max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName:
-      'max-w-[996px] text-center text-sm leading-normal text-[#404a60] sm:text-base md:text-lg',
+      'max-w-[996px] text-center text-sm leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg',
     customerTabLabel: 'Customer Reviews',
     videoTabLabel: 'Video Reviews',
     assets: ukTestimonialAssets,
