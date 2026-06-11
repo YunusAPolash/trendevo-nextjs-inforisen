@@ -48,6 +48,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+          storageKey="trendevo-theme"
         >
           <SiteHeader />
           <main>{children}</main>

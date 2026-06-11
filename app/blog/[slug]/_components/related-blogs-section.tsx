@@ -45,7 +45,7 @@ export default function RelatedBlogsSection() {
     <PrimarySection bg="section-5" className="py-16 lg:py-20">
       <div className="container">
         <div className="mb-7 flex items-center justify-between gap-4">
-          <h2 className="text-[28px] font-semibold text-[#313131]">
+          <h2 className="text-[28px] font-semibold text-[#313131] dark:text-white">
             Related Blogs
           </h2>
           <div className="flex items-center gap-3">

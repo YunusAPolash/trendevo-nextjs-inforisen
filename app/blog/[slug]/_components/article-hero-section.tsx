@@ -18,7 +18,7 @@ export default function ArticleHeroSection({
   return (
     <div className="flex flex-col gap-10">
       <div className="flex max-w-[683px] flex-col gap-[26px]">
-        <div className="inline-flex w-fit items-center gap-2 rounded-lg border border-[#e2b0ff] bg-[linear-gradient(9.59deg,rgb(251,245,255)_10.39%,rgb(255,250,252)_58.1%,rgb(238,209,255)_126.5%)] px-4 py-2">
+        <div className="inline-flex w-fit items-center gap-2 rounded-lg border border-[#e2b0ff] bg-[linear-gradient(9.59deg,rgb(251,245,255)_10.39%,rgb(255,250,252)_58.1%,rgb(238,209,255)_126.5%)] px-4 py-2 dark:border-[rgba(226,176,255,0.25)] dark:[background-image:linear-gradient(9.59deg,rgba(251,245,255,0.1)_10.39%,rgba(255,250,252,0.1)_58.1%,rgba(238,209,255,0.1)_126.5%)]">
           <Image
             src="/images/icons/blog-details-posted-at-clock.webp"
             alt=""
@@ -31,7 +31,7 @@ export default function ArticleHeroSection({
           </span>
         </div>
 
-        <h1 className="text-[32px] font-semibold leading-normal text-[#0c070f]">
+        <h1 className="text-[32px] font-semibold leading-normal text-[#0c070f] dark:text-white">
           <span className="block text-gradient">{titleHighlight}</span>
           <span className="block">{titleRest}</span>
         </h1>

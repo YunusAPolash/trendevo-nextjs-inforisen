@@ -1,15 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import PrimaryCard from '@/components/cards/primary-card';
 import { cn } from '@/lib/utils';
 
 const tableOfContentsItems = [
-  'Social media',
-  'SMM Panel',
-  'Digital marketing agencies',
-  'Audience engagement',
-  'SEO optimization',
-  'E-commerce businesses',
+  { label: 'Social media', href: '#social-media' },
+  { label: 'SMM Panel', href: '#smm-panel' },
+  { label: 'Digital marketing agencies', href: '#digital-marketing-agencies' },
+  { label: 'Audience engagement', href: '#audience-engagement' },
+  { label: 'SEO optimization', href: '#seo-optimization' },
+  { label: 'E-commerce businesses', href: '#e-commerce-businesses' },
 ] as const;
 
 const shareLinks = [
@@ -38,35 +37,36 @@ const shareLinks = [
 export default function ArticleSidebar() {
   return (
     <aside className="flex w-full max-w-[341px] flex-col gap-12">
-      <div className="flex gap-3">
+      <div className="flex h-[318px] items-center gap-3">
         <div
           aria-hidden
-          className="flex h-[318px] w-1 shrink-0 overflow-hidden rounded-full bg-[#ebecef]"
+          className="flex h-full w-1 shrink-0 overflow-hidden rounded-full bg-[#ebecef] backdrop-blur-[10px] dark:bg-[rgba(235,236,239,0.25)]"
         >
           <div className="h-11 w-full rounded-full bg-brand-gradient" />
         </div>
 
         <nav aria-label="Table of contents" className="min-w-0 flex-1">
-          <div className="rounded-lg bg-brand-gradient px-3 py-3">
+          <div className="rounded-lg bg-brand-gradient p-3">
             <p className="text-lg font-medium leading-[1.45] text-white">
               Table of content
             </p>
           </div>
 
-          <ul className="mt-0">
+          <ul>
             {tableOfContentsItems.map((item, index) => (
               <li
-                key={item}
+                key={item.label}
                 className={cn(
-                  'border-b border-dashed border-[#dfe0e4] px-3 py-2 last:border-b-0',
-                  index === 0 && 'pt-2',
+                  'px-3 pt-2 pb-3',
+                  index < tableOfContentsItems.length - 1 &&
+                    'border-b border-dashed border-[#dfe0e4] dark:border-[#6a7283]',
                 )}
               >
                 <a
-                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="block text-base font-medium leading-relaxed text-[#404a60] hover:text-[#13203b]"
+                  href={item.href}
+                  className="block text-base font-medium leading-normal text-[#404a60] hover:text-[#13203b] dark:text-[#dfe0e4] dark:hover:text-white"
                 >
-                  {item}
+                  {item.label}
                 </a>
               </li>
             ))}
@@ -75,11 +75,9 @@ export default function ArticleSidebar() {
       </div>
 
       <div className="flex flex-col gap-5">
-        <PrimaryCard
-          className="rounded-xl border border-[rgba(42,42,42,0.14)] bg-[linear-gradient(36.37deg,rgb(251,245,255)_10.39%,rgb(255,250,252)_58.1%,rgb(255,137,198)_126.5%)] p-6 ring-0"
-        >
+        <div className="rounded-xl border border-[rgba(42,42,42,0.14)] bg-[linear-gradient(36.37deg,rgb(251,245,255)_10.39%,rgb(255,250,252)_58.1%,rgb(255,137,198)_126.5%)] p-6 dark:border-[0.5px] dark:border-[rgba(42,42,42,0.14)] dark:bg-[rgba(255,255,255,0.12)] dark:bg-none dark:backdrop-blur-[250px]">
           <div className="flex flex-col items-center gap-[13px] text-center">
-            <div className="relative size-[109px] overflow-hidden rounded-lg border border-[rgba(188,188,188,0.21)] bg-white">
+            <div className="relative size-[109px] overflow-hidden rounded-lg border border-[rgba(188,188,188,0.21)] bg-[rgba(255,255,255,0.93)] backdrop-blur-[2px]">
               <Image
                 src="/images/blog-details/blog-details-author-seam-rahman-avatar.webp"
                 alt="Seam Rahman"
@@ -88,18 +86,18 @@ export default function ArticleSidebar() {
               />
             </div>
             <div className="space-y-1.5">
-              <p className="text-base font-semibold text-[#13203b]">
+              <p className="text-base font-semibold text-[#13203b] dark:text-white">
                 Author : Seam Rahman
               </p>
-              <p className="text-sm font-medium text-[#6a7283]">
+              <p className="text-sm font-medium text-[#6a7283] dark:text-[#dfe0e4]">
                 CEO,Trend Evo
               </p>
             </div>
           </div>
-        </PrimaryCard>
+        </div>
 
         <div className="space-y-3">
-          <p className="text-base font-medium text-[#4f586d]">
+          <p className="text-base font-medium text-[#4f586d] dark:text-[#f5f6f7]">
             Share this blog
           </p>
           <div className="flex flex-wrap gap-2">
@@ -108,7 +106,7 @@ export default function ArticleSidebar() {
                 key={link.label}
                 href={link.href}
                 aria-label={`Share on ${link.label}`}
-                className="flex size-[38px] items-center justify-center rounded-[7px] border border-[#ebecef] bg-white backdrop-blur-sm"
+                className="flex size-[38px] items-center justify-center rounded-[7px] border border-[#ebecef] bg-white backdrop-blur-sm dark:border-transparent dark:bg-white/10"
               >
                 <Image
                   src={link.iconSrc}

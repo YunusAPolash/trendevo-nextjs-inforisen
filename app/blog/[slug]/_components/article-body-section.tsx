@@ -32,12 +32,12 @@ export default function ArticleBodySection() {
   return (
     <section className="space-y-8">
       <ArticleContentBlock id="social-media" title="Overview">
-        <p className="text-lg leading-relaxed text-[#313131]">{bodyParagraph}</p>
-        <p className="text-lg leading-relaxed text-[#313131]">{bodyParagraph}</p>
+        <p className="text-lg leading-relaxed text-[#313131] dark:text-white">{bodyParagraph}</p>
+        <p className="text-lg leading-relaxed text-[#313131] dark:text-white">{bodyParagraph}</p>
       </ArticleContentBlock>
 
       <ArticleContentBlock id="smm-panel" title="Understanding SMM Panel of social media">
-        <div className="space-y-4 text-lg leading-relaxed text-[#313131]">
+        <div className="space-y-4 text-lg leading-relaxed text-[#313131] dark:text-white">
           <ul className="list-disc space-y-0 pl-7">
             <li>Followers</li>
             <li>Likes</li>
@@ -75,8 +75,8 @@ export default function ArticleBodySection() {
 
       {contentSections.map((section) => (
         <ArticleContentBlock key={section.id} id={section.id} title={section.title}>
-          <p className="text-lg leading-relaxed text-[#313131]">{bodyParagraph}</p>
-          <p className="text-lg leading-relaxed text-[#313131]">{bodyParagraph}</p>
+          <p className="text-lg leading-relaxed text-[#313131] dark:text-white">{bodyParagraph}</p>
+          <p className="text-lg leading-relaxed text-[#313131] dark:text-white">{bodyParagraph}</p>
         </ArticleContentBlock>
       ))}
     </section>

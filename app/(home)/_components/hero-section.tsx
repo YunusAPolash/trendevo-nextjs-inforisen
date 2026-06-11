@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import PrimarySection from '@/components/sections/primary-section';
 import { Button } from '@/components/ui/button';
 
@@ -81,15 +82,15 @@ export default function HeroSection() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-            <div className="inline-flex h-10 shrink-0 rounded-[10px] bg-brand-gradient p-px sm:h-11 md:h-[50px] md:w-[180px] dark:bg-transparent dark:p-0">
-              <button
-                type="button"
-                className="flex h-full w-full items-center justify-center rounded-[9px] border border-transparent bg-white px-4 text-sm transition-colors hover:bg-white/95 sm:px-5 sm:text-base md:px-[18px] dark:rounded-[10px] dark:border-[#cb7ef7] dark:bg-[rgba(104,104,104,0.11)] dark:hover:bg-[rgba(104,104,104,0.16)]"
+            <div className="inline-flex h-10 shrink-0 rounded-[10px] bg-brand-gradient p-px sm:h-11 md:h-[50px] md:w-[180px]">
+              <Link
+                href="#sign-in"
+                className="flex h-full w-full items-center justify-center rounded-[9px] bg-white px-4 text-sm font-semibold transition-colors hover:bg-white/95 sm:px-5 sm:text-base md:px-[18px] dark:bg-[#231a2b] dark:hover:bg-[#2d2436]"
               >
-                <span className="font-semibold text-gradient dark:bg-none dark:bg-clip-border dark:text-white">
+                <span className="text-gradient dark:bg-none dark:bg-clip-border dark:text-white">
                   Sign In
                 </span>
-              </button>
+              </Link>
             </div>
             <Button className="bg-brand-gradient h-10 shrink-0 rounded-[10px] border-0 px-4 text-sm font-semibold text-white hover:opacity-90 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px] dark:border-[1.5px] dark:border-[#cc7aff]">
               Create an Account

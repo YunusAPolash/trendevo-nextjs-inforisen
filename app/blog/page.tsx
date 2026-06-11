@@ -13,14 +13,20 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <div className="bg-[#FCF8FF]">
-        <HeroSection
-          titlePrefix="Read Our"
-          titleHighlight="Latest Blogs"
-          description="Explore Trend Evo’s blog for the latest social media trends, digital marketing tips, and industry updates. Stay informed, improve your strategy, and grow your online presence effectively."
-          lastUpdated="24/03/2026"
+      <div className="relative isolate bg-[#FCF8FF] dark:bg-[#120619]">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 hidden bg-[url('/images/backgrounds/blog-page-bg-dark.svg')] bg-cover bg-top bg-no-repeat dark:block"
         />
-        <BlogGridSection />
+        <div className="relative z-10">
+          <HeroSection
+            titlePrefix="Read Our"
+            titleHighlight="Latest Blogs"
+            description="Explore Trend Evo’s blog for the latest social media trends, digital marketing tips, and industry updates. Stay informed, improve your strategy, and grow your online presence effectively."
+            lastUpdated="24/03/2026"
+          />
+          <BlogGridSection />
+        </div>
       </div>
       <CtaSection
         title={

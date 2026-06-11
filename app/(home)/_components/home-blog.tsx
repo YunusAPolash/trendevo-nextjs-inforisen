@@ -40,13 +40,20 @@ const homeBlogPosts: BlogPost[] = [
 
 export default function HomeBlog() {
   return (
-    <PrimarySection bg="section-1" className="py-12 sm:py-16 lg:py-20" id="blog">
+    <PrimarySection
+      bg="section-1"
+      darkBg="section-1-dark"
+      className="py-12 sm:py-16 lg:py-20"
+      id="blog"
+    >
       <div className="container flex flex-col items-center gap-8 sm:gap-12">
         <SectionHeading
           badge="BLOG"
           title={
             <>
-              <span className="text-[#071431]">Our Recently Posted</span>
+              <span className="text-[#071431] dark:text-[#efedf1]">
+                Our Recently Posted
+              </span>
               <span className="text-gradient"> Blogs</span>
             </>
           }
@@ -54,7 +61,7 @@ export default function HomeBlog() {
           underlineSrc="/images/blog/underline.svg"
           underlineWidth={60}
           titleClassName="max-w-[961px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]"
-          subtitleClassName="max-w-[996px] text-sm font-normal text-[#404a60] sm:text-base md:text-lg"
+          subtitleClassName="max-w-[996px] text-sm font-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg"
         />
 
         <div className="grid w-full gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
