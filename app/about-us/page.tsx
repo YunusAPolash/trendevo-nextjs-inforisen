@@ -25,7 +25,6 @@ export default function AboutUsPage() {
     <>
       <HeroSection
         bg="section-1"
-        darkBg="section-1-dark"
         variant="wide"
         decoration="contact"
         eyebrow="Who We Are"

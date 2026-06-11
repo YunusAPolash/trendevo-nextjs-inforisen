@@ -1,0 +1,21 @@
+<svg width="463" height="280" viewBox="0 0 463 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip_email)">
+<g filter="url(#blur_email_primary)" style="mix-blend-mode:plus-lighter">
+<circle cx="460.4" cy="-11.1" r="110.5" fill="#6252D6"/>
+</g>
+<g filter="url(#blur_email_secondary)" style="mix-blend-mode:plus-lighter">
+<circle cx="446.4" cy="-7.1" r="110.5" fill="white" fill-opacity="0.16"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip_email">
+<rect width="463" height="280" rx="16"/>
+</clipPath>
+<filter id="blur_email_primary" x="150" y="-321" width="621" height="621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feGaussianBlur stdDeviation="100"/>
+</filter>
+<filter id="blur_email_secondary" x="136" y="-317" width="621" height="621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feGaussianBlur stdDeviation="100"/>
+</filter>
+</defs>
+</svg>

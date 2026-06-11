@@ -309,7 +309,7 @@ function HeroIllustrationBlock({
 
 export default function HeroSection({
   bg,
-  darkBg,
+  darkBg = bg === 'section-1' ? 'page-hero-dark' : undefined,
   variant = 'standard',
   decoration,
   sectionClassName,

@@ -13,6 +13,7 @@ type ContactDetailCardProps = {
   detail: ReactNode;
   buttonLabel?: string;
   buttonClassName?: string;
+  darkOverlaySrc?: string;
 };
 
 export default function ContactDetailCard({
@@ -24,22 +25,39 @@ export default function ContactDetailCard({
   detail,
   buttonLabel,
   buttonClassName,
+  darkOverlaySrc,
 }: ContactDetailCardProps) {
   return (
     <article
       className={cn(
         'flex h-auto w-full flex-col gap-5 rounded-[16px] border border-dashed bg-transparent p-4 sm:gap-6 sm:p-5 xl:h-full',
         borderColor,
+        'dark:relative dark:overflow-hidden dark:border-[0.6px] dark:border-solid dark:border-white/26 dark:bg-[rgba(30,12,41,0.51)]',
       )}
     >
-      <div className="relative flex size-[100px] shrink-0 items-center justify-center sm:size-[120px]">
+      {darkOverlaySrc ? (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 z-0 hidden bg-cover bg-top bg-no-repeat dark:block"
+          style={{ backgroundImage: `url('${darkOverlaySrc}')` }}
+        />
+      ) : null}
+
+      <div className="relative z-10 flex size-[100px] shrink-0 items-center justify-center sm:size-[120px]">
         <Image
           src="/images/contact-us/contact-us-icon-hex-bg.svg"
           alt=""
           fill
           aria-hidden
           unoptimized
-          className="object-contain"
+          className="object-contain dark:hidden"
+        />
+        <Image
+          src="/images/why-choose-us/hex-icon-dark.svg"
+          alt=""
+          fill
+          aria-hidden
+          className="hidden object-contain dark:block"
         />
         <div className="relative z-10 h-14 w-14 sm:h-[68px] sm:w-[68px]">
           <Image
@@ -51,11 +69,15 @@ export default function ContactDetailCard({
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col gap-6">
+      <div className="relative z-10 flex flex-1 flex-col gap-6">
         <div className="space-y-[18px]">
-          <h3 className="text-xl font-bold leading-tight text-[#13203b] sm:text-2xl">{title}</h3>
+          <h3 className="text-xl font-bold leading-tight text-[#13203b] sm:text-2xl dark:text-[#f5f6f7]">
+            {title}
+          </h3>
           <div className="space-y-2">
-            <p className="text-sm leading-[1.6] text-[#343e56]">{description}</p>
+            <p className="text-sm leading-[1.6] text-[#343e56] dark:text-[#ebecef]">
+              {description}
+            </p>
             <div className="text-base leading-[1.6]">{detail}</div>
           </div>
         </div>

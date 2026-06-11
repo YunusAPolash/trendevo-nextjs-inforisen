@@ -23,6 +23,8 @@ const cardDarkBackgroundClasses = {
   'card-3-dark': "bg-[url('/images/backgrounds/card-bg-3-dark.svg')]",
   'card-4-dark': "bg-[url('/images/backgrounds/card-bg-4-dark.svg')]",
   'card-5-dark': "bg-[url('/images/backgrounds/card-bg-5-dark.svg')]",
+  'blog-hero-dark':
+    "bg-[url('/images/backgrounds/blog-hero-dark-bg.svg')]",
 } as const;
 
 const cardBackgroundLayerClassName =
@@ -40,12 +42,14 @@ export default function PrimaryCard({
   className,
   bg,
   darkBg,
+  inheritDarkBackground = true,
   style,
   children,
   ...props
 }: React.ComponentProps<'article'> & {
   bg?: CardBgKey;
   darkBg?: CardDarkBgKey;
+  inheritDarkBackground?: boolean;
 }) {
   const hasBackground = Boolean(bg || darkBg);
 
@@ -55,7 +59,7 @@ export default function PrimaryCard({
       className={cn(
         cardBaseClassName,
         'p-6 ring-0',
-        hasBackground && 'relative bg-transparent',
+        hasBackground && 'relative isolate bg-transparent',
         className,
       )}
       style={style}
@@ -80,7 +84,7 @@ export default function PrimaryCard({
             cardDarkBackgroundClasses[darkBg],
           )}
         />
-      ) : bg ? (
+      ) : bg && inheritDarkBackground ? (
         <div
           aria-hidden
           className={cn(

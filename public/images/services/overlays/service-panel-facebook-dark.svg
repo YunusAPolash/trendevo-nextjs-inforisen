@@ -1,0 +1,15 @@
+<svg width="463" height="371" viewBox="0 0 463 371" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip_facebook)">
+<g filter="url(#blur_facebook_primary)" style="mix-blend-mode:plus-lighter">
+<circle cx="435.5" cy="-31.5" r="110.5" fill="#4B8FE8"/>
+</g>
+<g filter="url(#blur_facebook_secondary)" style="mix-blend-mode:plus-lighter">
+<circle cx="440.5" cy="-38.5" r="110.5" fill="white" fill-opacity="0.16"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip_facebook"><rect width="463" height="371" rx="16"/></clipPath>
+<filter id="blur_facebook_primary" x="125" y="-341" width="621" height="621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="100"/></filter>
+<filter id="blur_facebook_secondary" x="130" y="-348" width="621" height="621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="100"/></filter>
+</defs>
+</svg>

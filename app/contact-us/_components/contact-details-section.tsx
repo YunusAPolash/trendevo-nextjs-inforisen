@@ -2,19 +2,35 @@ import Image from 'next/image';
 import PrimarySection from '@/components/sections/primary-section';
 import ContactDetailCard from './contact-detail-card';
 
+const CONTACT_DETAILS_LIGHT_BG =
+  'linear-gradient(79deg, #F1DBFF -3.62%, #FFF 30.12%, rgba(252, 226, 255, 0.24) 55.57%, #FFF 76.43%, #FDF6FF 103.11%)';
+
 export default function ContactDetailsSection() {
   return (
     <PrimarySection
       className="overflow-hidden py-12 sm:py-16 lg:py-20"
-      style={{
-        background:
-          'linear-gradient(79deg, #F1DBFF -3.62%, #FFF 30.12%, rgba(252, 226, 255, 0.24) 55.57%, #FFF 76.43%, #FDF6FF 103.11%)',
-      }}
+      lightBackgroundImage={CONTACT_DETAILS_LIGHT_BG}
+      darkBackgroundColor="#13051B"
     >
       <div className="relative">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute top-0 left-[-63px] hidden size-[253px] dark:block"
+        >
+          <div className="relative size-full">
+            <div className="absolute inset-[-138%]">
+              <Image
+                src="/images/contact-us/contact-details-glow-top-left-dark.svg"
+                alt=""
+                fill
+                unoptimized
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
 
-
-        <div className="pointer-events-none absolute bottom-10 left-[-40px] hidden blur-[2px] lg:block">
+        <div className="pointer-events-none absolute bottom-10 left-[-40px] hidden blur-[2px] lg:block dark:hidden">
           <Image
             src="/images/contact-us/contact-us-phone.png"
             alt=""
@@ -25,7 +41,7 @@ export default function ContactDetailsSection() {
           />
         </div>
 
-        <div className="pointer-events-none absolute top-[73px] right-[-40px] hidden blur-[2px] lg:block">
+        <div className="pointer-events-none absolute top-[73px] right-[-40px] hidden blur-[2px] lg:block dark:hidden">
           <Image
             src="/images/contact-us/contact-us-phone.png"
             alt=""
@@ -39,10 +55,10 @@ export default function ContactDetailsSection() {
         <div className="container relative">
           <div className="relative flex flex-col items-center gap-10 sm:gap-12 lg:gap-16">
             <div className="max-w-[1083px] space-y-4 px-1 text-center sm:space-y-5">
-            <h2 className="text-[28px] font-semibold leading-[1.35] tracking-tight text-[#13203b] sm:text-4xl lg:text-[48px] lg:tracking-wide">
+            <h2 className="text-[28px] font-semibold leading-[1.35] tracking-tight text-[#13203b] sm:text-4xl lg:text-[48px] lg:tracking-wide dark:text-[#efedf1]">
               Contact Details
             </h2>
-            <p className="text-sm font-medium leading-relaxed text-[#404a60] sm:text-base lg:text-lg">
+            <p className="text-sm font-medium leading-relaxed text-[#404a60] sm:text-base lg:text-lg dark:text-[#dfe0e4]">
               Get in touch with us. We’re here to answer your questions and provide
               guidance whenever you need it. Fast, friendly, and reliable support is
               always just a message away, ensuring you get the help you need without
@@ -53,14 +69,19 @@ export default function ContactDetailsSection() {
             <div className="grid w-full max-w-[1440px] grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2 xl:grid-cols-3 [&>*:last-child]:lg:col-span-2 [&>*:last-child]:lg:mx-auto [&>*:last-child]:lg:max-w-[463px] [&>*:last-child]:xl:col-span-1 [&>*:last-child]:xl:mx-0 [&>*:last-child]:xl:max-w-none">
             <ContactDetailCard
               borderColor="border-[#1fd863]"
+              darkOverlaySrc="/images/contact-us/contact-card-overlay-whatsapp-dark.svg"
               iconSrc="/images/contact-us/contact-us-whatsapp-icon.webp"
               iconAlt="WhatsApp"
               title="What’s App"
               description="Chat with our support team on What’sApp for quick answers and real-time assistance whenever you need help."
               detail={
                 <p>
-                  <span className="font-semibold text-[#313131]">Number:</span>{' '}
-                  <span className="font-semibold text-[#25d365]">+880***********</span>
+                  <span className="font-semibold text-[#313131] dark:text-[#ebecef]">
+                    Number:
+                  </span>{' '}
+                  <span className="font-semibold text-[#25d365] dark:text-[rgba(37,211,101,0.8)]">
+                    +880***********
+                  </span>
                 </p>
               }
               buttonLabel="Contact us with What’s App"
@@ -69,30 +90,37 @@ export default function ContactDetailsSection() {
 
             <ContactDetailCard
               borderColor="border-[#695dd8]"
+              darkOverlaySrc="/images/contact-us/contact-card-overlay-email-dark.svg"
               iconSrc="/images/contact-us/contact-us-email-icon.webp"
               iconAlt="Email"
               title="Email"
               description="Chat with our support team on What’sApp for quick answers and real-time assistance whenever you need help."
               detail={
                 <p>
-                  <span className="font-semibold text-[#313131]">E-mail:</span>
-                  <span className="font-semibold text-[#8f2acd]"> info@*************</span>
+                  <span className="font-semibold text-[#313131] dark:text-[#ebecef]">
+                    E-mail:
+                  </span>
+                  <span className="font-semibold text-[#8f2acd] dark:text-[#ae4de8]">
+                    {' '}
+                    info@*************
+                  </span>
                 </p>
               }
               buttonLabel="Contact us with Email"
-              buttonClassName="bg-[#675bd7]"
+              buttonClassName="bg-[#675bd7] dark:bg-[rgba(103,91,215,0.85)]"
             />
 
             <ContactDetailCard
               borderColor="border-[#8f2acd]"
+              darkOverlaySrc="/images/contact-us/contact-card-overlay-business-hours-dark.svg"
               iconSrc="/images/contact-us/contact-us-business-hours-icon.webp"
               iconAlt="Business hours"
               title="Business Hours"
               description="Have questions or need expert guidance? Our friendly team is ready to assist you with all your social media marketing needs and help you achieve your goals. Get in touch with us through the following channels."
               detail={
-                <p className="text-[#5a5a5a]">
+                <p className="text-[#5a5a5a] dark:text-[#ebecef]">
                   Assistance hours:{' '}
-                  <span className="font-semibold text-[#8f2acd]">
+                  <span className="font-semibold text-[#8f2acd] dark:text-[#ae4de8]">
                     Monday - Sunday 24 Hours
                   </span>
                 </p>
