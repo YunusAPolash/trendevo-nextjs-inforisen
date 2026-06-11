@@ -17,19 +17,28 @@ export default function TrustCard({
   return (
     <PrimaryCard
       bg="card-5"
-      className="relative h-70 w-full gap-0 overflow-hidden rounded-2xl border border-[#ffcbe5]/70 p-0 px-4 py-3.5 ring-0"
+      darkBg="card-5-dark"
+      className="relative h-70 w-full gap-0 overflow-hidden rounded-2xl border-[0.7px] border-solid border-[#ffcbe5]/70 p-0 px-4 py-3.5 ring-0 dark:border-white/20"
     >
-      <div className="relative flex h-full flex-col gap-4.5">
-        <div className="relative flex size-20 shrink-0 items-center justify-center px-3.5 py-3.5">
+      <div className="relative flex h-full flex-col gap-[18px]">
+        <div className="relative flex size-20 shrink-0 items-center justify-center px-[13px] py-3.5">
           <Image
             src="/images/why-choose-us/hex-icon.svg"
             alt=""
             aria-hidden
             width={77}
             height={77}
-            className="absolute inset-0 size-20"
+            className="absolute inset-0 size-20 dark:hidden"
           />
-          <Image  
+          <Image
+            src="/images/why-choose-us/hex-icon-dark.svg"
+            alt=""
+            aria-hidden
+            width={77}
+            height={77}
+            className="absolute inset-0 hidden size-20 dark:block"
+          />
+          <Image
             src={iconSrc}
             alt=""
             aria-hidden
@@ -49,11 +58,11 @@ export default function TrustCard({
               height={12}
               className="size-3 shrink-0"
             />
-            <h3 className="text-xl font-semibold leading-none text-[#343e56] dark:text-white">
+            <h3 className="text-[22px] font-semibold leading-none text-[#343e56] dark:text-white">
               {title}
             </h3>
           </div>
-          <p className="text-base leading-normal text-[#313131] dark:text-[#dfe0e4]">
+          <p className="text-base leading-normal text-[#313131] dark:text-white">
             {description}
           </p>
         </div>

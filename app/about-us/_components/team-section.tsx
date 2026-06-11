@@ -15,7 +15,7 @@ export default function TeamSection() {
   return (
     <PrimarySection
       bg="section-4"
-      darkBg="section-4-dark"
+      darkBg="section-10-dark"
       className="overflow-x-hidden"
     >
       <div className="container py-16 lg:py-21">

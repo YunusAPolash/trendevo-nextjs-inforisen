@@ -59,7 +59,7 @@ export default function TrustSection() {
   return (
     <PrimarySection
       bg="section-12"
-      darkBg="section-12-dark"
+      darkBg="section-23-dark"
       className="overflow-hidden py-16 lg:py-20"
     >
       <div className="container flex flex-col items-center gap-16">

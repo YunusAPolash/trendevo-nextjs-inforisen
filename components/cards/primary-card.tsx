@@ -22,6 +22,7 @@ const cardDarkBackgroundClasses = {
   'card-8-dark': "bg-[url('/images/backgrounds/card-bg-8-dark.svg')]",
   'card-3-dark': "bg-[url('/images/backgrounds/card-bg-3-dark.svg')]",
   'card-4-dark': "bg-[url('/images/backgrounds/card-bg-4-dark.svg')]",
+  'card-5-dark': "bg-[url('/images/backgrounds/card-bg-5-dark.svg')]",
 } as const;
 
 const cardBackgroundLayerClassName =
