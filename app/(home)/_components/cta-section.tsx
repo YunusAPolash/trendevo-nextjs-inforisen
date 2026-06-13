@@ -1,5 +1,7 @@
 import CtaSection from '@/components/sections/cta-section';
 import PrimaryButton from '@/components/buttons/primary-button';
+import Link from 'next/link';
+import { signUpUrl } from '@/lib/auth-urls';
 
 export default function HomeCtaSection() {
   return (
@@ -14,8 +16,11 @@ export default function HomeCtaSection() {
       description="Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly."
       buttonsOutlet={
         <>
-          <PrimaryButton type="button" className="h-10 w-full min-w-0 text-sm sm:h-[50px] sm:w-auto sm:min-w-[160px] sm:text-base">
-            Register Now
+          <PrimaryButton
+            asChild
+            className="h-10 w-full min-w-0 text-sm sm:h-[50px] sm:w-auto sm:min-w-[160px] sm:text-base"
+          >
+            <Link href={signUpUrl}>Register Now</Link>
           </PrimaryButton>
           <button
             type="button"

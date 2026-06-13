@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ArticleBodySection from './_components/article-body-section';
 import ArticleHeroSection from './_components/article-hero-section';
 import ArticleLayoutSection from './_components/article-layout-section';
 import RelatedBlogsSection from './_components/related-blogs-section';
 import CtaSection from '@/components/sections/cta-section';
 import { Button } from '@/components/ui/button';
+import { signUpUrl } from '@/lib/auth-urls';
 
 type BlogDetailsPageProps = {
   params: Promise<{ slug: string }>;
@@ -43,8 +45,11 @@ export default function BlogDetailsPage() {
         description="Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly."
         buttonsOutlet={
           <>
-            <Button className="bg-brand-gradient h-[50px] rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] font-semibold text-white hover:opacity-90">
-              Register Now
+            <Button
+              asChild
+              className="bg-brand-gradient h-[50px] rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] font-semibold text-white hover:opacity-90"
+            >
+              <Link href={signUpUrl}>Register Now</Link>
             </Button>
             <Button
               variant="outline"

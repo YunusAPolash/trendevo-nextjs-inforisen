@@ -1,10 +1,12 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
+import { signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
 
 const platforms = [
@@ -231,8 +233,8 @@ function PricingCard({
           </p>
         </div>
 
-        <button
-          type="button"
+        <Link
+          href={signUpUrl}
           className={cn(
             'relative z-10 flex h-10 w-full items-center justify-center overflow-hidden rounded-[10px] border-[1.5px] px-4 py-2 text-sm font-semibold sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]',
             featured
@@ -249,7 +251,7 @@ function PricingCard({
             height={68}
             className="pointer-events-none absolute bottom-[-61.5px] left-1/2 h-[68px] w-[273px] -translate-x-1/2"
           />
-        </button>
+        </Link>
       </div>
 
       <ul className="relative z-10 flex flex-col gap-3 px-4 sm:gap-4 sm:px-6">

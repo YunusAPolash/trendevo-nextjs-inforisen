@@ -1,4 +1,7 @@
+import Link from 'next/link';
+
 import { Button } from '@/components/ui/button';
+import { signUpUrl } from '@/lib/auth-urls';
 
 export const facebookPageFollowersCta = {
   title: (
@@ -12,8 +15,11 @@ export const facebookPageFollowersCta = {
     'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
   buttonsOutlet: (
     <>
-      <Button className="bg-brand-gradient h-[50px] w-full rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] font-semibold text-white hover:opacity-90 sm:w-auto sm:min-w-[160px]">
-        Register Now
+      <Button
+        asChild
+        className="bg-brand-gradient h-[50px] w-full rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] font-semibold text-white hover:opacity-90 sm:w-auto sm:min-w-[160px]"
+      >
+        <Link href={signUpUrl}>Register Now</Link>
       </Button>
       <Button
         variant="outline"

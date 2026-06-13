@@ -6,7 +6,9 @@ import ServiceLeading from '@/components/sections/service-leading';
 import ServiceWorkingProcessSection from '@/components/sections/service-working-process-section';
 import TestimonialsSection from '@/components/sections/testimonials-section';
 import { Button } from '@/components/ui/button';
-import { facebookPageFollowersTrustBadge } from './_components/hero-content';
+import Link from 'next/link';
+import { signInUrl, signUpUrl } from '@/lib/auth-urls';
+import { getFacebookPageFollowersTrustBadge } from './_components/hero-content';
 import OrderFormSection from './_components/order-form-section';
 import { facebookPageFollowersCta } from './_components/cta-content';
 import {
@@ -34,13 +36,15 @@ export const metadata: Metadata = {
     'Buy real Facebook page followers at affordable prices. Fast delivery, secure checkout, and 24/7 support from TrendEvo in Bangladesh.',
 };
 
-export default function FacebookPageFollowersPage() {
+export default async function FacebookPageFollowersPage() {
+  const trustBadge = await getFacebookPageFollowersTrustBadge();
+
   return (
     <>
       <HeroSection
         bg="section-1"
         variant="wide"
-        trustBadge={facebookPageFollowersTrustBadge}
+        trustBadge={trustBadge}
         title={
           <>
             Buy <span className="text-gradient">Facebook Followers</span> in
@@ -51,13 +55,17 @@ export default function FacebookPageFollowersPage() {
         actions={
           <div className="flex flex-wrap items-center gap-3">
             <Button
+              asChild
               variant="outline"
               className="h-[50px] w-[180px] shrink-0 rounded-[10px] border-[#cb7ef7] bg-white/25 px-[18px] text-base font-semibold text-gradient hover:bg-white/40"
             >
-              Sign In
+              <Link href={signInUrl}>Sign In</Link>
             </Button>
-            <Button className="bg-brand-gradient h-[50px] shrink-0 rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] text-base font-semibold text-white hover:opacity-90">
-              Create an Account
+            <Button
+              asChild
+              className="bg-brand-gradient h-[50px] shrink-0 rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] text-base font-semibold text-white hover:opacity-90"
+            >
+              <Link href={signUpUrl}>Create an Account</Link>
             </Button>
           </div>
         }

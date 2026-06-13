@@ -1,7 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import PrimaryCard from '@/components/cards/primary-card';
 import { cn } from '@/lib/utils';
 import PrimaryButton from '@/components/buttons/primary-button';
+import { signUpUrl } from '@/lib/auth-urls';
 
 type ServicePanelCardProps = {
   backgroundGradient: string;
@@ -82,10 +84,11 @@ export default function ServicePanelCard({
             </p>
           </div>
           <PrimaryButton
+            asChild
             showArrow
             className="h-11 w-full border-[1.5px] border-[#cc7aff] sm:h-[50px] sm:w-fit"
           >
-            Get Started Now
+            <Link href={signUpUrl}>Get Started Now</Link>
           </PrimaryButton>
         </div>
       </div>

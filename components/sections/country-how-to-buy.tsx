@@ -1,10 +1,12 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
+import { signUpUrl } from '@/lib/auth-urls';
 import {
   Accordion,
   AccordionContent,
@@ -135,7 +137,6 @@ export default function CountryHowToBuy({ slug }: CountryHowToBuyProps) {
     title,
     subtitle,
     buttonLabel,
-    buttonHref,
     steps,
     underlineSrc,
     underlineWidth,
@@ -169,15 +170,11 @@ export default function CountryHowToBuy({ slug }: CountryHowToBuyProps) {
           />
 
           <PrimaryButton
+            asChild
             showArrow
             className="w-fit border-[1.5px] border-[#cc7aff] pl-3.5 pr-3"
-            onClick={() => {
-              if (buttonHref) {
-                window.location.href = buttonHref;
-              }
-            }}
           >
-            {buttonLabel}
+            <Link href={signUpUrl}>{buttonLabel}</Link>
           </PrimaryButton>
         </div>
 

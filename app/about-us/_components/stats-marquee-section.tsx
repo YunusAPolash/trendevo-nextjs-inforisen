@@ -1,10 +1,4 @@
-const stats = [
-  'Total active users (688K+)',
-  'Total Services (4,555)',
-  'Total Orders (55,5k)',
-  'Total completed orders(48K+)',
-  'Total Ticket (28K+)',
-] as const;
+import { buildMarqueeStats, getStats } from '@/lib/stats';
 
 function StatItem({ label }: { label: string }) {
   return (
@@ -17,7 +11,9 @@ function StatItem({ label }: { label: string }) {
   );
 }
 
-export default function StatsMarqueeSection() {
+export default async function StatsMarqueeSection() {
+  const statsData = await getStats();
+  const stats = buildMarqueeStats(statsData);
   const items = [...stats, ...stats];
 
   return (

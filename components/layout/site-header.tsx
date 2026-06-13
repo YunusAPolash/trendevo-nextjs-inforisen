@@ -15,6 +15,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { signInUrl, signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
 
 const navLinks: {
@@ -148,7 +149,7 @@ export default function SiteHeader({ className }: { className?: string }) {
             <ThemeToggle />
             <div className="inline-flex h-10 shrink-0 rounded-[10px] bg-brand-gradient p-px">
               <Link
-                href="#sign-in"
+                href={signInUrl}
                 className="flex h-full items-center justify-center rounded-[9px] bg-white px-4 text-base font-semibold transition-colors hover:bg-white/95 dark:bg-[#231a2b] dark:hover:bg-[#2d2436]"
               >
                 <span className="text-gradient dark:bg-none dark:bg-clip-border dark:text-white">
@@ -158,8 +159,11 @@ export default function SiteHeader({ className }: { className?: string }) {
             </div>
           </div>
 
-          <Button className="bg-brand-gradient hidden h-10 rounded-[10px] border-0 px-4 text-base font-semibold text-white hover:opacity-90 min-[1100px]:inline-flex">
-            Create account
+          <Button
+            asChild
+            className="bg-brand-gradient hidden h-10 rounded-[10px] border-0 px-4 text-base font-semibold text-white hover:opacity-90 min-[1100px]:inline-flex"
+          >
+            <Link href={signUpUrl}>Create account</Link>
           </Button>
 
           <button
@@ -281,15 +285,20 @@ export default function SiteHeader({ className }: { className?: string }) {
 
             <div className="flex flex-col gap-2.5">
               <Link
-                href="#sign-in"
+                href={signInUrl}
                 onClick={closeMobileMenu}
                 className="inline-flex h-11 items-center justify-center rounded-[10px] border border-[#d181ff]/50 bg-white text-sm font-semibold text-[#13203b] transition hover:bg-[#fdf6ff] sm:text-base dark:border-[#cb7ef7]/40 dark:bg-white/[0.06] dark:text-white dark:hover:bg-white/[0.1]"
               >
                 Sign In
               </Link>
 
-              <Button className="bg-brand-gradient h-11 w-full rounded-[10px] border-0 text-sm font-semibold text-white shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] hover:opacity-90 sm:text-base">
-                Create account
+              <Button
+                asChild
+                className="bg-brand-gradient h-11 w-full rounded-[10px] border-0 text-sm font-semibold text-white shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] hover:opacity-90 sm:text-base"
+              >
+                <Link href={signUpUrl} onClick={closeMobileMenu}>
+                  Create account
+                </Link>
               </Button>
             </div>
           </div>
