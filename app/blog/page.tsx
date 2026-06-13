@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import BlogGridSection from '@/app/blog/_components/blog-grid-section';
-import HeroSection from '@/app/blog/_components/hero-section';
+import PageHeroSection from '@/components/sections/page-hero-section';
 import CtaSection from '@/components/sections/cta-section';
 import PrimaryButton from '@/components/buttons/primary-button';
 import SecondaryButton from '@/components/buttons/secondary-button';
@@ -16,7 +16,7 @@ export default function BlogPage() {
     <>
       <div className="relative isolate bg-[#FCF8FF] dark:bg-[#120619]">
         <div className="relative z-10">
-          <HeroSection
+          <PageHeroSection
             titlePrefix="Read Our"
             titleHighlight="Latest Blogs"
             description="Explore Trend Evo’s blog for the latest social media trends, digital marketing tips, and industry updates. Stay informed, improve your strategy, and grow your online presence effectively."
