@@ -320,7 +320,7 @@ function FeaturedReviewCard({
   onPlay: () => void;
 }) {
   return (
-    <article className="relative mx-auto h-[380px] w-full min-w-0 max-w-[464px] overflow-hidden rounded-[30px] sm:h-[460px] xl:mx-0 xl:h-[538px] xl:max-w-none xl:flex-1">
+    <article className="relative mx-auto h-[380px] w-full min-w-0 max-w-[464px] overflow-hidden rounded-[30px] sm:h-[460px] max-[1249px]:md:max-w-[600px] max-[1249px]:md:h-[440px] min-[1250px]:mx-0 min-[1250px]:h-[538px] min-[1250px]:max-w-none min-[1250px]:flex-1">
       <Image
         src={featuredReview.image}
         alt=""
@@ -447,7 +447,7 @@ function ScrollableReviewColumn({
   return (
     <div
       className={cn(
-        'relative h-[380px] min-h-0 min-w-0 sm:h-[460px] xl:h-[538px]',
+        'relative h-[380px] min-h-0 min-w-0 sm:h-[460px] max-[1249px]:md:h-[500px] min-[1250px]:h-[538px]',
         className,
       )}
     >
@@ -495,14 +495,14 @@ function CustomerReviewsGrid({
   onPlayFeatured: () => void;
 }) {
   return (
-    <div className="grid w-full max-w-[1440px] grid-cols-1 gap-[18px] xl:grid-cols-3 xl:items-start">
+    <div className="grid w-full max-w-[1440px] grid-cols-1 gap-[18px] max-[1249px]:md:grid-cols-2 min-[1250px]:grid-cols-3 min-[1250px]:items-start">
       <ScrollableReviewColumn
         reviews={leftTextReviews}
         assets={assets}
-        className="order-2 xl:order-1 xl:max-w-[464px] xl:flex-1"
+        className="order-2 min-[1250px]:order-1 min-[1250px]:max-w-[464px] min-[1250px]:flex-1"
       />
 
-      <div className="order-1 xl:order-2">
+      <div className="order-1 max-[1249px]:md:col-span-2 min-[1250px]:order-2">
         <FeaturedReviewCard
           featuredReview={featuredReview}
           assets={assets}
@@ -513,7 +513,7 @@ function CustomerReviewsGrid({
       <ScrollableReviewColumn
         reviews={rightTextReviews}
         assets={assets}
-        className="order-3 xl:max-w-[464px] xl:flex-1"
+        className="order-3 min-[1250px]:max-w-[464px] min-[1250px]:flex-1"
       />
     </div>
   );
