@@ -22,7 +22,7 @@ type BlogCategoryAttributes = {
 type BlogSeoAttributes = {
   metaTitle: string;
   metaDescription: string;
-  metaKeywords: string;
+  metaKeywords?: string | null;
   canonicalUrl: string;
   ogTitle: string;
   ogDescription: string;
@@ -112,6 +112,71 @@ export type BlogTableOfContentLink = {
   label: string;
   href: string;
 };
+
+export type BlogShareLink = {
+  label: 'Facebook' | 'Instagram' | 'X' | 'LinkedIn';
+  href: string;
+  iconSrc: string;
+  action?: 'copy';
+};
+
+function getBlogShareUrl(slug: string, canonicalUrl: string): string {
+  if (canonicalUrl) {
+    return canonicalUrl;
+  }
+
+  const appUrl = process.env.NEXT_PUBLIC_PERFECT_APP_URL?.replace(/\/$/, '') ?? '';
+
+  return `${appUrl}/blog/${slug}`;
+}
+
+export function parseBlogMetaKeywords(
+  metaKeywords: string | null | undefined,
+): string[] {
+  if (!metaKeywords) {
+    return [];
+  }
+
+  return metaKeywords
+    .split(',')
+    .map((keyword) => keyword.trim())
+    .filter(Boolean);
+}
+
+export function buildBlogShareLinks(blog: {
+  slug: string;
+  title: string;
+  seo: BlogSeo;
+}): BlogShareLink[] {
+  const shareUrl = getBlogShareUrl(blog.slug, blog.seo.canonicalUrl);
+  const shareTitle = blog.seo.ogTitle || blog.title;
+  const encodedUrl = encodeURIComponent(shareUrl);
+  const encodedTitle = encodeURIComponent(shareTitle);
+
+  return [
+    {
+      label: 'Facebook',
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+      iconSrc: '/images/icons/blog-details-share-facebook.webp',
+    },
+    {
+      label: 'Instagram',
+      href: shareUrl,
+      iconSrc: '/images/icons/blog-details-share-instagram.webp',
+      action: 'copy',
+    },
+    {
+      label: 'X',
+      href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+      iconSrc: '/images/icons/blog-details-share-x.webp',
+    },
+    {
+      label: 'LinkedIn',
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+      iconSrc: '/images/icons/blog-details-share-linkedin.webp',
+    },
+  ];
+}
 
 export type BlogAuthor = {
   name: string;
@@ -265,7 +330,10 @@ function mapBlogDetailItem(item: BlogDetailApiItem, slug: string): BlogDetail {
       bio: authorAttributes.bio ?? '',
     },
     category: relationships.category.attributes,
-    seo: relationships.seo.attributes,
+    seo: {
+      ...relationships.seo.attributes,
+      metaKeywords: relationships.seo.attributes.metaKeywords ?? '',
+    },
   };
 }
 

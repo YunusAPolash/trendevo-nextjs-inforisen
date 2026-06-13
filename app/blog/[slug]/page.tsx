@@ -8,7 +8,7 @@ import CtaSection from '@/components/sections/cta-section';
 import PrimaryButton from '@/components/buttons/primary-button';
 import SecondaryButton from '@/components/buttons/secondary-button';
 import { signUpUrl } from '@/lib/auth-urls';
-import { getBlogBySlug, getBlogs } from '@/lib/blogs';
+import { buildBlogShareLinks, getBlogBySlug, getBlogs, parseBlogMetaKeywords } from '@/lib/blogs';
 
 type BlogDetailsPageProps = {
   params: Promise<{ slug: string }>;
@@ -29,10 +29,7 @@ export async function generateMetadata({
   }
 
   const { seo } = blog;
-  const keywords = seo.metaKeywords
-    .split(',')
-    .map((keyword) => keyword.trim())
-    .filter(Boolean);
+  const keywords = parseBlogMetaKeywords(seo.metaKeywords);
 
   return {
     title: seo.metaTitle,
@@ -76,12 +73,14 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
 
   const { posts } = await getBlogs(1, 25);
   const relatedPosts = posts.filter((post) => post.slug !== slug).slice(0, 3);
+  const shareLinks = buildBlogShareLinks(blog);
 
   return (
     <>
       <ArticleLayoutSection
         breadcrumbLabel={blog.title}
         tableOfContents={blog.tableOfContents}
+        shareLinks={shareLinks}
         authorName={blog.author.name}
         authorAvatarSrc={blog.author.avatar}
         authorDesignation={blog.author.designation}
