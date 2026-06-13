@@ -38,7 +38,7 @@ export const facebookPageFollowersWorkingProcessHeading = {
   underlineWidth: 216,
   title: (
     <>
-      <span className="text-[#071431]">How to Buy Facebook Followers</span>
+      How to Buy Facebook Followers
       <span className="text-gradient"> on TrendEvo</span>
     </>
   ),

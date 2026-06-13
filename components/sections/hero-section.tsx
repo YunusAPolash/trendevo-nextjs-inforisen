@@ -127,7 +127,7 @@ const illustrationWrapClassByVariant: Record<HeroLayoutVariant, string> = {
 
 function HeroTrustBadgeBar({ badge }: { badge: HeroTrustBadge }) {
   return (
-    <div className="flex w-full max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border-l-2 border-[#cb7ef7] bg-white py-2 pl-1.5 pr-3 sm:w-fit">
+    <div className="flex w-full max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border-l-2 border-[#cb7ef7] bg-white py-2 pl-1.5 pr-3 backdrop-blur-none sm:w-fit dark:bg-white/[0.07] dark:backdrop-blur-[10px]">
       <div className="flex -space-x-3">
         {badge.avatarSrcs.map((src, index) => (
           <Image
@@ -136,7 +136,7 @@ function HeroTrustBadgeBar({ badge }: { badge: HeroTrustBadge }) {
             alt=""
             width={24}
             height={24}
-            className="size-6 rounded-full border border-white object-cover"
+            className="size-6 rounded-full border border-white object-cover dark:border-[0.5px]"
           />
         ))}
       </div>
@@ -147,8 +147,12 @@ function HeroTrustBadgeBar({ badge }: { badge: HeroTrustBadge }) {
         height={15}
         className="size-4 shrink-0"
       />
-      <span className="text-gradient text-sm font-medium">{badge.rating}</span>
-      <span className="text-gradient text-sm font-medium">{badge.label}</span>
+      <span className="text-gradient text-sm font-medium dark:bg-none dark:bg-clip-border dark:text-white">
+        {badge.rating}
+      </span>
+      <span className="text-gradient text-sm font-medium dark:bg-none dark:bg-clip-border dark:text-white">
+        {badge.label}
+      </span>
     </div>
   );
 }

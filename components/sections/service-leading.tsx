@@ -1,7 +1,9 @@
 import Image from 'next/image';
 
 import PrimaryCard from '@/components/cards/primary-card';
-import PrimarySection from '@/components/sections/primary-section';
+import PrimarySection, {
+  sectionBackgroundCoverClassName,
+} from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
 
@@ -78,7 +80,11 @@ function LeadingCard({
                   height={iconHeight}
                   quality={100}
                   unoptimized
-                  className={cn('size-full object-contain', iconClassName)}
+                  className={
+                    iconWrapperClassName?.includes('overflow-hidden')
+                      ? cn('max-w-none', iconClassName)
+                      : cn('size-full object-contain', iconClassName)
+                  }
                 />
               </div>
             </>
@@ -131,6 +137,7 @@ export default function ServiceLeading({ slug }: ServiceLeadingProps) {
     <PrimarySection
       bg="section-11"
       darkBg="section-13-dark"
+      backgroundClassName={sectionBackgroundCoverClassName}
       className="relative overflow-hidden py-16 sm:py-20"
     >
       <Image

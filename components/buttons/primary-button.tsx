@@ -20,6 +20,7 @@ export default function PrimaryButton({
 }: PrimaryButtonProps) {
   return (
     <Button
+      shine
       className={cn(
         'h-[50px] cursor-pointer rounded-[10px] bg-transparent px-[18px] text-base font-semibold text-white hover:opacity-90',
         className,

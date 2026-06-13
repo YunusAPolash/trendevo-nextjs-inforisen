@@ -54,10 +54,15 @@ const sectionDarkBackgroundClasses = {
     "bg-[url('/images/backgrounds/section-bg-22-dark.svg')]",
   'section-23-dark':
     "bg-[url('/images/backgrounds/section-bg-23-dark.svg')]",
+  'section-24-dark':
+    "bg-[url('/images/backgrounds/section-bg-24-dark.svg')]",
 } as const;
 
-const sectionBackgroundLayerClassName =
-  'absolute inset-0 bg-cover bg-top bg-no-repeat';
+const sectionBackgroundFitClassName = 'bg-cover bg-top bg-no-repeat';
+
+/** SVG section backgrounds — use cover + center instead of 100% stretch. */
+export const sectionBackgroundCoverClassName =
+  'bg-cover bg-center bg-no-repeat';
 
 const defaultDarkBackgroundClassName = 'bg-[#190A21]';
 
@@ -70,6 +75,7 @@ export default function PrimarySection({
   darkBg,
   darkBackgroundColor,
   lightBackgroundImage,
+  backgroundClassName,
   style,
   children,
   ...props
@@ -78,6 +84,7 @@ export default function PrimarySection({
   darkBg?: SectionDarkBgKey;
   darkBackgroundColor?: string;
   lightBackgroundImage?: string;
+  backgroundClassName?: string;
 }) {
   return (
     <section
@@ -89,15 +96,20 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            sectionBackgroundLayerClassName,
+            'absolute inset-0',
             sectionBackgroundClasses[bg],
+            backgroundClassName ?? sectionBackgroundFitClassName,
             'dark:hidden',
           )}
         />
       ) : lightBackgroundImage ? (
         <div
           aria-hidden
-          className={cn(sectionBackgroundLayerClassName, 'dark:hidden')}
+          className={cn(
+            'absolute inset-0',
+            backgroundClassName ?? sectionBackgroundFitClassName,
+            'dark:hidden',
+          )}
           style={{ backgroundImage: lightBackgroundImage }}
         />
       ) : null}
@@ -105,7 +117,8 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            sectionBackgroundLayerClassName,
+            'absolute inset-0',
+            backgroundClassName ?? sectionBackgroundFitClassName,
             'hidden dark:block',
           )}
           style={{ backgroundColor: darkBackgroundColor }}
@@ -115,16 +128,18 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            sectionBackgroundLayerClassName,
+            'absolute inset-0',
             'hidden dark:block',
             sectionDarkBackgroundClasses[darkBg],
+            backgroundClassName ?? sectionBackgroundFitClassName,
           )}
         />
       ) : bg ? (
         <div
           aria-hidden
           className={cn(
-            sectionBackgroundLayerClassName,
+            'absolute inset-0',
+            sectionBackgroundFitClassName,
             'hidden dark:block',
             defaultDarkBackgroundClassName,
           )}

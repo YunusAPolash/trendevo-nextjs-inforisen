@@ -5,7 +5,7 @@ import { Slot } from "radix-ui"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-2xl border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/30 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex shrink-0 cursor-pointer items-center justify-center rounded-2xl border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/30 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
@@ -46,23 +46,28 @@ function Button({
   variant = "default",
   size = "default",
   asChild = false,
+  shine = false,
   children,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    shine?: boolean
   }) {
   const Comp = asChild ? Slot.Root : "button"
+  const resolvedClassName = cn(className)
   const hasShine =
     !asChild &&
-    (variant === "gradient" ||
-      (typeof className === "string" && className.includes("bg-brand-gradient")))
+    (shine ||
+      variant === "gradient" ||
+      resolvedClassName.includes("bg-brand-gradient"))
 
   return (
     <Comp
       data-slot="button"
       data-variant={variant}
       data-size={size}
+      data-shine={hasShine ? '' : undefined}
       className={cn(
         buttonVariants({ variant, size, className }),
         hasShine && "relative overflow-hidden",
@@ -73,9 +78,11 @@ function Button({
         <>
           <span
             aria-hidden
-            className="pointer-events-none absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover/button:-translate-x-40"
-          />
-          <span className="relative z-10 inline-flex items-center justify-center gap-[inherit]">
+            className="pointer-events-none absolute inset-0 overflow-hidden"
+          >
+            <span className="button-shine-layer absolute top-[-50%] h-[200%] w-8 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+          </span>
+          <span className="relative z-10 inline-flex items-center justify-center gap-[inherit] whitespace-nowrap">
             {children}
           </span>
         </>

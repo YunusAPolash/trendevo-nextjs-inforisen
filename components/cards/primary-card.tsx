@@ -23,6 +23,7 @@ const cardDarkBackgroundClasses = {
   'card-3-dark': "bg-[url('/images/backgrounds/card-bg-3-dark.svg')]",
   'card-4-dark': "bg-[url('/images/backgrounds/card-bg-4-dark.svg')]",
   'card-5-dark': "bg-[url('/images/backgrounds/card-bg-5-dark.svg')]",
+  'card-11-dark': "bg-[url('/images/backgrounds/card-bg-11-dark.svg')]",
   'blog-hero-dark':
     "bg-[url('/images/backgrounds/blog-hero-dark-bg.svg')]",
 } as const;
