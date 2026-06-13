@@ -1,4 +1,5 @@
 import HeroSection from '@/components/sections/hero-section';
+import PrimaryButton from '@/components/buttons/primary-button';
 import { Button } from '@/components/ui/button';
 import {
   getCountryHeroContent,
@@ -37,9 +38,9 @@ export default function CountryHero({ slug }: CountryHeroProps) {
           >
             {signInLabel}
           </Button>
-          <Button className="bg-brand-gradient h-10 shrink-0 rounded-[10px] border-[1.5px] border-[#cc7aff] px-4 text-sm font-semibold text-white hover:opacity-90 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]">
+          <PrimaryButton className="shrink-0 border-[1.5px] border-[#cc7aff]">
             {createAccountLabel}
-          </Button>
+          </PrimaryButton>
         </div>
       }
       illustration={illustration}

@@ -5,6 +5,7 @@ import HeroSection from '@/components/sections/hero-section';
 import ServiceLeading from '@/components/sections/service-leading';
 import ServiceWorkingProcessSection from '@/components/sections/service-working-process-section';
 import TestimonialsSection from '@/components/sections/testimonials-section';
+import PrimaryButton from '@/components/buttons/primary-button';
 import { Button } from '@/components/ui/button';
 import { facebookPageFollowersTrustBadge } from './_components/hero-content';
 import OrderFormSection from './_components/order-form-section';
@@ -56,9 +57,9 @@ export default function FacebookPageFollowersPage() {
             >
               Sign In
             </Button>
-            <Button className="bg-brand-gradient h-[50px] shrink-0 rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] text-base font-semibold text-white hover:opacity-90">
+            <PrimaryButton className="shrink-0 border-[1.5px] border-[#cc7aff]">
               Create an Account
-            </Button>
+            </PrimaryButton>
           </div>
         }
         illustration={{

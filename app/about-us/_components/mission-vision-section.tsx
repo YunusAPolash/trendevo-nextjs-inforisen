@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { ChevronsRight } from 'lucide-react';
 import PrimarySection from '@/components/sections/primary-section';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
 
 const features = [
   'Fast Delivery with Smooth and Reliable Performance',
@@ -63,7 +63,7 @@ export default function MissionVisionSection() {
           <div className="flex w-full min-w-0 flex-col gap-10">
             <div className="flex w-full min-w-0 flex-col gap-7">
               <div className="flex w-full min-w-0 flex-col gap-8">
-                <h2 className="w-full min-w-0 text-3xl font-semibold leading-snug break-words text-[#13203b] sm:text-4xl lg:text-5xl dark:text-[#efedf1]">
+                <h2 className="w-full min-w-0 text-[28px] font-semibold leading-[1.35] break-words text-[#13203b] sm:text-4xl lg:text-5xl dark:text-[#efedf1]">
                   Our{' '}
                   <span className="text-gradient">Mission & Vision</span>
                 </h2>
@@ -84,10 +84,10 @@ export default function MissionVisionSection() {
               </div>
             </div>
 
-            <Button className="bg-brand-gradient h-13 w-fit max-w-full gap-2 rounded-lg border-2 border-[#cc7aff] px-4.5 text-lg font-semibold text-white hover:opacity-90">
+            <PrimaryButton className="w-fit max-w-full gap-2 rounded-lg border-2 border-[#cc7aff] md:h-13 md:px-4.5 md:text-lg">
               Contact with Us
               <ChevronsRight className="size-6 shrink-0" aria-hidden />
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import PrimarySection from '@/components/sections/primary-section';
+import PrimaryButton from '@/components/buttons/primary-button';
 import { Button } from '@/components/ui/button';
 
 const avatars = [
@@ -57,7 +58,7 @@ export default function HeroSection() {
               High-Speed Delivery With{' '}
               <span className="text-gradient">Secure Services</span>
             </h1>
-            <p className="max-w-2xl text-sm leading-relaxed text-[#313131] sm:text-base md:text-lg dark:text-[#ebecef]">
+            <p className="max-w-2xl text-base leading-relaxed text-[#313131] sm:text-base md:text-lg dark:text-[#ebecef]">
               <span className="text-gradient font-medium">TrendEvo</span> is a
               next-generation viral growth platform crafted to help brands,
               creators, and agencies unlock their full digital potential. We
@@ -73,7 +74,7 @@ export default function HeroSection() {
                 height={24}
                 className="size-6 shrink-0"
               />
-              <p className="text-base text-sm leading-relaxed text-[#313131] sm:text-base md:text-lg dark:text-white">
+              <p className="text-base leading-relaxed text-[#313131] md:text-lg dark:text-white">
                 Enjoy up to{' '}
                 <span className="font-semibold text-[#fc7f4d]">30%</span> bonus on
                 every deposit, starting at only $1.
@@ -92,9 +93,9 @@ export default function HeroSection() {
                 </span>
               </Link>
             </div>
-            <Button className="bg-brand-gradient h-10 shrink-0 rounded-[10px] border-0 px-4 text-sm font-semibold text-white hover:opacity-90 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px] dark:border-[1.5px] dark:border-[#cc7aff]">
+            <PrimaryButton className="shrink-0 border-0 dark:border-[1.5px] dark:border-[#cc7aff]">
               Create an Account
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
 

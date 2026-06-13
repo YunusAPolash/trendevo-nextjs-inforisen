@@ -170,12 +170,8 @@ export default function CountryHowToBuy({ slug }: CountryHowToBuyProps) {
 
           <PrimaryButton
             showArrow
+            href={buttonHref}
             className="w-fit border-[1.5px] border-[#cc7aff] pl-3.5 pr-3"
-            onClick={() => {
-              if (buttonHref) {
-                window.location.href = buttonHref;
-              }
-            }}
           >
             {buttonLabel}
           </PrimaryButton>

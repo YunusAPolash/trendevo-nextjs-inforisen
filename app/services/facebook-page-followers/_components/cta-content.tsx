@@ -1,4 +1,5 @@
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
+import SecondaryButton from '@/components/buttons/secondary-button';
 
 export const facebookPageFollowersCta = {
   title: (
@@ -12,15 +13,12 @@ export const facebookPageFollowersCta = {
     'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
   buttonsOutlet: (
     <>
-      <Button className="bg-brand-gradient h-[50px] w-full rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] font-semibold text-white hover:opacity-90 sm:w-auto sm:min-w-[160px]">
+      <PrimaryButton className="w-full border-[1.5px] border-[#cc7aff] sm:w-auto sm:min-w-[160px]">
         Register Now
-      </Button>
-      <Button
-        variant="outline"
-        className="h-[50px] w-full rounded-[10px] border-[#d181ff] bg-white/25 px-[18px] font-semibold text-gradient hover:bg-white/40 sm:w-auto sm:min-w-[180px]"
-      >
+      </PrimaryButton>
+      <SecondaryButton type="button" className="w-full sm:w-auto sm:min-w-[180px]">
         See all Services
-      </Button>
+      </SecondaryButton>
     </>
   ),
 };

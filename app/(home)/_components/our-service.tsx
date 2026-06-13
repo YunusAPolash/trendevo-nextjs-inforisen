@@ -923,7 +923,7 @@ export default function OurService() {
 
                 <PrimaryButton
                   type="button"
-                  className="h-10 self-start px-4 text-sm sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]"
+                  className="self-start"
                 >
                   View {activePlatform.label} Services
                 </PrimaryButton>

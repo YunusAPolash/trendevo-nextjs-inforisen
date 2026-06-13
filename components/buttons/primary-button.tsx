@@ -32,14 +32,14 @@ function PrimaryButtonContent({
       <span className="relative z-10 inline-flex items-center justify-center gap-[inherit] whitespace-nowrap">
         {children}
         {showArrow ? (
-          <span className="ml-2 flex size-8 items-center justify-center rounded-full">
+          <span className="ml-1.5 flex size-6 items-center justify-center rounded-full sm:ml-2 sm:size-8">
             <Image
               src="/images/icons/button-arroww.png"
               alt=""
               aria-hidden
               width={16}
               height={16}
-              className="size-8"
+              className="size-6 sm:size-8"
             />
           </span>
         ) : null}
@@ -58,7 +58,7 @@ export default function PrimaryButton({
   ...props
 }: PrimaryButtonProps) {
   const buttonClassName = cn(
-    'h-[50px] cursor-pointer rounded-[10px] bg-transparent px-[18px] text-base font-semibold text-white hover:opacity-90',
+    'h-10 cursor-pointer rounded-[10px] bg-transparent px-4 text-base font-semibold text-white hover:opacity-90 sm:h-11 sm:px-5 md:h-[50px] md:px-[18px]',
     className,
   );
   const buttonStyle = { backgroundImage: primaryButtonGradient, ...style };
@@ -103,14 +103,14 @@ export default function PrimaryButton({
     >
       {children}
       {showArrow ? (
-        <span className="ml-2 flex size-8 items-center justify-center rounded-full">
+        <span className="ml-1.5 flex size-6 items-center justify-center rounded-full sm:ml-2 sm:size-8">
           <Image
             src="/images/icons/button-arroww.png"
             alt=""
             aria-hidden
             width={16}
             height={16}
-            className="size-8"
+            className="size-6 sm:size-8"
           />
         </span>
       ) : null}

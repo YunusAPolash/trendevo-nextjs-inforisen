@@ -47,10 +47,10 @@ function TrustColumn({
   connectorId: string;
 }) {
   return (
-    <div className="flex w-full max-w-2xl flex-col items-center gap-4">
-      <TrustCard {...cards[0]} />
+    <div className="flex w-full max-w-2xl flex-1 flex-col items-center gap-4">
+      <TrustCard {...cards[0]} className="w-full" />
       <TrustConnectorVertical connectorId={connectorId} />
-      <TrustCard {...cards[1]} />
+      <TrustCard {...cards[1]} className="w-full" />
     </div>
   );
 }
@@ -64,11 +64,11 @@ export default function TrustSection() {
     >
       <div className="container flex flex-col items-center gap-16">
         <div className="flex max-w-6xl flex-col items-center gap-6 text-center">
-          <h2 className="text-4xl font-semibold leading-snug tracking-wide text-[#13203b] lg:text-5xl dark:text-[#efedf1]">
+          <h2 className="text-[28px] font-semibold leading-[1.35] tracking-wide text-[#13203b] sm:text-4xl lg:text-5xl dark:text-[#efedf1]">
             Why Businesss Owner{' '}
             <span className="text-gradient">Trust us</span>
           </h2>
-          <p className="max-w-6xl text-xl font-medium leading-normal text-[#404a60] dark:text-[#c1c4cc]">
+          <p className="max-w-6xl text-base font-medium leading-normal text-[#404a60] sm:text-lg lg:text-xl dark:text-[#c1c4cc]">
             Business owners trust us for delivering measurable growth with
             transparent, reliable services. Our dedicated support and commitment
             to excellence give businesses the confidence to succeed.
@@ -77,7 +77,7 @@ export default function TrustSection() {
 
         <div className="hidden w-full items-center justify-between gap-6 lg:flex">
           <TrustColumn cards={leftCards} connectorId="trust-connector-left" />
-          <TrustCrosshairCenter />
+          <TrustCrosshairCenter className="shrink-0 self-center" />
           <TrustColumn cards={rightCards} connectorId="trust-connector-right" />
         </div>
 

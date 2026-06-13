@@ -83,7 +83,7 @@ export default function ServicePanelCard({
           </div>
           <PrimaryButton
             showArrow
-            className="h-11 w-full border-[1.5px] border-[#cc7aff] sm:h-[50px] sm:w-fit"
+            className="w-full border-[1.5px] border-[#cc7aff] sm:w-fit"
           >
             Get Started Now
           </PrimaryButton>

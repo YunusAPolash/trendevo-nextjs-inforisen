@@ -4,7 +4,8 @@ import ArticleHeroSection from './_components/article-hero-section';
 import ArticleLayoutSection from './_components/article-layout-section';
 import RelatedBlogsSection from './_components/related-blogs-section';
 import CtaSection from '@/components/sections/cta-section';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
+import SecondaryButton from '@/components/buttons/secondary-button';
 
 type BlogDetailsPageProps = {
   params: Promise<{ slug: string }>;
@@ -43,15 +44,12 @@ export default function BlogDetailsPage() {
         description="Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly."
         buttonsOutlet={
           <>
-            <Button className="bg-brand-gradient h-[50px] rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] font-semibold text-white hover:opacity-90">
+            <PrimaryButton className="border-[1.5px] border-[#cc7aff]">
               Register Now
-            </Button>
-            <Button
-              variant="outline"
-              className="h-[50px] rounded-[10px] border-[#d181ff] bg-white/25 px-6 font-semibold text-gradient hover:bg-white/40"
-            >
+            </PrimaryButton>
+            <SecondaryButton type="button">
               See all Services
-            </Button>
+            </SecondaryButton>
           </>
         }
       />

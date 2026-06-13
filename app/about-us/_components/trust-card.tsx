@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import PrimaryCard from '@/components/cards/primary-card';
+import { cn } from '@/lib/utils';
 
 type TrustCardProps = {
   title: string;
   description: string;
   iconSrc: string;
   iconClassName: string;
+  className?: string;
 };
 
 export default function TrustCard({
@@ -13,14 +15,18 @@ export default function TrustCard({
   description,
   iconSrc,
   iconClassName,
+  className,
 }: TrustCardProps) {
   return (
     <PrimaryCard
       bg="card-5"
       darkBg="card-5-dark"
-      className="relative h-70 w-full gap-0 overflow-hidden rounded-2xl border-[0.7px] border-solid border-[#ffcbe5]/70 p-0 px-4 py-3.5 ring-0 dark:border-white/20"
+      className={cn(
+        'relative h-full w-full gap-0 overflow-hidden rounded-2xl border-[0.7px] border-solid border-[#ffcbe5]/70 p-0 px-4 py-3.5 ring-0 dark:border-white/20',
+        className,
+      )}
     >
-      <div className="relative flex h-full flex-col gap-[18px]">
+      <div className="relative flex h-full w-full flex-col gap-[18px]">
         <div className="relative flex size-20 shrink-0 items-center justify-center px-[13px] py-3.5">
           <Image
             src="/images/why-choose-us/hex-icon.svg"
@@ -49,14 +55,14 @@ export default function TrustCard({
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-start gap-1.5">
             <Image
               src="/images/why-choose-us/title-bullet.svg"
               alt=""
               aria-hidden
               width={12}
               height={12}
-              className="size-3 shrink-0"
+              className="size-3 shrink-0 mt-1"
             />
             <h3 className="text-[22px] font-semibold leading-none text-[#343e56] dark:text-white">
               {title}
