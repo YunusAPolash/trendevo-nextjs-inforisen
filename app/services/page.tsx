@@ -5,6 +5,7 @@ import { heroSocialIcons } from '@/content/hero-social-icons';
 import PrimaryButton from '@/components/buttons/primary-button';
 import SecondaryButton from '@/components/buttons/secondary-button';
 import ServicesGridSection from './_components/services-grid-section';
+import { signUpUrl } from '@/lib/auth-urls';
 
 export const metadata: Metadata = {
   title: 'Services | TrendEvo',
@@ -38,7 +39,9 @@ export default function ServicesPage() {
         }
         descriptionClassName="max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56]"
         actions={
-          <PrimaryButton showArrow className='w-fit'>Get Started Now</PrimaryButton>
+          <PrimaryButton href={signUpUrl} showArrow className="w-fit">
+            Get Started Now
+          </PrimaryButton>
         }
         illustration={{
           src: '/images/services/service-hero-character.png',
@@ -61,10 +64,10 @@ export default function ServicesPage() {
         description="Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly."
         buttonsOutlet={
           <>
-            <PrimaryButton className="border-[1.5px] border-[#cc7aff]">
+            <PrimaryButton href={signUpUrl} className="border-[1.5px] border-[#cc7aff]">
               Register Now
             </PrimaryButton>
-            <SecondaryButton type="button">
+            <SecondaryButton href="/services">
               See all Services
             </SecondaryButton>
           </>

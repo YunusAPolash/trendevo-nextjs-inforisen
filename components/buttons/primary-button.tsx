@@ -12,6 +12,7 @@ type PrimaryButtonProps = Omit<React.ComponentProps<typeof Button>, 'asChild'> &
   showArrow?: boolean;
   href?: string;
   asChild?: boolean;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
 function PrimaryButtonContent({
@@ -54,6 +55,7 @@ export default function PrimaryButton({
   showArrow = false,
   asChild = false,
   href,
+  onClick,
   children,
   ...props
 }: PrimaryButtonProps) {
@@ -67,6 +69,7 @@ export default function PrimaryButton({
     return (
       <Link
         href={href}
+        onClick={onClick}
         data-shine=""
         className={cn(
           buttonClassName,

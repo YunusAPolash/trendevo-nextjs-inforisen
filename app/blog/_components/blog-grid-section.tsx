@@ -132,7 +132,7 @@ export default function BlogGridSection({
           <button
             type="button"
             disabled={currentPage <= 1}
-            className="inline-flex h-10 items-center gap-1.5 rounded-lg border border-[#a6aab5] px-4 text-sm font-medium text-[#5a5a5a] disabled:cursor-not-allowed disabled:opacity-50"
+            className="inline-flex h-10 items-center gap-1.5 rounded-lg border border-[#a6aab5] px-4 text-sm font-medium text-[#5a5a5a] disabled:cursor-not-allowed disabled:opacity-50 dark:border-white/40 dark:bg-[#1c0926] dark:text-[#ebecef] dark:disabled:opacity-40"
           >
             <ArrowLeft className="size-4" aria-hidden />
             Prev.
@@ -148,8 +148,9 @@ export default function BlogGridSection({
                 type="button"
                 aria-current={isActive ? 'page' : undefined}
                 className={cn(
-                  'inline-flex size-10 items-center justify-center rounded-lg border border-[#a6aab5] text-sm text-[#5a5a5a]',
-                  isActive && 'font-medium',
+                  'inline-flex size-10 items-center justify-center rounded-lg border border-[#a6aab5] text-sm text-[#5a5a5a] dark:border-white/40 dark:bg-[#1c0926] dark:text-[#ebecef]',
+                  isActive &&
+                    'border-[#cc7aff] bg-brand-gradient font-medium text-white dark:border-white/40 dark:bg-brand-gradient dark:text-white',
                 )}
               >
                 {page}
@@ -160,7 +161,7 @@ export default function BlogGridSection({
           <button
             type="button"
             disabled={currentPage >= TOTAL_PAGES}
-            className="inline-flex h-10 items-center gap-1.5 rounded-lg bg-brand-gradient px-4 text-sm font-medium text-white disabled:cursor-not-allowed disabled:opacity-50"
+            className="inline-flex h-10 items-center gap-1.5 rounded-lg border border-transparent bg-brand-gradient px-4 text-sm font-medium text-white disabled:cursor-not-allowed disabled:opacity-50 dark:border-white/40 dark:disabled:opacity-40"
           >
             Next
             <ArrowRight className="size-4" aria-hidden />

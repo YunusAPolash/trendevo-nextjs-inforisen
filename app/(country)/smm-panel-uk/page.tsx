@@ -13,6 +13,7 @@ import FaqSection from '@/components/sections/faq-section';
 import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
 import { getCtaServiceContent } from '@/components/serviceSmmPanel/cta-service-content';
 import { getServiceFaqContent } from '@/components/serviceSmmPanel/service-faq-content';
+import { signUpUrl } from '@/lib/auth-urls';
 
 export const metadata: Metadata = {
   title: 'SMM Panel UK | TrendEvo',
@@ -49,12 +50,12 @@ export default function SmmPanelUkPage() {
         buttonsOutlet={
           <>
             <PrimaryButton
-              type="button"
+              href={signUpUrl}
               className="w-full min-w-0 sm:w-auto sm:min-w-[160px]"
             >
               {ukCtaContent.primaryButtonLabel}
             </PrimaryButton>
-            <SecondaryButton type="button" className="w-full min-w-0 sm:w-auto sm:min-w-[180px]">
+            <SecondaryButton href="/services" className="w-full min-w-0 sm:w-auto sm:min-w-[180px]">
               {ukCtaContent.secondaryButtonLabel}
             </SecondaryButton>
           </>

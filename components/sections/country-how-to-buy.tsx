@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
+import { signUpUrl } from '@/lib/auth-urls';
 import {
   Accordion,
   AccordionContent,
@@ -135,7 +136,6 @@ export default function CountryHowToBuy({ slug }: CountryHowToBuyProps) {
     title,
     subtitle,
     buttonLabel,
-    buttonHref,
     steps,
     underlineSrc,
     underlineWidth,
@@ -169,8 +169,8 @@ export default function CountryHowToBuy({ slug }: CountryHowToBuyProps) {
           />
 
           <PrimaryButton
+            href={signUpUrl}
             showArrow
-            href={buttonHref}
             className="w-fit border-[1.5px] border-[#cc7aff] pl-3.5 pr-3"
           >
             {buttonLabel}

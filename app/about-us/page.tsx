@@ -9,6 +9,7 @@ import HeroSection from '@/components/sections/hero-section';
 import { heroSocialIcons } from '@/content/hero-social-icons';
 import PrimaryButton from '@/components/buttons/primary-button';
 import SecondaryButton from '@/components/buttons/secondary-button';
+import { signUpUrl } from '@/lib/auth-urls';
 import MissionVisionSection from './_components/mission-vision-section';
 import StatsMarqueeSection from './_components/stats-marquee-section';
 import TrustSection from './_components/trust-section';
@@ -46,7 +47,11 @@ export default function AboutUsPage() {
           </>
         }
         actions={
-          <PrimaryButton showArrow className="w-fit border-[1.5px] border-[#cc7aff]">
+          <PrimaryButton
+            href={signUpUrl}
+            showArrow
+            className="w-fit border-[1.5px] border-[#cc7aff]"
+          >
             Get Started Now
           </PrimaryButton>
         }
@@ -82,10 +87,10 @@ export default function AboutUsPage() {
         description="Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly."
         buttonsOutlet={
           <>
-            <PrimaryButton className="border-[1.5px] border-[#cc7aff]">
+            <PrimaryButton href={signUpUrl} className="border-[1.5px] border-[#cc7aff]">
               Register Now
             </PrimaryButton>
-            <SecondaryButton type="button">
+            <SecondaryButton href="/services">
               See all Services
             </SecondaryButton>
           </>

@@ -1,10 +1,15 @@
 import Image from 'next/image';
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
+import {
+  formatStatCount,
+  getSatisfactionRate,
+  getStats,
+} from '@/lib/stats';
 
-const stats = [
+const statCards = [
   {
-    value: '1.2M+',
+    key: 'ordersCompleted' as const,
     label: 'Total Completed Orders',
     icon: '/images/stats/stats-orders-icon.png',
     width: 167,
@@ -14,7 +19,7 @@ const stats = [
     tabletDisplayWidth: 96,
   },
   {
-    value: '2,500+',
+    key: 'servicesAll' as const,
     label: 'Total Services Available',
     icon: '/images/stats/stats-services-icon.png',
     width: 152,
@@ -24,7 +29,7 @@ const stats = [
     tabletDisplayWidth: 87,
   },
   {
-    value: '50K+',
+    key: 'usersAll' as const,
     label: 'Total Users',
     icon: '/images/stats/stats-users-icon.png',
     width: 188,
@@ -34,7 +39,7 @@ const stats = [
     tabletDisplayWidth: 108,
   },
   {
-    value: '75%',
+    key: 'satisfaction' as const,
     label: 'Customer Satisfaction Rate',
     icon: '/images/stats/stats-satisfaction-icon.png',
     width: 144,
@@ -45,14 +50,27 @@ const stats = [
   },
 ] as const;
 
-export default function StatsSection() {
+function getStatValue(
+  key: (typeof statCards)[number]['key'],
+  statsData: Awaited<ReturnType<typeof getStats>>,
+): string {
+  if (key === 'satisfaction') {
+    return `${getSatisfactionRate(statsData)}%`;
+  }
+
+  return formatStatCount(statsData[key]);
+}
+
+export default async function StatsSection() {
+  const statsData = await getStats();
+
   return (
     <PrimarySection
       id="stats"
       className="relative z-10 bg-[#f8f8f8] px-0 py-12 sm:py-16 lg:py-20 dark:bg-[#1f0b2b]"
     >
       <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
-        {stats.map((stat) => (
+        {statCards.map((stat) => (
           <PrimaryCard
             key={stat.label}
             bg="card-1"
@@ -78,7 +96,7 @@ export default function StatsSection() {
             </div>
             <div className="flex w-full flex-col gap-2 sm:gap-3">
               <p className="text-2xl font-semibold leading-none text-[#232323] sm:text-[28px] md:text-[32px] dark:text-white">
-                {stat.value}
+                {getStatValue(stat.key, statsData)}
               </p>
               <p className="text-gradient text-base font-semibold leading-normal tracking-[0.2px] sm:text-lg md:text-xl dark:bg-none dark:bg-clip-border dark:text-[#ebecef]">
                 {stat.label}

@@ -2,7 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PrimarySection from '@/components/sections/primary-section';
 import PrimaryButton from '@/components/buttons/primary-button';
-import { Button } from '@/components/ui/button';
+import { signInUrl, signUpUrl } from '@/lib/auth-urls';
+import { getStats, formatUsersTrustLabel } from '@/lib/stats';
 
 const avatars = [
   '/images/reviews/hero-avatar-1.png',
@@ -13,7 +14,9 @@ const avatars = [
   '/images/reviews/hero-avatar-3.png',
 ];
 
-export default function HeroSection() {
+export default async function HeroSection() {
+  const { usersAll } = await getStats();
+
   return (
     <PrimarySection
       bg="section-1"
@@ -46,7 +49,7 @@ export default function HeroSection() {
               (4.8)
             </span>
             <span className="text-gradient text-sm font-medium dark:bg-none dark:bg-clip-border dark:text-white">
-              Trusted by 50,000+ Users in Bangladesh
+              {formatUsersTrustLabel(usersAll)}
             </span>
           </div>
 
@@ -85,7 +88,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
             <div className="inline-flex h-10 shrink-0 rounded-[10px] bg-brand-gradient p-px sm:h-11 md:h-[50px] md:w-[180px]">
               <Link
-                href="#sign-in"
+                href={signInUrl}
                 className="flex h-full w-full items-center justify-center rounded-[9px] bg-white px-4 text-sm font-semibold transition-colors hover:bg-white/95 sm:px-5 sm:text-base md:px-[18px] dark:bg-[#231a2b] dark:hover:bg-[#2d2436]"
               >
                 <span className="text-gradient dark:bg-none dark:bg-clip-border dark:text-white">
@@ -93,7 +96,10 @@ export default function HeroSection() {
                 </span>
               </Link>
             </div>
-            <PrimaryButton className="shrink-0 border-0 dark:border-[1.5px] dark:border-[#cc7aff]">
+            <PrimaryButton
+              href={signUpUrl}
+              className="shrink-0 border-0 dark:border-[1.5px] dark:border-[#cc7aff]"
+            >
               Create an Account
             </PrimaryButton>
           </div>

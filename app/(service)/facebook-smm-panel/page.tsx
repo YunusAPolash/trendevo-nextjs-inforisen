@@ -19,6 +19,7 @@ import SecondaryButton from '@/components/buttons/secondary-button';
 import CtaSection from '@/components/sections/cta-section';
 import FaqSection from '@/components/sections/faq-section';
 import { getCtaServiceContent } from '@/components/serviceSmmPanel/cta-service-content';
+import { signUpUrl } from '@/lib/auth-urls';
 
 export const metadata: Metadata = {
   title: 'Facebook SMM Panel | TrendEvo',
@@ -80,12 +81,12 @@ export default function FacebookSmmPanelPage() {
         buttonsOutlet={
           <>
             <PrimaryButton
-              type="button"
+              href={signUpUrl}
               className="w-full min-w-0 sm:w-auto sm:min-w-[160px]"
             >
               {facebookCtaContent.primaryButtonLabel}
             </PrimaryButton>
-            <SecondaryButton type="button" className="w-full min-w-0 sm:w-auto sm:min-w-[180px]">
+            <SecondaryButton href="/services" className="w-full min-w-0 sm:w-auto sm:min-w-[180px]">
               {facebookCtaContent.secondaryButtonLabel}
             </SecondaryButton>
           </>

@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
+import { signUpUrl } from '@/lib/auth-urls';
 
 import {
   getServiceHeroContent,
@@ -33,6 +34,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
           </div>
 
           <PrimaryButton
+            href={signUpUrl}
             showArrow
             className="w-fit dark:border-[1.5px] dark:border-[#cc7aff]"
           >
