@@ -34,6 +34,7 @@ const sectionDarkBackgroundClasses = {
   'section-15-dark': "bg-[url('/images/backgrounds/section-bg-15-dark.svg')]",
   'section-13-dark': "bg-[url('/images/backgrounds/section-bg-13-dark.svg')]",
   'section-12-dark': "bg-[url('/images/backgrounds/section-bgg-12-dark.svg')]",
+  'section-14-dark': "bg-[url('/images/backgrounds/section-bg-14-dark.webp')]",
   'section-footer-dark':
     "bg-[url('/images/backgrounds/section-bg-footer.png')]",
   'section-11-dark':
@@ -54,10 +55,17 @@ const sectionDarkBackgroundClasses = {
     "bg-[url('/images/backgrounds/section-bg-22-dark.svg')]",
   'section-23-dark':
     "bg-[url('/images/backgrounds/section-bg-23-dark.svg')]",
+  'section-26-dark':
+    "bg-[url('/images/backgrounds/test-bg.webp')]",
+  'section-27-dark':
+    "bg-[url('/images/backgrounds/section-bg-27-dark.webp')]",
 } as const;
 
 const sectionBackgroundLayerClassName =
   'absolute inset-0 bg-cover bg-top bg-no-repeat';
+
+const sectionBackgroundLayerFullClassName =
+  'absolute inset-0 bg-[length:100%_100%] bg-top bg-no-repeat';
 
 const defaultDarkBackgroundClassName = 'bg-[#190A21]';
 
@@ -70,6 +78,7 @@ export default function PrimarySection({
   darkBg,
   darkBackgroundColor,
   lightBackgroundImage,
+  backgroundSize = 'cover',
   style,
   children,
   ...props
@@ -78,7 +87,13 @@ export default function PrimarySection({
   darkBg?: SectionDarkBgKey;
   darkBackgroundColor?: string;
   lightBackgroundImage?: string;
+  backgroundSize?: 'cover' | 'full';
 }) {
+  const backgroundLayerClassName =
+    backgroundSize === 'full'
+      ? sectionBackgroundLayerFullClassName
+      : sectionBackgroundLayerClassName;
+
   return (
     <section
       className={cn('relative isolate px-4 ', className)}
@@ -89,7 +104,7 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            sectionBackgroundLayerClassName,
+            backgroundLayerClassName,
             sectionBackgroundClasses[bg],
             'dark:hidden',
           )}
@@ -97,7 +112,7 @@ export default function PrimarySection({
       ) : lightBackgroundImage ? (
         <div
           aria-hidden
-          className={cn(sectionBackgroundLayerClassName, 'dark:hidden')}
+          className={cn(backgroundLayerClassName, 'dark:hidden')}
           style={{ backgroundImage: lightBackgroundImage }}
         />
       ) : null}
@@ -105,7 +120,7 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            sectionBackgroundLayerClassName,
+            backgroundLayerClassName,
             'hidden dark:block',
           )}
           style={{ backgroundColor: darkBackgroundColor }}
@@ -115,7 +130,7 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            sectionBackgroundLayerClassName,
+            backgroundLayerClassName,
             'hidden dark:block',
             sectionDarkBackgroundClasses[darkBg],
           )}
@@ -124,7 +139,7 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            sectionBackgroundLayerClassName,
+            backgroundLayerClassName,
             'hidden dark:block',
             defaultDarkBackgroundClassName,
           )}
