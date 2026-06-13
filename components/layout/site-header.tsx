@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
@@ -20,15 +21,21 @@ const navLinks: {
   label: string;
   href: string;
   icon: LucideIcon;
-  active?: boolean;
 }[] = [
-  { label: 'Home', href: '/', icon: Home, active: true },
+  { label: 'Home', href: '/', icon: Home },
   { label: 'Services', href: '/services', icon: LayoutGrid },
   { label: 'About Us', href: '/about-us', icon: Users },
-  { label: 'How it works', href: '#how-it-works', icon: CircleHelp },
   { label: 'Blog', href: '/blog', icon: BookOpen },
   { label: 'Contact Us', href: '/contact-us', icon: Mail },
 ];
+
+function isNavLinkActive(pathname: string, href: string) {
+  if (href.startsWith('#')) return false;
+
+  if (href === '/') return pathname === '/';
+
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 function MenuIcon({ open, light = false }: { open: boolean; light?: boolean }) {
   const barColor = light ? 'bg-white' : 'bg-[#343e56] dark:bg-white';
@@ -64,6 +71,7 @@ function MenuIcon({ open, light = false }: { open: boolean; light?: boolean }) {
 }
 
 export default function SiteHeader({ className }: { className?: string }) {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -115,20 +123,24 @@ export default function SiteHeader({ className }: { className?: string }) {
         </Link>
 
         <nav className="hidden min-[1100px]:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {navLinks.map((link) => {
+            const isActive = isNavLinkActive(pathname, link.href);
+
+            return (
             <Link
               key={link.label}
               href={link.href}
               className={cn(
                 'text-base font-medium transition-colors',
-                link.active
-                  ? 'text-gradient'
+                isActive
+                  ? 'text-gradient font-semibold'
                   : 'text-[#343e56] hover:text-[#071431] dark:text-white dark:hover:text-white/90',
               )}
             >
               {link.label}
             </Link>
-          ))}
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-3 min-[1100px]:gap-6">
@@ -198,6 +210,7 @@ export default function SiteHeader({ className }: { className?: string }) {
           <ul className="overflow-hidden rounded-2xl bg-white/75 ring-1 ring-[#f0d8ff] dark:bg-white/[0.06] dark:ring-white/10">
             {navLinks.map((link, index) => {
               const Icon = link.icon;
+              const isActive = isNavLinkActive(pathname, link.href);
 
               return (
                 <li
@@ -215,7 +228,7 @@ export default function SiteHeader({ className }: { className?: string }) {
                     onClick={closeMobileMenu}
                     className={cn(
                       'flex items-center gap-3 px-4 py-3.5 transition-colors duration-200 sm:py-4',
-                      link.active
+                      isActive
                         ? 'bg-[#faf2ff]/80 dark:bg-white/[0.08]'
                         : 'hover:bg-[#fdf6ff]/90 dark:hover:bg-white/[0.05]',
                     )}
@@ -223,7 +236,7 @@ export default function SiteHeader({ className }: { className?: string }) {
                     <Icon
                       className={cn(
                         'size-[18px] shrink-0',
-                        link.active
+                        isActive
                           ? 'text-[#8f2acd] dark:text-[#cb7ef7]'
                           : 'text-[#8a94a8] dark:text-[#9ca3af]',
                       )}
@@ -232,7 +245,7 @@ export default function SiteHeader({ className }: { className?: string }) {
                     <span
                       className={cn(
                         'text-[15px] font-medium sm:text-base',
-                        link.active
+                        isActive
                           ? 'text-gradient font-semibold'
                           : 'text-[#13203b] dark:text-[#efedf1]',
                       )}
