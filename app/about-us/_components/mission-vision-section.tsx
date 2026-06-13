@@ -47,13 +47,7 @@ export default function MissionVisionSection() {
       <div className="container py-16 lg:py-20">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-12 xl:gap-16">
           <div className="relative mx-auto aspect-[567/698] w-full max-w-xl overflow-hidden lg:mx-0 lg:max-w-none">
-            <div
-              aria-hidden
-              className="pointer-events-none absolute bottom-0 left-1/2 z-0 hidden h-28 w-full -translate-x-1/2 rounded-2xl bg-white/35 lg:block"
-            />
-
-        
-
+          
             <div className="relative z-20 h-full w-full">
               <Image
                 src="/images/about/our-mission-and-vision.png"

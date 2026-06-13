@@ -21,12 +21,7 @@ export default function TeamSection() {
       <div className="container py-16 lg:py-21">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-12 xl:gap-16">
           <div className="relative mx-auto aspect-[567/698] w-full max-w-xl overflow-hidden lg:mx-0 lg:max-w-none">
-            <div
-              aria-hidden
-              className="pointer-events-none absolute bottom-0 left-0 z-0 hidden h-28 w-full rounded-2xl bg-white/35 lg:block"
-            />
-
-            <div className="relative z-20 h-full w-full">
+          <div className="relative z-20 h-full w-full">
               <Image
                 src="/images/about/about-team-character.png"
                 alt="TrendEvo team specialist representing digital marketing expertise"
@@ -36,13 +31,15 @@ export default function TeamSection() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
+
+           
           </div>
 
           <div className="flex w-full min-w-0 flex-col gap-9">
             <div className="flex w-full min-w-0 flex-col gap-7">
               <div className="flex w-full min-w-0 flex-col gap-8">
                 <h2 className="w-full min-w-0 text-3xl font-semibold leading-snug break-words text-[#13203b] sm:text-4xl lg:text-5xl dark:text-[#efedf1]">
-                  The Team Behind T
+                  The Team Behind
                   <span className="text-gradient">RendEvo</span>
                 </h2>
 
