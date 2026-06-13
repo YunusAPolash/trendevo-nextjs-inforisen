@@ -1,5 +1,12 @@
 import Image from 'next/image';
 import PrimaryCard from '@/components/cards/primary-card';
+import {
+  cardClassName,
+  legalAccentListBodyClassName,
+  legalHeadingLgClassName,
+  legalSubheadingClassName,
+  legalSubtitleClassName,
+} from '@/app/(legal)/_components/primitives';
 import { cn } from '@/lib/utils';
 
 export type AccentListItem = {
@@ -17,15 +24,14 @@ type AccentListSectionProps = {
 const variantStyles = {
   positive: {
     accent: 'bg-[#8f2acd]',
-    iconBg: 'bg-[#8f2acd]/[0.09]',
+    iconBg:
+      'bg-[#8f2acd]/[0.09] dark:bg-white/[0.08]',
     icon: '/images/icons/accent-list-check-icon.svg',
-    gap: 'gap-10',
   },
   negative: {
-    accent: 'bg-[#f43f5e]/70',
-    iconBg: 'bg-[#ffe4e6]',
+    accent: 'bg-[#f43f5e]/70 dark:bg-[#8f2acd]',
+    iconBg: 'bg-[#ffe4e6] dark:bg-white/[0.08]',
     icon: '/images/icons/terms-acceptable-use-x-icon.svg',
-    gap: 'gap-12',
   },
 } as const;
 
@@ -53,8 +59,8 @@ function AccentListItemRow({
         />
       </span>
       <div className="flex min-w-0 flex-1 flex-col gap-3">
-        <h3 className="text-base font-semibold text-[#1a1a1a]">{title}</h3>
-        <div className="space-y-4 text-base font-medium leading-relaxed text-[#535353]">
+        <h3 className={legalSubheadingClassName}>{title}</h3>
+        <div className={cn('space-y-4', legalAccentListBodyClassName)}>
           {description}
         </div>
       </div>
@@ -73,13 +79,16 @@ export default function AccentListSection({
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-3">
-        <h2 className="text-2xl font-semibold text-[#8f2acd]">{title}</h2>
-        <p className="text-base font-medium leading-relaxed text-[#1a1a1a]">
-          {subtitle}
-        </p>
+        <h2 className={legalHeadingLgClassName}>{title}</h2>
+        <p className={legalSubtitleClassName}>{subtitle}</p>
       </div>
 
-      <PrimaryCard className="relative overflow-hidden rounded-2xl border border-[#e6e6e6] bg-white p-8 shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)] lg:p-10">
+      <PrimaryCard
+        className={cn(
+          cardClassName,
+          'relative overflow-hidden shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)] dark:shadow-none',
+        )}
+      >
         <span
           className={cn(
             'absolute bottom-0 left-0 top-0 w-1.5 rounded-l-2xl',
@@ -87,7 +96,7 @@ export default function AccentListSection({
           )}
           aria-hidden
         />
-        <div className={cn('flex flex-col pl-2', styles.gap)}>
+        <div className="flex flex-col gap-10">
           {items.map((item) => (
             <AccentListItemRow
               key={item.title}

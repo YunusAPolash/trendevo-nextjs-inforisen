@@ -1,21 +1,29 @@
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
+import { cn } from '@/lib/utils';
 
-type HeroSectionProps = {
+export type PageHeroSectionProps = {
   titlePrefix: string;
   titleHighlight: string;
   description: string;
   lastUpdated: string;
+  sectionClassName?: string;
 };
 
-export default function HeroSection({
+export default function PageHeroSection({
   titlePrefix,
   titleHighlight,
   description,
   lastUpdated,
-}: HeroSectionProps) {
+  sectionClassName,
+}: PageHeroSectionProps) {
   return (
-    <PrimarySection className="overflow-hidden bg-transparent pb-0 pt-20 lg:pb-0">
+    <PrimarySection
+      className={cn(
+        'overflow-hidden bg-transparent pb-0 pt-20 lg:pb-0',
+        sectionClassName,
+      )}
+    >
       <div className="container mt-[54px]">
         <PrimaryCard
           bg="blog-hero"

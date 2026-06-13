@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import TermsContentSection from '@/app/(legal)/_components/content-section';
-import HeroSection from '@/app/(legal)/_components/hero-section';
+import PageHeroSection from '@/components/sections/page-hero-section';
 import FaqSection from '@/components/sections/faq-section';
 export const metadata: Metadata = {
   title: 'Terms of Service | TrendEvo',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function TermsOfServicePage() {
   return (
     <>
-      <HeroSection
+      <PageHeroSection
         titlePrefix="Terms Of"
         titleHighlight="Services"
         description="Before registering and ordering services, it is important to read and understand the Terms of Service carefully. By using the services offered by smmxp.org, you agree to abide by these terms."
