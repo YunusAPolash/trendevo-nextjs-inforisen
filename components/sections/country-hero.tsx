@@ -1,6 +1,6 @@
 import HeroSection from '@/components/sections/hero-section';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import PrimaryButton from '@/components/buttons/primary-button';
+import SecondaryButton from '@/components/buttons/secondary-button';
 import {
   getCountryHeroContent,
   type CountryHeroSlug,
@@ -33,19 +33,18 @@ export default function CountryHero({ slug }: CountryHeroProps) {
 
       actions={
         <div className="flex flex-wrap items-center gap-3">
-          <Button
-            asChild
-            variant="outline"
-            className="h-10 shrink-0 rounded-[10px] border-[#cb7ef7] bg-white/25 px-4 text-sm font-semibold text-gradient hover:bg-white/40 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:w-[180px] md:px-[18px]"
+          <SecondaryButton
+            href={signInUrl}
+            className="h-10 shrink-0 sm:h-11 md:h-[50px] md:w-[180px]"
           >
-            <Link href={signInUrl}>{signInLabel}</Link>
-          </Button>
-          <Button
-            asChild
-            className="bg-brand-gradient h-10 shrink-0 rounded-[10px] border-[1.5px] border-[#cc7aff] px-4 text-sm font-semibold text-white hover:opacity-90 sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]"
+            {signInLabel}
+          </SecondaryButton>
+          <PrimaryButton
+            href={signUpUrl}
+            className="shrink-0 border-[1.5px] border-[#cc7aff]"
           >
-            <Link href={signUpUrl}>{createAccountLabel}</Link>
-          </Button>
+            {createAccountLabel}
+          </PrimaryButton>
         </div>
       }
       illustration={illustration}

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import PrimaryCard from '@/components/cards/primary-card';
 import { cn } from '@/lib/utils';
 import PrimaryButton from '@/components/buttons/primary-button';
@@ -84,11 +83,11 @@ export default function ServicePanelCard({
             </p>
           </div>
           <PrimaryButton
-            asChild
+            href={signUpUrl}
             showArrow
-            className="h-11 w-full border-[1.5px] border-[#cc7aff] sm:h-[50px] sm:w-fit"
+            className="w-full border-[1.5px] border-[#cc7aff] sm:w-fit"
           >
-            <Link href={signUpUrl}>Get Started Now</Link>
+            Get Started Now
           </PrimaryButton>
         </div>
       </div>

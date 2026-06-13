@@ -52,7 +52,7 @@ export default function SectionHeading({
         >
           <span
             className={cn(
-              'text-gradient text-[22px] font-semibold leading-[1.45] dark:bg-none dark:bg-clip-border dark:text-white',
+              'text-gradient text-lg font-semibold leading-[1.45] sm:text-[22px] dark:bg-none dark:bg-clip-border dark:text-white',
               badgeClassName,
             )}
           >
@@ -80,7 +80,7 @@ export default function SectionHeading({
       {subtitle ? (
         <p
           className={cn(
-            'max-w-[1090px] text-lg leading-normal text-[#404a60] dark:text-[#c1c4cc]',
+            'max-w-[1090px] text-base leading-normal text-[#404a60] sm:text-lg dark:text-[#c1c4cc]',
             subtitleClassName,
           )}
         >

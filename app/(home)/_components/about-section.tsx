@@ -215,7 +215,7 @@ export default async function AboutSection() {
 
           <PrimaryButton
             type="button"
-            className="h-10 w-fit gap-2 self-start border-none px-4 text-sm font-semibold leading-[1.5] sm:h-11 sm:px-5 sm:text-base md:h-[52px] md:px-[18px] md:text-[18px]"
+            className="w-fit gap-2 self-start border-none md:h-[52px] md:text-lg"
           >
             Discover More
             <Image

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
@@ -35,11 +34,11 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
           </div>
 
           <PrimaryButton
-            asChild
+            href={signUpUrl}
             showArrow
             className="w-fit dark:border-[1.5px] dark:border-[#cc7aff]"
           >
-            <Link href={signUpUrl}>{buttonLabel}</Link>
+            {buttonLabel}
           </PrimaryButton>
         </div>
 

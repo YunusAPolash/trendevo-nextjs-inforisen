@@ -5,8 +5,8 @@ import HeroSection from '@/components/sections/hero-section';
 import ServiceLeading from '@/components/sections/service-leading';
 import ServiceWorkingProcessSection from '@/components/sections/service-working-process-section';
 import TestimonialsSection from '@/components/sections/testimonials-section';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import PrimaryButton from '@/components/buttons/primary-button';
+import SecondaryButton from '@/components/buttons/secondary-button';
 import { signInUrl, signUpUrl } from '@/lib/auth-urls';
 import { getFacebookPageFollowersTrustBadge } from './_components/hero-content';
 import OrderFormSection from './_components/order-form-section';
@@ -54,19 +54,15 @@ export default async function FacebookPageFollowersPage() {
         description="Growing a Facebook page can be tough. Consistent content and smart promotion are key, but results can be slow. At TrendEvo, we provide solutions to help your Facebook page thrive with real followers and engagement."
         actions={
           <div className="flex flex-wrap items-center gap-3">
-            <Button
-              asChild
-              variant="outline"
-              className="h-[50px] w-[180px] shrink-0 rounded-[10px] border-[#cb7ef7] bg-white/25 px-[18px] text-base font-semibold text-gradient hover:bg-white/40"
+            <SecondaryButton href={signInUrl} className="h-[50px] w-[180px] shrink-0">
+              Sign In
+            </SecondaryButton>
+            <PrimaryButton
+              href={signUpUrl}
+              className="shrink-0 border-[1.5px] border-[#cc7aff]"
             >
-              <Link href={signInUrl}>Sign In</Link>
-            </Button>
-            <Button
-              asChild
-              className="bg-brand-gradient h-[50px] shrink-0 rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] text-base font-semibold text-white hover:opacity-90"
-            >
-              <Link href={signUpUrl}>Create an Account</Link>
-            </Button>
+              Create an Account
+            </PrimaryButton>
           </div>
         }
         illustration={{

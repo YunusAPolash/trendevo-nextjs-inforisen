@@ -108,7 +108,7 @@ const titleClassByVariant: Record<HeroLayoutVariant, string> = {
 
 const descriptionClassByVariant: Record<HeroLayoutVariant, string> = {
   standard:
-    'max-w-2xl text-sm leading-relaxed text-[#313131] sm:text-base md:text-lg dark:text-[#c1c4cc]',
+    'max-w-2xl text-base leading-relaxed text-[#313131] sm:text-base md:text-lg dark:text-[#c1c4cc]',
   'wide-responsive':
     'max-w-[762px] text-base font-medium leading-[1.5] text-[#343e56] sm:text-lg dark:text-[#c1c4cc]',
   wide: 'max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56] dark:text-[#c1c4cc]',

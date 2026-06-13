@@ -13,7 +13,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { signInUrl, signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
@@ -159,12 +159,9 @@ export default function SiteHeader({ className }: { className?: string }) {
             </div>
           </div>
 
-          <Button
-            asChild
-            className="bg-brand-gradient hidden h-10 rounded-[10px] border-0 px-4 text-base font-semibold text-white hover:opacity-90 min-[1100px]:inline-flex"
-          >
-            <Link href={signUpUrl}>Create account</Link>
-          </Button>
+          <PrimaryButton href={signUpUrl} className="hidden min-[1100px]:inline-flex">
+            Create account
+          </PrimaryButton>
 
           <button
             type="button"
@@ -292,14 +289,13 @@ export default function SiteHeader({ className }: { className?: string }) {
                 Sign In
               </Link>
 
-              <Button
-                asChild
-                className="bg-brand-gradient h-11 w-full rounded-[10px] border-0 text-sm font-semibold text-white shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] hover:opacity-90 sm:text-base"
+              <PrimaryButton
+                href={signUpUrl}
+                onClick={closeMobileMenu}
+                className="w-full border-0 shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)]"
               >
-                <Link href={signUpUrl} onClick={closeMobileMenu}>
-                  Create account
-                </Link>
-              </Button>
+                Create account
+              </PrimaryButton>
             </div>
           </div>
         </nav>

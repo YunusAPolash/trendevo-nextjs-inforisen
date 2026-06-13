@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { ChevronsRight } from 'lucide-react';
 import PrimarySection from '@/components/sections/primary-section';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
 
 const checklistItems = [
   'RendEvo makes digital marketing tools accessible to all Bangladeshi businesses.',
@@ -38,7 +37,7 @@ export default function TeamSection() {
           <div className="flex w-full min-w-0 flex-col gap-9">
             <div className="flex w-full min-w-0 flex-col gap-7">
               <div className="flex w-full min-w-0 flex-col gap-8">
-                <h2 className="w-full min-w-0 text-3xl font-semibold leading-snug break-words text-[#13203b] sm:text-4xl lg:text-5xl dark:text-[#efedf1]">
+                <h2 className="w-full min-w-0 text-[28px] font-semibold leading-[1.35] break-words text-[#13203b] sm:text-4xl lg:text-5xl dark:text-[#efedf1]">
                   The Team Behind
                   <span className="text-gradient">RendEvo</span>
                 </h2>
@@ -97,15 +96,17 @@ export default function TeamSection() {
               </ul>
             </div>
 
-            <Button
-              asChild
-              className="bg-brand-gradient h-13 w-fit max-w-full gap-2 rounded-lg border-2 border-[#cc7aff] px-4.5 text-lg font-semibold text-white hover:opacity-90"
-            >
-              <Link href="/services">
+            <div className="flex flex-wrap gap-4">
+              <PrimaryButton
+                href="/services"
+                className="w-fit max-w-full gap-2 rounded-lg border-2 border-[#cc7aff] md:h-13 md:px-4.5 md:text-lg"
+              >
                 Our Services
                 <ChevronsRight className="size-6 shrink-0" aria-hidden />
-              </Link>
-            </Button>
+              </PrimaryButton>
+            </div>
+
+       
           </div>
         </div>
       </div>

@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 
 import PrimaryButton from '@/components/buttons/primary-button';
@@ -170,11 +169,11 @@ export default function CountryHowToBuy({ slug }: CountryHowToBuyProps) {
           />
 
           <PrimaryButton
-            asChild
+            href={signUpUrl}
             showArrow
             className="w-fit border-[1.5px] border-[#cc7aff] pl-3.5 pr-3"
           >
-            <Link href={signUpUrl}>{buttonLabel}</Link>
+            {buttonLabel}
           </PrimaryButton>
         </div>
 

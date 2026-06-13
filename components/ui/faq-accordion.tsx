@@ -63,7 +63,7 @@ function FaqAccordionTrigger({
         )}
         {...props}
       >
-        <span className="flex-1 text-base font-semibold leading-snug text-[#232323] sm:text-lg dark:text-lg dark:font-semibold dark:leading-normal dark:text-white">
+        <span className="flex-1 text-base font-semibold leading-snug text-[#232323] sm:text-lg sm:leading-normal dark:text-white">
           {children}
         </span>
         <span

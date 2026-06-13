@@ -1,18 +1,17 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import {
   FaqAccordion,
   FaqAccordionContent,
   FaqAccordionItem,
   FaqAccordionTrigger,
 } from '@/components/ui/faq-accordion';
+import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection, {
   type SectionBgKey,
   type SectionDarkBgKey,
 } from '@/components/sections/primary-section';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 export type FaqItem = {
@@ -150,12 +149,12 @@ export default function FaqSection({
                 {ctaSubtitle}
               </p>
             </div>
-            <Button
-              asChild
-              className="bg-brand-gradient h-10 w-full shrink-0 rounded-xl border-0 px-5 text-sm font-semibold text-white shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] hover:opacity-90 sm:h-[50px] sm:w-auto sm:text-base"
+            <PrimaryButton
+              href={ctaButtonHref}
+              className="w-full shrink-0 rounded-xl border-0 shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] sm:w-auto"
             >
-              <Link href={ctaButtonHref}>{ctaButtonLabel}</Link>
-            </Button>
+              {ctaButtonLabel}
+            </PrimaryButton>
           </div>
         </div>
       </div>

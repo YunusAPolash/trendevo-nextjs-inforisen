@@ -7,7 +7,7 @@ import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection, {
   sectionBackgroundCoverClassName,
 } from '@/components/sections/primary-section';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
 import { cn } from '@/lib/utils';
 
 const MIN_QUANTITY = 100;
@@ -307,9 +307,12 @@ export default function OrderFormSection() {
               </div>
             </div>
 
-            <Button className="bg-brand-gradient h-[52px] w-full rounded-[12px] border-0 px-7 text-lg font-semibold text-white hover:opacity-90">
+            <PrimaryButton
+              type="button"
+              className="w-full rounded-[12px] border-0 md:h-[52px] md:px-7 md:text-lg"
+            >
               Buy Now
-            </Button>
+            </PrimaryButton>
           </div>
         </PrimaryCard>
       </div>

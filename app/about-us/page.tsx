@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
 import {
   homeFaqHeading,
   homeFaqItems,
@@ -9,7 +7,8 @@ import CtaSection from '@/components/sections/cta-section';
 import FaqSection from '@/components/sections/faq-section';
 import HeroSection from '@/components/sections/hero-section';
 import { heroSocialIcons } from '@/content/hero-social-icons';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
+import SecondaryButton from '@/components/buttons/secondary-button';
 import { signUpUrl } from '@/lib/auth-urls';
 import MissionVisionSection from './_components/mission-vision-section';
 import StatsMarqueeSection from './_components/stats-marquee-section';
@@ -48,17 +47,13 @@ export default function AboutUsPage() {
           </>
         }
         actions={
-          <Button
-            asChild
-            className="bg-brand-gradient h-[50px] w-fit rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] text-base font-semibold text-white hover:opacity-90"
+          <PrimaryButton
+            href={signUpUrl}
+            showArrow
+            className="w-fit border-[1.5px] border-[#cc7aff]"
           >
-            <Link href={signUpUrl}>
-              Get Started Now
-              <span className="ml-2 flex size-8 items-center justify-center rounded-full bg-white/10">
-                <ArrowRight className="size-4" aria-hidden />
-              </span>
-            </Link>
-          </Button>
+            Get Started Now
+          </PrimaryButton>
         }
         illustration={{
           src: '/images/about/about-team-character.png',
@@ -92,18 +87,12 @@ export default function AboutUsPage() {
         description="Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly."
         buttonsOutlet={
           <>
-            <Button
-              asChild
-              className="bg-brand-gradient h-[50px] rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] font-semibold text-white hover:opacity-90"
-            >
-              <Link href={signUpUrl}>Register Now</Link>
-            </Button>
-            <Button
-              variant="outline"
-              className="h-[50px] rounded-[10px] border-[#d181ff] bg-white/25 px-6 font-semibold text-gradient hover:bg-white/40"
-            >
+            <PrimaryButton href={signUpUrl} className="border-[1.5px] border-[#cc7aff]">
+              Register Now
+            </PrimaryButton>
+            <SecondaryButton href="/services">
               See all Services
-            </Button>
+            </SecondaryButton>
           </>
         }
       />
