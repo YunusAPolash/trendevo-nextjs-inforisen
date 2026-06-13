@@ -7,6 +7,16 @@ import {
   ListItem,
   SectionBadge,
   cardClassName,
+  legalBodyTextClassName,
+  legalHeadingLgClassName,
+  legalHeadingMdClassName,
+  legalIntroTextClassName,
+  legalLinkClassName,
+  legalNoticeCardClassName,
+  legalPageHeadingClassName,
+  legalSectionClassName,
+  legalSmallTextClassName,
+  legalSubheadingClassName,
 } from '@/app/(legal)/_components/primitives';
 import { cn } from '@/lib/utils';
 
@@ -30,13 +40,13 @@ const youMayNotItems = [
 
 export default function TermsContentSection() {
   return (
-    <PrimarySection className="bg-[#FCF8FF] py-12 lg:py-16">
+    <PrimarySection className={legalSectionClassName}>
       <div className="container flex flex-col gap-9">
-        <h2 className="grid max-w-[762px] text-[32px] font-semibold leading-snug text-[#121212]">
+        <h2 className={cn('grid max-w-[762px]', legalPageHeadingClassName)}>
           <span>Terms of Service — Please Read</span>
           <span className="text-gradient">Before Using Trend Evo</span>
         </h2>
-        <p className="w-full text-base font-medium leading-relaxed text-[#121212]/80">
+        <p className={legalIntroTextClassName}>
           Most Terms of Service pages are written by lawyers for other lawyers.
           They are long, confusing, and deliberately difficult to read. We have
           written ours differently. This page explains the rules and
@@ -47,7 +57,7 @@ export default function TermsContentSection() {
           needs to be covered legally. Please read this before creating an
           account or placing your first order. If something is unclear, contact
           us through our{' '}
-          <Link href="/#contact" className="text-[#8f2acd] hover:underline">
+          <Link href="/#contact" className={legalLinkClassName}>
             Contact Us
           </Link>{' '}
           page before you proceed. Our team is available 24 hours a day in
@@ -55,22 +65,22 @@ export default function TermsContentSection() {
           deal with a misunderstanding later.
         </p>
 
-        <PrimaryCard className={cn(cardClassName, 'justify-center bg-white')}>
-          <p className="text-sm font-medium text-[#1a1a1a]">
+        <PrimaryCard className={cn(legalNoticeCardClassName, 'justify-center')}>
+          <p className={legalSmallTextClassName}>
             These Terms of Service apply to all users of smmsun.com and should
             be read alongside our{' '}
-            <Link href="/privacy-policy" className="text-[#8f2acd] hover:underline">
+            <Link href="/privacy-policy" className={legalLinkClassName}>
               Privacy Policy
             </Link>{' '}
             and{' '}
-            <Link href="/refund-policy" className="text-[#8f2acd] hover:underline">
+            <Link href="/refund-policy" className={legalLinkClassName}>
               Refund Policy
             </Link>
             .
           </p>
         </PrimaryCard>
 
-        <PrimaryCard className={cn(cardClassName, 'gap-4 bg-white')}>
+        <PrimaryCard className={cn(cardClassName, 'gap-4')}>
           <div className="flex items-center gap-3">
             <Image
               src="/images/icons/terms-last-updated-clock-icon.svg"
@@ -79,11 +89,11 @@ export default function TermsContentSection() {
               height={24}
               className="size-6"
             />
-            <h2 className="text-2xl font-semibold text-[#8f2acd]">
+            <h2 className={legalHeadingLgClassName}>
               Last Updated
             </h2>
           </div>
-          <p className="text-base font-medium leading-relaxed text-[#535353]">
+          <p className={legalBodyTextClassName}>
             These Terms of Service were last updated in 2026. We will update
             this page when our terms change in any meaningful way and will note
             the revision date here. Your continued use of SMMSun after any
@@ -152,7 +162,7 @@ export default function TermsContentSection() {
             from SMMSun and asks for your account password or any social media
             password, do not share it and report the contact to us immediately
             through our{' '}
-            <Link href="/#contact" className="text-[#8f2acd] hover:underline">
+            <Link href="/#contact" className={legalLinkClassName}>
               Contact Us
             </Link>{' '}
             page.
@@ -225,7 +235,7 @@ export default function TermsContentSection() {
             funds are added to your SMMSun balance, they can be used for
             services on our platform but cannot be transferred back to your
             bKash, Nagad, or other payment account. Please refer to our{' '}
-            <Link href="/refund-policy" className="text-[#8f2acd] hover:underline">
+            <Link href="/refund-policy" className={legalLinkClassName}>
               Refund Policy
             </Link>{' '}
             for full details on when account credits are issued.
@@ -237,15 +247,15 @@ export default function TermsContentSection() {
           </p>
         </ContentBlock>
 
-        <PrimaryCard className={cn(cardClassName, 'gap-10 bg-white')}>
+        <PrimaryCard className={cn(cardClassName, 'gap-10')}>
           <div className="space-y-4">
             <div className="flex flex-wrap items-center gap-3">
               <SectionBadge number={8} />
-              <h2 className="text-xl font-semibold text-[#8f2acd] lg:text-2xl">
+              <h2 className={legalHeadingMdClassName}>
                 Acceptable Use — What You May and May Not Do
               </h2>
             </div>
-            <p className="text-base font-medium leading-relaxed text-[#535353]">
+            <p className={legalBodyTextClassName}>
               SMMSun is a legitimate business tool used by thousands of
               creators, businesses, and agencies across Bangladesh. To protect
               all users of our platform and to ensure the service remains
@@ -255,7 +265,7 @@ export default function TermsContentSection() {
           </div>
 
           <div className="grid gap-8 lg:grid-cols-2">
-            <div className="rounded-2xl border border-[#9deeb4] bg-[#f7fef9] p-8">
+            <div className="rounded-2xl border border-[#9deeb4] bg-[#f7fef9] p-8 dark:border-emerald-400/30 dark:bg-emerald-950/20">
               <div className="mb-8 flex items-center gap-4">
                 <span className="flex size-8 items-center justify-center rounded-full bg-[#d1fae5]">
                   <Image
@@ -266,7 +276,7 @@ export default function TermsContentSection() {
                     className="size-5"
                   />
                 </span>
-                <h3 className="text-base font-semibold text-[#1a1a1a]">
+                <h3 className={legalSubheadingClassName}>
                   You May
                 </h3>
               </div>
@@ -283,7 +293,7 @@ export default function TermsContentSection() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-[#ffd7d7] bg-[#fff9f9] p-8">
+            <div className="rounded-2xl border border-[#ffd7d7] bg-[#fff9f9] p-8 dark:border-rose-400/30 dark:bg-rose-950/20">
               <div className="mb-8 flex items-center gap-4">
                 <span className="flex size-8 items-center justify-center rounded-full bg-[#ffe4e6]">
                   <Image
@@ -294,7 +304,7 @@ export default function TermsContentSection() {
                     className="size-5"
                   />
                 </span>
-                <h3 className="text-base font-semibold text-[#1a1a1a]">
+                <h3 className={legalSubheadingClassName}>
                   You May Not
                 </h3>
               </div>
@@ -395,7 +405,7 @@ export default function TermsContentSection() {
         <ContentBlock number={12} title="Privacy and Data Protection">
           <p>
             Your use of SMMSun is also governed by our{' '}
-            <Link href="/privacy-policy" className="text-[#8f2acd] hover:underline">
+            <Link href="/privacy-policy" className={legalLinkClassName}>
               Privacy Policy
             </Link>
             , which explains in detail what personal data we collect, how we use
@@ -425,7 +435,7 @@ export default function TermsContentSection() {
             misunderstanding, contact our support team through the{' '}
             <Link
               href="/#contact"
-              className="text-[#8f2acd] underline hover:opacity-80"
+              className={cn(legalLinkClassName, 'underline hover:opacity-80')}
             >
               Contact Us
             </Link>{' '}
@@ -472,7 +482,7 @@ export default function TermsContentSection() {
             any dispute. The vast majority of issues are resolved quickly
             through our support team without any need for formal proceedings.
             You can reach us at any time through our{' '}
-            <Link href="/#contact" className="text-[#8f2acd] hover:underline">
+            <Link href="/#contact" className={legalLinkClassName}>
               Contact Us
             </Link>{' '}
             page.

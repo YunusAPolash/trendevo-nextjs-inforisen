@@ -24,8 +24,8 @@ export type FaqSectionProps = {
   title: React.ReactNode;
   subtitle: string;
   items: FaqItem[];
-  bg?: SectionBgKey;
-  darkBg?: SectionDarkBgKey;
+  bg?: SectionBgKey | null;
+  darkBg?: SectionDarkBgKey | null;
   className?: string;
   ctaTitle?: string;
   ctaSubtitle?: React.ReactNode;
@@ -75,8 +75,8 @@ export default function FaqSection({
 
   return (
     <PrimarySection
-      bg={bg}
-      darkBg={darkBg}
+      bg={bg ?? undefined}
+      darkBg={darkBg ?? undefined}
       // backgroundSize="full"
       className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
     >

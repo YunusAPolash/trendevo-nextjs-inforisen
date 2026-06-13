@@ -2,7 +2,18 @@ import Link from 'next/link';
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
 import IconSectionCard from '@/app/(legal)/_components/icon-section-card';
-import { cardClassName } from '@/app/(legal)/_components/primitives';
+import {
+  cardClassName,
+  legalBodyTextClassName,
+  legalHeadingLgClassName,
+  legalIntroTextClassName,
+  legalLinkClassName,
+  legalNoticeCardClassName,
+  legalPageHeadingClassName,
+  legalSectionClassName,
+  legalSmallTextClassName,
+  legalSubtitleClassName,
+} from '@/app/(legal)/_components/primitives';
 import { cn } from '@/lib/utils';
 import { getStats } from '@/lib/stats';
 
@@ -10,9 +21,9 @@ export default async function ContentSection() {
   const { usersAll } = await getStats();
 
   return (
-    <PrimarySection className="bg-[#FCF8FF] py-12 lg:py-16">
+    <PrimarySection className={legalSectionClassName}>
       <div className="container flex flex-col gap-9">
-        <p className="w-full text-base font-medium leading-relaxed text-[#121212]/80">
+        <p className={legalIntroTextClassName}>
           Your privacy matters to us. Not as a legal formality we are required to
           say, but as a practical commitment that shapes how we built SMMSun and
           how we operate it every day. This page explains exactly what personal
@@ -22,7 +33,7 @@ export default async function ContentSection() {
           you deserve to actually understand this document, not just scroll past
           it. If you have questions about anything on this page, you can reach us
           any time through our{' '}
-          <Link href="/#contact" className="text-[#8f2acd] hover:underline">
+          <Link href="/#contact" className={legalLinkClassName}>
             Contact Us
           </Link>{' '}
           page. Our support team responds in Bangla and English, 24 hours a day.
@@ -30,21 +41,21 @@ export default async function ContentSection() {
 
         <PrimaryCard
           className={cn(
-            cardClassName,
-            'justify-center bg-white px-8 py-7 lg:px-10',
+            legalNoticeCardClassName,
+            'justify-center px-8 py-7 lg:px-10',
           )}
         >
-          <p className="text-sm font-medium text-[#535353]">
+          <p className={legalSmallTextClassName}>
             This Privacy Policy applies to all users of trendevo.com and should
             be read alongside our{' '}
             <Link
               href="/terms-of-services"
-              className="text-[#8f2acd] hover:underline"
+              className={legalLinkClassName}
             >
               Terms of Service
             </Link>{' '}
             and{' '}
-            <Link href="/refund-policy" className="text-[#8f2acd] hover:underline">
+            <Link href="/refund-policy" className={legalLinkClassName}>
               Refund Policy
             </Link>
             .
@@ -77,7 +88,7 @@ export default async function ContentSection() {
             internationally. You can learn more about who we are and how our
             platform works on our About Us page. For any privacy-related
             questions or requests, you can contact us directly through our{' '}
-            <Link href="/#contact" className="text-[#8f2acd] hover:underline">
+            <Link href="/#contact" className={legalLinkClassName}>
               Contact Us
             </Link>{' '}
             page or via WhatsApp as listed there.
@@ -180,7 +191,7 @@ export default async function ContentSection() {
                   applicable under our{' '}
                   <Link
                     href="/refund-policy"
-                    className="text-[#8f2acd] hover:underline"
+                    className={legalLinkClassName}
                   >
                     Refund Policy
                   </Link>
@@ -331,7 +342,7 @@ export default async function ContentSection() {
             risk. If you ever suspect that your SMMSun account has been accessed
             without your authorisation, contact our support team immediately
             through our{' '}
-            <Link href="/#contact" className="text-[#8f2acd] hover:underline">
+            <Link href="/#contact" className={legalLinkClassName}>
               Contact Us
             </Link>{' '}
             page so we can investigate and help secure your account.
@@ -371,7 +382,7 @@ export default async function ContentSection() {
                   You have the right to request a summary of the personal data
                   SMMSun holds about you. To make this request, contact us
                   through our{' '}
-                  <Link href="/#contact" className="text-[#8f2acd] hover:underline">
+                  <Link href="/#contact" className={legalLinkClassName}>
                     Contact Us
                   </Link>{' '}
                   page with your registered email address and we will respond
@@ -399,7 +410,7 @@ export default async function ContentSection() {
                   requests subject to any legal obligations that require us to
                   retain certain records, such as financial transaction history.
                   To request account deletion, contact us through our{' '}
-                  <Link href="/#contact" className="text-[#8f2acd] hover:underline">
+                  <Link href="/#contact" className={legalLinkClassName}>
                     Contact Us
                   </Link>{' '}
                   page.

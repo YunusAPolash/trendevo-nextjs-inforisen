@@ -6,6 +6,7 @@ import {
 import PageHeroSection from '@/components/sections/page-hero-section';
 import ContentSection from '@/app/(legal)/privacy-policy/_components/content-section';
 import FaqSection from '@/components/sections/faq-section';
+import { legalSectionClassName } from '@/app/(legal)/_components/primitives';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | TrendEvo',
@@ -28,6 +29,9 @@ export default function PrivacyPolicyPage() {
         title={homeFaqHeading.title}
         subtitle={homeFaqHeading.subtitle}
         items={homeFaqItems}
+        bg={null}
+        darkBg={null}
+        className={legalSectionClassName}
       />
     </>
   );

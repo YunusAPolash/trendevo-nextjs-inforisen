@@ -2,7 +2,17 @@ import Link from 'next/link';
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
 import AccentListSection from '@/app/(legal)/_components/accent-list-section';
-import { cardClassName } from '@/app/(legal)/_components/primitives';
+import {
+  cardClassName,
+  legalBodyTextClassName,
+  legalHeadingLgClassName,
+  legalIntroTextClassName,
+  legalLinkClassName,
+  legalNoticeCardClassName,
+  legalPageHeadingClassName,
+  legalSectionClassName,
+  legalSmallTextClassName,
+} from '@/app/(legal)/_components/primitives';
 import StepperSection, {
   type StepperStep,
 } from '@/app/(legal)/_components/stepper-section';
@@ -181,7 +191,7 @@ const refundSteps: StepperStep[] = [
       <>
         <p>
           Reach out to our support team via WhatsApp or through the{' '}
-          <Link href="/#contact" className="text-[#8f2acd] hover:underline">
+          <Link href="/#contact" className={legalLinkClassName}>
             Contact Us
           </Link>{' '}
           page. Include the following information in your message so we can
@@ -225,14 +235,14 @@ export default async function ContentSection() {
   const { usersAll } = await getStats();
 
   return (
-    <PrimarySection className="bg-[#FCF8FF] py-12 lg:py-16">
+    <PrimarySection className={legalSectionClassName}>
       <div className="container flex flex-col gap-9">
-        <h2 className="grid max-w-[762px] text-[32px] font-semibold leading-snug text-[#121212]">
-          <span>Refund Policy — What You Need to Know</span>
-          <span className="text-gradient">Before You Order</span>
+        <h2 className={cn('grid max-w-[762px]', legalPageHeadingClassName)}>
+          <span>Refund Policy — What You Need to </span>
+          <span className="text-gradient">Know Before You Order</span>
         </h2>
 
-        <p className="w-full text-base font-medium leading-relaxed text-[#121212]/80">
+        <p className={legalIntroTextClassName}>
           We know that handing over money to any online platform requires trust.
           Especially for first-time users who have never used an SMM panel
           before, the refund policy is often the last thing you check before
@@ -246,25 +256,25 @@ export default async function ContentSection() {
 
         <PrimaryCard
           className={cn(
-            cardClassName,
-            'justify-center bg-white px-8 py-7 lg:px-10',
+            legalNoticeCardClassName,
+            'justify-center px-8 py-7 lg:px-10',
           )}
         >
-          <p className="text-sm font-medium text-[#535353]">
+          <p className={legalSmallTextClassName}>
             If you have questions about anything on this page, our support team
             is available 24/7 via WhatsApp and email. You can also visit our{' '}
-            <Link href="/#contact" className="text-[#8f2acd] hover:underline">
+            <Link href="/#contact" className={legalLinkClassName}>
               Contact Us
             </Link>{' '}
             page to reach us directly.
           </p>
         </PrimaryCard>
 
-        <PrimaryCard className={cn(cardClassName, 'gap-4 bg-white')}>
-          <h2 className="text-2xl font-semibold text-[#8f2acd]">
+        <PrimaryCard className={cn(cardClassName, 'gap-4')}>
+          <h2 className={legalHeadingLgClassName}>
             The Nature of SMM Services and Why Refunds Work Differently
           </h2>
-          <div className="space-y-4 text-base font-medium leading-relaxed text-[#535353]">
+          <div className={cn('space-y-4', legalBodyTextClassName)}>
             <p>
               Before we get into specifics, it helps to understand something
               fundamental about how SMM panel services work. This context
@@ -315,10 +325,10 @@ export default async function ContentSection() {
         />
 
         <div className="flex flex-col gap-3">
-          <h2 className="text-2xl font-semibold text-[#8f2acd]">
+          <h2 className={legalHeadingLgClassName}>
             Refill Guarantees — How They Work
           </h2>
-          <div className="space-y-4 text-base font-medium leading-relaxed text-[#535353]">
+          <div className={cn('space-y-4', legalBodyTextClassName)}>
             <p>
               Many packages on SMMSun come with a refill guarantee. This is
               separate from a refund and is an important feature to understand
@@ -351,10 +361,10 @@ export default async function ContentSection() {
         />
 
         <div className="flex flex-col gap-3">
-          <h2 className="text-2xl font-semibold text-[#8f2acd]">
+          <h2 className={legalHeadingLgClassName}>
             Our Promise on Dispute Resolution
           </h2>
-          <div className="space-y-4 text-base font-medium leading-relaxed text-[#535353]">
+          <div className={cn('space-y-4', legalBodyTextClassName)}>
             <p>
               We handle every refund request as a real conversation, not a
               ticket to be closed. If you feel your case was not reviewed
@@ -370,7 +380,7 @@ export default async function ContentSection() {
               to our{' '}
               <Link
                 href="/terms-of-services"
-                className="text-[#8f2acd] hover:underline"
+                className={legalLinkClassName}
               >
                 Terms of Service
               </Link>{' '}
