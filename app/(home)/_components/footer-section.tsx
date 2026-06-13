@@ -186,7 +186,7 @@ function ContactRow({
 export default function FooterSection() {
   return (
     <PrimarySection
-      bg="section-9"
+      lightBackgroundImage="url('/images/footer/footer-light-bg.png')"
       darkBg="section-footer-dark"
       backgroundSize="full"
       className="mx-3 my-5 overflow-hidden rounded-2xl px-3 py-8 sm:mx-6 sm:my-8 sm:rounded-3xl sm:px-4 sm:py-12 lg:mx-12 lg:my-10 lg:py-[60px]"

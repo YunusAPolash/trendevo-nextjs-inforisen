@@ -10,6 +10,14 @@ import {
 } from 'react';
 import PrimaryCard from '@/components/cards/primary-card';
 import { cn } from '@/lib/utils';
+import {
+  cardClassName,
+  legalHeadingLgClassName,
+  legalPageClassName,
+  legalStepperBodyClassName,
+  legalSubheadingClassName,
+  legalSubtitleClassName,
+} from '@/app/(legal)/_components/primitives';
 
 export type StepperStep = {
   icon: string;
@@ -29,7 +37,12 @@ type ConnectorSegment = {
   height: number;
 };
 
-const stepNodeColors = ['bg-[#8f2acd]', 'bg-[#1a1a1a]', 'bg-[#8f2acd]', 'bg-[#1a1a1a]'];
+const stepNodeColors = [
+  'bg-[#8f2acd]',
+  'bg-[#1a1a1a] dark:bg-white',
+  'bg-[#8f2acd]',
+  'bg-[#1a1a1a] dark:bg-white',
+];
 
 const STEPPER_DASH_LENGTH = 10;
 const STEPPER_DASH_GAP = 9;
@@ -38,12 +51,14 @@ const STEPPER_DASH_PERIOD = STEPPER_DASH_LENGTH + STEPPER_DASH_GAP;
 const STEPPER_RING_DASH_LENGTH = 9;
 const STEPPER_RING_DASH_GAP = 8;
 
-const stepperLineStyle = {
-  backgroundImage: `repeating-linear-gradient(to bottom, #1a1a1a 0, #1a1a1a ${STEPPER_DASH_LENGTH}px, transparent ${STEPPER_DASH_LENGTH}px, transparent ${STEPPER_DASH_PERIOD}px)`,
-} as const;
+const stepperLineLightClassName =
+  '[background-image:repeating-linear-gradient(to_bottom,#1a1a1a_0,#1a1a1a_10px,transparent_10px,transparent_19px)]';
+
+const stepperLineDarkClassName =
+  'dark:[background-image:repeating-linear-gradient(to_bottom,#ffffff_0,#ffffff_10px,transparent_10px,transparent_19px)]';
 
 const stepNodeRingClassName =
-  'relative z-10 mt-10 flex size-[3.25rem] shrink-0 items-center justify-center';
+  'relative z-10 flex size-[3.25rem] shrink-0 items-center justify-center';
 
 function snapConnectorHeight(height: number) {
   if (height <= 0) {
@@ -68,7 +83,7 @@ function StepNodeRing({
 }) {
   return (
     <span ref={ref} className={stepNodeRingClassName} aria-hidden>
-      <span className="absolute inset-0 rounded-full bg-[#FCF8FF]" />
+      <span className={cn('absolute inset-0 rounded-full', legalPageClassName)} />
       <span
         className={cn('relative z-[1] size-9 shrink-0 rounded-full', colorClass)}
       />
@@ -82,7 +97,7 @@ function StepNodeRing({
           cx="26"
           cy="26"
           r="24"
-          stroke="#1a1a1a"
+          className="stroke-[#1a1a1a] dark:stroke-white"
           strokeWidth="2"
           strokeDasharray={`${STEPPER_RING_DASH_LENGTH} ${STEPPER_RING_DASH_GAP}`}
         />
@@ -165,39 +180,47 @@ export default function StepperSection({
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-3">
-        <h2 className="text-2xl font-semibold text-[#8f2acd]">{title}</h2>
-        <p className="text-base font-medium leading-relaxed text-[#1a1a1a]">
-          {subtitle}
-        </p>
+        <h2 className={legalHeadingLgClassName}>{title}</h2>
+        <p className={legalSubtitleClassName}>{subtitle}</p>
       </div>
 
       <div ref={stepsContainerRef} className="relative flex flex-col gap-6">
         {connectors.map((connector, index) => (
           <span
             key={`connector-${index}`}
-            className="absolute z-0 w-[2px] -translate-x-1/2 bg-repeat-y"
+            className={cn(
+              'absolute z-0 w-[2px] -translate-x-1/2 bg-repeat-y',
+              stepperLineLightClassName,
+              stepperLineDarkClassName,
+            )}
             style={{
               left: connector.left,
               top: connector.top,
               height: connector.height,
-              ...stepperLineStyle,
             }}
             aria-hidden
           />
         ))}
 
         {steps.map((step, index) => (
-          <div key={step.title} className="flex gap-8">
+          <div key={step.title} className="flex items-center gap-8">
             <div className="relative isolate flex w-14 shrink-0 flex-col items-center self-stretch">
-              <StepNodeRing
-                ref={(element) => {
-                  nodeRefs.current[index] = element;
-                }}
-                colorClass={stepNodeColors[index % stepNodeColors.length]}
-              />
+              <div className="flex flex-1 items-center">
+                <StepNodeRing
+                  ref={(element) => {
+                    nodeRefs.current[index] = element;
+                  }}
+                  colorClass={stepNodeColors[index % stepNodeColors.length]}
+                />
+              </div>
             </div>
 
-            <PrimaryCard className="min-w-0 flex-1 gap-4 rounded-2xl border border-[#8f2acd] bg-white p-8 shadow-[0_1px_1px_rgba(0,0,0,0.05)] lg:p-10">
+            <PrimaryCard
+              className={cn(
+                cardClassName,
+                'min-w-0 flex-1 gap-4 border-[#8f2acd] dark:border-[#4b0b72]',
+              )}
+            >
               <div className="flex items-center gap-3">
                 <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#f5f5f5]">
                   <Image
@@ -208,11 +231,9 @@ export default function StepperSection({
                     className="size-5"
                   />
                 </span>
-                <h3 className="text-base font-semibold text-[#1a1a1a]">
-                  {step.title}
-                </h3>
+                <h3 className={legalSubheadingClassName}>{step.title}</h3>
               </div>
-              <div className="space-y-4 text-base font-medium leading-relaxed text-[#535353]">
+              <div className={cn('space-y-4', legalStepperBodyClassName)}>
                 {step.description}
               </div>
             </PrimaryCard>

@@ -3,9 +3,10 @@ import {
   homeFaqHeading,
   homeFaqItems,
 } from '@/app/(home)/_components/home-faq-content';
-import HeroSection from '@/app/(legal)/_components/hero-section';
+import PageHeroSection from '@/components/sections/page-hero-section';
 import ContentSection from '@/app/(legal)/privacy-policy/_components/content-section';
 import FaqSection from '@/components/sections/faq-section';
+import { legalSectionClassName } from '@/app/(legal)/_components/primitives';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | TrendEvo',
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <HeroSection
+      <PageHeroSection
         titlePrefix="Privacy"
         titleHighlight="Policy"
         description="Your privacy matters to us. This page explains what personal information we collect, how we use it, and what rights you have over your own data."
@@ -28,6 +29,9 @@ export default function PrivacyPolicyPage() {
         title={homeFaqHeading.title}
         subtitle={homeFaqHeading.subtitle}
         items={homeFaqItems}
+        bg={null}
+        darkBg={null}
+        className={legalSectionClassName}
       />
     </>
   );

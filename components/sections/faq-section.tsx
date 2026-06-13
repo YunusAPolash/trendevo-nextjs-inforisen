@@ -24,8 +24,8 @@ export type FaqSectionProps = {
   title: React.ReactNode;
   subtitle: string;
   items: FaqItem[];
-  bg?: SectionBgKey;
-  darkBg?: SectionDarkBgKey;
+  bg?: SectionBgKey | null;
+  darkBg?: SectionDarkBgKey | null;
   className?: string;
   ctaTitle?: string;
   ctaSubtitle?: React.ReactNode;
@@ -53,6 +53,43 @@ function FaqColumn({ items, columnId }: { items: FaqItem[]; columnId: string }) 
   );
 }
 
+function FaqSectionDecorations() {
+  return (
+    <div
+      aria-hidden
+      className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-full max-w-[1920px] -translate-x-1/2 lg:block"
+    >
+      <div className="absolute bottom-10 left-[-4.36%] flex h-[220px] w-[209px] items-center justify-center">
+        <div className="rotate-[-4deg]">
+          <div className="relative h-[212px] w-[211px] overflow-hidden blur-[3px]">
+            <Image
+              src="/images/faq/faq-decorative-purple-question.webp"
+              alt=""
+              aria-hidden
+              width={224}
+              height={234}
+              loading="lazy"
+              className="absolute left-[-26.42%] top-[-24.18%] h-[148.81%] w-[149.7%] max-w-none"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute left-[91.5625%] top-[27px] h-[212px] w-[217.591px] overflow-hidden blur-[3px]">
+        <Image
+          src="/images/faq/faq-decorative-orange-question.webp"
+          alt=""
+          aria-hidden
+          width={225}
+          height={225}
+          loading="lazy"
+          className="absolute left-[-23.27%] top-[-24.25%] h-[146.52%] w-[142.76%] max-w-none rotate-[1.5deg]"
+        />
+      </div>
+    </div>
+  );
+}
+
 export default function FaqSection({
   label,
   title,
@@ -75,30 +112,15 @@ export default function FaqSection({
 
   return (
     <PrimarySection
-      bg={bg}
-      darkBg={darkBg}
+      bg={bg ?? undefined}
+      darkBg={darkBg ?? undefined}
       // backgroundSize="full"
       className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
     >
-      <div className="container relative flex flex-col gap-8 sm:gap-12">
-        <Image
-          src="/images/faq/faq-decorative-purple-question.webp"
-          alt=""
-          width={224}
-          height={234}
-          loading="lazy"
-          className="pointer-events-none absolute -left-16 bottom-8 hidden w-40 rotate-[-4deg] opacity-90 lg:block xl:w-52"
-        />
-        <Image
-          src="/images/faq/faq-decorative-orange-question.webp"
-          alt=""
-          width={225}
-          height={225}
-          loading="lazy"
-          className="pointer-events-none absolute -right-12 top-8 hidden w-40 rotate-[1.5deg] opacity-90 lg:block xl:w-52"
-        />
+      <FaqSectionDecorations />
 
-        <div className="relative z-10 mx-auto flex max-w-[996px] flex-col items-center gap-[18px] text-center">
+      <div className="container relative z-10 flex flex-col gap-8 sm:gap-12">
+        <div className="mx-auto flex max-w-[996px] flex-col items-center gap-[18px] text-center">
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-col items-center gap-1">
               <span className="text-gradient text-lg font-semibold leading-snug sm:text-[22px]">
@@ -121,14 +143,14 @@ export default function FaqSection({
           </p>
         </div>
 
-        <div className="relative z-10 grid items-start gap-4 sm:gap-6 lg:grid-cols-2">
+        <div className="grid items-start gap-4 sm:gap-6 lg:grid-cols-2">
           <FaqColumn items={leftColumn} columnId="left" />
           <FaqColumn items={rightColumn} columnId="right" />
         </div>
 
         <div
           className={cn(
-            'relative z-10 mx-auto w-full max-w-4xl rounded-[14px] border border-[#d181ff]/60 px-4 py-4 sm:px-7 sm:py-[22px]',
+            'mx-auto w-full max-w-4xl rounded-[14px] border border-[#d181ff]/60 px-4 py-4 sm:px-7 sm:py-[22px]',
             'bg-[linear-gradient(119.56deg,rgb(255,255,255)_3.42%,rgb(255,243,253)_55.68%,rgb(255,255,255)_107.93%)]',
             'dark:border-[#8a22c8]/60 dark:bg-[#260d35] dark:bg-none',
           )}

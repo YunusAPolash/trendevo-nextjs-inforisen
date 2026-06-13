@@ -3,9 +3,10 @@ import {
   homeFaqHeading,
   homeFaqItems,
 } from '@/app/(home)/_components/home-faq-content';
-import HeroSection from '@/app/(legal)/_components/hero-section';
+import PageHeroSection from '@/components/sections/page-hero-section';
 import ContentSection from '@/app/(legal)/refund-policy/_components/content-section';
 import FaqSection from '@/components/sections/faq-section';
+import { legalSectionClassName } from '@/app/(legal)/_components/primitives';
 
 export const metadata: Metadata = {
   title: 'Refund Policy | TrendEvo',
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 export default function RefundPolicyPage() {
   return (
     <>
-      <HeroSection
+      <PageHeroSection
         titlePrefix="Refund"
         titleHighlight="Policy"
         description="At Trend Evo, your satisfaction is our priority. Our transparent Refund Policy ensures hassle-free returns and reliable support, giving you confidence with every service."
@@ -28,6 +29,9 @@ export default function RefundPolicyPage() {
         title={homeFaqHeading.title}
         subtitle={homeFaqHeading.subtitle}
         items={homeFaqItems}
+        bg={null}
+        darkBg={null}
+        className={legalSectionClassName}
       />
     </>
   );
