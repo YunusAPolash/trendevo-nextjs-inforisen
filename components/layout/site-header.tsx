@@ -160,7 +160,7 @@ export default function SiteHeader({ className }: { className?: string }) {
               'flex size-10 cursor-pointer items-center justify-center rounded-[10px] border transition-all duration-300 min-[1100px]:hidden',
               mobileOpen
                 ? 'border-[#d181ff]/50 bg-brand-gradient shadow-[0_4px_16px_rgba(209,129,255,0.35)]'
-                : 'border-[#d57ff9]/30 bg-white/60',
+                : 'border-[#d57ff9]/30 bg-white/60 dark:border-white/15 dark:bg-white/[0.07] dark:backdrop-blur-[10px]',
             )}
           >
             <MenuIcon open={mobileOpen} light={mobileOpen} />
@@ -174,7 +174,7 @@ export default function SiteHeader({ className }: { className?: string }) {
         tabIndex={mobileOpen ? 0 : -1}
         onClick={closeMobileMenu}
         className={cn(
-          'fixed inset-0 top-[80px] z-40 bg-[#071431]/25 backdrop-blur-[2px] transition-opacity duration-300 min-[1100px]:hidden',
+          'fixed inset-0 top-[80px] z-40 bg-[#071431]/25 backdrop-blur-[2px] transition-opacity duration-300 min-[1100px]:hidden dark:bg-black/50',
           mobileOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0',
         )}
       />
@@ -182,7 +182,7 @@ export default function SiteHeader({ className }: { className?: string }) {
       <div
         id="mobile-nav"
         className={cn(
-          'relative z-50 overflow-hidden border-t border-[#f0d8ff]/80 bg-gradient-to-b from-white/95 via-[#fdf6ff]/95 to-[#f8efff]/95 shadow-[0_20px_50px_rgba(143,42,205,0.12)] backdrop-blur-xl transition-[max-height,opacity,transform] duration-300 ease-out min-[1100px]:hidden',
+          'relative z-50 overflow-hidden border-t border-[#f0d8ff]/80 bg-gradient-to-b from-white/95 via-[#fdf6ff]/95 to-[#f8efff]/95 shadow-[0_20px_50px_rgba(143,42,205,0.12)] backdrop-blur-xl transition-[max-height,opacity,transform] duration-300 ease-out min-[1100px]:hidden dark:border-white/10 dark:from-[#1a0f22]/98 dark:via-[#150a1c]/98 dark:to-[#110816]/98 dark:shadow-[0_20px_50px_rgba(0,0,0,0.45)]',
           mobileOpen
             ? 'max-h-[calc(100dvh-80px)] translate-y-0 opacity-100'
             : 'max-h-0 -translate-y-2 opacity-0',
@@ -195,7 +195,7 @@ export default function SiteHeader({ className }: { className?: string }) {
             </p>
           </div>
 
-          <ul className="overflow-hidden rounded-2xl bg-white/75 ring-1 ring-[#f0d8ff]">
+          <ul className="overflow-hidden rounded-2xl bg-white/75 ring-1 ring-[#f0d8ff] dark:bg-white/[0.06] dark:ring-white/10">
             {navLinks.map((link, index) => {
               const Icon = link.icon;
 
@@ -203,7 +203,7 @@ export default function SiteHeader({ className }: { className?: string }) {
                 <li
                   key={link.label}
                   className={cn(
-                    'border-b border-[#f0d8ff]/70 last:border-b-0 transition-[opacity,transform] duration-300 ease-out',
+                    'border-b border-[#f0d8ff]/70 last:border-b-0 transition-[opacity,transform] duration-300 ease-out dark:border-white/10',
                     mobileOpen
                       ? 'translate-y-0 opacity-100'
                       : 'translate-y-2 opacity-0',
@@ -216,21 +216,25 @@ export default function SiteHeader({ className }: { className?: string }) {
                     className={cn(
                       'flex items-center gap-3 px-4 py-3.5 transition-colors duration-200 sm:py-4',
                       link.active
-                        ? 'bg-[#faf2ff]/80'
-                        : 'hover:bg-[#fdf6ff]/90',
+                        ? 'bg-[#faf2ff]/80 dark:bg-white/[0.08]'
+                        : 'hover:bg-[#fdf6ff]/90 dark:hover:bg-white/[0.05]',
                     )}
                   >
                     <Icon
                       className={cn(
                         'size-[18px] shrink-0',
-                        link.active ? 'text-[#8f2acd]' : 'text-[#8a94a8]',
+                        link.active
+                          ? 'text-[#8f2acd] dark:text-[#cb7ef7]'
+                          : 'text-[#8a94a8] dark:text-[#9ca3af]',
                       )}
                       strokeWidth={2}
                     />
                     <span
                       className={cn(
                         'text-[15px] font-medium sm:text-base',
-                        link.active ? 'text-gradient font-semibold' : 'text-[#13203b]',
+                        link.active
+                          ? 'text-gradient font-semibold'
+                          : 'text-[#13203b] dark:text-[#efedf1]',
                       )}
                     >
                       {link.label}
@@ -243,17 +247,21 @@ export default function SiteHeader({ className }: { className?: string }) {
 
           <div
             className={cn(
-              'mt-5 rounded-2xl border border-[#f0d8ff] bg-white/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-[opacity,transform] duration-300 sm:mt-6 sm:p-5',
+              'mt-5 rounded-2xl border border-[#f0d8ff] bg-white/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-[opacity,transform] duration-300 sm:mt-6 sm:p-5 dark:border-white/10 dark:bg-white/[0.06] dark:shadow-none',
               mobileOpen
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-3 opacity-0',
             )}
             style={{ transitionDelay: mobileOpen ? '280ms' : '0ms' }}
           >
-            <div className="mb-4 flex items-center justify-between rounded-xl border border-[#f0d8ff] bg-[#fdf6ff]/80 px-3.5 py-3">
+            <div className="mb-4 flex items-center justify-between rounded-xl border border-[#f0d8ff] bg-[#fdf6ff]/80 px-3.5 py-3 dark:border-white/10 dark:bg-white/[0.05]">
               <div>
-                <p className="text-sm font-semibold text-[#13203b]">Appearance</p>
-                <p className="text-xs text-[#6b7289]">Switch light or dark mode</p>
+                <p className="text-sm font-semibold text-[#13203b] dark:text-[#efedf1]">
+                  Appearance
+                </p>
+                <p className="text-xs text-[#6b7289] dark:text-[#c1c4cc]">
+                  Switch light or dark mode
+                </p>
               </div>
               <ThemeToggle />
             </div>
@@ -262,7 +270,7 @@ export default function SiteHeader({ className }: { className?: string }) {
               <Link
                 href="#sign-in"
                 onClick={closeMobileMenu}
-                className="inline-flex h-11 items-center justify-center rounded-[10px] border border-[#d181ff]/50 bg-white text-sm font-semibold text-[#13203b] transition hover:bg-[#fdf6ff] sm:text-base"
+                className="inline-flex h-11 items-center justify-center rounded-[10px] border border-[#d181ff]/50 bg-white text-sm font-semibold text-[#13203b] transition hover:bg-[#fdf6ff] sm:text-base dark:border-[#cb7ef7]/40 dark:bg-white/[0.06] dark:text-white dark:hover:bg-white/[0.1]"
               >
                 Sign In
               </Link>
