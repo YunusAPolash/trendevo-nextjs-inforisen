@@ -18,9 +18,13 @@ export type BlogPost = {
 
 type BlogPostCardProps = {
   post: BlogPost;
+  priority?: boolean;
 };
 
-export default function BlogPostCard({ post }: BlogPostCardProps) {
+export default function BlogPostCard({
+  post,
+  priority = false,
+}: BlogPostCardProps) {
   const blogHref = `/blog/${post.slug}`;
   const authorHref = post.authorSlug ? `/author/${post.authorSlug}` : undefined;
 
@@ -28,13 +32,16 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
     <PrimaryCard className="flex h-full flex-col gap-6 rounded-[18px] border border-[#d181ff] bg-white p-[18px] pb-6 ring-0 dark:border-[rgba(133,37,207,0.36)] dark:bg-[#1c0926]">
       <Link
         href={blogHref}
-        className="relative block h-[180px] w-full overflow-hidden rounded-[14px] sm:h-[220px] md:h-[244px]"
+        aria-label={`Read blog: ${post.title}`}
+        className="relative block aspect-[16/9] w-full shrink-0 overflow-hidden rounded-[14px] bg-[#f3f0f8] dark:bg-[#2a1535]"
       >
         <Image
           src={post.imageSrc}
           alt={post.title}
           fill
-          className="object-cover"
+          priority={priority}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover object-center"
         />
       </Link>
 
@@ -56,13 +63,15 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
               {authorHref ? (
                 <Link
                   href={authorHref}
+                  aria-label={`View ${post.authorName}'s profile`}
                   className="relative size-12 shrink-0 overflow-hidden rounded-full sm:size-[59px]"
                 >
                   <Image
                     src={post.authorAvatarSrc}
-                    alt={post.authorName}
+                    alt=""
                     fill
-                    className="object-cover"
+                    sizes="59px"
+                    className="object-cover object-center"
                   />
                 </Link>
               ) : (
@@ -71,7 +80,8 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
                     src={post.authorAvatarSrc}
                     alt={post.authorName}
                     fill
-                    className="object-cover"
+                    sizes="59px"
+                    className="object-cover object-center"
                   />
                 </div>
               )}
