@@ -1,18 +1,17 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import {
   FaqAccordion,
   FaqAccordionContent,
   FaqAccordionItem,
   FaqAccordionTrigger,
 } from '@/components/ui/faq-accordion';
+import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection, {
   type SectionBgKey,
   type SectionDarkBgKey,
 } from '@/components/sections/primary-section';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 export type FaqItem = {
@@ -79,26 +78,9 @@ export default function FaqSection({
       bg={bg}
       darkBg={darkBg}
       // backgroundSize="full"
-      className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
+      className={cn('py-12 sm:py-16 lg:py-20', className)}
     >
-      <div className="container relative flex flex-col gap-8 sm:gap-12">
-        <Image
-          src="/images/faq/faq-decorative-purple-question.webp"
-          alt=""
-          width={224}
-          height={234}
-          loading="lazy"
-          className="pointer-events-none absolute -left-16 bottom-8 hidden w-40 rotate-[-4deg] opacity-90 lg:block xl:w-52"
-        />
-        <Image
-          src="/images/faq/faq-decorative-orange-question.webp"
-          alt=""
-          width={225}
-          height={225}
-          loading="lazy"
-          className="pointer-events-none absolute -right-12 top-8 hidden w-40 rotate-[1.5deg] opacity-90 lg:block xl:w-52"
-        />
-
+      <div className="container flex flex-col gap-8 sm:gap-12">
         <div className="relative z-10 mx-auto flex max-w-[996px] flex-col items-center gap-[18px] text-center">
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-col items-center gap-1">
@@ -122,9 +104,28 @@ export default function FaqSection({
           </p>
         </div>
 
-        <div className="relative z-10 grid items-start gap-4 sm:gap-6 lg:grid-cols-2">
-          <FaqColumn items={leftColumn} columnId="left" />
-          <FaqColumn items={rightColumn} columnId="right" />
+        <div className="relative overflow-visible">
+          <Image
+            src="/images/faq/faq-decorative-purple-question.webp"
+            alt=""
+            width={224}
+            height={234}
+            loading="lazy"
+            className="pointer-events-none absolute left-0 top-[58%] z-0 hidden w-36 -translate-x-[calc(100%+1.5rem)] -translate-y-1/2 rotate-[-4deg] opacity-90 lg:block xl:w-52"
+          />
+          <Image
+            src="/images/faq/faq-decorative-orange-question.webp"
+            alt=""
+            width={225}
+            height={225}
+            loading="lazy"
+            className="pointer-events-none absolute right-0 top-6 z-0 hidden w-36 translate-x-[calc(100%+1.5rem)] rotate-[1.5deg] opacity-90 lg:block xl:w-52"
+          />
+
+          <div className="relative z-10 grid items-start gap-4 sm:gap-6 lg:grid-cols-2">
+            <FaqColumn items={leftColumn} columnId="left" />
+            <FaqColumn items={rightColumn} columnId="right" />
+          </div>
         </div>
 
         <div
@@ -150,12 +151,12 @@ export default function FaqSection({
                 {ctaSubtitle}
               </p>
             </div>
-            <Button
-              asChild
-              className="bg-brand-gradient h-10 w-full shrink-0 rounded-xl border-0 px-5 text-sm font-semibold text-white shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] hover:opacity-90 sm:h-[50px] sm:w-auto sm:text-base"
+            <PrimaryButton
+              href={ctaButtonHref}
+              className="h-10 w-full shrink-0 rounded-xl border-0 px-5 text-sm shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] sm:h-[50px] sm:w-auto sm:text-base"
             >
-              <Link href={ctaButtonHref}>{ctaButtonLabel}</Link>
-            </Button>
+              {ctaButtonLabel}
+            </PrimaryButton>
           </div>
         </div>
       </div>
