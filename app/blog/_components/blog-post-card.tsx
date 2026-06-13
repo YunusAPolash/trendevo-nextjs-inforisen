@@ -8,7 +8,10 @@ export type BlogPost = {
   excerpt: string;
   imageSrc: string;
   authorName: string;
+  authorSlug?: string;
   authorAvatarSrc: string;
+  authorDesignation?: string;
+  categoryName?: string;
   publishedAt: string;
   readTime: string;
 };
@@ -19,6 +22,7 @@ type BlogPostCardProps = {
 
 export default function BlogPostCard({ post }: BlogPostCardProps) {
   const blogHref = `/blog/${post.slug}`;
+  const authorHref = post.authorSlug ? `/author/${post.authorSlug}` : undefined;
 
   return (
     <PrimaryCard className="flex h-full flex-col gap-6 rounded-[18px] border border-[#d181ff] bg-white p-[18px] pb-6 ring-0 dark:border-[rgba(133,37,207,0.36)] dark:bg-[#1c0926]">
@@ -49,17 +53,37 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
 
           <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
             <div className="flex min-w-0 items-center gap-3">
-              <div className="relative size-12 shrink-0 overflow-hidden rounded-full sm:size-[59px]">
-                <Image
-                  src={post.authorAvatarSrc}
-                  alt={post.authorName}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              {authorHref ? (
+                <Link
+                  href={authorHref}
+                  className="relative size-12 shrink-0 overflow-hidden rounded-full sm:size-[59px]"
+                >
+                  <Image
+                    src={post.authorAvatarSrc}
+                    alt={post.authorName}
+                    fill
+                    className="object-cover"
+                  />
+                </Link>
+              ) : (
+                <div className="relative size-12 shrink-0 overflow-hidden rounded-full sm:size-[59px]">
+                  <Image
+                    src={post.authorAvatarSrc}
+                    alt={post.authorName}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
               <div className="flex min-w-0 flex-col gap-1">
                 <p className="text-base font-semibold leading-snug text-[#071431] sm:text-lg dark:text-white">
-                  {post.authorName}
+                  {authorHref ? (
+                    <Link href={authorHref} className="hover:opacity-90">
+                      {post.authorName}
+                    </Link>
+                  ) : (
+                    post.authorName
+                  )}
                 </p>
                 <p className="text-sm text-[#404a60] sm:text-base dark:text-[#dfe0e4]">
                   {post.publishedAt}

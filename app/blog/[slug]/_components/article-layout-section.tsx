@@ -9,6 +9,7 @@ type ArticleLayoutSectionProps = {
   tableOfContents?: BlogTableOfContentLink[];
   shareLinks?: BlogShareLink[];
   authorName?: string;
+  authorSlug?: string;
   authorAvatarSrc?: string;
   authorDesignation?: string;
   children?: ReactNode;
@@ -19,6 +20,7 @@ export default function ArticleLayoutSection({
   tableOfContents,
   shareLinks,
   authorName,
+  authorSlug,
   authorAvatarSrc,
   authorDesignation,
   children,
@@ -33,6 +35,7 @@ export default function ArticleLayoutSection({
             tableOfContents={tableOfContents}
             shareLinks={shareLinks}
             authorName={authorName}
+            authorSlug={authorSlug}
             authorAvatarSrc={authorAvatarSrc}
             authorDesignation={authorDesignation}
           />

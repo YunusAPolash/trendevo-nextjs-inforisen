@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import type { BlogShareLink, BlogTableOfContentLink } from '@/lib/blogs';
 import { cn } from '@/lib/utils';
 
@@ -29,6 +30,7 @@ type ArticleSidebarProps = {
   tableOfContents?: BlogTableOfContentLink[];
   shareLinks?: BlogShareLink[];
   authorName?: string;
+  authorSlug?: string;
   authorAvatarSrc?: string;
   authorDesignation?: string;
 };
@@ -45,6 +47,7 @@ export default function ArticleSidebar({
   tableOfContents = [],
   shareLinks = [],
   authorName = 'Seam Rahman',
+  authorSlug,
   authorAvatarSrc = '/images/blog-details/blog-details-author-seam-rahman-avatar.webp',
   authorDesignation = 'CEO,Trend Evo',
 }: ArticleSidebarProps) {
@@ -104,7 +107,17 @@ export default function ArticleSidebar({
             </div>
             <div className="space-y-1.5">
               <p className="text-base font-semibold text-[#13203b] dark:text-white">
-                Author : {authorName}
+                Author :{' '}
+                {authorSlug ? (
+                  <Link
+                    href={`/author/${authorSlug}`}
+                    className="text-gradient hover:opacity-90"
+                  >
+                    {authorName}
+                  </Link>
+                ) : (
+                  authorName
+                )}
               </p>
               <p className="text-sm font-medium text-[#6a7283] dark:text-[#dfe0e4]">
                 {authorDesignation}
