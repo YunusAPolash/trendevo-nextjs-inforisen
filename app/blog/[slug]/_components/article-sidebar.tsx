@@ -1,15 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { BlogTableOfContentLink } from '@/lib/blogs';
 import { cn } from '@/lib/utils';
-
-const tableOfContentsItems = [
-  { label: 'Social media', href: '#social-media' },
-  { label: 'SMM Panel', href: '#smm-panel' },
-  { label: 'Digital marketing agencies', href: '#digital-marketing-agencies' },
-  { label: 'Audience engagement', href: '#audience-engagement' },
-  { label: 'SEO optimization', href: '#seo-optimization' },
-  { label: 'E-commerce businesses', href: '#e-commerce-businesses' },
-] as const;
 
 const shareLinks = [
   {
@@ -34,7 +26,19 @@ const shareLinks = [
   },
 ] as const;
 
-export default function ArticleSidebar() {
+type ArticleSidebarProps = {
+  tableOfContents?: BlogTableOfContentLink[];
+  authorName?: string;
+  authorAvatarSrc?: string;
+  authorDesignation?: string;
+};
+
+export default function ArticleSidebar({
+  tableOfContents = [],
+  authorName = 'Seam Rahman',
+  authorAvatarSrc = '/images/blog-details/blog-details-author-seam-rahman-avatar.webp',
+  authorDesignation = 'CEO,Trend Evo',
+}: ArticleSidebarProps) {
   return (
     <aside className="flex w-full max-w-[341px] flex-col gap-12">
       <div className="flex h-[318px] items-center gap-3">
@@ -53,12 +57,12 @@ export default function ArticleSidebar() {
           </div>
 
           <ul>
-            {tableOfContentsItems.map((item, index) => (
+            {tableOfContents.map((item, index) => (
               <li
-                key={item.label}
+                key={item.href}
                 className={cn(
                   'px-3 pt-2 pb-3',
-                  index < tableOfContentsItems.length - 1 &&
+                  index < tableOfContents.length - 1 &&
                     'border-b border-dashed border-[#dfe0e4] dark:border-[#6a7283]',
                 )}
               >
@@ -79,18 +83,18 @@ export default function ArticleSidebar() {
           <div className="flex flex-col items-center gap-[13px] text-center">
             <div className="relative size-[109px] overflow-hidden rounded-lg border border-[rgba(188,188,188,0.21)] bg-[rgba(255,255,255,0.93)] backdrop-blur-[2px]">
               <Image
-                src="/images/blog-details/blog-details-author-seam-rahman-avatar.webp"
-                alt="Seam Rahman"
+                src={authorAvatarSrc}
+                alt={authorName}
                 fill
                 className="object-cover"
               />
             </div>
             <div className="space-y-1.5">
               <p className="text-base font-semibold text-[#13203b] dark:text-white">
-                Author : Seam Rahman
+                Author : {authorName}
               </p>
               <p className="text-sm font-medium text-[#6a7283] dark:text-[#dfe0e4]">
-                CEO,Trend Evo
+                {authorDesignation}
               </p>
             </div>
           </div>

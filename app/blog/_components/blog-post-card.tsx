@@ -18,22 +18,29 @@ type BlogPostCardProps = {
 };
 
 export default function BlogPostCard({ post }: BlogPostCardProps) {
+  const blogHref = `/blog/${post.slug}`;
+
   return (
     <PrimaryCard className="flex h-full flex-col gap-6 rounded-[18px] border border-[#d181ff] bg-white p-[18px] pb-6 ring-0 dark:border-[rgba(133,37,207,0.36)] dark:bg-[#1c0926]">
-      <div className="relative h-[180px] w-full overflow-hidden rounded-[14px] sm:h-[220px] md:h-[244px]">
+      <Link
+        href={blogHref}
+        className="relative block h-[180px] w-full overflow-hidden rounded-[14px] sm:h-[220px] md:h-[244px]"
+      >
         <Image
           src={post.imageSrc}
           alt={post.title}
           fill
           className="object-cover"
         />
-      </div>
+      </Link>
 
       <div className="flex flex-1 flex-col gap-6 sm:gap-8">
         <div className="flex flex-col gap-4">
           <div className="border-b border-dashed border-[#b2b6bf] pb-[18px]">
             <h2 className="text-lg font-medium leading-normal text-[#13203b] sm:text-xl dark:text-white">
-              {post.title}
+              <Link href={blogHref} className="hover:opacity-90">
+                {post.title}
+              </Link>
             </h2>
             <p className="mt-3 text-sm leading-normal text-[#343e56] sm:mt-4 sm:text-base dark:text-[#dfe0e4]">
               {post.excerpt}
@@ -77,7 +84,7 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
         </div>
 
         <Link
-          href={`/blog/${post.slug}`}
+          href={blogHref}
           className="inline-flex w-fit items-center gap-2 text-base font-semibold text-gradient sm:text-lg"
         >
           Read More
