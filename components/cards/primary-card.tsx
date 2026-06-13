@@ -6,12 +6,13 @@ const cardBackgroundClasses = {
   'card-2': "bg-[url('/images/backgrounds/card-bg-2.svg')]",
   'card-3': "bg-[url('/images/backgrounds/card-bg-3.svg')]",
   'card-4': "bg-[url('/images/backgrounds/card-bg-4.svg')]",
-  'card-5': "bg-[url('/images/backgrounds/card-bg-5.png')]",
+  'card-5': "bg-[url('/images/backgrounds/card-bg-5.svg')]",
   'card-7': "bg-[url('/images/backgrounds/card-bg-7.svg')]",
   'card-9': "bg-[url('/images/backgrounds/card-bg-9.svg')]",
   'card-10': "bg-[url('/images/backgrounds/card-bgg-10.svg')]",
   'card-8': "bg-[url('/images/backgrounds/card-bg-8.svg')]",
   'card-11': "bg-[url('/images/backgrounds/card-bg-11.svg')]",
+  'blog-hero': "bg-[url('/images/blog/blog-bg.png')]",
 } as const;
 
 const cardDarkBackgroundClasses = {
@@ -22,6 +23,10 @@ const cardDarkBackgroundClasses = {
   'card-8-dark': "bg-[url('/images/backgrounds/card-bg-8-dark.svg')]",
   'card-3-dark': "bg-[url('/images/backgrounds/card-bg-3-dark.svg')]",
   'card-4-dark': "bg-[url('/images/backgrounds/card-bg-4-dark.svg')]",
+  'card-5-dark': "bg-[url('/images/backgrounds/card-bg-5-dark.svg')]",
+  'card-11-dark': "bg-[url('/images/backgrounds/card-bg-11-dark.svg')]",
+  'blog-hero-dark':
+    "bg-[url('/images/blog/blog-bg-dark.png')]",
 } as const;
 
 const cardBackgroundLayerClassName =
@@ -39,12 +44,14 @@ export default function PrimaryCard({
   className,
   bg,
   darkBg,
+  inheritDarkBackground = true,
   style,
   children,
   ...props
 }: React.ComponentProps<'article'> & {
   bg?: CardBgKey;
   darkBg?: CardDarkBgKey;
+  inheritDarkBackground?: boolean;
 }) {
   const hasBackground = Boolean(bg || darkBg);
 
@@ -54,7 +61,7 @@ export default function PrimaryCard({
       className={cn(
         cardBaseClassName,
         'p-6 ring-0',
-        hasBackground && 'relative bg-transparent',
+        hasBackground && 'relative isolate bg-transparent',
         className,
       )}
       style={style}
@@ -79,7 +86,7 @@ export default function PrimaryCard({
             cardDarkBackgroundClasses[darkBg],
           )}
         />
-      ) : bg ? (
+      ) : bg && inheritDarkBackground ? (
         <div
           aria-hidden
           className={cn(

@@ -8,6 +8,7 @@ import PrimaryCard, {
 import PrimarySection, {
   type SectionBgKey,
   type SectionDarkBgKey,
+  sectionBackgroundCoverClassName,
 } from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
@@ -135,6 +136,7 @@ export default function ServiceWorkingProcessSection({
     <PrimarySection
       bg={bg}
       darkBg={darkBg}
+      backgroundClassName={sectionBackgroundCoverClassName}
       className={cn('relative overflow-hidden py-16 sm:py-20', className)}
     >
    

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { ArrowRight } from 'lucide-react';
 import CtaSection from '@/components/sections/cta-section';
 import HeroSection from '@/components/sections/hero-section';
 import { heroSocialIcons } from '@/content/hero-social-icons';
-import { Button } from '@/components/ui/button';
-import ServicesGridSection from './_components/services-grid-section';
 import PrimaryButton from '@/components/buttons/primary-button';
+import SecondaryButton from '@/components/buttons/secondary-button';
+import ServicesGridSection from './_components/services-grid-section';
+import { signUpUrl } from '@/lib/auth-urls';
 
 export const metadata: Metadata = {
   title: 'Services | TrendEvo',
@@ -18,9 +18,8 @@ export default function ServicesPage() {
     <>
       <HeroSection
         bg="section-1"
-        variant="wide-responsive"
-        decoration="services"
-        leftColumnClassName="gap-6 lg:gap-8 lg:self-center"
+        variant="wide"
+        decoration="contact"
         title={
           <>
             Boost Your Social Media Growth with{' '}
@@ -40,7 +39,9 @@ export default function ServicesPage() {
         }
         descriptionClassName="max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56]"
         actions={
-          <PrimaryButton showArrow className='w-fit'>Get Started Now</PrimaryButton>
+          <PrimaryButton href={signUpUrl} showArrow className="w-fit">
+            Get Started Now
+          </PrimaryButton>
         }
         illustration={{
           src: '/images/services/service-hero-character.png',
@@ -63,15 +64,12 @@ export default function ServicesPage() {
         description="Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly."
         buttonsOutlet={
           <>
-            <Button className="bg-brand-gradient h-[50px] rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] font-semibold text-white hover:opacity-90">
+            <PrimaryButton href={signUpUrl} className="border-[1.5px] border-[#cc7aff]">
               Register Now
-            </Button>
-            <Button
-              variant="outline"
-              className="h-[50px] rounded-[10px] border-[#d181ff] bg-white/25 px-6 font-semibold text-gradient hover:bg-white/40"
-            >
+            </PrimaryButton>
+            <SecondaryButton href="/services">
               See all Services
-            </Button>
+            </SecondaryButton>
           </>
         }
       />

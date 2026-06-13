@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
+import { signUpUrl } from '@/lib/auth-urls';
 import {
   Accordion,
   AccordionContent,
@@ -41,7 +42,7 @@ function HowToBuyAccordionTrigger({
         )}
         {...props}
       >
-        <span className="min-w-0 flex-1 text-lg font-semibold leading-normal text-[#313131] group-data-[state=open]/how-to-buy-trigger:text-[#f7f2f2] sm:text-xl">
+        <span className="min-w-0 flex-1 text-lg font-semibold leading-normal text-[#313131] group-data-[state=open]/how-to-buy-trigger:text-[#f7f2f2] dark:text-white sm:text-xl">
           {title}
         </span>
 
@@ -103,8 +104,8 @@ function HowToBuyStepsAccordion({
             className={cn(
               'overflow-hidden transition-all',
               isOpen &&
-                'rounded-2xl border-[1.5px] border-[#cc7aff] [background-image:linear-gradient(120.55deg,rgb(209,129,255)_2.89%,rgb(237,99,255)_94.79%)]',
-              showDashedBorder && '!border-b !border-dashed !border-[#c1c4cc]',
+                'rounded-2xl border-[1.5px] border-[#cc7aff] [background-image:linear-gradient(120.55deg,rgb(209,129,255)_2.89%,rgb(237,99,255)_94.79%)] dark:[background-image:linear-gradient(96.49deg,#B04AEA_2.89%,#DB50ED_94.79%)]',
+              showDashedBorder && '!border-b !border-dashed !border-[#c1c4cc] dark:!border-white/25',
               !isOpen && !showDashedBorder && '!border-b-0',
             )}
           >
@@ -114,7 +115,7 @@ function HowToBuyStepsAccordion({
               inactiveStepIcon={inactiveStepIcon}
             />
             {step.description ? (
-              <AccordionContent className="px-6 pb-6 pt-0 text-sm font-medium leading-normal text-[#f7f2f2] data-closed:hidden">
+              <AccordionContent className="px-3 pb-6 pt-0 text-sm font-medium leading-normal text-[#f7f2f2] data-closed:hidden">
                 {step.description}
               </AccordionContent>
             ) : null}
@@ -135,7 +136,6 @@ export default function CountryHowToBuy({ slug }: CountryHowToBuyProps) {
     title,
     subtitle,
     buttonLabel,
-    buttonHref,
     steps,
     underlineSrc,
     underlineWidth,
@@ -148,10 +148,12 @@ export default function CountryHowToBuy({ slug }: CountryHowToBuyProps) {
   } = getCountryHowToBuyContent(slug);
 
   return (
-    <PrimarySection bg={'section-16'} className={sectionClassName}>
- 
-   
-
+    <PrimarySection
+      bg="section-16"
+      darkBg="section-14-dark"
+      backgroundSize="full"
+      className={sectionClassName}
+    >
       <div className="container relative flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-8 xl:gap-12">
         <div className="flex w-full max-w-[677px] flex-col gap-6">
           <SectionHeading
@@ -161,18 +163,15 @@ export default function CountryHowToBuy({ slug }: CountryHowToBuyProps) {
             align="left"
             underlineSrc={underlineSrc}
             underlineWidth={underlineWidth}
-            titleClassName={titleClassName}
-            subtitleClassName={subtitleClassName}
+            badgeClassName="dark:bg-none dark:bg-clip-border dark:text-white"
+            titleClassName={cn(titleClassName, 'dark:text-white')}
+            subtitleClassName={cn(subtitleClassName, 'dark:text-[#c1c4cc]')}
           />
 
           <PrimaryButton
+            href={signUpUrl}
             showArrow
             className="w-fit border-[1.5px] border-[#cc7aff] pl-3.5 pr-3"
-            onClick={() => {
-              if (buttonHref) {
-                window.location.href = buttonHref;
-              }
-            }}
           >
             {buttonLabel}
           </PrimaryButton>

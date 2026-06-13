@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Fragment } from 'react';
 
-import WorkingProcessOuterCircleDark from '@/app/(home)/_components/working-process-outer-circle-dark';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
@@ -78,7 +77,15 @@ function ProcessCenterHub({ className }: { className?: string }) {
         />
       </div>
       <div className="pointer-events-none absolute inset-0 hidden motion-safe:animate-[spin_12s_linear_infinite] dark:block">
-        <WorkingProcessOuterCircleDark className="absolute left-1/2 top-1/2 h-full w-auto -translate-x-1/2 -translate-y-1/2" />
+        <Image
+          src="/images/working-process/dark/outer-circle.svg"
+          alt=""
+          aria-hidden
+          width={188}
+          height={180}
+          className="absolute left-1/2 top-1/2 h-full w-auto max-w-none -translate-x-1/2 -translate-y-1/2"
+          unoptimized
+        />
       </div>
       <Image
         src="/images/working-process/inner-hub.svg"
@@ -338,7 +345,7 @@ export default function WorkingProcessSection() {
     <PrimarySection
       id="how-it-works"
       bg="section-4"
-      darkBg="section-4-dark"
+      darkBg="section-18-dark"
       className="overflow-hidden py-12 sm:py-16 lg:py-[84px]"
     >
       <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">

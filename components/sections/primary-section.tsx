@@ -23,6 +23,8 @@ const sectionBackgroundClasses = {
 
 const sectionDarkBackgroundClasses = {
   'section-1-dark': "bg-[url('/images/backgrounds/section-bg-1-dark.svg')]",
+  'page-hero-dark':
+    "bg-[url('/images/backgrounds/page-hero-dark-bg.svg')]",
   'section-2-dark': "bg-[url('/images/backgrounds/section-bg-2-dark.svg')]",
   'section-10-dark':
     "bg-[url('/images/backgrounds/section-bg-10-dark.svg')]",
@@ -32,31 +34,87 @@ const sectionDarkBackgroundClasses = {
   'section-15-dark': "bg-[url('/images/backgrounds/section-bg-15-dark.svg')]",
   'section-13-dark': "bg-[url('/images/backgrounds/section-bg-13-dark.svg')]",
   'section-12-dark': "bg-[url('/images/backgrounds/section-bgg-12-dark.svg')]",
+  'section-14-dark': "bg-[url('/images/backgrounds/section-bg-14-dark.webp')]",
   'section-footer-dark':
     "bg-[url('/images/backgrounds/section-bg-footer.png')]",
   'section-11-dark':
     "bg-[url('/images/backgrounds/section-bg-11-dark.svg')]",
+  'section-testimonials-dark':
+    "bg-[url('/images/backgrounds/testimonial-bg-dark.svg')]",
+  'section-blog-dark':
+    "bg-[url('/images/blog/blog-bg-dark.png')]",
+  'section-18-dark':
+    "bg-[url('/images/backgrounds/section-bg-18-dark.svg')]",
+  'section-19-dark':
+    "bg-[url('/images/backgrounds/section-bg-19-dark.svg')]",
+  'section-20-dark':
+    "bg-[url('/images/backgrounds/section-bg-20-dark.svg')]",
+  'section-21-dark':
+    "bg-[url('/images/backgrounds/section-bg-21-dark.svg')]",
+  'section-22-dark':
+    "bg-[url('/images/backgrounds/section-bg-22-dark.svg')]",
+  'section-23-dark':
+    "bg-[url('/images/backgrounds/section-bg-23-dark.svg')]",
+  'section-24-dark':
+    "bg-[url('/images/backgrounds/section-bg-24-dark.svg')]",
+  'section-26-dark':
+    "bg-[url('/images/backgrounds/test-bg.webp')]",
+  'section-27-dark':
+    "bg-[url('/images/backgrounds/section-bg-27-dark.webp')]",
 } as const;
 
 const sectionBackgroundLayerClassName =
   'absolute inset-0 bg-cover bg-top bg-no-repeat';
+
+const sectionBackgroundLayerFullClassName =
+  'absolute inset-0 bg-[length:100%_100%] bg-top bg-no-repeat';
+
+/** SVG section backgrounds — centered cover without cropping top effects. */
+export const sectionBackgroundCoverClassName =
+  'bg-cover bg-center bg-no-repeat';
 
 const defaultDarkBackgroundClassName = 'bg-[#190A21]';
 
 export type SectionBgKey = keyof typeof sectionBackgroundClasses;
 export type SectionDarkBgKey = keyof typeof sectionDarkBackgroundClasses;
 
+function resolveBackgroundLayerClassName(
+  backgroundSize: 'cover' | 'full',
+  backgroundClassName?: string,
+) {
+  if (backgroundClassName) {
+    return cn('absolute inset-0', backgroundClassName);
+  }
+
+  return backgroundSize === 'full'
+    ? sectionBackgroundLayerFullClassName
+    : sectionBackgroundLayerClassName;
+}
+
 export default function PrimarySection({
   className,
   bg,
   darkBg,
+  darkBackgroundColor,
+  lightBackgroundImage,
+  backgroundClassName,
+  backgroundSize = 'cover',
   style,
   children,
   ...props
 }: React.ComponentPropsWithoutRef<'section'> & {
   bg?: SectionBgKey;
   darkBg?: SectionDarkBgKey;
+  darkBackgroundColor?: string;
+  lightBackgroundImage?: string;
+  backgroundClassName?: string;
+  backgroundSize?: 'cover' | 'full';
 }) {
+  const backgroundLayerClassName = resolveBackgroundLayerClassName(
+    backgroundSize,
+    backgroundClassName,
+  );
+
   return (
     <section
       className={cn('relative isolate px-4 ', className)}
@@ -67,17 +125,30 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            sectionBackgroundLayerClassName,
+            backgroundLayerClassName,
             sectionBackgroundClasses[bg],
             'dark:hidden',
           )}
+        />
+      ) : lightBackgroundImage ? (
+        <div
+          aria-hidden
+          className={cn(backgroundLayerClassName, 'dark:hidden')}
+          style={{ backgroundImage: lightBackgroundImage }}
+        />
+      ) : null}
+      {darkBackgroundColor ? (
+        <div
+          aria-hidden
+          className={cn(backgroundLayerClassName, 'hidden dark:block')}
+          style={{ backgroundColor: darkBackgroundColor }}
         />
       ) : null}
       {darkBg ? (
         <div
           aria-hidden
           className={cn(
-            sectionBackgroundLayerClassName,
+            backgroundLayerClassName,
             'hidden dark:block',
             sectionDarkBackgroundClasses[darkBg],
           )}

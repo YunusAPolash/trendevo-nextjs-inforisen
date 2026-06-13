@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import PrimarySection, {
   type SectionBgKey,
+  type SectionDarkBgKey,
 } from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import YoutubeVideoModal from '@/components/ui/youtube-video-modal';
@@ -60,6 +61,7 @@ export type TestimonialAssets = {
 export type TestimonialsSectionData = {
   sectionBackground?: string;
   sectionBg?: SectionBgKey;
+  sectionDarkBg?: SectionDarkBgKey;
   badge: string;
   underlineSrc: string;
   underlineWidth: number;
@@ -96,7 +98,7 @@ function StarRating({
   return (
     <div
       className={cn(
-        'w-fit rounded bg-white px-1.5 py-1 shadow-[0px_4px_6px_0px_rgba(106,106,106,0.1),0px_10px_15px_0px_rgba(96,96,96,0.1)]',
+        'w-fit rounded bg-white px-1.5 py-1 shadow-[0px_4px_6px_0px_rgba(106,106,106,0.1),0px_10px_15px_0px_rgba(96,96,96,0.1)] dark:bg-white/10 dark:shadow-none',
         className,
       )}
     >
@@ -145,7 +147,9 @@ function AuthorInfo({
           <p
             className={cn(
               'truncate text-sm font-semibold',
-              variant === 'light' ? 'text-white' : 'text-[#343e56]',
+              variant === 'light'
+                ? 'text-white'
+                : 'text-[#343e56] dark:text-[#efedf1]',
             )}
           >
             {name}
@@ -162,7 +166,9 @@ function AuthorInfo({
         <p
           className={cn(
             'text-xs font-medium',
-            variant === 'light' ? 'text-[#dfe0e4]' : 'text-[#5b6477]',
+            variant === 'light'
+              ? 'text-[#dfe0e4]'
+              : 'text-[#5b6477] dark:text-[#c1c4cc]',
           )}
         >
           {role}
@@ -186,14 +192,14 @@ function ReviewTabSwitcher({
   onChange: (tab: ReviewTab) => void;
 }) {
   return (
-    <div className="w-fit max-w-full rounded-xl border-[0.6px] border-[#f0d8ff] bg-[rgba(202,115,255,0.04)] p-1.5 sm:p-2">
+    <div className="w-fit max-w-full rounded-xl border-[0.6px] border-[#f0d8ff] bg-[rgba(202,115,255,0.04)] p-2 dark:border-transparent dark:bg-[rgba(203,116,255,0.08)]">
       <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-3">
         <button
           type="button"
           onClick={() => onChange('customer')}
           className={cn(
             'flex w-full cursor-pointer items-center justify-center gap-1 rounded-lg border-[0.3px] border-[#d18dfa] px-4 py-2.5 transition-all sm:w-auto sm:px-6 sm:py-3',
-            activeTab !== 'customer' && 'bg-white',
+            activeTab !== 'customer' && 'bg-white dark:bg-white/[0.06]',
           )}
           style={activeTab === 'customer' ? { backgroundImage: ACTIVE_TAB_BG } : undefined}
         >
@@ -205,13 +211,17 @@ function ReviewTabSwitcher({
             height={24}
             className={cn(
               'size-5 shrink-0 sm:size-6',
-              activeTab === 'customer' && 'brightness-0 invert',
+              activeTab === 'customer'
+                ? 'brightness-0 invert'
+                : 'dark:brightness-0 dark:invert',
             )}
           />
           <span
             className={cn(
               'text-sm font-medium sm:text-base',
-              activeTab === 'customer' ? 'text-white' : 'text-[#8f2acd]',
+              activeTab === 'customer'
+                ? 'text-white'
+                : 'text-[#8f2acd] dark:text-white',
             )}
           >
             {customerTabLabel}
@@ -222,7 +232,7 @@ function ReviewTabSwitcher({
           onClick={() => onChange('video')}
           className={cn(
             'flex w-full cursor-pointer items-center justify-center gap-1 rounded-lg border-[0.3px] border-[#d18dfa] px-4 py-2.5 transition-all sm:w-auto sm:px-6 sm:py-3',
-            activeTab !== 'video' && 'bg-white',
+            activeTab !== 'video' && 'bg-white dark:bg-white/[0.06]',
           )}
           style={activeTab === 'video' ? { backgroundImage: ACTIVE_TAB_BG } : undefined}
         >
@@ -234,13 +244,17 @@ function ReviewTabSwitcher({
             height={24}
             className={cn(
               'size-5 shrink-0 sm:size-6',
-              activeTab === 'video' && 'brightness-0 invert',
+              activeTab === 'video'
+                ? 'brightness-0 invert'
+                : 'dark:brightness-0 dark:invert',
             )}
           />
           <span
             className={cn(
               'text-sm font-medium sm:text-base',
-              activeTab === 'video' ? 'text-white' : 'text-[#8f2acd]',
+              activeTab === 'video'
+                ? 'text-white'
+                : 'text-[#8f2acd] dark:text-white',
             )}
           >
             {videoTabLabel}
@@ -260,7 +274,7 @@ function TextReviewCard({
 }) {
   return (
     <article
-      className="relative w-full shrink-0 overflow-hidden rounded-[30px] border border-[#f7deff] bg-[#f4e3fd]"
+      className="relative w-full shrink-0 overflow-hidden rounded-[30px] border border-[#f7deff] bg-[#f4e3fd] dark:border-[#d18dfa]/25 dark:bg-[#1f0f2a]"
       style={{ height: REVIEW_CARD_HEIGHT }}
     >
       <Image
@@ -269,7 +283,7 @@ function TextReviewCard({
         aria-hidden
         width={90}
         height={78}
-        className="pointer-events-none absolute left-[19px] top-[6px] h-[78px] w-[90px]"
+        className="pointer-events-none absolute left-[19px] top-[6px] h-[78px] w-[90px] opacity-100 dark:opacity-20"
       />
       <Image
         src={assets.quoteCloseSrc}
@@ -277,13 +291,13 @@ function TextReviewCard({
         aria-hidden
         width={90}
         height={78}
-        className="pointer-events-none absolute bottom-[7px] right-[19px] h-[78px] w-[90px] -scale-y-100 rotate-180"
+        className="pointer-events-none absolute bottom-[7px] right-[19px] h-[78px] w-[90px] -scale-y-100 rotate-180 opacity-100 dark:opacity-20"
       />
 
       <div className="relative flex h-full flex-col justify-center gap-4 px-6 py-5 sm:gap-6 sm:px-8 md:gap-[34px]">
-        <div className="border-b border-dashed border-[#c1c4cc] pb-4">
+        <div className="border-b border-dashed border-[#c1c4cc] pb-4 dark:border-white/15">
           <StarRating starIconSrc={assets.starIconSrc} className="mb-[19px]" />
-          <p className="text-sm font-medium leading-normal text-[#364153]">
+          <p className="text-sm font-medium leading-normal text-[#364153] dark:text-[#c1c4cc]">
             {review.quote}
           </p>
         </div>
@@ -309,7 +323,7 @@ function FeaturedReviewCard({
   onPlay: () => void;
 }) {
   return (
-    <article className="relative mx-auto h-[380px] w-full min-w-0 max-w-[464px] overflow-hidden rounded-[30px] sm:h-[460px] xl:mx-0 xl:h-[538px] xl:max-w-none xl:flex-1">
+    <article className="relative mx-auto h-[380px] w-full min-w-0 max-w-[464px] overflow-hidden rounded-[30px] sm:h-[460px] max-[1249px]:md:max-w-[600px] max-[1249px]:md:h-[440px] min-[1250px]:mx-0 min-[1250px]:h-[538px] min-[1250px]:max-w-none min-[1250px]:flex-1">
       <Image
         src={featuredReview.image}
         alt=""
@@ -340,7 +354,7 @@ function FeaturedReviewCard({
         />
       </button>
 
-      <div className="absolute bottom-6 left-6 right-6 z-10 max-w-[363px] rounded-2xl border border-white/35 bg-white/30 p-4 backdrop-blur-[40px]">
+      <div className="absolute bottom-6 left-6 right-6 z-10 max-w-[363px] rounded-2xl border border-white/35 bg-white/30 p-4 backdrop-blur-[40px] dark:border-white/20 dark:bg-[#150b19]/70">
         <AuthorInfo
           name={featuredReview.name}
           role={featuredReview.role}
@@ -348,7 +362,7 @@ function FeaturedReviewCard({
           verifyBadgeSrc={assets.verifyBadgeSrc}
           variant="dark"
         />
-        <p className="mt-3 text-xs font-medium leading-normal text-[#40454e]">
+        <p className="mt-3 text-xs font-medium leading-normal text-[#40454e] dark:text-[#dfe0e4]">
           {featuredReview.quote}
         </p>
       </div>
@@ -364,8 +378,10 @@ function ScrollMoreHint({ onClick }: { onClick: () => void }) {
       aria-label="Scroll to see more reviews"
       className="absolute inset-x-0 bottom-0 z-20 flex cursor-pointer flex-col items-center gap-1 pb-2 pt-6"
     >
-      <span className="text-xs font-medium text-[#8f2acd]">More reviews below</span>
-      <span className="flex size-7 animate-bounce items-center justify-center rounded-full border border-[#d18dfa]/40 bg-white/90 shadow-sm">
+      <span className="text-xs font-medium text-[#8f2acd] dark:text-[#d18dfa]">
+        More reviews below
+      </span>
+      <span className="flex size-7 animate-bounce items-center justify-center rounded-full border border-[#d18dfa]/40 bg-white/90 shadow-sm dark:border-[#d18dfa]/50 dark:bg-white/10 dark:shadow-none">
         <svg
           aria-hidden
           width="14"
@@ -373,7 +389,7 @@ function ScrollMoreHint({ onClick }: { onClick: () => void }) {
           viewBox="0 0 14 14"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="text-[#8f2acd]"
+          className="text-[#8f2acd] dark:text-[#d18dfa]"
         >
           <path
             d="M3.5 4.75L7 8.25L10.5 4.75"
@@ -434,7 +450,7 @@ function ScrollableReviewColumn({
   return (
     <div
       className={cn(
-        'relative h-[380px] min-h-0 min-w-0 sm:h-[460px] xl:h-[538px]',
+        'relative h-[380px] min-h-0 min-w-0 sm:h-[460px] max-[1249px]:md:h-[500px] min-[1250px]:h-[538px]',
         className,
       )}
     >
@@ -459,7 +475,7 @@ function ScrollableReviewColumn({
         <>
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-t from-[#fdf5ff] via-[#fdf5ff]/85 to-transparent"
+            className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-t from-[#fdf5ff] via-[#fdf5ff]/85 to-transparent dark:from-[#150b19] dark:via-[#150b19]/90"
           />
           <ScrollMoreHint onClick={scrollToNext} />
         </>
@@ -482,14 +498,14 @@ function CustomerReviewsGrid({
   onPlayFeatured: () => void;
 }) {
   return (
-    <div className="grid w-full max-w-[1440px] grid-cols-1 gap-[18px] xl:grid-cols-3 xl:items-start">
+    <div className="grid w-full max-w-[1440px] grid-cols-1 gap-[18px] max-[1249px]:md:grid-cols-2 min-[1250px]:grid-cols-3 min-[1250px]:items-start">
       <ScrollableReviewColumn
         reviews={leftTextReviews}
         assets={assets}
-        className="order-2 xl:order-1 xl:max-w-[464px] xl:flex-1"
+        className="order-2 min-[1250px]:order-1 min-[1250px]:max-w-[464px] min-[1250px]:flex-1"
       />
 
-      <div className="order-1 xl:order-2">
+      <div className="order-1 max-[1249px]:md:col-span-2 min-[1250px]:order-2">
         <FeaturedReviewCard
           featuredReview={featuredReview}
           assets={assets}
@@ -500,7 +516,7 @@ function CustomerReviewsGrid({
       <ScrollableReviewColumn
         reviews={rightTextReviews}
         assets={assets}
-        className="order-3 xl:max-w-[464px] xl:flex-1"
+        className="order-3 min-[1250px]:max-w-[464px] min-[1250px]:flex-1"
       />
     </div>
   );
@@ -595,7 +611,7 @@ function TestimonialsPagination({
             'h-[11px] shrink-0 rounded-[14.5px] border-0 p-0 transition-all duration-300',
             activeIndex === index
               ? 'w-[47px] bg-brand-gradient'
-              : 'w-[18px] bg-[rgba(235,235,235,0.88)]',
+              : 'w-[18px] bg-[rgba(235,235,235,0.88)] dark:bg-white/20',
           )}
         />
       ))}
@@ -697,6 +713,7 @@ export default function TestimonialsSection({ data }: TestimonialsSectionProps) 
   const {
     sectionBackground,
     sectionBg,
+    sectionDarkBg = 'section-testimonials-dark',
     badge,
     underlineSrc,
     underlineWidth,
@@ -725,8 +742,11 @@ export default function TestimonialsSection({ data }: TestimonialsSectionProps) 
   return (
     <PrimarySection
       bg={sectionBg}
+      darkBg={sectionDarkBg}
+      lightBackgroundImage={
+        sectionBg ? undefined : sectionBackground
+      }
       className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
-      style={sectionBg ? undefined : { backgroundImage: sectionBackground }}
     >
       {showSectionDecorations ? (
         <SectionDecorations playOrbSrc={assets.playOrbSrc} />

@@ -35,6 +35,7 @@ export default function CountryTestimonial({ slug }: CountryTestimonialProps) {
     <TestimonialsSection
       data={{
         sectionBg,
+        sectionDarkBg: 'section-27-dark',
         badge,
         underlineSrc,
         underlineWidth,

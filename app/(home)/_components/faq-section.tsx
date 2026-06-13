@@ -3,7 +3,7 @@
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
 import { cn } from '@/lib/utils';
 import { Plus } from 'lucide-react';
 import { useState } from 'react';
@@ -83,12 +83,12 @@ export default function FaqSection() {
               with our team.
             </p>
           </div>
-          <Button
-            id="contact"
-            className="bg-brand-gradient h-[50px] shrink-0 rounded-[10px] border-0 px-6 font-semibold text-white hover:opacity-90"
+          <PrimaryButton
+            href="#contact"
+            className="shrink-0 rounded-[10px] border-0"
           >
             Get in Touch
-          </Button>
+          </PrimaryButton>
         </PrimaryCard>
       </div>
     </PrimarySection>

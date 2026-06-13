@@ -47,7 +47,7 @@ export default function PaymentMethodsSection() {
   return (
     <PrimarySection
       bg="section-6"
-      darkBg="section-6-dark"
+      darkBg="section-22-dark"
       className="overflow-x-hidden py-12 sm:py-16 lg:py-[84px]"
     >
       <PaymentMethodsRotatingArt />

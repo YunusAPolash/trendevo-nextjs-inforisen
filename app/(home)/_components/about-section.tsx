@@ -4,6 +4,11 @@ import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
+import {
+  formatStatCount,
+  getSatisfactionRate,
+  getStats,
+} from '@/lib/stats';
 
 const GRADIENT_TEXT =
   'bg-gradient-to-r from-[#ad26ff] to-[#ff3f85] bg-clip-text text-transparent';
@@ -17,30 +22,51 @@ const features = [
 const metricRows = [
   [
     {
-      value: '06+',
+      key: 'experience' as const,
       label: 'Years of Digital Marketing Experience',
       labelClassName: 'w-auto sm:w-[164px]',
+      splitLabel: false,
     },
     {
-      value: '100k+',
+      key: 'ordersCompleted' as const,
       label: 'Orders Delivered Successfully',
       labelClassName: 'w-auto sm:w-[130px]',
+      splitLabel: false,
     },
   ],
   [
     {
-      value: '50K+',
+      key: 'usersAll' as const,
       label: 'Active Users & Businesses Served',
       labelClassName: 'w-auto sm:w-[164px]',
+      splitLabel: false,
     },
     {
-      value: '98%',
+      key: 'satisfaction' as const,
       label: 'Customer Satisfaction Rate',
       labelClassName: 'whitespace-normal',
       splitLabel: true,
     },
   ],
 ] as const;
+
+function getMetricValue(
+  key: (typeof metricRows)[number][number]['key'],
+  statsData: Awaited<ReturnType<typeof getStats>>,
+): string {
+  switch (key) {
+    case 'experience':
+      return '06+';
+    case 'ordersCompleted':
+      return formatStatCount(statsData.ordersCompleted);
+    case 'usersAll':
+      return formatStatCount(statsData.usersAll);
+    case 'satisfaction':
+      return `${getSatisfactionRate(statsData)}%`;
+    default:
+      return '';
+  }
+}
 
 function MetricDivider() {
   return (
@@ -91,7 +117,9 @@ function MetricItem({
   );
 }
 
-export default function AboutSection() {
+export default async function AboutSection() {
+  const statsData = await getStats();
+
   return (
     <PrimarySection
       id="about"
@@ -150,9 +178,19 @@ export default function AboutSection() {
                     key={rowIndex}
                     className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 md:gap-8"
                   >
-                    <MetricItem {...row[0]} />
+                    <MetricItem
+                      value={getMetricValue(row[0].key, statsData)}
+                      label={row[0].label}
+                      labelClassName={row[0].labelClassName}
+                      splitLabel={row[0].splitLabel}
+                    />
                     <MetricDivider />
-                    <MetricItem {...row[1]} />
+                    <MetricItem
+                      value={getMetricValue(row[1].key, statsData)}
+                      label={row[1].label}
+                      labelClassName={row[1].labelClassName}
+                      splitLabel={row[1].splitLabel}
+                    />
                   </div>
                 ))}
               </div>
@@ -161,7 +199,7 @@ export default function AboutSection() {
 
           <PrimaryButton
             type="button"
-            className="h-10 w-fit gap-2 self-start border-none px-4 text-sm font-semibold leading-[1.5] sm:h-11 sm:px-5 sm:text-base md:h-[52px] md:px-[18px] md:text-[18px]"
+            className="w-fit gap-2 self-start border-none md:h-[52px] md:text-lg"
           >
             Discover More
             <Image

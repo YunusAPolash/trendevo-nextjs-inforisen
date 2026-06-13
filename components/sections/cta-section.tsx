@@ -109,7 +109,7 @@ export default function CtaSection({
                 </div>
 
                 {buttonsOutlet ? (
-                  <div className="relative z-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center [&>button:nth-child(2)]:dark:border-[#CB7EF7] [&>button:nth-child(2)]:dark:bg-[#FFFFFF1A] [&>button:nth-child(2)]:dark:bg-none [&>button:nth-child(2)]:dark:bg-clip-border [&>button:nth-child(2)]:dark:text-white [&>button:nth-child(2)]:dark:hover:bg-[rgba(255,255,255,0.15)]">
+                  <div className="relative z-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center [&>*:nth-child(2)]:dark:border-[#CB7EF7] [&>*:nth-child(2)]:dark:bg-[#FFFFFF1A] [&>*:nth-child(2)]:dark:bg-none [&>*:nth-child(2)]:dark:bg-clip-border [&>*:nth-child(2)]:dark:text-white [&>*:nth-child(2)]:dark:hover:bg-[rgba(255,255,255,0.15)]">
                     {buttonsOutlet}
                   </div>
                 ) : null}

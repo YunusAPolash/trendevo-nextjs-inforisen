@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
+import { signUpUrl } from '@/lib/auth-urls';
 
 import {
   getServiceHeroContent,
@@ -18,7 +19,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
   return (
     <PrimarySection
       bg="section-1"
-      darkBg="section-1-dark"
+      darkBg="page-hero-dark"
       className="overflow-hidden px-0"
     >
       <div className="container relative grid gap-8 pt-28 sm:gap-10 sm:pt-36 md:pt-40 lg:min-h-[650px] lg:grid-cols-2 lg:gap-8 lg:pt-[104px]">
@@ -33,6 +34,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
           </div>
 
           <PrimaryButton
+            href={signUpUrl}
             showArrow
             className="w-fit dark:border-[1.5px] dark:border-[#cc7aff]"
           >

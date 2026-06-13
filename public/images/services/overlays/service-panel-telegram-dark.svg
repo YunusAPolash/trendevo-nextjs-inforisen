@@ -1,0 +1,15 @@
+<svg width="463" height="371" viewBox="0 0 463 371" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip_telegram)">
+<g filter="url(#blur_telegram_primary)" style="mix-blend-mode:plus-lighter">
+<circle cx="460.4" cy="-11.1" r="110.5" fill="#60D5F0"/>
+</g>
+<g filter="url(#blur_telegram_secondary)" style="mix-blend-mode:plus-lighter">
+<circle cx="446.4" cy="-7.1" r="110.5" fill="white" fill-opacity="0.16"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip_telegram"><rect width="463" height="371" rx="16"/></clipPath>
+<filter id="blur_telegram_primary" x="150" y="-321" width="621" height="621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="100"/></filter>
+<filter id="blur_telegram_secondary" x="136" y="-317" width="621" height="621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="100"/></filter>
+</defs>
+</svg>

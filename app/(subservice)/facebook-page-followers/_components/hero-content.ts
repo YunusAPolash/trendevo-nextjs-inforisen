@@ -1,6 +1,7 @@
 import type { HeroTrustBadge } from '@/components/sections/hero-section';
+import { formatUsersTrustLabel, getStats } from '@/lib/stats';
 
-export const facebookPageFollowersTrustBadge: HeroTrustBadge = {
+const facebookPageFollowersTrustBadgeBase = {
   avatarSrcs: [
     '/images/reviews/hero-avatar-1.png',
     '/images/reviews/hero-avatar-2.png',
@@ -11,5 +12,13 @@ export const facebookPageFollowersTrustBadge: HeroTrustBadge = {
   ],
   ratingIconSrc: '/images/icons/hero-star-rating.png',
   rating: '(4.8)',
-  label: 'Trusted by 50,000+ Users in Bangladesh',
-};
+} satisfies Omit<HeroTrustBadge, 'label'>;
+
+export async function getFacebookPageFollowersTrustBadge(): Promise<HeroTrustBadge> {
+  const { usersAll } = await getStats();
+
+  return {
+    ...facebookPageFollowersTrustBadgeBase,
+    label: formatUsersTrustLabel(usersAll),
+  };
+}

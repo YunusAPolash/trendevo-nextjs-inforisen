@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import type { ReactNode } from 'react';
 import {
   FaqAccordion,
@@ -9,12 +8,12 @@ import {
   FaqAccordionItem,
   FaqAccordionTrigger,
 } from '@/components/ui/faq-accordion';
+import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection, {
   type SectionBgKey,
   type SectionDarkBgKey,
 } from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { renderText } from '@/lib/utils/renderText';
 
@@ -31,6 +30,10 @@ export type FaqSectionData = {
   bg?: SectionBgKey;
   darkBg?: SectionDarkBgKey;
   className?: string;
+  ctaTitle?: string;
+  ctaSubtitle?: ReactNode;
+  ctaButtonLabel?: string;
+  ctaButtonHref?: string;
 };
 
 export type FaqSectionProps = {
@@ -64,8 +67,17 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
     subtitle = 'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
     items = [],
     bg = 'section-7',
-    darkBg = 'section-4-dark',
+    darkBg = 'section-21-dark',
     className,
+    ctaTitle = 'Still have questions?',
+    ctaSubtitle = (
+      <>
+        Can&apos;t find the answer you&apos;re looking for? Please{' '}
+        <span className="text-gradient font-semibold">get in touch</span> with our team.
+      </>
+    ),
+    ctaButtonLabel = 'Get in Touch',
+    ctaButtonHref = '#contact',
   } = data;
   const [leftColumn, rightColumn] = splitFaqColumns(items);
   const hasFaqItems = items.length > 0;
@@ -130,21 +142,21 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
                   className="size-9 rotate-[-20deg] object-contain"
                 />
                 <h3 className="text-gradient text-sm font-medium sm:text-base">
-                  Still have questions?
+                  {ctaTitle}
                 </h3>
               </div>
               <p className="text-sm leading-relaxed text-[#071431] sm:text-base dark:text-white">
-                {renderText(
-                  "Can't find the answer you're looking for? Please gt<get in touch> with our team.",
-                )}
+                {typeof ctaSubtitle === 'string'
+                  ? renderText(ctaSubtitle)
+                  : ctaSubtitle}
               </p>
             </div>
-            <Button
-              asChild
-              className="bg-brand-gradient h-10 w-full shrink-0 rounded-xl border-0 px-5 text-sm font-semibold text-white shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] hover:opacity-90 sm:h-[50px] sm:w-auto sm:text-base"
+            <PrimaryButton
+              href={ctaButtonHref}
+              className="w-full shrink-0 rounded-xl border-0 shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] sm:w-auto"
             >
-              <Link href="#contact">Get in Touch</Link>
-            </Button>
+              {ctaButtonLabel}
+            </PrimaryButton>
           </div>
         </div>
       </div>

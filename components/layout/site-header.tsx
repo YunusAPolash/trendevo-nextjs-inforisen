@@ -11,24 +11,32 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { signInUrl, signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
 
 const navLinks: {
   label: string;
   href: string;
   icon: LucideIcon;
-  active?: boolean;
 }[] = [
-  { label: 'Home', href: '/', icon: Home, active: true },
+  { label: 'Home', href: '/', icon: Home },
   { label: 'Services', href: '/services', icon: LayoutGrid },
   { label: 'About Us', href: '/about-us', icon: Users },
-  { label: 'How it works', href: '#how-it-works', icon: CircleHelp },
   { label: 'Blog', href: '/blog', icon: BookOpen },
   { label: 'Contact Us', href: '/contact-us', icon: Mail },
 ];
+
+function isNavLinkActive(pathname: string, href: string) {
+  if (href.startsWith('#')) return false;
+
+  if (href === '/') return pathname === '/';
+
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 function MenuIcon({ open, light = false }: { open: boolean; light?: boolean }) {
   const barColor = light ? 'bg-white' : 'bg-[#343e56] dark:bg-white';
@@ -64,6 +72,7 @@ function MenuIcon({ open, light = false }: { open: boolean; light?: boolean }) {
 }
 
 export default function SiteHeader({ className }: { className?: string }) {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -115,20 +124,24 @@ export default function SiteHeader({ className }: { className?: string }) {
         </Link>
 
         <nav className="hidden min-[1100px]:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {navLinks.map((link) => {
+            const isActive = isNavLinkActive(pathname, link.href);
+
+            return (
             <Link
               key={link.label}
               href={link.href}
               className={cn(
                 'text-base font-medium transition-colors',
-                link.active
-                  ? 'text-gradient'
+                isActive
+                  ? 'text-gradient font-semibold'
                   : 'text-[#343e56] hover:text-[#071431] dark:text-white dark:hover:text-white/90',
               )}
             >
               {link.label}
             </Link>
-          ))}
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-3 min-[1100px]:gap-6">
@@ -136,7 +149,7 @@ export default function SiteHeader({ className }: { className?: string }) {
             <ThemeToggle />
             <div className="inline-flex h-10 shrink-0 rounded-[10px] bg-brand-gradient p-px">
               <Link
-                href="#sign-in"
+                href={signInUrl}
                 className="flex h-full items-center justify-center rounded-[9px] bg-white px-4 text-base font-semibold transition-colors hover:bg-white/95 dark:bg-[#231a2b] dark:hover:bg-[#2d2436]"
               >
                 <span className="text-gradient dark:bg-none dark:bg-clip-border dark:text-white">
@@ -146,9 +159,9 @@ export default function SiteHeader({ className }: { className?: string }) {
             </div>
           </div>
 
-          <Button className="bg-brand-gradient hidden h-10 rounded-[10px] border-0 px-4 text-base font-semibold text-white hover:opacity-90 min-[1100px]:inline-flex">
+          <PrimaryButton href={signUpUrl} className="hidden min-[1100px]:inline-flex">
             Create account
-          </Button>
+          </PrimaryButton>
 
           <button
             type="button"
@@ -160,7 +173,7 @@ export default function SiteHeader({ className }: { className?: string }) {
               'flex size-10 cursor-pointer items-center justify-center rounded-[10px] border transition-all duration-300 min-[1100px]:hidden',
               mobileOpen
                 ? 'border-[#d181ff]/50 bg-brand-gradient shadow-[0_4px_16px_rgba(209,129,255,0.35)]'
-                : 'border-[#d57ff9]/30 bg-white/60',
+                : 'border-[#d57ff9]/30 bg-white/60 dark:border-white/15 dark:bg-white/[0.07] dark:backdrop-blur-[10px]',
             )}
           >
             <MenuIcon open={mobileOpen} light={mobileOpen} />
@@ -174,7 +187,7 @@ export default function SiteHeader({ className }: { className?: string }) {
         tabIndex={mobileOpen ? 0 : -1}
         onClick={closeMobileMenu}
         className={cn(
-          'fixed inset-0 top-[80px] z-40 bg-[#071431]/25 backdrop-blur-[2px] transition-opacity duration-300 min-[1100px]:hidden',
+          'fixed inset-0 top-[80px] z-40 bg-[#071431]/25 backdrop-blur-[2px] transition-opacity duration-300 min-[1100px]:hidden dark:bg-black/50',
           mobileOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0',
         )}
       />
@@ -182,7 +195,7 @@ export default function SiteHeader({ className }: { className?: string }) {
       <div
         id="mobile-nav"
         className={cn(
-          'relative z-50 overflow-hidden border-t border-[#f0d8ff]/80 bg-gradient-to-b from-white/95 via-[#fdf6ff]/95 to-[#f8efff]/95 shadow-[0_20px_50px_rgba(143,42,205,0.12)] backdrop-blur-xl transition-[max-height,opacity,transform] duration-300 ease-out min-[1100px]:hidden',
+          'relative z-50 overflow-hidden border-t border-[#f0d8ff]/80 bg-gradient-to-b from-white/95 via-[#fdf6ff]/95 to-[#f8efff]/95 shadow-[0_20px_50px_rgba(143,42,205,0.12)] backdrop-blur-xl transition-[max-height,opacity,transform] duration-300 ease-out min-[1100px]:hidden dark:border-white/10 dark:from-[#1a0f22]/98 dark:via-[#150a1c]/98 dark:to-[#110816]/98 dark:shadow-[0_20px_50px_rgba(0,0,0,0.45)]',
           mobileOpen
             ? 'max-h-[calc(100dvh-80px)] translate-y-0 opacity-100'
             : 'max-h-0 -translate-y-2 opacity-0',
@@ -195,15 +208,16 @@ export default function SiteHeader({ className }: { className?: string }) {
             </p>
           </div>
 
-          <ul className="overflow-hidden rounded-2xl bg-white/75 ring-1 ring-[#f0d8ff]">
+          <ul className="overflow-hidden rounded-2xl bg-white/75 ring-1 ring-[#f0d8ff] dark:bg-white/[0.06] dark:ring-white/10">
             {navLinks.map((link, index) => {
               const Icon = link.icon;
+              const isActive = isNavLinkActive(pathname, link.href);
 
               return (
                 <li
                   key={link.label}
                   className={cn(
-                    'border-b border-[#f0d8ff]/70 last:border-b-0 transition-[opacity,transform] duration-300 ease-out',
+                    'border-b border-[#f0d8ff]/70 last:border-b-0 transition-[opacity,transform] duration-300 ease-out dark:border-white/10',
                     mobileOpen
                       ? 'translate-y-0 opacity-100'
                       : 'translate-y-2 opacity-0',
@@ -215,22 +229,26 @@ export default function SiteHeader({ className }: { className?: string }) {
                     onClick={closeMobileMenu}
                     className={cn(
                       'flex items-center gap-3 px-4 py-3.5 transition-colors duration-200 sm:py-4',
-                      link.active
-                        ? 'bg-[#faf2ff]/80'
-                        : 'hover:bg-[#fdf6ff]/90',
+                      isActive
+                        ? 'bg-[#faf2ff]/80 dark:bg-white/[0.08]'
+                        : 'hover:bg-[#fdf6ff]/90 dark:hover:bg-white/[0.05]',
                     )}
                   >
                     <Icon
                       className={cn(
                         'size-[18px] shrink-0',
-                        link.active ? 'text-[#8f2acd]' : 'text-[#8a94a8]',
+                        isActive
+                          ? 'text-[#8f2acd] dark:text-[#cb7ef7]'
+                          : 'text-[#8a94a8] dark:text-[#9ca3af]',
                       )}
                       strokeWidth={2}
                     />
                     <span
                       className={cn(
                         'text-[15px] font-medium sm:text-base',
-                        link.active ? 'text-gradient font-semibold' : 'text-[#13203b]',
+                        isActive
+                          ? 'text-gradient font-semibold'
+                          : 'text-[#13203b] dark:text-[#efedf1]',
                       )}
                     >
                       {link.label}
@@ -243,33 +261,41 @@ export default function SiteHeader({ className }: { className?: string }) {
 
           <div
             className={cn(
-              'mt-5 rounded-2xl border border-[#f0d8ff] bg-white/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-[opacity,transform] duration-300 sm:mt-6 sm:p-5',
+              'mt-5 rounded-2xl border border-[#f0d8ff] bg-white/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-[opacity,transform] duration-300 sm:mt-6 sm:p-5 dark:border-white/10 dark:bg-white/[0.06] dark:shadow-none',
               mobileOpen
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-3 opacity-0',
             )}
             style={{ transitionDelay: mobileOpen ? '280ms' : '0ms' }}
           >
-            <div className="mb-4 flex items-center justify-between rounded-xl border border-[#f0d8ff] bg-[#fdf6ff]/80 px-3.5 py-3">
+            <div className="mb-4 flex items-center justify-between rounded-xl border border-[#f0d8ff] bg-[#fdf6ff]/80 px-3.5 py-3 dark:border-white/10 dark:bg-white/[0.05]">
               <div>
-                <p className="text-sm font-semibold text-[#13203b]">Appearance</p>
-                <p className="text-xs text-[#6b7289]">Switch light or dark mode</p>
+                <p className="text-sm font-semibold text-[#13203b] dark:text-[#efedf1]">
+                  Appearance
+                </p>
+                <p className="text-xs text-[#6b7289] dark:text-[#c1c4cc]">
+                  Switch light or dark mode
+                </p>
               </div>
               <ThemeToggle />
             </div>
 
             <div className="flex flex-col gap-2.5">
               <Link
-                href="#sign-in"
+                href={signInUrl}
                 onClick={closeMobileMenu}
-                className="inline-flex h-11 items-center justify-center rounded-[10px] border border-[#d181ff]/50 bg-white text-sm font-semibold text-[#13203b] transition hover:bg-[#fdf6ff] sm:text-base"
+                className="inline-flex h-11 items-center justify-center rounded-[10px] border border-[#d181ff]/50 bg-white text-sm font-semibold text-[#13203b] transition hover:bg-[#fdf6ff] sm:text-base dark:border-[#cb7ef7]/40 dark:bg-white/[0.06] dark:text-white dark:hover:bg-white/[0.1]"
               >
                 Sign In
               </Link>
 
-              <Button className="bg-brand-gradient h-11 w-full rounded-[10px] border-0 text-sm font-semibold text-white shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] hover:opacity-90 sm:text-base">
+              <PrimaryButton
+                href={signUpUrl}
+                onClick={closeMobileMenu}
+                className="w-full border-0 shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)]"
+              >
                 Create account
-              </Button>
+              </PrimaryButton>
             </div>
           </div>
         </nav>

@@ -7,6 +7,7 @@ import StepperSection, {
   type StepperStep,
 } from '@/app/(legal)/_components/stepper-section';
 import { cn } from '@/lib/utils';
+import { getStats } from '@/lib/stats';
 
 const positiveItems = [
   {
@@ -220,7 +221,9 @@ const refundSteps: StepperStep[] = [
   },
 ];
 
-export default function ContentSection() {
+export default async function ContentSection() {
+  const { usersAll } = await getStats();
+
   return (
     <PrimarySection className="bg-[#FCF8FF] py-12 lg:py-16">
       <div className="container flex flex-col gap-9">
@@ -358,7 +361,7 @@ export default function ContentSection() {
               fairly, you can escalate it by replying to your original support
               conversation and asking for a senior review. We take customer
               satisfaction seriously because SMMSun&apos;s reputation in
-              Bangladesh depends entirely on whether 68,000 users trust us with
+              Bangladesh depends entirely on whether {usersAll.toLocaleString('en-US')} users trust us with
               their money.
             </p>
             <p>

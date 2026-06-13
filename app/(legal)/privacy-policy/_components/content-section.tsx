@@ -4,8 +4,11 @@ import PrimarySection from '@/components/sections/primary-section';
 import IconSectionCard from '@/app/(legal)/_components/icon-section-card';
 import { cardClassName } from '@/app/(legal)/_components/primitives';
 import { cn } from '@/lib/utils';
+import { getStats } from '@/lib/stats';
 
-export default function ContentSection() {
+export default async function ContentSection() {
+  const { usersAll } = await getStats();
+
   return (
     <PrimarySection className="bg-[#FCF8FF] py-12 lg:py-16">
       <div className="container flex flex-col gap-9">
@@ -70,7 +73,7 @@ export default function ContentSection() {
             services including followers, likes, views, comments, and related
             services across platforms including Facebook, Instagram, TikTok,
             YouTube, Telegram, and others. We have been operating since 2020
-            and have served over 68,000 registered users across Bangladesh and
+            and have served over {usersAll.toLocaleString('en-US')} registered users across Bangladesh and
             internationally. You can learn more about who we are and how our
             platform works on our About Us page. For any privacy-related
             questions or requests, you can contact us directly through our{' '}

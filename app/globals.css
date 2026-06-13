@@ -3,8 +3,7 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
-@custom-variant dark (&:is(.dark *));
-
+@custom-variant dark (&:where(.dark, .dark *));
 @font-face {
   font-family: 'Parkinsans';
   src: url('/fonts/parkinsans/Parkinsans-latin.woff2') format('woff2');
@@ -171,8 +170,21 @@
     will-change: transform;
   }
 
+  [data-shine]:hover .button-shine-layer {
+    animation: button-shine 0.9s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+  }
+
+  .button-shine-layer {
+    will-change: left, transform;
+    transform: skewX(-12deg);
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .contact-hero-icon-wave {
+      animation: none;
+    }
+
+    [data-shine]:hover .button-shine-layer {
       animation: none;
     }
   }
@@ -205,5 +217,14 @@
   }
   50% {
     transform: translateY(-12px);
+  }
+}
+
+@keyframes button-shine {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -2rem;
   }
 }

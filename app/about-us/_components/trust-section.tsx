@@ -25,7 +25,7 @@ const rightCards = [
   {
     title: 'Stable and High Quality Services',
     description:
-      'RendEvo is more than just a transactional platform—we act as your long-term social media growth partner. Built with local expertise and insights, we are dedicated to supporting Bangladesh’s dynamic digital economy while helping businesses achieve sustainable online growth.',
+      "RendEvo is more than just a transactional platform—we act as your long-term social media growth partner. Built with local expertise and insights, we are dedicated to supporting Bangladesh's dynamic digital economy while helping businesses achieve sustainable online growth.",
     iconSrc: '/images/about/about-trust-stable-services-icon.png',
     iconClassName: 'h-10 w-10 object-cover',
   },
@@ -48,17 +48,21 @@ function TrustColumn({
   connectorId: string;
 }) {
   return (
-    <div className="flex w-full max-w-2xl flex-col items-center gap-4">
-      <TrustCard {...cards[0]} />
+    <div className="flex w-full max-w-2xl flex-1 flex-col items-center gap-4">
+      <TrustCard {...cards[0]} className="w-full" />
       <TrustConnectorVertical connectorId={connectorId} />
-      <TrustCard {...cards[1]} />
+      <TrustCard {...cards[1]} className="w-full" />
     </div>
   );
 }
 
 export default function TrustSection() {
   return (
-    <PrimarySection bg="section-12" className="overflow-hidden py-16 lg:py-20">
+    <PrimarySection
+      bg="section-12"
+      darkBg="section-23-dark"
+      className="overflow-hidden py-16 lg:py-20"
+    >
       <div className="container flex flex-col items-center gap-16">
         <SectionHeading
           badge="WHY TRUST US"
@@ -74,7 +78,7 @@ export default function TrustSection() {
 
         <div className="hidden w-full items-center justify-between gap-6 lg:flex">
           <TrustColumn cards={leftCards} connectorId="trust-connector-left" />
-          <TrustCrosshairCenter />
+          <TrustCrosshairCenter className="shrink-0 self-center" />
           <TrustColumn cards={rightCards} connectorId="trust-connector-right" />
         </div>
 

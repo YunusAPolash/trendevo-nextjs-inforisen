@@ -177,18 +177,22 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         description:
           "We provide real Facebook followers sourced from engaged users, ensuring sustained activity on your page. Our packages come with a drop protection policy, where any decrease in followers is quickly restored, securing your growth and boosting your page's authority.",
         icon: '/images/facebook-page-followers/related-service-facebook-comments.png',
-        iconWidth: 40,
+        iconWidth: 39,
         iconHeight: 40,
-        iconClassName: 'object-contain',
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
       },
       {
         title: 'Buy Facebook Likes',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
         icon: '/images/facebook-page-followers/related-service-facebook-likes.png',
-        iconWidth: 40,
+        iconWidth: 39,
         iconHeight: 40,
-        iconClassName: 'object-contain',
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[123.7%] w-[126.45%] object-cover -translate-x-[13.23%] -translate-y-[11.91%]',
       },
     ],
     bottomRowFeatures: [],

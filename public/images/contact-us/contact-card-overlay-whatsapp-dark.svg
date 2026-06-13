@@ -1,0 +1,21 @@
+<svg width="463" height="280" viewBox="0 0 463 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip_whatsapp)">
+<g filter="url(#blur_whatsapp_primary)" style="mix-blend-mode:plus-lighter">
+<circle cx="454.5" cy="-42.5" r="110.5" fill="#15C128"/>
+</g>
+<g filter="url(#blur_whatsapp_secondary)" style="mix-blend-mode:plus-lighter">
+<circle cx="440.5" cy="-38.5" r="110.5" fill="white" fill-opacity="0.16"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip_whatsapp">
+<rect width="463" height="280" rx="16"/>
+</clipPath>
+<filter id="blur_whatsapp_primary" x="144" y="-352" width="621" height="621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feGaussianBlur stdDeviation="100"/>
+</filter>
+<filter id="blur_whatsapp_secondary" x="130" y="-348" width="621" height="621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feGaussianBlur stdDeviation="100"/>
+</filter>
+</defs>
+</svg>

@@ -5,28 +5,29 @@ import { cn } from '@/lib/utils';
 
 const quickLinks = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/#about' },
-  { label: 'Our Services', href: '/#services' },
+  { label: 'About Us', href: '/about-us' },
+  { label: 'Our Services', href: '/services' },
   { label: 'How It Works', href: '/#how-it-works' },
-  { label: 'Read Our Blog', href: '/#blog' },
-  { label: 'Pricing', href: '/#pricing' },
+  { label: 'Read Our Blog', href: '/blog' },
+  { label: 'Pricing', href: '/services/pricing' },
 ];
 
 const smmPanelLinks = [
-  { label: 'Instagram SMM Panel', href: '/#services' },
-  { label: 'Facebook SMM Panel', href: '/#services' },
-  { label: 'YouTube SMM Panel', href: '/#services' },
-  { label: 'X-Twitter SMM Panel', href: '/#services' },
-  { label: 'Telegram SMM Panel', href: '/#services' },
-  { label: 'TikTok SMM Panel', href: '/#services' },
-  { label: 'Spotify SMM Panel', href: '/#services' },
-  { label: 'Soundcloud SMM Panel', href: '/#services' },
-  { label: 'Twitch SMM Panel', href: '/#services' },
-  { label: 'Snapchat SMM Panel', href: '/#services' },
+  { label: 'Facebook SMM Panel', href: '/facebook-smm-panel' },
+  { label: 'Instagram SMM Panel', href: '/services' },
+  { label: 'YouTube SMM Panel', href: '/services' },
+  { label: 'X-Twitter SMM Panel', href: '/services' },
+  { label: 'Telegram SMM Panel', href: '/services' },
+  { label: 'TikTok SMM Panel', href: '/services' },
+  { label: 'SMM Panel UK', href: '/smm-panel-uk' },
+  { label: 'Spotify SMM Panel', href: '/services/pricing' },
+  { label: 'Soundcloud SMM Panel', href: '/services/pricing' },
+  { label: 'Twitch SMM Panel', href: '/services/pricing' },
+  { label: 'Snapchat SMM Panel', href: '/services/pricing' },
 ];
 
 const companyLinks = [
-  { label: 'Terms Of Services', href: '/terms-of-service' },
+  { label: 'Terms Of Services', href: '/terms-of-services' },
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Refund Policy', href: '/refund-policy' },
   { label: 'FAQs', href: '/#faq' },
@@ -34,16 +35,17 @@ const companyLinks = [
 ];
 
 const serviceLinks = [
-  'Facebook Services',
-  'Youtube Services',
-  'Instagram Services',
-  'X-Twitter Services',
-  'Telegram Services',
-  'TikTok Services',
-  'Spotify Services',
-  'Soundcloud Services',
-  'Twitch Services',
-  'Snapchat Services',
+  { label: 'Facebook Services', href: '/facebook-smm-panel' },
+  { label: 'Facebook Page Followers', href: '/facebook-page-followers' },
+  { label: 'Youtube Services', href: '/services' },
+  { label: 'Instagram Services', href: '/services' },
+  { label: 'X-Twitter Services', href: '/services' },
+  { label: 'Telegram Services', href: '/services' },
+  { label: 'TikTok Services', href: '/services' },
+  { label: 'Spotify Services', href: '/services/pricing' },
+  { label: 'Soundcloud Services', href: '/services/pricing' },
+  { label: 'Twitch Services', href: '/services/pricing' },
+  { label: 'Snapchat Services', href: '/services/pricing' },
 ];
 
 const socialLinks = [
@@ -136,7 +138,7 @@ function SocialLink({
         aria-hidden
       />
       <Image
-        src="/images/icons/footer-social-hex-bg-dark.svg"
+        src="/images/icons/footer-hex.png"
         alt=""
         fill
         className="hidden object-contain dark:block"
@@ -186,6 +188,7 @@ export default function FooterSection() {
     <PrimarySection
       bg="section-9"
       darkBg="section-footer-dark"
+      backgroundSize="full"
       className="mx-3 my-5 overflow-hidden rounded-2xl px-3 py-8 sm:mx-6 sm:my-8 sm:rounded-3xl sm:px-4 sm:py-12 lg:mx-12 lg:my-10 lg:py-[60px]"
     >
       <footer className="mx-auto flex max-w-[1440px] flex-col gap-6 px-0 sm:gap-10">
@@ -241,13 +244,13 @@ export default function FooterSection() {
 
           <FooterColumn title="Our Services">
             <ul className="flex flex-col gap-2.5 sm:gap-4">
-              {serviceLinks.map((label) => (
-                <li key={label}>
+              {serviceLinks.map((link) => (
+                <li key={link.label}>
                   <Link
-                    href="/#services"
+                    href={link.href}
                     className="flex items-center justify-between gap-2 text-[13px] font-medium leading-snug text-[#222e48] transition-colors hover:text-[#13203b] sm:text-sm sm:leading-normal dark:text-[#ebecef] dark:hover:text-white"
                   >
-                    <span>{label}</span>
+                    <span>{link.label}</span>
                     <Image
                       src="/images/icons/footer-service-chevron.svg"
                       alt=""

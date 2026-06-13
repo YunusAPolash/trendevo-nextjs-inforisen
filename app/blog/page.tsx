@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import BlogGridSection from '@/app/blog/_components/blog-grid-section';
 import HeroSection from '@/app/blog/_components/hero-section';
 import CtaSection from '@/components/sections/cta-section';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
+import SecondaryButton from '@/components/buttons/secondary-button';
+import { signUpUrl } from '@/lib/auth-urls';
+import { formatBlogLastUpdated, getBlogs } from '@/lib/blogs';
 
 export const metadata: Metadata = {
   title: 'Blog | TrendEvo',
@@ -10,17 +13,36 @@ export const metadata: Metadata = {
     'Explore Trend Evo’s blog for the latest social media trends, digital marketing tips, and industry updates.',
 };
 
-export default function BlogPage() {
+type BlogPageProps = {
+  searchParams: Promise<{ page?: string }>;
+};
+
+export default async function BlogPage({ searchParams }: BlogPageProps) {
+  const { page: pageParam } = await searchParams;
+  const currentPage = Math.max(1, Number(pageParam) || 1);
+  const { posts, currentPage: activePage, totalPages, latestPublishedAt } =
+    await getBlogs(currentPage, 25);
+
+  const lastUpdated = latestPublishedAt
+    ? formatBlogLastUpdated(latestPublishedAt)
+    : formatBlogLastUpdated(new Date().toISOString());
+
   return (
     <>
-      <div className="bg-[#FCF8FF]">
-        <HeroSection
-          titlePrefix="Read Our"
-          titleHighlight="Latest Blogs"
-          description="Explore Trend Evo’s blog for the latest social media trends, digital marketing tips, and industry updates. Stay informed, improve your strategy, and grow your online presence effectively."
-          lastUpdated="24/03/2026"
-        />
-        <BlogGridSection />
+      <div className="relative isolate bg-[#FCF8FF] dark:bg-[#120619]">
+        <div className="relative z-10">
+          <HeroSection
+            titlePrefix="Read Our"
+            titleHighlight="Latest Blogs"
+            description="Explore Trend Evo’s blog for the latest social media trends, digital marketing tips, and industry updates. Stay informed, improve your strategy, and grow your online presence effectively."
+            lastUpdated={lastUpdated}
+          />
+          <BlogGridSection
+            posts={posts}
+            currentPage={activePage}
+            totalPages={totalPages}
+          />
+        </div>
       </div>
       <CtaSection
         title={
@@ -33,15 +55,12 @@ export default function BlogPage() {
         description="Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly."
         buttonsOutlet={
           <>
-            <Button className="bg-brand-gradient h-[50px] rounded-[10px] border-[1.5px] border-[#cc7aff] px-[18px] font-semibold text-white hover:opacity-90">
+            <PrimaryButton href={signUpUrl} className="border-[1.5px] border-[#cc7aff]">
               Register Now
-            </Button>
-            <Button
-              variant="outline"
-              className="h-[50px] rounded-[10px] border-[#d181ff] bg-white/25 px-6 font-semibold text-gradient hover:bg-white/40"
-            >
+            </PrimaryButton>
+            <SecondaryButton href="/services">
               See all Services
-            </Button>
+            </SecondaryButton>
           </>
         }
       />

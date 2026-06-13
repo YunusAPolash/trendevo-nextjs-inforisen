@@ -1,0 +1,15 @@
+<svg width="463" height="371" viewBox="0 0 463 371" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip_x)">
+<g filter="url(#blur_x_primary)" style="mix-blend-mode:plus-lighter">
+<circle cx="417.5" cy="-20.5" r="110.5" fill="#9CA3AF"/>
+</g>
+<g filter="url(#blur_x_secondary)" style="mix-blend-mode:plus-lighter">
+<circle cx="403.5" cy="-16.5" r="110.5" fill="white" fill-opacity="0.16"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip_x"><rect width="463" height="371" rx="16"/></clipPath>
+<filter id="blur_x_primary" x="107" y="-330" width="621" height="621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="100"/></filter>
+<filter id="blur_x_secondary" x="93" y="-326" width="621" height="621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="100"/></filter>
+</defs>
+</svg>

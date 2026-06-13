@@ -5,43 +5,17 @@ import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import BlogPostCard, { type BlogPost } from '@/app/blog/_components/blog-post-card';
 
-const relatedPosts: BlogPost[] = [
-  {
-    slug: 'tiktok-marketing-complete-guide',
-    title: 'TikTok Marketing: Complete Guide for Businesses',
-    excerpt:
-      'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-    imageSrc: '/images/blog/blog-tiktok-marketing-studio.webp',
-    authorName: 'SEAM RAHMAN',
-    authorAvatarSrc: '/images/blog/blog-author-seam-rahman-avatar.webp',
-    publishedAt: '20 Jan, 2026',
-    readTime: '16 min read',
-  },
-  {
-    slug: 'social-media-growth-strategies',
-    title: 'TikTok Marketing: Complete Guide for Businesses',
-    excerpt:
-      'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-    imageSrc: '/images/blog/blog-marketing-chart-growth.webp',
-    authorName: 'SEAM RAHMAN',
-    authorAvatarSrc: '/images/blog/blog-author-seam-rahman-avatar.webp',
-    publishedAt: '20 Jan, 2026',
-    readTime: '16 min read',
-  },
-  {
-    slug: 'building-brand-presence-online',
-    title: 'TikTok Marketing: Complete Guide for Businesses',
-    excerpt:
-      'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-    imageSrc: '/images/blog/blog-social-media-team.webp',
-    authorName: 'SEAM RAHMAN',
-    authorAvatarSrc: '/images/blog/blog-author-seam-rahman-avatar.webp',
-    publishedAt: '20 Jan, 2026',
-    readTime: '16 min read',
-  },
-];
+type RelatedBlogsSectionProps = {
+  posts?: BlogPost[];
+};
 
-export default function RelatedBlogsSection() {
+export default function RelatedBlogsSection({
+  posts = [],
+}: RelatedBlogsSectionProps) {
+  if (posts.length === 0) {
+    return null;
+  }
+
   return (
     <PrimarySection bg="section-5" className="py-16 lg:py-20">
       <div className="container">
@@ -50,14 +24,14 @@ export default function RelatedBlogsSection() {
             align="left"
             badge="BLOG"
             title="Related Blogs"
-            titleClassName="text-[28px] text-[#313131]"
+            titleClassName="text-[28px] text-[#313131] dark:text-white"
             className="gap-3"
           />
           <div className="flex items-center gap-3">
             <button
               type="button"
               aria-label="Previous related blogs"
-              className="flex size-[38px] items-center justify-center rounded-full border border-[#d181ff] bg-white text-[#d181ff]"
+              className="flex size-[38px] items-center justify-center rounded-full border border-[#d181ff] bg-white text-[#d181ff] dark:border-transparent dark:bg-[rgba(255,255,255,0.19)] dark:text-white"
             >
               <ChevronLeft className="size-6" aria-hidden />
             </button>
@@ -72,7 +46,7 @@ export default function RelatedBlogsSection() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {relatedPosts.map((post) => (
+          {posts.map((post) => (
             <BlogPostCard key={post.slug} post={post} />
           ))}
         </div>

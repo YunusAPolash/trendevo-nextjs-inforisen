@@ -4,9 +4,11 @@ import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import PrimaryCard from '@/components/cards/primary-card';
-import PrimarySection from '@/components/sections/primary-section';
+import PrimarySection, {
+  sectionBackgroundCoverClassName,
+} from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/buttons/primary-button';
 import { cn } from '@/lib/utils';
 
 const MIN_QUANTITY = 100;
@@ -80,7 +82,7 @@ function QuantitySlider({
 
   return (
     <div className="flex w-full min-w-0 flex-col gap-3">
-      <div className="flex w-full items-center justify-between text-base font-medium text-[#1a1a1a]">
+      <div className="flex w-full items-center justify-between text-base font-medium text-[#1a1a1a] dark:text-[#f5f6f7]">
         <span>Quantity</span>
         <span>Quantity: {value}</span>
       </div>
@@ -98,7 +100,7 @@ function QuantitySlider({
           }}
         >
           <div
-            className="absolute inset-x-0 z-1 h-1 -translate-y-1/2 rounded-full bg-[#f1daff]"
+            className="absolute inset-x-0 z-1 h-1 -translate-y-1/2 rounded-full bg-[#f1daff] dark:bg-white/10"
             style={{ top: SLIDER_TRACK_Y }}
           >
             <div
@@ -175,7 +177,9 @@ function FormField({
 }) {
   return (
     <div className={cn('flex flex-col gap-[10px]', className)}>
-      <label className="text-base font-medium text-[#1a1a1a]">{label}</label>
+      <label className="text-base font-medium text-[#1a1a1a] dark:text-[#f5f6f7]">
+        {label}
+      </label>
       {children}
     </div>
   );
@@ -191,7 +195,7 @@ function FieldShell({
   return (
     <div
       className={cn(
-        'flex h-[52px] items-center rounded-[12px] border border-[#f1daff] bg-white px-5',
+        'flex h-[52px] items-center rounded-[12px] border border-[#f1daff] bg-white px-5 dark:border-[rgba(215,215,215,0.13)] dark:bg-[rgba(116,116,116,0.16)] dark:backdrop-blur-[2px]',
         className,
       )}
     >
@@ -207,11 +211,17 @@ export default function OrderFormSection() {
   const totalAmount = useMemo(() => quantity * PRICE_PER_UNIT, [quantity]);
 
   return (
-    <PrimarySection bg="section-13" className="py-16 lg:py-[60px]">
+    <PrimarySection
+      bg="section-13"
+      darkBg="section-24-dark"
+      backgroundClassName={sectionBackgroundCoverClassName}
+      className="py-16 lg:py-[60px]"
+    >
       <div className="container flex justify-center">
         <PrimaryCard
           bg="card-8"
-          className="relative w-full max-w-[796px] overflow-hidden rounded-[24px] border border-[rgba(203,126,247,0.45)] p-6 shadow-none ring-0 ring-offset-0 sm:p-10 lg:p-[50px]"
+          darkBg="card-11-dark"
+          className="relative w-full max-w-[796px] overflow-hidden rounded-[24px] border border-[rgba(203,126,247,0.45)] p-6 shadow-none ring-0 ring-offset-0 dark:border-[rgba(255,255,255,0.13)] sm:p-10 lg:p-[50px]"
         >
           <div className="relative z-10 flex flex-col gap-[30px]">
             <SectionHeading
@@ -220,7 +230,7 @@ export default function OrderFormSection() {
               underlineWidth={203}
               title={
                 <span className="flex flex-wrap items-center justify-center gap-[8px]">
-                  <span className="text-[32px] font-semibold leading-none text-[#1a1a1a]">
+                  <span className="text-[32px] font-semibold leading-none text-[#1a1a1a] dark:text-[#f5f6f7]">
                     Order Facebook
                   </span>
                   <span
@@ -229,7 +239,7 @@ export default function OrderFormSection() {
                   >
                     <FacebookIcon variant="title" alt="Facebook" />
                   </span>
-                  <span className="text-gradient text-[32px] font-semibold leading-none">
+                  <span className="text-gradient text-[32px] font-semibold leading-none dark:from-[#9f00ff] dark:to-[#ff3fa2]">
                     Followers
                   </span>
                 </span>
@@ -243,7 +253,7 @@ export default function OrderFormSection() {
                   <FieldShell>
                     <div className="flex items-center gap-[5px]">
                       <FacebookIcon variant="field" />
-                      <span className="text-sm leading-normal text-[#535353]">
+                      <span className="text-sm leading-normal text-[#535353] dark:text-[#f5f6f7]">
                         Facebook
                       </span>
                     </div>
@@ -254,12 +264,12 @@ export default function OrderFormSection() {
                   <FieldShell className="justify-between">
                     <div className="flex items-center gap-[5px]">
                       <FacebookIcon variant="field" />
-                      <span className="text-sm leading-normal text-[#535353]">
+                      <span className="text-sm leading-normal text-[#535353] dark:text-[#f5f6f7]">
                         Page Followers
                       </span>
                     </div>
                     <ChevronDown
-                      className="size-6 shrink-0 text-[#535353]"
+                      className="size-6 shrink-0 text-[#535353] dark:text-[#f5f6f7]"
                       aria-hidden
                     />
                   </FieldShell>
@@ -273,15 +283,15 @@ export default function OrderFormSection() {
                     value={pageUrl}
                     onChange={(event) => setPageUrl(event.target.value)}
                     placeholder="https://facebook.com/yourpage"
-                    className="w-full bg-transparent text-sm text-[#535353] outline-none placeholder:text-[#535353]"
+                    className="w-full bg-transparent text-sm text-[#535353] outline-none placeholder:text-[#535353] dark:text-[#f5f6f7] dark:placeholder:text-[#f5f6f7]"
                   />
                 </FieldShell>
               </FormField>
 
               <QuantitySlider value={quantity} onChange={setQuantity} />
 
-              <div className="flex items-center justify-between rounded-[12px] border border-[#f1daff] bg-white px-6 py-5">
-                <span className="text-base font-medium text-[#313131]">
+              <div className="flex items-center justify-between rounded-[12px] border border-[#f1daff] bg-white px-6 py-5 dark:border-[rgba(215,215,215,0.13)] dark:bg-[rgba(116,116,116,0.16)] dark:backdrop-blur-[2px]">
+                <span className="text-base font-medium text-[#313131] dark:text-[#f5f6f7]">
                   TOTAL AMOUNT:
                 </span>
                 <span className="text-lg font-semibold text-[#ae4de8]">
@@ -290,9 +300,12 @@ export default function OrderFormSection() {
               </div>
             </div>
 
-            <Button className="bg-brand-gradient h-[52px] w-full rounded-[12px] border-0 px-7 text-lg font-semibold text-white hover:opacity-90">
+            <PrimaryButton
+              type="button"
+              className="w-full rounded-[12px] border-0 md:h-[52px] md:px-7 md:text-lg"
+            >
               Buy Now
-            </Button>
+            </PrimaryButton>
           </div>
         </PrimaryCard>
       </div>
