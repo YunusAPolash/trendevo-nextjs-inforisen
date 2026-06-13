@@ -34,6 +34,8 @@ export default function CountryTestimonial({ slug }: CountryTestimonialProps) {
   return (
     <TestimonialsSection
       sectionBg={sectionBg}
+      sectionDarkBg="section-27-dark"
+      // backgroundSize="full"
       badge={badge}
       underlineSrc={underlineSrc}
       underlineWidth={underlineWidth}

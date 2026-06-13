@@ -78,6 +78,7 @@ export default function FaqSection({
     <PrimarySection
       bg={bg}
       darkBg={darkBg}
+      // backgroundSize="full"
       className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
     >
       <div className="container relative flex flex-col gap-8 sm:gap-12">
