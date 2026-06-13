@@ -18,9 +18,9 @@ export default function HeroSection({
     <PrimarySection className="overflow-hidden bg-transparent pb-0 pt-20 lg:pb-0">
       <div className="container mt-[54px]">
         <PrimaryCard
-          bg="card-3"
+          bg="blog-hero"
           darkBg="blog-hero-dark"
-          className="flex w-full flex-col items-center gap-8 overflow-hidden rounded-none bg-[#FCF8FF] py-12 text-center dark:bg-transparent lg:py-14 [&>div[aria-hidden]]:bg-[length:100%_100%] [&>div[aria-hidden]]:bg-top [&>div[aria-hidden]]:bg-no-repeat lg:[&>div[aria-hidden]]:bg-cover lg:[&>div[aria-hidden]]:bg-center"
+          className="flex w-full flex-col items-center gap-8 overflow-hidden rounded-xl bg-[#FCF8FF] py-12 text-center dark:bg-transparent lg:py-14 [&>div[aria-hidden]]:bg-[length:100%_100%] [&>div[aria-hidden]]:bg-center [&>div[aria-hidden]]:bg-no-repeat"
         >
           <div className="flex flex-col gap-5">
             <h1 className="text-4xl font-bold leading-[1.4] tracking-tight text-[#232323] md:text-5xl lg:text-[64px] dark:text-[#efedf1]">

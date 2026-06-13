@@ -15,10 +15,6 @@ export default function BlogPage() {
   return (
     <>
       <div className="relative isolate bg-[#FCF8FF] dark:bg-[#120619]">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 hidden bg-[url('/images/backgrounds/blog-page-bg-dark.svg')] bg-cover bg-top bg-no-repeat dark:block"
-        />
         <div className="relative z-10">
           <HeroSection
             titlePrefix="Read Our"
