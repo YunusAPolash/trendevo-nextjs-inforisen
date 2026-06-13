@@ -1,44 +1,15 @@
-import BlogPostCard, { type BlogPost } from '@/app/blog/_components/blog-post-card';
+import BlogPostCard from '@/app/blog/_components/blog-post-card';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
+import { getBlogs } from '@/lib/blogs';
 
-const homeBlogPosts: BlogPost[] = [
-  {
-    slug: 'tiktok-marketing-complete-guide',
-    title: 'TikTok Marketing: Complete Guide for Businesses',
-    excerpt:
-      'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-    imageSrc: '/images/blog/blog-tiktok-marketing-studio.webp',
-    authorName: 'SEAM RAHMAN',
-    authorAvatarSrc: '/images/blog/blog-author-seam-rahman-avatar.webp',
-    publishedAt: '20 Jan, 2026',
-    readTime: '16 min read',
-  },
-  {
-    slug: 'social-media-growth-strategies',
-    title: 'TikTok Marketing: Complete Guide for Businesses',
-    excerpt:
-      'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-    imageSrc: '/images/blog/blog-marketing-chart-growth.webp',
-    authorName: 'SEAM RAHMAN',
-    authorAvatarSrc: '/images/blog/blog-author-seam-rahman-avatar.webp',
-    publishedAt: '20 Jan, 2026',
-    readTime: '16 min read',
-  },
-  {
-    slug: 'building-brand-presence-online',
-    title: 'TikTok Marketing: Complete Guide for Businesses',
-    excerpt:
-      'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-    imageSrc: '/images/blog/blog-social-media-team.webp',
-    authorName: 'SEAM RAHMAN',
-    authorAvatarSrc: '/images/blog/blog-author-seam-rahman-avatar.webp',
-    publishedAt: '20 Jan, 2026',
-    readTime: '16 min read',
-  },
-];
+export default async function HomeBlog() {
+  const { posts } = await getBlogs(1, 3);
 
-export default function HomeBlog() {
+  if (posts.length === 0) {
+    return null;
+  }
+
   return (
     <PrimarySection
       bg="section-1"
@@ -65,8 +36,8 @@ export default function HomeBlog() {
         />
 
         <div className="grid w-full gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {homeBlogPosts.map((post) => (
-            <BlogPostCard key={post.slug} post={post} />
+          {posts.map((post, index) => (
+            <BlogPostCard key={post.slug} post={post} priority={index < 3} />
           ))}
         </div>
       </div>

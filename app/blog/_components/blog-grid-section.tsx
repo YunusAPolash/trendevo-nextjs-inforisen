@@ -22,8 +22,12 @@ export default function BlogGridSection({
     <PrimarySection className="py-16 lg:py-20">
       <div className="container flex flex-col items-center gap-10">
         <div className="grid w-full gap-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-6">
-          {posts.map((post) => (
-            <BlogPostCard key={post.slug} post={post} />
+          {posts.map((post, index) => (
+            <BlogPostCard
+              key={post.slug}
+              post={post}
+              priority={currentPage === 1 && index < 3}
+            />
           ))}
         </div>
 

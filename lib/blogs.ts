@@ -20,16 +20,16 @@ type BlogCategoryAttributes = {
 };
 
 type BlogSeoAttributes = {
-  metaTitle: string;
-  metaDescription: string;
-  metaKeywords: string;
-  canonicalUrl: string;
-  ogTitle: string;
-  ogDescription: string;
-  ogImage: string;
+  metaTitle: string | null;
+  metaDescription: string | null;
+  metaKeywords?: string | null;
+  canonicalUrl: string | null;
+  ogTitle: string | null;
+  ogDescription: string | null;
+  ogImage: string | null;
   ogImageAlt: string | null;
-  ogType: string;
-  ogLocale: string;
+  ogType: string | null;
+  ogLocale: string | null;
   ogSiteName: string | null;
 };
 
@@ -113,6 +113,94 @@ export type BlogTableOfContentLink = {
   href: string;
 };
 
+export type BlogShareLink = {
+  label: 'Facebook' | 'Instagram' | 'X' | 'LinkedIn';
+  href: string;
+  iconSrc: string;
+  action?: 'copy';
+};
+
+function getBlogShareUrl(slug: string, canonicalUrl: string | null): string {
+  if (canonicalUrl) {
+    return canonicalUrl;
+  }
+
+  const appUrl = process.env.NEXT_PUBLIC_PERFECT_APP_URL?.replace(/\/$/, '') ?? '';
+
+  return `${appUrl}/blog/${slug}`;
+}
+
+export function parseBlogMetaKeywords(
+  metaKeywords: string | null | undefined,
+): string[] {
+  if (metaKeywords == null || metaKeywords === '') {
+    return [];
+  }
+
+  return String(metaKeywords)
+    .split(',')
+    .map((keyword) => keyword.trim())
+    .filter(Boolean);
+}
+
+function mapBlogSeo(
+  seoAttributes: BlogSeoAttributes | undefined,
+  fallback: {
+    title: string;
+    summary: string;
+    coverImage: string;
+  },
+): BlogSeo {
+  return {
+    metaTitle: seoAttributes?.metaTitle ?? fallback.title,
+    metaDescription: seoAttributes?.metaDescription ?? fallback.summary,
+    metaKeywords: seoAttributes?.metaKeywords ?? '',
+    canonicalUrl: seoAttributes?.canonicalUrl ?? '',
+    ogTitle: seoAttributes?.ogTitle ?? fallback.title,
+    ogDescription: seoAttributes?.ogDescription ?? fallback.summary,
+    ogImage: seoAttributes?.ogImage ?? fallback.coverImage,
+    ogImageAlt: seoAttributes?.ogImageAlt ?? fallback.title,
+    ogType: seoAttributes?.ogType ?? 'article',
+    ogLocale: seoAttributes?.ogLocale ?? 'en_US',
+    ogSiteName: seoAttributes?.ogSiteName ?? null,
+  };
+}
+
+export function buildBlogShareLinks(blog: {
+  slug: string;
+  title: string;
+  seo: BlogSeo;
+}): BlogShareLink[] {
+  const shareUrl = getBlogShareUrl(blog.slug, blog.seo.canonicalUrl);
+  const shareTitle = blog.seo.ogTitle || blog.title;
+  const encodedUrl = encodeURIComponent(shareUrl);
+  const encodedTitle = encodeURIComponent(shareTitle);
+
+  return [
+    {
+      label: 'Facebook',
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+      iconSrc: '/images/icons/blog-details-share-facebook.webp',
+    },
+    {
+      label: 'Instagram',
+      href: shareUrl,
+      iconSrc: '/images/icons/blog-details-share-instagram.webp',
+      action: 'copy',
+    },
+    {
+      label: 'X',
+      href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+      iconSrc: '/images/icons/blog-details-share-x.webp',
+    },
+    {
+      label: 'LinkedIn',
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+      iconSrc: '/images/icons/blog-details-share-linkedin.webp',
+    },
+  ];
+}
+
 export type BlogAuthor = {
   name: string;
   slug: string;
@@ -146,6 +234,26 @@ export type BlogsResult = {
   totalPages: number;
   latestPublishedAt: string | null;
 };
+
+export type AuthorPageResult = {
+  author: BlogAuthor;
+  posts: BlogPost[];
+  currentPage: number;
+  totalPages: number;
+};
+
+function mapAuthorAttributes(
+  attributes: BlogAuthorAttributes,
+  bio = '',
+): BlogAuthor {
+  return {
+    name: attributes.name,
+    slug: attributes.slug,
+    avatar: attributes.avatar ?? DEFAULT_BLOG_DETAIL_AUTHOR_AVATAR,
+    designation: attributes.designation,
+    bio,
+  };
+}
 
 export function formatBlogLastUpdated(isoDate: string): string {
   const date = new Date(isoDate);
@@ -189,8 +297,11 @@ function mapBlogItemToPost(item: BlogApiItem): BlogPost {
     excerpt: attributes.summary,
     imageSrc: attributes.featuredImage,
     authorName: relationships.author.attributes.name,
+    authorSlug: relationships.author.attributes.slug,
     authorAvatarSrc:
       relationships.author.attributes.avatar ?? DEFAULT_AUTHOR_AVATAR,
+    authorDesignation: relationships.author.attributes.designation,
+    categoryName: relationships.category.attributes.name,
     publishedAt: formatBlogPublishedAt(attributes.publishedAt),
     readTime: formatReadingTime(attributes.readingTime),
   };
@@ -250,7 +361,7 @@ function mapBlogDetailItem(item: BlogDetailApiItem, slug: string): BlogDetail {
     summary: attributes.summary,
     coverImage: attributes.coverImage,
     htmlContent: attributes.htmlContent,
-    tableOfContents: attributes.tableOfContent.map((entry) => ({
+    tableOfContents: (attributes.tableOfContent ?? []).map((entry) => ({
       label: entry.text,
       href: `#${entry.id}`,
     })),
@@ -265,7 +376,11 @@ function mapBlogDetailItem(item: BlogDetailApiItem, slug: string): BlogDetail {
       bio: authorAttributes.bio ?? '',
     },
     category: relationships.category.attributes,
-    seo: relationships.seo.attributes,
+    seo: mapBlogSeo(relationships.seo?.attributes, {
+      title: attributes.title,
+      summary: attributes.summary,
+      coverImage: attributes.coverImage,
+    }),
   };
 }
 
@@ -292,6 +407,62 @@ export async function getBlogBySlug(slug: string): Promise<BlogDetail | null> {
     }
 
     return mapBlogDetailItem(json.data, slug);
+  } catch {
+    return null;
+  }
+}
+
+export async function getAuthorPage(
+  authorSlug: string,
+  page = 1,
+  perPage = 25,
+): Promise<AuthorPageResult | null> {
+  const apiBase = process.env.NEXT_PUBLIC_API_URL;
+
+  if (!apiBase || !authorSlug) {
+    return null;
+  }
+
+  try {
+    const response = await fetch(
+      `${apiBase}/blogs?author=${encodeURIComponent(authorSlug)}&per_page=${perPage}&page=${page}`,
+      { cache: 'no-store' },
+    );
+
+    if (!response.ok) {
+      return null;
+    }
+
+    const json = (await response.json()) as BlogsApiResponse;
+
+    if (!Array.isArray(json.data) || json.data.length === 0) {
+      return null;
+    }
+
+    const firstAuthor = json.data[0].relationships.author.attributes;
+
+    if (firstAuthor.slug !== authorSlug) {
+      return null;
+    }
+
+    let bio = firstAuthor.bio ?? '';
+    const firstPostSlug = json.data[0].attributes.slug;
+    const firstPostDetail = await getBlogBySlug(firstPostSlug);
+
+    if (
+      firstPostDetail &&
+      firstPostDetail.author.slug === authorSlug &&
+      firstPostDetail.author.bio
+    ) {
+      bio = firstPostDetail.author.bio;
+    }
+
+    return {
+      author: mapAuthorAttributes(firstAuthor, bio),
+      posts: json.data.map(mapBlogItemToPost),
+      currentPage: json.meta?.current_page ?? page,
+      totalPages: Math.max(json.meta?.last_page ?? 1, 1),
+    };
   } catch {
     return null;
   }

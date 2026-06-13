@@ -1,41 +1,53 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import type { BlogTableOfContentLink } from '@/lib/blogs';
+import type { BlogShareLink, BlogTableOfContentLink } from '@/lib/blogs';
 import { cn } from '@/lib/utils';
 
-const shareLinks = [
-  {
-    label: 'Facebook',
-    href: '#',
-    iconSrc: '/images/icons/blog-details-share-facebook.webp',
-  },
-  {
-    label: 'Instagram',
-    href: '#',
-    iconSrc: '/images/icons/blog-details-share-instagram.webp',
-  },
-  {
-    label: 'X',
-    href: '#',
-    iconSrc: '/images/icons/blog-details-share-x.webp',
-  },
-  {
-    label: 'LinkedIn',
-    href: '#',
-    iconSrc: '/images/icons/blog-details-share-linkedin.webp',
-  },
-] as const;
+const HEADER_SCROLL_OFFSET = 112;
+
+function scrollToSection(sectionId: string) {
+  const element = document.getElementById(sectionId);
+
+  if (!element) {
+    return;
+  }
+
+  const top =
+    element.getBoundingClientRect().top +
+    window.scrollY -
+    HEADER_SCROLL_OFFSET;
+
+  window.scrollTo({ top, behavior: 'smooth' });
+  window.history.replaceState(null, '', `#${sectionId}`);
+}
+
+const shareLinkClassName =
+  'flex size-[38px] items-center justify-center rounded-[7px] border border-[#ebecef] bg-white backdrop-blur-sm dark:border-transparent dark:bg-white/10';
 
 type ArticleSidebarProps = {
   tableOfContents?: BlogTableOfContentLink[];
+  shareLinks?: BlogShareLink[];
   authorName?: string;
+  authorSlug?: string;
   authorAvatarSrc?: string;
   authorDesignation?: string;
 };
 
+async function copyShareUrl(url: string) {
+  try {
+    await navigator.clipboard.writeText(url);
+  } catch {
+    window.prompt('Copy this blog link:', url);
+  }
+}
+
 export default function ArticleSidebar({
   tableOfContents = [],
+  shareLinks = [],
   authorName = 'Seam Rahman',
+  authorSlug,
   authorAvatarSrc = '/images/blog-details/blog-details-author-seam-rahman-avatar.webp',
   authorDesignation = 'CEO,Trend Evo',
 }: ArticleSidebarProps) {
@@ -68,6 +80,10 @@ export default function ArticleSidebar({
               >
                 <a
                   href={item.href}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection(item.href.replace('#', ''));
+                  }}
                   className="block text-base font-medium leading-normal text-[#404a60] hover:text-[#13203b] dark:text-[#dfe0e4] dark:hover:text-white"
                 >
                   {item.label}
@@ -91,7 +107,17 @@ export default function ArticleSidebar({
             </div>
             <div className="space-y-1.5">
               <p className="text-base font-semibold text-[#13203b] dark:text-white">
-                Author : {authorName}
+                Author :{' '}
+                {authorSlug ? (
+                  <Link
+                    href={`/author/${authorSlug}`}
+                    className="text-gradient hover:opacity-90"
+                  >
+                    {authorName}
+                  </Link>
+                ) : (
+                  authorName
+                )}
               </p>
               <p className="text-sm font-medium text-[#6a7283] dark:text-[#dfe0e4]">
                 {authorDesignation}
@@ -105,22 +131,42 @@ export default function ArticleSidebar({
             Share this blog
           </p>
           <div className="flex flex-wrap gap-2">
-            {shareLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                aria-label={`Share on ${link.label}`}
-                className="flex size-[38px] items-center justify-center rounded-[7px] border border-[#ebecef] bg-white backdrop-blur-sm dark:border-transparent dark:bg-white/10"
-              >
-                <Image
-                  src={link.iconSrc}
-                  alt=""
-                  width={22}
-                  height={22}
-                  aria-hidden
-                />
-              </Link>
-            ))}
+            {shareLinks.map((link) =>
+              link.action === 'copy' ? (
+                <button
+                  key={link.label}
+                  type="button"
+                  onClick={() => copyShareUrl(link.href)}
+                  aria-label={`Copy blog link to share on ${link.label}`}
+                  className={shareLinkClassName}
+                >
+                  <Image
+                    src={link.iconSrc}
+                    alt=""
+                    width={22}
+                    height={22}
+                    aria-hidden
+                  />
+                </button>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Share on ${link.label}`}
+                  className={shareLinkClassName}
+                >
+                  <Image
+                    src={link.iconSrc}
+                    alt=""
+                    width={22}
+                    height={22}
+                    aria-hidden
+                  />
+                </a>
+              ),
+            )}
           </div>
         </div>
       </div>

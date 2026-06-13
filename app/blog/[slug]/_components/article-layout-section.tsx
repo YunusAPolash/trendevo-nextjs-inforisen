@@ -2,12 +2,14 @@ import type { ReactNode } from 'react';
 import PrimarySection from '@/components/sections/primary-section';
 import ArticleBreadcrumb from './article-breadcrumb';
 import ArticleSidebar from './article-sidebar';
-import type { BlogTableOfContentLink } from '@/lib/blogs';
+import type { BlogShareLink, BlogTableOfContentLink } from '@/lib/blogs';
 
 type ArticleLayoutSectionProps = {
   breadcrumbLabel?: string;
   tableOfContents?: BlogTableOfContentLink[];
+  shareLinks?: BlogShareLink[];
   authorName?: string;
+  authorSlug?: string;
   authorAvatarSrc?: string;
   authorDesignation?: string;
   children?: ReactNode;
@@ -16,7 +18,9 @@ type ArticleLayoutSectionProps = {
 export default function ArticleLayoutSection({
   breadcrumbLabel,
   tableOfContents,
+  shareLinks,
   authorName,
+  authorSlug,
   authorAvatarSrc,
   authorDesignation,
   children,
@@ -29,7 +33,9 @@ export default function ArticleLayoutSection({
         <div className="mt-8 grid gap-10 lg:grid-cols-[341px_minmax(0,1fr)] lg:gap-6">
           <ArticleSidebar
             tableOfContents={tableOfContents}
+            shareLinks={shareLinks}
             authorName={authorName}
+            authorSlug={authorSlug}
             authorAvatarSrc={authorAvatarSrc}
             authorDesignation={authorDesignation}
           />

@@ -8,7 +8,7 @@ import CtaSection from '@/components/sections/cta-section';
 import PrimaryButton from '@/components/buttons/primary-button';
 import SecondaryButton from '@/components/buttons/secondary-button';
 import { signUpUrl } from '@/lib/auth-urls';
-import { getBlogBySlug, getBlogs } from '@/lib/blogs';
+import { buildBlogShareLinks, getBlogBySlug, getBlogs, parseBlogMetaKeywords } from '@/lib/blogs';
 
 type BlogDetailsPageProps = {
   params: Promise<{ slug: string }>;
@@ -28,39 +28,39 @@ export async function generateMetadata({
     };
   }
 
-  const { seo } = blog;
-  const keywords = seo.metaKeywords
-    .split(',')
-    .map((keyword) => keyword.trim())
-    .filter(Boolean);
+  const { seo, title, summary } = blog;
+  const keywords = parseBlogMetaKeywords(seo.metaKeywords);
 
   return {
-    title: seo.metaTitle,
-    description: seo.metaDescription,
-    keywords,
+    title: seo.metaTitle || `${title} | TrendEvo Blog`,
+    description:
+      seo.metaDescription ||
+      summary ||
+      'Read the latest insights on social media marketing and SMM panel strategies from TrendEvo.',
+    keywords: keywords.length > 0 ? keywords : undefined,
     alternates: seo.canonicalUrl
       ? { canonical: seo.canonicalUrl }
       : undefined,
     openGraph: {
-      title: seo.ogTitle,
-      description: seo.ogDescription,
+      title: seo.ogTitle || title,
+      description: seo.ogDescription || summary,
       url: seo.canonicalUrl || undefined,
       type: seo.ogType === 'article' ? 'article' : 'website',
-      locale: seo.ogLocale,
+      locale: seo.ogLocale || undefined,
       siteName: seo.ogSiteName || undefined,
       images: seo.ogImage
         ? [
             {
               url: seo.ogImage,
-              alt: seo.ogImageAlt ?? seo.ogTitle,
+              alt: seo.ogImageAlt ?? seo.ogTitle ?? title,
             },
           ]
         : undefined,
     },
     twitter: {
       card: 'summary_large_image',
-      title: seo.ogTitle,
-      description: seo.ogDescription,
+      title: seo.ogTitle || title,
+      description: seo.ogDescription || summary,
       images: seo.ogImage ? [seo.ogImage] : undefined,
     },
   };
@@ -76,13 +76,16 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
 
   const { posts } = await getBlogs(1, 25);
   const relatedPosts = posts.filter((post) => post.slug !== slug).slice(0, 3);
+  const shareLinks = buildBlogShareLinks(blog);
 
   return (
     <>
       <ArticleLayoutSection
         breadcrumbLabel={blog.title}
         tableOfContents={blog.tableOfContents}
+        shareLinks={shareLinks}
         authorName={blog.author.name}
+        authorSlug={blog.author.slug}
         authorAvatarSrc={blog.author.avatar}
         authorDesignation={blog.author.designation}
       >

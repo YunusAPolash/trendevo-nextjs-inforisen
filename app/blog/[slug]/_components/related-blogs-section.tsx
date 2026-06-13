@@ -46,8 +46,8 @@ export default function RelatedBlogsSection({
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {posts.map((post) => (
-            <BlogPostCard key={post.slug} post={post} />
+          {posts.map((post, index) => (
+            <BlogPostCard key={post.slug} post={post} priority={index < 3} />
           ))}
         </div>
       </div>
