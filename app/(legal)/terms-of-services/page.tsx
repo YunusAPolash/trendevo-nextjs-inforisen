@@ -1,25 +1,25 @@
 import type { Metadata } from 'next';
-
 import TermsContentSection from '@/app/(legal)/_components/content-section';
 import PageHeroSection from '@/components/sections/page-hero-section';
 import FaqSection from '@/components/sections/faq-section';
+import { data as termsOfServicePageData } from '@/app/(legal)/terms-of-services/page-data';
+
 export const metadata: Metadata = {
-  title: 'Terms of Service | TrendEvo',
-  description:
-    'Read the TrendEvo Terms of Service before creating an account or placing an order. Plain-language rules for using our SMM panel.',
+  title: termsOfServicePageData.seo.title,
+  description: termsOfServicePageData.seo.description,
 };
 
 export default function TermsOfServicePage() {
   return (
     <>
       <PageHeroSection
-        titlePrefix="Terms Of"
-        titleHighlight="Services"
-        description="Before registering and ordering services, it is important to read and understand the Terms of Service carefully. By using the services offered by smmxp.org, you agree to abide by these terms."
-        lastUpdated="24/03/2026"
+        titlePrefix={termsOfServicePageData.hero.titlePrefix}
+        titleHighlight={termsOfServicePageData.hero.titleHighlight}
+        description={termsOfServicePageData.hero.description}
+        lastUpdated={termsOfServicePageData.hero.lastUpdated}
       />
       <TermsContentSection />
-      <FaqSection />
+      <FaqSection data={termsOfServicePageData.faq} />
     </>
   );
 }

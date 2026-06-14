@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
+import { data } from '@/app/contact-us/page-data';
 import ContactDetailCard from './contact-detail-card';
+
+const { contactDetails } = data;
 
 const CONTACT_DETAILS_LIGHT_BG =
   'linear-gradient(79deg, #F1DBFF -3.62%, #FFF 30.12%, rgba(252, 226, 255, 0.24) 55.57%, #FFF 76.43%, #FDF6FF 103.11%)';
@@ -36,7 +39,7 @@ export default function ContactDetailsSection() {
             src="/images/contact-us/contact-us-phone-icon.png"
             alt=""
             width={137}
-            height={139}
+            height={137}
             aria-hidden
             className="h-[139px] w-[137px]"
           />
@@ -47,7 +50,7 @@ export default function ContactDetailsSection() {
             src="/images/contact-us/contact-us-phone-icon.png"
             alt=""
             width={137}
-            height={139}
+            height={137}
             aria-hidden
             className="h-[139px] w-[137px]"
           />
@@ -56,73 +59,45 @@ export default function ContactDetailsSection() {
         <div className="container relative">
           <div className="relative flex flex-col items-center gap-10 sm:gap-12 lg:gap-16">
             <SectionHeading
-              badge="CONTACT US"
-              title="Contact Details"
-              subtitle="Get in touch with us. We're here to answer your questions and provide guidance whenever you need it. Fast, friendly, and reliable support is always just a message away, ensuring you get the help you need without delay."
-              titleClassName="text-[28px] tracking-tight text-[#13203b] sm:text-4xl lg:text-[48px] lg:tracking-wide"
-              subtitleClassName="max-w-[1083px] px-1 text-sm font-medium sm:text-base lg:text-lg"
+              badge={contactDetails.badge}
+              title={contactDetails.title}
+              subtitle={contactDetails.subtitle}
+              titleClassName={contactDetails.titleClassName}
+              subtitleClassName={contactDetails.subtitleClassName}
             />
 
             <div className="grid w-full max-w-[1440px] grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2 xl:grid-cols-3 [&>*:last-child]:lg:col-span-2 [&>*:last-child]:lg:mx-auto [&>*:last-child]:lg:max-w-[463px] [&>*:last-child]:xl:col-span-1 [&>*:last-child]:xl:mx-0 [&>*:last-child]:xl:max-w-none">
-              <ContactDetailCard
-                borderColor="border-[#1fd863]"
-                darkOverlaySrc="/images/contact-us/contact-us-contact-card-overlay-whatsapp-dark-decoration.svg"
-                iconSrc="/images/contact-us/contact-us-whatsapp-icon.webp"
-                iconAlt="WhatsApp"
-                title="What's App"
-                description="Chat with our support team on What'sApp for quick answers and real-time assistance whenever you need help."
-                detail={
-                  <p>
-                    <span className="font-semibold text-[#313131] dark:text-[#ebecef]">
-                      Number:
-                    </span>{' '}
-                    <span className="font-semibold text-[#25d365] dark:text-[rgba(37,211,101,0.8)]">
-                      +880***********
-                    </span>
-                  </p>
-                }
-                buttonLabel="Contact us with What's App"
-                buttonClassName="bg-[linear-gradient(107.46deg,#20da65_2.7%,#12be51_86.61%)]"
-              />
-
-              <ContactDetailCard
-                borderColor="border-[#695dd8]"
-                darkOverlaySrc="/images/contact-us/contact-us-contact-card-overlay-email-dark-decoration.svg"
-                iconSrc="/images/contact-us/contact-us-email-icon.webp"
-                iconAlt="Email"
-                title="Email"
-                description="Chat with our support team on What'sApp for quick answers and real-time assistance whenever you need help."
-                detail={
-                  <p>
-                    <span className="font-semibold text-[#313131] dark:text-[#ebecef]">
-                      E-mail:
-                    </span>
-                    <span className="font-semibold text-[#8f2acd] dark:text-[#ae4de8]">
-                      {' '}
-                      info@*************
-                    </span>
-                  </p>
-                }
-                buttonLabel="Contact us with Email"
-                buttonClassName="bg-[#675bd7] dark:bg-[rgba(103,91,215,0.85)]"
-              />
-
-              <ContactDetailCard
-                borderColor="border-[#8f2acd]"
-                darkOverlaySrc="/images/contact-us/contact-us-contact-card-overlay-business-hours-dark-decoration.svg"
-                iconSrc="/images/contact-us/contact-us-business-hours-icon.webp"
-                iconAlt="Business hours"
-                title="Business Hours"
-                description="Have questions or need expert guidance? Our friendly team is ready to assist you with all your social media marketing needs and help you achieve your goals. Get in touch with us through the following channels."
-                detail={
-                  <p className="text-[#5a5a5a] dark:text-[#ebecef]">
-                    Assistance hours:{' '}
-                    <span className="font-semibold text-[#8f2acd] dark:text-[#ae4de8]">
-                      Monday - Sunday 24 Hours
-                    </span>
-                  </p>
-                }
-              />
+              {contactDetails.cards.map((card) => (
+                <ContactDetailCard
+                  key={card.title}
+                  borderColor={card.borderColor}
+                  darkOverlaySrc={card.darkOverlaySrc}
+                  iconSrc={card.iconSrc}
+                  iconAlt={card.iconAlt}
+                  title={card.title}
+                  description={card.description}
+                  detail={
+                    card.detailLabel && card.detailValue ? (
+                      <p
+                        className={
+                          card.detailSuffix
+                            ? 'text-[#5a5a5a] dark:text-[#ebecef]'
+                            : undefined
+                        }
+                      >
+                        <span className="font-semibold text-[#313131] dark:text-[#ebecef]">
+                          {card.detailLabel}
+                        </span>{' '}
+                        <span className={card.detailValueClassName}>
+                          {card.detailValue}
+                        </span>
+                      </p>
+                    ) : null
+                  }
+                  buttonLabel={card.buttonLabel}
+                  buttonClassName={card.buttonClassName}
+                />
+              ))}
             </div>
           </div>
         </div>

@@ -1,0 +1,185 @@
+export type PricingPlatform = {
+  id: string;
+  label: string;
+  icon: string;
+  iconClassName?: string;
+  composedIcon?: boolean;
+};
+
+export type ServicePricingRow = {
+  id: string;
+  serviceName: string;
+  ratePer1000: string;
+  minOrder: string;
+  maxOrder: string;
+  averageTime: string;
+};
+
+export type ServicePricingGroup = {
+  id: string;
+  title: string;
+  platformIcon: string;
+  rows: ServicePricingRow[];
+};
+
+type SEO = {
+  title: string;
+  description: string;
+  canonical?: string;
+};
+
+type ServicesPricingPageData = {
+  seo: SEO;
+  heading: {
+    title: string;
+  };
+  pricingPlatforms: PricingPlatform[];
+  pricingGroups: ServicePricingGroup[];
+  cta: {
+    title: string;
+    description: string;
+    primaryButtonLabel: string;
+    secondaryButtonLabel: string;
+    secondaryButtonHref: string;
+  };
+};
+
+const sampleRow: Omit<ServicePricingRow, 'id'> = {
+  serviceName: 'Facebook Views /Plays for video/Reel -Mixed Regions...',
+  ratePer1000: '$0.05',
+  minOrder: '100',
+  maxOrder: '5,000',
+  averageTime: '1 hr 45 min',
+};
+
+const premiumRows: ServicePricingRow[] = Array.from({ length: 5 }, (_, index) => ({
+  id: `premium-${index + 1}`,
+  ...sampleRow,
+}));
+
+export const data: ServicesPricingPageData = {
+  seo: {
+    title: 'Services & Pricing | TrendEvo',
+    description:
+      'Discover TrendEvo full social media services and pricing guide across Facebook, Instagram, YouTube, TikTok, and more.',
+    canonical: '/services/pricing',
+  },
+
+  heading: {
+    title:
+      "Discover gt<Rendevo's> Full Social Media Services & Pricing Guide",
+  },
+
+  pricingPlatforms: [
+    {
+      id: 'facebook',
+      label: 'Facebook',
+      icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+    },
+    {
+      id: 'instagram',
+      label: 'Instagram',
+      icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+    },
+    {
+      id: 'twitter',
+      label: 'X (Twitter)',
+      icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+      iconClassName: 'scale-150',
+    },
+    {
+      id: 'youtube',
+      label: 'YouTube',
+      icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+    },
+    {
+      id: 'tiktok',
+      label: 'TikTok',
+      icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
+    },
+    {
+      id: 'linkedin',
+      label: 'LinkedIn',
+      icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
+    },
+    {
+      id: 'telegram',
+      label: 'Telegram',
+      icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
+    },
+    {
+      id: 'discord',
+      label: 'Discord',
+      icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+    },
+    {
+      id: 'spotify',
+      label: 'Spotify',
+      icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
+    },
+    {
+      id: 'soundcloud',
+      label: 'SoundCloud',
+      icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+      composedIcon: true,
+    },
+    {
+      id: 'snapchat',
+      label: 'Snapchat',
+      icon: '/images/our-services/platforms/our-services-snapchat-followers-platform-icon.webp',
+    },
+    {
+      id: 'website-traffic',
+      label: 'Website Traffic',
+      icon: '/images/our-services/platforms/our-services-website-traffic-platform-icon.png',
+      composedIcon: true,
+    },
+  ],
+
+  pricingGroups: [
+    {
+      id: 'premium-mixed-regions',
+      title: 'Premium Facebook Video Views | Mixed Regions',
+      platformIcon:
+        '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+      rows: premiumRows,
+    },
+    {
+      id: 'premium-mixed-regions-2',
+      title: 'Premium Facebook Video Views | Mixed Regions',
+      platformIcon:
+        '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+      rows: premiumRows,
+    },
+    {
+      id: 'standard-global',
+      title: 'Standard Facebook Video Views | Global',
+      platformIcon:
+        '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+      rows: premiumRows,
+    },
+    {
+      id: 'economy-local',
+      title: 'Economy Facebook Video Views | Local',
+      platformIcon:
+        '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+      rows: premiumRows,
+    },
+    {
+      id: 'economy-local-2',
+      title: 'Economy Facebook Video Views | Local',
+      platformIcon:
+        '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+      rows: premiumRows,
+    },
+  ],
+
+  cta: {
+    title: 'Ready to gt<Grow your Social Media> in Bangladesh',
+    description:
+      'Join thousands of users growing faster with Rend Evo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds.We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
+    primaryButtonLabel: 'Register Now',
+    secondaryButtonLabel: 'See all Services',
+    secondaryButtonHref: '/services',
+  },
+};

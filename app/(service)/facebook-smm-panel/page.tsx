@@ -1,45 +1,33 @@
 import type { Metadata } from 'next';
-
-import ServiceHero from '@/components/sections/serviceHero';
-import ServiceAdvantage from '@/components/sections/service-advantage';
-import ServiceLeading from '@/components/sections/service-leading';
-import ServiceWorkingProcessSection from '@/components/sections/service-working-process-section';
-import {
-  facebookSmmPanelWorkingProcessHeading,
-  facebookSmmPanelWorkingProcessSteps,
-} from './_components/working-process-content';
-import SocialService from '@/components/sections/social-service';
+import AdvantagesSection from '@/app/(home)/_components/advantages-section';
 import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
-import { facebookFaqData } from '@/components/serviceSmmPanel/service-faq-content';
-import PrimaryButton from '@/components/buttons/primary-button';
-import SecondaryButton from '@/components/buttons/secondary-button';
-import CtaSection from '@/components/sections/cta-section';
+import ServiceAdvantage from '@/components/sections/service-advantage';
+import ServiceHero from '@/components/sections/serviceHero';
+import ServiceLeading from '@/components/sections/service-leading';
+import SocialService from '@/components/sections/social-service';
 import FaqSection from '@/components/sections/faq-section';
-import { getCtaServiceContent } from '@/components/serviceSmmPanel/cta-service-content';
-import { signUpUrl } from '@/lib/auth-urls';
+import { data as facebookSmmPanelPageData } from '@/app/(service)/facebook-smm-panel/page-data';
+import FacebookSmmPanelCtaSection from './_components/cta-section';
+import FacebookSmmPanelWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
-  title: 'Facebook SMM Panel | TrendEvo',
-  description:
-    'TrendEvo helps Bangladeshi businesses grow their Facebook presence with real engagement, reliable results, and locally optimized strategies.',
+  title: facebookSmmPanelPageData.seo.title,
+  description: facebookSmmPanelPageData.seo.description,
 };
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Facebook SMM Panel',
-  description:
-    'TrendEvo helps Bangladeshi businesses grow their Facebook presence with real engagement, reliable results, and locally optimized strategies.',
+  name: facebookSmmPanelPageData.schema.name,
+  description: facebookSmmPanelPageData.schema.description,
   provider: {
     '@type': 'Organization',
     name: 'TrendEvo',
     url: 'https://trendevo.com',
   },
-  areaServed: 'Bangladesh',
-  url: 'https://trendevo.com/facebook-smm-panel',
+  areaServed: facebookSmmPanelPageData.schema.areaServed,
+  url: facebookSmmPanelPageData.schema.url,
 };
-
-const facebookCtaContent = getCtaServiceContent('facebook-smm-panel');
 
 export default function FacebookSmmPanelPage() {
   return (
@@ -48,42 +36,14 @@ export default function FacebookSmmPanelPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero slug="facebook-smm-panel" />
-      <SocialService slug="facebook-smm-panel" />
+      <ServiceHero slug={facebookSmmPanelPageData.slug} />
+      <SocialService slug={facebookSmmPanelPageData.slug} />
       <StatsMarqueeSection />
-      <ServiceAdvantage slug="facebook-smm-panel" />
-      <ServiceWorkingProcessSection
-        badge={facebookSmmPanelWorkingProcessHeading.badge}
-        title={facebookSmmPanelWorkingProcessHeading.title}
-        subtitle={facebookSmmPanelWorkingProcessHeading.subtitle}
-        titleClassName={facebookSmmPanelWorkingProcessHeading.titleClassName}
-        subtitleClassName={
-          facebookSmmPanelWorkingProcessHeading.subtitleClassName
-        }
-        steps={facebookSmmPanelWorkingProcessSteps}
-      />
-      <ServiceLeading slug="facebook-smm-panel" />
-      <FaqSection data={facebookFaqData} />
-      <CtaSection
-        title={facebookCtaContent.title}
-        description={facebookCtaContent.description}
-        imageSrc={facebookCtaContent.imageSrc}
-        imageAlt={facebookCtaContent.imageAlt}
-        className={facebookCtaContent.className}
-        buttonsOutlet={
-          <>
-            <PrimaryButton
-              href={signUpUrl}
-              className="w-full min-w-0 sm:w-auto sm:min-w-[160px]"
-            >
-              {facebookCtaContent.primaryButtonLabel}
-            </PrimaryButton>
-            <SecondaryButton href="/services" className="w-full min-w-0 sm:w-auto sm:min-w-[180px]">
-              {facebookCtaContent.secondaryButtonLabel}
-            </SecondaryButton>
-          </>
-        }
-      />
+      <ServiceAdvantage slug={facebookSmmPanelPageData.slug} />
+      <FacebookSmmPanelWorkingProcessSection />
+      <ServiceLeading slug={facebookSmmPanelPageData.slug} />
+      <FaqSection data={facebookSmmPanelPageData.faq} />
+      <FacebookSmmPanelCtaSection />
     </>
   );
 }
