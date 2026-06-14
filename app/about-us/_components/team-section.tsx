@@ -3,13 +3,10 @@ import { ChevronsRight } from 'lucide-react';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import PrimaryButton from '@/components/buttons/primary-button';
+import { data } from '@/app/about-us/page-data';
+import { renderText } from '@/lib/utils/renderText';
 
-const checklistItems = [
-  'RendEvo makes digital marketing tools accessible to all Bangladeshi businesses.',
-  'We keep refining our services for reliable platform performance.',
-  'Client success drives us to maintain top social media growth standards.',
-  'RendEvo provides Bangladeshi businesses with reliable tools for online growth.',
-] as const;
+const { team } = data;
 
 export default function TeamSection() {
   return (
@@ -23,8 +20,8 @@ export default function TeamSection() {
           <div className="relative mx-auto aspect-[567/698] w-full max-w-xl overflow-hidden lg:mx-0 lg:max-w-none">
             <div className="relative z-20 h-full w-full">
               <Image
-                src="/images/about/about-us-trendevo-specialist-representing-trusted-smm-panel-services-illustration.webp"
-                alt="TrendEvo team specialist representing digital marketing expertise"
+                src={team.image.src}
+                alt={team.image.alt}
                 fill
                 priority
                 className="object-contain object-bottom"
@@ -37,51 +34,23 @@ export default function TeamSection() {
             <div className="flex w-full min-w-0 flex-col gap-7">
               <div className="flex w-full min-w-0 flex-col gap-8">
                 <SectionHeading
-                  align="left"
-                  badge="OUR TEAM"
-                  title={
-                    <>
-                      The Team Behind T
-                      <span className="text-gradient">RendEvo</span>
-                    </>
-                  }
-                  titleClassName="text-4xl leading-snug tracking-wide text-[#13203b] lg:text-5xl"
+                  align={team.heading.align}
+                  badge={team.heading.badge}
+                  title={renderText(team.heading.title)}
+                  titleClassName={team.heading.titleClassName}
                 />
 
                 <p className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl dark:text-[#c1c4cc]">
-                  <span className="text-gradient font-semibold">RendEvo</span>
-                  {
-                    ' is powered by a skilled team of digital marketing specialists, software engineers, social media strategists, and customer success experts. Each member shares a single mission: to help '
-                  }
-                  <span className="text-gradient font-semibold">
-                    Bangladeshi businesses
-                  </span>
-                  {
-                    ' grow online with effective, results-driven social media solutions tailored to the local market.'
-                  }
+                  {renderText(team.introParagraph)}
                 </p>
 
                 <p className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl dark:text-[#c1c4cc]">
-                  {'Our founder, '}
-                  <span className="text-gradient font-semibold">
-                    Seam Rahman
-                  </span>
-                  {', brings over '}
-                  <span className="text-gradient font-semibold">
-                    10 years of experience
-                  </span>
-                  {
-                    " guiding RendEvo's vision for impactful digital growth. The technical team ensures a secure, stable platform "
-                  }
-                  <span className="text-gradient font-semibold">24/7</span>
-                  {
-                    ', while our support staff offers personalized guidance in Bangla and English.'
-                  }
+                  {renderText(team.founderParagraph)}
                 </p>
               </div>
 
               <ul className="flex w-full min-w-0 flex-col gap-4.5">
-                {checklistItems.map((item) => (
+                {team.checklistItems.map((item) => (
                   <li
                     key={item}
                     className="flex w-full min-w-0 items-start gap-2"
@@ -104,10 +73,10 @@ export default function TeamSection() {
 
             <div className="flex flex-wrap gap-4">
               <PrimaryButton
-                href="/services"
+                href={team.ctaHref}
                 className="w-fit max-w-full gap-2 rounded-lg border-2 border-[#cc7aff] md:h-13 md:px-4.5 md:text-lg"
               >
-                Our Services
+                {team.ctaLabel}
                 <ChevronsRight className="size-6 shrink-0" aria-hidden />
               </PrimaryButton>
             </div>

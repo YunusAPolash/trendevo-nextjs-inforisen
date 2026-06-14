@@ -1,44 +1,14 @@
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
+import { data } from '@/app/about-us/page-data';
+import { renderText } from '@/lib/utils/renderText';
 import TrustCard from './trust-card';
 import TrustConnectorVertical from './trust-connector-vertical';
 import TrustCrosshairCenter from './trust-crosshair-center';
 
-const leftCards = [
-  {
-    title: 'Built for Bangladesh',
-    description:
-      'While many SMM panels operate in Bangladesh, RendEvo stands out with a dedicated focus on the local market. Unlike international platforms that treat Bangladesh as secondary, our services are designed around the needs and expectations of Bangladeshi users.',
-    iconSrc: '/images/about/about-us-built-for-bangladesh-icon.png',
-    iconClassName: 'h-10 w-10 object-cover',
-  },
-  {
-    title: 'Local Payment and Pricing',
-    description:
-      'RendEvo supports local payments like bKash, Nagad, and Rocket, with pricing in Bangladeshi Taka. Our Bangla-speaking team ensures smooth, hassle-free social media growth aligned with local business needs.',
-    iconSrc: '/images/about/about-us-local-payment-and-pricing-icon.png',
-    iconClassName: 'h-10 w-9 object-cover',
-  },
-] as const;
+const { trust } = data;
 
-const rightCards = [
-  {
-    title: 'Stable and High Quality Services',
-    description:
-      "RendEvo is more than just a transactional platform—we act as your long-term social media growth partner. Built with local expertise and insights, we are dedicated to supporting Bangladesh's dynamic digital economy while helping businesses achieve sustainable online growth.",
-    iconSrc: '/images/about/about-us-stable-and-high-quality-services-icon.webp',
-    iconClassName: 'h-10 w-10 object-cover',
-  },
-  {
-    title: 'Local Support & Real Guidance',
-    description:
-      'We vet suppliers to ensure high-quality engagement and strong retention. Our system delivers orders accurately with minimal issues, while our guidance in English and Bangla helps you make smarter growth decisions.',
-    iconSrc: '/images/about/about-us-local-support-and-real-guidance-icon.webp',
-    iconClassName: 'h-10 w-8 object-cover',
-  },
-] as const;
-
-type TrustCardData = (typeof leftCards)[number] | (typeof rightCards)[number];
+type TrustCardData = (typeof trust.leftCards)[number];
 
 function TrustColumn({
   cards,
@@ -65,29 +35,28 @@ export default function TrustSection() {
     >
       <div className="container flex flex-col items-center gap-16">
         <SectionHeading
-          badge="WHY TRUST US"
-          title={
-            <>
-              Why Businesss Owner <span className="text-gradient">Trust us</span>
-            </>
-          }
-          subtitle="Business owners trust us for delivering measurable growth with transparent, reliable services. Our dedicated support and commitment to excellence give businesses the confidence to succeed."
-          titleClassName="text-4xl leading-snug tracking-wide text-[#13203b] lg:text-5xl"
-          subtitleClassName="max-w-6xl text-xl font-medium"
+          badge={trust.heading.badge}
+          title={renderText(trust.heading.title)}
+          subtitle={trust.heading.subtitle}
+          titleClassName={trust.heading.titleClassName}
+          subtitleClassName={trust.heading.subtitleClassName}
         />
 
         <div className="hidden w-full items-center justify-between gap-6 lg:flex">
-          <TrustColumn cards={leftCards} connectorId="trust-connector-left" />
+          <TrustColumn cards={trust.leftCards} connectorId="trust-connector-left" />
           <TrustCrosshairCenter className="shrink-0 self-center" />
-          <TrustColumn cards={rightCards} connectorId="trust-connector-right" />
+          <TrustColumn cards={trust.rightCards} connectorId="trust-connector-right" />
         </div>
 
         <div className="flex w-full flex-col gap-7 lg:hidden">
-          {[leftCards[0], rightCards[0], leftCards[1], rightCards[1]].map(
-            (card) => (
-              <TrustCard key={card.title} {...card} />
-            ),
-          )}
+          {[
+            trust.leftCards[0],
+            trust.rightCards[0],
+            trust.leftCards[1],
+            trust.rightCards[1],
+          ].map((card) => (
+            <TrustCard key={card.title} {...card} />
+          ))}
         </div>
       </div>
     </PrimarySection>
