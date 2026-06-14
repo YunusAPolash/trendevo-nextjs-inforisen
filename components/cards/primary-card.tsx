@@ -2,16 +2,16 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 
 const cardBackgroundClasses = {
-  'card-1': "bg-[url('/images/backgrounds/card-bg-1.svg')]",
-  'card-2': "bg-[url('/images/backgrounds/card-bg-2.svg')]",
+  'card-1': "bg-[url('/images/backgrounds/card-bg-1.webp')]",
+  'card-2': "bg-[url('/images/backgrounds/card-bg-2.webp')]",
   'card-3': "bg-[url('/images/backgrounds/card-bg-3.svg')]",
-  'card-4': "bg-[url('/images/backgrounds/card-bg-4.svg')]",
-  'card-5': "bg-[url('/images/backgrounds/card-bg-5.svg')]",
-  'card-7': "bg-[url('/images/backgrounds/card-bg-7.svg')]",
+  'card-4': "bg-[url('/images/backgrounds/card-bg-4.webp')]",
+  'card-5': "bg-[url('/images/backgrounds/card-bg-5.webp')]",
+  'card-7': "bg-[url('/images/backgrounds/card-bg-7.webp')]",
   'card-9': "bg-[url('/images/backgrounds/card-bg-9.svg')]",
-  'card-10': "bg-[url('/images/backgrounds/card-bgg-10.svg')]",
+  'card-10': "bg-[url('/images/backgrounds/card-bgg-10.webp')]",
   'card-8': "bg-[url('/images/backgrounds/card-bg-8.svg')]",
-  'card-11': "bg-[url('/images/backgrounds/card-bg-11.svg')]",
+  'card-11': "bg-[url('/images/backgrounds/card-bg-11.webp')]",
   'blog-hero': "bg-[url('/images/blog/blog-bg.png')]",
 } as const;
 
