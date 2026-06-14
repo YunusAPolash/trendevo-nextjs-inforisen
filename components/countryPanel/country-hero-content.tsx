@@ -41,7 +41,7 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/country/uk/trenevo-trusted-smm-panel.png',
+      src: '/images/country/uk/uk-trendevo-user-holding-the-uk-flag-with-a-rocket-representing-social-media-growth-icon.png',
       alt: 'TrendEvo user holding the UK flag with a rocket representing social media growth',
       width: 952,
       height: 1062,

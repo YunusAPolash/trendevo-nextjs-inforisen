@@ -23,7 +23,7 @@ export default function TeamSection() {
           <div className="relative mx-auto aspect-[567/698] w-full max-w-xl overflow-hidden lg:mx-0 lg:max-w-none">
             <div className="relative z-20 h-full w-full">
               <Image
-                src="/images/about/about-team-character.webp"
+                src="/images/about/about-us-trendevo-specialist-representing-trusted-smm-panel-services-illustration.webp"
                 alt="TrendEvo team specialist representing digital marketing expertise"
                 fill
                 priority
@@ -87,7 +87,7 @@ export default function TeamSection() {
                     className="flex w-full min-w-0 items-start gap-2"
                   >
                     <Image
-                      src="/images/icons/check-icon.svg"
+                      src="/images/icons/site-check-icon.svg"
                       alt=""
                       width={24}
                       height={24}

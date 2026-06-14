@@ -55,8 +55,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/facebook.webp',
-        decorationImage: '/images/our-services/decorations/facebook-right.webp',
+        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in the UK',
         description:
           'Boost your UK brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -97,8 +97,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/instagram.webp',
-        decorationImage: '/images/our-services/decorations/instagram-service.png',
+        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
         marketingTitle: 'Instagram Marketing Services in the UK',
         description:
           'Grow your Instagram presence in the UK with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -139,9 +139,9 @@ export const countryServiceContent: Record<
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/twitter.png',
+        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
         iconClassName: 'scale-150',
-        decorationImage: '/images/our-services/decorations/twitter-service.png',
+        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
         marketingTitle: 'X (Twitter) Marketing Services in the UK',
         description:
           'Amplify your voice on X with followers, retweets, and engagement that positions your UK brand at the center of trending conversations.',
@@ -182,8 +182,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/youtube.webp',
-        decorationImage: '/images/our-services/decorations/youtube-service.png',
+        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
         marketingTitle: 'YouTube Marketing Services in the UK',
         description:
           'Accelerate UK channel growth with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -224,8 +224,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/tiktok.webp',
-        decorationImage: '/images/our-services/decorations/tiktok-service.png',
+        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
         marketingTitle: 'TikTok Marketing Services in the UK',
         description:
           'Go viral faster in the UK with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -266,8 +266,8 @@ export const countryServiceContent: Record<
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/linkedin.webp',
-        decorationImage: '/images/our-services/decorations/lindein-service.png',
+        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
         marketingTitle: 'LinkedIn Marketing Services in the UK',
         description:
           'Strengthen your UK professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -325,8 +325,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/facebook.webp',
-        decorationImage: '/images/our-services/decorations/facebook-right.webp',
+        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in Bangladesh',
         description:
           'Boost your Bangladeshi brand visibility and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns built for the local market.',
@@ -367,8 +367,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/instagram.webp',
-        decorationImage: '/images/our-services/decorations/instagram-service.png',
+        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
         marketingTitle: 'Instagram Marketing Services in Bangladesh',
         description:
           'Grow your Instagram presence in Bangladesh with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -409,8 +409,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/youtube.webp',
-        decorationImage: '/images/our-services/decorations/youtube-service.png',
+        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
         marketingTitle: 'YouTube Marketing Services in Bangladesh',
         description:
           'Accelerate channel growth in Bangladesh with views, subscribers, and engagement that helps your videos rank higher.',
@@ -451,8 +451,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/tiktok.webp',
-        decorationImage: '/images/our-services/decorations/tiktok-service.png',
+        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
         marketingTitle: 'TikTok Marketing Services in Bangladesh',
         description:
           'Go viral faster in Bangladesh with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -493,8 +493,8 @@ export const countryServiceContent: Record<
       {
         id: 'telegram',
         label: 'Telegram',
-        icon: '/images/our-services/platforms/telegram.webp',
-        decorationImage: '/images/our-services/decorations/telegram-service.png',
+        icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/our-services-telegram-members-decoration.png',
         marketingTitle: 'Telegram Marketing Services in Bangladesh',
         description:
           'Grow your Telegram channel or group in Bangladesh with members and engagement that builds an active, responsive community.',
@@ -535,9 +535,9 @@ export const countryServiceContent: Record<
       {
         id: 'website-traffic',
         label: 'Website Traffic',
-        icon: '/images/our-services/platforms/web.png',
+        icon: '/images/our-services/platforms/our-services-organic-traffic-platform-icon.png',
         decorationImage:
-          '/images/our-services/decorations/website-traffic-service.png',
+          '/images/our-services/decorations/our-services-organic-traffic-decoration.png',
         marketingTitle: 'Website Traffic Services in Bangladesh',
         description:
           'Drive targeted visitors to your Bangladeshi website with high-quality traffic that improves rankings, conversions, and online visibility.',

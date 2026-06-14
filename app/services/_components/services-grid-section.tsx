@@ -8,48 +8,48 @@ const services = [
   {
     backgroundGradient:
       'linear-gradient(28.46deg, rgb(254, 249, 255) 8.11%, rgba(229, 239, 255, 0.46) 56.5%, rgb(128, 179, 255) 125.88%)',
-    darkOverlaySrc: '/images/services/overlays/service-panel-facebook-dark.svg',
-    iconSrc: '/images/services/facebook-smm-panel.png',
+    darkOverlaySrc: '/images/services/overlays/services-facebook-smm-panel-decoration.svg',
+    iconSrc: '/images/services/services-facebook-smm-panel-icon.png',
     iconAlt: 'Facebook',
     title: 'Facebook SMM Panel',
   },
   {
     backgroundGradient:
       'linear-gradient(28.46deg, rgb(254, 249, 255) 8.11%, rgba(255, 238, 249, 0) 56.5%, rgb(255, 102, 199) 125.88%)',
-    darkOverlaySrc: '/images/services/overlays/service-panel-instagram-dark.svg',
-    iconSrc: '/images/services/instagram-smm-panel.png',
+    darkOverlaySrc: '/images/services/overlays/services-instagram-smm-panel-decoration.svg',
+    iconSrc: '/images/services/services-instagram-smm-panel-icon.png',
     iconAlt: 'Instagram',
     title: 'Instagram SMM Panel',
   },
   {
     backgroundGradient:
       'linear-gradient(28.46deg, rgb(254, 249, 255) 8.11%, rgba(255, 247, 247, 0.46) 56.5%, rgb(255, 75, 73) 125.88%)',
-    darkOverlaySrc: '/images/services/overlays/service-panel-youtube-dark.svg',
-    iconSrc: '/images/services/youtube-smm-panel.png',
+    darkOverlaySrc: '/images/services/overlays/services-youtube-smm-panel-decoration.svg',
+    iconSrc: '/images/services/services-youtube-smm-panel-icon.png',
     iconAlt: 'YouTube',
     title: 'Youtube SMM Panel',
   },
   {
     backgroundGradient:
       'linear-gradient(29.28deg, rgb(255, 255, 255) 2.55%, rgba(163, 163, 163, 0.03) 49.69%, rgb(201, 201, 201) 125.92%)',
-    darkOverlaySrc: '/images/services/overlays/service-panel-tiktok-dark.svg',
-    iconSrc: '/images/services/tiktok-smm-panel.png',
+    darkOverlaySrc: '/images/services/overlays/services-tiktok-smm-panel-decoration.svg',
+    iconSrc: '/images/services/services-tiktok-smm-panel-icon.png',
     iconAlt: 'TikTok',
     title: 'TikTok SMM Panel',
   },
   {
     backgroundGradient:
       'linear-gradient(28.46deg, rgb(254, 249, 255) 8.11%, rgba(229, 239, 255, 0.46) 56.5%, rgb(96, 213, 240) 125.88%)',
-    darkOverlaySrc: '/images/services/overlays/service-panel-telegram-dark.svg',
-    iconSrc: '/images/services/telegram-smm-panel-icon.png',
+    darkOverlaySrc: '/images/services/overlays/services-telegram-smm-panel-decoration.svg',
+    iconSrc: '/images/services/services-telegram-smm-panel-icon.png',
     iconAlt: 'Telegram',
     title: 'Telegram SMM Panel',
   },
   {
     backgroundGradient:
       'linear-gradient(28.46deg, rgb(254, 249, 255) 8.11%, rgba(238, 238, 238, 0.46) 56.5%, rgb(125, 125, 125) 125.88%)',
-    darkOverlaySrc: '/images/services/overlays/service-panel-x-dark.svg',
-    iconSrc: '/images/services/twitter-smm-panel.png',
+    darkOverlaySrc: '/images/services/overlays/services-x-twitter-smm-panel-decoration.svg',
+    iconSrc: '/images/services/services-x-twitter-smm-panel-icon.png',
     iconAlt: 'X (Twitter)',
     title: 'X(Twitter) SMM Panel',
   },

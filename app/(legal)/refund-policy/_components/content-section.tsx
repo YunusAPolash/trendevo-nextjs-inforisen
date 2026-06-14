@@ -173,7 +173,7 @@ const negativeItems = [
 
 const refundSteps: StepperStep[] = [
   {
-    icon: '/images/icons/stepper-search-icon.svg',
+    icon: '/images/icons/refund-policy-check-your-order-status-icon.svg',
     title: 'Check Your Order Status',
     description: (
       <p>
@@ -185,7 +185,7 @@ const refundSteps: StepperStep[] = [
     ),
   },
   {
-    icon: '/images/icons/stepper-contact-icon.svg',
+    icon: '/images/icons/refund-policy-contact-our-support-team-icon.svg',
     title: 'Contact Our Support Team',
     description: (
       <>
@@ -206,7 +206,7 @@ const refundSteps: StepperStep[] = [
     ),
   },
   {
-    icon: '/images/icons/stepper-clock-icon.svg',
+    icon: '/images/icons/refund-policy-allow-time-for-review-icon.svg',
     title: 'Allow Time for Review',
     description: (
       <p>
@@ -220,7 +220,7 @@ const refundSteps: StepperStep[] = [
     ),
   },
   {
-    icon: '/images/icons/stepper-wallet-icon.svg',
+    icon: '/images/icons/refund-policy-use-your-credit-icon.svg',
     title: 'Use Your Credit',
     description: (
       <p>

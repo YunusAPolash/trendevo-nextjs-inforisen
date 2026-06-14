@@ -3,14 +3,14 @@ import { formatUsersTrustLabel, getStats } from '@/lib/stats';
 
 const facebookPageFollowersTrustBadgeBase = {
   avatarSrcs: [
-    '/images/reviews/hero-avatar-1.png',
-    '/images/reviews/hero-avatar-2.png',
-    '/images/reviews/hero-avatar-3.png',
-    '/images/reviews/hero-avatar-4.png',
-    '/images/reviews/hero-avatar-5.png',
-    '/images/reviews/hero-avatar-3.png',
+    '/images/reviews/home-hero-hero-1-avatar.png',
+    '/images/reviews/home-hero-hero-2-avatar.png',
+    '/images/reviews/home-hero-hero-3-avatar.png',
+    '/images/reviews/home-hero-hero-4-avatar.png',
+    '/images/reviews/home-hero-hero-5-avatar.png',
+    '/images/reviews/home-hero-hero-3-avatar.png',
   ],
-  ratingIconSrc: '/images/icons/hero-star-rating.png',
+  ratingIconSrc: '/images/icons/home-hero-trust-star-rating-icon.png',
   rating: '(4.8)',
 } satisfies Omit<HeroTrustBadge, 'label'>;
 

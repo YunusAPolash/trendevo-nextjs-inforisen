@@ -103,7 +103,7 @@ export default function BlogPostCard({
 
             <div className="flex items-center gap-1 pl-[60px] sm:shrink-0 sm:pl-0">
               <Image
-                src="/images/icons/blog-read-time-icon.svg"
+                src="/images/icons/site-blog-read-time-icon.svg"
                 alt=""
                 width={20}
                 height={20}
@@ -123,7 +123,7 @@ export default function BlogPostCard({
         >
           Read More
           <Image
-            src="/images/icons/blog-read-more-chevron.svg"
+            src="/images/icons/site-blog-read-more-chevron-icon.svg"
             alt=""
             width={22}
             height={22}

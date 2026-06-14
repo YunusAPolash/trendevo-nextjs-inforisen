@@ -36,7 +36,7 @@ export default function ContactUsPage() {
           </PrimaryButton>
         }
         illustration={{
-          src: '/images/contact-us/contact-us-hero-character.webp',
+          src: '/images/contact-us/contact-us-trendevo-support-specialist-pointing-to-contact-options-illustration.webp',
           alt: 'TrendEvo support specialist pointing to contact options',
           width: 583,
           height: 648,

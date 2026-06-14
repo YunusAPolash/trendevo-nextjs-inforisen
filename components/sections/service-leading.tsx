@@ -58,7 +58,7 @@ function LeadingCard({
                 unoptimized={hexIconSrc.endsWith('.png')}
               />
               <Image
-                src="/images/why-choose-us/hex-icon-dark.svg"
+                src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
                 alt=""
                 aria-hidden
                 width={77}
@@ -94,7 +94,7 @@ function LeadingCard({
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-1.5">
             <Image
-              src="/images/why-choose-us/title-bullet-second.svg"
+              src="/images/why-choose-us/why-choose-us-title-bullet-second-decoration.svg"
               alt=""
               aria-hidden
               width={12}
@@ -131,7 +131,7 @@ export default function ServiceLeading({ slug }: ServiceLeadingProps) {
     underlineWidth,
   } = getServiceLeadingContent(slug);
 
-  const hexIconSrc = '/images/why-choose-us/hex-icon.svg';
+  const hexIconSrc = '/images/why-choose-us/why-choose-us-hex-icon-decoration.svg';
 
   return (
     <PrimarySection
@@ -141,7 +141,7 @@ export default function ServiceLeading({ slug }: ServiceLeadingProps) {
       className="relative overflow-hidden py-16 sm:py-20"
     >
       <Image
-        src="/images/service-smm-panel/leading-decorative-wave.svg"
+        src="/images/service-smm-panel/facebook-smm-panel-leading-decorative-wave-decoration.svg"
         alt=""
         aria-hidden
         width={1000}

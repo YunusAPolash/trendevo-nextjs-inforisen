@@ -38,14 +38,14 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/underline.svg',
+    underlineSrc: '/images/advantages/advantages-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/advantages/advantage.png',
+      src: '/images/advantages/advantages-illustration.png',
       alt: 'SMM panel advantages illustration',
     },
     leftAdvantages: [
@@ -118,14 +118,14 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/underline.svg',
+    underlineSrc: '/images/advantages/advantages-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/advantages/advantage-of-uk.png',
+      src: '/images/advantages/advantages-uk-smm-panel-advantages-illustration-with-globe-illustration.png',
       alt: 'UK SMM panel advantages illustration with globe',
     },
     leftAdvantages: [
@@ -198,14 +198,14 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform for Bangladeshi businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/underline.svg',
+    underlineSrc: '/images/advantages/advantages-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/advantages/advantage.png',
+      src: '/images/advantages/advantages-illustration.png',
       alt: 'Bangladesh SMM panel advantages illustration',
     },
     leftAdvantages: [

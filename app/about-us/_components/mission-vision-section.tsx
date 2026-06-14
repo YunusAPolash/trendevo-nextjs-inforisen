@@ -22,7 +22,7 @@ function FeatureList({ idPrefix }: { idPrefix: string }) {
           className="flex w-full min-w-0 items-start gap-2"
         >
           <Image
-            src="/images/icons/check-icon.svg"
+            src="/images/icons/site-check-icon.svg"
             alt=""
             width={24}
             height={24}
@@ -50,7 +50,7 @@ export default function MissionVisionSection() {
           <div className="relative mx-auto aspect-[567/698] w-full max-w-xl overflow-hidden lg:mx-0 lg:max-w-none">
             <div className="relative z-20 h-full w-full">
               <Image
-                src="/images/about/our-mission-and-vision.png"
+                src="/images/about/about-us-our-mission-and-vision-illustration.png"
                 alt="TrendEvo specialist highlighting mission and vision for social media growth"
                 fill
                 priority

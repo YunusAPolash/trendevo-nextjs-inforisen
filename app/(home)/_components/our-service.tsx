@@ -44,8 +44,8 @@ const platforms: Platform[] = [
   {
     id: 'facebook',
     label: 'Facebook',
-    icon: '/images/our-services/platforms/facebook.webp',
-    decorationImage: '/images/our-services/decorations/facebook-right.webp',
+    icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+    decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
     marketingTitle: 'Facebook Marketing Services',
     description:
       'Boost your brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -86,8 +86,8 @@ const platforms: Platform[] = [
   {
     id: 'instagram',
     label: 'Instagram',
-    icon: '/images/our-services/platforms/instagram.webp',
-    decorationImage: '/images/our-services/decorations/instagram-service.png',
+    icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+    decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
     marketingTitle: 'Instagram Marketing Services',
     description:
       'Grow your Instagram presence with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -127,9 +127,9 @@ const platforms: Platform[] = [
   {
     id: 'twitter',
     label: 'X (Twitter)',
-    icon: '/images/our-services/platforms/twitter.png',
+    icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
     iconClassName: 'scale-150',
-    decorationImage: '/images/our-services/decorations/twitter-service.png',
+    decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
     marketingTitle: 'X (Twitter) Marketing Services',
     description:
       'Amplify your voice on X with followers, retweets, and engagement that positions your brand at the center of trending conversations.',
@@ -169,8 +169,8 @@ const platforms: Platform[] = [
   {
     id: 'youtube',
     label: 'YouTube',
-    icon: '/images/our-services/platforms/youtube.webp',
-    decorationImage: '/images/our-services/decorations/youtube-service.png',
+    icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+    decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
     marketingTitle: 'YouTube Marketing Services',
     description:
       'Accelerate channel growth with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -210,8 +210,8 @@ const platforms: Platform[] = [
   {
     id: 'tiktok',
     label: 'TikTok',
-    icon: '/images/our-services/platforms/tiktok.webp',
-    decorationImage: '/images/our-services/decorations/tiktok-service.png',
+    icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
+    decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
     marketingTitle: 'TikTok Marketing Services',
     description:
       'Go viral faster with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -251,8 +251,8 @@ const platforms: Platform[] = [
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    icon: '/images/our-services/platforms/linkedin.webp',
-    decorationImage: '/images/our-services/decorations/lindein-service.png',
+    icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
+    decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
     marketingTitle: 'LinkedIn Marketing Services',
     description:
       'Strengthen your professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -292,8 +292,8 @@ const platforms: Platform[] = [
   {
     id: 'telegram',
     label: 'Telegram',
-    icon: '/images/our-services/platforms/telegram.webp',
-    decorationImage: '/images/our-services/decorations/telegram-service.png',
+    icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
+    decorationImage: '/images/our-services/decorations/our-services-telegram-members-decoration.png',
     marketingTitle: 'Telegram Marketing Services',
     description:
       'Grow your Telegram channel or group with members and engagement that builds an active, responsive community.',
@@ -333,8 +333,8 @@ const platforms: Platform[] = [
   {
     id: 'discord',
     label: 'Discord',
-    icon: '/images/our-services/platforms/discord.webp',
-    decorationImage: '/images/our-services/decorations/discord-service.png',
+    icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+    decorationImage: '/images/our-services/decorations/our-services-discord-members-decoration.png',
     marketingTitle: 'Discord Marketing Services',
     description:
       'Build thriving Discord communities with members, online activity, and engagement that keeps your server active.',
@@ -374,8 +374,8 @@ const platforms: Platform[] = [
   {
     id: 'spotify',
     label: 'Spotify',
-    icon: '/images/our-services/platforms/spotify.webp',
-    decorationImage: '/images/our-services/decorations/spotify-service.png',
+    icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
+    decorationImage: '/images/our-services/decorations/our-services-spotify-plays-decoration.png',
     marketingTitle: 'Spotify Marketing Services',
     description:
       'Increase your music reach with Spotify plays, followers, and playlist placements that grow your listener base.',
@@ -415,8 +415,8 @@ const platforms: Platform[] = [
   {
     id: 'soundcloud',
     label: 'SoundCloud',
-    icon: '/images/our-services/platforms/soundcloud.png',
-    decorationImage: '/images/our-services/decorations/soundcloud-service.png',
+    icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+    decorationImage: '/images/our-services/decorations/our-services-soundcloud-plays-decoration.png',
     marketingTitle: 'SoundCloud Marketing Services',
     description:
       'Elevate your SoundCloud profile with plays, followers, and reposts that help your tracks gain traction.',
@@ -456,8 +456,8 @@ const platforms: Platform[] = [
   {
     id: 'snapchat',
     label: 'Snapchat',
-    icon: '/images/our-services/platforms/snapchat.webp',
-    decorationImage: '/images/our-services/decorations/snapchat-service.png',
+    icon: '/images/our-services/platforms/our-services-snapchat-followers-platform-icon.webp',
+    decorationImage: '/images/our-services/decorations/our-services-snapchat-followers-decoration.png',
     marketingTitle: 'Snapchat Marketing Services',
     description:
       'Grow your Snapchat presence with followers, views, and story engagement that connects you with a younger audience.',
@@ -497,9 +497,9 @@ const platforms: Platform[] = [
   {
     id: 'website-traffic',
     label: 'Website Traffic',
-    icon: '/images/our-services/platforms/web.png',
+    icon: '/images/our-services/platforms/our-services-organic-traffic-platform-icon.png',
     decorationImage:
-      '/images/our-services/decorations/website-traffic-service.png',
+      '/images/our-services/decorations/our-services-organic-traffic-decoration.png',
     marketingTitle: 'Website Traffic Services',
     description:
       'Drive targeted visitors to your website with high-quality traffic that improves rankings, conversions, and online visibility.',
@@ -688,11 +688,11 @@ function ServiceCardGlowBackground() {
       className="pointer-events-none absolute inset-0 hidden overflow-hidden dark:block"
     >
       <ServiceCardGlow
-        src="/images/our-services/decorations/service-card-glow-top.svg"
+        src="/images/our-services/decorations/our-services-service-card-glow-top-decoration.svg"
         className="-top-[38%] right-[-14%] lg:-top-[209px] lg:right-[-199px]"
       />
       <ServiceCardGlow
-        src="/images/our-services/decorations/service-card-glow-bottom.svg"
+        src="/images/our-services/decorations/our-services-service-card-glow-bottom-decoration.svg"
         className="right-[-14%] top-[72%] lg:right-[-199px] lg:top-[474px]"
       />
     </div>
@@ -759,15 +759,15 @@ function ServiceIllustration() {
       <ServiceIllustrationLayers
         className="dark:hidden"
         backgroundImage={SERVICE_ILLUSTRATION_LIGHT_BG}
-        bgSrc="/images/our-services/decorations/hero-illustration-light-bg.webp"
-        foregroundSrc="/images/our-services/decorations/hero-illustration-light.webp"
+        bgSrc="/images/our-services/decorations/our-services-hero-illustration-light-bg-illustration.webp"
+        foregroundSrc="/images/our-services/decorations/our-services-hero-illustration-light-illustration.webp"
         priority
       />
       <ServiceIllustrationLayers
         className="hidden dark:block"
         backgroundImage={SERVICE_ILLUSTRATION_DARK_BG}
-        bgSrc="/images/our-services/decorations/hero-illustration-dark-bg.webp"
-        foregroundSrc="/images/our-services/decorations/hero-illustration-dark.webp"
+        bgSrc="/images/our-services/decorations/our-services-hero-illustration-dark-bg-illustration.webp"
+        foregroundSrc="/images/our-services/decorations/our-services-hero-illustration-dark-illustration.webp"
       />
     </div>
   );
@@ -777,7 +777,7 @@ function ServiceNumberBadge({ number }: { number: string }) {
   return (
     <div className="relative flex size-9 shrink-0 items-center justify-center sm:size-[44px]">
       <Image
-        src="/images/our-services/ui/hex-number.svg"
+        src="/images/our-services/ui/our-services-hex-number-decoration.svg"
         alt=""
         aria-hidden
         width={38}

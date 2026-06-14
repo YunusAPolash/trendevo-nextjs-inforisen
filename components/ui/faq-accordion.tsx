@@ -41,7 +41,7 @@ function FaqAccordionItem({
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-6 -top-60 h-[482px] w-[724px] bg-[url('/images/faq/faq-item-fabric-pattern.webp')] bg-cover bg-center opacity-50 dark:left-[-26px] dark:top-[-243px] dark:opacity-10"
+        className="pointer-events-none absolute -left-6 -top-60 h-[482px] w-[724px] bg-[url('/images/faq/faq-item-fabric-pattern-decoration.webp')] bg-cover bg-center opacity-50 dark:left-[-26px] dark:top-[-243px] dark:opacity-10"
       />
       {children}
     </AccordionItem>

@@ -29,7 +29,7 @@ export default async function HomeBlog() {
             </>
           }
           subtitle="Smart strategies and expert insights to help you grow faster on social media. Learn how to boost engagement, reach the right audience, and turn followers into customers."
-          underlineSrc="/images/blog/underline.svg"
+          underlineSrc="/images/blog/blog-section-underline.svg"
           underlineWidth={60}
           titleClassName="max-w-[961px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]"
           subtitleClassName="max-w-[996px] text-sm font-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg"

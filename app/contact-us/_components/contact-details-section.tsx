@@ -21,7 +21,7 @@ export default function ContactDetailsSection() {
           <div className="relative size-full">
             <div className="absolute inset-[-138%]">
               <Image
-                src="/images/contact-us/contact-details-glow-top-left-dark.svg"
+                src="/images/contact-us/contact-us-contact-details-glow-top-left-dark-decoration.svg"
                 alt=""
                 fill
                 unoptimized
@@ -33,7 +33,7 @@ export default function ContactDetailsSection() {
 
         <div className="pointer-events-none absolute bottom-10 left-[-40px] hidden blur-[2px] lg:block dark:hidden">
           <Image
-            src="/images/contact-us/contact-us-phone.png"
+            src="/images/contact-us/contact-us-phone-icon.png"
             alt=""
             width={137}
             height={139}
@@ -44,7 +44,7 @@ export default function ContactDetailsSection() {
 
         <div className="pointer-events-none absolute top-[73px] right-[-40px] hidden blur-[2px] lg:block dark:hidden">
           <Image
-            src="/images/contact-us/contact-us-phone.png"
+            src="/images/contact-us/contact-us-phone-icon.png"
             alt=""
             width={137}
             height={139}
@@ -66,7 +66,7 @@ export default function ContactDetailsSection() {
             <div className="grid w-full max-w-[1440px] grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2 xl:grid-cols-3 [&>*:last-child]:lg:col-span-2 [&>*:last-child]:lg:mx-auto [&>*:last-child]:lg:max-w-[463px] [&>*:last-child]:xl:col-span-1 [&>*:last-child]:xl:mx-0 [&>*:last-child]:xl:max-w-none">
               <ContactDetailCard
                 borderColor="border-[#1fd863]"
-                darkOverlaySrc="/images/contact-us/contact-card-overlay-whatsapp-dark.svg"
+                darkOverlaySrc="/images/contact-us/contact-us-contact-card-overlay-whatsapp-dark-decoration.svg"
                 iconSrc="/images/contact-us/contact-us-whatsapp-icon.webp"
                 iconAlt="WhatsApp"
                 title="What's App"
@@ -87,7 +87,7 @@ export default function ContactDetailsSection() {
 
               <ContactDetailCard
                 borderColor="border-[#695dd8]"
-                darkOverlaySrc="/images/contact-us/contact-card-overlay-email-dark.svg"
+                darkOverlaySrc="/images/contact-us/contact-us-contact-card-overlay-email-dark-decoration.svg"
                 iconSrc="/images/contact-us/contact-us-email-icon.webp"
                 iconAlt="Email"
                 title="Email"
@@ -109,7 +109,7 @@ export default function ContactDetailsSection() {
 
               <ContactDetailCard
                 borderColor="border-[#8f2acd]"
-                darkOverlaySrc="/images/contact-us/contact-card-overlay-business-hours-dark.svg"
+                darkOverlaySrc="/images/contact-us/contact-us-contact-card-overlay-business-hours-dark-decoration.svg"
                 iconSrc="/images/contact-us/contact-us-business-hours-icon.webp"
                 iconAlt="Business hours"
                 title="Business Hours"

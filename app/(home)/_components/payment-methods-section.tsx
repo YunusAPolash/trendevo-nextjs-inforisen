@@ -4,7 +4,7 @@ import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 
 const PAYMENT_METHODS_IMAGE = {
-  src: '/images/payment-methods/payment-methods.png',
+  src: '/images/payment-methods/payment-methods-supported-payment-methods-including-visa-bkash-nagad-bitcoin-mastercard-and-more-icon.png',
   width: 1920,
   height: 470,
 } as const;
@@ -14,7 +14,7 @@ function PaymentMethodsRotatingArt() {
     <>
       <div className="pointer-events-none absolute top-[-90px] left-[-52px] z-0 hidden opacity-70 lg:block xl:top-0 dark:hidden">
         <Image
-          src="/images/payment-methods/threed-icon.png"
+          src="/images/payment-methods/payment-methods-threed-icon-decoration.png"
           alt=""
           aria-hidden
           width={287}
@@ -30,7 +30,7 @@ function PaymentMethodsRotatingArt() {
         className="pointer-events-none absolute top-[-90px] left-[-52px] z-0 hidden opacity-65 lg:dark:block xl:top-0"
       >
         <Image
-          src="/images/payment-methods/dark/rotating-torus.png"
+          src="/images/payment-methods/dark/payment-methods-rotating-torus-decoration.png"
           alt=""
           width={303}
           height={300}
@@ -64,7 +64,7 @@ export default function PaymentMethodsSection() {
             </>
           }
           subtitle="Choose from 10+ secure and convenient payment methods to pay your way. Enjoy fast, hassle-free transactions and get instant access to all our services."
-          underlineSrc="/images/payment-methods/underline.svg"
+          underlineSrc="/images/payment-methods/payment-methods-section-underline.svg"
           underlineWidth={193}
           badgeClassName="dark:bg-none dark:bg-clip-border dark:text-white"
           titleClassName="max-w-[1000px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]"

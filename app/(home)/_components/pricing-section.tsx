@@ -10,10 +10,10 @@ import { signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
 
 const platforms = [
-  { id: 'instagram', label: 'Instagram', icon: '/images/icons/platform-instagram.webp' },
-  { id: 'facebook', label: 'Facebook', icon: '/images/icons/platform-facebook.webp' },
-  { id: 'youtube', label: 'YouTube', icon: '/images/icons/platform-youtube.webp' },
-  { id: 'tiktok', label: 'TikTok', icon: '/images/icons/platform-tiktok.webp' },
+  { id: 'instagram', label: 'Instagram', icon: '/images/icons/pricing-instagram-platform-icon.webp' },
+  { id: 'facebook', label: 'Facebook', icon: '/images/icons/pricing-facebook-platform-icon.webp' },
+  { id: 'youtube', label: 'YouTube', icon: '/images/icons/pricing-youtube-platform-icon.webp' },
+  { id: 'tiktok', label: 'TikTok', icon: '/images/icons/pricing-tiktok-platform-icon.webp' },
 ] as const;
 
 const CARD_HEADER_GRADIENT_BASIC =
@@ -32,11 +32,11 @@ const INACTIVE_TAB_BG =
   'linear-gradient(111.82deg, rgba(214, 144, 255, 0.08) 4.77%, rgba(215, 148, 255, 0.08) 39.51%, rgba(179, 100, 226, 0.08) 74.24%)';
 
 const features = [
-  { label: 'Guarantee Fast Delivery', icon: '/images/pricing/feature-security.svg' },
-  { label: 'Instant Start', icon: '/images/pricing/feature-instant.svg' },
-  { label: 'Never Drop', icon: '/images/pricing/feature-never-drop.svg' },
-  { label: 'No Password Required', icon: '/images/pricing/feature-password.svg', size: 24 },
-  { label: 'Geo: Global', icon: '/images/pricing/feature-global.svg' },
+  { label: 'Guarantee Fast Delivery', icon: '/images/pricing/pricing-guarantee-fast-delivery-icon.svg' },
+  { label: 'Instant Start', icon: '/images/pricing/pricing-instant-start-icon.svg' },
+  { label: 'Never Drop', icon: '/images/pricing/pricing-never-drop-icon.svg' },
+  { label: 'No Password Required', icon: '/images/pricing/pricing-no-password-required-icon.svg', size: 24 },
+  { label: 'Geo: Global', icon: '/images/pricing/pricing-geo-global-icon.svg' },
 ] as const;
 
 const plans = [
@@ -148,7 +148,7 @@ function PricingCard({
   const planFeatures = [
     ...features,
     ...(featureCount > 5
-      ? [{ label: '24/7 Support', icon: '/images/pricing/feature-global.svg', size: 20 as const }]
+      ? [{ label: '24/7 Support', icon: '/images/pricing/pricing-geo-global-icon.svg', size: 20 as const }]
       : []),
   ];
 
@@ -165,7 +165,7 @@ function PricingCard({
         />
       </div>
       <Image
-        src="/images/pricing/card-instagram.png"
+        src="/images/pricing/pricing-card-instagram-icon.png"
         alt=""
         aria-hidden
         width={83}
@@ -186,7 +186,7 @@ function PricingCard({
         />
         {featured ? (
           <Image
-            src="/images/pricing/card-halftone.webp"
+            src="/images/pricing/pricing-card-halftone-decoration.webp"
             alt=""
             aria-hidden
             width={703}
@@ -202,8 +202,8 @@ function PricingCard({
               <Image
                 src={
                   planType === 'professional'
-                    ? '/images/pricing/plan-pro-icon.svg'
-                    : '/images/pricing/plan-basic-icon.svg'
+                    ? '/images/pricing/pricing-plan-pro-icon.svg'
+                    : '/images/pricing/pricing-plan-basic-icon.svg'
                 }
                 alt=""
                 aria-hidden
@@ -244,7 +244,7 @@ function PricingCard({
         >
           <span className={cn(!featured && 'text-gradient')}>Get Started</span>
           <Image
-            src="/images/pricing/button-glow.svg"
+            src="/images/pricing/pricing-button-glow-decoration.svg"
             alt=""
             aria-hidden
             width={273}
@@ -292,7 +292,7 @@ export default function PricingSection() {
         <div className="flex w-full flex-col items-center gap-6 sm:gap-8 lg:gap-[34px]">
           <SectionHeading
             badge="PRICING"
-            underlineSrc="/images/pricing/underline.svg"
+            underlineSrc="/images/pricing/pricing-section-underline.svg"
             underlineWidth={90}
             title={
               <>

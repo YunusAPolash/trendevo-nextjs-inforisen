@@ -70,7 +70,7 @@ function FaqSectionDecorations() {
         <div className="rotate-[-4deg]">
           <div className="relative h-[212px] w-[211px] overflow-hidden blur-[3px]">
             <Image
-              src="/images/faq/faq-decorative-purple-question.webp"
+              src="/images/faq/faq-decorative-purple-question-decoration.webp"
               alt=""
               aria-hidden
               width={224}
@@ -84,7 +84,7 @@ function FaqSectionDecorations() {
 
       <div className="absolute left-[91.5625%] top-[27px] h-[212px] w-[217.591px] overflow-hidden blur-[3px]">
         <Image
-          src="/images/faq/faq-decorative-orange-question.webp"
+          src="/images/faq/faq-decorative-orange-question-decoration.webp"
           alt=""
           aria-hidden
           width={225}
@@ -132,7 +132,7 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
           badge={label}
           title={title}
           subtitle={subtitle}
-          underlineSrc="/images/icons/faq-badge-underline.svg"
+          underlineSrc="/images/icons/faq-section-underline.svg"
           underlineWidth={44}
           titleClassName="max-w-[996px] text-2xl tracking-wide sm:text-4xl md:text-5xl"
           subtitleClassName="max-w-3xl text-sm sm:text-base md:text-lg"
@@ -157,7 +157,7 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
             <div className="space-y-1.5">
               <div className="flex items-center gap-1">
                 <Image
-                  src="/images/faq/faq-cta-question-dice.webp"
+                  src="/images/faq/faq-cta-question-dice-decoration.webp"
                   alt=""
                   width={36}
                   height={34}

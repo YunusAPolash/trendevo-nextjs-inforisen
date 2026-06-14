@@ -107,7 +107,7 @@ function AdvantageCard({
       <div className="relative z-10 flex flex-col gap-[18px]">
         <div className="relative flex size-[77px] shrink-0 items-center justify-center">
           <Image
-            src="/images/why-choose-us/hex-icon.svg"
+            src="/images/why-choose-us/why-choose-us-hex-icon-decoration.svg"
             alt=""
             aria-hidden
             width={77}
@@ -115,7 +115,7 @@ function AdvantageCard({
             className="absolute inset-0 size-[77px] dark:hidden"
           />
           <Image
-            src="/images/why-choose-us/hex-icon-dark.svg"
+            src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
             alt=""
             aria-hidden
             width={77}
@@ -136,7 +136,7 @@ function AdvantageCard({
         <div className="flex flex-col gap-2.5">
           <div className="flex items-center gap-1.5">
             <Image
-              src="/images/why-choose-us/title-bullet.svg"
+              src="/images/why-choose-us/why-choose-us-title-bullet-decoration.svg"
               alt=""
               aria-hidden
               width={12}
@@ -188,7 +188,7 @@ export default function ServiceAdvantage({ slug }: ServiceAdvantageProps) {
       className="relative overflow-hidden py-16 sm:py-20"
     >
       <Image
-        src="/images/service-smm-panel/decorative-wave-top-left.png"
+        src="/images/service-smm-panel/facebook-smm-panel-decorative-wave-top-left-decoration.png"
         alt=""
         aria-hidden
         width={1651}
@@ -196,7 +196,7 @@ export default function ServiceAdvantage({ slug }: ServiceAdvantageProps) {
         className="pointer-events-none absolute -left-[30%] -top-32 hidden h-auto w-[min(120vw,1651px)] rotate-[1.3deg] opacity-90 lg:block dark:hidden"
       />
       <Image
-        src="/images/service-smm-panel/decorative-wave-bottom-right.png"
+        src="/images/service-smm-panel/facebook-smm-panel-decorative-wave-bottom-right-decoration.png"
         alt=""
         aria-hidden
         width={1651}

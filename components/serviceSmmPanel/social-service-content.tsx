@@ -46,14 +46,14 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/decorative-facebook-left.webp',
+      src: '/images/service-smm-panel/facebook-smm-panel-decorative-facebook-left-icon.webp',
       width: 183,
       height: 190,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[140px] blur-[2px] lg:block xl:w-[183px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/decorative-facebook-right.webp',
+      src: '/images/service-smm-panel/facebook-smm-panel-decorative-facebook-right-icon.webp',
       width: 199,
       height: 207,
       className:
@@ -64,7 +64,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Page Follower',
         description:
           'Get more real followers for your Facebook page. Our solution also helps boost your audience and reach more people.',
-        icon: '/images/service-smm-panel/facebook-page-follower.webp',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -72,7 +72,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Page Like',
         description:
           'Raise the number of likes on your page. This step is ideal for small brands who want more visitors to check it out.',
-        icon: '/images/service-smm-panel/facebook-page-like.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-like-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -80,7 +80,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Profile Followers',
         description:
           'Attract more followers to your profile with ease. This also allows you to connect with a bigger audience and share your brand.',
-        icon: '/images/service-smm-panel/facebook-profile-followers.webp',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-profile-followers-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -88,7 +88,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Monetization',
         description:
           'Our solution lets you get all the standards to select for monetization and turn your engagement into income.',
-        icon: '/images/service-smm-panel/facebook-monetization.webp',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-monetization-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -96,7 +96,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Story Views',
         description:
           'Reach more views on your Facebook stories to keep your audience interested and updated on what you share.',
-        icon: '/images/service-smm-panel/facebook-story-views.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
         iconWidth: 70,
         iconHeight: 54,
       },
@@ -104,7 +104,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Video Views',
         description:
           'Drive more views to your videos to get bigger followers and popularity with this service.',
-        icon: '/images/service-smm-panel/facebook-video-views.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -112,7 +112,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Post Like',
         description:
           'Get likes on your posts to show that people enjoy your content and want to see more.',
-        icon: '/images/service-smm-panel/facebook-post-like.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
         iconWidth: 60,
         iconHeight: 54,
       },
@@ -120,7 +120,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Post React',
         description:
           'Find more raw reactions on your posts to make them more engaging and visible to your followers.',
-        icon: '/images/service-smm-panel/facebook-post-react.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -128,7 +128,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Group Member',
         description:
           'Increase the number of members in your Facebook groups. Our service also creates an active community around your interests.',
-        icon: '/images/service-smm-panel/facebook-group-member.webp',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-group-member-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },

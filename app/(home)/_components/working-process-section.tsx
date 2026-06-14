@@ -67,7 +67,7 @@ function ProcessCenterHub({ className }: { className?: string }) {
     >
       <div className="pointer-events-none absolute inset-0 motion-safe:animate-[spin_12s_linear_infinite] dark:hidden">
         <Image
-          src="/images/working-process/outer-circlesvg.svg"
+          src="/images/working-process/working-process-outer-circlesvg-decoration.svg"
           alt=""
           aria-hidden
           width={188}
@@ -78,7 +78,7 @@ function ProcessCenterHub({ className }: { className?: string }) {
       </div>
       <div className="pointer-events-none absolute inset-0 hidden motion-safe:animate-[spin_12s_linear_infinite] dark:block">
         <Image
-          src="/images/working-process/dark/outer-circle.svg"
+          src="/images/working-process/dark/working-process-outer-circle-decoration.svg"
           alt=""
           aria-hidden
           width={188}
@@ -88,7 +88,7 @@ function ProcessCenterHub({ className }: { className?: string }) {
         />
       </div>
       <Image
-        src="/images/working-process/inner-hub.svg"
+        src="/images/working-process/working-process-inner-hub-decoration.svg"
         alt=""
         aria-hidden
         width={78}
@@ -100,10 +100,10 @@ function ProcessCenterHub({ className }: { className?: string }) {
   );
 }
 
-const LINE_VERTICAL_LIGHT = '/images/working-process/Line4.svg';
-const LINE_HORIZONTAL_LIGHT = '/images/working-process/card-border-top.svg';
-const LINE_VERTICAL_DARK = '/images/working-process/dark/card-border-side.svg';
-const LINE_HORIZONTAL_DARK = '/images/working-process/dark/card-border-top.svg';
+const LINE_VERTICAL_LIGHT = '/images/working-process/working-process-line4-decoration.svg';
+const LINE_HORIZONTAL_LIGHT = '/images/working-process/working-process-card-border-top-decoration.svg';
+const LINE_VERTICAL_DARK = '/images/working-process/dark/working-process-card-border-side-decoration.svg';
+const LINE_HORIZONTAL_DARK = '/images/working-process/dark/working-process-card-border-top-decoration.svg';
 
 type BorderEdge = 'top' | 'bottom' | 'left' | 'right';
 
@@ -263,7 +263,7 @@ function ProcessStepCard({
       {corner === 'tl' ? (
         <>
           <Image
-            src="/images/working-process/card-corner-tl.svg"
+            src="/images/working-process/working-process-card-corner-tl-decoration.svg"
             alt=""
             aria-hidden
             width={166}
@@ -272,7 +272,7 @@ function ProcessStepCard({
             unoptimized
           />
           <Image
-            src="/images/working-process/dark/card-corner-tl.svg"
+            src="/images/working-process/dark/working-process-card-corner-tl-decoration.svg"
             alt=""
             aria-hidden
             width={166}
@@ -286,7 +286,7 @@ function ProcessStepCard({
       {corner === 'br' ? (
         <>
           <Image
-            src="/images/working-process/card-corner-br.svg"
+            src="/images/working-process/working-process-card-corner-br-decoration.svg"
             alt=""
             aria-hidden
             width={166}
@@ -295,7 +295,7 @@ function ProcessStepCard({
             unoptimized
           />
           <Image
-            src="/images/working-process/dark/card-corner-br.svg"
+            src="/images/working-process/dark/working-process-card-corner-br-decoration.svg"
             alt=""
             aria-hidden
             width={166}
@@ -351,7 +351,7 @@ export default function WorkingProcessSection() {
       <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
         <SectionHeading
           badge="WORKING PROCESS"
-          underlineSrc="/images/working-process/underline.svg"
+          underlineSrc="/images/working-process/working-process-section-underline.svg"
           underlineWidth={216}
           title={
             <>

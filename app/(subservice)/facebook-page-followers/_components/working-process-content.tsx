@@ -34,7 +34,7 @@ export const facebookPageFollowersWorkingProcessSteps: ServiceWorkingProcessStep
 
 export const facebookPageFollowersWorkingProcessHeading = {
   badge: 'WORKING PROCESS',
-  underlineSrc: '/images/working-process/underline.svg',
+  underlineSrc: '/images/working-process/working-process-section-underline.svg',
   underlineWidth: 216,
   title: (
     <>

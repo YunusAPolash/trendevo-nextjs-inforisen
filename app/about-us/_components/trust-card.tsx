@@ -29,7 +29,7 @@ export default function TrustCard({
       <div className="relative flex h-full w-full flex-col gap-[18px]">
         <div className="relative flex size-20 shrink-0 items-center justify-center px-[13px] py-3.5">
           <Image
-            src="/images/why-choose-us/hex-icon.svg"
+            src="/images/why-choose-us/why-choose-us-hex-icon-decoration.svg"
             alt=""
             aria-hidden
             width={77}
@@ -37,7 +37,7 @@ export default function TrustCard({
             className="absolute inset-0 size-20 dark:hidden"
           />
           <Image
-            src="/images/why-choose-us/hex-icon-dark.svg"
+            src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
             alt=""
             aria-hidden
             width={77}
@@ -57,7 +57,7 @@ export default function TrustCard({
         <div className="flex flex-col gap-4">
           <div className="flex items-start gap-1.5">
             <Image
-              src="/images/why-choose-us/title-bullet.svg"
+              src="/images/why-choose-us/why-choose-us-title-bullet-decoration.svg"
               alt=""
               aria-hidden
               width={12}

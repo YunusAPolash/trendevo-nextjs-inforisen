@@ -9,14 +9,14 @@ const leftCards = [
     title: 'Built for Bangladesh',
     description:
       'While many SMM panels operate in Bangladesh, RendEvo stands out with a dedicated focus on the local market. Unlike international platforms that treat Bangladesh as secondary, our services are designed around the needs and expectations of Bangladeshi users.',
-    iconSrc: '/images/about/about-trust-built-bangladesh-icon.png',
+    iconSrc: '/images/about/about-us-built-for-bangladesh-icon.png',
     iconClassName: 'h-10 w-10 object-cover',
   },
   {
     title: 'Local Payment and Pricing',
     description:
       'RendEvo supports local payments like bKash, Nagad, and Rocket, with pricing in Bangladeshi Taka. Our Bangla-speaking team ensures smooth, hassle-free social media growth aligned with local business needs.',
-    iconSrc: '/images/about/about-trust-local-payment-icon.png',
+    iconSrc: '/images/about/about-us-local-payment-and-pricing-icon.png',
     iconClassName: 'h-10 w-9 object-cover',
   },
 ] as const;
@@ -26,14 +26,14 @@ const rightCards = [
     title: 'Stable and High Quality Services',
     description:
       "RendEvo is more than just a transactional platform—we act as your long-term social media growth partner. Built with local expertise and insights, we are dedicated to supporting Bangladesh's dynamic digital economy while helping businesses achieve sustainable online growth.",
-    iconSrc: '/images/about/about-trust-stable-services-icon.webp',
+    iconSrc: '/images/about/about-us-stable-and-high-quality-services-icon.webp',
     iconClassName: 'h-10 w-10 object-cover',
   },
   {
     title: 'Local Support & Real Guidance',
     description:
       'We vet suppliers to ensure high-quality engagement and strong retention. Our system delivers orders accurately with minimal issues, while our guidance in English and Bangla helps you make smarter growth decisions.',
-    iconSrc: '/images/about/about-trust-local-support-icon.webp',
+    iconSrc: '/images/about/about-us-local-support-and-real-guidance-icon.webp',
     iconClassName: 'h-10 w-8 object-cover',
   },
 ] as const;

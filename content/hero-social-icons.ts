@@ -3,26 +3,26 @@ import type { HeroSocialIcon } from '@/components/sections/hero-section';
 export const heroSocialIcons: HeroSocialIcon[] = [
   {
     label: 'Facebook',
-    src: '/images/contact-us/contact-us-social-facebook.webp',
+    src: '/images/contact-us/contact-us-facebook-icon.webp',
   },
   {
     label: 'Instagram',
-    src: '/images/contact-us/contact-us-social-instagram.webp',
+    src: '/images/contact-us/contact-us-instagram-icon.webp',
   },
   {
     label: 'LinkedIn',
-    src: '/images/contact-us/contact-us-social-linkedin.webp',
+    src: '/images/contact-us/contact-us-linkedin-icon.webp',
   },
   {
     label: 'Spotify',
-    src: '/images/contact-us/contact-us-social-spotify.webp',
+    src: '/images/contact-us/contact-us-spotify-icon.webp',
   },
   {
     label: 'Telegram',
-    src: '/images/contact-us/contact-us-social-telegram.webp',
+    src: '/images/contact-us/contact-us-telegram-icon.webp',
   },
   {
     label: 'TikTok',
-    src: '/images/contact-us/contact-us-social-tiktok.webp',
+    src: '/images/contact-us/contact-us-tiktok-icon.webp',
   },
 ];

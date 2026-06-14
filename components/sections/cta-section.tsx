@@ -23,7 +23,7 @@ export default function CtaSection({
   title,
   description,
   buttonsOutlet,
-  imageSrc = '/images/cta/cta-character.webp',
+  imageSrc = '/images/cta/cta-character-illustration.webp',
   imageAlt = 'Start growing with TrendEvo',
   className,
 }: CtaSectionProps) {
@@ -64,7 +64,7 @@ export default function CtaSection({
 
             <div className="pointer-events-none absolute inset-0 opacity-[0.06] dark:hidden">
               <Image
-                src="/images/cta/cta-hex-pattern-1.png"
+                src="/images/cta/cta-hex-pattern-1-decoration.png"
                 alt=""
                 aria-hidden
                 width={1200}
@@ -73,7 +73,7 @@ export default function CtaSection({
                 unoptimized
               />
               <Image
-                src="/images/cta/cta-hex-pattern-2.png"
+                src="/images/cta/cta-hex-pattern-2-decoration.png"
                 alt=""
                 aria-hidden
                 width={1200}
@@ -90,7 +90,7 @@ export default function CtaSection({
                 <div className="relative flex flex-col gap-5 sm:gap-8">
                   <div className="pointer-events-none absolute -left-8 top-[-75px] hidden h-[485px] w-[min(934px,120%)] opacity-[0.06] lg:block dark:lg:hidden">
                     <Image
-                      src="/images/cta/cta-world-map.png"
+                      src="/images/cta/cta-world-map-decoration.png"
                       alt=""
                       aria-hidden
                       fill

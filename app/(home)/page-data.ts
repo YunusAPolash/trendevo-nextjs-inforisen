@@ -238,14 +238,14 @@ export const data: HomePageData = {
   hero: {
     trustBadge: {
       avatarSrcs: [
-        '/images/reviews/hero-avatar-1.png',
-        '/images/reviews/hero-avatar-2.png',
-        '/images/reviews/hero-avatar-3.png',
-        '/images/reviews/hero-avatar-4.png',
-        '/images/reviews/hero-avatar-5.png',
-        '/images/reviews/hero-avatar-3.png',
+        '/images/reviews/home-hero-hero-1-avatar.png',
+        '/images/reviews/home-hero-hero-2-avatar.png',
+        '/images/reviews/home-hero-hero-3-avatar.png',
+        '/images/reviews/home-hero-hero-4-avatar.png',
+        '/images/reviews/home-hero-hero-5-avatar.png',
+        '/images/reviews/home-hero-hero-3-avatar.png',
       ],
-      ratingIconSrc: '/images/icons/hero-star-rating.png',
+      ratingIconSrc: '/images/icons/home-hero-trust-star-rating-icon.png',
       rating: '(4.8)',
       label: 'Trusted by 50,000+ Users in Bangladesh',
     },
@@ -261,7 +261,7 @@ export const data: HomePageData = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/hero/hero-illustration.webp',
+      src: '/images/hero/home-hero-trendevo-platform-user-with-social-media-icons-and-analytics-illustration.webp',
       alt: 'TrendEvo platform user with social media icons and analytics',
       width: 669,
       height: 728,
@@ -273,7 +273,7 @@ export const data: HomePageData = {
       {
         value: '1.2M+',
         label: 'Total Completed Orders',
-        icon: '/images/stats/stats-orders-icon.png',
+        icon: '/images/stats/home-stats-total-completed-orders-icon.png',
         width: 167,
         height: 150,
         displayWidth: 111,
@@ -283,7 +283,7 @@ export const data: HomePageData = {
       {
         value: '2,500+',
         label: 'Total Services Available',
-        icon: '/images/stats/stats-services-icon.png',
+        icon: '/images/stats/home-stats-total-services-available-icon.png',
         width: 152,
         height: 150,
         displayWidth: 101,
@@ -293,7 +293,7 @@ export const data: HomePageData = {
       {
         value: '50K+',
         label: 'Total Users',
-        icon: '/images/stats/stats-users-icon.png',
+        icon: '/images/stats/home-stats-total-users-icon.png',
         width: 188,
         height: 150,
         displayWidth: 125,
@@ -303,7 +303,7 @@ export const data: HomePageData = {
       {
         value: '75%',
         label: 'Customer Satisfaction Rate',
-        icon: '/images/stats/stats-satisfaction-icon.png',
+        icon: '/images/stats/home-stats-customer-satisfaction-rate-icon.png',
         width: 144,
         height: 150,
         displayWidth: 96,
@@ -327,7 +327,7 @@ export const data: HomePageData = {
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/facebook.webp',
+        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
         marketingTitle: 'Facebook Marketing Services',
         description:
           'Boost your brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -369,7 +369,7 @@ export const data: HomePageData = {
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/instagram.webp',
+        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
         marketingTitle: 'Instagram Marketing Services',
         description:
           'Grow your Instagram presence with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -410,7 +410,7 @@ export const data: HomePageData = {
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/twitter.png',
+        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
         iconClassName: 'scale-150',
         marketingTitle: 'X (Twitter) Marketing Services',
         description:
@@ -451,7 +451,7 @@ export const data: HomePageData = {
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/youtube.webp',
+        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
         marketingTitle: 'YouTube Marketing Services',
         description:
           'Accelerate channel growth with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -491,7 +491,7 @@ export const data: HomePageData = {
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/tiktok.webp',
+        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
         marketingTitle: 'TikTok Marketing Services',
         description:
           'Go viral faster with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -531,7 +531,7 @@ export const data: HomePageData = {
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/linkedin.webp',
+        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
         marketingTitle: 'LinkedIn Marketing Services',
         description:
           'Strengthen your professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -571,7 +571,7 @@ export const data: HomePageData = {
       {
         id: 'telegram',
         label: 'Telegram',
-        icon: '/images/our-services/platforms/telegram.webp',
+        icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
         marketingTitle: 'Telegram Marketing Services',
         description:
           'Grow your Telegram channel or group with members and engagement that builds an active, responsive community.',
@@ -611,7 +611,7 @@ export const data: HomePageData = {
       {
         id: 'discord',
         label: 'Discord',
-        icon: '/images/our-services/platforms/discord.webp',
+        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
         marketingTitle: 'Discord Marketing Services',
         description:
           'Build thriving Discord communities with members, online activity, and engagement that keeps your server active.',
@@ -651,7 +651,7 @@ export const data: HomePageData = {
       {
         id: 'spotify',
         label: 'Spotify',
-        icon: '/images/our-services/platforms/spotify.webp',
+        icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
         marketingTitle: 'Spotify Marketing Services',
         description:
           'Increase your music reach with Spotify plays, followers, and playlist placements that grow your listener base.',
@@ -691,7 +691,7 @@ export const data: HomePageData = {
       {
         id: 'soundcloud',
         label: 'SoundCloud',
-        icon: '/images/our-services/platforms/soundcloud.png',
+        icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
         marketingTitle: 'SoundCloud Marketing Services',
         description:
           'Elevate your SoundCloud profile with plays, followers, and reposts that help your tracks gain traction.',
@@ -731,7 +731,7 @@ export const data: HomePageData = {
       {
         id: 'snapchat',
         label: 'Snapchat',
-        icon: '/images/our-services/platforms/snapchat.webp',
+        icon: '/images/our-services/platforms/our-services-snapchat-followers-platform-icon.webp',
         marketingTitle: 'Snapchat Marketing Services',
         description:
           'Grow your Snapchat presence with followers, views, and story engagement that connects you with a younger audience.',
@@ -771,7 +771,7 @@ export const data: HomePageData = {
       {
         id: 'website-traffic',
         label: 'Website Traffic',
-        icon: '/images/our-services/platforms/web.png',
+        icon: '/images/our-services/platforms/our-services-organic-traffic-platform-icon.png',
         marketingTitle: 'Website Traffic Services',
         description:
           'Drive targeted visitors to your website with high-quality traffic that improves rankings, conversions, and online visibility.',
@@ -858,7 +858,7 @@ export const data: HomePageData = {
     ],
     ctaLabel: 'Discover More',
     image: {
-      src: '/images/about/your-trusted-social-media-growth-partner.webp',
+      src: '/images/about/about-us-trendevo-growth-partner-illustration.webp',
       alt: 'TrendEvo growth partner',
     },
   },
@@ -869,7 +869,7 @@ export const data: HomePageData = {
       title: 'Grow Your gt<Socials in 4 Simple> Steps',
       subtitle:
         'A simple and efficient process designed to deliver fast and reliable results. Just place your order, and our system will handle the rest to help grow your social media presence smoothly.',
-      underlineSrc: '/images/working-process/underline.svg',
+      underlineSrc: '/images/working-process/working-process-section-underline.svg',
       underlineWidth: 216,
       titleClassName:
         'max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -917,7 +917,7 @@ export const data: HomePageData = {
       title: 'Why gt<Choose Us>',
       subtitle:
         'Boost your social media growth with our fast, reliable, and high-quality SMM services. We provide secure delivery, competitive pricing, and trusted support to help your brand grow faster.',
-      underlineSrc: '/images/why-choose-us/underline.svg',
+      underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
       underlineWidth: 169,
       titleClassName:
         'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -929,19 +929,19 @@ export const data: HomePageData = {
     leftFeatures: [
       {
         title: 'Cheapest SMM Panel',
-        icon: '/images/why-choose-us/cheapest-smm-panel-icon.png',
+        icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
       {
         title: 'Fast & Reliable Delivery',
-        icon: '/images/why-choose-us/fast-delivery-icon.png',
+        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
       {
         title: 'Multitude of Services',
-        icon: '/images/why-choose-us/multitude-services-icon.webp',
+        icon: '/images/why-choose-us/why-choose-us-multitude-of-services-icon.webp',
         iconWidth: 57,
         iconHeight: 30,
       },
@@ -949,19 +949,19 @@ export const data: HomePageData = {
     rightFeatures: [
       {
         title: 'Real-time & Data',
-        icon: '/images/why-choose-us/realtime-data-icon.webp',
+        icon: '/images/why-choose-us/why-choose-us-real-time-and-data-icon.webp',
         iconWidth: 43,
         iconHeight: 40,
       },
       {
         title: 'Bulk Orders Provide',
-        icon: '/images/why-choose-us/bulk-orders-icon.png',
+        icon: '/images/why-choose-us/why-choose-us-bulk-orders-provide-icon.png',
         iconWidth: 46,
         iconHeight: 40,
       },
       {
         title: '24/7 Dedicated Customer Support',
-        icon: '/images/why-choose-us/customer-support-icon.webp',
+        icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },
@@ -975,7 +975,7 @@ export const data: HomePageData = {
       title: '10+ Payment Methods gt<Available For Users>',
       subtitle:
         'Choose from 10+ secure and convenient payment methods to pay your way. Enjoy fast, hassle-free transactions and get instant access to all our services.',
-      underlineSrc: '/images/payment-methods/underline.svg',
+      underlineSrc: '/images/payment-methods/payment-methods-section-underline.svg',
       underlineWidth: 193,
       titleClassName:
         'max-w-[1000px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -983,7 +983,7 @@ export const data: HomePageData = {
         'max-w-[924px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     },
     image: {
-      src: '/images/payment-methods/payment-methods.png',
+      src: '/images/payment-methods/payment-methods-supported-payment-methods-including-visa-bkash-nagad-bitcoin-mastercard-and-more-icon.png',
       alt: 'Supported payment methods including Visa, bKash, Nagad, Bitcoin, Mastercard, and more',
       width: 1920,
       height: 470,
@@ -994,57 +994,57 @@ export const data: HomePageData = {
     platforms: [
       {
         name: 'Instagram',
-        icon: '/images/platform-marquee/platform-facebook-icon.webp',
+        icon: '/images/platform-marquee/platform-marquee-instagram-platform-icon.webp',
         iconSize: 20,
       },
       {
         name: 'Instagram',
-        icon: '/images/platform-marquee/platform-instagram-icon.webp',
+        icon: '/images/platform-marquee/platform-marquee-instagram-platform-icon-2.webp',
         iconSize: 25,
       },
       {
         name: 'X (Twitter)',
-        icon: '/images/platform-marquee/platform-twitter-icon.png',
+        icon: '/images/platform-marquee/platform-marquee-x-twitter-platform-icon.png',
         iconSize: 25,
       },
       {
         name: 'YouTube',
-        icon: '/images/platform-marquee/platform-youtube-icon.webp',
+        icon: '/images/platform-marquee/platform-marquee-youtube-platform-icon.webp',
         iconSize: 25,
       },
       {
         name: 'TikTok',
-        icon: '/images/platform-marquee/platform-tiktok-icon.webp',
+        icon: '/images/platform-marquee/platform-marquee-tiktok-platform-icon.webp',
         iconSize: 25,
       },
       {
         name: 'LinkedIn',
-        icon: '/images/platform-marquee/platform-linkedin-icon.webp',
+        icon: '/images/platform-marquee/platform-marquee-linkedin-platform-icon.webp',
         iconSize: 25,
       },
       {
         name: 'Telegram',
-        icon: '/images/platform-marquee/platform-telegram-icon.webp',
+        icon: '/images/platform-marquee/platform-marquee-telegram-platform-icon.webp',
         iconSize: 25,
       },
       {
         name: 'Discord',
-        icon: '/images/platform-marquee/platform-discord-icon.webp',
+        icon: '/images/platform-marquee/platform-marquee-discord-platform-icon.webp',
         iconSize: 25,
       },
       {
         name: 'Spotify',
-        icon: '/images/platform-marquee/platform-spotify-icon.webp',
+        icon: '/images/platform-marquee/platform-marquee-spotify-platform-icon.webp',
         iconSize: 25,
       },
       {
         name: 'Snapchat',
-        icon: '/images/platform-marquee/platform-snapchat-icon.webp',
+        icon: '/images/platform-marquee/platform-marquee-snapchat-platform-icon.webp',
         iconSize: 25,
       },
       {
         name: 'SoundCloud',
-        icon: '/images/platform-marquee/platform-soundcloud-icon.svg',
+        icon: '/images/platform-marquee/platform-marquee-soundcloud-platform-icon.svg',
         fullFrame: true,
       },
     ],
@@ -1056,7 +1056,7 @@ export const data: HomePageData = {
       title: 'Advantages of using gt<our panel services>',
       subtitle:
         'We provide SMM services on almost every social media platform. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-      underlineSrc: '/images/advantages/underline.svg',
+      underlineSrc: '/images/advantages/advantages-section-underline.svg',
       underlineWidth: 150,
       titleClassName:
         'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -1089,7 +1089,7 @@ export const data: HomePageData = {
       },
     ],
     image: {
-      src: '/images/advantages/advantage.png',
+      src: '/images/advantages/advantages-illustration.png',
       alt: 'SMM panel advantages illustration',
     },
   },
@@ -1100,7 +1100,7 @@ export const data: HomePageData = {
       title: 'Pricing Preview of Our gt<SMM Panel Services>',
       subtitle:
         'Simple, Clear, and Affordable for Everyone. We make social media growth easy without high costs. Our prices are clear, fair, and fit every budget.',
-      underlineSrc: '/images/pricing/underline.svg',
+      underlineSrc: '/images/pricing/pricing-section-underline.svg',
       underlineWidth: 90,
       titleClassName:
         'max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -1111,45 +1111,45 @@ export const data: HomePageData = {
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/icons/platform-instagram.webp',
+        icon: '/images/icons/pricing-instagram-platform-icon.webp',
       },
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/icons/platform-facebook.webp',
+        icon: '/images/icons/pricing-facebook-platform-icon.webp',
       },
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/icons/platform-youtube.webp',
+        icon: '/images/icons/pricing-youtube-platform-icon.webp',
       },
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/icons/platform-tiktok.webp',
+        icon: '/images/icons/pricing-tiktok-platform-icon.webp',
       },
     ],
     features: [
       {
         label: 'Guarantee Fast Delivery',
-        icon: '/images/pricing/feature-security.svg',
+        icon: '/images/pricing/pricing-guarantee-fast-delivery-icon.svg',
       },
       {
         label: 'Instant Start',
-        icon: '/images/pricing/feature-instant.svg',
+        icon: '/images/pricing/pricing-instant-start-icon.svg',
       },
       {
         label: 'Never Drop',
-        icon: '/images/pricing/feature-never-drop.svg',
+        icon: '/images/pricing/pricing-never-drop-icon.svg',
       },
       {
         label: 'No Password Required',
-        icon: '/images/pricing/feature-password.svg',
+        icon: '/images/pricing/pricing-no-password-required-icon.svg',
         size: 24,
       },
       {
         label: 'Geo: Global',
-        icon: '/images/pricing/feature-global.svg',
+        icon: '/images/pricing/pricing-geo-global-icon.svg',
       },
     ],
     plans: [
@@ -1189,7 +1189,7 @@ export const data: HomePageData = {
     title: 'What Our gt<Client Say>',
     subtitle:
       'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
-    underlineSrc: '/images/testimonials/underline.svg',
+    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
     underlineWidth: 169,
     titleClassName:
       'max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -1198,42 +1198,42 @@ export const data: HomePageData = {
     customerTabLabel: 'Customer Reviews',
     videoTabLabel: 'Video Reviews',
     assets: {
-      starIconSrc: '/images/testimonials/star-icon.svg',
-      verifyBadgeSrc: '/images/testimonials/verify-badge.svg',
-      customerReviewTabIconSrc: '/images/testimonials/customer-review-icon.svg',
-      videoReviewTabIconSrc: '/images/testimonials/clapperboard-icon.svg',
-      quoteOpenSrc: '/images/testimonials/quote-open.svg',
-      quoteCloseSrc: '/images/testimonials/quote-close.svg',
-      playIconSrc: '/images/testimonials/play-icon.svg',
-      playOrbSrc: '/images/testimonials/play-orb.webp',
+      starIconSrc: '/images/testimonials/testimonials-star-rating-icon.svg',
+      verifyBadgeSrc: '/images/testimonials/testimonials-verified-badge.svg',
+      customerReviewTabIconSrc: '/images/testimonials/testimonials-customer-review-icon.svg',
+      videoReviewTabIconSrc: '/images/testimonials/testimonials-clapperboard-icon.svg',
+      quoteOpenSrc: '/images/testimonials/testimonials-quote-mark-2.svg',
+      quoteCloseSrc: '/images/testimonials/testimonials-quote-mark.svg',
+      playIconSrc: '/images/testimonials/testimonials-video-play-icon.svg',
+      playOrbSrc: '/images/testimonials/testimonials-video-play-orb.webp',
     },
     leftTextReviews: [
       {
         id: 'left-1',
         name: 'Seam Rahman',
         role: 'Business Owner',
-        avatar: '/images/testimonials/avatar-1.png',
+        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
         quote: homeTestimonialQuote,
       },
       {
         id: 'left-2',
         name: 'Seam Rahman',
         role: 'Business Owner',
-        avatar: '/images/testimonials/avatar-1.png',
+        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
         quote: homeTestimonialQuote,
       },
       {
         id: 'left-3',
         name: 'Rafi Islam',
         role: 'Business Owner',
-        avatar: '/images/testimonials/avatar-3.png',
+        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
         quote: homeTestimonialQuote,
       },
       {
         id: 'left-4',
         name: 'Nadia Ahmed',
         role: 'Business Owner',
-        avatar: '/images/testimonials/avatar-4.png',
+        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
         quote: homeTestimonialQuote,
       },
     ],
@@ -1242,36 +1242,36 @@ export const data: HomePageData = {
         id: 'right-1',
         name: 'Seam Rahman',
         role: 'Business Owner',
-        avatar: '/images/testimonials/avatar-1.png',
+        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
         quote: homeTestimonialQuote,
       },
       {
         id: 'right-2',
         name: 'Ariyan Khan',
         role: 'Business Owner',
-        avatar: '/images/testimonials/avatar-2.png',
+        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
         quote: homeTestimonialQuote,
       },
       {
         id: 'right-3',
         name: 'Lisa',
         role: 'Business Owner',
-        avatar: '/images/testimonials/avatar-3.png',
+        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
         quote: homeTestimonialQuote,
       },
       {
         id: 'right-4',
         name: 'Tamanna',
         role: 'Business Owner',
-        avatar: '/images/testimonials/avatar-4.png',
+        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
         quote: homeTestimonialQuote,
       },
     ],
     featuredReview: {
       name: 'Ariyena Islam',
       role: 'Business Owner',
-      avatar: '/images/testimonials/avatar-2.png',
-      image: '/images/testimonials/featured-review.webp',
+      avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
+      image: '/images/testimonials/testimonials-featured-review-photo.webp',
       quote: homeTestimonialQuote,
       youtubeVideoId: homeYoutubeReelVideoId,
     },
@@ -1280,48 +1280,48 @@ export const data: HomePageData = {
         id: 'video-1',
         name: 'Seam Rahman',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-1.webp',
-        avatar: '/images/testimonials/avatar-1.png',
+        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail.webp',
+        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },
       {
         id: 'video-2',
         name: 'Ariyan Khan',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-2.webp',
-        avatar: '/images/testimonials/avatar-2.png',
+        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
+        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },
       {
         id: 'video-3',
         name: 'Lisa',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-3.webp',
-        avatar: '/images/testimonials/avatar-3.png',
+        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail-3.webp',
+        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },
       {
         id: 'video-4',
         name: 'Tamanna',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-4.webp',
-        avatar: '/images/testimonials/avatar-4.png',
+        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail-4.webp',
+        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },
       {
         id: 'video-5',
         name: 'Rafi Islam',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-1.webp',
-        avatar: '/images/testimonials/avatar-3.png',
+        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail.webp',
+        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },
       {
         id: 'video-6',
         name: 'Nadia Ahmed',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-2.webp',
-        avatar: '/images/testimonials/avatar-4.png',
+        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
+        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },
     ],
@@ -1384,7 +1384,7 @@ export const data: HomePageData = {
       title: 'Our Recently Posted gt< Blogs>',
       subtitle:
         'Smart strategies and expert insights to help you grow faster on social media. Learn how to boost engagement, reach the right audience, and turn followers into customers.',
-      underlineSrc: '/images/blog/underline.svg',
+      underlineSrc: '/images/blog/blog-section-underline.svg',
       underlineWidth: 60,
       titleClassName:
         'max-w-[961px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -1397,9 +1397,9 @@ export const data: HomePageData = {
         title: 'TikTok Marketing: Complete Guide for Businesses',
         excerpt:
           'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-        imageSrc: '/images/blog/blog-tiktok-marketing-studio.webp',
+        imageSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-icon-3.webp',
         authorName: 'SEAM RAHMAN',
-        authorAvatarSrc: '/images/blog/blog-author-seam-rahman-avatar.webp',
+        authorAvatarSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-avatar.webp',
         publishedAt: '20 Jan, 2026',
         readTime: '16 min read',
       },
@@ -1408,9 +1408,9 @@ export const data: HomePageData = {
         title: 'TikTok Marketing: Complete Guide for Businesses',
         excerpt:
           'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-        imageSrc: '/images/blog/blog-marketing-chart-growth.webp',
+        imageSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-icon.webp',
         authorName: 'SEAM RAHMAN',
-        authorAvatarSrc: '/images/blog/blog-author-seam-rahman-avatar.webp',
+        authorAvatarSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-avatar.webp',
         publishedAt: '20 Jan, 2026',
         readTime: '16 min read',
       },
@@ -1419,9 +1419,9 @@ export const data: HomePageData = {
         title: 'TikTok Marketing: Complete Guide for Businesses',
         excerpt:
           'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-        imageSrc: '/images/blog/blog-social-media-team.webp',
+        imageSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-icon-2.webp',
         authorName: 'SEAM RAHMAN',
-        authorAvatarSrc: '/images/blog/blog-author-seam-rahman-avatar.webp',
+        authorAvatarSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-avatar.webp',
         publishedAt: '20 Jan, 2026',
         readTime: '16 min read',
       },

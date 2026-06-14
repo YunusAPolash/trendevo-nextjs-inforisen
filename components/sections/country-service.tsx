@@ -179,11 +179,11 @@ function ServiceCardGlowBackground() {
       className="pointer-events-none absolute inset-0 hidden overflow-hidden dark:block"
     >
       <ServiceCardGlow
-        src="/images/our-services/decorations/service-card-glow-top.svg"
+        src="/images/our-services/decorations/our-services-service-card-glow-top-decoration.svg"
         className="-top-[38%] right-[-14%] lg:-top-[209px] lg:right-[-199px]"
       />
       <ServiceCardGlow
-        src="/images/our-services/decorations/service-card-glow-bottom.svg"
+        src="/images/our-services/decorations/our-services-service-card-glow-bottom-decoration.svg"
         className="right-[-14%] top-[72%] lg:right-[-199px] lg:top-[474px]"
       />
     </div>
@@ -250,15 +250,15 @@ function ServiceIllustration() {
       <ServiceIllustrationLayers
         className="dark:hidden"
         backgroundImage={SERVICE_ILLUSTRATION_LIGHT_BG}
-        bgSrc="/images/our-services/decorations/hero-illustration-light-bg.webp"
-        foregroundSrc="/images/our-services/decorations/hero-illustration-light.webp"
+        bgSrc="/images/our-services/decorations/our-services-hero-illustration-light-bg-illustration.webp"
+        foregroundSrc="/images/our-services/decorations/our-services-hero-illustration-light-illustration.webp"
         priority
       />
       <ServiceIllustrationLayers
         className="hidden dark:block"
         backgroundImage={SERVICE_ILLUSTRATION_DARK_BG}
-        bgSrc="/images/our-services/decorations/hero-illustration-dark-bg.webp"
-        foregroundSrc="/images/our-services/decorations/hero-illustration-dark.webp"
+        bgSrc="/images/our-services/decorations/our-services-hero-illustration-dark-bg-illustration.webp"
+        foregroundSrc="/images/our-services/decorations/our-services-hero-illustration-dark-illustration.webp"
       />
     </div>
   );
@@ -268,7 +268,7 @@ function ServiceNumberBadge({ number }: { number: string }) {
   return (
     <div className="relative flex size-9 shrink-0 items-center justify-center sm:size-[44px]">
       <Image
-        src="/images/our-services/ui/hex-number.svg"
+        src="/images/our-services/ui/our-services-hex-number-decoration.svg"
         alt=""
         aria-hidden
         width={38}

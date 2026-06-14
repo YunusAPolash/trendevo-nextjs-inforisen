@@ -1,7 +1,7 @@
 import type { BlogPost } from '@/app/blog/_components/blog-post-card';
 
 export const DEFAULT_AUTHOR_AVATAR =
-  '/images/blog/blog-author-seam-rahman-avatar.webp';
+  '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-avatar.webp';
 
 export const DEFAULT_BLOG_DETAIL_AUTHOR_AVATAR =
   '/images/blog-details/blog-details-author-seam-rahman-avatar.webp';
@@ -180,23 +180,23 @@ export function buildBlogShareLinks(blog: {
     {
       label: 'Facebook',
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-      iconSrc: '/images/icons/blog-details-share-facebook.webp',
+      iconSrc: '/images/icons/blog-details-facebook-icon.webp',
     },
     {
       label: 'Instagram',
       href: shareUrl,
-      iconSrc: '/images/icons/blog-details-share-instagram.webp',
+      iconSrc: '/images/icons/blog-details-instagram-icon.webp',
       action: 'copy',
     },
     {
       label: 'X',
       href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
-      iconSrc: '/images/icons/blog-details-share-x.webp',
+      iconSrc: '/images/icons/blog-details-x-icon.webp',
     },
     {
       label: 'LinkedIn',
       href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
-      iconSrc: '/images/icons/blog-details-share-linkedin.webp',
+      iconSrc: '/images/icons/blog-details-linkedin-icon.webp',
     },
   ];
 }

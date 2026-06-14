@@ -47,7 +47,7 @@ export default function ServicePanelCard({
       <div className="relative z-10 flex h-full flex-col gap-4 sm:gap-6">
         <div className="relative size-20 shrink-0 sm:size-[120px]">
           <Image
-            src="/images/services/services-icon-hex-bg.svg"
+            src="/images/services/services-icon-hex-bg-decoration.svg"
             alt=""
             width={104}
             height={116}
@@ -55,7 +55,7 @@ export default function ServicePanelCard({
             className="absolute top-1/2 left-1/2 size-[70px] -translate-x-1/2 -translate-y-1/2 sm:size-auto dark:hidden"
           />
           <Image
-            src="/images/why-choose-us/hex-icon-dark.svg"
+            src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
             alt=""
             width={120}
             height={120}

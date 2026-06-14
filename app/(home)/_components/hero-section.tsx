@@ -6,12 +6,12 @@ import { signInUrl, signUpUrl } from '@/lib/auth-urls';
 import { getStats, formatUsersTrustLabel } from '@/lib/stats';
 
 const avatars = [
-  '/images/reviews/hero-avatar-1.png',
-  '/images/reviews/hero-avatar-2.png',
-  '/images/reviews/hero-avatar-3.png',
-  '/images/reviews/hero-avatar-4.png',
-  '/images/reviews/hero-avatar-5.png',
-  '/images/reviews/hero-avatar-3.png',
+  '/images/reviews/home-hero-hero-1-avatar.png',
+  '/images/reviews/home-hero-hero-2-avatar.png',
+  '/images/reviews/home-hero-hero-3-avatar.png',
+  '/images/reviews/home-hero-hero-4-avatar.png',
+  '/images/reviews/home-hero-hero-5-avatar.png',
+  '/images/reviews/home-hero-hero-3-avatar.png',
 ];
 
 export default async function HeroSection() {
@@ -39,7 +39,7 @@ export default async function HeroSection() {
               ))}
             </div>
             <Image
-              src="/images/icons/hero-star-rating.png"
+              src="/images/icons/home-hero-trust-star-rating-icon.png"
               alt="rating"
               width={16}
               height={15}
@@ -71,7 +71,7 @@ export default async function HeroSection() {
             </p>
             <div className="flex gap-2">
               <Image
-                src="/images/icons/hero-fire-icon.png"
+                src="/images/icons/home-hero-hero-fire-icon-illustration.png"
                 alt=""
                 width={24}
                 height={24}
@@ -103,7 +103,7 @@ export default async function HeroSection() {
 
         <div className="mx-auto w-full min-w-0 max-w-[669px] lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end">
           <Image
-            src="/images/hero/hero-illustration.webp"
+            src="/images/hero/home-hero-trendevo-platform-user-with-social-media-icons-and-analytics-illustration.webp"
             alt="TrendEvo platform user with social media icons and analytics"
             width={669}
             height={728}

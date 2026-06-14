@@ -16,7 +16,7 @@ const MAX_QUANTITY = 10000;
 const QUANTITY_STEP = 100;
 const PRICE_PER_UNIT = 1.2;
 
-const FACEBOOK_ICON = '/images/country/facebook-icon.png';
+const FACEBOOK_ICON = '/images/country/country-facebook-icon.png';
 const TITLE_FACEBOOK_ICON_SIZE = 29;
 const FORM_FACEBOOK_ICON_WIDTH = 19;
 const FORM_FACEBOOK_ICON_HEIGHT = 20;
@@ -53,9 +53,9 @@ function FacebookIcon({
   );
 }
 const SLIDER_THUMB_SRC =
-  '/images/facebook-page-followers/facebook-page-followers-quantity-slider-thumb.svg';
+  '/images/facebook-page-followers/facebook-page-followers-quantity-slider-thumb-decoration.svg';
 const SLIDER_TOOLTIP_SRC =
-  '/images/facebook-page-followers/facebook-page-followers-quantity-slider-tooltip.svg';
+  '/images/facebook-page-followers/facebook-page-followers-quantity-slider-tooltip-decoration.svg';
 const SLIDER_RAIL_HEIGHT = 38;
 const SLIDER_TRACK_Y = 25;
 const SLIDER_THUMB_WIDTH = 47;
@@ -226,7 +226,7 @@ export default function OrderFormSection() {
           <div className="relative z-10 flex flex-col gap-[30px]">
             <SectionHeading
               badge="Facebook Services"
-              underlineSrc="/images/facebook-page-followers/facebook-page-followers-order-form-underline.svg"
+              underlineSrc="/images/facebook-page-followers/facebook-page-followers-section-underline.svg"
               underlineWidth={203}
               title={
                 <span className="flex flex-wrap items-center justify-center gap-[8px]">

@@ -23,7 +23,7 @@ export function WhyChooseUsCard({
         <div className="relative z-10 flex flex-col gap-3 sm:gap-[18px]">
           <div className="relative flex size-14 shrink-0 items-center justify-center gap-2.5 px-2 py-2 sm:size-[77px] sm:px-[13px] sm:py-3.5">
             <Image
-              src="/images/why-choose-us/hex-icon.svg"
+              src="/images/why-choose-us/why-choose-us-hex-icon-decoration.svg"
               alt=""
               aria-hidden
               width={77}
@@ -31,7 +31,7 @@ export function WhyChooseUsCard({
               className="absolute inset-0 size-14 sm:size-[77px] dark:hidden"
             />
             <Image
-              src="/images/why-choose-us/hex-icon-dark.svg"
+              src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
               alt=""
               aria-hidden
               width={77}
@@ -57,7 +57,7 @@ export function WhyChooseUsCard({
           <div className="flex flex-col gap-2 sm:gap-2.5">
             <div className="flex items-start gap-1.5 sm:items-center">
               <Image
-                src="/images/why-choose-us/title-bullet.svg"
+                src="/images/why-choose-us/why-choose-us-title-bullet-decoration.svg"
                 alt=""
                 aria-hidden
                 width={12}

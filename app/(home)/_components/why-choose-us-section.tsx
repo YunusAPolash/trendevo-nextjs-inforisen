@@ -25,7 +25,7 @@ export default function WhyChooseUsSection() {
             </>
           }
           subtitle="Boost your social media growth with our fast, reliable, and high-quality SMM services. We provide secure delivery, competitive pricing, and trusted support to help your brand grow faster."
-          underlineSrc="/images/why-choose-us/underline.svg"
+          underlineSrc="/images/why-choose-us/why-choose-us-section-underline.svg"
           underlineWidth={169}
           badgeClassName="dark:bg-none dark:bg-clip-border dark:text-white"
           titleClassName="text-2xl tracking-[0.48px] text-[#13203b] dark:text-white sm:text-[32px] md:text-[40px] lg:text-[48px]"

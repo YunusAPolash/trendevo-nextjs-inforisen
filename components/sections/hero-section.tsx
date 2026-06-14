@@ -54,7 +54,7 @@ export type HeroSectionProps = {
   socialIcons?: HeroSocialIcon[];
 };
 
-const HERO_RING_SRC = '/images/contact-us/contact-us-hero-ring.svg';
+const HERO_RING_SRC = '/images/contact-us/contact-us-hero-ring-illustration.svg';
 
 const decorationPreset = {
   contact: {

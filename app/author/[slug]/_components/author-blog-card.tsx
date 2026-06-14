@@ -39,7 +39,7 @@ export default function AuthorBlogCard({ post }: AuthorBlogCardProps) {
       <div className="flex flex-wrap items-center gap-4 text-sm text-[#404a60] sm:text-base dark:text-[#dfe0e4]">
         <div className="flex items-center gap-2">
           <Image
-            src="/images/icons/blog-details-posted-at-clock.webp"
+            src="/images/icons/blog-details-posted-at-clock-icon.webp"
             alt=""
             width={18}
             height={18}
@@ -50,7 +50,7 @@ export default function AuthorBlogCard({ post }: AuthorBlogCardProps) {
         </div>
         <div className="flex items-center gap-2">
           <Image
-            src="/images/icons/blog-read-time-icon.svg"
+            src="/images/icons/site-blog-read-time-icon.svg"
             alt=""
             width={18}
             height={18}

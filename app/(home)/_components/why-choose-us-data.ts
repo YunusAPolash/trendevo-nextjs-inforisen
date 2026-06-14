@@ -4,19 +4,19 @@ export const CARD_DESCRIPTION =
 export const leftFeatures = [
   {
     title: 'Cheapest SMM Panel',
-    icon: '/images/why-choose-us/cheapest-smm-panel-icon.png',
+    icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
     iconWidth: 43,
     iconHeight: 40,
   },
   {
     title: 'Fast & Reliable Delivery',
-    icon: '/images/why-choose-us/fast-delivery-icon.png',
+    icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
     iconWidth: 40,
     iconHeight: 40,
   },
   {
     title: 'Multitude of Services',
-    icon: '/images/why-choose-us/multitude-services-icon.webp',
+    icon: '/images/why-choose-us/why-choose-us-multitude-of-services-icon.webp',
     iconWidth: 57,
     iconHeight: 30,
   },
@@ -25,19 +25,19 @@ export const leftFeatures = [
 export const rightFeatures = [
   {
     title: 'Real-time & Data',
-    icon: '/images/why-choose-us/realtime-data-icon.webp',
+    icon: '/images/why-choose-us/why-choose-us-real-time-and-data-icon.webp',
     iconWidth: 43,
     iconHeight: 40,
   },
   {
     title: 'Bulk Orders Provide',
-    icon: '/images/why-choose-us/bulk-orders-icon.png',
+    icon: '/images/why-choose-us/why-choose-us-bulk-orders-provide-icon.png',
     iconWidth: 46,
     iconHeight: 40,
   },
   {
     title: '24/7 Dedicated Customer Support',
-    icon: '/images/why-choose-us/customer-support-icon.webp',
+    icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
     iconWidth: 47,
     iconHeight: 40,
   },

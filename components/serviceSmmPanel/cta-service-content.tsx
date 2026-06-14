@@ -28,7 +28,7 @@ export const ctaServiceContent: Record<CtaServiceSlug, CtaServiceContent> = {
       'Join thousands of users growing faster with TrendEvo Facebook SMM Panel. Get started in under 60 seconds with fast delivery, real engagement, and 24/7 support tailored for Bangladeshi businesses.',
     primaryButtonLabel: 'Get Started Now',
     secondaryButtonLabel: 'See all Services',
-    imageSrc: '/images/cta/cta-character.webp',
+    imageSrc: '/images/cta/cta-character-illustration.webp',
     imageAlt: 'Start growing your Facebook presence with TrendEvo',
     className: 'mt-16',
   },
@@ -43,7 +43,7 @@ export const ctaServiceContent: Record<CtaServiceSlug, CtaServiceContent> = {
       'Join thousands of users growing faster with TrendEvo Instagram SMM Panel. Get started in under 60 seconds with fast delivery, real engagement, and 24/7 support tailored for Bangladeshi businesses.',
     primaryButtonLabel: 'Get Started Now',
     secondaryButtonLabel: 'See all Services',
-    imageSrc: '/images/cta/cta-character.webp',
+    imageSrc: '/images/cta/cta-character-illustration.webp',
     imageAlt: 'Start growing your Instagram presence with TrendEvo',
   },
   'telegram-smm-panel': {
@@ -57,7 +57,7 @@ export const ctaServiceContent: Record<CtaServiceSlug, CtaServiceContent> = {
       'Join thousands of users growing faster with TrendEvo Telegram SMM Panel. Get started in under 60 seconds with fast delivery, real engagement, and 24/7 support tailored for Bangladeshi businesses.',
     primaryButtonLabel: 'Get Started Now',
     secondaryButtonLabel: 'See all Services',
-    imageSrc: '/images/cta/cta-character.webp',
+    imageSrc: '/images/cta/cta-character-illustration.webp',
     imageAlt: 'Start growing your Telegram channel with TrendEvo',
   },
   'smm-panel-uk': {
@@ -72,7 +72,7 @@ export const ctaServiceContent: Record<CtaServiceSlug, CtaServiceContent> = {
       'Join thousands of UK businesses and creators growing faster with TrendEvo. Get started in under 60 seconds with fast delivery, real engagement, and 24/7 support tailored for the UK market.',
     primaryButtonLabel: 'Get Started Now',
     secondaryButtonLabel: 'See all Services',
-    imageSrc: '/images/cta/cta-character.webp',
+    imageSrc: '/images/cta/cta-character-illustration.webp',
     imageAlt: 'Start growing your social media presence in the UK with TrendEvo',
   },
 };

@@ -52,7 +52,7 @@ export default function AboutUsPage() {
           </PrimaryButton>
         }
         illustration={{
-          src: '/images/about/about-team-character.webp',
+          src: '/images/about/about-us-trendevo-specialist-representing-trusted-smm-panel-services-illustration.webp',
           alt: 'TrendEvo specialist representing trusted SMM panel services',
           width: 547,
           height: 673,

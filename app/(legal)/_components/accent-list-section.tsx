@@ -26,7 +26,7 @@ const variantStyles = {
     accent: 'bg-[#8f2acd]',
     iconBg:
       'bg-[#8f2acd]/[0.09] dark:bg-white/[0.08]',
-    icon: '/images/icons/accent-list-check-icon.svg',
+    icon: '/images/icons/site-accent-list-check-icon.svg',
   },
   negative: {
     accent: 'bg-[#f43f5e]/70 dark:bg-[#8f2acd]',

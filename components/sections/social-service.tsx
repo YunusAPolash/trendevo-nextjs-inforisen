@@ -27,7 +27,7 @@ function SocialServiceCard({
       <div className="relative z-10 flex h-full flex-col gap-[22px] dark:gap-[18px]">
         <div className="relative flex size-[77px] shrink-0 items-center justify-center">
           <Image
-            src="/images/why-choose-us/hex-icon-secondd.svg"
+            src="/images/why-choose-us/why-choose-us-hex-icon-secondd-decoration.svg"
             alt=""
             aria-hidden
             width={77}
@@ -35,7 +35,7 @@ function SocialServiceCard({
             className="absolute inset-0 size-[77px] dark:hidden"
           />
           <Image
-            src="/images/why-choose-us/hex-icon-dark.svg"
+            src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
             alt=""
             aria-hidden
             width={77}
@@ -61,7 +61,7 @@ function SocialServiceCard({
         <div className="flex flex-col gap-3.5 dark:gap-2.5">
           <div className="flex items-center gap-1.5">
             <Image
-              src="/images/why-choose-us/title-bullet-second.svg"
+              src="/images/why-choose-us/why-choose-us-title-bullet-second-decoration.svg"
               alt=""
               aria-hidden
               width={12}

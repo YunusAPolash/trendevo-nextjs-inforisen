@@ -16,7 +16,7 @@ type SectionHeadingProps = {
   badgeClassName?: string;
 };
 
-const DEFAULT_UNDERLINE_SRC = '/images/our-services/ui/underline.svg';
+const DEFAULT_UNDERLINE_SRC = '/images/our-services/ui/our-services-section-underline.svg';
 const DEFAULT_UNDERLINE_WIDTH = 131;
 
 function renderHeadingText(value: string | ReactNode): ReactNode {

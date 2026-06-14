@@ -63,7 +63,7 @@ export default async function ContentSection() {
         </PrimaryCard>
 
         <IconSectionCard
-          icon="/images/icons/privacy-last-updated-icon.svg"
+          icon="/images/icons/privacy-policy-last-updated-icon.svg"
           title="Last Updated"
         >
           <p>
@@ -75,7 +75,7 @@ export default async function ContentSection() {
         </IconSectionCard>
 
         <IconSectionCard
-          icon="/images/icons/privacy-who-we-are-icon.svg"
+          icon="/images/icons/privacy-policy-who-we-are-icon.svg"
           title="Who We Are"
         >
           <p>
@@ -96,7 +96,7 @@ export default async function ContentSection() {
         </IconSectionCard>
 
         <IconSectionCard
-          icon="/images/icons/privacy-collect-info-icon.svg"
+          icon="/images/icons/privacy-policy-collect-info-icon.svg"
           title="What Information We Collect"
           intro="We only collect information that is genuinely necessary to provide our services, process your payments, and support your account. Here is a clear breakdown of what that includes."
           subsections={[
@@ -156,7 +156,7 @@ export default async function ContentSection() {
         />
 
         <IconSectionCard
-          icon="/images/icons/privacy-how-we-use-icon.svg"
+          icon="/images/icons/privacy-policy-how-we-use-icon.svg"
           title="How We Use Your Information"
           intro="Every piece of information we collect is used for a specific, legitimate purpose. Here is exactly what we use your data for."
           subsections={[
@@ -253,7 +253,7 @@ export default async function ContentSection() {
         />
 
         <IconSectionCard
-          icon="/images/icons/privacy-share-info-icon.svg"
+          icon="/images/icons/privacy-policy-share-info-icon.svg"
           title="Who We Share Your Information With"
           intro="We do not sell your personal data. We do not share your personal data with advertisers. We do not trade your information with third parties for their own marketing purposes. Here is the limited set of situations where your data is shared with others."
           subsections={[
@@ -324,7 +324,7 @@ export default async function ContentSection() {
         />
 
         <IconSectionCard
-          icon="/images/icons/privacy-data-security-icon.svg"
+          icon="/images/icons/privacy-policy-data-security-icon.svg"
           title="Data Storage and Security"
         >
           <p>
@@ -350,7 +350,7 @@ export default async function ContentSection() {
         </IconSectionCard>
 
         <IconSectionCard
-          icon="/images/icons/privacy-data-retention-icon.svg"
+          icon="/images/icons/privacy-policy-data-retention-icon.svg"
           title="How Long We Keep Your Data"
         >
           <p>
@@ -371,7 +371,7 @@ export default async function ContentSection() {
         </IconSectionCard>
 
         <IconSectionCard
-          icon="/images/icons/privacy-your-rights-icon.svg"
+          icon="/images/icons/privacy-policy-your-rights-icon.svg"
           title="Your Rights Over Your Personal Data"
           intro="As a user of SMMSun, you have the following rights regarding your personal data."
           subsections={[
@@ -445,7 +445,7 @@ export default async function ContentSection() {
         />
 
         <IconSectionCard
-          icon="/images/icons/privacy-third-party-icon.svg"
+          icon="/images/icons/privacy-policy-third-party-icon.svg"
           title="Third-Party Links"
         >
           <p>
@@ -460,7 +460,7 @@ export default async function ContentSection() {
         </IconSectionCard>
 
         <IconSectionCard
-          icon="/images/icons/privacy-changes-icon.svg"
+          icon="/images/icons/privacy-policy-changes-icon.svg"
           title="Changes to This Privacy Policy"
         >
           <p>

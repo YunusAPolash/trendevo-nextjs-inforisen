@@ -11,7 +11,7 @@ const statCards = [
   {
     key: 'ordersCompleted' as const,
     label: 'Total Completed Orders',
-    icon: '/images/stats/stats-orders-icon.png',
+    icon: '/images/stats/home-stats-total-completed-orders-icon.png',
     width: 167,
     height: 150,
     displayWidth: 111,
@@ -21,7 +21,7 @@ const statCards = [
   {
     key: 'servicesAll' as const,
     label: 'Total Services Available',
-    icon: '/images/stats/stats-services-icon.png',
+    icon: '/images/stats/home-stats-total-services-available-icon.png',
     width: 152,
     height: 150,
     displayWidth: 101,
@@ -31,7 +31,7 @@ const statCards = [
   {
     key: 'usersAll' as const,
     label: 'Total Users',
-    icon: '/images/stats/stats-users-icon.png',
+    icon: '/images/stats/home-stats-total-users-icon.png',
     width: 188,
     height: 150,
     displayWidth: 125,
@@ -41,7 +41,7 @@ const statCards = [
   {
     key: 'satisfaction' as const,
     label: 'Customer Satisfaction Rate',
-    icon: '/images/stats/stats-satisfaction-icon.png',
+    icon: '/images/stats/home-stats-customer-satisfaction-rate-icon.png',
     width: 144,
     height: 150,
     displayWidth: 96,

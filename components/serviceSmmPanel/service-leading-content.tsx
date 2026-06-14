@@ -49,7 +49,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Fast & Reliable Delivery',
         description:
           'TrendEvo ensures that all your Facebook SMM orders are processed quickly, accurately, and securely. Our fast and reliable delivery system guarantees that likes, comments, and followers reach your account on time, helping you maintain consistent engagement and uninterrupted growth for your page.',
-        icon: '/images/service-smm-panel/fast-and-reliable-delivery.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-fast-and-reliable-delivery-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -57,7 +57,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           'Our team is available around the clock to assist you in both Bangla and English. Whether you have questions, need guidance, or face any issues, TrendEvo’s 24/7 support ensures you get timely, personalized help to maximize your Facebook growth.',
-        icon: '/images/service-smm-panel/24-7-support.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-24-7-support-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -67,7 +67,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Authentic Engagement',
         description:
           'Gain real likes, comments, and followers that genuinely interact with your content. TrendEvo ensures meaningful engagement to help your Facebook page grow naturally and build long-term audience trust.',
-        icon: '/images/service-smm-panel/authentic-engagement.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-authentic-engagement-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -75,7 +75,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Pricing',
         description:
           'Enjoy competitive rates designed for Bangladeshi businesses, allowing you to grow your Facebook presence effectively without straining your budget.',
-        icon: '/images/service-smm-panel/affordable-pricing.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-affordable-pricing-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -83,7 +83,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Customer-Focused Service',
         description:
           'Our dedicated team guides you at every step, providing personalized support and expert advice to help you achieve your Facebook growth goals with confidence.',
-        icon: '/images/service-smm-panel/customer-focused-service.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-customer-focused-service-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -91,7 +91,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
   },
   'facebook-page-followers': {
     badge: 'WHY CHOOSE US',
-    underlineSrc: '/images/why-choose-us/underline.svg',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
     underlineWidth: 190,
     title: (
       <>
@@ -109,7 +109,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your page now.",
-        icon: '/images/facebook-page-followers/why-choose-fast-delivery.webp',
+        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -118,7 +118,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/why-choose-affordable-prices.webp',
+        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -127,7 +127,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/why-choose-24-7-support.webp',
+        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -140,7 +140,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/why-choose-local-payment.webp',
+        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -152,13 +152,13 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         description:
           "We deliver genuine Facebook followers from active profiles, ensuring lasting engagement. Our packages include a refill guarantee, so any drops are promptly replenished, maintaining your follower count and enhancing your page's credibility.",
         iconFrameSrc:
-          '/images/facebook-page-followers/why-choose-real-followers-frame.png',
+          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
   'facebook-page-followers-related-services': {
     badge: 'RELATED SERVICE',
-    underlineSrc: '/images/why-choose-us/underline.svg',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
     underlineWidth: 198,
     title: (
       <>
@@ -176,7 +176,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Facebook Comments',
         description:
           "We provide real Facebook followers sourced from engaged users, ensuring sustained activity on your page. Our packages come with a drop protection policy, where any decrease in followers is quickly restored, securing your growth and boosting your page's authority.",
-        icon: '/images/facebook-page-followers/related-service-facebook-comments.webp',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -187,7 +187,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Facebook Likes',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/related-service-facebook-likes.webp',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -215,7 +215,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Fast & Reliable Delivery',
         description:
           'TrendEvo ensures that all your Instagram SMM orders are processed quickly, accurately, and securely. Our fast and reliable delivery system guarantees that likes, comments, and followers reach your profile on time, helping you maintain consistent engagement and uninterrupted growth.',
-        icon: '/images/service-smm-panel/fast-and-reliable-delivery.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-fast-and-reliable-delivery-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -223,7 +223,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           'Our team is available around the clock to assist you in both Bangla and English. Whether you have questions, need guidance, or face any issues, TrendEvo’s 24/7 support ensures you get timely, personalized help to maximize your Instagram growth.',
-        icon: '/images/service-smm-panel/24-7-support.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-24-7-support-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -233,7 +233,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Authentic Engagement',
         description:
           'Gain real likes, comments, and followers that genuinely interact with your content. TrendEvo ensures meaningful engagement to help your Instagram profile grow naturally and build long-term audience trust.',
-        icon: '/images/service-smm-panel/authentic-engagement.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-authentic-engagement-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -241,7 +241,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Pricing',
         description:
           'Enjoy competitive rates designed for Bangladeshi businesses, allowing you to grow your Instagram presence effectively without straining your budget.',
-        icon: '/images/service-smm-panel/affordable-pricing.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-affordable-pricing-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -249,7 +249,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Customer-Focused Service',
         description:
           'Our dedicated team guides you at every step, providing personalized support and expert advice to help you achieve your Instagram growth goals with confidence.',
-        icon: '/images/service-smm-panel/customer-focused-service.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-customer-focused-service-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -273,7 +273,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Fast & Reliable Delivery',
         description:
           'TrendEvo ensures that all your Telegram SMM orders are processed quickly, accurately, and securely. Our fast and reliable delivery system guarantees that members, views, and reactions reach your channel on time, helping you maintain consistent engagement and uninterrupted growth.',
-        icon: '/images/service-smm-panel/fast-and-reliable-delivery.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-fast-and-reliable-delivery-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -281,7 +281,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           'Our team is available around the clock to assist you in both Bangla and English. Whether you have questions, need guidance, or face any issues, TrendEvo’s 24/7 support ensures you get timely, personalized help to maximize your Telegram growth.',
-        icon: '/images/service-smm-panel/24-7-support.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-24-7-support-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -291,7 +291,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Authentic Engagement',
         description:
           'Gain real members, views, and reactions that genuinely interact with your content. TrendEvo ensures meaningful engagement to help your Telegram channel grow naturally and build long-term audience trust.',
-        icon: '/images/service-smm-panel/authentic-engagement.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-authentic-engagement-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -299,7 +299,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Pricing',
         description:
           'Enjoy competitive rates designed for Bangladeshi businesses, allowing you to grow your Telegram presence effectively without straining your budget.',
-        icon: '/images/service-smm-panel/affordable-pricing.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-affordable-pricing-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -307,7 +307,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Customer-Focused Service',
         description:
           'Our dedicated team guides you at every step, providing personalized support and expert advice to help you achieve your Telegram growth goals with confidence.',
-        icon: '/images/service-smm-panel/customer-focused-service.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-customer-focused-service-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },

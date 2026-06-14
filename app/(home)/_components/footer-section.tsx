@@ -52,23 +52,23 @@ const socialLinks = [
   {
     label: 'Facebook',
     href: '#',
-    iconSrc: '/images/icons/footer-social-facebook.webp',
+    iconSrc: '/images/icons/footer-facebook-icon.webp',
   },
   {
     label: 'Instagram',
     href: '#',
-    iconSrc: '/images/icons/footer-social-instagram.webp',
+    iconSrc: '/images/icons/footer-instagram-icon.webp',
   },
-  { label: 'X', href: '#', iconSrc: '/images/icons/footer-social-x.webp' },
+  { label: 'X', href: '#', iconSrc: '/images/icons/footer-x-icon.webp' },
   {
     label: 'LinkedIn',
     href: '#',
-    iconSrc: '/images/icons/footer-social-linkedin.webp',
+    iconSrc: '/images/icons/footer-linkedin-icon.webp',
   },
   {
     label: 'YouTube',
     href: '#',
-    iconSrc: '/images/icons/footer-social-youtube.webp',
+    iconSrc: '/images/icons/footer-youtube-icon.webp',
   },
 ] as const;
 
@@ -131,14 +131,14 @@ function SocialLink({
       className="relative flex size-9 shrink-0 items-center justify-center sm:size-10"
     >
       <Image
-        src="/images/icons/footer-social-hex-bg.svg"
+        src="/images/icons/footer-social-hex-bg-decoration.svg"
         alt=""
         fill
         className="object-contain dark:hidden"
         aria-hidden
       />
       <Image
-        src="/images/icons/footer-hex.png"
+        src="/images/icons/footer-hex-decoration.png"
         alt=""
         fill
         className="hidden object-contain dark:block"
@@ -186,7 +186,7 @@ function ContactRow({
 export default function FooterSection() {
   return (
     <PrimarySection
-      lightBackgroundImage="url('/images/footer/footer-light-bg.webp')"
+      lightBackgroundImage="url('/images/footer/footer-light-bg-icon.webp')"
       darkBg="section-footer-dark"
       backgroundSize="full"
       className="mx-3 my-5 overflow-hidden rounded-2xl px-3 py-8 sm:mx-6 sm:my-8 sm:rounded-3xl sm:px-4 sm:py-12 lg:mx-12 lg:my-10 lg:py-[60px]"
@@ -197,7 +197,7 @@ export default function FooterSection() {
             <div className="flex flex-col gap-3 sm:gap-[18px]">
               <Link href="/" className="relative inline-block h-10 w-[130px] sm:h-12 sm:w-[152px]">
                 <Image
-                  src="/images/icons/trendevo-logo.png"
+                  src="/images/icons/site-logo.png"
                   alt="TrendEvo"
                   fill
                   className="object-contain object-left"
@@ -252,7 +252,7 @@ export default function FooterSection() {
                   >
                     <span>{link.label}</span>
                     <Image
-                      src="/images/icons/footer-service-chevron.svg"
+                      src="/images/icons/footer-service-chevron-icon.svg"
                       alt=""
                       width={22}
                       height={22}
@@ -309,7 +309,7 @@ export default function FooterSection() {
         <div className="relative flex min-h-[44px] items-center justify-center overflow-hidden rounded-lg border border-[#d99aff]/50 bg-white px-2 py-2 sm:min-h-[64px] sm:rounded-xl sm:px-4 sm:py-4 md:min-h-[83px] md:rounded-[18px] md:px-6 md:py-6 dark:border-white/20 dark:bg-[rgba(255,255,255,0.06)]">
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 opacity-40 bg-[url('/images/footer/footer-copyright-pattern.webp')] bg-cover bg-center dark:hidden"
+            className="pointer-events-none absolute inset-0 opacity-40 bg-[url('/images/footer/footer-copyright-pattern-decoration.webp')] bg-cover bg-center dark:hidden"
           />
           <p className="relative text-center text-[10px] font-medium leading-tight text-[#313131] sm:text-xs sm:leading-snug md:text-sm lg:text-lg dark:text-[#eac8ff]">
             Copyright 2024-2026 Trend Evo | All Right Reserved

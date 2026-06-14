@@ -8,57 +8,57 @@ import {
 const platforms = [
   {
     name: 'Instagram',
-    icon: '/images/platform-marquee/platform-facebook-icon.webp',
+    icon: '/images/platform-marquee/platform-marquee-instagram-platform-icon.webp',
     iconSize: 20,
   },
   {
     name: 'Instagram',
-    icon: '/images/platform-marquee/platform-instagram-icon.webp',
+    icon: '/images/platform-marquee/platform-marquee-instagram-platform-icon-2.webp',
     iconSize: 25,
   },
   {
     name: 'X (Twitter)',
-    icon: '/images/platform-marquee/platform-twitter-icon.png',
+    icon: '/images/platform-marquee/platform-marquee-x-twitter-platform-icon.png',
     iconSize: 25,
   },
   {
     name: 'YouTube',
-    icon: '/images/platform-marquee/platform-youtube-icon.webp',
+    icon: '/images/platform-marquee/platform-marquee-youtube-platform-icon.webp',
     iconSize: 25,
   },
   {
     name: 'TikTok',
-    icon: '/images/platform-marquee/platform-tiktok-icon.webp',
+    icon: '/images/platform-marquee/platform-marquee-tiktok-platform-icon.webp',
     iconSize: 25,
   },
   {
     name: 'LinkedIn',
-    icon: '/images/platform-marquee/platform-linkedin-icon.webp',
+    icon: '/images/platform-marquee/platform-marquee-linkedin-platform-icon.webp',
     iconSize: 25,
   },
   {
     name: 'Telegram',
-    icon: '/images/platform-marquee/platform-telegram-icon.webp',
+    icon: '/images/platform-marquee/platform-marquee-telegram-platform-icon.webp',
     iconSize: 25,
   },
   {
     name: 'Discord',
-    icon: '/images/platform-marquee/platform-discord-icon.webp',
+    icon: '/images/platform-marquee/platform-marquee-discord-platform-icon.webp',
     iconSize: 25,
   },
   {
     name: 'Spotify',
-    icon: '/images/platform-marquee/platform-spotify-icon.webp',
+    icon: '/images/platform-marquee/platform-marquee-spotify-platform-icon.webp',
     iconSize: 25,
   },
   {
     name: 'Snapchat',
-    icon: '/images/platform-marquee/platform-snapchat-icon.webp',
+    icon: '/images/platform-marquee/platform-marquee-snapchat-platform-icon.webp',
     iconSize: 25,
   },
   {
     name: 'SoundCloud',
-    icon: '/images/platform-marquee/platform-soundcloud-icon.svg',
+    icon: '/images/platform-marquee/platform-marquee-soundcloud-platform-icon.svg',
     fullFrame: true,
   },
 ] as const;

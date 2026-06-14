@@ -45,7 +45,7 @@ export default function ContactDetailCard({
 
       <div className="relative z-10 flex size-[100px] shrink-0 items-center justify-center sm:size-[120px]">
         <Image
-          src="/images/contact-us/contact-us-icon-hex-bg.svg"
+          src="/images/contact-us/contact-us-icon-hex-bg-decoration.svg"
           alt=""
           fill
           aria-hidden
@@ -53,7 +53,7 @@ export default function ContactDetailCard({
           className="object-contain dark:hidden"
         />
         <Image
-          src="/images/why-choose-us/hex-icon-dark.svg"
+          src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
           alt=""
           fill
           aria-hidden

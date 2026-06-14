@@ -49,7 +49,7 @@ export default function ServicePricingGroup({
           style={{ backgroundImage: TOGGLE_BTN_BG }}
         >
           <Image
-            src="/images/services/pricing/services-pricing-accordion-arrow.svg"
+            src="/images/services/pricing/services-pricing-accordion-arrow-icon.svg"
             alt=""
             aria-hidden
             width={34}

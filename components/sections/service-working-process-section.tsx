@@ -38,11 +38,11 @@ export type ServiceWorkingProcessSectionProps = {
   titleBulletSrc?: string;
 };
 
-const DEFAULT_STEP_HEX_SRC = '/images/service-smm-panel/working-process-step-hex.svg';
-const DEFAULT_STEP_HEX_DARK_SRC = '/images/why-choose-us/hex-icon-dark.svg';
+const DEFAULT_STEP_HEX_SRC = '/images/service-smm-panel/facebook-smm-panel-working-process-step-hex-decoration.svg';
+const DEFAULT_STEP_HEX_DARK_SRC = '/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg';
 const DEFAULT_FLOW_CONNECTORS_SRC =
-  '/images/service-smm-panel/working-process-flow-connectors.svg';
-const DEFAULT_TITLE_BULLET_SRC = '/images/why-choose-us/title-bullet.svg';
+  '/images/service-smm-panel/facebook-smm-panel-working-process-flow-connectors-decoration.svg';
+const DEFAULT_TITLE_BULLET_SRC = '/images/why-choose-us/why-choose-us-title-bullet-decoration.svg';
 
 const CARD_DARK_BG_MAP: Partial<Record<CardBgKey, CardDarkBgKey>> = {
   'card-9': 'card-9-dark',

@@ -27,7 +27,7 @@ function CountryWhyCard({
       <div className="relative z-10 flex flex-col gap-[18px]">
         <div className="relative flex size-[77px] shrink-0 items-center justify-center">
           <Image
-            src="/images/why-choose-us/hex-icon.svg"
+            src="/images/why-choose-us/why-choose-us-hex-icon-decoration.svg"
             alt=""
             aria-hidden
             width={77}
@@ -35,7 +35,7 @@ function CountryWhyCard({
             className="absolute inset-0 size-[77px] dark:hidden"
           />
           <Image
-            src="/images/why-choose-us/hex-icon-dark.svg"
+            src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
             alt=""
             aria-hidden
             width={77}
@@ -61,7 +61,7 @@ function CountryWhyCard({
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-1.5">
             <Image
-              src="/images/why-choose-us/title-bullet.svg"
+              src="/images/why-choose-us/why-choose-us-title-bullet-decoration.svg"
               alt=""
               aria-hidden
               width={12}
@@ -121,7 +121,7 @@ export default function CountryWhy({ slug }: CountryWhyProps) {
       className="relative overflow-hidden py-16 sm:py-20"
     >
       <Image
-        src="/images/country/uk/why-decorative-wave.svg"
+        src="/images/country/uk/uk-why-decorative-wave-decoration.svg"
         alt=""
         aria-hidden
         width={1614}
@@ -167,10 +167,10 @@ export default function CountryWhy({ slug }: CountryWhyProps) {
             className="pointer-events-none absolute inset-x-0 top-0 bottom-0 hidden lg:grid lg:grid-cols-2 lg:gap-8"
           >
             <div className="flex items-center justify-center">
-              <ColumnConnector src="/images/country/uk/why-column-connector-left.svg" />
+              <ColumnConnector src="/images/country/uk/uk-why-column-connector-left-decoration.svg" />
             </div>
             <div className="flex items-center justify-center">
-              <ColumnConnector src="/images/country/uk/why-column-connector-right.svg" />
+              <ColumnConnector src="/images/country/uk/uk-why-column-connector-right-decoration.svg" />
             </div>
           </div>
         </div>
