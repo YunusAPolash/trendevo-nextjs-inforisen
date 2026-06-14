@@ -261,7 +261,7 @@ export const data: HomePageData = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/hero/hero-illustration.png',
+      src: '/images/hero/hero-illustration.webp',
       alt: 'TrendEvo platform user with social media icons and analytics',
       width: 669,
       height: 728,
@@ -327,7 +327,7 @@ export const data: HomePageData = {
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/facebook.png',
+        icon: '/images/our-services/platforms/facebook.webp',
         marketingTitle: 'Facebook Marketing Services',
         description:
           'Boost your brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -369,7 +369,7 @@ export const data: HomePageData = {
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/instagram.png',
+        icon: '/images/our-services/platforms/instagram.webp',
         marketingTitle: 'Instagram Marketing Services',
         description:
           'Grow your Instagram presence with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -451,7 +451,7 @@ export const data: HomePageData = {
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/youtube.png',
+        icon: '/images/our-services/platforms/youtube.webp',
         marketingTitle: 'YouTube Marketing Services',
         description:
           'Accelerate channel growth with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -491,7 +491,7 @@ export const data: HomePageData = {
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/tiktok.png',
+        icon: '/images/our-services/platforms/tiktok.webp',
         marketingTitle: 'TikTok Marketing Services',
         description:
           'Go viral faster with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -531,7 +531,7 @@ export const data: HomePageData = {
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/linkedin.png',
+        icon: '/images/our-services/platforms/linkedin.webp',
         marketingTitle: 'LinkedIn Marketing Services',
         description:
           'Strengthen your professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -571,7 +571,7 @@ export const data: HomePageData = {
       {
         id: 'telegram',
         label: 'Telegram',
-        icon: '/images/our-services/platforms/telegram.png',
+        icon: '/images/our-services/platforms/telegram.webp',
         marketingTitle: 'Telegram Marketing Services',
         description:
           'Grow your Telegram channel or group with members and engagement that builds an active, responsive community.',
@@ -611,7 +611,7 @@ export const data: HomePageData = {
       {
         id: 'discord',
         label: 'Discord',
-        icon: '/images/our-services/platforms/discord.png',
+        icon: '/images/our-services/platforms/discord.webp',
         marketingTitle: 'Discord Marketing Services',
         description:
           'Build thriving Discord communities with members, online activity, and engagement that keeps your server active.',
@@ -651,7 +651,7 @@ export const data: HomePageData = {
       {
         id: 'spotify',
         label: 'Spotify',
-        icon: '/images/our-services/platforms/spotify.png',
+        icon: '/images/our-services/platforms/spotify.webp',
         marketingTitle: 'Spotify Marketing Services',
         description:
           'Increase your music reach with Spotify plays, followers, and playlist placements that grow your listener base.',
@@ -731,7 +731,7 @@ export const data: HomePageData = {
       {
         id: 'snapchat',
         label: 'Snapchat',
-        icon: '/images/our-services/platforms/snapchat.png',
+        icon: '/images/our-services/platforms/snapchat.webp',
         marketingTitle: 'Snapchat Marketing Services',
         description:
           'Grow your Snapchat presence with followers, views, and story engagement that connects you with a younger audience.',
@@ -858,7 +858,7 @@ export const data: HomePageData = {
     ],
     ctaLabel: 'Discover More',
     image: {
-      src: '/images/about/your-trusted-social-media-growth-partner.png',
+      src: '/images/about/your-trusted-social-media-growth-partner.webp',
       alt: 'TrendEvo growth partner',
     },
   },
@@ -941,7 +941,7 @@ export const data: HomePageData = {
       },
       {
         title: 'Multitude of Services',
-        icon: '/images/why-choose-us/multitude-services-icon.png',
+        icon: '/images/why-choose-us/multitude-services-icon.webp',
         iconWidth: 57,
         iconHeight: 30,
       },
@@ -949,7 +949,7 @@ export const data: HomePageData = {
     rightFeatures: [
       {
         title: 'Real-time & Data',
-        icon: '/images/why-choose-us/realtime-data-icon.png',
+        icon: '/images/why-choose-us/realtime-data-icon.webp',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -961,7 +961,7 @@ export const data: HomePageData = {
       },
       {
         title: '24/7 Dedicated Customer Support',
-        icon: '/images/why-choose-us/customer-support-icon.png',
+        icon: '/images/why-choose-us/customer-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },
@@ -994,12 +994,12 @@ export const data: HomePageData = {
     platforms: [
       {
         name: 'Instagram',
-        icon: '/images/platform-marquee/platform-facebook-icon.png',
+        icon: '/images/platform-marquee/platform-facebook-icon.webp',
         iconSize: 20,
       },
       {
         name: 'Instagram',
-        icon: '/images/platform-marquee/platform-instagram-icon.png',
+        icon: '/images/platform-marquee/platform-instagram-icon.webp',
         iconSize: 25,
       },
       {
@@ -1009,37 +1009,37 @@ export const data: HomePageData = {
       },
       {
         name: 'YouTube',
-        icon: '/images/platform-marquee/platform-youtube-icon.png',
+        icon: '/images/platform-marquee/platform-youtube-icon.webp',
         iconSize: 25,
       },
       {
         name: 'TikTok',
-        icon: '/images/platform-marquee/platform-tiktok-icon.png',
+        icon: '/images/platform-marquee/platform-tiktok-icon.webp',
         iconSize: 25,
       },
       {
         name: 'LinkedIn',
-        icon: '/images/platform-marquee/platform-linkedin-icon.png',
+        icon: '/images/platform-marquee/platform-linkedin-icon.webp',
         iconSize: 25,
       },
       {
         name: 'Telegram',
-        icon: '/images/platform-marquee/platform-telegram-icon.png',
+        icon: '/images/platform-marquee/platform-telegram-icon.webp',
         iconSize: 25,
       },
       {
         name: 'Discord',
-        icon: '/images/platform-marquee/platform-discord-icon.png',
+        icon: '/images/platform-marquee/platform-discord-icon.webp',
         iconSize: 25,
       },
       {
         name: 'Spotify',
-        icon: '/images/platform-marquee/platform-spotify-icon.png',
+        icon: '/images/platform-marquee/platform-spotify-icon.webp',
         iconSize: 25,
       },
       {
         name: 'Snapchat',
-        icon: '/images/platform-marquee/platform-snapchat-icon.png',
+        icon: '/images/platform-marquee/platform-snapchat-icon.webp',
         iconSize: 25,
       },
       {
@@ -1111,22 +1111,22 @@ export const data: HomePageData = {
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/icons/platform-instagram.png',
+        icon: '/images/icons/platform-instagram.webp',
       },
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/icons/platform-facebook.png',
+        icon: '/images/icons/platform-facebook.webp',
       },
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/icons/platform-youtube.png',
+        icon: '/images/icons/platform-youtube.webp',
       },
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/icons/platform-tiktok.png',
+        icon: '/images/icons/platform-tiktok.webp',
       },
     ],
     features: [
@@ -1205,7 +1205,7 @@ export const data: HomePageData = {
       quoteOpenSrc: '/images/testimonials/quote-open.svg',
       quoteCloseSrc: '/images/testimonials/quote-close.svg',
       playIconSrc: '/images/testimonials/play-icon.svg',
-      playOrbSrc: '/images/testimonials/play-orb.png',
+      playOrbSrc: '/images/testimonials/play-orb.webp',
     },
     leftTextReviews: [
       {
@@ -1271,7 +1271,7 @@ export const data: HomePageData = {
       name: 'Ariyena Islam',
       role: 'Business Owner',
       avatar: '/images/testimonials/avatar-2.png',
-      image: '/images/testimonials/featured-review.png',
+      image: '/images/testimonials/featured-review.webp',
       quote: homeTestimonialQuote,
       youtubeVideoId: homeYoutubeReelVideoId,
     },
@@ -1280,7 +1280,7 @@ export const data: HomePageData = {
         id: 'video-1',
         name: 'Seam Rahman',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-1.png',
+        thumbnail: '/images/testimonials/video-thumb-1.webp',
         avatar: '/images/testimonials/avatar-1.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },
@@ -1288,7 +1288,7 @@ export const data: HomePageData = {
         id: 'video-2',
         name: 'Ariyan Khan',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-2.png',
+        thumbnail: '/images/testimonials/video-thumb-2.webp',
         avatar: '/images/testimonials/avatar-2.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },
@@ -1296,7 +1296,7 @@ export const data: HomePageData = {
         id: 'video-3',
         name: 'Lisa',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-3.png',
+        thumbnail: '/images/testimonials/video-thumb-3.webp',
         avatar: '/images/testimonials/avatar-3.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },
@@ -1304,7 +1304,7 @@ export const data: HomePageData = {
         id: 'video-4',
         name: 'Tamanna',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-4.png',
+        thumbnail: '/images/testimonials/video-thumb-4.webp',
         avatar: '/images/testimonials/avatar-4.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },
@@ -1312,7 +1312,7 @@ export const data: HomePageData = {
         id: 'video-5',
         name: 'Rafi Islam',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-1.png',
+        thumbnail: '/images/testimonials/video-thumb-1.webp',
         avatar: '/images/testimonials/avatar-3.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },
@@ -1320,7 +1320,7 @@ export const data: HomePageData = {
         id: 'video-6',
         name: 'Nadia Ahmed',
         role: 'Business Owner',
-        thumbnail: '/images/testimonials/video-thumb-2.png',
+        thumbnail: '/images/testimonials/video-thumb-2.webp',
         avatar: '/images/testimonials/avatar-4.png',
         youtubeVideoId: homeYoutubeReelVideoId,
       },

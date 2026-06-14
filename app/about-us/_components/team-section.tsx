@@ -23,7 +23,7 @@ export default function TeamSection() {
           <div className="relative mx-auto aspect-[567/698] w-full max-w-xl overflow-hidden lg:mx-0 lg:max-w-none">
             <div className="relative z-20 h-full w-full">
               <Image
-                src="/images/about/about-team-character.png"
+                src="/images/about/about-team-character.webp"
                 alt="TrendEvo team specialist representing digital marketing expertise"
                 fill
                 priority

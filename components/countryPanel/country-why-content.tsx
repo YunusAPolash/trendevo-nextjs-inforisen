@@ -44,7 +44,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
       'text-2xl tracking-[0.36px] text-[#13203b] sm:text-[32px] lg:text-[36px]',
     subtitleClassName: 'max-w-[1176px] text-base font-medium sm:text-lg',
     centerFlag: {
-      src: '/images/country/uk/why-uk-flag.png',
+      src: '/images/country/uk/why-uk-flag.webp',
       alt: 'United Kingdom flag',
       width: 150,
       height: 126,
@@ -80,7 +80,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: '24/7 Dedicated Customer Support',
         description:
           'Our support team is available around the clock to assist UK users with orders, delivery questions, and account guidance whenever you need help.',
-        icon: '/images/why-choose-us/customer-support-icon.png',
+        icon: '/images/why-choose-us/customer-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },

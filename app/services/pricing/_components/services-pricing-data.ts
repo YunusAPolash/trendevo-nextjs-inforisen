@@ -31,31 +31,31 @@ export const facebookPricingGroups: ServicePricingGroup[] = [
   {
     id: 'premium-mixed-regions',
     title: 'Premium Facebook Video Views | Mixed Regions',
-    platformIcon: '/images/our-services/platforms/facebook.png',
+    platformIcon: '/images/our-services/platforms/facebook.webp',
     rows: premiumRows,
   },
   {
     id: 'premium-mixed-regions-2',
     title: 'Premium Facebook Video Views | Mixed Regions',
-    platformIcon: '/images/our-services/platforms/facebook.png',
+    platformIcon: '/images/our-services/platforms/facebook.webp',
     rows: premiumRows,
   },
   {
     id: 'standard-global',
     title: 'Standard Facebook Video Views | Global',
-    platformIcon: '/images/our-services/platforms/facebook.png',
+    platformIcon: '/images/our-services/platforms/facebook.webp',
     rows: premiumRows,
   },
   {
     id: 'economy-local',
     title: 'Economy Facebook Video Views | Local',
-    platformIcon: '/images/our-services/platforms/facebook.png',
+    platformIcon: '/images/our-services/platforms/facebook.webp',
     rows: premiumRows,
   },
   {
     id: 'economy-local-2',
     title: 'Economy Facebook Video Views | Local',
-    platformIcon: '/images/our-services/platforms/facebook.png',
+    platformIcon: '/images/our-services/platforms/facebook.webp',
     rows: premiumRows,
   },
 ];

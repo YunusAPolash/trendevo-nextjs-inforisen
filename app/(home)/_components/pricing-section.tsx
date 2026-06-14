@@ -10,10 +10,10 @@ import { signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
 
 const platforms = [
-  { id: 'instagram', label: 'Instagram', icon: '/images/icons/platform-instagram.png' },
-  { id: 'facebook', label: 'Facebook', icon: '/images/icons/platform-facebook.png' },
-  { id: 'youtube', label: 'YouTube', icon: '/images/icons/platform-youtube.png' },
-  { id: 'tiktok', label: 'TikTok', icon: '/images/icons/platform-tiktok.png' },
+  { id: 'instagram', label: 'Instagram', icon: '/images/icons/platform-instagram.webp' },
+  { id: 'facebook', label: 'Facebook', icon: '/images/icons/platform-facebook.webp' },
+  { id: 'youtube', label: 'YouTube', icon: '/images/icons/platform-youtube.webp' },
+  { id: 'tiktok', label: 'TikTok', icon: '/images/icons/platform-tiktok.webp' },
 ] as const;
 
 const CARD_HEADER_GRADIENT_BASIC =
@@ -186,7 +186,7 @@ function PricingCard({
         />
         {featured ? (
           <Image
-            src="/images/pricing/card-halftone.png"
+            src="/images/pricing/card-halftone.webp"
             alt=""
             aria-hidden
             width={703}

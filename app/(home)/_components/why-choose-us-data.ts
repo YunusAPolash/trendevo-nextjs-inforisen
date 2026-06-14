@@ -16,7 +16,7 @@ export const leftFeatures = [
   },
   {
     title: 'Multitude of Services',
-    icon: '/images/why-choose-us/multitude-services-icon.png',
+    icon: '/images/why-choose-us/multitude-services-icon.webp',
     iconWidth: 57,
     iconHeight: 30,
   },
@@ -25,7 +25,7 @@ export const leftFeatures = [
 export const rightFeatures = [
   {
     title: 'Real-time & Data',
-    icon: '/images/why-choose-us/realtime-data-icon.png',
+    icon: '/images/why-choose-us/realtime-data-icon.webp',
     iconWidth: 43,
     iconHeight: 40,
   },
@@ -37,7 +37,7 @@ export const rightFeatures = [
   },
   {
     title: '24/7 Dedicated Customer Support',
-    icon: '/images/why-choose-us/customer-support-icon.png',
+    icon: '/images/why-choose-us/customer-support-icon.webp',
     iconWidth: 47,
     iconHeight: 40,
   },

@@ -44,7 +44,7 @@ export default function ServicesPage() {
           </PrimaryButton>
         }
         illustration={{
-          src: '/images/services/service-hero-character.png',
+          src: '/images/services/service-hero-character.webp',
           alt: 'TrendEvo specialist presenting social media growth services',
           width: 468,
           height: 581,

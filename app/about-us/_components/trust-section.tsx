@@ -26,14 +26,14 @@ const rightCards = [
     title: 'Stable and High Quality Services',
     description:
       "RendEvo is more than just a transactional platform—we act as your long-term social media growth partner. Built with local expertise and insights, we are dedicated to supporting Bangladesh's dynamic digital economy while helping businesses achieve sustainable online growth.",
-    iconSrc: '/images/about/about-trust-stable-services-icon.png',
+    iconSrc: '/images/about/about-trust-stable-services-icon.webp',
     iconClassName: 'h-10 w-10 object-cover',
   },
   {
     title: 'Local Support & Real Guidance',
     description:
       'We vet suppliers to ensure high-quality engagement and strong retention. Our system delivers orders accurately with minimal issues, while our guidance in English and Bangla helps you make smarter growth decisions.',
-    iconSrc: '/images/about/about-trust-local-support-icon.png',
+    iconSrc: '/images/about/about-trust-local-support-icon.webp',
     iconClassName: 'h-10 w-8 object-cover',
   },
 ] as const;

@@ -8,12 +8,12 @@ import {
 const platforms = [
   {
     name: 'Instagram',
-    icon: '/images/platform-marquee/platform-facebook-icon.png',
+    icon: '/images/platform-marquee/platform-facebook-icon.webp',
     iconSize: 20,
   },
   {
     name: 'Instagram',
-    icon: '/images/platform-marquee/platform-instagram-icon.png',
+    icon: '/images/platform-marquee/platform-instagram-icon.webp',
     iconSize: 25,
   },
   {
@@ -23,37 +23,37 @@ const platforms = [
   },
   {
     name: 'YouTube',
-    icon: '/images/platform-marquee/platform-youtube-icon.png',
+    icon: '/images/platform-marquee/platform-youtube-icon.webp',
     iconSize: 25,
   },
   {
     name: 'TikTok',
-    icon: '/images/platform-marquee/platform-tiktok-icon.png',
+    icon: '/images/platform-marquee/platform-tiktok-icon.webp',
     iconSize: 25,
   },
   {
     name: 'LinkedIn',
-    icon: '/images/platform-marquee/platform-linkedin-icon.png',
+    icon: '/images/platform-marquee/platform-linkedin-icon.webp',
     iconSize: 25,
   },
   {
     name: 'Telegram',
-    icon: '/images/platform-marquee/platform-telegram-icon.png',
+    icon: '/images/platform-marquee/platform-telegram-icon.webp',
     iconSize: 25,
   },
   {
     name: 'Discord',
-    icon: '/images/platform-marquee/platform-discord-icon.png',
+    icon: '/images/platform-marquee/platform-discord-icon.webp',
     iconSize: 25,
   },
   {
     name: 'Spotify',
-    icon: '/images/platform-marquee/platform-spotify-icon.png',
+    icon: '/images/platform-marquee/platform-spotify-icon.webp',
     iconSize: 25,
   },
   {
     name: 'Snapchat',
-    icon: '/images/platform-marquee/platform-snapchat-icon.png',
+    icon: '/images/platform-marquee/platform-snapchat-icon.webp',
     iconSize: 25,
   },
   {

@@ -216,7 +216,7 @@ export default async function AboutSection() {
 
         <div className="relative mx-auto aspect-[594/736] w-full max-w-[320px] shrink-0 sm:max-w-[440px] lg:max-w-[594px]">
           <Image
-            src="/images/about/your-trusted-social-media-growth-partner.png"
+            src="/images/about/your-trusted-social-media-growth-partner.webp"
             alt="TrendEvo growth partner"
             fill
             className="object-contain"

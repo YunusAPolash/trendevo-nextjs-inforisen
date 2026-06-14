@@ -23,7 +23,7 @@ export default function CtaSection({
   title,
   description,
   buttonsOutlet,
-  imageSrc = '/images/cta/cta-character.png',
+  imageSrc = '/images/cta/cta-character.webp',
   imageAlt = 'Start growing with TrendEvo',
   className,
 }: CtaSectionProps) {

@@ -250,15 +250,15 @@ function ServiceIllustration() {
       <ServiceIllustrationLayers
         className="dark:hidden"
         backgroundImage={SERVICE_ILLUSTRATION_LIGHT_BG}
-        bgSrc="/images/our-services/decorations/hero-illustration-light-bg.png"
-        foregroundSrc="/images/our-services/decorations/hero-illustration-light.png"
+        bgSrc="/images/our-services/decorations/hero-illustration-light-bg.webp"
+        foregroundSrc="/images/our-services/decorations/hero-illustration-light.webp"
         priority
       />
       <ServiceIllustrationLayers
         className="hidden dark:block"
         backgroundImage={SERVICE_ILLUSTRATION_DARK_BG}
-        bgSrc="/images/our-services/decorations/hero-illustration-dark-bg.png"
-        foregroundSrc="/images/our-services/decorations/hero-illustration-dark.png"
+        bgSrc="/images/our-services/decorations/hero-illustration-dark-bg.webp"
+        foregroundSrc="/images/our-services/decorations/hero-illustration-dark.webp"
       />
     </div>
   );

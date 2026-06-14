@@ -109,7 +109,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your page now.",
-        icon: '/images/facebook-page-followers/why-choose-fast-delivery.png',
+        icon: '/images/facebook-page-followers/why-choose-fast-delivery.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -118,7 +118,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/why-choose-affordable-prices.png',
+        icon: '/images/facebook-page-followers/why-choose-affordable-prices.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -127,7 +127,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/why-choose-24-7-support.png',
+        icon: '/images/facebook-page-followers/why-choose-24-7-support.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -140,7 +140,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/why-choose-local-payment.png',
+        icon: '/images/facebook-page-followers/why-choose-local-payment.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -176,7 +176,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Facebook Comments',
         description:
           "We provide real Facebook followers sourced from engaged users, ensuring sustained activity on your page. Our packages come with a drop protection policy, where any decrease in followers is quickly restored, securing your growth and boosting your page's authority.",
-        icon: '/images/facebook-page-followers/related-service-facebook-comments.png',
+        icon: '/images/facebook-page-followers/related-service-facebook-comments.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -187,7 +187,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Facebook Likes',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/related-service-facebook-likes.png',
+        icon: '/images/facebook-page-followers/related-service-facebook-likes.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

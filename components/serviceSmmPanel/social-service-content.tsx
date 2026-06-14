@@ -46,14 +46,14 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/decorative-facebook-left.png',
+      src: '/images/service-smm-panel/decorative-facebook-left.webp',
       width: 183,
       height: 190,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[140px] blur-[2px] lg:block xl:w-[183px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/decorative-facebook-right.png',
+      src: '/images/service-smm-panel/decorative-facebook-right.webp',
       width: 199,
       height: 207,
       className:
@@ -64,7 +64,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Page Follower',
         description:
           'Get more real followers for your Facebook page. Our solution also helps boost your audience and reach more people.',
-        icon: '/images/service-smm-panel/facebook-page-follower.png',
+        icon: '/images/service-smm-panel/facebook-page-follower.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -80,7 +80,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Profile Followers',
         description:
           'Attract more followers to your profile with ease. This also allows you to connect with a bigger audience and share your brand.',
-        icon: '/images/service-smm-panel/facebook-profile-followers.png',
+        icon: '/images/service-smm-panel/facebook-profile-followers.webp',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -88,7 +88,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Monetization',
         description:
           'Our solution lets you get all the standards to select for monetization and turn your engagement into income.',
-        icon: '/images/service-smm-panel/facebook-monetization.png',
+        icon: '/images/service-smm-panel/facebook-monetization.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -128,7 +128,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Facebook Group Member',
         description:
           'Increase the number of members in your Facebook groups. Our service also creates an active community around your interests.',
-        icon: '/images/service-smm-panel/facebook-group-member.png',
+        icon: '/images/service-smm-panel/facebook-group-member.webp',
         iconWidth: 54,
         iconHeight: 54,
       },

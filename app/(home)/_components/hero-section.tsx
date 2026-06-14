@@ -103,7 +103,7 @@ export default async function HeroSection() {
 
         <div className="mx-auto w-full min-w-0 max-w-[669px] lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end">
           <Image
-            src="/images/hero/hero-illustration.png"
+            src="/images/hero/hero-illustration.webp"
             alt="TrendEvo platform user with social media icons and analytics"
             width={669}
             height={728}

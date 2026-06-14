@@ -10,12 +10,12 @@ export const pricingPlatforms: PricingPlatform[] = [
   {
     id: 'facebook',
     label: 'Facebook',
-    icon: '/images/our-services/platforms/facebook.png',
+    icon: '/images/our-services/platforms/facebook.webp',
   },
   {
     id: 'instagram',
     label: 'Instagram',
-    icon: '/images/our-services/platforms/instagram.png',
+    icon: '/images/our-services/platforms/instagram.webp',
   },
   {
     id: 'twitter',
@@ -26,32 +26,32 @@ export const pricingPlatforms: PricingPlatform[] = [
   {
     id: 'youtube',
     label: 'YouTube',
-    icon: '/images/our-services/platforms/youtube.png',
+    icon: '/images/our-services/platforms/youtube.webp',
   },
   {
     id: 'tiktok',
     label: 'TikTok',
-    icon: '/images/our-services/platforms/tiktok.png',
+    icon: '/images/our-services/platforms/tiktok.webp',
   },
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    icon: '/images/our-services/platforms/linkedin.png',
+    icon: '/images/our-services/platforms/linkedin.webp',
   },
   {
     id: 'telegram',
     label: 'Telegram',
-    icon: '/images/our-services/platforms/telegram.png',
+    icon: '/images/our-services/platforms/telegram.webp',
   },
   {
     id: 'discord',
     label: 'Discord',
-    icon: '/images/our-services/platforms/discord.png',
+    icon: '/images/our-services/platforms/discord.webp',
   },
   {
     id: 'spotify',
     label: 'Spotify',
-    icon: '/images/our-services/platforms/spotify.png',
+    icon: '/images/our-services/platforms/spotify.webp',
   },
   {
     id: 'soundcloud',
@@ -62,7 +62,7 @@ export const pricingPlatforms: PricingPlatform[] = [
   {
     id: 'snapchat',
     label: 'Snapchat',
-    icon: '/images/our-services/platforms/snapchat.png',
+    icon: '/images/our-services/platforms/snapchat.webp',
   },
   {
     id: 'website-traffic',

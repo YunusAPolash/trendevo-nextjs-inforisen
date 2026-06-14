@@ -54,7 +54,7 @@ export default async function FacebookPageFollowersPage() {
           </div>
         }
         illustration={{
-          src: '/images/facebook-page-followers/facebook-page-followers-hero-illustration.png',
+          src: '/images/facebook-page-followers/facebook-page-followers-hero-illustration.webp',
           alt: 'Excited user celebrating Facebook page growth with analytics chart',
           width: 558,
           height: 621,

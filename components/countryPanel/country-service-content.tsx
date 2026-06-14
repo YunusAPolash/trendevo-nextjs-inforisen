@@ -55,8 +55,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/facebook.png',
-        decorationImage: '/images/our-services/decorations/facebook-right.png',
+        icon: '/images/our-services/platforms/facebook.webp',
+        decorationImage: '/images/our-services/decorations/facebook-right.webp',
         marketingTitle: 'Facebook Marketing Services in the UK',
         description:
           'Boost your UK brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -97,7 +97,7 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/instagram.png',
+        icon: '/images/our-services/platforms/instagram.webp',
         decorationImage: '/images/our-services/decorations/instagram-service.png',
         marketingTitle: 'Instagram Marketing Services in the UK',
         description:
@@ -182,7 +182,7 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/youtube.png',
+        icon: '/images/our-services/platforms/youtube.webp',
         decorationImage: '/images/our-services/decorations/youtube-service.png',
         marketingTitle: 'YouTube Marketing Services in the UK',
         description:
@@ -224,7 +224,7 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/tiktok.png',
+        icon: '/images/our-services/platforms/tiktok.webp',
         decorationImage: '/images/our-services/decorations/tiktok-service.png',
         marketingTitle: 'TikTok Marketing Services in the UK',
         description:
@@ -266,7 +266,7 @@ export const countryServiceContent: Record<
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/linkedin.png',
+        icon: '/images/our-services/platforms/linkedin.webp',
         decorationImage: '/images/our-services/decorations/lindein-service.png',
         marketingTitle: 'LinkedIn Marketing Services in the UK',
         description:
@@ -325,8 +325,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/facebook.png',
-        decorationImage: '/images/our-services/decorations/facebook-right.png',
+        icon: '/images/our-services/platforms/facebook.webp',
+        decorationImage: '/images/our-services/decorations/facebook-right.webp',
         marketingTitle: 'Facebook Marketing Services in Bangladesh',
         description:
           'Boost your Bangladeshi brand visibility and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns built for the local market.',
@@ -367,7 +367,7 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/instagram.png',
+        icon: '/images/our-services/platforms/instagram.webp',
         decorationImage: '/images/our-services/decorations/instagram-service.png',
         marketingTitle: 'Instagram Marketing Services in Bangladesh',
         description:
@@ -409,7 +409,7 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/youtube.png',
+        icon: '/images/our-services/platforms/youtube.webp',
         decorationImage: '/images/our-services/decorations/youtube-service.png',
         marketingTitle: 'YouTube Marketing Services in Bangladesh',
         description:
@@ -451,7 +451,7 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/tiktok.png',
+        icon: '/images/our-services/platforms/tiktok.webp',
         decorationImage: '/images/our-services/decorations/tiktok-service.png',
         marketingTitle: 'TikTok Marketing Services in Bangladesh',
         description:
@@ -493,7 +493,7 @@ export const countryServiceContent: Record<
       {
         id: 'telegram',
         label: 'Telegram',
-        icon: '/images/our-services/platforms/telegram.png',
+        icon: '/images/our-services/platforms/telegram.webp',
         decorationImage: '/images/our-services/decorations/telegram-service.png',
         marketingTitle: 'Telegram Marketing Services in Bangladesh',
         description:

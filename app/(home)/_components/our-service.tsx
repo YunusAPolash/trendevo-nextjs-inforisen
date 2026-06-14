@@ -44,8 +44,8 @@ const platforms: Platform[] = [
   {
     id: 'facebook',
     label: 'Facebook',
-    icon: '/images/our-services/platforms/facebook.png',
-    decorationImage: '/images/our-services/decorations/facebook-right.png',
+    icon: '/images/our-services/platforms/facebook.webp',
+    decorationImage: '/images/our-services/decorations/facebook-right.webp',
     marketingTitle: 'Facebook Marketing Services',
     description:
       'Boost your brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -86,7 +86,7 @@ const platforms: Platform[] = [
   {
     id: 'instagram',
     label: 'Instagram',
-    icon: '/images/our-services/platforms/instagram.png',
+    icon: '/images/our-services/platforms/instagram.webp',
     decorationImage: '/images/our-services/decorations/instagram-service.png',
     marketingTitle: 'Instagram Marketing Services',
     description:
@@ -169,7 +169,7 @@ const platforms: Platform[] = [
   {
     id: 'youtube',
     label: 'YouTube',
-    icon: '/images/our-services/platforms/youtube.png',
+    icon: '/images/our-services/platforms/youtube.webp',
     decorationImage: '/images/our-services/decorations/youtube-service.png',
     marketingTitle: 'YouTube Marketing Services',
     description:
@@ -210,7 +210,7 @@ const platforms: Platform[] = [
   {
     id: 'tiktok',
     label: 'TikTok',
-    icon: '/images/our-services/platforms/tiktok.png',
+    icon: '/images/our-services/platforms/tiktok.webp',
     decorationImage: '/images/our-services/decorations/tiktok-service.png',
     marketingTitle: 'TikTok Marketing Services',
     description:
@@ -251,7 +251,7 @@ const platforms: Platform[] = [
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    icon: '/images/our-services/platforms/linkedin.png',
+    icon: '/images/our-services/platforms/linkedin.webp',
     decorationImage: '/images/our-services/decorations/lindein-service.png',
     marketingTitle: 'LinkedIn Marketing Services',
     description:
@@ -292,7 +292,7 @@ const platforms: Platform[] = [
   {
     id: 'telegram',
     label: 'Telegram',
-    icon: '/images/our-services/platforms/telegram.png',
+    icon: '/images/our-services/platforms/telegram.webp',
     decorationImage: '/images/our-services/decorations/telegram-service.png',
     marketingTitle: 'Telegram Marketing Services',
     description:
@@ -333,7 +333,7 @@ const platforms: Platform[] = [
   {
     id: 'discord',
     label: 'Discord',
-    icon: '/images/our-services/platforms/discord.png',
+    icon: '/images/our-services/platforms/discord.webp',
     decorationImage: '/images/our-services/decorations/discord-service.png',
     marketingTitle: 'Discord Marketing Services',
     description:
@@ -374,7 +374,7 @@ const platforms: Platform[] = [
   {
     id: 'spotify',
     label: 'Spotify',
-    icon: '/images/our-services/platforms/spotify.png',
+    icon: '/images/our-services/platforms/spotify.webp',
     decorationImage: '/images/our-services/decorations/spotify-service.png',
     marketingTitle: 'Spotify Marketing Services',
     description:
@@ -456,7 +456,7 @@ const platforms: Platform[] = [
   {
     id: 'snapchat',
     label: 'Snapchat',
-    icon: '/images/our-services/platforms/snapchat.png',
+    icon: '/images/our-services/platforms/snapchat.webp',
     decorationImage: '/images/our-services/decorations/snapchat-service.png',
     marketingTitle: 'Snapchat Marketing Services',
     description:
@@ -759,15 +759,15 @@ function ServiceIllustration() {
       <ServiceIllustrationLayers
         className="dark:hidden"
         backgroundImage={SERVICE_ILLUSTRATION_LIGHT_BG}
-        bgSrc="/images/our-services/decorations/hero-illustration-light-bg.png"
-        foregroundSrc="/images/our-services/decorations/hero-illustration-light.png"
+        bgSrc="/images/our-services/decorations/hero-illustration-light-bg.webp"
+        foregroundSrc="/images/our-services/decorations/hero-illustration-light.webp"
         priority
       />
       <ServiceIllustrationLayers
         className="hidden dark:block"
         backgroundImage={SERVICE_ILLUSTRATION_DARK_BG}
-        bgSrc="/images/our-services/decorations/hero-illustration-dark-bg.png"
-        foregroundSrc="/images/our-services/decorations/hero-illustration-dark.png"
+        bgSrc="/images/our-services/decorations/hero-illustration-dark-bg.webp"
+        foregroundSrc="/images/our-services/decorations/hero-illustration-dark.webp"
       />
     </div>
   );
