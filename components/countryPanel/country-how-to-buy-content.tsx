@@ -24,7 +24,17 @@ export type CountryHowToBuyContent = {
   inactiveStepIcon: string;
 };
 
-export type CountryHowToBuySlug = 'smm-panel-uk' | 'smm-panel-bangladesh';
+export type CountryHowToBuySlug =
+  | 'smm-panel-uk'
+  | 'smm-panel-bangladesh'
+  | 'smm-panel-vietnam'
+  | 'smm-panel-thailand'
+  | 'smm-panel-pakistan'
+  | 'smm-panel-nigeria'
+  | 'smm-panel-brazil'
+  | 'smm-panel-egypt'
+  | 'smm-panel-india'
+  | 'smm-panel-indonesia';
 
 export const countryHowToBuyContent: Record<
   CountryHowToBuySlug,
@@ -105,6 +115,350 @@ export const countryHowToBuyContent: Record<
         title: 'Place your order',
         description:
           'Submit your link, confirm the order, and track delivery from your dashboard. Support is available 24/7 in Bangla and English.',
+      },
+    ],
+    underlineSrc: '/images/country/uk/uk-section-underline.svg',
+    underlineWidth: 124,
+    titleClassName: 'text-[28px] text-[#13203b] sm:text-[32px] lg:text-[36px]',
+    subtitleClassName: 'text-base font-medium text-[#4f586d] sm:text-lg',
+    sectionBg: 'section-15',
+    sectionClassName: 'overflow-hidden py-12 sm:py-16 lg:py-[60px]',
+    activeStepIcon: '/images/country/uk/uk-how-to-buy-step-active-icon.svg',
+    inactiveStepIcon: '/images/country/uk/uk-how-to-buy-step-icon.svg',
+  },
+  'smm-panel-vietnam': {
+    badge: 'How to Buy',
+    title: (
+      <>
+        How to buy{' '}
+        <span className="text-gradient">SMM panel services in Vietnam?</span>
+      </>
+    ),
+    subtitle:
+      'Follow a simple process to boost your social growth instantly with TrendEvo',
+    buttonLabel: 'Get Started Now',
+    buttonHref: '#',
+    steps: [
+      {
+        title: 'Sign Up for Free',
+        description:
+          'Create your free account in seconds and unlock full access to our SMM panel built for Vietnamese businesses, creators, and resellers.',
+      },
+      {
+        title: 'Add funds',
+        description:
+          'Top up your wallet using secure payment options including cards, e-wallets, and crypto. Funds are added instantly so you can start ordering right away.',
+      },
+      {
+        title: 'Select service',
+        description:
+          'Browse our full catalog of SMM services for Instagram, Facebook, TikTok, YouTube, and more. Pick the package that fits your growth goals in Vietnam.',
+      },
+      {
+        title: 'Place your order',
+        description:
+          'Enter your profile or post link, confirm your order, and track delivery in real time from your dashboard. Support is available 24/7 in Vietnamese and English.',
+      },
+    ],
+    underlineSrc: '/images/country/uk/uk-section-underline.svg',
+    underlineWidth: 124,
+    titleClassName: 'text-[28px] text-[#13203b] sm:text-[32px] lg:text-[36px]',
+    subtitleClassName: 'text-base font-medium text-[#4f586d] sm:text-lg',
+    sectionBg: 'section-15',
+    sectionClassName: 'overflow-hidden py-12 sm:py-16 lg:py-[60px]',
+    activeStepIcon: '/images/country/uk/uk-how-to-buy-step-active-icon.svg',
+    inactiveStepIcon: '/images/country/uk/uk-how-to-buy-step-icon.svg',
+  },
+  'smm-panel-thailand': {
+    badge: 'How to Buy',
+    title: (
+      <>
+        How to buy{' '}
+        <span className="text-gradient">SMM panel services in Thailand?</span>
+      </>
+    ),
+    subtitle:
+      'Follow a simple process to boost your social growth instantly with TrendEvo',
+    buttonLabel: 'Get Started Now',
+    buttonHref: '#',
+    steps: [
+      {
+        title: 'Sign Up for Free',
+        description:
+          'Create your free account in seconds and unlock full access to our SMM panel built for Thai businesses, creators, and resellers.',
+      },
+      {
+        title: 'Add funds',
+        description:
+          'Top up your wallet using secure payment options including cards, e-wallets, and cryptocurrencies. Funds are added instantly so you can start ordering right away.',
+      },
+      {
+        title: 'Select service',
+        description:
+          'Browse our full catalog of SMM services for Instagram, Facebook, TikTok, YouTube, and more. Pick the package that fits your growth goals in Thailand.',
+      },
+      {
+        title: 'Place your order',
+        description:
+          'Enter your profile or post link, confirm your order, and track delivery in real time from your dashboard. Support is available 24/7 in Thai and English.',
+      },
+    ],
+    underlineSrc: '/images/country/uk/uk-section-underline.svg',
+    underlineWidth: 124,
+    titleClassName: 'text-[28px] text-[#13203b] sm:text-[32px] lg:text-[36px]',
+    subtitleClassName: 'text-base font-medium text-[#4f586d] sm:text-lg',
+    sectionBg: 'section-15',
+    sectionClassName: 'overflow-hidden py-12 sm:py-16 lg:py-[60px]',
+    activeStepIcon: '/images/country/uk/uk-how-to-buy-step-active-icon.svg',
+    inactiveStepIcon: '/images/country/uk/uk-how-to-buy-step-icon.svg',
+  },
+  'smm-panel-pakistan': {
+    badge: 'How to Buy',
+    title: (
+      <>
+        How to buy{' '}
+        <span className="text-gradient">SMM panel services in Pakistan?</span>
+      </>
+    ),
+    subtitle:
+      'Follow a simple process to boost your social growth instantly with TrendEvo',
+    buttonLabel: 'Get Started Now',
+    buttonHref: '#',
+    steps: [
+      {
+        title: 'Sign Up for Free',
+        description:
+          'Create your free account in seconds and unlock full access to our SMM panel built for Pakistani businesses, creators, and resellers.',
+      },
+      {
+        title: 'Add funds',
+        description:
+          'Top up your wallet using secure payment options including cards, JazzCash, Easypaisa, and cryptocurrencies. Funds are added instantly so you can start ordering right away.',
+      },
+      {
+        title: 'Select service',
+        description:
+          'Browse our full catalog of SMM services for Instagram, Facebook, TikTok, YouTube, and more. Pick the package that fits your growth goals in Pakistan.',
+      },
+      {
+        title: 'Place your order',
+        description:
+          'Enter your profile or post link, confirm your order, and track delivery in real time from your dashboard. Support is available 24/7 in Urdu and English.',
+      },
+    ],
+    underlineSrc: '/images/country/uk/uk-section-underline.svg',
+    underlineWidth: 124,
+    titleClassName: 'text-[28px] text-[#13203b] sm:text-[32px] lg:text-[36px]',
+    subtitleClassName: 'text-base font-medium text-[#4f586d] sm:text-lg',
+    sectionBg: 'section-15',
+    sectionClassName: 'overflow-hidden py-12 sm:py-16 lg:py-[60px]',
+    activeStepIcon: '/images/country/uk/uk-how-to-buy-step-active-icon.svg',
+    inactiveStepIcon: '/images/country/uk/uk-how-to-buy-step-icon.svg',
+  },
+  'smm-panel-nigeria': {
+    badge: 'How to Buy',
+    title: (
+      <>
+        How to buy{' '}
+        <span className="text-gradient">SMM panel services in Nigeria?</span>
+      </>
+    ),
+    subtitle:
+      'Follow a simple process to boost your social growth instantly with TrendEvo',
+    buttonLabel: 'Get Started Now',
+    buttonHref: '#',
+    steps: [
+      {
+        title: 'Sign Up for Free',
+        description:
+          'Create your free account in seconds and unlock full access to our SMM panel built for Nigerian businesses, creators, and resellers.',
+      },
+      {
+        title: 'Add funds',
+        description:
+          'Top up your wallet using secure payment options including cards, bank transfers, and cryptocurrencies. Funds are added instantly so you can start ordering right away.',
+      },
+      {
+        title: 'Select service',
+        description:
+          'Browse our full catalog of SMM services for Instagram, Facebook, TikTok, YouTube, and more. Pick the package that fits your growth goals in Nigeria.',
+      },
+      {
+        title: 'Place your order',
+        description:
+          'Enter your profile or post link, confirm your order, and track delivery in real time from your dashboard. Support is available 24/7 in English and local languages.',
+      },
+    ],
+    underlineSrc: '/images/country/uk/uk-section-underline.svg',
+    underlineWidth: 124,
+    titleClassName: 'text-[28px] text-[#13203b] sm:text-[32px] lg:text-[36px]',
+    subtitleClassName: 'text-base font-medium text-[#4f586d] sm:text-lg',
+    sectionBg: 'section-15',
+    sectionClassName: 'overflow-hidden py-12 sm:py-16 lg:py-[60px]',
+    activeStepIcon: '/images/country/uk/uk-how-to-buy-step-active-icon.svg',
+    inactiveStepIcon: '/images/country/uk/uk-how-to-buy-step-icon.svg',
+  },
+  'smm-panel-brazil': {
+    badge: 'How to Buy',
+    title: (
+      <>
+        How to buy{' '}
+        <span className="text-gradient">SMM panel services in Brazil?</span>
+      </>
+    ),
+    subtitle:
+      'Follow a simple process to boost your social growth instantly with TrendEvo',
+    buttonLabel: 'Get Started Now',
+    buttonHref: '#',
+    steps: [
+      {
+        title: 'Sign Up for Free',
+        description:
+          'Create your free account in seconds and unlock full access to our SMM panel built for Brazilian businesses, creators, and resellers.',
+      },
+      {
+        title: 'Add funds',
+        description:
+          'Top up your wallet using secure payment options including cards, PIX, and cryptocurrencies. Funds are added instantly so you can start ordering right away.',
+      },
+      {
+        title: 'Select service',
+        description:
+          'Browse our full catalog of SMM services for Instagram, Facebook, TikTok, YouTube, and more. Pick the package that fits your growth goals in Brazil.',
+      },
+      {
+        title: 'Place your order',
+        description:
+          'Enter your profile or post link, confirm your order, and track delivery in real time from your dashboard. Support is available 24/7 in Portuguese and English.',
+      },
+    ],
+    underlineSrc: '/images/country/uk/uk-section-underline.svg',
+    underlineWidth: 124,
+    titleClassName: 'text-[28px] text-[#13203b] sm:text-[32px] lg:text-[36px]',
+    subtitleClassName: 'text-base font-medium text-[#4f586d] sm:text-lg',
+    sectionBg: 'section-15',
+    sectionClassName: 'overflow-hidden py-12 sm:py-16 lg:py-[60px]',
+    activeStepIcon: '/images/country/uk/uk-how-to-buy-step-active-icon.svg',
+    inactiveStepIcon: '/images/country/uk/uk-how-to-buy-step-icon.svg',
+  },
+  'smm-panel-egypt': {
+    badge: 'How to Buy',
+    title: (
+      <>
+        How to buy{' '}
+        <span className="text-gradient">SMM panel services in Egypt?</span>
+      </>
+    ),
+    subtitle:
+      'Follow a simple process to boost your social growth instantly with TrendEvo',
+    buttonLabel: 'Get Started Now',
+    buttonHref: '#',
+    steps: [
+      {
+        title: 'Sign Up for Free',
+        description:
+          'Create your free account in seconds and unlock full access to our SMM panel built for Egyptian businesses, creators, and resellers.',
+      },
+      {
+        title: 'Add funds',
+        description:
+          'Top up your wallet using secure payment options including cards, e-wallets, and cryptocurrencies. Funds are added instantly so you can start ordering right away.',
+      },
+      {
+        title: 'Select service',
+        description:
+          'Browse our full catalog of SMM services for Instagram, Facebook, TikTok, YouTube, and more. Pick the package that fits your growth goals in Egypt.',
+      },
+      {
+        title: 'Place your order',
+        description:
+          'Enter your profile or post link, confirm your order, and track delivery in real time from your dashboard. Support is available 24/7 in Arabic and English.',
+      },
+    ],
+    underlineSrc: '/images/country/uk/uk-section-underline.svg',
+    underlineWidth: 124,
+    titleClassName: 'text-[28px] text-[#13203b] sm:text-[32px] lg:text-[36px]',
+    subtitleClassName: 'text-base font-medium text-[#4f586d] sm:text-lg',
+    sectionBg: 'section-15',
+    sectionClassName: 'overflow-hidden py-12 sm:py-16 lg:py-[60px]',
+    activeStepIcon: '/images/country/uk/uk-how-to-buy-step-active-icon.svg',
+    inactiveStepIcon: '/images/country/uk/uk-how-to-buy-step-icon.svg',
+  },
+  'smm-panel-india': {
+    badge: 'How to Buy',
+    title: (
+      <>
+        How to buy{' '}
+        <span className="text-gradient">SMM panel services in India?</span>
+      </>
+    ),
+    subtitle:
+      'Follow a simple process to boost your social growth instantly with TrendEvo',
+    buttonLabel: 'Get Started Now',
+    buttonHref: '#',
+    steps: [
+      {
+        title: 'Sign Up for Free',
+        description:
+          'Create your free account in seconds and unlock full access to our SMM panel built for Indian businesses, creators, and resellers.',
+      },
+      {
+        title: 'Add funds',
+        description:
+          'Top up your wallet using secure payment options including cards, UPI, and cryptocurrencies. Funds are added instantly so you can start ordering right away.',
+      },
+      {
+        title: 'Select service',
+        description:
+          'Browse our full catalog of SMM services for Instagram, Facebook, TikTok, YouTube, and more. Pick the package that fits your growth goals in India.',
+      },
+      {
+        title: 'Place your order',
+        description:
+          'Enter your profile or post link, confirm your order, and track delivery in real time from your dashboard. Support is available 24/7 in Hindi and English.',
+      },
+    ],
+    underlineSrc: '/images/country/uk/uk-section-underline.svg',
+    underlineWidth: 124,
+    titleClassName: 'text-[28px] text-[#13203b] sm:text-[32px] lg:text-[36px]',
+    subtitleClassName: 'text-base font-medium text-[#4f586d] sm:text-lg',
+    sectionBg: 'section-15',
+    sectionClassName: 'overflow-hidden py-12 sm:py-16 lg:py-[60px]',
+    activeStepIcon: '/images/country/uk/uk-how-to-buy-step-active-icon.svg',
+    inactiveStepIcon: '/images/country/uk/uk-how-to-buy-step-icon.svg',
+  },
+  'smm-panel-indonesia': {
+    badge: 'How to Buy',
+    title: (
+      <>
+        How to buy{' '}
+        <span className="text-gradient">SMM panel services in Indonesia?</span>
+      </>
+    ),
+    subtitle:
+      'Follow a simple process to boost your social growth instantly with TrendEvo',
+    buttonLabel: 'Get Started Now',
+    buttonHref: '#',
+    steps: [
+      {
+        title: 'Sign Up for Free',
+        description:
+          'Create your free account in seconds and unlock full access to our SMM panel built for Indonesian businesses, creators, and resellers.',
+      },
+      {
+        title: 'Add funds',
+        description:
+          'Top up your wallet using secure payment options including cards, e-wallets, and cryptocurrencies. Funds are added instantly so you can start ordering right away.',
+      },
+      {
+        title: 'Select service',
+        description:
+          'Browse our full catalog of SMM services for Instagram, Facebook, TikTok, YouTube, and more. Pick the package that fits your growth goals in Indonesia.',
+      },
+      {
+        title: 'Place your order',
+        description:
+          'Enter your profile or post link, confirm your order, and track delivery in real time from your dashboard. Support is available 24/7 in Indonesian and English.',
       },
     ],
     underlineSrc: '/images/country/uk/uk-section-underline.svg',

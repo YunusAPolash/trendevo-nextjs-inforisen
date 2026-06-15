@@ -1,0 +1,108 @@
+import type { FaqSectionData } from '@/components/sections/faq-section';
+
+type SEO = {
+  title: string;
+  description: string;
+  canonical?: string;
+};
+
+type SmmPanelnigeriaPageData = {
+  seo: SEO;
+  slug: 'smm-panel-nigeria';
+  faq: FaqSectionData;
+  cta: {
+    title: string;
+    description: string;
+    primaryButtonLabel: string;
+    secondaryButtonLabel: string;
+    secondaryButtonHref: string;
+    imageSrc: string;
+    imageAlt: string;
+  };
+};
+
+const smmPanelnigeriaFaqItems = [
+  {
+    question: 'What is an SMM panel for Nigeria?',
+    answer:
+      'An SMM panel for Nigeria is a platform where businesses, creators, and agencies can order social media marketing services such as followers, likes, views, and engagement. TrendEvo provides a trusted Nigeria-focused panel with fast delivery, affordable pricing, and reliable support.',
+  },
+  {
+    question: 'How fast will my SMM order be delivered in Nigeria?',
+    answer:
+      'Most orders on TrendEvo start processing within minutes after payment. Delivery speed depends on the service and quantity, but our system is built for quick, reliable fulfillment so Nigerian clients can grow their social presence without delays.',
+  },
+  {
+    question: 'Are followers, likes, and views real?',
+    answer:
+      'TrendEvo focuses on authentic engagement that helps your profiles grow naturally. Our services are designed to improve visibility, credibility, and reach across platforms like Instagram, Facebook, TikTok, and YouTube.',
+  },
+  {
+    question: 'Is TrendEvo safe to use for Nigerian businesses and creators?',
+    answer:
+      'Yes. We use secure order processing and never ask for your social media passwords. Your account details stay protected, and our team monitors orders to ensure safe, compliant delivery for users in Nigeria.',
+  },
+  {
+    question: 'What SMM services does TrendEvo offer for Nigerian clients?',
+    answer:
+      'TrendEvo offers a wide range of services for the Nigeria market, including Instagram followers and likes, Facebook page engagement, TikTok views, YouTube subscribers, and more — all available from one easy-to-use dashboard.',
+  },
+  {
+    question: 'What payment methods can I use in Nigeria?',
+    answer:
+      'TrendEvo supports multiple secure payment options for Nigerian users, including cards, bank transfers, and cryptocurrencies. All transactions are encrypted and processed safely so you can top up and order with confidence.',
+  },
+  {
+    question: 'What happens if my order drops?',
+    answer:
+      'If an order drops within the guarantee period, contact our support team. We review eligible cases and provide refill or resolution according to the service terms.',
+  },
+  {
+    question: 'Do you offer 24/7 support for Nigeria SMM services?',
+    answer:
+      'Yes. Our support team is available around the clock to help Nigerian clients with orders, delivery updates, payments, and account guidance whenever you need assistance.',
+  },
+  {
+    question: 'Can I place bulk orders for Nigeria social media growth?',
+    answer:
+      'Yes. TrendEvo supports bulk and repeat orders for Nigerian agencies, resellers, and businesses that need consistent social media growth at scale.',
+  },
+  {
+    question: 'How do I place an SMM order on TrendEvo from Nigeria?',
+    answer:
+      'Create an account, choose your service, enter your profile or post link, select a package, and complete payment. You can track order status from your dashboard at any time.',
+  },
+];
+
+export const data: SmmPanelnigeriaPageData = {
+  seo: {
+    title: 'SMM Panel Nigeria | TrendEvo',
+    description:
+      'TrendEvo is a trusted SMM panel for Nigerian businesses and creators. Get fast, reliable, and affordable social media marketing services across Facebook, Instagram, TikTok, and YouTube.',
+    canonical: '/smm-panel-nigeria',
+  },
+
+  slug: 'smm-panel-nigeria',
+
+  faq: {
+    label: 'FAQ',
+    title: 'Frequently Asked gt<Questions> for Nigeria',
+    subtitle:
+      'Find quick answers about TrendEvo SMM panel services in Nigeria — delivery, payments, safety, and support.',
+    bg: 'section-7',
+    items: smmPanelnigeriaFaqItems,
+  },
+
+  cta: {
+    title:
+      'Ready to gt<Grow Your Social Media in Nigeria> with TrendEvo',
+    description:
+      'Join thousands of Nigerian businesses and creators growing faster with TrendEvo. Get started in under 60 seconds with fast delivery, real engagement, and 24/7 support tailored for the Nigeria market.',
+    primaryButtonLabel: 'Get Started Now',
+    secondaryButtonLabel: 'See all Services',
+    secondaryButtonHref: '/services',
+    imageSrc: '/images/cta/cta-character-illustration.webp',
+    imageAlt:
+      'Start growing your social media presence in Nigeria with TrendEvo',
+  },
+};
