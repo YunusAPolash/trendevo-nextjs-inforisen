@@ -296,7 +296,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/country/vietnam/advantages-of-using-our-panel-services-in-vietnam.png',
+      src: '/images/country/vietnam/advantages-of-using-our-panel-services-in-vietnam.webp',
       alt: 'Advantages of using our panel services in Vietnam',
     },
     leftAdvantages: [
@@ -376,7 +376,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/country/thailand/advantages-of-using-our-panel-services-in-thailand.png',
+      src: '/images/country/thailand/advantages-of-using-our-panel-services-in-thailand.webp',
       alt: 'Advantages of using our panel services in Thailand',
     },
     leftAdvantages: [
@@ -456,7 +456,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/country/pakistan/advantages-of-using-our-panel-services-in-pakistan.png',
+      src: '/images/country/pakistan/advantages-of-using-our-panel-services-in-pakistan.webp',
       alt: 'Advantages of using our panel services in Pakistan',
     },
     leftAdvantages: [
@@ -536,7 +536,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/country/nigeria/advantages-of-using-our-panel-services-in-nigeria.png',
+      src: '/images/country/nigeria/advantages-of-using-our-panel-services-in-nigeria.webp',
       alt: 'Advantages of using our panel services in Nigeria',
     },
     leftAdvantages: [
@@ -616,7 +616,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/country/brazil/advantages-of-using-our-panel-services-in-brazil.png',
+      src: '/images/country/brazil/advantages-of-using-our-panel-services-in-brazil.webp',
       alt: 'Advantages of using our panel services in Brazil',
     },
     leftAdvantages: [
@@ -696,7 +696,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/country/egypt/advantages-of-using-our-panel-services-in-egypt.png',
+      src: '/images/country/egypt/advantages-of-using-our-panel-services-in-egypt.webp',
       alt: 'Advantages of using our panel services in Egypt',
     },
     leftAdvantages: [
@@ -776,7 +776,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/country/india/advantages-of-using-our-panel-services-in-india.png',
+      src: '/images/country/india/advantages-of-using-our-panel-services-in-india.webp',
       alt: 'Advantages of using our panel services in India',
     },
     leftAdvantages: [
@@ -856,7 +856,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/country/indonesia/advantages-of-using-our-panel-services-in-indonesia.png',
+      src: '/images/country/indonesia/advantages-of-using-our-panel-services-in-indonesia.webp',
       alt: 'Advantages of using our panel services in Indonesia',
     },
     leftAdvantages: [

@@ -71,7 +71,7 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/country/vietnam/the-best-panel-for-vietnam.png',
+      src: '/images/country/vietnam/the-best-panel-for-vietnam.webp',
       alt: 'The best SMM panel for Vietnam — TrendEvo social media growth',
       width: 648,
       height: 648,
@@ -100,7 +100,7 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/country/thailand/the-best-panel-for-thailand.png',
+      src: '/images/country/thailand/the-best-panel-for-thailand.webp',
       alt: 'The best SMM panel for Thailand — TrendEvo social media growth',
       width: 648,
       height: 648,
@@ -129,7 +129,7 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/country/pakistan/the-best-panel-for-pakistan.png',
+      src: '/images/country/pakistan/the-best-panel-for-pakistan.webp',
       alt: 'The best SMM panel for Pakistan — TrendEvo social media growth',
       width: 648,
       height: 648,
@@ -158,7 +158,7 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/country/nigeria/the-best-panel-for-nigeria.png',
+      src: '/images/country/nigeria/the-best-panel-for-nigeria.webp',
       alt: 'The best SMM panel for Nigeria — TrendEvo social media growth',
       width: 648,
       height: 648,
@@ -187,7 +187,7 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/country/brazil/the-best-panel-for-brazil.png',
+      src: '/images/country/brazil/the-best-panel-for-brazil.webp',
       alt: 'The best SMM panel for Brazil — TrendEvo social media growth',
       width: 648,
       height: 648,
@@ -216,7 +216,7 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/country/egypt/the-best-panel-for-egypt.png',
+      src: '/images/country/egypt/the-best-panel-for-egypt.webp',
       alt: 'The best SMM panel for Egypt — TrendEvo social media growth',
       width: 648,
       height: 648,
@@ -245,7 +245,7 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/country/india/the-best-panel-for-india.png',
+      src: '/images/country/india/the-best-panel-for-india.webp',
       alt: 'The best SMM panel for India — TrendEvo social media growth',
       width: 648,
       height: 648,
@@ -274,7 +274,7 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     signInLabel: 'Sign In',
     createAccountLabel: 'Create an Account',
     illustration: {
-      src: '/images/country/indonesia/the-best-panel-for-indonesia.png',
+      src: '/images/country/indonesia/the-best-panel-for-indonesia.webp',
       alt: 'The best SMM panel for Indonesia — TrendEvo social media growth',
       width: 648,
       height: 648,
