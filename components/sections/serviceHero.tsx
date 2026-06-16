@@ -49,6 +49,8 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
             width={image.width}
             height={image.height}
             priority
+            quality={100}
+            unoptimized
             sizes="(max-width: 1024px) 100vw, 583px"
             className="block h-auto w-full"
           />

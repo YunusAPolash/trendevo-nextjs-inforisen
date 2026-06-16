@@ -14,16 +14,16 @@ const quickLinks = [
 
 const smmPanelLinks = [
   { label: 'Facebook SMM Panel', href: '/facebook-smm-panel' },
-  { label: 'Instagram SMM Panel', href: '/services' },
-  { label: 'YouTube SMM Panel', href: '/services' },
-  { label: 'X-Twitter SMM Panel', href: '/services' },
-  { label: 'Telegram SMM Panel', href: '/services' },
-  { label: 'TikTok SMM Panel', href: '/services' },
+  { label: 'Instagram SMM Panel', href: '/instagram-smm-panel' },
+  { label: 'YouTube SMM Panel', href: '/youtube-smm-panel' },
+  { label: 'X-Twitter SMM Panel', href: '/x-twitter-smm-panel' },
+  { label: 'Telegram SMM Panel', href: '/telegram-smm-panel' },
+  { label: 'TikTok SMM Panel', href: '/tiktok-smm-panel' },
   { label: 'SMM Panel UK', href: '/smm-panel-uk' },
-  { label: 'Spotify SMM Panel', href: '/services/pricing' },
-  { label: 'Soundcloud SMM Panel', href: '/services/pricing' },
-  { label: 'Twitch SMM Panel', href: '/services/pricing' },
-  { label: 'Snapchat SMM Panel', href: '/services/pricing' },
+  { label: 'Spotify SMM Panel', href: '/spotify-smm-panel' },
+  { label: 'Soundcloud SMM Panel', href: '/soundcloud-smm-panel' },
+  { label: 'Twitch SMM Panel', href: '/twitch-smm-panel' },
+  { label: 'Snapchat SMM Panel', href: '/snapchat-smm-panel' },
 ];
 
 const companyLinks = [
@@ -37,15 +37,15 @@ const companyLinks = [
 const serviceLinks = [
   { label: 'Facebook Services', href: '/facebook-smm-panel' },
   { label: 'Facebook Page Followers', href: '/facebook-page-followers' },
-  { label: 'Youtube Services', href: '/services' },
-  { label: 'Instagram Services', href: '/services' },
-  { label: 'X-Twitter Services', href: '/services' },
-  { label: 'Telegram Services', href: '/services' },
-  { label: 'TikTok Services', href: '/services' },
-  { label: 'Spotify Services', href: '/services/pricing' },
-  { label: 'Soundcloud Services', href: '/services/pricing' },
-  { label: 'Twitch Services', href: '/services/pricing' },
-  { label: 'Snapchat Services', href: '/services/pricing' },
+  { label: 'Youtube Services', href: '/youtube-smm-panel' },
+  { label: 'Instagram Services', href: '/instagram-smm-panel' },
+  { label: 'X-Twitter Services', href: '/x-twitter-smm-panel' },
+  { label: 'Telegram Services', href: '/telegram-smm-panel' },
+  { label: 'TikTok Services', href: '/tiktok-smm-panel' },
+  { label: 'Spotify Services', href: '/spotify-smm-panel' },
+  { label: 'Soundcloud Services', href: '/soundcloud-smm-panel' },
+  { label: 'Twitch Services', href: '/twitch-smm-panel' },
+  { label: 'Snapchat Services', href: '/snapchat-smm-panel' },
 ];
 
 const socialLinks = [

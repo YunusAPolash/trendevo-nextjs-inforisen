@@ -29,7 +29,14 @@ export type SocialServiceContent = {
 export type SocialServiceSlug =
   | 'facebook-smm-panel'
   | 'instagram-smm-panel'
-  | 'telegram-smm-panel';
+  | 'telegram-smm-panel'
+  | 'youtube-smm-panel'
+  | 'tiktok-smm-panel'
+  | 'x-twitter-smm-panel'
+  | 'spotify-smm-panel'
+  | 'soundcloud-smm-panel'
+  | 'twitch-smm-panel'
+  | 'snapchat-smm-panel';
 
 export const socialServiceContent: Record<SocialServiceSlug, SocialServiceContent> = {
   'facebook-smm-panel': {
@@ -152,7 +159,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Instagram Followers',
         description:
           'Get more real followers for your Instagram profile. Our solution helps boost your audience and reach more people organically.',
-        icon: '/images/service-smm-panel/instagram-followers.png',
+        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -160,31 +167,31 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Instagram Post Likes',
         description:
           'Raise the number of likes on your posts. This is ideal for brands who want more visibility and engagement on their content.',
-        icon: '/images/service-smm-panel/instagram-post-likes.png',
-        iconWidth: 54,
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
+        iconWidth: 60,
         iconHeight: 54,
       },
       {
         title: 'Instagram Reel Views',
         description:
           'Drive more views to your reels to increase reach, discoverability, and follower growth on Instagram.',
-        icon: '/images/service-smm-panel/instagram-reel-views.png',
-        iconWidth: 54,
-        iconHeight: 54,
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
+        iconWidth: 40,
+        iconHeight: 40,
       },
       {
         title: 'Instagram Story Views',
         description:
           'Reach more views on your Instagram stories to keep your audience interested and updated on what you share.',
-        icon: '/images/service-smm-panel/instagram-story-views.png',
-        iconWidth: 54,
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
+        iconWidth: 70,
         iconHeight: 54,
       },
       {
         title: 'Instagram Comments',
         description:
           'Get more comments on your posts to make your content more engaging and visible to your followers.',
-        icon: '/images/service-smm-panel/instagram-comments.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -192,15 +199,15 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Instagram Profile Visits',
         description:
           'Increase profile visits to attract more potential followers and grow your Instagram presence faster.',
-        icon: '/images/service-smm-panel/instagram-profile-visits.png',
-        iconWidth: 54,
-        iconHeight: 54,
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-profile-followers-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
       },
       {
         title: 'Instagram Shares',
         description:
           'Get more shares on your posts to expand your reach beyond your current follower base.',
-        icon: '/images/service-smm-panel/instagram-shares.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-group-member-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -208,7 +215,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Instagram Saves',
         description:
           'Boost saves on your posts to signal quality content and improve visibility in the Instagram algorithm.',
-        icon: '/images/service-smm-panel/instagram-saves.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-like-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -216,7 +223,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Instagram Live Views',
         description:
           'Increase live stream views to build credibility and attract more real-time engagement during your broadcasts.',
-        icon: '/images/service-smm-panel/instagram-live-views.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -240,7 +247,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Telegram Channel Members',
         description:
           'Get more real members for your Telegram channel. Our solution helps boost your audience and reach more people.',
-        icon: '/images/service-smm-panel/telegram-channel-members.png',
+        icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -248,15 +255,15 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Telegram Post Views',
         description:
           'Increase views on your channel posts to improve visibility and attract more subscribers to your content.',
-        icon: '/images/service-smm-panel/telegram-post-views.png',
-        iconWidth: 54,
-        iconHeight: 54,
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
+        iconWidth: 40,
+        iconHeight: 40,
       },
       {
         title: 'Telegram Reactions',
         description:
           'Get more reactions on your posts to make your content more engaging and credible to new visitors.',
-        icon: '/images/service-smm-panel/telegram-reactions.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -264,7 +271,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Telegram Group Members',
         description:
           'Grow your Telegram group with more active members and build a stronger community around your brand.',
-        icon: '/images/service-smm-panel/telegram-group-members.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-group-member-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -272,7 +279,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Telegram Shares',
         description:
           'Increase shares on your posts to expand reach and bring more users to your channel or group.',
-        icon: '/images/service-smm-panel/telegram-shares.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-group-member-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -280,23 +287,23 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Telegram Poll Votes',
         description:
           'Boost poll participation to gather more feedback and increase engagement with your audience.',
-        icon: '/images/service-smm-panel/telegram-poll-votes.png',
-        iconWidth: 54,
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
+        iconWidth: 60,
         iconHeight: 54,
       },
       {
         title: 'Telegram Story Views',
         description:
           'Reach more views on your Telegram stories to keep your audience interested and updated.',
-        icon: '/images/service-smm-panel/telegram-story-views.png',
-        iconWidth: 54,
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
+        iconWidth: 70,
         iconHeight: 54,
       },
       {
         title: 'Telegram Post Forwards',
         description:
           'Get more forwards on your posts to spread your message across Telegram and attract new members.',
-        icon: '/images/service-smm-panel/telegram-post-forwards.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -304,7 +311,623 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Telegram Channel Subscribers',
         description:
           'Grow your subscriber base quickly and build a loyal audience for your Telegram channel.',
-        icon: '/images/service-smm-panel/telegram-channel-subscribers.png',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+    ],
+  },
+  'youtube-smm-panel': {
+    badge: 'Our Services',
+    title: (
+      <>
+        Our Available Services For{' '}
+        <span className="text-gradient">YouTube SMM Panel</span>
+      </>
+    ),
+    subtitle:
+      "At TrendEvo, we offer trusted and safe services to grow your YouTube channel or business. Here's what we provide through the best YouTube SMM panel in Bangladesh",
+    titleClassName:
+      'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    services: [
+      {
+        title: 'YouTube Subscribers',
+        description:
+          'Get more real subscribers for your YouTube channel. Our solution helps boost your audience and reach more viewers organically.',
+        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'YouTube Views',
+        description:
+          'Drive more views to your videos to increase reach, discoverability, and channel growth on YouTube.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
+        iconWidth: 40,
+        iconHeight: 40,
+      },
+      {
+        title: 'YouTube Likes',
+        description:
+          'Raise the number of likes on your videos. This is ideal for creators who want more visibility and engagement on their content.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
+        iconWidth: 60,
+        iconHeight: 54,
+      },
+      {
+        title: 'YouTube Comments',
+        description:
+          'Get more comments on your videos to make your content more engaging and visible to your audience.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'YouTube Watch Hours',
+        description:
+          'Boost watch hours on your channel to meet monetization requirements and grow your earning potential.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-monetization-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'YouTube Shares',
+        description:
+          'Get more shares on your videos to expand your reach beyond your current subscriber base.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-group-member-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'YouTube Shorts Views',
+        description:
+          'Increase views on your Shorts to improve discoverability and attract new subscribers to your channel.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
+        iconWidth: 70,
+        iconHeight: 54,
+      },
+      {
+        title: 'YouTube Live Views',
+        description:
+          'Boost live stream views to build credibility and attract more real-time engagement during your broadcasts.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
+        iconWidth: 40,
+        iconHeight: 40,
+      },
+      {
+        title: 'YouTube Monetization',
+        description:
+          'Our solution helps you meet the standards for YouTube monetization and turn your engagement into income.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-monetization-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+    ],
+  },
+  'tiktok-smm-panel': {
+    badge: 'Our Services',
+    title: (
+      <>
+        Our Available Services For{' '}
+        <span className="text-gradient">TikTok SMM Panel</span>
+      </>
+    ),
+    subtitle:
+      "At TrendEvo, we offer trusted and safe services to grow your TikTok profile. Here's what we provide through the best TikTok SMM Panel in Bangladesh",
+    titleClassName:
+      'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    services: [
+      {
+        title: 'TikTok Followers',
+        description:
+          'Get more real followers for your TikTok profile. Our solution helps boost your audience and reach more people organically.',
+        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'TikTok Views',
+        description:
+          'Drive more views to your videos to increase reach, discoverability, and follower growth on TikTok.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
+        iconWidth: 40,
+        iconHeight: 40,
+      },
+      {
+        title: 'TikTok Likes',
+        description:
+          'Raise the number of likes on your videos. This is ideal for creators who want more visibility and engagement.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
+        iconWidth: 60,
+        iconHeight: 54,
+      },
+      {
+        title: 'TikTok Comments',
+        description:
+          'Get more comments on your videos to make your content more engaging and visible to your audience.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-group-member-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'TikTok Shares',
+        description:
+          'Get more shares on your videos to expand your reach beyond your current follower base.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'TikTok Live Views',
+        description:
+          'Increase live stream views to build credibility and attract more real-time engagement during your broadcasts.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-monetization-icon.webp',
+        iconWidth: 70,
+        iconHeight: 54,
+      },
+      {
+        title: 'TikTok Saves',
+        description:
+          'Boost saves on your videos to signal quality content and improve visibility in the TikTok algorithm.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-fast-follower-and-page-growth-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'TikTok Profile Visits',
+        description:
+          'Increase profile visits to attract more potential followers and grow your TikTok presence faster.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'TikTok Engagement Packages',
+        description:
+          'Get bundled engagement services tailored to help your TikTok content perform better across the platform.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+    ],
+  },
+  'x-twitter-smm-panel': {
+    badge: 'Our Services',
+    title: (
+      <>
+        Our Available Services For{' '}
+        <span className="text-gradient">X (Twitter) SMM Panel</span>
+      </>
+    ),
+    subtitle:
+      "At TrendEvo, we offer trusted and safe services to grow your X (Twitter) profile. Here's what we provide through the best X (Twitter) SMM Panel in Bangladesh",
+    titleClassName:
+      'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    services: [
+      {
+        title: 'X Followers',
+        description:
+          'Get more real followers for your X (Twitter) profile. Our solution helps boost your audience and reach more people organically.',
+        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'X Likes',
+        description:
+          'Raise the number of likes on your posts. This is ideal for brands who want more visibility and engagement on their content.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
+        iconWidth: 40,
+        iconHeight: 40,
+      },
+      {
+        title: 'X Retweets',
+        description:
+          'Get more retweets on your posts to expand your reach beyond your current follower base.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
+        iconWidth: 60,
+        iconHeight: 54,
+      },
+      {
+        title: 'X Comments',
+        description:
+          'Get more comments on your posts to make your content more engaging and visible to your audience.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-group-member-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'X Views',
+        description:
+          'Drive more views to your posts and videos to increase reach and discoverability on X (Twitter).',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'X Impressions',
+        description:
+          'Boost impressions on your posts to improve visibility and attract more engagement from new audiences.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-monetization-icon.webp',
+        iconWidth: 70,
+        iconHeight: 54,
+      },
+      {
+        title: 'X Bookmarks',
+        description:
+          'Increase bookmarks on your posts to signal valuable content and improve long-term visibility.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-fast-follower-and-page-growth-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'X Profile Visits',
+        description:
+          'Increase profile visits to attract more potential followers and grow your X (Twitter) presence faster.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'X Engagement Packages',
+        description:
+          'Get bundled engagement services tailored to help your X (Twitter) content perform better across the platform.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+    ],
+  },
+  'spotify-smm-panel': {
+    badge: 'Our Services',
+    title: (
+      <>
+        Our Available Services For{' '}
+        <span className="text-gradient">Spotify SMM Panel</span>
+      </>
+    ),
+    subtitle:
+      "At TrendEvo, we offer trusted and safe services to grow your Spotify profile. Here's what we provide through the best Spotify SMM Panel in Bangladesh",
+    titleClassName:
+      'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    services: [
+      {
+        title: 'Spotify Plays',
+        description:
+          'Get more plays on your tracks to increase reach, discoverability, and listener growth on Spotify.',
+        icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Spotify Followers',
+        description:
+          'Get more real followers for your Spotify artist profile. Our solution helps boost your audience organically.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
+        iconWidth: 40,
+        iconHeight: 40,
+      },
+      {
+        title: 'Spotify Monthly Listeners',
+        description:
+          'Increase monthly listeners to improve your artist profile credibility and attract more fans.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
+        iconWidth: 60,
+        iconHeight: 54,
+      },
+      {
+        title: 'Spotify Saves',
+        description:
+          'Boost saves on your tracks to signal quality music and improve visibility in Spotify recommendations.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-group-member-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Spotify Playlist Adds',
+        description:
+          'Get more playlist adds to expand your reach and bring new listeners to your music.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Spotify Album Plays',
+        description:
+          'Drive more plays to your albums to increase overall artist visibility and fan engagement.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-monetization-icon.webp',
+        iconWidth: 70,
+        iconHeight: 54,
+      },
+      {
+        title: 'Spotify Track Likes',
+        description:
+          'Raise engagement on individual tracks to help your music perform better across the platform.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-fast-follower-and-page-growth-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Spotify Pre-saves',
+        description:
+          'Boost pre-saves on upcoming releases to build momentum before your music goes live.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Spotify Engagement Packages',
+        description:
+          'Get bundled music marketing services tailored to help your Spotify content grow faster.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+    ],
+  },
+  'soundcloud-smm-panel': {
+    badge: 'Our Services',
+    title: (
+      <>
+        Our Available Services For{' '}
+        <span className="text-gradient">SoundCloud SMM Panel</span>
+      </>
+    ),
+    subtitle:
+      "At TrendEvo, we offer trusted and safe services to grow your SoundCloud profile. Here's what we provide through the best SoundCloud SMM Panel in Bangladesh",
+    titleClassName:
+      'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    services: [
+      {
+        title: 'SoundCloud Plays',
+        description:
+          'Get more plays on your tracks to increase reach, discoverability, and listener growth on SoundCloud.',
+        icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'SoundCloud Followers',
+        description:
+          'Get more real followers for your SoundCloud profile. Our solution helps boost your audience organically.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
+        iconWidth: 40,
+        iconHeight: 40,
+      },
+      {
+        title: 'SoundCloud Likes',
+        description:
+          'Raise the number of likes on your tracks. This is ideal for artists who want more visibility and engagement.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
+        iconWidth: 60,
+        iconHeight: 54,
+      },
+      {
+        title: 'SoundCloud Reposts',
+        description:
+          'Get more reposts on your tracks to expand your reach beyond your current follower base.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-group-member-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'SoundCloud Comments',
+        description:
+          'Get more comments on your tracks to make your content more engaging and visible to listeners.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'SoundCloud Downloads',
+        description:
+          'Increase downloads on your tracks to build credibility and attract more long-term fans.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-monetization-icon.webp',
+        iconWidth: 70,
+        iconHeight: 54,
+      },
+      {
+        title: 'SoundCloud Playlist Adds',
+        description:
+          'Get more playlist adds to expand your reach and bring new listeners to your music.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-fast-follower-and-page-growth-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'SoundCloud Track Shares',
+        description:
+          'Boost shares on your tracks to help your music spread across SoundCloud and beyond.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'SoundCloud Engagement Packages',
+        description:
+          'Get bundled music marketing services tailored to help your SoundCloud content grow faster.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+    ],
+  },
+  'twitch-smm-panel': {
+    badge: 'Our Services',
+    title: (
+      <>
+        Our Available Services For{' '}
+        <span className="text-gradient">Twitch SMM Panel</span>
+      </>
+    ),
+    subtitle:
+      "At TrendEvo, we offer trusted and safe services to grow your Twitch channel. Here's what we provide through the best Twitch SMM Panel in Bangladesh",
+    titleClassName:
+      'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    services: [
+      {
+        title: 'Twitch Followers',
+        description:
+          'Get more real followers for your Twitch channel. Our solution helps boost your audience and reach more viewers organically.',
+        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Twitch Live Views',
+        description:
+          'Increase live stream views to build credibility and attract more real-time engagement during your broadcasts.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
+        iconWidth: 40,
+        iconHeight: 40,
+      },
+      {
+        title: 'Twitch Channel Views',
+        description:
+          'Drive more views to your channel to increase reach, discoverability, and follower growth on Twitch.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
+        iconWidth: 60,
+        iconHeight: 54,
+      },
+      {
+        title: 'Twitch Subscribers',
+        description:
+          'Grow your subscriber base quickly and build a loyal audience for your Twitch channel.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-group-member-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Twitch Clip Views',
+        description:
+          'Boost views on your clips to help your best moments reach more potential followers.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Twitch Chat Engagement',
+        description:
+          'Increase chat activity during streams to make your broadcasts more engaging and credible.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-monetization-icon.webp',
+        iconWidth: 70,
+        iconHeight: 54,
+      },
+      {
+        title: 'Twitch Raid Views',
+        description:
+          'Get more visibility when raiding or being raided to expand your reach across the Twitch community.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-fast-follower-and-page-growth-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Twitch VOD Views',
+        description:
+          'Increase views on your past broadcasts to keep your content working for you after streams end.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Twitch Engagement Packages',
+        description:
+          'Get bundled streaming marketing services tailored to help your Twitch channel grow faster.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+    ],
+  },
+  'snapchat-smm-panel': {
+    badge: 'Our Services',
+    title: (
+      <>
+        Our Available Services For{' '}
+        <span className="text-gradient">Snapchat SMM Panel</span>
+      </>
+    ),
+    subtitle:
+      "At TrendEvo, we offer trusted and safe services to grow your Snapchat profile. Here's what we provide through the best Snapchat SMM Panel in Bangladesh",
+    titleClassName:
+      'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    services: [
+      {
+        title: 'Snapchat Followers',
+        description:
+          'Get more real followers for your Snapchat profile. Our solution helps boost your audience and reach more people organically.',
+        icon: '/images/our-services/platforms/our-services-snapchat-followers-platform-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Snapchat Story Views',
+        description:
+          'Reach more views on your Snapchat stories to keep your audience interested and updated on what you share.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
+        iconWidth: 40,
+        iconHeight: 40,
+      },
+      {
+        title: 'Snapchat Spotlight Views',
+        description:
+          'Increase Spotlight views to improve discoverability and attract new followers to your profile.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
+        iconWidth: 60,
+        iconHeight: 54,
+      },
+      {
+        title: 'Snapchat Subscribers',
+        description:
+          'Grow your subscriber base quickly and build a loyal audience for your Snapchat content.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-group-member-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Snapchat Screenshots',
+        description:
+          'Boost screenshots on your stories to signal engaging content and improve visibility.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Snapchat Replies',
+        description:
+          'Get more replies on your stories to make your content more engaging and interactive.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-monetization-icon.webp',
+        iconWidth: 70,
+        iconHeight: 54,
+      },
+      {
+        title: 'Snapchat Profile Views',
+        description:
+          'Increase profile views to attract more potential followers and grow your Snapchat presence faster.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-fast-follower-and-page-growth-icon.png',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Snapchat Shares',
+        description:
+          'Get more shares on your content to expand your reach beyond your current follower base.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
+        iconWidth: 54,
+        iconHeight: 54,
+      },
+      {
+        title: 'Snapchat Engagement Packages',
+        description:
+          'Get bundled engagement services tailored to help your Snapchat content perform better.',
+        icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
