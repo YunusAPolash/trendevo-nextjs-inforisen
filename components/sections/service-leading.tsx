@@ -132,14 +132,22 @@ export default function ServiceLeading({ slug }: ServiceLeadingProps) {
   } = getServiceLeadingContent(slug);
 
   const hexIconSrc = '/images/why-choose-us/why-choose-us-hex-icon-decoration.svg';
+  const isRelatedServicesSection = slug.includes('related-services');
+  const isSmmPanelLeadingSection = slug.endsWith('-smm-panel');
+  const usesSection15 = isRelatedServicesSection || isSmmPanelLeadingSection;
+  const sectionBg = usesSection15 ? 'section-15' : 'section-11';
 
   return (
     <PrimarySection
-      bg="section-11"
+      bg={sectionBg}
       darkBg="section-13-dark"
-      backgroundClassName={sectionBackgroundCoverClassName}
+      backgroundClassName={
+        usesSection15 ? undefined : sectionBackgroundCoverClassName
+      }
+      backgroundSize={usesSection15 ? 'full' : 'cover'}
       className="relative overflow-hidden py-16 sm:py-20"
     >
+      {/*
       <Image
         src="/images/service-smm-panel/facebook-smm-panel-leading-decorative-wave-decoration.svg"
         alt=""
@@ -149,6 +157,7 @@ export default function ServiceLeading({ slug }: ServiceLeadingProps) {
         className="pointer-events-none absolute left-[-30%] top-[-50%] hidden h-auto w-[min(120vw,1000px)] rotate-[1.3deg] opacity-90 lg:block dark:hidden"
         unoptimized
       />
+      */}
 
       <div className="container relative flex flex-col gap-10 sm:gap-12 lg:gap-16">
         <SectionHeading
