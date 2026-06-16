@@ -147,14 +147,12 @@ export default function SiteHeader({ className }: { className?: string }) {
         <div className="flex items-center gap-3 min-[1100px]:gap-6">
           <div className="hidden items-center gap-4 min-[1100px]:flex">
             <ThemeToggle />
-            <div className="inline-flex h-10 shrink-0 rounded-[10px] bg-brand-gradient p-px">
+            <div className="inline-flex h-[44px] shrink-0 rounded-[10px]">
               <Link
                 href={signInUrl}
-                className="flex h-full items-center justify-center rounded-[9px] bg-white px-4 text-base font-semibold transition-colors hover:bg-white/95 dark:bg-[#231a2b] dark:hover:bg-[#2d2436]"
+                className="flex h-full items-center justify-center rounded-[9px] bg-transparent px-4 text-base font-semibold text-[#13203b] transition-colors hover:bg-transparent dark:text-white dark:hover:bg-transparent"
               >
-                <span className="text-gradient dark:bg-none dark:bg-clip-border dark:text-white">
-                  Sign In
-                </span>
+                <span>Sign In</span>
               </Link>
             </div>
           </div>
@@ -284,7 +282,7 @@ export default function SiteHeader({ className }: { className?: string }) {
               <Link
                 href={signInUrl}
                 onClick={closeMobileMenu}
-                className="inline-flex h-11 items-center justify-center rounded-[10px] border border-[#d181ff]/50 bg-white text-sm font-semibold text-[#13203b] transition hover:bg-[#fdf6ff] sm:text-base dark:border-[#cb7ef7]/40 dark:bg-white/[0.06] dark:text-white dark:hover:bg-white/[0.1]"
+                className="inline-flex h-11 items-center justify-center rounded-[10px] bg-transparent text-sm font-semibold text-[#13203b] transition hover:bg-transparent sm:text-base dark:text-white dark:hover:bg-transparent"
               >
                 Sign In
               </Link>
