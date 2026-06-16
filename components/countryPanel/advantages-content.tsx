@@ -115,7 +115,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
           'Get 24/7 live support for all your SMM and Instagram panel needs.Instant help ensures smooth campaigns, quick issue resolution, and peace of mind.Focus on growth while experts are always ready to assist.',
       },
     ],
-    sectionBg: 'section-4',
+    sectionBg: 'section-15',
     sectionClassName:
       'overflow-x-hidden bg-white py-12 sm:py-16 lg:py-[84px] dark:bg-transparent',
   },

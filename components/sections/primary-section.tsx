@@ -12,7 +12,7 @@ const sectionBackgroundClasses = {
   'section-8': "bg-[url('/images/backgrounds/section-bg-8.svg')]",
   'section-9': "bg-[url('/images/backgrounds/section-bg-9.svg')]",
   'section-10': "bg-[url('/images/backgrounds/section-bg-10.webp')]",
-  'section-15': "bg-[url('/images/backgrounds/section-bg-15.svg')]",
+  'section-15': "bg-[url('/images/backgrounds/section-bg-15.webp')]",
   'section-11': "bg-[url('/images/backgrounds/section-bg-11.webp')]",
   'section-13': "bg-[url('/images/backgrounds/section-bg-13.webp')]",
   'section-14': "bg-[url('/images/backgrounds/section-bg-14.svg')]",
@@ -81,14 +81,19 @@ export type SectionDarkBgKey = keyof typeof sectionDarkBackgroundClasses;
 function resolveBackgroundLayerClassName(
   backgroundSize: 'cover' | 'full',
   backgroundClassName?: string,
+  forceFull?: boolean,
 ) {
   if (backgroundClassName) {
     return cn('absolute inset-0', backgroundClassName);
   }
 
-  return backgroundSize === 'full'
+  return backgroundSize === 'full' || forceFull
     ? sectionBackgroundLayerFullClassName
     : sectionBackgroundLayerClassName;
+}
+
+function isWebpBackgroundClass(backgroundClass: string) {
+  return backgroundClass.includes('.webp');
 }
 
 export default function PrimarySection({
@@ -110,9 +115,15 @@ export default function PrimarySection({
   backgroundClassName?: string;
   backgroundSize?: 'cover' | 'full';
 }) {
-  const backgroundLayerClassName = resolveBackgroundLayerClassName(
+  const lightBackgroundLayerClassName = resolveBackgroundLayerClassName(
     backgroundSize,
     backgroundClassName,
+    bg ? isWebpBackgroundClass(sectionBackgroundClasses[bg]) : false,
+  );
+  const darkBackgroundLayerClassName = resolveBackgroundLayerClassName(
+    backgroundSize,
+    backgroundClassName,
+    darkBg ? isWebpBackgroundClass(sectionDarkBackgroundClasses[darkBg]) : false,
   );
 
   return (
@@ -125,7 +136,7 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            backgroundLayerClassName,
+            lightBackgroundLayerClassName,
             sectionBackgroundClasses[bg],
             'dark:hidden',
           )}
@@ -133,14 +144,14 @@ export default function PrimarySection({
       ) : lightBackgroundImage ? (
         <div
           aria-hidden
-          className={cn(backgroundLayerClassName, 'dark:hidden')}
+          className={cn(lightBackgroundLayerClassName, 'dark:hidden')}
           style={{ backgroundImage: lightBackgroundImage }}
         />
       ) : null}
       {darkBackgroundColor ? (
         <div
           aria-hidden
-          className={cn(backgroundLayerClassName, 'hidden dark:block')}
+          className={cn(darkBackgroundLayerClassName, 'hidden dark:block')}
           style={{ backgroundColor: darkBackgroundColor }}
         />
       ) : null}
@@ -148,7 +159,7 @@ export default function PrimarySection({
         <div
           aria-hidden
           className={cn(
-            backgroundLayerClassName,
+            darkBackgroundLayerClassName,
             'hidden dark:block',
             sectionDarkBackgroundClasses[darkBg],
           )}

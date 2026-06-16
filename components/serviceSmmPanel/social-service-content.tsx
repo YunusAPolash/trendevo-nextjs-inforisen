@@ -154,6 +154,20 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    decorativeLeft: {
+      src: '/images/service-smm-panel/instagram-smm-panel/instagram-effect.svg',
+      width: 221,
+      height: 230,
+      className:
+        'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[140px] lg:block xl:w-[221px]',
+    },
+    decorativeRight: {
+      src: '/images/service-smm-panel/instagram-smm-panel/instagram-effect.svg',
+      width: 221,
+      height: 230,
+      className:
+        'pointer-events-none absolute -right-8 top-20 hidden h-auto w-[150px] -scale-x-100 lg:block xl:w-[221px]',
+    },
     services: [
       {
         title: 'Instagram Followers',
@@ -242,6 +256,20 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    decorativeLeft: {
+      src: '/images/service-smm-panel/telegram-smm-panel/telegram-effect.svg',
+      width: 195,
+      height: 192,
+      className:
+        'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[130px] lg:block xl:w-[195px]',
+    },
+    decorativeRight: {
+      src: '/images/service-smm-panel/telegram-smm-panel/telegram-effect.svg',
+      width: 195,
+      height: 192,
+      className:
+        'pointer-events-none absolute -right-8 top-20 hidden h-auto w-[140px] -scale-x-100 lg:block xl:w-[195px]',
+    },
     services: [
       {
         title: 'Telegram Channel Members',
@@ -330,6 +358,20 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    decorativeLeft: {
+      src: '/images/service-smm-panel/youtube-smm-panel/youtube-effect.svg',
+      width: 232,
+      height: 239,
+      className:
+        'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[140px] lg:block xl:w-[232px]',
+    },
+    decorativeRight: {
+      src: '/images/service-smm-panel/youtube-smm-panel/youtube-effect-top.svg',
+      width: 232,
+      height: 239,
+      className:
+        'pointer-events-none absolute -right-8 top-20 hidden h-auto w-[150px] lg:block xl:w-[232px]',
+    },
     services: [
       {
         title: 'YouTube Subscribers',
@@ -418,6 +460,20 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    decorativeLeft: {
+      src: '/images/service-smm-panel/tiktok-smm-panel/tiktok-effect.svg',
+      width: 189,
+      height: 205,
+      className:
+        'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[130px] lg:block xl:w-[189px]',
+    },
+    decorativeRight: {
+      src: '/images/service-smm-panel/tiktok-smm-panel/tiktok-effect.svg',
+      width: 189,
+      height: 205,
+      className:
+        'pointer-events-none absolute -right-8 top-20 hidden h-auto w-[140px] -scale-x-100 lg:block xl:w-[189px]',
+    },
     services: [
       {
         title: 'TikTok Followers',
@@ -506,6 +562,20 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    decorativeLeft: {
+      src: '/images/service-smm-panel/x-twitter-smm-panel/twitter-effect.svg',
+      width: 199,
+      height: 205,
+      className:
+        'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[135px] lg:block xl:w-[199px]',
+    },
+    decorativeRight: {
+      src: '/images/service-smm-panel/x-twitter-smm-panel/twitter-effect.svg',
+      width: 199,
+      height: 205,
+      className:
+        'pointer-events-none absolute -right-8 top-20 hidden h-auto w-[145px] -scale-x-100 lg:block xl:w-[199px]',
+    },
     services: [
       {
         title: 'X Followers',
@@ -594,6 +664,20 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    decorativeLeft: {
+      src: '/images/service-smm-panel/spotify-smm-panel/spotify-effectsvg.svg',
+      width: 251,
+      height: 251,
+      className:
+        'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[150px] lg:block xl:w-[251px]',
+    },
+    decorativeRight: {
+      src: '/images/service-smm-panel/spotify-smm-panel/spotify-effectsvg.svg',
+      width: 251,
+      height: 251,
+      className:
+        'pointer-events-none absolute -right-8 top-20 hidden h-auto w-[160px] -scale-x-100 lg:block xl:w-[251px]',
+    },
     services: [
       {
         title: 'Spotify Plays',
@@ -682,6 +766,20 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    decorativeLeft: {
+      src: '/images/service-smm-panel/soundcloud-smm-panel/soundcloud-effect.svg',
+      width: 255,
+      height: 257,
+      className:
+        'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[150px] lg:block xl:w-[255px]',
+    },
+    decorativeRight: {
+      src: '/images/service-smm-panel/soundcloud-smm-panel/soundcloud-effect.svg',
+      width: 255,
+      height: 257,
+      className:
+        'pointer-events-none absolute -right-8 top-20 hidden h-auto w-[160px] -scale-x-100 lg:block xl:w-[255px]',
+    },
     services: [
       {
         title: 'SoundCloud Plays',
@@ -770,6 +868,20 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    decorativeLeft: {
+      src: '/images/service-smm-panel/twitch-smm-panel/twitch-effect.svg',
+      width: 270,
+      height: 269,
+      className:
+        'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[160px] lg:block xl:w-[270px]',
+    },
+    decorativeRight: {
+      src: '/images/service-smm-panel/twitch-smm-panel/twitch-effect.svg',
+      width: 270,
+      height: 269,
+      className:
+        'pointer-events-none absolute -right-8 top-20 hidden h-auto w-[170px] -scale-x-100 lg:block xl:w-[270px]',
+    },
     services: [
       {
         title: 'Twitch Followers',
@@ -858,6 +970,20 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
+    decorativeLeft: {
+      src: '/images/service-smm-panel/snapchat-smm-panel/snapchat-effect.svg',
+      width: 256,
+      height: 258,
+      className:
+        'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[150px] lg:block xl:w-[256px]',
+    },
+    decorativeRight: {
+      src: '/images/service-smm-panel/snapchat-smm-panel/snapchat-effect.svg',
+      width: 256,
+      height: 258,
+      className:
+        'pointer-events-none absolute -right-8 top-20 hidden h-auto w-[160px] -scale-x-100 lg:block xl:w-[256px]',
+    },
     services: [
       {
         title: 'Snapchat Followers',
