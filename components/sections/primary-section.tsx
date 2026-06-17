@@ -10,7 +10,7 @@ const sectionBackgroundClasses = {
   'section-6': "bg-[url('/images/backgrounds/section-bg-6.svg')]",
   'section-7': "bg-[url('/images/backgrounds/section-bg-7.svg')]",
   'section-8': "bg-[url('/images/backgrounds/section-bg-8.svg')]",
-  'section-9': "bg-[url('/images/backgrounds/section-bg-9.svg')]",
+  'section-9': "bg-[url('/images/backgrounds/section-bg-9.webp')]",
   'section-10': "bg-[url('/images/backgrounds/section-bg-10.webp')]",
   'section-15': "bg-[url('/images/backgrounds/section-bg-15.webp')]",
   'section-11': "bg-[url('/images/backgrounds/section-bg-11.webp')]",
