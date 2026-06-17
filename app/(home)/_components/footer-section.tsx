@@ -331,17 +331,9 @@ export default function FooterSection() {
               <li key={link.label} className="min-w-0">
                 <Link
                   href={link.href}
-                  className="flex items-center justify-between gap-2 text-[13px] font-medium leading-snug text-[#222e48] transition-colors hover:text-[#13203b] sm:text-sm sm:leading-normal dark:text-[#ebecef] dark:hover:text-white"
+                  className="text-[13px] font-medium leading-snug text-[#222e48] transition-colors hover:text-[#13203b] sm:text-sm sm:leading-normal dark:text-[#ebecef] dark:hover:text-white"
                 >
-                  <span className="min-w-0">{link.label}</span>
-                  <Image
-                    src="/images/icons/footer-service-chevron-icon.svg"
-                    alt=""
-                    width={22}
-                    height={22}
-                    className="size-[18px] shrink-0 rotate-180 sm:size-[22px] dark:invert"
-                    aria-hidden
-                  />
+                  {link.label}
                 </Link>
               </li>
             ))}
