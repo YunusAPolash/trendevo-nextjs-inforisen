@@ -2,14 +2,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const templateDir = path.join(root, 'app/(subservice)/instagram-comments');
+const templateDir = path.join(root, 'app/(subservice)/buy-instagram-comments');
 
 const SPOTIFY_ICON =
   '/images/platform-marquee/platform-marquee-spotify-platform-icon.webp';
 
 const services = [
   {
-    slug: 'spotify-plays',
+    slug: 'buy-spotify-plays',
     pascal: 'SpotifyPlays',
     dataVar: 'spotifyPlaysPageData',
     title: 'Spotify Plays',
@@ -33,7 +33,7 @@ const services = [
     profileWord: 'artist profile',
   },
   {
-    slug: 'spotify-followers',
+    slug: 'buy-spotify-followers',
     pascal: 'SpotifyFollowers',
     dataVar: 'spotifyFollowersPageData',
     title: 'Spotify Followers',
@@ -57,7 +57,7 @@ const services = [
     profileWord: 'artist profile',
   },
   {
-    slug: 'spotify-monthly-listeners',
+    slug: 'buy-spotify-monthly-listeners',
     pascal: 'SpotifyMonthlyListeners',
     dataVar: 'spotifyMonthlyListenersPageData',
     title: 'Spotify Monthly Listeners',
@@ -160,7 +160,7 @@ function patchPageData(content, svc) {
     ['Instagram Panel', 'Spotify Panel'],
     ['your Instagram password', 'your Spotify password'],
     ['protect your account', 'protect your artist profile'],
-    ["canonical: '/instagram-comments'", `canonical: '/${svc.slug}'`],
+    ["canonical: '/buy-instagram-comments'", `canonical: '/${svc.slug}'`],
     [
       'Buy real Instagram comments at affordable prices',
       `Buy real Spotify ${svc.serviceLower} at affordable prices`,

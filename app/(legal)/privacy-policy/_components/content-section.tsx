@@ -49,7 +49,7 @@ export default async function ContentSection() {
             This Privacy Policy applies to all users of trendevo.com and should
             be read alongside our{' '}
             <Link
-              href="/terms-of-services"
+              href="/terms-of-service"
               className={legalLinkClassName}
             >
               Terms of Service

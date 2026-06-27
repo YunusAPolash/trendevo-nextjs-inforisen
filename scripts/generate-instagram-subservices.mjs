@@ -2,11 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const templateDir = path.join(root, 'app/(subservice)/instagram-comments');
+const templateDir = path.join(root, 'app/(subservice)/buy-instagram-comments');
 
 const services = [
   {
-    slug: 'instagram-likes',
+    slug: 'buy-instagram-likes',
     pascal: 'InstagramLikes',
     dataVar: 'instagramLikesPageData',
     title: 'Instagram Likes',
@@ -29,7 +29,7 @@ const services = [
     faqDeliver: 'likes',
   },
   {
-    slug: 'instagram-followers',
+    slug: 'buy-instagram-followers',
     pascal: 'InstagramFollowers',
     dataVar: 'instagramFollowersPageData',
     title: 'Instagram Followers',
@@ -52,7 +52,7 @@ const services = [
     faqDeliver: 'followers',
   },
   {
-    slug: 'instagram-views',
+    slug: 'buy-instagram-views',
     pascal: 'InstagramViews',
     dataVar: 'instagramViewsPageData',
     title: 'Instagram Views',
@@ -75,7 +75,7 @@ const services = [
     faqDeliver: 'views',
   },
   {
-    slug: 'instagram-shares',
+    slug: 'buy-instagram-shares',
     pascal: 'InstagramShares',
     dataVar: 'instagramSharesPageData',
     title: 'Instagram Shares',
@@ -98,7 +98,7 @@ const services = [
     faqDeliver: 'shares',
   },
   {
-    slug: 'instagram-auto-likes',
+    slug: 'buy-instagram-auto-likes',
     pascal: 'InstagramAutoLikes',
     dataVar: 'instagramAutoLikesPageData',
     title: 'Instagram Auto-Likes',
@@ -121,7 +121,7 @@ const services = [
     faqDeliver: 'auto-likes',
   },
   {
-    slug: 'instagram-story-views',
+    slug: 'buy-instagram-story-views',
     pascal: 'InstagramStoryViews',
     dataVar: 'instagramStoryViewsPageData',
     title: 'Instagram Story Views',
@@ -454,8 +454,8 @@ const footerLinks = services
   .map((s) => `  { label: '${s.title}', href: '/${s.slug}' },`)
   .join('\n');
 footer = footer.replace(
-  "  { label: 'Instagram Comments', href: '/instagram-comments' },",
-  `  { label: 'Instagram Comments', href: '/instagram-comments' },\n${footerLinks}`,
+  "  { label: 'Instagram Comments', href: '/buy-instagram-comments' },",
+  `  { label: 'Instagram Comments', href: '/buy-instagram-comments' },\n${footerLinks}`,
 );
 fs.writeFileSync(footerPath, footer);
 

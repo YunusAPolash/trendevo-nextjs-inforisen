@@ -379,7 +379,7 @@ export default async function ContentSection() {
               subject to the laws and jurisdiction of Bangladesh. Please refer
               to our{' '}
               <Link
-                href="/terms-of-services"
+                href="/terms-of-service"
                 className={legalLinkClassName}
               >
                 Terms of Service

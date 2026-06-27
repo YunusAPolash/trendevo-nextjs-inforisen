@@ -2,13 +2,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const templateDir = path.join(root, 'app/(subservice)/instagram-comments');
+const templateDir = path.join(root, 'app/(subservice)/buy-instagram-comments');
 
 const TIKTOK_ICON = '/images/icons/pricing-tiktok-platform-icon.webp';
 
 const services = [
   {
-    slug: 'tiktok-followers',
+    slug: 'buy-tiktok-followers',
     pascal: 'TiktokFollowers',
     dataVar: 'tiktokFollowersPageData',
     title: 'TikTok Followers',
@@ -31,7 +31,7 @@ const services = [
     boostTarget: 'profile',
   },
   {
-    slug: 'tiktok-likes',
+    slug: 'buy-tiktok-likes',
     pascal: 'TiktokLikes',
     dataVar: 'tiktokLikesPageData',
     title: 'TikTok Likes',
@@ -54,7 +54,7 @@ const services = [
     boostTarget: 'video',
   },
   {
-    slug: 'tiktok-views',
+    slug: 'buy-tiktok-views',
     pascal: 'TiktokViews',
     dataVar: 'tiktokViewsPageData',
     title: 'TikTok Views',
@@ -155,7 +155,7 @@ function patchPageData(content, svc) {
     ['Instagram Panel', 'TikTok Panel'],
     ['your Instagram password', 'your TikTok password'],
     ['protect your account', 'protect your profile'],
-    ["canonical: '/instagram-comments'", `canonical: '/${svc.slug}'`],
+    ["canonical: '/buy-instagram-comments'", `canonical: '/${svc.slug}'`],
     [
       'Buy real Instagram comments at affordable prices',
       `Buy real TikTok ${svc.serviceLower} at affordable prices`,

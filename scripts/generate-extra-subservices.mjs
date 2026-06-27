@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const templateDir = path.join(root, 'app/(subservice)/instagram-comments');
+const templateDir = path.join(root, 'app/(subservice)/buy-instagram-comments');
 
 const FALLBACK_LIKE =
   '/images/service-smm-panel/facebook-smm-panel-facebook-page-like-icon.png';
@@ -11,7 +11,7 @@ const FALLBACK_FOLLOWERS =
 
 const services = [
   {
-    slug: 'quora-followers',
+    slug: 'buy-quora-followers',
     pascal: 'QuoraFollowers',
     dataVar: 'quoraFollowersPageData',
     platform: 'Quora',
@@ -38,7 +38,7 @@ const services = [
     boostTarget: 'profile',
   },
   {
-    slug: 'quora-upvotes',
+    slug: 'buy-quora-upvotes',
     pascal: 'QuoraUpvotes',
     dataVar: 'quoraUpvotesPageData',
     platform: 'Quora',
@@ -65,7 +65,7 @@ const services = [
     boostTarget: 'answer',
   },
   {
-    slug: 'vimeo-followers',
+    slug: 'buy-vimeo-followers',
     pascal: 'VimeoFollowers',
     dataVar: 'vimeoFollowersPageData',
     platform: 'Vimeo',
@@ -94,7 +94,7 @@ const services = [
     boostTarget: 'channel',
   },
   {
-    slug: 'threads-followers',
+    slug: 'buy-threads-followers',
     pascal: 'ThreadsFollowers',
     dataVar: 'threadsFollowersPageData',
     platform: 'Threads',
@@ -194,7 +194,7 @@ function patchPageData(content, svc) {
     ['Instagram Panel', `${svc.platform} Panel`],
     ['your Instagram password', `your ${svc.platform} password`],
     ['protect your account', `protect your ${svc.boostTarget === 'channel' ? 'channel' : 'profile'}`],
-    ["canonical: '/instagram-comments'", `canonical: '/${svc.slug}'`],
+    ["canonical: '/buy-instagram-comments'", `canonical: '/${svc.slug}'`],
     [
       'Buy real Instagram comments at affordable prices',
       `Buy real ${svc.platform} ${svc.serviceLower} at affordable prices`,
@@ -445,8 +445,8 @@ const footerLinks = services
   .map((s) => `  { label: '${s.title}', href: '/${s.slug}' },`)
   .join('\n');
 footer = footer.replace(
-  "  { label: 'Reddit Account', href: '/reddit-account' },",
-  `  { label: 'Reddit Account', href: '/reddit-account' },\n${footerLinks}`,
+  "  { label: 'Reddit Account', href: '/buy-reddit-accounts' },",
+  `  { label: 'Reddit Account', href: '/buy-reddit-accounts' },\n${footerLinks}`,
 );
 fs.writeFileSync(footerPath, footer);
 

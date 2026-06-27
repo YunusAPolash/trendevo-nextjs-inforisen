@@ -2,14 +2,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const templateDir = path.join(root, 'app/(subservice)/instagram-comments');
+const templateDir = path.join(root, 'app/(subservice)/buy-instagram-comments');
 
 const TWITTER_ICON =
   '/images/platform-marquee/platform-marquee-x-twitter-platform-icon.png';
 
 const services = [
   {
-    slug: 'twitter-followers',
+    slug: 'buy-x-twitter-followers',
     pascal: 'TwitterFollowers',
     dataVar: 'twitterFollowersPageData',
     title: 'Twitter Followers',
@@ -32,7 +32,7 @@ const services = [
     boostTarget: 'profile',
   },
   {
-    slug: 'twitter-likes',
+    slug: 'buy-x-twitter-likes',
     pascal: 'TwitterLikes',
     dataVar: 'twitterLikesPageData',
     title: 'Twitter Likes',
@@ -129,7 +129,7 @@ function patchPageData(content, svc) {
     ['Instagram Panel', 'Twitter Panel'],
     ['your Instagram password', 'your Twitter password'],
     ['protect your account', 'protect your profile'],
-    ["canonical: '/instagram-comments'", `canonical: '/${svc.slug}'`],
+    ["canonical: '/buy-instagram-comments'", `canonical: '/${svc.slug}'`],
     [
       'Buy real Instagram comments at affordable prices',
       `Buy real Twitter ${svc.serviceLower} at affordable prices`,

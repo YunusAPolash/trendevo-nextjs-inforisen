@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const templateDir = path.join(root, 'app/(subservice)/instagram-comments');
+const templateDir = path.join(root, 'app/(subservice)/buy-instagram-comments');
 
 const FALLBACK_LIKE =
   '/images/service-smm-panel/facebook-smm-panel-facebook-page-like-icon.png';
@@ -13,7 +13,7 @@ const FALLBACK_FOLLOWERS =
 
 const services = [
   {
-    slug: 'telegram-members',
+    slug: 'buy-telegram-members',
     pascal: 'TelegramMembers',
     dataVar: 'telegramMembersPageData',
     platform: 'Telegram',
@@ -47,7 +47,7 @@ const services = [
     footerAfter: 'Telegram Services',
   },
   {
-    slug: 'snapchat-followers',
+    slug: 'buy-snapchat-followers',
     pascal: 'SnapchatFollowers',
     dataVar: 'snapchatFollowersPageData',
     platform: 'Snapchat',
@@ -82,7 +82,7 @@ const services = [
     footerAfter: 'Snapchat Services',
   },
   {
-    slug: 'soundcloud-followers',
+    slug: 'buy-soundcloud-followers',
     pascal: 'SoundcloudFollowers',
     dataVar: 'soundcloudFollowersPageData',
     platform: 'SoundCloud',
@@ -116,7 +116,7 @@ const services = [
     footerAfter: 'Soundcloud Services',
   },
   {
-    slug: 'soundcloud-plays',
+    slug: 'buy-soundcloud-plays',
     pascal: 'SoundcloudPlays',
     dataVar: 'soundcloudPlaysPageData',
     platform: 'SoundCloud',
@@ -151,7 +151,7 @@ const services = [
     footerAfter: 'Soundcloud Services',
   },
   {
-    slug: 'discord-members',
+    slug: 'buy-discord-members',
     pascal: 'DiscordMembers',
     dataVar: 'discordMembersPageData',
     platform: 'Discord',
@@ -186,7 +186,7 @@ const services = [
     footerAfter: 'Snapchat Services',
   },
   {
-    slug: 'discord-account',
+    slug: 'buy-discord-account',
     pascal: 'DiscordAccount',
     dataVar: 'discordAccountPageData',
     platform: 'Discord',
@@ -222,7 +222,7 @@ const services = [
     urlInputType: 'text',
   },
   {
-    slug: 'twitch-followers',
+    slug: 'buy-twitch-followers',
     pascal: 'TwitchFollowers',
     dataVar: 'twitchFollowersPageData',
     platform: 'Twitch',
@@ -254,7 +254,7 @@ const services = [
     footerAfter: 'Twitch Services',
   },
   {
-    slug: 'twitch-viewers',
+    slug: 'buy-twitch-viewers',
     pascal: 'TwitchViewers',
     dataVar: 'twitchViewersPageData',
     platform: 'Twitch',
@@ -286,7 +286,7 @@ const services = [
     footerAfter: 'Twitch Services',
   },
   {
-    slug: 'kick-followers',
+    slug: 'buy-kick-followers',
     pascal: 'KickFollowers',
     dataVar: 'kickFollowersPageData',
     platform: 'Kick',
@@ -318,7 +318,7 @@ const services = [
     footerAfter: 'Twitch Services',
   },
   {
-    slug: 'kick-viewers',
+    slug: 'buy-kick-viewers',
     pascal: 'KickViewers',
     dataVar: 'kickViewersPageData',
     platform: 'Kick',
@@ -350,7 +350,7 @@ const services = [
     footerAfter: 'Twitch Services',
   },
   {
-    slug: 'reddit-upvotes',
+    slug: 'buy-reddit-upvotes',
     pascal: 'RedditUpvotes',
     dataVar: 'redditUpvotesPageData',
     platform: 'Reddit',
@@ -382,7 +382,7 @@ const services = [
     footerAfter: 'Twitch Services',
   },
   {
-    slug: 'reddit-account',
+    slug: 'buy-reddit-accounts',
     pascal: 'RedditAccount',
     dataVar: 'redditAccountPageData',
     platform: 'Reddit',
@@ -492,7 +492,7 @@ function patchPageData(content, svc) {
     ['Instagram Panel', `${svc.platform} Panel`],
     ['your Instagram password', `your ${svc.passwordPlatform} password`],
     ['protect your account', `protect your ${svc.protectTarget}`],
-    ["canonical: '/instagram-comments'", `canonical: '/${svc.slug}'`],
+    ["canonical: '/buy-instagram-comments'", `canonical: '/${svc.slug}'`],
     [
       'Buy real Instagram comments at affordable prices',
       `Buy real ${svc.platform} ${svc.serviceLower} at affordable prices`,

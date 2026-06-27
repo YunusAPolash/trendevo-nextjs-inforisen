@@ -2,14 +2,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const templateDir = path.join(root, 'app/(subservice)/instagram-comments');
+const templateDir = path.join(root, 'app/(subservice)/buy-instagram-comments');
 
 const LINKEDIN_ICON =
   '/images/platform-marquee/platform-marquee-linkedin-platform-icon.webp';
 
 const services = [
   {
-    slug: 'linkedin-followers',
+    slug: 'buy-linkedin-followers',
     pascal: 'LinkedinFollowers',
     dataVar: 'linkedinFollowersPageData',
     title: 'LinkedIn Followers',
@@ -32,7 +32,7 @@ const services = [
     boostTarget: 'profile',
   },
   {
-    slug: 'linkedin-likes',
+    slug: 'buy-linkedin-likes',
     pascal: 'LinkedinLikes',
     dataVar: 'linkedinLikesPageData',
     title: 'LinkedIn Likes',
@@ -126,7 +126,7 @@ function patchPageData(content, svc) {
     ['Instagram Panel', 'LinkedIn Panel'],
     ['your Instagram password', 'your LinkedIn password'],
     ['protect your account', 'protect your profile'],
-    ["canonical: '/instagram-comments'", `canonical: '/${svc.slug}'`],
+    ["canonical: '/buy-instagram-comments'", `canonical: '/${svc.slug}'`],
     [
       'Buy real Instagram comments at affordable prices',
       `Buy real LinkedIn ${svc.serviceLower} at affordable prices`,
@@ -354,8 +354,8 @@ const footerLinks = services
   .map((s) => `  { label: '${s.title}', href: '/${s.slug}' },`)
   .join('\n');
 footer = footer.replace(
-  "  { label: 'TikTok Views', href: '/tiktok-views' },",
-  `  { label: 'TikTok Views', href: '/tiktok-views' },\n${footerLinks}`,
+  "  { label: 'TikTok Views', href: '/buy-tiktok-views' },",
+  `  { label: 'TikTok Views', href: '/buy-tiktok-views' },\n${footerLinks}`,
 );
 fs.writeFileSync(footerPath, footer);
 

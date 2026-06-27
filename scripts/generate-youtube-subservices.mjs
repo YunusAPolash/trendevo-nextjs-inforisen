@@ -2,11 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const templateDir = path.join(root, 'app/(subservice)/instagram-comments');
+const templateDir = path.join(root, 'app/(subservice)/buy-instagram-comments');
 
 const services = [
   {
-    slug: 'youtube-subscribers',
+    slug: 'buy-youtube-subscribers',
     pascal: 'YoutubeSubscribers',
     dataVar: 'youtubeSubscribersPageData',
     title: 'YouTube Subscribers',
@@ -29,7 +29,7 @@ const services = [
     boostTarget: 'channel',
   },
   {
-    slug: 'youtube-views',
+    slug: 'buy-youtube-views',
     pascal: 'YoutubeViews',
     dataVar: 'youtubeViewsPageData',
     title: 'YouTube Views',
@@ -52,7 +52,7 @@ const services = [
     boostTarget: 'video',
   },
   {
-    slug: 'youtube-comments',
+    slug: 'buy-youtube-comments',
     pascal: 'YoutubeComments',
     dataVar: 'youtubeCommentsPageData',
     title: 'YouTube Comments',
@@ -75,7 +75,7 @@ const services = [
     boostTarget: 'video',
   },
   {
-    slug: 'youtube-likes',
+    slug: 'buy-youtube-likes',
     pascal: 'YoutubeLikes',
     dataVar: 'youtubeLikesPageData',
     title: 'YouTube Likes',
@@ -187,7 +187,7 @@ function patchPageData(content, svc) {
     ['your Instagram password', 'your YouTube password'],
     ['protect your account', 'protect your channel'],
     ["enhancing your post's credibility", `enhancing your ${boostWord}'s credibility`],
-    ["canonical: '/instagram-comments'", `canonical: '/${svc.slug}'`],
+    ["canonical: '/buy-instagram-comments'", `canonical: '/${svc.slug}'`],
     [
       'Buy real Instagram comments at affordable prices',
       `Buy real YouTube ${svc.serviceLower} at affordable prices`,
