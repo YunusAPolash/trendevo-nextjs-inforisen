@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
-import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
 import { data as youtubeLikesPageData } from '@/app/(subservice)/buy-youtube-likes/page-data';
-import YoutubeLikesCtaSection from '@/app/(subservice)/buy-youtube-likes/_components/cta-section';
-import YoutubeLikesHeroSection from '@/app/(subservice)/buy-youtube-likes/_components/hero-section';
-import YoutubeLikesOrderFormSection from '@/app/(subservice)/buy-youtube-likes/_components/order-form-section';
-import YoutubeLikesWorkingProcessSection from '@/app/(subservice)/buy-youtube-likes/_components/working-process-section';
+import YoutubeLikesCtaSection from './_components/cta-section';
+import YoutubeLikesHeroSection from './_components/hero-section';
+import YoutubeLikesOrderFormSection from './_components/order-form-section';
+import YoutubeLikesRelatedServicesSection from './_components/related-services-section';
+import YoutubeLikesThingsToKnowSection from './_components/things-to-know-section';
+import YoutubeLikesWhoShouldBuySection from './_components/who-should-buy-section';
+import YoutubeLikesWhyChooseSection from './_components/why-choose-section';
+import YoutubeLikesWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: youtubeLikesPageData.seo.title,
   description: youtubeLikesPageData.seo.description,
+  alternates: {
+    canonical: youtubeLikesPageData.seo.canonical,
+  },
 };
 
 export default function YoutubeLikesPage() {
@@ -18,12 +23,12 @@ export default function YoutubeLikesPage() {
     <>
       <YoutubeLikesHeroSection />
       <YoutubeLikesOrderFormSection />
-      <TestimonialsSection data={youtubeLikesPageData.testimonials} />
+      <YoutubeLikesWhyChooseSection />
+      <YoutubeLikesWhoShouldBuySection />
       <YoutubeLikesWorkingProcessSection />
-      {youtubeLikesPageData.serviceLeadingSlugs.map((slug) => (
-        <ServiceLeading key={slug} slug={slug} />
-      ))}
+      <YoutubeLikesThingsToKnowSection />
       <FaqSection data={youtubeLikesPageData.faq} />
+      <YoutubeLikesRelatedServicesSection />
       <YoutubeLikesCtaSection />
     </>
   );

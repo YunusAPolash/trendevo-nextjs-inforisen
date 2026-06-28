@@ -1,6 +1,8 @@
 import type { FaqSectionData } from '@/components/sections/faq-section';
 import type { ServiceWorkingProcessStep } from '@/components/sections/service-working-process-section';
-import type { TestimonialsSectionData } from '@/components/sections/testimonials-section';
+import type { ThingsToKnowSectionData } from '@/components/sections/things-to-know-section';
+import type { WhoShouldBuySectionData } from '@/components/sections/who-should-buy-section';
+import type { ServiceLeadingContent } from '@/components/serviceSmmPanel/service-leading-content';
 
 type SEO = {
   title: string;
@@ -13,10 +15,13 @@ type YoutubeLikesPageData = {
   hero: {
     bg: 'section-1';
     variant: 'wide';
+    trustLabel: string;
     title: string;
     description: string;
-    signInLabel: string;
-    createAccountLabel: string;
+    descriptionSecondary: string;
+    primaryButtonLabel: string;
+    secondaryButtonLabel: string;
+    secondaryButtonHref: string;
     trustBadgeBase: {
       avatarSrcs: string[];
       ratingIconSrc: string;
@@ -31,6 +36,16 @@ type YoutubeLikesPageData = {
       unoptimized: boolean;
     };
   };
+  orderForm: {
+    badge: string;
+    serviceLabel: string;
+    serviceTypeLabel: string;
+    urlFieldLabel: string;
+    urlPlaceholder: string;
+    submitLabel: string;
+  };
+  whyChoose: ServiceLeadingContent;
+  whoShouldBuy: WhoShouldBuySectionData;
   workingProcess: {
     badge: string;
     underlineSrc: string;
@@ -41,9 +56,11 @@ type YoutubeLikesPageData = {
     subtitleClassName: string;
     steps: ServiceWorkingProcessStep[];
   };
-  serviceLeadingSlugs: ['youtube-likes', 'youtube-likes-related-services'];
-  testimonials: TestimonialsSectionData;
+  thingsToKnow: ThingsToKnowSectionData;
   faq: FaqSectionData;
+  relatedServices: ServiceLeadingContent & {
+    ctaLabel: string;
+  };
   cta: {
     title: string;
     description: string;
@@ -53,27 +70,26 @@ type YoutubeLikesPageData = {
   };
 };
 
-const reviewQuote =
-  'This platform helped us boost our brand visibility significantly. The results are real and the process is super easy. Five stars!';
-
-const youtubeReelVideoId = 'LXb3EKWsInQ';
-
 export const data: YoutubeLikesPageData = {
   seo: {
-    title: 'Buy YouTube Likes | TrendEvo',
+    title: 'Buy YouTube Likes in Bangladesh | TrendEvo',
     description:
-      'Buy real YouTube likes at affordable prices. Fast delivery, secure checkout, and 24/7 support from TrendEvo in Bangladesh.',
+      'Buy YouTube Likes in Bangladesh with TrendEvo. Improve video engagement, viewer trust, and content credibility using bKash, Nagad, Rocket, and secure orders.',
     canonical: '/buy-youtube-likes',
   },
 
   hero: {
     bg: 'section-1',
     variant: 'wide',
-    title: 'Buy gt<YouTube Likes> in Real, Fast & Affordable price.',
+    trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi YouTubers, Brands & Agencies',
+    title: 'Buy gt<YouTube Likes> in Bangladesh for Stronger Video Engagement',
     description:
-      'Growing a YouTube channel can be tough. Consistent content and smart promotion are key, but results can be slow. At TrendEvo, we provide solutions to help your channel thrive with real likes and engagement.',
-    signInLabel: 'Sign In',
-    createAccountLabel: 'Create an Account',
+      'YouTube likes help viewers understand that a video is useful, interesting, or worth watching. When a video has more likes, it can look more trusted and engaging to new audiences. TrendEvo helps YouTubers, creators, businesses, educational channels, eCommerce brands, agencies, startups, SMEs, and local brands buy YouTube likes in Bangladesh through an easy YouTube SMM Panel with simple ordering, local payment support, and secure delivery.',
+    descriptionSecondary:
+      'Our YouTube Likes Service is made for videos that need better engagement, stronger social proof, and a more positive viewer response. As the best SMM Panel in Bangladesh for YouTube growth, TrendEvo lets you choose a suitable YouTube like package, pay through bKash, Nagad, Rocket, or other supported methods, and improve your video credibility without sharing your password.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All Services',
+    secondaryButtonHref: '/services',
     trustBadgeBase: {
       avatarSrcs: [
         '/images/reviews/home-hero-hero-1-avatar.png',
@@ -88,7 +104,7 @@ export const data: YoutubeLikesPageData = {
     },
     illustration: {
       src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
-      alt: 'Excited user celebrating YouTube channel growth with analytics chart',
+      alt: 'Buy YouTube Likes in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
       maxWidthClassName: 'max-w-[558px]',
@@ -96,256 +112,274 @@ export const data: YoutubeLikesPageData = {
     },
   },
 
+  orderForm: {
+    badge: 'YouTube Services',
+    serviceLabel: 'Likes',
+    serviceTypeLabel: 'Likes',
+    urlFieldLabel: 'YouTube Video URL',
+    urlPlaceholder: 'https://youtube.com/watch?v=yourvideo',
+    submitLabel: 'Pay Now With bKash/ Nagad',
+  },
+
+  whyChoose: {
+    badge: 'WHY CHOOSE US',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 190,
+    title: 'Why Choose TrendEvo to Buy gt<YouTube Likes> in Bangladesh',
+    subtitle:
+      'TrendEvo is built for Bangladeshi users who want a simple way to increase YouTube video engagement. From local payment support to clear order tracking, our Bangladesh SMM Panel helps creators, brands, educators, agencies, and resellers manage YouTube likes from one easy dashboard.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Fast Like Processing',
+        description:
+          'Your YouTube likes order starts after you submit it from the dashboard. Delivery speed may depend on the video status, package size, and current order volume, but TrendEvo keeps the process smooth and easy to follow.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: '-scale-y-100 rotate-180 object-cover',
+      },
+      {
+        title: 'Affordable Like Packages',
+        description:
+          'You can buy YouTube likes in Bangladesh without spending a large promotion budget. Our packages work well for new YouTubers, tutorial channels, product reviews, music videos, business content, agencies, and SMM resellers.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: 'object-cover',
+      },
+      {
+        title: 'Helpful Support Team',
+        description:
+          'Need help choosing the right YouTube Like Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[167%] max-w-none object-cover -translate-x-[34%] -translate-y-[13%]',
+      },
+    ],
+    bottomRowFeatures: [
+      {
+        title: 'Local Payment Options',
+        description:
+          'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes YouTube Marketing Bangladesh easier for users who prefer trusted local payment systems.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[125%] max-w-none object-cover -translate-x-[11%] -translate-y-[12%]',
+      },
+      {
+        title: 'Engagement-Focused Growth',
+        description:
+          'TrendEvo focuses on YouTube likes that support viewer confidence, video credibility, and audience response. You can start with a small package, review the result, and increase likes based on your video campaign plan.',
+        iconFrameSrc:
+          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+      },
+    ],
+  },
+
+  whoShouldBuy: {
+    badge: 'Buy YouTube Likes',
+    title: 'Who Should Buy gt<YouTube Likes> in Bangladesh?',
+    subtitle:
+      'YouTube likes help a video look more valuable when viewers find it through search, Shorts, suggested videos, playlists, social shares, or channel pages. TrendEvo’s YouTube engagement service is useful for Bangladeshi users who want stronger video trust, better audience response, and more positive signals around important content.',
+    titleClassName:
+      'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    items: [
+      {
+        title: 'YouTubers and Content Creators',
+        description:
+          'Bangladeshi creators need likes to make videos look more appreciated by viewers. Vloggers, tech reviewers, food creators, travel channels, gamers, music artists, podcast hosts, and entertainment channels can use YouTube likes to improve the first impression of their videos.',
+      },
+      {
+        title: 'Educational Channels and Trainers',
+        description:
+          'Teachers, coaching centers, online course creators, tutorial channels, and skill trainers can buy YouTube likes in Bangladesh to make lesson videos look more useful. A higher like count can help students feel more confident before watching the full video.',
+      },
+      {
+        title: 'Businesses and E-commerce Brands',
+        description:
+          'Local businesses use YouTube for product demos, customer guides, testimonials, reviews, and brand videos. Fashion stores, gadget sellers, real estate companies, software firms, and service providers can use YouTube likes to strengthen video credibility.',
+      },
+      {
+        title: 'Agencies, Freelancers, and Resellers',
+        description:
+          'Digital agencies and freelancers often manage YouTube campaigns for client videos. TrendEvo helps them place YouTube likes orders from one dashboard with clear pricing, local payment support, and reseller-friendly access.',
+      },
+      {
+        title: 'Startups, Public Figures, and Institutions',
+        description:
+          'Startups, public figures, NGOs, media teams, and educational institutions need videos that look trusted and audience-approved. YouTube likes can support launch videos, awareness content, public messages, course promotions, and event highlights.',
+      },
+    ],
+  },
+
   workingProcess: {
     badge: 'WORKING PROCESS',
     underlineSrc: '/images/working-process/working-process-section-underline.svg',
     underlineWidth: 216,
-    title: 'How to Buy YouTube Likes gt<on TrendEvo>',
+    title: 'How to Buy YouTube Likes on TrendEvo — gt<Step by Step>',
     subtitle:
-      'A YouTube SMM panel helps businesses grow followers, likes, and engagement quickly and efficiently, saving time and boosting online presence.',
+      'Buying YouTube likes in Bangladesh should be simple and clear. TrendEvo keeps the full process easy, so creators, business owners, educators, agencies, freelancers, and resellers can place orders without technical knowledge.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
     steps: [
       {
         number: '01',
-        title: 'Simple Registration',
+        title: 'Create Your TrendEvo Account',
         description:
-          'You’ll need to sign up quickly with just a few steps to start using our SMM panel.',
+          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse YouTube SMM Panel services, compare prices, and manage your orders from one place.',
       },
       {
         number: '02',
         title: 'Add Funds to Your Balance',
         description:
-          'Single out the features and services that fit your needs or budget.',
+          'Add money to your account using supported payment methods in Bangladesh. You can fund your balance through bKash, Nagad, Rocket, or other available options before placing your YouTube likes order.',
       },
       {
         number: '03',
-        title: 'Find the YouTube Likes Service',
+        title: 'Choose YouTube Likes Service',
         description:
-          'Make payments safely via trusted methods to protect your information.',
+          'Go to the YouTube services section and select the likes package that matches your video goal. You can choose a starter package, a campaign package, or a larger package for client videos.',
       },
       {
         number: '04',
-        title: 'Enter Your YouTube Video URL & Place the Order',
+        title: 'Enter Your YouTube Video URL',
         description:
-          'Monitor your progress easily and see how your social media improves.',
+          'Paste the correct YouTube video link, select the quantity, and submit the order. You do not need to share your YouTube password. TrendEvo processes the order using the public video URL only.',
       },
     ],
   },
 
-  serviceLeadingSlugs: ['youtube-likes', 'youtube-likes-related-services'],
-
-  testimonials: {
-    sectionBackground:
-      'linear-gradient(64.26deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)',
-    badge: 'TESTIMONIALS',
-    title: 'YouTube Panel gt<Reviews>',
-    subtitle:
-      'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
-    underlineWidth: 169,
-    titleClassName:
-      'max-w-none whitespace-normal text-center text-2xl tracking-[0.36px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[36px] lg:text-[36px]',
-    subtitleClassName:
-      'max-w-[996px] text-center text-sm leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg',
-    customerTabLabel: 'Customer Reviews',
-    videoTabLabel: 'Video Reviews',
-    assets: {
-      starIconSrc: '/images/testimonials/testimonials-star-rating-icon.svg',
-      verifyBadgeSrc: '/images/testimonials/testimonials-verified-badge.svg',
-      customerReviewTabIconSrc:
-        '/images/testimonials/testimonials-customer-review-icon.svg',
-      videoReviewTabIconSrc:
-        '/images/testimonials/testimonials-clapperboard-icon.svg',
-      quoteOpenSrc: '/images/testimonials/testimonials-quote-mark-2.svg',
-      quoteCloseSrc: '/images/testimonials/testimonials-quote-mark.svg',
-      playIconSrc: '/images/testimonials/testimonials-video-play-icon.svg',
-      playOrbSrc: '/images/testimonials/testimonials-video-play-orb.webp',
-    },
-    leftTextReviews: [
-      {
-        id: 'left-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-2',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-3',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-4',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
+  thingsToKnow: {
+    badge: 'Things to Know',
+    title: 'Things to Know Before You Buy gt<YouTube Likes>',
+    paragraphs: [
+      'Buying YouTube likes can help your video look more trusted, but the best result comes when your content is ready for viewers. Before placing an order on TrendEvo, make sure your YouTube video is public, the video link is correct, and your selected package matches your current video activity.',
+      'You do not need to share your YouTube password to buy YouTube likes in Bangladesh. TrendEvo only needs your public video URL to process the order. This keeps the process safer and easier for creators, businesses, educators, agencies, and resellers.',
+      'For a natural video appearance, avoid sudden oversized orders on videos with weak thumbnails, unclear titles, or very low activity. Start with a suitable quantity, improve your video presentation, and grow engagement step by step. This helps your video look more believable to Bangladeshi viewers.',
+      'YouTube likes can support social proof, but they work best with helpful videos. Use clear titles, useful content, strong intros, good thumbnails, chapters, pinned comments, and descriptions so viewers have a reason to watch, like, and return.',
     ],
-    rightTextReviews: [
-      {
-        id: 'right-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
-    ],
-    featuredReview: {
-      name: 'Ariyena Islam',
-      role: 'Business Owner',
-      avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
-      quote: reviewQuote,
-      youtubeVideoId: youtubeReelVideoId,
-    },
-    videoReviews: [
-      {
-        id: 'video-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-3.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-4.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-5',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-6',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-    ],
-    defaultTab: 'video',
+    ctaLabel: 'Create Your Account Now',
   },
 
   faq: {
-    label: 'FAQ',
-    title: 'gt<Frequently> Asked Questions',
+    label: 'Frequently Asked Questions',
+    title: 'Frequently Asked Questions — gt<Buy YouTube Likes> in Bangladesh',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Find clear answers about buying YouTube likes in Bangladesh, payment options, delivery, safety, order tracking, and how TrendEvo helps support YouTube video engagement.',
     bg: 'section-7',
     items: [
       {
-        question: 'What is an SMM Panel?',
+        question: 'Is it safe to buy YouTube likes from TrendEvo?',
         answer:
-          'An SMM panel is an online platform where you can buy social media marketing services such as YouTube likes, followers, and engagement. TrendEvo lets you place orders, track delivery, and manage your growth from one dashboard.',
+          'Yes, TrendEvo uses a simple order process where you only need to submit your public YouTube video link. We never ask for your YouTube password, so your login details stay private.',
       },
       {
-        question: 'Can the SMM Panel target a specific group?',
+        question: 'Can I buy YouTube likes in Bangladesh with bKash?',
         answer:
-          'Yes. Depending on the service you choose, TrendEvo offers targeting options so your YouTube likes can align with your preferred audience type, region, or niche when available for that package.',
+          'Yes, you can add funds using bKash and then place your YouTube likes order from the TrendEvo dashboard. We also support other local payment options for Bangladeshi users.',
       },
       {
-        question: 'Is Using an SMM Panel Safe?',
+        question: 'Do you accept Nagad or Rocket payments?',
         answer:
-          'TrendEvo uses secure checkout, encrypted payments, and privacy-focused order handling. We never ask for your YouTube password — only your public video URL is required to deliver likes.',
+          'Yes, TrendEvo supports local payment methods such as Nagad, Rocket, and other available options. This makes it easier for creators, businesses, educators, agencies, and resellers in Bangladesh.',
       },
       {
-        question: 'Does using an SMM Panel risk banning my account?',
+        question: 'Do I need to share my YouTube password?',
         answer:
-          'We deliver likes gradually using methods designed to look natural. While no service can guarantee zero platform risk, TrendEvo focuses on quality delivery and safe pacing to help protect your channel.',
+          'No, you do not need to share your password. To buy YouTube likes, you only need to provide the correct YouTube video URL and choose your preferred quantity.',
       },
       {
-        question: 'Can I track the progress of my orders?',
+        question: 'How fast will my YouTube likes order start?',
         answer:
-          'Yes. After placing an order, you can monitor its status in real time from your TrendEvo dashboard and see updates as your YouTube likes delivery progresses.',
+          'Most orders start after submission and payment confirmation. Delivery time can vary based on service type, quantity, video status, and current order volume.',
       },
       {
-        question: 'What payment methods do you accept?',
+        question: 'Can I track my YouTube likes order?',
         answer:
-          'TrendEvo supports multiple trusted payment options including local and international methods. Available gateways are shown at checkout when you add funds or pay for your order.',
+          'Yes, you can track your order status from the TrendEvo dashboard. The order panel helps you check whether your YouTube likes order is pending, processing, completed, or partially completed.',
       },
       {
-        question: 'Can I cancel my order instantly?',
+        question: 'Can I buy likes for a new YouTube video?',
         answer:
-          'Orders that have not started processing can often be cancelled from your account. Once delivery is in progress, cancellation may not be possible — contact our support team and we will review your request promptly.',
+          'Yes, new YouTube videos can order likes. For a natural appearance, it is better to start with a smaller package, improve your thumbnail and title, and increase engagement gradually.',
       },
       {
-        question: 'Do you have customer support?',
+        question: 'Do YouTube likes help with video credibility?',
         answer:
-          'Yes. TrendEvo offers 24/7 customer support to help with orders, payments, and account questions. Reach out anytime through live chat or our contact channels if you need assistance.',
+          'Yes, YouTube likes can help a video look more useful and viewer-approved. They support social proof, but real long-term performance also depends on watch time, topic quality, and audience response.',
+      },
+      {
+        question: 'Will buying YouTube likes improve recommendations?',
+        answer:
+          'YouTube likes can support engagement signals, but recommendations depend on many factors such as watch time, click-through rate, retention, viewer satisfaction, titles, thumbnails, and content relevance.',
+      },
+      {
+        question: 'Who can use TrendEvo’s YouTube likes service?',
+        answer:
+          'TrendEvo is useful for Bangladeshi YouTubers, educators, eCommerce brands, local businesses, startups, public figures, NGOs, digital agencies, freelancers, and SMM resellers who want stronger YouTube video engagement.',
       },
     ],
+    ctaTitle: 'Still have questions?',
+    ctaSubtitle:
+      "Can't find the answer you're looking for? Please get in touch with our team.",
+    ctaButtonLabel: 'Contact US',
+    ctaButtonHref: '/contact-us',
+  },
+
+  relatedServices: {
+    badge: 'RELATED SERVICE',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 198,
+    title: 'Related Services You gt<Might Also Need>',
+    subtitle:
+      'YouTube likes help your videos look more trusted, but stronger growth comes when your content also gains visibility and channel authority. TrendEvo offers related YouTube SMM services in Bangladesh to support engagement, performance, and long-term growth.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Buy YouTube Views',
+        description:
+          'Increase visibility for your YouTube videos with more views. This service helps tutorials, product reviews, music videos, Shorts, business content, and campaign videos look more active to new viewers.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+      {
+        title: 'Buy YouTube Subscribers',
+        description:
+          'Grow your channel authority with more YouTube subscribers. This service helps creators, businesses, and educational channels build a stronger first impression when viewers visit your channel.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+    ],
+    bottomRowFeatures: [],
+    ctaLabel: 'Sign Up Now',
   },
 
   cta: {
-    title: 'Ready to gt<Grow your Social Media> in Bangladesh',
+    title: 'Ready to Grow with a gt<Trusted SMM Panel> in Bangladesh?',
     description:
-      'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
-    primaryButtonLabel: 'Register Now',
-    secondaryButtonLabel: 'See all Services',
-    secondaryButtonHref: '/services',
+      'Join TrendEvo and manage your YouTube, Instagram, Facebook, TikTok, Telegram, and website traffic orders from one simple dashboard. Add funds with bKash, Nagad, or Rocket, choose your service, and start growing with secure order tracking.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All YouTube Services',
+    secondaryButtonHref: '/youtube-smm-panel',
   },
 };
