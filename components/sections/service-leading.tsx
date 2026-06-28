@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils';
 
 import {
   getServiceLeadingContent,
+  type ServiceLeadingContent,
   type ServiceLeadingFeature,
   type ServiceLeadingSlug,
 } from '../serviceSmmPanel/service-leading-content';
@@ -115,10 +116,16 @@ function LeadingCard({
 }
 
 type ServiceLeadingProps = {
-  slug: ServiceLeadingSlug;
+  slug?: ServiceLeadingSlug;
+  content?: ServiceLeadingContent;
+  variant?: 'smm-panel' | 'default';
 };
 
-export default function ServiceLeading({ slug }: ServiceLeadingProps) {
+export default function ServiceLeading({
+  slug,
+  content,
+  variant,
+}: ServiceLeadingProps) {
   const {
     badge,
     title,
@@ -129,11 +136,12 @@ export default function ServiceLeading({ slug }: ServiceLeadingProps) {
     subtitleClassName,
     underlineSrc,
     underlineWidth,
-  } = getServiceLeadingContent(slug);
+  } = content ?? getServiceLeadingContent(slug!);
 
   const hexIconSrc = '/images/why-choose-us/why-choose-us-hex-icon-decoration.svg';
-  const isRelatedServicesSection = slug.includes('related-services');
-  const isSmmPanelLeadingSection = slug.endsWith('-smm-panel');
+  const isRelatedServicesSection = slug?.includes('related-services') ?? false;
+  const isSmmPanelLeadingSection =
+    variant === 'smm-panel' || slug?.endsWith('-smm-panel') === true;
   const usesSection15 = isRelatedServicesSection || isSmmPanelLeadingSection;
   const sectionBg = usesSection15 ? 'section-15' : 'section-11';
 

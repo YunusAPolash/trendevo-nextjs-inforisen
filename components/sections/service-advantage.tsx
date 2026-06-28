@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 
 import {
   getServiceAdvantageContent,
+  type ServiceAdvantageContent,
   type ServiceAdvantageItem,
   type ServiceAdvantageSlug,
 } from '../serviceSmmPanel/service-advantage-content';
@@ -167,10 +168,11 @@ function AdvantageColumn({ advantages }: { advantages: ServiceAdvantageItem[] })
 }
 
 type ServiceAdvantageProps = {
-  slug: ServiceAdvantageSlug;
+  slug?: ServiceAdvantageSlug;
+  content?: ServiceAdvantageContent;
 };
 
-export default function ServiceAdvantage({ slug }: ServiceAdvantageProps) {
+export default function ServiceAdvantage({ slug, content }: ServiceAdvantageProps) {
   const {
     badge,
     title,
@@ -179,7 +181,7 @@ export default function ServiceAdvantage({ slug }: ServiceAdvantageProps) {
     rightAdvantages,
     titleClassName,
     subtitleClassName,
-  } = getServiceAdvantageContent(slug);
+  } = content ?? getServiceAdvantageContent(slug!);
 
   return (
     <PrimarySection

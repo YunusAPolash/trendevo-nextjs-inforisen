@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
-import AdvantagesSection from '@/app/(home)/_components/advantages-section';
-import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
-import ServiceAdvantage from '@/components/sections/service-advantage';
-import ServiceHero from '@/components/sections/serviceHero';
-import ServiceLeading from '@/components/sections/service-leading';
-import SocialService from '@/components/sections/social-service';
 import FaqSection from '@/components/sections/faq-section';
 import { data as facebookSmmPanelPageData } from '@/app/(service)/facebook-smm-panel/page-data';
+import FacebookSmmPanelAdvantageSection from './_components/advantage-section';
 import FacebookSmmPanelCtaSection from './_components/cta-section';
+import FacebookSmmPanelHeroSection from './_components/hero-section';
+import FacebookSmmPanelLeadingSection from './_components/leading-section';
+import FacebookSmmPanelSocialServiceSection from './_components/social-service-section';
 import FacebookSmmPanelWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: facebookSmmPanelPageData.seo.title,
   description: facebookSmmPanelPageData.seo.description,
+  alternates: {
+    canonical: facebookSmmPanelPageData.seo.canonical,
+  },
 };
 
 const schema = {
@@ -36,12 +37,11 @@ export default function FacebookSmmPanelPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero slug={facebookSmmPanelPageData.slug} />
-      <SocialService slug={facebookSmmPanelPageData.slug} />
-      <StatsMarqueeSection />
-      <ServiceAdvantage slug={facebookSmmPanelPageData.slug} />
+      <FacebookSmmPanelHeroSection />
+      <FacebookSmmPanelSocialServiceSection />
+      <FacebookSmmPanelAdvantageSection />
       <FacebookSmmPanelWorkingProcessSection />
-      <ServiceLeading slug={facebookSmmPanelPageData.slug} />
+      <FacebookSmmPanelLeadingSection />
       <FaqSection data={facebookSmmPanelPageData.faq} />
       <FacebookSmmPanelCtaSection />
     </>
