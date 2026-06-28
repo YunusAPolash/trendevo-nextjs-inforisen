@@ -7,6 +7,9 @@ import ContactDetailsSection from './_components/contact-details-section';
 export const metadata: Metadata = {
   title: contactUsPageData.seo.title,
   description: contactUsPageData.seo.description,
+  alternates: {
+    canonical: contactUsPageData.seo.canonical,
+  },
 };
 
 export default function ContactUsPage() {

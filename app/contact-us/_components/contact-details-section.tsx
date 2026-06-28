@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import PrimarySection from '@/components/sections/primary-section';
-import SectionHeading from '@/components/ui/section-heading';
 import { data } from '@/app/contact-us/page-data';
 import ContactDetailCard from './contact-detail-card';
 
@@ -57,48 +56,36 @@ export default function ContactDetailsSection() {
         </div>
 
         <div className="container relative">
-          <div className="relative flex flex-col items-center gap-10 sm:gap-12 lg:gap-16">
-            <SectionHeading
-              badge={contactDetails.badge}
-              title={contactDetails.title}
-              subtitle={contactDetails.subtitle}
-              titleClassName={contactDetails.titleClassName}
-              subtitleClassName={contactDetails.subtitleClassName}
-            />
-
-            <div className="grid w-full max-w-[1440px] grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2 xl:grid-cols-3 [&>*:last-child]:lg:col-span-2 [&>*:last-child]:lg:mx-auto [&>*:last-child]:lg:max-w-[463px] [&>*:last-child]:xl:col-span-1 [&>*:last-child]:xl:mx-0 [&>*:last-child]:xl:max-w-none">
-              {contactDetails.cards.map((card) => (
-                <ContactDetailCard
-                  key={card.title}
-                  borderColor={card.borderColor}
-                  darkOverlaySrc={card.darkOverlaySrc}
-                  iconSrc={card.iconSrc}
-                  iconAlt={card.iconAlt}
-                  title={card.title}
-                  description={card.description}
-                  detail={
-                    card.detailLabel && card.detailValue ? (
-                      <p
-                        className={
-                          card.detailSuffix
-                            ? 'text-[#5a5a5a] dark:text-[#ebecef]'
-                            : undefined
-                        }
-                      >
-                        <span className="font-semibold text-[#313131] dark:text-[#ebecef]">
-                          {card.detailLabel}
-                        </span>{' '}
-                        <span className={card.detailValueClassName}>
-                          {card.detailValue}
-                        </span>
-                      </p>
-                    ) : null
-                  }
-                  buttonLabel={card.buttonLabel}
-                  buttonClassName={card.buttonClassName}
-                />
-              ))}
-            </div>
+          <div className="grid w-full max-w-[1440px] grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2 xl:grid-cols-3 [&>*:last-child]:lg:col-span-2 [&>*:last-child]:lg:mx-auto [&>*:last-child]:lg:max-w-[463px] [&>*:last-child]:xl:col-span-1 [&>*:last-child]:xl:mx-0 [&>*:last-child]:xl:max-w-none">
+            {contactDetails.cards.map((card) => (
+              <ContactDetailCard
+                key={card.title}
+                borderColor={card.borderColor}
+                darkOverlaySrc={card.darkOverlaySrc}
+                iconSrc={card.iconSrc}
+                iconAlt={card.iconAlt}
+                title={card.title}
+                description={card.description}
+                detail={
+                  card.detailValue ? (
+                    <p>
+                      {card.detailLabel ? (
+                        <>
+                          <span className="font-semibold text-[#313131] dark:text-[#ebecef]">
+                            {card.detailLabel}
+                          </span>{' '}
+                        </>
+                      ) : null}
+                      <span className={card.detailValueClassName}>
+                        {card.detailValue}
+                      </span>
+                    </p>
+                  ) : null
+                }
+                buttonLabel={card.buttonLabel}
+                buttonClassName={card.buttonClassName}
+              />
+            ))}
           </div>
         </div>
       </div>
