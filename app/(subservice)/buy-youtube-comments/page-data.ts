@@ -1,6 +1,8 @@
 import type { FaqSectionData } from '@/components/sections/faq-section';
 import type { ServiceWorkingProcessStep } from '@/components/sections/service-working-process-section';
-import type { TestimonialsSectionData } from '@/components/sections/testimonials-section';
+import type { ThingsToKnowSectionData } from '@/components/sections/things-to-know-section';
+import type { WhoShouldBuySectionData } from '@/components/sections/who-should-buy-section';
+import type { ServiceLeadingContent } from '@/components/serviceSmmPanel/service-leading-content';
 
 type SEO = {
   title: string;
@@ -13,10 +15,13 @@ type YoutubeCommentsPageData = {
   hero: {
     bg: 'section-1';
     variant: 'wide';
+    trustLabel: string;
     title: string;
     description: string;
-    signInLabel: string;
-    createAccountLabel: string;
+    descriptionSecondary: string;
+    primaryButtonLabel: string;
+    secondaryButtonLabel: string;
+    secondaryButtonHref: string;
     trustBadgeBase: {
       avatarSrcs: string[];
       ratingIconSrc: string;
@@ -31,6 +36,16 @@ type YoutubeCommentsPageData = {
       unoptimized: boolean;
     };
   };
+  orderForm: {
+    badge: string;
+    serviceLabel: string;
+    serviceTypeLabel: string;
+    urlFieldLabel: string;
+    urlPlaceholder: string;
+    submitLabel: string;
+  };
+  whyChoose: ServiceLeadingContent;
+  whoShouldBuy: WhoShouldBuySectionData;
   workingProcess: {
     badge: string;
     underlineSrc: string;
@@ -41,9 +56,11 @@ type YoutubeCommentsPageData = {
     subtitleClassName: string;
     steps: ServiceWorkingProcessStep[];
   };
-  serviceLeadingSlugs: ['youtube-comments', 'youtube-comments-related-services'];
-  testimonials: TestimonialsSectionData;
+  thingsToKnow: ThingsToKnowSectionData;
   faq: FaqSectionData;
+  relatedServices: ServiceLeadingContent & {
+    ctaLabel: string;
+  };
   cta: {
     title: string;
     description: string;
@@ -53,27 +70,26 @@ type YoutubeCommentsPageData = {
   };
 };
 
-const reviewQuote =
-  'This platform helped us boost our brand visibility significantly. The results are real and the process is super easy. Five stars!';
-
-const youtubeReelVideoId = 'LXb3EKWsInQ';
-
 export const data: YoutubeCommentsPageData = {
   seo: {
-    title: 'Buy YouTube Comments | TrendEvo',
+    title: 'Buy YouTube Comments in Bangladesh | TrendEvo',
     description:
-      'Buy real YouTube comments at affordable prices. Fast delivery, secure checkout, and 24/7 support from TrendEvo in Bangladesh.',
+      'Buy YouTube Comments in Bangladesh with TrendEvo. Build video discussion, viewer trust, and stronger engagement using bKash, Nagad, Rocket, and secure orders.',
     canonical: '/buy-youtube-comments',
   },
 
   hero: {
     bg: 'section-1',
     variant: 'wide',
-    title: 'Buy gt<YouTube Comments> in Real, Fast & Affordable price.',
+    trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi YouTubers, Brands & Agencies',
+    title: 'Buy gt<YouTube Comments> in Bangladesh for Stronger Viewer Interaction',
     description:
-      'Growing a YouTube channel can be tough. Consistent content and smart promotion are key, but results can be slow. At TrendEvo, we provide solutions to help your channel thrive with real comments and engagement.',
-    signInLabel: 'Sign In',
-    createAccountLabel: 'Create an Account',
+      'YouTube comments make a video feel active, useful, and worth discussing. When viewers see conversations under a tutorial, review, vlog, product video, or music release, they are more likely to trust the content and spend more time with it. TrendEvo helps YouTubers, educators, businesses, eCommerce brands, agencies, startups, SMEs, and local creators buy YouTube comments in Bangladesh through the best YouTube SMM Panel in Bangladesh with simple ordering, local payment support, and secure delivery.',
+    descriptionSecondary:
+      'Our YouTube Comments Service is made for videos that need better audience interaction, stronger social proof, and a more active community feel. You can choose a suitable YouTube comment package, pay through bKash, Nagad, Rocket, or other supported methods, and improve your video credibility without sharing your password.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All Services',
+    secondaryButtonHref: '/services',
     trustBadgeBase: {
       avatarSrcs: [
         '/images/reviews/home-hero-hero-1-avatar.png',
@@ -88,7 +104,7 @@ export const data: YoutubeCommentsPageData = {
     },
     illustration: {
       src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
-      alt: 'Excited user celebrating YouTube channel growth with analytics chart',
+      alt: 'Buy YouTube Comments in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
       maxWidthClassName: 'max-w-[558px]',
@@ -96,256 +112,274 @@ export const data: YoutubeCommentsPageData = {
     },
   },
 
+  orderForm: {
+    badge: 'YouTube Services',
+    serviceLabel: 'Comments',
+    serviceTypeLabel: 'Comments',
+    urlFieldLabel: 'YouTube Video URL',
+    urlPlaceholder: 'https://youtube.com/watch?v=yourvideo',
+    submitLabel: 'Pay Now With bKash/ Nagad',
+  },
+
+  whyChoose: {
+    badge: 'WHY CHOOSE US',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 190,
+    title: 'Why Choose TrendEvo to Buy gt<YouTube Comments> in Bangladesh',
+    subtitle:
+      'TrendEvo is built for Bangladeshi users who want a simple way to increase YouTube audience interaction. From local payment support to clear order tracking, our SMM Panel helps creators, brands, educators, agencies, and resellers manage YouTube comments from one easy dashboard.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Fast Comment Processing',
+        description:
+          'Your YouTube comments order starts after you submit it from the dashboard. Delivery speed may depend on the video status, package size, and current order volume, but TrendEvo keeps the process smooth and easy to follow.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: '-scale-y-100 rotate-180 object-cover',
+      },
+      {
+        title: 'Affordable Comment Packages',
+        description:
+          'You can buy YouTube comments in Bangladesh without spending a large marketing budget. Our packages work well for new YouTubers, tutorial channels, product reviews, music videos, business videos, agencies, and SMM resellers.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: 'object-cover',
+      },
+      {
+        title: 'Helpful Support Team',
+        description:
+          'Need help choosing the right YouTube Comment Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[167%] max-w-none object-cover -translate-x-[34%] -translate-y-[13%]',
+      },
+    ],
+    bottomRowFeatures: [
+      {
+        title: 'Local Payment Options',
+        description:
+          'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes YouTube Marketing Bangladesh easier for users who prefer trusted local payment systems.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[125%] max-w-none object-cover -translate-x-[11%] -translate-y-[12%]',
+      },
+      {
+        title: 'Discussion-Focused Growth',
+        description:
+          'TrendEvo focuses on YouTube comments that support viewer participation, video credibility, and community activity. You can start with a small package, review the result, and increase comments based on your video campaign plan.',
+        iconFrameSrc:
+          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+      },
+    ],
+  },
+
+  whoShouldBuy: {
+    badge: 'Buy YouTube Comments',
+    title: 'Who Should Buy gt<YouTube Comments> in Bangladesh?',
+    subtitle:
+      'YouTube comments help videos look more interactive when viewers find them through search, Shorts, suggested videos, playlists, social shares, or channel pages. TrendEvo’s YouTube engagement service is useful for Bangladeshi users who want stronger video discussions, better audience response, and more visible community activity.',
+    titleClassName:
+      'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    items: [
+      {
+        title: 'YouTubers and Content Creators',
+        description:
+          'Bangladeshi creators need comments to make videos feel more active and audience-driven. Vloggers, tech reviewers, food creators, travel channels, gamers, music artists, podcast hosts, and entertainment channels can use YouTube comments to build stronger viewer interaction.',
+      },
+      {
+        title: 'Educational Channels and Trainers',
+        description:
+          'Teachers, coaching centers, online course creators, tutorial channels, and skill trainers can buy YouTube comments in Bangladesh to make lesson videos look more helpful and discussion-friendly. Comments can support questions, feedback, and learning-based engagement.',
+      },
+      {
+        title: 'Businesses and E-commerce Brands',
+        description:
+          'Local businesses use YouTube for product demos, customer guides, testimonials, reviews, and brand explainers. Fashion stores, gadget sellers, real estate companies, software firms, and service providers can use YouTube comments to make videos look more trusted.',
+      },
+      {
+        title: 'Agencies, Freelancers, and Resellers',
+        description:
+          'Digital agencies and freelancers often manage YouTube campaigns for client videos. TrendEvo helps them place YouTube comments orders from one dashboard with clear pricing, local payment support, and reseller-friendly access.',
+      },
+      {
+        title: 'Startups, Public Figures, and Institutions',
+        description:
+          'Startups, public figures, NGOs, media teams, and educational institutions need videos that encourage discussion. YouTube comments can support launch videos, awareness content, public messages, course promotions, and event highlights.',
+      },
+    ],
+  },
+
   workingProcess: {
     badge: 'WORKING PROCESS',
     underlineSrc: '/images/working-process/working-process-section-underline.svg',
     underlineWidth: 216,
-    title: 'How to Buy YouTube Comments gt<on TrendEvo>',
+    title: 'How to Buy YouTube Comments on TrendEvo — gt<Step by Step>',
     subtitle:
-      'A YouTube SMM panel helps businesses grow followers, likes, and engagement quickly and efficiently, saving time and boosting online presence.',
+      'Buying YouTube comments in Bangladesh should be simple and clear. TrendEvo keeps the full process easy, so creators, business owners, educators, agencies, freelancers, and resellers can place orders without technical knowledge.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
     steps: [
       {
         number: '01',
-        title: 'Simple Registration',
+        title: 'Create Your TrendEvo Account',
         description:
-          'You’ll need to sign up quickly with just a few steps to start using our SMM panel.',
+          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse YouTube SMM Panel services in Bangladesh, compare prices, and manage your orders from one place.',
       },
       {
         number: '02',
         title: 'Add Funds to Your Balance',
         description:
-          'Single out the features and services that fit your needs or budget.',
+          'Add money to your account using supported payment methods in Bangladesh. You can fund your balance through bKash, Nagad, Rocket, or other available options before placing your YouTube comments order.',
       },
       {
         number: '03',
-        title: 'Find the YouTube Comments Service',
+        title: 'Choose YouTube Comments Service',
         description:
-          'Make payments safely via trusted methods to protect your information.',
+          'Go to the YouTube services section and select the comments package that matches your video goal. You can choose a starter package, a campaign package, or a larger package for client videos.',
       },
       {
         number: '04',
-        title: 'Enter Your YouTube Video URL & Place the Order',
+        title: 'Enter Your YouTube Video URL',
         description:
-          'Monitor your progress easily and see how your social media improves.',
+          'Paste the correct YouTube video link, select the quantity, and submit the order. You do not need to share your YouTube password. TrendEvo processes the order using the public video URL only.',
       },
     ],
   },
 
-  serviceLeadingSlugs: ['youtube-comments', 'youtube-comments-related-services'],
-
-  testimonials: {
-    sectionBackground:
-      'linear-gradient(64.26deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)',
-    badge: 'TESTIMONIALS',
-    title: 'YouTube Panel gt<Reviews>',
-    subtitle:
-      'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
-    underlineWidth: 169,
-    titleClassName:
-      'max-w-none whitespace-normal text-center text-2xl tracking-[0.36px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[36px] lg:text-[36px]',
-    subtitleClassName:
-      'max-w-[996px] text-center text-sm leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg',
-    customerTabLabel: 'Customer Reviews',
-    videoTabLabel: 'Video Reviews',
-    assets: {
-      starIconSrc: '/images/testimonials/testimonials-star-rating-icon.svg',
-      verifyBadgeSrc: '/images/testimonials/testimonials-verified-badge.svg',
-      customerReviewTabIconSrc:
-        '/images/testimonials/testimonials-customer-review-icon.svg',
-      videoReviewTabIconSrc:
-        '/images/testimonials/testimonials-clapperboard-icon.svg',
-      quoteOpenSrc: '/images/testimonials/testimonials-quote-mark-2.svg',
-      quoteCloseSrc: '/images/testimonials/testimonials-quote-mark.svg',
-      playIconSrc: '/images/testimonials/testimonials-video-play-icon.svg',
-      playOrbSrc: '/images/testimonials/testimonials-video-play-orb.webp',
-    },
-    leftTextReviews: [
-      {
-        id: 'left-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-2',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-3',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-4',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
+  thingsToKnow: {
+    badge: 'Things to Know',
+    title: 'Things to Know Before You Buy gt<YouTube Comments>',
+    paragraphs: [
+      'Buying YouTube comments can help your video look more active, but the best result comes when your content gives viewers something to talk about. Before placing an order on TrendEvo, make sure your YouTube video is public, the video link is correct, and your selected package matches your current video activity.',
+      'You do not need to share your YouTube password to buy YouTube comments in Bangladesh. TrendEvo only needs your public video URL to process the order. This keeps the process safer and easier for creators, businesses, educators, agencies, and resellers.',
+      'For a natural video appearance, avoid sudden oversized comment orders on videos with weak titles, unclear topics, or very low activity. Start with a suitable quantity, improve your video presentation, and grow discussion step by step. This helps your video look more believable to Bangladeshi viewers.',
+      'YouTube comments can support social proof, but they work best with useful videos. Ask simple questions, pin a comment, reply to viewers, add clear descriptions, and create videos that invite opinions, feedback, and real conversation.',
     ],
-    rightTextReviews: [
-      {
-        id: 'right-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
-    ],
-    featuredReview: {
-      name: 'Ariyena Islam',
-      role: 'Business Owner',
-      avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
-      quote: reviewQuote,
-      youtubeVideoId: youtubeReelVideoId,
-    },
-    videoReviews: [
-      {
-        id: 'video-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-3.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-4.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-5',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-6',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-    ],
-    defaultTab: 'video',
+    ctaLabel: 'Create Your Account Now',
   },
 
   faq: {
-    label: 'FAQ',
-    title: 'gt<Frequently> Asked Questions',
+    label: 'Frequently Asked Questions',
+    title: 'Frequently Asked Questions — gt<Buy YouTube Comments> in Bangladesh',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Find clear answers about buying YouTube comments in Bangladesh, payment options, delivery, safety, order tracking, and how TrendEvo helps support YouTube audience interaction.',
     bg: 'section-7',
     items: [
       {
-        question: 'What is an SMM Panel?',
+        question: 'Is it safe to buy YouTube comments from TrendEvo?',
         answer:
-          'An SMM panel is an online platform where you can buy social media marketing services such as YouTube comments, followers, and engagement. TrendEvo lets you place orders, track delivery, and manage your growth from one dashboard.',
+          'Yes, TrendEvo uses a simple order process where you only need to submit your public YouTube video link. We never ask for your YouTube password, so your login details stay private.',
       },
       {
-        question: 'Can the SMM Panel target a specific group?',
+        question: 'Can I buy YouTube comments in Bangladesh with bKash?',
         answer:
-          'Yes. Depending on the service you choose, TrendEvo offers targeting options so your YouTube comments can align with your preferred audience type, region, or niche when available for that package.',
+          'Yes, you can add funds using bKash and then place your YouTube comments order from the TrendEvo dashboard. We also support other local payment options for Bangladeshi users.',
       },
       {
-        question: 'Is Using an SMM Panel Safe?',
+        question: 'Do you accept Nagad or Rocket payments?',
         answer:
-          'TrendEvo uses secure checkout, encrypted payments, and privacy-focused order handling. We never ask for your YouTube password — only your public video URL is required to deliver comments.',
+          'Yes, TrendEvo supports local payment methods such as Nagad, Rocket, and other available options. This makes it easier for creators, businesses, educators, agencies, and resellers in Bangladesh.',
       },
       {
-        question: 'Does using an SMM Panel risk banning my account?',
+        question: 'Do I need to share my YouTube password?',
         answer:
-          'We deliver comments gradually using methods designed to look natural. While no service can guarantee zero platform risk, TrendEvo focuses on quality delivery and safe pacing to help protect your channel.',
+          'No, you do not need to share your password. To buy YouTube comments, you only need to provide the correct YouTube video URL and choose your preferred quantity.',
       },
       {
-        question: 'Can I track the progress of my orders?',
+        question: 'How fast will my YouTube comments order start?',
         answer:
-          'Yes. After placing an order, you can monitor its status in real time from your TrendEvo dashboard and see updates as your YouTube comments delivery progresses.',
+          'Most orders start after submission and payment confirmation. Delivery time can vary based on service type, quantity, video status, and current order volume.',
       },
       {
-        question: 'What payment methods do you accept?',
+        question: 'Can I track my YouTube comments order?',
         answer:
-          'TrendEvo supports multiple trusted payment options including local and international methods. Available gateways are shown at checkout when you add funds or pay for your order.',
+          'Yes, you can track your order status from the TrendEvo dashboard. The order panel helps you check whether your YouTube comments order is pending, processing, completed, or partially completed.',
       },
       {
-        question: 'Can I cancel my order instantly?',
+        question: 'Can I buy comments for a new YouTube video?',
         answer:
-          'Orders that have not started processing can often be cancelled from your account. Once delivery is in progress, cancellation may not be possible — contact our support team and we will review your request promptly.',
+          'Yes, new YouTube videos can order comments. For a natural appearance, it is better to start with a smaller package, improve your title and description, and increase comment activity gradually.',
       },
       {
-        question: 'Do you have customer support?',
+        question: 'Do YouTube comments help with video credibility?',
         answer:
-          'Yes. TrendEvo offers 24/7 customer support to help with orders, payments, and account questions. Reach out anytime through live chat or our contact channels if you need assistance.',
+          'Yes, YouTube comments can make a video look more active and viewer-focused. They support social proof, but long-term credibility also depends on content quality, value, and creator consistency.',
+      },
+      {
+        question: 'Will buying YouTube comments improve recommendations?',
+        answer:
+          'YouTube comments can support engagement signals, but recommendations depend on many factors such as watch time, click-through rate, retention, viewer satisfaction, titles, thumbnails, and content relevance.',
+      },
+      {
+        question: 'Who can use TrendEvo’s YouTube comments service?',
+        answer:
+          'TrendEvo is useful for Bangladeshi YouTubers, educators, eCommerce brands, local businesses, startups, public figures, NGOs, digital agencies, freelancers, and SMM resellers who want stronger YouTube video interaction.',
       },
     ],
+    ctaTitle: 'Still have questions?',
+    ctaSubtitle:
+      "Can't find the answer you're looking for? Please get in touch with our team.",
+    ctaButtonLabel: 'Contact US',
+    ctaButtonHref: '/contact-us',
+  },
+
+  relatedServices: {
+    badge: 'RELATED SERVICE',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 198,
+    title: 'Related Services You gt<Might Also Need>',
+    subtitle:
+      'YouTube comments help your videos create visible discussion, but stronger growth comes when your content also gains views and engagement. TrendEvo offers related YouTube SMM services in Bangladesh to support video performance, trust, and long-term channel growth.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Buy YouTube Views',
+        description:
+          'Increase visibility for your YouTube videos with more views. This service helps tutorials, product reviews, music videos, Shorts, business content, and campaign videos look more active to new viewers.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+      {
+        title: 'Buy YouTube Likes',
+        description:
+          'Improve the engagement signal of your YouTube videos with more likes. YouTube likes help videos look more useful, viewer-approved, and trusted when new audiences decide whether to watch.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+    ],
+    bottomRowFeatures: [],
+    ctaLabel: 'Sign Up Now',
   },
 
   cta: {
-    title: 'Ready to gt<Grow your Social Media> in Bangladesh',
+    title: 'Ready to Grow with a gt<Trusted SMM Panel> in Bangladesh?',
     description:
-      'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
-    primaryButtonLabel: 'Register Now',
-    secondaryButtonLabel: 'See all Services',
-    secondaryButtonHref: '/services',
+      'Join TrendEvo and manage your YouTube, Instagram, Facebook, TikTok, Telegram, and website traffic orders from one simple dashboard. Add funds with bKash, Nagad, or Rocket, choose your service, and start growing with secure order tracking.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All YouTube Services',
+    secondaryButtonHref: '/youtube-smm-panel',
   },
 };

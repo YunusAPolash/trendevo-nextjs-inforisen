@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
-import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
 import { data as youtubeCommentsPageData } from '@/app/(subservice)/buy-youtube-comments/page-data';
-import YoutubeCommentsCtaSection from '@/app/(subservice)/buy-youtube-comments/_components/cta-section';
-import YoutubeCommentsHeroSection from '@/app/(subservice)/buy-youtube-comments/_components/hero-section';
-import YoutubeCommentsOrderFormSection from '@/app/(subservice)/buy-youtube-comments/_components/order-form-section';
-import YoutubeCommentsWorkingProcessSection from '@/app/(subservice)/buy-youtube-comments/_components/working-process-section';
+import YoutubeCommentsCtaSection from './_components/cta-section';
+import YoutubeCommentsHeroSection from './_components/hero-section';
+import YoutubeCommentsOrderFormSection from './_components/order-form-section';
+import YoutubeCommentsRelatedServicesSection from './_components/related-services-section';
+import YoutubeCommentsThingsToKnowSection from './_components/things-to-know-section';
+import YoutubeCommentsWhoShouldBuySection from './_components/who-should-buy-section';
+import YoutubeCommentsWhyChooseSection from './_components/why-choose-section';
+import YoutubeCommentsWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: youtubeCommentsPageData.seo.title,
   description: youtubeCommentsPageData.seo.description,
+  alternates: {
+    canonical: youtubeCommentsPageData.seo.canonical,
+  },
 };
 
 export default function YoutubeCommentsPage() {
@@ -18,12 +23,12 @@ export default function YoutubeCommentsPage() {
     <>
       <YoutubeCommentsHeroSection />
       <YoutubeCommentsOrderFormSection />
-      <TestimonialsSection data={youtubeCommentsPageData.testimonials} />
+      <YoutubeCommentsWhyChooseSection />
+      <YoutubeCommentsWhoShouldBuySection />
       <YoutubeCommentsWorkingProcessSection />
-      {youtubeCommentsPageData.serviceLeadingSlugs.map((slug) => (
-        <ServiceLeading key={slug} slug={slug} />
-      ))}
+      <YoutubeCommentsThingsToKnowSection />
       <FaqSection data={youtubeCommentsPageData.faq} />
+      <YoutubeCommentsRelatedServicesSection />
       <YoutubeCommentsCtaSection />
     </>
   );
