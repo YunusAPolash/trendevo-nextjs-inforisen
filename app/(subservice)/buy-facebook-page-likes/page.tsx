@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
-import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
 import { data as facebookPageLikesPageData } from '@/app/(subservice)/buy-facebook-page-likes/page-data';
-import FacebookPageLikesCtaSection from '@/app/(subservice)/buy-facebook-page-likes/_components/cta-section';
-import FacebookPageLikesHeroSection from '@/app/(subservice)/buy-facebook-page-likes/_components/hero-section';
-import FacebookPageLikesOrderFormSection from '@/app/(subservice)/buy-facebook-page-likes/_components/order-form-section';
-import FacebookPageLikesWorkingProcessSection from '@/app/(subservice)/buy-facebook-page-likes/_components/working-process-section';
+import FacebookPageLikesCtaSection from './_components/cta-section';
+import FacebookPageLikesHeroSection from './_components/hero-section';
+import FacebookPageLikesOrderFormSection from './_components/order-form-section';
+import FacebookPageLikesRelatedServicesSection from './_components/related-services-section';
+import FacebookPageLikesThingsToKnowSection from './_components/things-to-know-section';
+import FacebookPageLikesWhoShouldBuySection from './_components/who-should-buy-section';
+import FacebookPageLikesWhyChooseSection from './_components/why-choose-section';
+import FacebookPageLikesWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: facebookPageLikesPageData.seo.title,
   description: facebookPageLikesPageData.seo.description,
+  alternates: {
+    canonical: facebookPageLikesPageData.seo.canonical,
+  },
 };
 
 export default function FacebookPageLikesPage() {
@@ -18,12 +23,12 @@ export default function FacebookPageLikesPage() {
     <>
       <FacebookPageLikesHeroSection />
       <FacebookPageLikesOrderFormSection />
-      <TestimonialsSection data={facebookPageLikesPageData.testimonials} />
+      <FacebookPageLikesWhyChooseSection />
+      <FacebookPageLikesWhoShouldBuySection />
       <FacebookPageLikesWorkingProcessSection />
-      {facebookPageLikesPageData.serviceLeadingSlugs.map((slug) => (
-        <ServiceLeading key={slug} slug={slug} />
-      ))}
+      <FacebookPageLikesThingsToKnowSection />
       <FaqSection data={facebookPageLikesPageData.faq} />
+      <FacebookPageLikesRelatedServicesSection />
       <FacebookPageLikesCtaSection />
     </>
   );

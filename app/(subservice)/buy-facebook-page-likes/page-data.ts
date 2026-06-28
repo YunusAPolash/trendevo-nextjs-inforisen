@@ -1,6 +1,8 @@
 import type { FaqSectionData } from '@/components/sections/faq-section';
 import type { ServiceWorkingProcessStep } from '@/components/sections/service-working-process-section';
-import type { TestimonialsSectionData } from '@/components/sections/testimonials-section';
+import type { ThingsToKnowSectionData } from '@/components/sections/things-to-know-section';
+import type { WhoShouldBuySectionData } from '@/components/sections/who-should-buy-section';
+import type { ServiceLeadingContent } from '@/components/serviceSmmPanel/service-leading-content';
 
 type SEO = {
   title: string;
@@ -13,10 +15,13 @@ type FacebookPageLikesPageData = {
   hero: {
     bg: 'section-1';
     variant: 'wide';
+    trustLabel: string;
     title: string;
     description: string;
-    signInLabel: string;
-    createAccountLabel: string;
+    descriptionSecondary: string;
+    primaryButtonLabel: string;
+    secondaryButtonLabel: string;
+    secondaryButtonHref: string;
     trustBadgeBase: {
       avatarSrcs: string[];
       ratingIconSrc: string;
@@ -31,6 +36,13 @@ type FacebookPageLikesPageData = {
       unoptimized: boolean;
     };
   };
+  orderForm: {
+    badge: string;
+    serviceLabel: string;
+    submitLabel: string;
+  };
+  whyChoose: ServiceLeadingContent;
+  whoShouldBuy: WhoShouldBuySectionData;
   workingProcess: {
     badge: string;
     underlineSrc: string;
@@ -41,9 +53,11 @@ type FacebookPageLikesPageData = {
     subtitleClassName: string;
     steps: ServiceWorkingProcessStep[];
   };
-  serviceLeadingSlugs: ['facebook-page-likes', 'facebook-page-likes-related-services'];
-  testimonials: TestimonialsSectionData;
+  thingsToKnow: ThingsToKnowSectionData;
   faq: FaqSectionData;
+  relatedServices: ServiceLeadingContent & {
+    ctaLabel: string;
+  };
   cta: {
     title: string;
     description: string;
@@ -53,27 +67,26 @@ type FacebookPageLikesPageData = {
   };
 };
 
-const reviewQuote =
-  'This platform helped us boost our brand visibility significantly. The results are real and the process is super easy. Five stars!';
-
-const youtubeReelVideoId = 'LXb3EKWsInQ';
-
 export const data: FacebookPageLikesPageData = {
   seo: {
-    title: 'Buy Facebook Page Likes | TrendEvo',
+    title: 'Buy Facebook Page Likes in Bangladesh | TrendEvo',
     description:
-      'Buy real Facebook page likes at affordable prices. Fast delivery, secure checkout, and 24/7 support from TrendEvo in Bangladesh.',
+      'Buy Facebook Page Likes in Bangladesh with TrendEvo. Build trust for your business page using bKash, Nagad, Rocket, fast delivery, and secure orders.',
     canonical: '/buy-facebook-page-likes',
   },
 
   hero: {
     bg: 'section-1',
     variant: 'wide',
-    title: 'Buy gt<Facebook Page Likes> in Real, Fast & Affordable price.',
+    trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi Businesses, Brands & Agencies',
+    title: 'Buy gt<Facebook Page Likes> in Bangladesh for Stronger Brand Trust',
     description:
-      'Growing a Facebook page can be tough. Consistent content and smart promotion are key, but results can be slow. At TrendEvo, we provide solutions to help your Facebook page thrive with real likes and engagement.',
-    signInLabel: 'Sign In',
-    createAccountLabel: 'Create an Account',
+      'A Facebook business page often becomes the first place where Bangladeshi customers check a brand. When a page has more likes, it looks more familiar, active, and trusted. TrendEvo helps businesses, online stores, agencies, public figures, NGOs, startups, and local entrepreneurs buy Facebook Page Likes in Bangladesh with an easy dashboard, local payments, and safe order processing.',
+    descriptionSecondary:
+      'Our Facebook Page Likes service is built for pages that need stronger brand credibility, better public approval, and a cleaner first impression. You can choose a suitable package, pay with bKash, Nagad, Rocket, or other supported methods, and improve your Facebook page presence without sharing your password.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All Services',
+    secondaryButtonHref: '/services',
     trustBadgeBase: {
       avatarSrcs: [
         '/images/reviews/home-hero-hero-1-avatar.png',
@@ -88,7 +101,7 @@ export const data: FacebookPageLikesPageData = {
     },
     illustration: {
       src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
-      alt: 'Excited user celebrating Facebook page growth with analytics chart',
+      alt: 'Buy Facebook Page Likes in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
       maxWidthClassName: 'max-w-[558px]',
@@ -96,256 +109,271 @@ export const data: FacebookPageLikesPageData = {
     },
   },
 
+  orderForm: {
+    badge: 'Facebook Services',
+    serviceLabel: 'Page Likes',
+    submitLabel: 'Pay Now With bKash/ Nagad',
+  },
+
+  whyChoose: {
+    badge: 'WHY CHOOSE US',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 190,
+    title: 'Why Choose TrendEvo to Buy gt<Facebook Page Likes> in Bangladesh',
+    subtitle:
+      'TrendEvo is made for Bangladeshi users who want a simple way to improve Facebook page credibility. As the best facebook SMM panel, TrendEvo helps business owners, agencies, resellers, and creators manage Facebook Page Likes with secure payment options, clear order tracking, and better control.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Quick Order Processing',
+        description:
+          'Your Facebook Page Likes order starts after you place it from the dashboard. Processing speed may vary by package size, but TrendEvo keeps the order flow smooth and easy to follow.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: '-scale-y-100 rotate-180 object-cover',
+      },
+      {
+        title: 'Budget-Friendly Packages',
+        description:
+          'You can buy Facebook Page Likes in Bangladesh without needing a large marketing budget. Our packages are suitable for new business pages, e-commerce brands, restaurants, local shops, startups, and reseller projects.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: 'object-cover',
+      },
+      {
+        title: 'Support When You Need It',
+        description:
+          'Have a question about service selection, order status, payment, or dashboard use? TrendEvo support is available to help you choose the right Facebook Page Likes package and solve order-related issues.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[167%] max-w-none object-cover -translate-x-[34%] -translate-y-[13%]',
+      },
+    ],
+    bottomRowFeatures: [
+      {
+        title: 'Local Payment Support',
+        description:
+          'Pay through bKash, Nagad, Rocket, and other available methods. TrendEvo makes Facebook Page Likes easier for Bangladeshi users who prefer familiar local payment systems.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[125%] max-w-none object-cover -translate-x-[11%] -translate-y-[12%]',
+      },
+      {
+        title: 'Credibility-Focused Growth',
+        description:
+          'TrendEvo focuses on Facebook Page Likes that support brand appearance and page authority. You can begin with a small order, review the result, and scale your page growth based on your business needs.',
+        iconFrameSrc:
+          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+      },
+    ],
+  },
+
+  whoShouldBuy: {
+    badge: 'Buy Facebook Page Likes',
+    title: 'Who Should Buy gt<Facebook Page Likes> in Bangladesh?',
+    subtitle:
+      'Facebook Page Likes can make a business page look more trusted and accepted when new visitors check it for the first time. TrendEvo’s Facebook Page Likes service is useful for Bangladeshi users who want stronger trust signals, better brand presentation, and a more professional page before running ads, launching offers, or sending traffic from other platforms. As a reliable SMM Panel BD, TrendEvo also helps local businesses, creators, agencies, and resellers manage page growth with easy ordering and local payment support.',
+    titleClassName:
+      'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    items: [
+      {
+        title: 'Local Business Pages',
+        description:
+          'Many businesses in Bangladesh use Facebook as their main online storefront. Restaurants, boutiques, electronics stores, salons, training centers, and home-based sellers can use Facebook Page Likes to make their page look more reliable when customers visit for the first time.',
+      },
+      {
+        title: 'E-commerce and Online Stores',
+        description:
+          'Online buyers often check page likes before messaging a seller or placing an order. A page with stronger likes can help fashion shops, gadget sellers, beauty stores, and home decor brands create a better trust signal for visitors.',
+      },
+      {
+        title: 'Public Figures and Personal Brands',
+        description:
+          'Public figures need a page that looks established and easy to trust. Politicians, speakers, artists, coaches, musicians, educators, and media personalities can buy Facebook Page Likes in Bangladesh to improve their public image and page authority.',
+      },
+      {
+        title: 'Digital Agencies and Resellers',
+        description:
+          'Agencies often manage many Facebook pages for clients. TrendEvo helps digital agencies and SMM resellers place Facebook Page Likes orders from one dashboard with clear pricing, local payment options, and reseller-friendly service access.',
+      },
+      {
+        title: 'Startups, NGOs, and Community Pages',
+        description:
+          'New startups, social projects, NGOs, and community groups need early credibility to attract attention. Facebook Page Likes can help their page look active before awareness campaigns, fundraising posts, event promotions, or local outreach.',
+      },
+    ],
+  },
+
   workingProcess: {
     badge: 'WORKING PROCESS',
     underlineSrc: '/images/working-process/working-process-section-underline.svg',
     underlineWidth: 216,
-    title: 'How to Buy Facebook Page Likes gt<on TrendEvo>',
+    title: 'How to Buy Facebook Page Likes on TrendEvo — gt<Step by Step>',
     subtitle:
-      'A Facebook SMM panel helps businesses grow followers, likes, and engagement quickly and efficiently, saving time and boosting online presence.',
+      'Buying Facebook Page Likes in Bangladesh should be quick and simple. TrendEvo keeps the process easy for business owners, page admins, agencies, freelancers, and resellers who want to improve page trust without technical steps.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
     steps: [
       {
         number: '01',
-        title: 'Simple Registration',
+        title: 'Create Your TrendEvo Account',
         description:
-          'You’ll need to sign up quickly with just a few steps to start using our SMM panel.',
+          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can view Facebook services, compare prices, and manage all your orders from one place.',
       },
       {
         number: '02',
-        title: 'Add Funds to Your Balance',
+        title: 'Add Balance to Your Account',
         description:
-          'Single out the features and services that fit your needs or budget.',
+          'Add funds using supported payment methods in Bangladesh. You can use bKash, Nagad, Rocket, or other available options before placing your Facebook Page Likes order.',
       },
       {
         number: '03',
-        title: 'Find the Facebook Page Likes Service',
+        title: 'Select Facebook Page Likes Service',
         description:
-          'Make payments safely via trusted methods to protect your information.',
+          'Go to the Facebook service list and choose the Page Likes package that fits your goal. You can start with a small quantity, choose a stronger brand package, or place bulk orders for client pages.',
       },
       {
         number: '04',
-        title: 'Enter Your Facebook Page URL & Place the Order',
+        title: 'Submit Your Facebook Page URL',
         description:
-          'Monitor your progress easily and see how your social media improves.',
+          'Paste the correct Facebook page link, enter the quantity, and confirm the order. You do not need to share your Facebook login details. TrendEvo only needs your public page URL to process the service.',
       },
     ],
   },
 
-  serviceLeadingSlugs: ['facebook-page-likes', 'facebook-page-likes-related-services'],
-
-  testimonials: {
-    sectionBackground:
-      'linear-gradient(64.26deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)',
-    badge: 'TESTIMONIALS',
-    title: 'Facebook Panel gt<Reviews>',
-    subtitle:
-      'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
-    underlineWidth: 169,
-    titleClassName:
-      'max-w-none whitespace-normal text-center text-2xl tracking-[0.36px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[36px] lg:text-[36px]',
-    subtitleClassName:
-      'max-w-[996px] text-center text-sm leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg',
-    customerTabLabel: 'Customer Reviews',
-    videoTabLabel: 'Video Reviews',
-    assets: {
-      starIconSrc: '/images/testimonials/testimonials-star-rating-icon.svg',
-      verifyBadgeSrc: '/images/testimonials/testimonials-verified-badge.svg',
-      customerReviewTabIconSrc:
-        '/images/testimonials/testimonials-customer-review-icon.svg',
-      videoReviewTabIconSrc:
-        '/images/testimonials/testimonials-clapperboard-icon.svg',
-      quoteOpenSrc: '/images/testimonials/testimonials-quote-mark-2.svg',
-      quoteCloseSrc: '/images/testimonials/testimonials-quote-mark.svg',
-      playIconSrc: '/images/testimonials/testimonials-video-play-icon.svg',
-      playOrbSrc: '/images/testimonials/testimonials-video-play-orb.webp',
-    },
-    leftTextReviews: [
-      {
-        id: 'left-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-2',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-3',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-4',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
+  thingsToKnow: {
+    badge: 'Things to Know',
+    title: 'Things to Know Before You Buy gt<Facebook Page Likes>',
+    paragraphs: [
+      'Buying Facebook Page Likes can improve how your page looks to new visitors, but the best result comes when the service matches your real marketing plan. Before ordering on TrendEvo, check that your Facebook page is public, the URL is correct, and the package size fits your current page activity.',
+      'You do not need to share your Facebook password to buy Facebook Page Likes in Bangladesh. TrendEvo only requires your public page link to process the order. This keeps the process safer and easier for businesses, agencies, entrepreneurs, and resellers.',
+      'For a natural page appearance, avoid very large orders on a completely new page. Start with a realistic amount, keep your page updated, and grow step by step. This makes your page look more believable to Bangladeshi visitors.',
+      'Facebook Page Likes can support page credibility, but they work best with useful content. Post product photos, customer feedback, short videos, offers, menus, service updates, and local business stories so visitors have a reason to trust your brand.',
     ],
-    rightTextReviews: [
-      {
-        id: 'right-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
-    ],
-    featuredReview: {
-      name: 'Ariyena Islam',
-      role: 'Business Owner',
-      avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
-      quote: reviewQuote,
-      youtubeVideoId: youtubeReelVideoId,
-    },
-    videoReviews: [
-      {
-        id: 'video-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-3.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-4.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-5',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-6',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-    ],
-    defaultTab: 'video',
+    ctaLabel: 'Create An Account Now',
   },
 
   faq: {
-    label: 'FAQ',
-    title: 'gt<Frequently> Asked Questions',
+    label: 'Frequently Asked Questions',
+    title: 'Frequently Asked Questions — gt<Buy Facebook Page Likes> in Bangladesh',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Find clear answers about buying Facebook Page Likes in Bangladesh, payment options, order safety, delivery, tracking, and how TrendEvo works for local users.',
     bg: 'section-7',
     items: [
       {
-        question: 'What is an SMM Panel?',
+        question: 'Is it safe to buy Facebook Page Likes from TrendEvo?',
         answer:
-          'An SMM panel is an online platform where you can buy social media marketing services such as Facebook page likes, followers, and engagement. TrendEvo lets you place orders, track delivery, and manage your growth from one dashboard.',
+          'Yes, TrendEvo uses a simple order process where you only submit your public Facebook page link. We do not ask for your Facebook password, so your login details remain private.',
       },
       {
-        question: 'Can the SMM Panel target a specific group?',
+        question: 'Can I buy Facebook Page Likes in Bangladesh with bKash?',
         answer:
-          'Yes. Depending on the service you choose, TrendEvo offers targeting options so your Facebook page likes can align with your preferred audience type, region, or niche when available for that package.',
+          'Yes, you can add funds with bKash and place your Facebook Page Likes order from the TrendEvo dashboard. This makes the process easier for Bangladeshi business owners and page admins.',
       },
       {
-        question: 'Is Using an SMM Panel Safe?',
+        question: 'Do you support Nagad and Rocket payments?',
         answer:
-          'TrendEvo uses secure checkout, encrypted payments, and privacy-focused order handling. We never ask for your Facebook password — only your public page URL is required to deliver likes.',
+          'Yes, TrendEvo supports Nagad, Rocket, and other available local payment methods. These options are useful for SMEs, agencies, resellers, creators, and local entrepreneurs in Bangladesh.',
       },
       {
-        question: 'Does using an SMM Panel risk banning my account?',
+        question: 'Do I need to provide my Facebook password?',
         answer:
-          'We deliver likes gradually using methods designed to look natural. While no service can guarantee zero platform risk, TrendEvo focuses on quality delivery and safe pacing to help protect your Facebook page.',
+          'No, you do not need to share your password. To buy Facebook Page Likes, you only need to submit the correct public Facebook page URL and select your preferred quantity.',
       },
       {
-        question: 'Can I track the progress of my orders?',
+        question: 'How fast will my Facebook Page Likes order start?',
         answer:
-          'Yes. After placing an order, you can monitor its status in real time from your TrendEvo dashboard and see updates as your Facebook page like delivery progresses.',
+          'Most orders begin after submission and payment confirmation. Delivery time can vary based on service type, package size, and current order volume.',
       },
       {
-        question: 'What payment methods do you accept?',
+        question: 'Can I track my Facebook Page Likes order?',
         answer:
-          'TrendEvo supports multiple trusted payment options including local and international methods. Available gateways are shown at checkout when you add funds or pay for your order.',
+          'Yes, you can track your order from the TrendEvo dashboard. The panel shows whether your order is pending, processing, completed, or partially completed.',
       },
       {
-        question: 'Can I cancel my order instantly?',
+        question: 'Can I buy Page Likes for a new Facebook business page?',
         answer:
-          'Orders that have not started processing can often be cancelled from your account. Once delivery is in progress, cancellation may not be possible — contact our support team and we will review your request promptly.',
+          'Yes, new Facebook business pages can order Page Likes. For a natural look, it is better to start with a smaller package and increase likes gradually as your page gets more content.',
       },
       {
-        question: 'Do you have customer support?',
+        question: 'Are Facebook Page Likes and Facebook Followers the same?',
         answer:
-          'Yes. TrendEvo offers 24/7 customer support to help with orders, payments, and account questions. Reach out anytime through live chat or our contact channels if you need assistance.',
+          'No, they are not the same. Facebook Page Likes show public approval for a page, while followers are people connected to page updates. Many brands use both to strengthen page trust and visibility.',
+      },
+      {
+        question: 'Will buying Facebook Page Likes increase my sales?',
+        answer:
+          'Facebook Page Likes can improve page credibility and first impression, but sales also depend on your products, pricing, content, customer service, and offers. Page Likes work best as part of a wider Facebook marketing plan.',
+      },
+      {
+        question: 'Who can use TrendEvo’s Facebook Page Likes service?',
+        answer:
+          'TrendEvo is useful for Bangladeshi local businesses, e-commerce stores, restaurants, startups, NGOs, public figures, digital agencies, freelancers, and SMM resellers who want a stronger Facebook page presence.',
       },
     ],
+    ctaTitle: 'Still have questions?',
+    ctaSubtitle:
+      "Can't find the answer you're looking for? Please get in touch with our team.",
+    ctaButtonLabel: 'Contact Support',
+    ctaButtonHref: '/contact-us',
+  },
+
+  relatedServices: {
+    badge: 'RELATED SERVICE',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 198,
+    title: 'Related Services You gt<Might Also Need>',
+    subtitle:
+      'Facebook Page Likes help your page look more trusted, but stronger growth comes when your page also has followers and post activity. TrendEvo offers related Facebook SMM services in Bangladesh to support page credibility, engagement, visibility, and brand confidence.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Buy Facebook Followers',
+        description:
+          'Grow your Facebook page with more followers and build a stronger first impression. This service is useful for new pages, online shops, creators, local brands, and businesses that want better page trust before running ads or promotions.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+      {
+        title: 'Buy Facebook Comments',
+        description:
+          'Add a more visible response to your Facebook posts with comments. This can help product launches, event posts, promotional updates, service announcements, and local business campaigns look more active.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+    ],
+    bottomRowFeatures: [],
+    ctaLabel: 'Sign Up Now',
   },
 
   cta: {
-    title: 'Ready to gt<Grow your Social Media> in Bangladesh',
+    title: 'Ready to Build a gt<Stronger Facebook Page> in Bangladesh?',
     description:
-      'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
-    primaryButtonLabel: 'Register Now',
-    secondaryButtonLabel: 'See all Services',
-    secondaryButtonHref: '/services',
+      'Join TrendEvo and manage your Facebook, Instagram, YouTube, TikTok, Telegram, and website traffic services from one simple dashboard. Add funds with bKash, Nagad, or Rocket, choose your service, and grow your page with secure order tracking.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'View All Facebook Services',
+    secondaryButtonHref: '/facebook-smm-panel',
   },
 };
