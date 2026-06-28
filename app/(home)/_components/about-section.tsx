@@ -3,123 +3,11 @@ import Image from 'next/image';
 import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
-import { cn } from '@/lib/utils';
-import {
-  formatStatCount,
-  getSatisfactionRate,
-  getStats,
-} from '@/lib/stats';
+import { data } from '@/app/(home)/page-data';
 
-const GRADIENT_TEXT =
-  'bg-gradient-to-r from-[#ad26ff] to-[#ff3f85] bg-clip-text text-transparent';
+const { about } = data;
 
-const features = [
-  'Fast Delivery with Smooth and Reliable Performance',
-  'Real & High-Quality Engagement to Build Strong Social Proof',
-  'Safe, Secure & High Retention for Long-Term Growth',
-];
-
-const metricRows = [
-  [
-    {
-      key: 'experience' as const,
-      label: 'Years of Digital Marketing Experience',
-      labelClassName: 'w-auto sm:w-[164px]',
-      splitLabel: false,
-    },
-    {
-      key: 'ordersCompleted' as const,
-      label: 'Orders Delivered Successfully',
-      labelClassName: 'w-auto sm:w-[130px]',
-      splitLabel: false,
-    },
-  ],
-  [
-    {
-      key: 'usersAll' as const,
-      label: 'Active Users & Businesses Served',
-      labelClassName: 'w-auto sm:w-[164px]',
-      splitLabel: false,
-    },
-    {
-      key: 'satisfaction' as const,
-      label: 'Customer Satisfaction Rate',
-      labelClassName: 'whitespace-normal',
-      splitLabel: true,
-    },
-  ],
-] as const;
-
-function getMetricValue(
-  key: (typeof metricRows)[number][number]['key'],
-  statsData: Awaited<ReturnType<typeof getStats>>,
-): string {
-  switch (key) {
-    case 'experience':
-      return '06+';
-    case 'ordersCompleted':
-      return formatStatCount(statsData.ordersCompleted);
-    case 'usersAll':
-      return formatStatCount(statsData.usersAll);
-    case 'satisfaction':
-      return `${getSatisfactionRate(statsData)}%`;
-    default:
-      return '';
-  }
-}
-
-function MetricDivider() {
-  return (
-    <span
-      className="hidden h-[45px] w-px shrink-0 bg-[#d9d9e3] dark:bg-[#454a56] sm:block"
-      aria-hidden
-    />
-  );
-}
-
-function MetricItem({
-  value,
-  label,
-  labelClassName,
-  splitLabel,
-}: {
-  value: string;
-  label: string;
-  labelClassName?: string;
-  splitLabel?: boolean;
-}) {
-  return (
-    <div className="flex items-center gap-2">
-      <span
-        className={cn(
-          'text-2xl font-semibold leading-[1.3] sm:text-[32px] md:text-[40px]',
-          GRADIENT_TEXT,
-        )}
-      >
-        {value}
-      </span>
-      {splitLabel ? (
-        <p className="text-xs font-medium leading-[1.5] text-[#404a60] dark:text-[#dfe0e4] sm:text-sm">
-          <span className="block">Customer Satisfaction</span>
-          <span className="block">Rate</span>
-        </p>
-      ) : (
-        <p
-          className={cn(
-            'text-xs font-medium leading-[1.5] text-[#404a60] dark:text-[#dfe0e4] sm:text-sm',
-            labelClassName,
-          )}
-        >
-          {label}
-        </p>
-      )}
-    </div>
-  );
-}
-
-export default async function AboutSection() {
-  const statsData = await getStats();
-
+export default function AboutSection() {
   return (
     <PrimarySection
       id="about"
@@ -132,27 +20,19 @@ export default async function AboutSection() {
           <div className="flex flex-col gap-5 sm:gap-7 lg:gap-[28px]">
             <div className="flex flex-col gap-5 sm:gap-6 lg:gap-8">
               <SectionHeading
-                align="left"
-                badge="ABOUT US"
-                underlineWidth={114}
-                title={
-                  <>
-                    <span className="block">
-                      Your Trusted{' '}
-                      <span className={GRADIENT_TEXT}>Social Media</span>
-                    </span>
-                    <span className="block">Growth Partner</span>
-                  </>
-                }
-                subtitle="A reliable SMM platform designed to deliver fast, secure, and high-quality social media growth for individuals, businesses, and resellers."
-                titleClassName="max-w-[642px] text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]"
-                subtitleClassName="max-w-[642px] text-sm font-medium sm:text-base md:text-lg lg:text-[22px] lg:leading-[1.5]"
+                align={about.heading.align ?? 'left'}
+                badge={about.heading.badge}
+                underlineWidth={about.heading.underlineWidth}
+                title={about.heading.title}
+                subtitle={about.heading.subtitle}
+                titleClassName={about.heading.titleClassName}
+                subtitleClassName={about.heading.subtitleClassName}
               />
             </div>
 
             <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[38px]">
               <ul className="flex max-w-[671px] flex-col gap-3 sm:gap-4 lg:gap-[18px]">
-                {features.map((feature) => (
+                {about.features.map((feature) => (
                   <li
                     key={feature}
                     className="flex items-start gap-2 sm:items-center"
@@ -172,25 +52,15 @@ export default async function AboutSection() {
                 ))}
               </ul>
 
-              <div className="flex flex-col justify-center gap-4 sm:gap-6">
-                {metricRows.map((row, rowIndex) => (
+              <div className="grid max-w-[671px] grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+                {about.trustPoints.map((point) => (
                   <div
-                    key={rowIndex}
-                    className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 md:gap-8"
+                    key={point}
+                    className="rounded-xl border border-[#e8d4f7] bg-white/60 px-4 py-3 dark:border-[#5c3d72] dark:bg-white/[0.04]"
                   >
-                    <MetricItem
-                      value={getMetricValue(row[0].key, statsData)}
-                      label={row[0].label}
-                      labelClassName={row[0].labelClassName}
-                      splitLabel={row[0].splitLabel}
-                    />
-                    <MetricDivider />
-                    <MetricItem
-                      value={getMetricValue(row[1].key, statsData)}
-                      label={row[1].label}
-                      labelClassName={row[1].labelClassName}
-                      splitLabel={row[1].splitLabel}
-                    />
+                    <h3 className="text-sm font-semibold leading-snug text-[#13203b] dark:text-white sm:text-base">
+                      {point}
+                    </h3>
                   </div>
                 ))}
               </div>
@@ -198,10 +68,10 @@ export default async function AboutSection() {
           </div>
 
           <PrimaryButton
-            type="button"
+            href={about.ctaHref}
             className="w-fit gap-2 self-start border-none md:h-[52px] md:text-lg"
           >
-            Discover More
+            {about.ctaLabel}
             <Image
               src="/images/about/about-us-hugeicons-arrow-right-double-icon.svg"
               alt=""
@@ -216,8 +86,8 @@ export default async function AboutSection() {
 
         <div className="relative mx-auto aspect-[594/736] w-full max-w-[320px] shrink-0 sm:max-w-[440px] lg:max-w-[594px]">
           <Image
-            src="/images/about/about-us-trendevo-growth-partner-illustration.webp"
-            alt="TrendEvo growth partner"
+            src={about.image.src}
+            alt={about.image.alt}
             fill
             className="object-contain"
             sizes="(max-width: 1024px) 100vw, 594px"

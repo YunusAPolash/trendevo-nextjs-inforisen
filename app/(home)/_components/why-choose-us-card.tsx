@@ -1,18 +1,15 @@
 import Image from 'next/image';
 
 import PrimaryCard from '@/components/cards/primary-card';
-
-import {
-  CARD_DESCRIPTION,
-  type WhyChooseUsFeature,
-} from '@/app/(home)/_components/why-choose-us-data';
+import type { HomeWhyChooseUsFeature } from '@/app/(home)/page-data';
 
 export function WhyChooseUsCard({
   title,
   icon,
   iconWidth,
   iconHeight,
-}: WhyChooseUsFeature) {
+  description,
+}: HomeWhyChooseUsFeature & { description: string }) {
   return (
     <PrimaryCard
       bg="card-2"
@@ -69,7 +66,7 @@ export function WhyChooseUsCard({
               </h3>
             </div>
             <p className="text-sm leading-normal text-[#313131] dark:text-white sm:text-base">
-              {CARD_DESCRIPTION}
+              {description}
             </p>
           </div>
         </div>

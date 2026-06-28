@@ -1,15 +1,14 @@
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
-
 import { WhyChooseUsCard } from '@/app/(home)/_components/why-choose-us-card';
-import {
-  leftFeatures,
-  rightFeatures,
-  timelineSteps,
-} from '@/app/(home)/_components/why-choose-us-data';
 import { WhyChooseUsDesktopTimeline } from '@/app/(home)/_components/why-choose-us-timeline';
+import { data } from '@/app/(home)/page-data';
+
+const { whyChooseUs } = data;
 
 export default function WhyChooseUsSection() {
+  const { heading, leftFeatures, rightFeatures, timelineSteps } = whyChooseUs;
+
   return (
     <PrimarySection
       bg="section-7"
@@ -18,27 +17,29 @@ export default function WhyChooseUsSection() {
     >
       <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
         <SectionHeading
-          badge="Why Choose Us"
-          title={
-            <>
-              Why <span className="text-gradient">Choose Us</span>
-            </>
-          }
-          subtitle="Boost your social media growth with our fast, reliable, and high-quality SMM services. We provide secure delivery, competitive pricing, and trusted support to help your brand grow faster."
-          underlineSrc="/images/why-choose-us/why-choose-us-section-underline.svg"
-          underlineWidth={169}
+          badge={heading.badge}
+          title={heading.title}
+          subtitle={heading.subtitle}
+          underlineSrc={heading.underlineSrc}
+          underlineWidth={heading.underlineWidth}
           badgeClassName="dark:bg-none dark:bg-clip-border dark:text-white"
-          titleClassName="text-2xl tracking-[0.48px] text-[#13203b] dark:text-white sm:text-[32px] md:text-[40px] lg:text-[48px]"
-          subtitleClassName="max-w-[924px] text-sm font-medium leading-normal text-[#4f586d] dark:text-white sm:text-base md:text-lg"
+          titleClassName={heading.titleClassName}
+          subtitleClassName={heading.subtitleClassName}
         />
 
-        <WhyChooseUsDesktopTimeline />
+        <WhyChooseUsDesktopTimeline cardDescription={heading.subtitle} />
 
         <div className="flex w-full flex-col gap-5 sm:gap-7 lg:hidden">
           {timelineSteps.map((step, index) => (
             <div key={step} className="flex flex-col gap-5 sm:gap-7">
-              <WhyChooseUsCard {...leftFeatures[index]} />
-              <WhyChooseUsCard {...rightFeatures[index]} />
+              <WhyChooseUsCard
+                {...leftFeatures[index]}
+                description={heading.subtitle}
+              />
+              <WhyChooseUsCard
+                {...rightFeatures[index]}
+                description={heading.subtitle}
+              />
             </div>
           ))}
         </div>

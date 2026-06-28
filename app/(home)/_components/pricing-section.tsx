@@ -4,26 +4,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
+import { data } from '@/app/(home)/page-data';
+import type { HomePricingPlan } from '@/app/(home)/page-data';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
-import { signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
 
-const platforms = [
-  { id: 'instagram', label: 'Instagram', icon: '/images/icons/pricing-instagram-platform-icon.webp' },
-  { id: 'facebook', label: 'Facebook', icon: '/images/icons/pricing-facebook-platform-icon.webp' },
-  { id: 'youtube', label: 'YouTube', icon: '/images/icons/pricing-youtube-platform-icon.webp' },
-  { id: 'tiktok', label: 'TikTok', icon: '/images/icons/pricing-tiktok-platform-icon.webp' },
-] as const;
-
-const CARD_HEADER_GRADIENT_BASIC =
+const CARD_HEADER_GRADIENT =
   'linear-gradient(34.63deg, rgb(251, 245, 255) 10.39%, rgb(255, 250, 252) 58.1%, rgb(255, 137, 198) 126.5%)';
-
-const CARD_HEADER_GRADIENT_PRO =
-  'linear-gradient(34.63deg, rgb(251, 245, 255) 10.39%, rgb(255, 250, 252) 58.1%, rgb(255, 189, 252) 126.5%)';
-
-const INACTIVE_TAB_GRADIENT =
-  'linear-gradient(111.82deg, rgba(214, 144, 255, 0.04) 4.77%, rgba(215, 148, 255, 0.04) 39.51%, rgba(179, 100, 226, 0.04) 74.24%)';
 
 const ACTIVE_TAB_BG =
   'linear-gradient(102.9deg, rgb(209, 129, 255) 2.85%, rgb(255, 99, 190) 90.53%)';
@@ -31,40 +19,9 @@ const ACTIVE_TAB_BG =
 const INACTIVE_TAB_BG =
   'linear-gradient(111.82deg, rgba(214, 144, 255, 0.08) 4.77%, rgba(215, 148, 255, 0.08) 39.51%, rgba(179, 100, 226, 0.08) 74.24%)';
 
-const features = [
-  { label: 'Guarantee Fast Delivery', icon: '/images/pricing/pricing-guarantee-fast-delivery-icon.svg' },
-  { label: 'Instant Start', icon: '/images/pricing/pricing-instant-start-icon.svg' },
-  { label: 'Never Drop', icon: '/images/pricing/pricing-never-drop-icon.svg' },
-  { label: 'No Password Required', icon: '/images/pricing/pricing-no-password-required-icon.svg', size: 24 },
-  { label: 'Geo: Global', icon: '/images/pricing/pricing-geo-global-icon.svg' },
-] as const;
-
-const plans = [
-  {
-    name: 'Basic',
-    planType: 'basic' as const,
-    price: '$45.00',
-    description: 'Instagram High Quality Followers',
-    featured: false,
-    featureCount: 5,
-  },
-  {
-    name: 'Professional',
-    planType: 'professional' as const,
-    price: '$45.00',
-    description: 'Instagram High Quality Followers',
-    featured: true,
-    featureCount: 6,
-  },
-  {
-    name: 'Basic',
-    planType: 'basic' as const,
-    price: '$45.00',
-    description: 'Instagram High Quality Followers',
-    featured: false,
-    featureCount: 5,
-  },
-] as const;
+const { pricing } = data;
+const { heading, features: homePricingFeatures, platforms: homePricingPlatforms } =
+  pricing;
 
 function HexBgIcon({ className }: { className?: string }) {
   return (
@@ -138,20 +95,12 @@ function PlatformTab({
 }
 
 function PricingCard({
-  name,
-  planType,
-  price,
-  description,
+  plan,
   featured,
-  featureCount,
-}: (typeof plans)[number]) {
-  const planFeatures = [
-    ...features,
-    ...(featureCount > 5
-      ? [{ label: '24/7 Support', icon: '/images/pricing/pricing-geo-global-icon.svg', size: 20 as const }]
-      : []),
-  ];
-
+}: {
+  plan: HomePricingPlan;
+  featured: boolean;
+}) {
   return (
     <article className="relative isolate flex h-full w-full min-w-0 max-w-[464px] flex-[1_1_100%] flex-col gap-4 overflow-visible rounded-3xl border-[0.7px] border-[#ffc0e4] bg-white pb-8 dark:border-[#5c3d72] dark:bg-transparent sm:min-w-[min(100%,280px)] sm:flex-[1_1_320px] sm:gap-6 sm:pb-12 xl:max-w-none xl:flex-1 xl:basis-0">
       <div
@@ -164,77 +113,30 @@ function PricingCard({
           className="size-full object-cover"
         />
       </div>
-      <Image
-        src="/images/pricing/pricing-card-instagram-icon.png"
-        alt=""
-        aria-hidden
-        width={83}
-        height={93}
-        className="pointer-events-none absolute right-4 top-[-14px] z-20 h-[72px] w-[64px] sm:right-6 sm:top-[-18px] sm:h-[93px] sm:w-[83px]"
-      />
 
       <div className="relative z-10 flex w-full flex-col gap-4 overflow-hidden rounded-t-3xl border-x border-t border-[#ffc0e4] px-4 py-5 dark:border-[#5c3d72] sm:gap-6 sm:px-6 sm:py-7">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 dark:hidden"
-          style={{
-            backgroundImage:
-              planType === 'professional'
-                ? CARD_HEADER_GRADIENT_PRO
-                : CARD_HEADER_GRADIENT_BASIC,
-          }}
+          style={{ backgroundImage: CARD_HEADER_GRADIENT }}
         />
-        {featured ? (
-          <Image
-            src="/images/pricing/pricing-card-halftone-decoration.webp"
-            alt=""
-            aria-hidden
-            width={703}
-            height={703}
-            className="pointer-events-none absolute -left-2.5 -top-[432px] size-[703px] object-cover opacity-[0.08] dark:hidden"
-            unoptimized
-          />
-        ) : null}
 
         <div className="relative z-10 flex flex-col gap-4 sm:gap-[22px]">
           <div className="flex flex-col gap-1 sm:gap-[5px]">
-            <div className="flex items-center gap-2">
-              <Image
-                src={
-                  planType === 'professional'
-                    ? '/images/pricing/pricing-plan-pro-icon.svg'
-                    : '/images/pricing/pricing-plan-basic-icon.svg'
-                }
-                alt=""
-                aria-hidden
-                width={24}
-                height={24}
-                className={cn(
-                  'size-5 shrink-0 sm:size-6',
-                  planType === 'basic' && 'dark:invert dark:brightness-0',
-                )}
-              />
-              <p className="text-xl font-medium leading-[1.48] text-[#13203b] dark:text-white sm:text-2xl">
-                {name}
-              </p>
-            </div>
             <p className="text-sm font-medium leading-normal text-[#404a60] dark:text-[#ebecef] sm:text-base">
-              {description}
+              Starting From
+            </p>
+            <h3 className="text-3xl font-semibold leading-[1.35] tracking-[0.48px] text-[#222e48] dark:text-white sm:text-[36px] md:text-[48px]">
+              {plan.startingPrice}
+            </h3>
+            <p className="text-sm font-medium leading-normal text-[#404a60] dark:text-[#ebecef] sm:text-base">
+              {plan.serviceName}
             </p>
           </div>
-
-          <p className="tracking-[0.48px] text-[#222e48] dark:text-white">
-            <span className="text-3xl font-semibold leading-[1.35] sm:text-[36px] md:text-[48px]">
-              {price}
-            </span>
-            <span className="text-lg font-medium leading-[1.48] text-[#5b6477] dark:text-[#c1c4cc] sm:text-xl md:text-2xl">
-              /month
-            </span>
-          </p>
         </div>
 
         <Link
-          href={signUpUrl}
+          href={plan.buyHref}
           className={cn(
             'relative z-10 flex h-10 w-full items-center justify-center overflow-hidden rounded-[10px] border-[1.5px] px-4 py-2 text-sm font-semibold sm:h-11 sm:px-5 sm:text-base md:h-[50px] md:px-[18px]',
             featured
@@ -242,34 +144,23 @@ function PricingCard({
               : 'border-[#d181ff] bg-transparent',
           )}
         >
-          <span className={cn(!featured && 'text-gradient')}>Get Started</span>
-          <Image
-            src="/images/pricing/pricing-button-glow-decoration.svg"
-            alt=""
-            aria-hidden
-            width={273}
-            height={68}
-            className="pointer-events-none absolute bottom-[-61.5px] left-1/2 h-[68px] w-[273px] -translate-x-1/2"
-          />
+          <span className={cn(!featured && 'text-gradient')}>{plan.buyLabel}</span>
         </Link>
       </div>
 
       <ul className="relative z-10 flex flex-col gap-3 px-4 sm:gap-4 sm:px-6">
-        {planFeatures.map((feature) => (
-          <li key={feature.label} className="flex items-center gap-2">
+        {homePricingFeatures.map((feature) => (
+          <li key={feature} className="flex items-start gap-2">
             <Image
-              src={feature.icon}
+              src="/images/pricing/pricing-guarantee-fast-delivery-icon.svg"
               alt=""
               aria-hidden
-              width={'size' in feature && feature.size ? feature.size : 20}
-              height={'size' in feature && feature.size ? feature.size : 20}
-              className={cn(
-                'shrink-0',
-                'size' in feature && feature.size === 24 ? 'size-6' : 'size-5',
-              )}
+              width={20}
+              height={20}
+              className="mt-0.5 size-5 shrink-0"
             />
-            <span className="text-sm font-medium leading-normal text-[#0c070f] dark:text-[#ebecef] sm:text-base md:text-lg">
-              {feature.label}
+            <span className="text-sm font-medium leading-normal text-[#0c070f] dark:text-[#ebecef] sm:text-base">
+              {feature}
             </span>
           </li>
         ))}
@@ -279,8 +170,12 @@ function PricingCard({
 }
 
 export default function PricingSection() {
-  const [activePlatform, setActivePlatform] =
-    useState<(typeof platforms)[number]['id']>('instagram');
+  const [activePlatformId, setActivePlatformId] = useState(
+    homePricingPlatforms[0].id,
+  );
+  const activePlatform =
+    homePricingPlatforms.find((p) => p.id === activePlatformId) ??
+    homePricingPlatforms[0];
 
   return (
     <PrimarySection
@@ -291,37 +186,36 @@ export default function PricingSection() {
       <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
         <div className="flex w-full flex-col items-center gap-6 sm:gap-8 lg:gap-[34px]">
           <SectionHeading
-            badge="PRICING"
-            underlineSrc="/images/pricing/pricing-section-underline.svg"
-            underlineWidth={90}
-            title={
-              <>
-                Pricing Preview of Our{' '}
-                <span className="text-gradient">SMM Panel Services</span>
-              </>
-            }
-            subtitle="Simple, Clear, and Affordable for Everyone. We make social media growth easy without high costs. Our prices are clear, fair, and fit every budget."
+            badge={heading.badge}
+            underlineSrc={heading.underlineSrc}
+            underlineWidth={heading.underlineWidth}
+            title={heading.title}
+            subtitle={heading.subtitle}
             badgeClassName="dark:bg-none dark:bg-clip-border dark:text-white"
-            titleClassName="max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[40px] lg:text-[48px]"
-            subtitleClassName="max-w-[1090px] text-center text-sm leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg"
+            titleClassName={heading.titleClassName}
+            subtitleClassName={heading.subtitleClassName}
           />
 
-          <div className="grid w-full max-w-[360px] grid-cols-2 gap-2 sm:flex sm:max-w-none sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 md:gap-6">
-            {platforms.map((platform) => (
+          <div className="grid w-full grid-cols-3 gap-2 sm:gap-3 md:gap-[18px] xl:grid-cols-6">
+            {homePricingPlatforms.map((platform) => (
               <PlatformTab
                 key={platform.id}
                 label={platform.label}
                 icon={platform.icon}
-                isActive={activePlatform === platform.id}
-                onClick={() => setActivePlatform(platform.id)}
+                isActive={activePlatformId === platform.id}
+                onClick={() => setActivePlatformId(platform.id)}
               />
             ))}
           </div>
         </div>
 
         <div className="flex w-full max-w-[1440px] flex-col items-stretch justify-center gap-5 sm:flex-row sm:flex-wrap sm:items-end sm:gap-6 xl:flex-nowrap xl:justify-between">
-          {plans.map((plan, index) => (
-            <PricingCard key={`${plan.name}-${plan.planType}-${index}`} {...plan} />
+          {activePlatform.plans.map((plan, index) => (
+            <PricingCard
+              key={`${activePlatform.id}-${plan.serviceName}`}
+              plan={plan}
+              featured={index === 1}
+            />
           ))}
         </div>
       </div>

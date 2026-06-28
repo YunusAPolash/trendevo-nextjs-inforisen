@@ -4,68 +4,12 @@ import {
   PlatformMarqueeHexIcon,
   PlatformMarqueeSoundCloudLogo,
 } from '@/app/(home)/_components/platform-marquee-hex-icon';
+import { data } from '@/app/(home)/page-data';
+import type { HomePlatformMarqueeItem } from '@/app/(home)/page-data';
 
-const platforms = [
-  {
-    name: 'Instagram',
-    icon: '/images/platform-marquee/platform-marquee-instagram-platform-icon.webp',
-    iconSize: 20,
-  },
-  {
-    name: 'Instagram',
-    icon: '/images/platform-marquee/platform-marquee-instagram-platform-icon-2.webp',
-    iconSize: 25,
-  },
-  {
-    name: 'X (Twitter)',
-    icon: '/images/platform-marquee/platform-marquee-x-twitter-platform-icon.png',
-    iconSize: 25,
-  },
-  {
-    name: 'YouTube',
-    icon: '/images/platform-marquee/platform-marquee-youtube-platform-icon.webp',
-    iconSize: 25,
-  },
-  {
-    name: 'TikTok',
-    icon: '/images/platform-marquee/platform-marquee-tiktok-platform-icon.webp',
-    iconSize: 25,
-  },
-  {
-    name: 'LinkedIn',
-    icon: '/images/platform-marquee/platform-marquee-linkedin-platform-icon.webp',
-    iconSize: 25,
-  },
-  {
-    name: 'Telegram',
-    icon: '/images/platform-marquee/platform-marquee-telegram-platform-icon.webp',
-    iconSize: 25,
-  },
-  {
-    name: 'Discord',
-    icon: '/images/platform-marquee/platform-marquee-discord-platform-icon.webp',
-    iconSize: 25,
-  },
-  {
-    name: 'Spotify',
-    icon: '/images/platform-marquee/platform-marquee-spotify-platform-icon.webp',
-    iconSize: 25,
-  },
-  {
-    name: 'Snapchat',
-    icon: '/images/platform-marquee/platform-marquee-snapchat-platform-icon.webp',
-    iconSize: 25,
-  },
-  {
-    name: 'SoundCloud',
-    icon: '/images/platform-marquee/platform-marquee-soundcloud-platform-icon.svg',
-    fullFrame: true,
-  },
-] as const;
+const platforms = data.platformMarquee.platforms;
 
-type Platform = (typeof platforms)[number];
-
-function PlatformMarqueeItem(platform: Platform) {
+function PlatformMarqueeItem(platform: HomePlatformMarqueeItem) {
   const { name, icon } = platform;
   const iconSize = 'iconSize' in platform ? platform.iconSize : 25;
   const fullFrame = 'fullFrame' in platform ? platform.fullFrame : false;

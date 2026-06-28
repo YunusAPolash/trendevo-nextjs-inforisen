@@ -1,8 +1,7 @@
-import type {
-  FaqItem,
-  FaqSectionData,
-} from '@/components/sections/faq-section';
+import type { FaqSectionData } from '@/components/sections/faq-section';
 import type { TestimonialsSectionData } from '@/components/sections/testimonials-section';
+
+import type { SectionBgKey } from '@/components/sections/primary-section';
 
 type SEO = {
   title: string;
@@ -27,20 +26,17 @@ type HomeHeroTrustBadge = {
   avatarSrcs: string[];
   ratingIconSrc: string;
   rating: string;
-  label: string;
+  promoIconSrc: string;
 };
 
 type HomeHeroData = {
   trustBadge: HomeHeroTrustBadge;
   heading: string;
   description: string;
-  promo: {
-    before: string;
-    highlight: string;
-    after: string;
-  };
-  signInLabel: string;
-  createAccountLabel: string;
+  promo: string;
+  primaryButtonLabel: string;
+  secondaryButtonLabel: string;
+  secondaryButtonHref: string;
   illustration: {
     src: string;
     alt: string;
@@ -49,8 +45,14 @@ type HomeHeroData = {
   };
 };
 
+type HomeStatKey =
+  | 'ordersCompleted'
+  | 'servicesAll'
+  | 'usersAll'
+  | 'satisfaction';
+
 type HomeStatItem = {
-  value: string;
+  key: HomeStatKey;
   label: string;
   icon: string;
   width: number;
@@ -71,16 +73,12 @@ type HomePlatformService = {
   label: string;
   icon: string;
   iconClassName?: string;
+  decorationImage: string;
   marketingTitle: string;
   description: string;
   services: HomeServiceItem[];
-};
-
-type HomeAboutMetric = {
-  value: string;
-  label: string;
-  labelClassName?: string;
-  splitLabel?: boolean;
+  exploreLabel: string;
+  exploreHref: string;
 };
 
 type HomeWorkingProcessStep = {
@@ -110,36 +108,18 @@ type HomeAdvantageItem = {
   description: string;
 };
 
+type HomePricingPlan = {
+  startingPrice: string;
+  serviceName: string;
+  buyLabel: string;
+  buyHref: string;
+};
+
 type HomePricingPlatform = {
   id: string;
   label: string;
   icon: string;
-};
-
-type HomePricingFeature = {
-  label: string;
-  icon: string;
-  size?: number;
-};
-
-type HomePricingPlan = {
-  name: string;
-  planType: 'basic' | 'professional';
-  price: string;
-  description: string;
-  featured: boolean;
-  featureCount: number;
-};
-
-type HomeBlogPost = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  imageSrc: string;
-  authorName: string;
-  authorAvatarSrc: string;
-  publishedAt: string;
-  readTime: string;
+  plans: HomePricingPlan[];
 };
 
 type HomeTestimonialsData = TestimonialsSectionData;
@@ -153,13 +133,13 @@ type HomePageData = {
   ourServices: {
     heading: SectionHeadingData;
     platforms: HomePlatformService[];
-    ctaButtonLabel: string;
   };
   about: {
     heading: SectionHeadingData;
     features: string[];
-    metricRows: [HomeAboutMetric, HomeAboutMetric][];
+    trustPoints: string[];
     ctaLabel: string;
+    ctaHref: string;
     image: {
       src: string;
       alt: string;
@@ -171,7 +151,6 @@ type HomePageData = {
   };
   whyChooseUs: {
     heading: SectionHeadingData;
-    cardDescription: string;
     leftFeatures: HomeWhyChooseUsFeature[];
     rightFeatures: HomeWhyChooseUsFeature[];
     timelineSteps: string[];
@@ -196,42 +175,49 @@ type HomePageData = {
       src: string;
       alt: string;
     };
+    sectionBg?: SectionBgKey;
+    sectionClassName?: string;
   };
   pricing: {
     heading: SectionHeadingData;
+    features: string[];
     platforms: HomePricingPlatform[];
-    features: HomePricingFeature[];
-    plans: HomePricingPlan[];
-    planCtaLabel: string;
-    priceSuffix: string;
   };
   testimonials: HomeTestimonialsData;
   faq: FaqSectionData;
   blog: {
     heading: SectionHeadingData;
-    posts: HomeBlogPost[];
   };
   cta: {
     title: string;
     description: string;
     primaryButtonLabel: string;
     secondaryButtonLabel: string;
+    secondaryButtonHref: string;
   };
 };
 
-const homeFaqDefaultAnswer =
-  'TrendEvo provides fast, secure SMM services with transparent pricing, multiple payment options, and 24/7 support to help you grow across all major social platforms.';
-
-const homeTestimonialQuote =
-  'This platform helped us boost our brand visibility significantly. The results are real and the process is super easy. Five stars!';
+export type {
+  HomePageData,
+  HomeHeroData,
+  HomeStatItem,
+  HomeStatKey,
+  HomePlatformService,
+  HomePricingPlatform,
+  HomePricingPlan,
+  HomeWhyChooseUsFeature,
+  HomeWorkingProcessStep,
+  HomePlatformMarqueeItem,
+  SectionHeadingData,
+};
 
 const homeYoutubeReelVideoId = 'LXb3EKWsInQ';
 
 export const data: HomePageData = {
   seo: {
-    title: 'TrendEvo | Trusted SMM Panel',
+    title: 'Cheapest SMM Panel in Bangladesh Pay with bKash | TrendEvo',
     description:
-      'TrendEvo is a next-generation SMM panel delivering fast, secure social media growth for brands, creators, and agencies in Bangladesh.',
+      'TrendEvo is a trusted SMM Panel Bangladesh platform for Facebook, Instagram, YouTube, TikTok, and more. Pay easily with bKash, Nagad, or Rocket.',
     canonical: '/',
   },
 
@@ -247,19 +233,15 @@ export const data: HomePageData = {
       ],
       ratingIconSrc: '/images/icons/home-hero-trust-star-rating-icon.png',
       rating: '(4.8)',
-      label: 'Trusted by 50,000+ Users in Bangladesh',
+      promoIconSrc: '/images/icons/home-hero-hero-fire-icon-illustration.png',
     },
-    heading:
-      'Trusted gt<SMM Panel>\nHigh-Speed Delivery With gt<Secure Services>',
+    heading: 'Cheapest SMM Panel in Bangladesh With Fast & Secure Services',
     description:
-      'gt<TrendEvo> is a next-generation viral growth platform crafted to help brands, creators, and agencies unlock their full digital potential. We combine speed, reliability, and scalable infrastructure to deliver measurable growth in reach, engagement, and online visibility across global markets.',
-    promo: {
-      before: 'Enjoy up to ',
-      highlight: '30%',
-      after: ' bonus on every deposit, starting at only $1.',
-    },
-    signInLabel: 'Sign In',
-    createAccountLabel: 'Create an Account',
+      'TrendEvo is a trusted and cheapest SMM Panel in Bangladesh platform built for businesses, creators, agencies, freelancers, and resellers. Order Facebook, Instagram, YouTube, TikTok, Telegram, and more from one simple dashboard. Add funds with bKash, Nagad, or Rocket and track every order easily.',
+    promo: 'Instant delivery on selected SMM services with affordable pricing.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See Our Services',
+    secondaryButtonHref: '/services',
     illustration: {
       src: '/images/hero/home-hero-trendevo-platform-user-with-social-media-icons-and-analytics-illustration.webp',
       alt: 'TrendEvo platform user with social media icons and analytics',
@@ -271,7 +253,7 @@ export const data: HomePageData = {
   stats: {
     items: [
       {
-        value: '1.2M+',
+        key: 'ordersCompleted',
         label: 'Total Completed Orders',
         icon: '/images/stats/home-stats-total-completed-orders-icon.png',
         width: 167,
@@ -281,7 +263,7 @@ export const data: HomePageData = {
         tabletDisplayWidth: 96,
       },
       {
-        value: '2,500+',
+        key: 'servicesAll',
         label: 'Total Services Available',
         icon: '/images/stats/home-stats-total-services-available-icon.png',
         width: 152,
@@ -291,7 +273,7 @@ export const data: HomePageData = {
         tabletDisplayWidth: 87,
       },
       {
-        value: '50K+',
+        key: 'usersAll',
         label: 'Total Users',
         icon: '/images/stats/home-stats-total-users-icon.png',
         width: 188,
@@ -301,7 +283,7 @@ export const data: HomePageData = {
         tabletDisplayWidth: 108,
       },
       {
-        value: '75%',
+        key: 'satisfaction',
         label: 'Customer Satisfaction Rate',
         icon: '/images/stats/home-stats-customer-satisfaction-rate-icon.png',
         width: 144,
@@ -315,96 +297,50 @@ export const data: HomePageData = {
 
   ourServices: {
     heading: {
-      badge: 'our services',
-      title: 'Powerful gt<SMM Services> for Fast Growth',
+      badge: 'Our Services',
+      title: 'All-in-One SMM Panel Services in Bangladesh',
       subtitle:
-        "Explore our comprehensive range of social media marketing services designed to help you grow your presence across all major platforms. From Facebook to TikTok. we've got you covered.",
+        'TrendEvo helps businesses, creators, agencies, and resellers buy SMM services in Bangladesh for Facebook, Instagram, YouTube, TikTok, and more. Get fast delivery, secure order tracking, affordable pricing, and easy payments with bKash, Nagad, or Rocket.',
       titleClassName: 'text-2xl sm:text-[28px] lg:text-[36px]',
       subtitleClassName: 'text-sm sm:text-base md:text-lg',
     },
-    ctaButtonLabel: 'View {label} Services',
     platforms: [
       {
         id: 'facebook',
         label: 'Facebook',
         icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        marketingTitle: 'Facebook Marketing Services',
+        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        marketingTitle: 'Facebook SMM Panel Services',
         description:
-          'Boost your brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
+          'Use TrendEvo’s Facebook SMM Panel Services to build social proof, improve post activity, and support page growth in Bangladesh. Perfect for businesses, creators, agencies, resellers, and local brands that want faster Facebook visibility.',
+        exploreLabel: 'Explore Facebook Services',
+        exploreHref: '/facebook-smm-panel',
         services: [
-          {
-            number: '01',
-            title: 'Facebook Post Likes-',
-            description:
-              'Boost post engagement and credibility with real likes.',
-          },
-          {
-            number: '02',
-            title: 'Facebook Likes-',
-            description: 'Grow your page popularity with high-quality likes.',
-          },
-          {
-            number: '03',
-            title: 'Facebook Comments-',
-            description: 'Increase interaction with engaging comments.',
-          },
-          {
-            number: '04',
-            title: 'Facebook Shares-',
-            description: 'Expand your reach with powerful shares.',
-          },
-          {
-            number: '05',
-            title: 'Facebook Video Views-',
-            description: 'Get more visibility with high-retention video views.',
-          },
-          {
-            number: '06',
-            title: 'Facebook Reactions-',
-            description:
-              'Make your posts more engaging with diverse reactions..',
-          },
+          { number: '01', title: 'Facebook Post Likes-', description: 'Improve post engagement and make your updates look more active.' },
+          { number: '02', title: 'Facebook Page Likes-', description: 'Build a stronger page presence for your business, brand, or community.' },
+          { number: '03', title: 'Facebook Comments-', description: 'Add relevant activity to posts and create better audience interaction.' },
+          { number: '04', title: 'Facebook Shares-', description: 'Help your content reach more people through wider post distribution.' },
+          { number: '05', title: 'Facebook Video Views-', description: 'Increase visibility for product videos, reels, reviews, and campaigns.' },
+          { number: '06', title: 'Facebook Reactions-', description: 'Make your Facebook posts look more natural with mixed reactions.' },
         ],
       },
       {
         id: 'instagram',
         label: 'Instagram',
         icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        marketingTitle: 'Instagram Marketing Services',
+        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        marketingTitle: 'Instagram SMM Panel Services',
         description:
-          'Grow your Instagram presence with targeted followers, likes, and engagement that builds authentic brand authority.',
+          'Use our Instagram SMM Panel Services to grow your profile, improve content reach, and build stronger social proof in Bangladesh. Ideal for creators, influencers, online shops, agencies, resellers, and brands that want better Instagram visibility.',
+        exploreLabel: 'Explore Instagram Services',
+        exploreHref: '/instagram-smm-panel',
         services: [
-          {
-            number: '01',
-            title: 'Instagram Followers-',
-            description:
-              'Increase your follower count with real, active users.',
-          },
-          {
-            number: '02',
-            title: 'Instagram Likes-',
-            description: 'Boost post visibility with high-quality likes.',
-          },
-          {
-            number: '03',
-            title: 'Instagram Comments-',
-            description: 'Drive meaningful conversations on your posts.',
-          },
-          {
-            number: '04',
-            title: 'Instagram Views-',
-            description: 'Maximize reach for reels and story content.',
-          },
-          {
-            number: '05',
-            title: 'Instagram Saves-',
-            description: 'Improve algorithm ranking with post saves.',
-          },
-          {
-            number: '06',
-            title: 'Instagram Shares-',
-            description: 'Expand discovery through content sharing.',
-          },
+          { number: '01', title: 'Instagram Followers-', description: 'Build a stronger profile presence and make your account look more trusted.' },
+          { number: '02', title: 'Instagram Likes-', description: 'Improve post engagement for photos, reels, product posts, and brand updates.' },
+          { number: '03', title: 'Instagram Comments-', description: 'Add useful activity to posts and support better audience interaction.' },
+          { number: '04', title: 'Instagram Reels Views-', description: 'Increase reach for short videos, trending content, and promotional reels.' },
+          { number: '05', title: 'Instagram Story Views-', description: 'Boost visibility for daily updates, offers, launches, and announcements.' },
+          { number: '06', title: 'Instagram Saves-', description: 'Help important posts look more valuable and useful to your audience.' },
         ],
       },
       {
@@ -412,411 +348,201 @@ export const data: HomePageData = {
         label: 'X (Twitter)',
         icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
         iconClassName: 'scale-150',
-        marketingTitle: 'X (Twitter) Marketing Services',
+        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
+        marketingTitle: 'X (Twitter) SMM Panel Services',
         description:
-          'Amplify your voice on X with followers, retweets, and engagement that positions your brand at the center of trending conversations.',
+          'Use the best X (Twitter) SMM Panel Services to improve profile activity, post engagement, and brand visibility in Bangladesh. Best for creators, startups, agencies, resellers, public figures, and businesses that want faster reach on X.',
+        exploreLabel: 'Explore X (Twitter) Services',
+        exploreHref: '/x-twitter-smm-panel',
         services: [
-          {
-            number: '01',
-            title: 'X Followers-',
-            description: 'Build a credible profile with real followers.',
-          },
-          {
-            number: '02',
-            title: 'X Likes-',
-            description: 'Increase tweet engagement and visibility.',
-          },
-          {
-            number: '03',
-            title: 'X Retweets-',
-            description: 'Spread your message across wider networks.',
-          },
-          {
-            number: '04',
-            title: 'X Comments-',
-            description: 'Spark discussions around your content.',
-          },
-          {
-            number: '05',
-            title: 'X Impressions-',
-            description: 'Boost overall tweet reach and exposure.',
-          },
-          {
-            number: '06',
-            title: 'X Bookmarks-',
-            description: 'Encourage saves for long-term visibility.',
-          },
+          { number: '01', title: 'X (Twitter) Followers-', description: 'Build a stronger profile base and make your account look more active.' },
+          { number: '02', title: 'X (Twitter) Post Likes-', description: 'Improve engagement on tweets, updates, offers, and campaign posts.' },
+          { number: '03', title: 'X (Twitter) Retweets-', description: 'Help your posts reach more people through wider content sharing.' },
+          { number: '04', title: 'X (Twitter) Comments-', description: 'Add visible activity and support better discussion on important posts.' },
+          { number: '05', title: 'X (Twitter) Views-', description: 'Increase visibility for tweets, videos, and promotional content.' },
+          { number: '06', title: 'X (Twitter) Poll Votes-', description: 'Support poll activity for campaigns, feedback, and audience research.' },
         ],
       },
       {
         id: 'youtube',
         label: 'YouTube',
         icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        marketingTitle: 'YouTube Marketing Services',
+        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        marketingTitle: 'YouTube SMM Panel Services',
         description:
-          'Accelerate channel growth with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
+          'Use TrendEvo’s YouTube SMM Panel Services to support channel growth, video reach, and viewer trust in Bangladesh. This service is useful for Bangladeshi creators, educators, reviewers, agencies, and brands that want more visibility from a reliable SMM Panel BD platform.',
+        exploreLabel: 'Explore YouTube Services',
+        exploreHref: '/youtube-smm-panel',
         services: [
-          {
-            number: '01',
-            title: 'YouTube Subscribers-',
-            description: 'Grow your channel with active subscribers.',
-          },
-          {
-            number: '02',
-            title: 'YouTube Views-',
-            description: 'Increase watch counts on your videos.',
-          },
-          {
-            number: '03',
-            title: 'YouTube Likes-',
-            description: 'Improve video credibility with likes.',
-          },
-          {
-            number: '04',
-            title: 'YouTube Comments-',
-            description: 'Drive community interaction on videos.',
-          },
-          {
-            number: '05',
-            title: 'YouTube Watch Hours-',
-            description: 'Meet monetization thresholds faster.',
-          },
-          {
-            number: '06',
-            title: 'YouTube Shares-',
-            description: 'Expand video discovery through sharing.',
-          },
+          { number: '01', title: 'YouTube Subscribers-', description: 'Build a stronger channel base for new videos, tutorials, reviews, and brand content.' },
+          { number: '02', title: 'YouTube Views-', description: 'Improve video visibility for product videos, music videos, courses, and local campaigns.' },
+          { number: '03', title: 'YouTube Likes-', description: 'Add stronger engagement signals and make your content look more trusted.' },
+          { number: '04', title: 'YouTube Comments-', description: 'Create active discussion around videos, reviews, launches, and creator content.' },
+          { number: '05', title: 'YouTube Watch Time-', description: 'Support longer viewing activity for channels working on growth goals.' },
+          { number: '06', title: 'YouTube Shorts Views-', description: 'Increase reach for short videos, trends, reels-style clips, and quick promotions.' },
         ],
       },
       {
         id: 'tiktok',
         label: 'TikTok',
         icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        marketingTitle: 'TikTok Marketing Services',
+        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        marketingTitle: 'TikTok SMM Panel Services',
         description:
-          'Go viral faster with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
+          'Use TrendEvo’s TikTok SMM Panel Services to support short-video reach, profile activity, and content visibility in Bangladesh. It is helpful for creators, online shops, influencers, agencies, and resellers who want faster TikTok growth from a simple SMM panel dashboard.',
+        exploreLabel: 'Explore TikTok Services',
+        exploreHref: '/tiktok-smm-panel',
         services: [
-          {
-            number: '01',
-            title: 'TikTok Followers-',
-            description: 'Build a loyal audience on TikTok.',
-          },
-          {
-            number: '02',
-            title: 'TikTok Likes-',
-            description: 'Increase engagement on your videos.',
-          },
-          {
-            number: '03',
-            title: 'TikTok Views-',
-            description: 'Boost video watch counts rapidly.',
-          },
-          {
-            number: '04',
-            title: 'TikTok Shares-',
-            description: 'Amplify reach through content sharing.',
-          },
-          {
-            number: '05',
-            title: 'TikTok Comments-',
-            description: 'Encourage community interaction.',
-          },
-          {
-            number: '06',
-            title: 'TikTok Saves-',
-            description: 'Improve algorithm performance with saves.',
-          },
+          { number: '01', title: 'TikTok Followers-', description: 'Build a stronger profile base for creators, shops, influencers, and personal brands.' },
+          { number: '02', title: 'TikTok Likes-', description: 'Improve engagement on videos, trends, product clips, and campaign content.' },
+          { number: '03', title: 'TikTok Views-', description: 'Increase visibility for short videos, viral-style content, and local promotions.' },
+          { number: '04', title: 'TikTok Comments-', description: 'Add active discussion and make videos feel more engaging.' },
+          { number: '05', title: 'TikTok Shares-', description: 'Help your content reach more users through wider video sharing.' },
+          { number: '06', title: 'TikTok Live Views-', description: 'Support live sessions, product showcases, creator events, and real-time campaigns.' },
         ],
       },
       {
         id: 'linkedin',
         label: 'LinkedIn',
         icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
-        marketingTitle: 'LinkedIn Marketing Services',
+        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
+        marketingTitle: 'LinkedIn SMM Panel Services',
         description:
-          'Strengthen your professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
+          'The best LinkedIn SMM Panel Services to improve professional visibility, company page trust, and content engagement. This service is useful for Bangladeshi startups, agencies, consultants, recruiters, B2B brands, and professionals who want a stronger LinkedIn presence.',
+        exploreLabel: 'Explore LinkedIn Services',
+        exploreHref: '/buy-linkedin-followers',
         services: [
-          {
-            number: '01',
-            title: 'LinkedIn Followers-',
-            description: 'Grow your company or personal page.',
-          },
-          {
-            number: '02',
-            title: 'LinkedIn Connections-',
-            description: 'Expand your professional network.',
-          },
-          {
-            number: '03',
-            title: 'LinkedIn Likes-',
-            description: 'Boost post engagement and reach.',
-          },
-          {
-            number: '04',
-            title: 'LinkedIn Comments-',
-            description: 'Spark professional discussions.',
-          },
-          {
-            number: '05',
-            title: 'LinkedIn Shares-',
-            description: 'Increase content distribution.',
-          },
-          {
-            number: '06',
-            title: 'LinkedIn Endorsements-',
-            description: 'Build credibility with skill endorsements.',
-          },
+          { number: '01', title: 'LinkedIn Followers-', description: 'Build a stronger profile or company page presence for professional branding.' },
+          { number: '02', title: 'LinkedIn Page Followers-', description: 'Grow your business page and make your brand look more established.' },
+          { number: '03', title: 'LinkedIn Post Likes-', description: 'Improve engagement on business updates, hiring posts, and industry content.' },
+          { number: '04', title: 'LinkedIn Comments-', description: 'Add useful interaction to posts, announcements, and professional discussions.' },
+          { number: '05', title: 'LinkedIn Shares-', description: 'Help important posts reach more people through wider content distribution.' },
+          { number: '06', title: 'LinkedIn Views-', description: 'Increase visibility for profiles, posts, videos, and company updates.' },
         ],
       },
       {
         id: 'telegram',
         label: 'Telegram',
         icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
-        marketingTitle: 'Telegram Marketing Services',
+        decorationImage: '/images/our-services/decorations/our-services-telegram-members-decoration.png',
+        marketingTitle: 'Telegram SMM Panel Services',
         description:
-          'Grow your Telegram channel or group with members and engagement that builds an active, responsive community.',
+          'Grow Telegram channels and groups with our Telegram SMM panel in Bangladesh. Useful for course groups, news channels, reseller communities, crypto updates, agencies, and digital sellers. Add funds with bKash, Nagad, or Rocket and manage every order from one dashboard.',
+        exploreLabel: 'Explore Telegram Services',
+        exploreHref: '/telegram-smm-panel',
         services: [
-          {
-            number: '01',
-            title: 'Telegram Members-',
-            description: 'Increase channel or group membership.',
-          },
-          {
-            number: '02',
-            title: 'Telegram Views-',
-            description: 'Boost post view counts.',
-          },
-          {
-            number: '03',
-            title: 'Telegram Reactions-',
-            description: 'Drive engagement on channel posts.',
-          },
-          {
-            number: '04',
-            title: 'Telegram Shares-',
-            description: 'Expand message reach organically.',
-          },
-          {
-            number: '05',
-            title: 'Telegram Poll Votes-',
-            description: 'Increase participation in polls.',
-          },
-          {
-            number: '06',
-            title: 'Telegram Comments-',
-            description: 'Build active discussion threads.',
-          },
+          { number: '01', title: 'Telegram Members-', description: 'Grow channels and groups with a stronger member base.' },
+          { number: '02', title: 'Telegram Subscribers-', description: 'Build trust for updates, offers, news, and announcements.' },
+          { number: '03', title: 'Telegram Post Views-', description: 'Increase visibility on important posts and pinned messages.' },
+          { number: '04', title: 'Telegram Reactions-', description: 'Make channel posts look more active and engaging.' },
+          { number: '05', title: 'Telegram Poll Votes-', description: 'Support feedback, voting, and community decisions.' },
+          { number: '06', title: 'Telegram Group Members-', description: 'Grow niche groups for learning, business, and discussions.' },
         ],
       },
       {
         id: 'discord',
         label: 'Discord',
         icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
-        marketingTitle: 'Discord Marketing Services',
+        decorationImage: '/images/our-services/decorations/our-services-discord-members-decoration.png',
+        marketingTitle: 'Discord SMM Panel Services',
         description:
-          'Build thriving Discord communities with members, online activity, and engagement that keeps your server active.',
+          'Build stronger Discord servers with TrendEvo’s SMM panel in Bangladesh. Useful for gaming groups, crypto communities, NFT projects, course servers, agencies, and online brands. Add funds with bKash, Nagad, or Rocket and manage Discord orders from one dashboard.',
+        exploreLabel: 'Explore Discord Services',
+        exploreHref: '/buy-discord-members',
         services: [
-          {
-            number: '01',
-            title: 'Discord Members-',
-            description: 'Grow your server membership.',
-          },
-          {
-            number: '02',
-            title: 'Discord Online Members-',
-            description: 'Boost active online presence.',
-          },
-          {
-            number: '03',
-            title: 'Discord Reactions-',
-            description: 'Increase message engagement.',
-          },
-          {
-            number: '04',
-            title: 'Discord Invites-',
-            description: 'Drive new member acquisition.',
-          },
-          {
-            number: '05',
-            title: 'Discord Boosts-',
-            description: 'Unlock premium server perks.',
-          },
-          {
-            number: '06',
-            title: 'Discord Messages-',
-            description: 'Keep channels active and lively.',
-          },
+          { number: '01', title: 'Discord Members-', description: 'Grow servers with a stronger member base.' },
+          { number: '02', title: 'Discord Online Members-', description: 'Make your server look more active in real time.' },
+          { number: '03', title: 'Discord Reactions-', description: 'Add engagement to posts, updates, and announcements.' },
+          { number: '04', title: 'Discord Server Boosts-', description: 'Improve server appearance and unlock better features.' },
+          { number: '05', title: 'Discord Friend Requests-', description: 'Support profile growth and networking activity.' },
+          { number: '06', title: 'Discord Message Activity-', description: 'Add visible movement to selected server channels.' },
         ],
       },
       {
         id: 'spotify',
         label: 'Spotify',
         icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
-        marketingTitle: 'Spotify Marketing Services',
+        decorationImage: '/images/our-services/decorations/our-services-spotify-plays-decoration.png',
+        marketingTitle: 'Spotify SMM Panel Services',
         description:
-          'Increase your music reach with Spotify plays, followers, and playlist placements that grow your listener base.',
+          'Promote Spotify tracks, artists, and playlists with Spotify SMM panel in Bangladesh. Useful for musicians, labels, podcast creators, agencies, and music promoters. Add funds with bKash, Nagad, or Rocket and manage Spotify growth from one dashboard.',
+        exploreLabel: 'Explore Spotify Services',
+        exploreHref: '/spotify-smm-panel',
         services: [
-          {
-            number: '01',
-            title: 'Spotify Plays-',
-            description: 'Boost track and album play counts.',
-          },
-          {
-            number: '02',
-            title: 'Spotify Followers-',
-            description: 'Grow your artist profile following.',
-          },
-          {
-            number: '03',
-            title: 'Spotify Saves-',
-            description: 'Increase track library saves.',
-          },
-          {
-            number: '04',
-            title: 'Spotify Monthly Listeners-',
-            description: 'Expand your active listener base.',
-          },
-          {
-            number: '05',
-            title: 'Spotify Playlist Adds-',
-            description: 'Get featured on popular playlists.',
-          },
-          {
-            number: '06',
-            title: 'Spotify Pre-saves-',
-            description: 'Build anticipation for new releases.',
-          },
+          { number: '01', title: 'Spotify Plays-', description: 'Increase track plays for songs, podcasts, and new releases.' },
+          { number: '02', title: 'Spotify Followers-', description: 'Build a stronger artist, playlist, or profile presence.' },
+          { number: '03', title: 'Spotify Monthly Listeners-', description: 'Support artist visibility with better listener activity.' },
+          { number: '04', title: 'Spotify Playlist Followers-', description: 'Grow playlists for music promotion and curation.' },
+          { number: '05', title: 'Spotify Saves-', description: 'Help tracks look more valuable to new listeners.' },
+          { number: '06', title: 'Spotify Podcast Plays-', description: 'Increase reach for podcast episodes and audio content.' },
         ],
       },
       {
         id: 'soundcloud',
         label: 'SoundCloud',
         icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
-        marketingTitle: 'SoundCloud Marketing Services',
+        decorationImage: '/images/our-services/decorations/our-services-soundcloud-plays-decoration.png',
+        marketingTitle: 'SoundCloud SMM Panel Services',
         description:
-          'Elevate your SoundCloud profile with plays, followers, and reposts that help your tracks gain traction.',
+          'Grow SoundCloud tracks, profiles, and music pages with SoundCloud SMM Panel BD. Useful for independent artists, DJs, producers, podcast creators, agencies, and music promoters. Add funds with bKash, Nagad, or Rocket and manage SoundCloud orders easily.',
+        exploreLabel: 'Explore SoundCloud Services',
+        exploreHref: '/soundcloud-smm-panel',
         services: [
-          {
-            number: '01',
-            title: 'SoundCloud Plays-',
-            description: 'Increase track play counts.',
-          },
-          {
-            number: '02',
-            title: 'SoundCloud Followers-',
-            description: 'Grow your artist following.',
-          },
-          {
-            number: '03',
-            title: 'SoundCloud Likes-',
-            description: 'Boost track engagement metrics.',
-          },
-          {
-            number: '04',
-            title: 'SoundCloud Reposts-',
-            description: 'Expand track reach through sharing.',
-          },
-          {
-            number: '05',
-            title: 'SoundCloud Comments-',
-            description: 'Drive listener interaction.',
-          },
-          {
-            number: '06',
-            title: 'SoundCloud Downloads-',
-            description: 'Increase offline track saves.',
-          },
+          { number: '01', title: 'SoundCloud Plays-', description: 'Increase plays for songs, mixes, podcasts, and new releases.' },
+          { number: '02', title: 'SoundCloud Followers-', description: 'Build a stronger artist profile and listener base.' },
+          { number: '03', title: 'SoundCloud Likes-', description: 'Improve track engagement and make music look more trusted.' },
+          { number: '04', title: 'SoundCloud Reposts-', description: 'Help tracks reach more listeners through wider sharing.' },
+          { number: '05', title: 'SoundCloud Comments-', description: 'Add activity to songs, mixes, and audio content.' },
+          { number: '06', title: 'SoundCloud Downloads-', description: 'Support track interest with better download activity.' },
         ],
       },
       {
         id: 'snapchat',
         label: 'Snapchat',
         icon: '/images/our-services/platforms/our-services-snapchat-followers-platform-icon.webp',
-        marketingTitle: 'Snapchat Marketing Services',
+        decorationImage: '/images/our-services/decorations/our-services-snapchat-followers-decoration.png',
+        marketingTitle: 'Snapchat SMM Panel Services',
         description:
-          'Grow your Snapchat presence with followers, views, and story engagement that connects you with a younger audience.',
+          'Grow Snapchat profiles and content reach with Snapchat SMM panel in Bangladesh. Useful for creators, lifestyle brands, ecommerce shops, influencers, agencies, and youth-focused campaigns. Add funds with bKash, Nagad, or Rocket and manage Snapchat orders easily.',
+        exploreLabel: 'Explore Snapchat Services',
+        exploreHref: '/snapchat-smm-panel',
         services: [
-          {
-            number: '01',
-            title: 'Snapchat Followers-',
-            description: 'Increase your Snapchat following.',
-          },
-          {
-            number: '02',
-            title: 'Snapchat Views-',
-            description: 'Boost story and snap views.',
-          },
-          {
-            number: '03',
-            title: 'Snapchat Screenshots-',
-            description: 'Encourage content sharing.',
-          },
-          {
-            number: '04',
-            title: 'Snapchat Replies-',
-            description: 'Drive direct engagement.',
-          },
-          {
-            number: '05',
-            title: 'Snapchat Spotlight Views-',
-            description: 'Increase spotlight content reach.',
-          },
-          {
-            number: '06',
-            title: 'Snapchat Story Views-',
-            description: 'Maximize story visibility.',
-          },
+          { number: '01', title: 'Snapchat Followers-', description: 'Build a stronger profile base for creators and brands.' },
+          { number: '02', title: 'Snapchat Story Views-', description: 'Increase visibility for stories, offers, updates, and launches.' },
+          { number: '03', title: 'Snapchat Spotlight Views-', description: 'Support short video reach on Spotlight content.' },
+          { number: '04', title: 'Snapchat Shares-', description: 'Help selected content reach more users through sharing.' },
+          { number: '05', title: 'Snapchat Reactions-', description: 'Add engagement signals to stories and spotlight posts.' },
+          { number: '06', title: 'Snapchat Profile Visits-', description: 'Improve profile activity for campaigns and promotions.' },
         ],
       },
       {
         id: 'website-traffic',
         label: 'Website Traffic',
         icon: '/images/our-services/platforms/our-services-organic-traffic-platform-icon.png',
-        marketingTitle: 'Website Traffic Services',
+        decorationImage: '/images/our-services/decorations/our-services-organic-traffic-decoration.png',
+        marketingTitle: 'Website Traffic SMM Panel Services',
         description:
-          'Drive targeted visitors to your website with high-quality traffic that improves rankings, conversions, and online visibility.',
+          'Send traffic to websites, blogs, landing pages, and product pages with TrendEvo’s SMM panel in Bangladesh. Useful for ecommerce brands, agencies, affiliate marketers, freelancers, and businesses testing online campaigns. Add funds with bKash, Nagad, or Rocket and manage traffic orders easily.',
+        exploreLabel: 'Explore Website Traffic Services',
+        exploreHref: '/services',
         services: [
-          {
-            number: '01',
-            title: 'Organic Traffic-',
-            description: 'Increase natural search engine visits.',
-          },
-          {
-            number: '02',
-            title: 'Direct Traffic-',
-            description: 'Boost direct URL visits.',
-          },
-          {
-            number: '03',
-            title: 'Referral Traffic-',
-            description: 'Gain visitors from external sources.',
-          },
-          {
-            number: '04',
-            title: 'Social Traffic-',
-            description: 'Drive visitors from social platforms.',
-          },
-          {
-            number: '05',
-            title: 'Geo-Targeted Traffic-',
-            description: 'Reach visitors in specific regions.',
-          },
-          {
-            number: '06',
-            title: 'Mobile Traffic-',
-            description: 'Increase mobile device visits.',
-          },
+          { number: '01', title: 'Website Traffic-', description: 'Increase visits to websites, blogs, stores, and landing pages.' },
+          { number: '02', title: 'Targeted Traffic-', description: 'Send visitors based on selected country or campaign needs.' },
+          { number: '03', title: 'Organic Traffic-', description: 'Support natural-looking visit activity for selected pages.' },
+          { number: '04', title: 'Referral Traffic-', description: 'Get traffic from different source types for testing and tracking.' },
+          { number: '05', title: 'Social Traffic-', description: 'Send visitors from social platforms to offers and content pages.' },
+          { number: '06', title: 'Mobile Traffic-', description: 'Support mobile-focused campaigns, apps, and product pages.' },
         ],
-      },
+      }
     ],
   },
 
   about: {
     heading: {
-      badge: 'ABOUT US',
-      title: 'Your Trusted gt<Social Media>\nGrowth Partner',
+      badge: 'About US',
+      title: 'Your Trusted SMM Panel in Bangladesh',
       subtitle:
-        'A reliable SMM platform designed to deliver fast, secure, and high-quality social media growth for individuals, businesses, and resellers.',
+        'TrendEvo helps local businesses, creators, freelancers, agencies, and resellers grow faster with trusted SMM Panel in Bangladesh. From social proof to campaign visibility, our panel makes social media growth easier with bKash, Nagad, Rocket, and a simple dashboard.',
       align: 'left',
       underlineWidth: 114,
       titleClassName:
@@ -825,38 +551,18 @@ export const data: HomePageData = {
         'max-w-[642px] text-sm font-medium sm:text-base md:text-lg lg:text-[22px] lg:leading-[1.5]',
     },
     features: [
-      'Fast Delivery with Smooth and Reliable Performance',
-      'Real & High-Quality Engagement to Build Strong Social Proof',
-      'Safe, Secure & High Retention for Long-Term Growth',
+      'Fast delivery with stable order processing',
+      'Real engagement options for better social proof',
+      'Secure orders with no password required',
     ],
-    metricRows: [
-      [
-        {
-          value: '06+',
-          label: 'Years of Digital Marketing Experience',
-          labelClassName: 'w-auto sm:w-[164px]',
-        },
-        {
-          value: '100k+',
-          label: 'Orders Delivered Successfully',
-          labelClassName: 'w-auto sm:w-[130px]',
-        },
-      ],
-      [
-        {
-          value: '50K+',
-          label: 'Active Users & Businesses Served',
-          labelClassName: 'w-auto sm:w-[164px]',
-        },
-        {
-          value: '98%',
-          label: 'Customer Satisfaction Rate',
-          labelClassName: 'whitespace-normal',
-          splitLabel: true,
-        },
-      ],
+    trustPoints: [
+      'Trusted by Growing Businesses',
+      'Reliable Social Media Growth Solutions',
+      'Fast Delivery & Easy Dashboard',
+      'Dedicated Customer Support',
     ],
-    ctaLabel: 'Discover More',
+    ctaLabel: 'About Us',
+    ctaHref: '/about-us',
     image: {
       src: '/images/about/about-us-trendevo-growth-partner-illustration.webp',
       alt: 'TrendEvo growth partner',
@@ -865,10 +571,10 @@ export const data: HomePageData = {
 
   workingProcess: {
     heading: {
-      badge: 'WORKING PROCESS',
-      title: 'Grow Your gt<Socials in 4 Simple> Steps',
+      badge: 'Working Process',
+      title: 'Start Getting Results in 4 Easy Steps',
       subtitle:
-        'A simple and efficient process designed to deliver fast and reliable results. Just place your order, and our system will handle the rest to help grow your social media presence smoothly.',
+        'TrendEvo keeps SMM panel ordering simple for Bangladesh users. Create a free account, add funds with local payment methods, choose a service, and track every order from one clean dashboard.',
       underlineSrc: '/images/working-process/working-process-section-underline.svg',
       underlineWidth: 216,
       titleClassName:
@@ -880,9 +586,9 @@ export const data: HomePageData = {
     steps: [
       {
         number: '01',
-        title: 'Create Account',
+        title: 'Create Free Account',
         description:
-          'Sign up quickly using your email or social login and get instant access to all TrendEvo services. Manage and track your orders easily from a single dashboard.',
+          'Sign up on TrendEvo and get access to your SMM panel dashboard. No technical skill is needed. You can manage services, balance, and orders from one place.',
         highlighted: true,
         corner: 'tl',
       },
@@ -890,21 +596,21 @@ export const data: HomePageData = {
         number: '02',
         title: 'Add Funds',
         description:
-          'Deposit funds securely via credit/debit card, bank transfer, or cryptocurrency. Your wallet is credited instantly so you can start placing orders immediately.',
+          'Recharge your account with bKash, Nagad, or Rocket. Your balance updates quickly, so you can start ordering Facebook, Instagram, YouTube, TikTok, and other services.',
         highlighted: false,
       },
       {
         number: '03',
         title: 'Select Service',
         description:
-          'Select from Instagram, TikTok, YouTube, or Facebook services with clear pricing, delivery times, and reliability stats. Pick the package that fits your growth goals perfectly.',
+          'Choose the SMM service that matches your goal. Pick followers, likes, views, comments, subscribers, traffic, or other services with clear pricing and order details.',
         highlighted: false,
       },
       {
         number: '04',
-        title: 'Place your order',
+        title: 'Place Your Order',
         description:
-          'Enter your account details, select the desired quantity, and submit your order. Real-time validation ensures everything is accurate and ready to process quickly.',
+          'Enter the correct link, select quantity, and submit your order. TrendEvo processes your request securely and lets you track progress directly from the dashboard.',
         highlighted: true,
         corner: 'br',
       },
@@ -914,9 +620,9 @@ export const data: HomePageData = {
   whyChooseUs: {
     heading: {
       badge: 'Why Choose Us',
-      title: 'Why gt<Choose Us>',
+      title: 'What Makes TrendEvo Different from Other SMM Panels in Bangladesh',
       subtitle:
-        'Boost your social media growth with our fast, reliable, and high-quality SMM services. We provide secure delivery, competitive pricing, and trusted support to help your brand grow faster.',
+        'TrendEvo is built for people who need a reliable SMM panel in Bangladesh without confusing steps, hidden delays, or payment trouble. From local creators to agencies, every order is easier to place, fund, and track.',
       underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
       underlineWidth: 169,
       titleClassName:
@@ -924,43 +630,41 @@ export const data: HomePageData = {
       subtitleClassName:
         'max-w-[924px] text-sm font-medium leading-normal text-[#4f586d] sm:text-base md:text-lg',
     },
-    cardDescription:
-      'Our system is designed to process orders quickly and efficiently. Once you place an order, our automated platform starts delivering almost instantly, ensuring fast results without compromising service stability.',
     leftFeatures: [
       {
-        title: 'Cheapest SMM Panel',
+        title: 'Affordable Price in Bangladesh',
         icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
       {
-        title: 'Fast & Reliable Delivery',
-        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
-        iconWidth: 40,
-        iconHeight: 40,
-      },
-      {
-        title: 'Multitude of Services',
-        icon: '/images/why-choose-us/why-choose-us-multitude-of-services-icon.webp',
-        iconWidth: 57,
-        iconHeight: 30,
-      },
-    ],
-    rightFeatures: [
-      {
-        title: 'Real-time & Data',
+        title: 'Real-Time Order Tracking',
         icon: '/images/why-choose-us/why-choose-us-real-time-and-data-icon.webp',
         iconWidth: 43,
         iconHeight: 40,
       },
       {
-        title: 'Bulk Orders Provide',
+        title: 'Fast & Stable Delivery',
+        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
+        iconWidth: 40,
+        iconHeight: 40,
+      },
+    ],
+    rightFeatures: [
+      {
+        title: 'Bulk Order Support',
         icon: '/images/why-choose-us/why-choose-us-bulk-orders-provide-icon.png',
         iconWidth: 46,
         iconHeight: 40,
       },
       {
-        title: '24/7 Dedicated Customer Support',
+        title: 'Multiple SMM Services',
+        icon: '/images/why-choose-us/why-choose-us-multitude-of-services-icon.webp',
+        iconWidth: 57,
+        iconHeight: 30,
+      },
+      {
+        title: '24/7 Bangla & English Support',
         icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
@@ -972,9 +676,9 @@ export const data: HomePageData = {
   paymentMethods: {
     heading: {
       badge: 'Payment Methods',
-      title: '10+ Payment Methods gt<Available For Users>',
+      title: 'Easy SMM Panel Payments for Bangladesh Users',
       subtitle:
-        'Choose from 10+ secure and convenient payment methods to pay your way. Enjoy fast, hassle-free transactions and get instant access to all our services.',
+        'Many SMM panels are difficult for Bangladesh users because adding funds often means using international cards, dollar payments, or crypto methods that feel risky and confusing. TrendEvo removes that barrier. With TrendEvo, you can add funds to your SMM panel account using the payment methods you already use in Bangladesh. Add funds through bKash, Nagad, or Rocket, then order our affordable SMM services from one simple dashboard.',
       underlineSrc: '/images/payment-methods/payment-methods-section-underline.svg',
       underlineWidth: 193,
       titleClassName:
@@ -1052,10 +756,10 @@ export const data: HomePageData = {
 
   advantages: {
     heading: {
-      badge: 'ADVANTAGES',
-      title: 'Advantages of using gt<our panel services>',
+      badge: 'Who Uses TrendEvo',
+      title: 'TrendEvo Works for Everyone in Bangladesh',
       subtitle:
-        'We provide SMM services on almost every social media platform. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
+        'TrendEvo is built for local businesses, content creators, freelancers, ecommerce brands, agencies, and resellers in Bangladesh. From simple orders to bulk SMM campaigns, everything is easy to manage with local payments, fast delivery, and clear tracking.',
       underlineSrc: '/images/advantages/advantages-section-underline.svg',
       underlineWidth: 150,
       titleClassName:
@@ -1065,41 +769,43 @@ export const data: HomePageData = {
     },
     leftItems: [
       {
-        title: 'Lowest-Cost gt<SMM> and gt<Social Media> Marketing Services',
+        title: 'Small Business Owners',
         description:
-          'Affordable SMM services let businesses, freelancers, and creators grow online fast. Gain likes, followers, and engagement across Instagram, Facebook, and Twitter. Start small, test, and scale campaigns while boosting reach and visibility—maximizing results without overspending.',
+          'Your Facebook page, Instagram profile, or TikTok account may be active, but reaching the right people takes time. TrendEvo helps local shops, restaurants, salons, ecommerce stores, and service businesses in Bangladesh improve social proof with fast and affordable SMM services.',
       },
       {
-        title:
-          'Reliable gt<SMM> Reseller Support for Growing gt<Your Business>',
+        title: 'Digital Marketing Agencies',
         description:
-          'SMM reseller support lets entrepreneurs, agencies, and freelancers grow fast without building from scratch. Deliver ready-made services under your brand, customize packages, and scale confidently while maintaining quality and boosting revenue.',
+          'Agencies need speed, control, and clear order tracking when handling multiple client campaigns. TrendEvo gives Bangladeshi agencies a simple SMM panel dashboard to manage Facebook, Instagram, YouTube, TikTok, and other platform orders from one place.',
       },
     ],
     rightItems: [
       {
-        title: 'Multiple gt<Safe Payment> Options for gt<SMM> Orders',
+        title: 'Content Creators & YouTubers',
         description:
-          'Enjoy multiple safe payment options, including cards, PayPal, and cryptocurrencies.All transactions are secure, encrypted, and fraud-protected for peace of mind.\n\nFocus on growing your social media presence without any payment worries.',
+          'Creators work hard on videos, reels, shorts, and posts, but good content often needs an early push. TrendEvo helps Bangladeshi content creators improve visibility with followers, views, likes, comments, watch time, and engagement services.',
       },
       {
-        title: '24/7 Live Support for All gt<SMM Services> What You Needs',
+        title: 'Freelancers & SMM Resellers',
         description:
-          'Get 24/7 live support for all your SMM and Instagram panel needs.Instant help ensures smooth campaigns, quick issue resolution, and peace of mind.Focus on growth while experts are always ready to assist.',
+          'Freelancers and resellers need reliable pricing, easy payments, and repeat order support. TrendEvo works as a reseller-friendly SMM Panel BD platform where you can buy services, serve clients, and manage orders with bKash, Nagad, or Rocket.',
       },
     ],
     image: {
       src: '/images/advantages/advantages-illustration.png',
       alt: 'SMM panel advantages illustration',
     },
+    sectionBg: 'section-15',
+    sectionClassName:
+      'overflow-x-hidden bg-white py-12 sm:py-16 lg:py-[84px] dark:bg-transparent',
   },
 
   pricing: {
     heading: {
-      badge: 'PRICING',
-      title: 'Pricing Preview of Our gt<SMM Panel Services>',
+      badge: 'Pricing',
+      title: 'Affordable SMM Panel Pricing for Bangladesh',
       subtitle:
-        'Simple, Clear, and Affordable for Everyone. We make social media growth easy without high costs. Our prices are clear, fair, and fit every budget.',
+        'TrendEvo keeps SMM pricing simple for creators, small businesses, freelancers, agencies, and resellers in Bangladesh. Choose the platform you need, check clear rates, add funds with bKash, Nagad, or Rocket, and order without hidden costs.',
       underlineSrc: '/images/pricing/pricing-section-underline.svg',
       underlineWidth: 90,
       titleClassName:
@@ -1107,88 +813,144 @@ export const data: HomePageData = {
       subtitleClassName:
         'max-w-[1090px] text-center text-sm leading-normal text-[#404a60] sm:text-base md:text-lg',
     },
+    features: [
+      'Fast Delivery',
+      'Live Order Tracking',
+      '100% Non Drop',
+      '24/7 Bangla & English Support',
+      'You Can Pay Easily with bKash, Nagad, Rocket or Upay No dollar Card Needed',
+    ],
     platforms: [
-      {
-        id: 'instagram',
-        label: 'Instagram',
-        icon: '/images/icons/pricing-instagram-platform-icon.webp',
-      },
       {
         id: 'facebook',
         label: 'Facebook',
         icon: '/images/icons/pricing-facebook-platform-icon.webp',
+        plans: [
+          { startingPrice: '$0.29', serviceName: 'Facebook Followers', buyLabel: 'Buy Facebook Followers', buyHref: '/buy-facebook-followers' },
+          { startingPrice: '$0.19', serviceName: 'Facebook Likes', buyLabel: 'Buy Facebook Likes', buyHref: '/buy-facebook-page-likes' },
+          { startingPrice: '$0.45', serviceName: 'Facebook Reels Views', buyLabel: 'Buy Facebook Reels Views', buyHref: '/services' },
+        ],
+      },
+      {
+        id: 'instagram',
+        label: 'Instagram',
+        icon: '/images/icons/pricing-instagram-platform-icon.webp',
+        plans: [
+          { startingPrice: '$0.35', serviceName: 'Instagram Followers', buyLabel: 'Buy Instagram Followers', buyHref: '/buy-instagram-followers' },
+          { startingPrice: '$0.25', serviceName: 'Instagram Likes', buyLabel: 'Buy Instagram Likes', buyHref: '/buy-instagram-likes' },
+          { startingPrice: '$0.05', serviceName: 'Instagram Views', buyLabel: 'Buy Instagram Views', buyHref: '/buy-instagram-views' },
+        ],
       },
       {
         id: 'youtube',
         label: 'YouTube',
         icon: '/images/icons/pricing-youtube-platform-icon.webp',
+        plans: [
+          { startingPrice: '$0.85', serviceName: 'YouTube Views', buyLabel: 'Buy YouTube Views', buyHref: '/buy-youtube-views' },
+          { startingPrice: '$3.85', serviceName: 'YouTube Likes', buyLabel: 'Buy YouTube Likes', buyHref: '/buy-youtube-likes' },
+          { startingPrice: '$18', serviceName: 'YouTube Subscribers', buyLabel: 'Buy YouTube Subscribers', buyHref: '/buy-youtube-subscribers' },
+        ],
+      },
+      {
+        id: 'twitter',
+        label: 'X (Twitter)',
+        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        plans: [
+          { startingPrice: '$5.78', serviceName: 'Twitter Followers', buyLabel: 'Buy Twitter Followers', buyHref: '/buy-x-twitter-followers' },
+          { startingPrice: '$2.83', serviceName: 'Twitter Likes', buyLabel: 'Buy Twitter Likes', buyHref: '/buy-x-twitter-likes' },
+          { startingPrice: '$2.83', serviceName: 'X (Twitter) Tweet Views', buyLabel: 'Buy X (Twitter) Tweet Views', buyHref: '/services' },
+        ],
+      },
+      {
+        id: 'linkedin',
+        label: 'LinkedIn',
+        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
+        plans: [
+          { startingPrice: '$23.20', serviceName: 'LinkedIn Page Followers', buyLabel: 'Buy LinkedIn Page Followers', buyHref: '/buy-linkedin-followers' },
+          { startingPrice: '$13.98', serviceName: 'LinkedIn Post Likes', buyLabel: 'Buy LinkedIn Post Likes', buyHref: '/buy-linkedin-likes' },
+          { startingPrice: '$5.98', serviceName: 'LinkedIn Views', buyLabel: 'Buy LinkedIn Views', buyHref: '/buy-linkedin-likes' },
+        ],
+      },
+      {
+        id: 'telegram',
+        label: 'Telegram',
+        icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
+        plans: [
+          { startingPrice: '$0.99', serviceName: 'Telegram Members', buyLabel: 'Buy Telegram Members', buyHref: '/buy-telegram-members' },
+          { startingPrice: '$0.03', serviceName: 'Telegram Mix Reaction', buyLabel: 'Buy Telegram Mix Reaction', buyHref: '/buy-telegram-members' },
+          { startingPrice: '$0.01', serviceName: 'Telegram Post Views', buyLabel: 'Buy Telegram Post Views', buyHref: '/buy-telegram-members' },
+        ],
+      },
+      {
+        id: 'spotify',
+        label: 'Spotify',
+        icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
+        plans: [
+          { startingPrice: '$0.12', serviceName: 'Spotify Plays', buyLabel: 'Buy Spotify Plays', buyHref: '/buy-spotify-plays' },
+          { startingPrice: '$0.63', serviceName: 'Spotify Premium Plays', buyLabel: 'Buy Spotify Premium Plays', buyHref: '/buy-spotify-plays' },
+          { startingPrice: '$0.89', serviceName: 'Spotify Premium Playlist Plays', buyLabel: 'Buy Spotify Premium Playlist Plays', buyHref: '/buy-spotify-plays' },
+        ],
+      },
+      {
+        id: 'twitch',
+        label: 'Twitch',
+        icon: '/images/service-smm-panel/twitch-smm-panel/twitch-effect.svg',
+        plans: [
+          { startingPrice: '$2.12', serviceName: 'Twitch Followers', buyLabel: 'Buy Twitch Followers', buyHref: '/buy-twitch-followers' },
+          { startingPrice: '$1.63', serviceName: 'Twitch Video Views', buyLabel: 'Buy Twitch Video Views', buyHref: '/buy-twitch-viewers' },
+          { startingPrice: '$1.89', serviceName: 'Twitch Clip Views', buyLabel: 'Buy Twitch Clip Views', buyHref: '/buy-twitch-viewers' },
+        ],
+      },
+      {
+        id: 'soundcloud',
+        label: 'SoundCloud',
+        icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+        plans: [
+          { startingPrice: '$12.12', serviceName: 'SoundCloud Followers', buyLabel: 'Buy SoundCloud Followers', buyHref: '/buy-soundcloud-followers' },
+          { startingPrice: '$1.63', serviceName: 'SoundCloud Plays', buyLabel: 'Buy SoundCloud Plays', buyHref: '/buy-soundcloud-plays' },
+          { startingPrice: '$11.39', serviceName: 'SoundCloud Playlist Likes', buyLabel: 'Buy SoundCloud Playlist Likes', buyHref: '/buy-soundcloud-plays' },
+        ],
+      },
+      {
+        id: 'discord',
+        label: 'Discord',
+        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        plans: [
+          { startingPrice: '$4.15', serviceName: 'Discord Send Reactions', buyLabel: 'Buy Discord Send Reactions', buyHref: '/buy-discord-members' },
+          { startingPrice: '$5.63', serviceName: 'Discord Add Reactions', buyLabel: 'Buy Discord Add Reactions', buyHref: '/buy-discord-members' },
+          { startingPrice: '$6.39', serviceName: 'Discord Online Members', buyLabel: 'Buy Discord Online Members', buyHref: '/buy-discord-members' },
+        ],
       },
       {
         id: 'tiktok',
         label: 'TikTok',
         icon: '/images/icons/pricing-tiktok-platform-icon.webp',
+        plans: [
+          { startingPrice: '$8.15', serviceName: 'TikTok Followers', buyLabel: 'Buy TikTok Followers', buyHref: '/buy-tiktok-followers' },
+          { startingPrice: '$0.63', serviceName: 'TikTok Likes', buyLabel: 'Buy TikTok Likes', buyHref: '/buy-tiktok-likes' },
+          { startingPrice: '$0.06', serviceName: 'TikTok Views', buyLabel: 'Buy TikTok Views', buyHref: '/buy-tiktok-views' },
+        ],
       },
+      {
+        id: 'website-traffic',
+        label: 'Website Traffic',
+        icon: '/images/our-services/platforms/our-services-organic-traffic-platform-icon.png',
+        plans: [
+          { startingPrice: '$0.15', serviceName: 'Website Traffic', buyLabel: 'Buy Website Traffic', buyHref: '/services' },
+          { startingPrice: '$0.63', serviceName: 'Mix Website Traffic', buyLabel: 'Buy Mix Website Traffic', buyHref: '/services' },
+          { startingPrice: '$0.06', serviceName: 'USA Website Traffic', buyLabel: 'Buy USA Website Traffic', buyHref: '/services' },
+        ],
+      }
     ],
-    features: [
-      {
-        label: 'Guarantee Fast Delivery',
-        icon: '/images/pricing/pricing-guarantee-fast-delivery-icon.svg',
-      },
-      {
-        label: 'Instant Start',
-        icon: '/images/pricing/pricing-instant-start-icon.svg',
-      },
-      {
-        label: 'Never Drop',
-        icon: '/images/pricing/pricing-never-drop-icon.svg',
-      },
-      {
-        label: 'No Password Required',
-        icon: '/images/pricing/pricing-no-password-required-icon.svg',
-        size: 24,
-      },
-      {
-        label: 'Geo: Global',
-        icon: '/images/pricing/pricing-geo-global-icon.svg',
-      },
-    ],
-    plans: [
-      {
-        name: 'Basic',
-        planType: 'basic',
-        price: '$45.00',
-        description: 'Instagram High Quality Followers',
-        featured: false,
-        featureCount: 5,
-      },
-      {
-        name: 'Professional',
-        planType: 'professional',
-        price: '$45.00',
-        description: 'Instagram High Quality Followers',
-        featured: true,
-        featureCount: 6,
-      },
-      {
-        name: 'Basic',
-        planType: 'basic',
-        price: '$45.00',
-        description: 'Instagram High Quality Followers',
-        featured: false,
-        featureCount: 5,
-      },
-    ],
-    planCtaLabel: 'Get Started',
-    priceSuffix: '/month',
   },
 
   testimonials: {
     sectionBackground:
       'linear-gradient(68.23deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)',
-    badge: 'TESTIMONIALS',
-    title: 'What Our gt<Client Say>',
+    badge: 'Customer Reviews',
+    title: 'Over 11,604 Users Across Bangladesh Trust TrendEvo',
     subtitle:
-      'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
+      'Read what real customers say about their experience with TrendEvo. These are genuine reviews from people who have used our services.',
     underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
     underlineWidth: 169,
     titleClassName:
@@ -1210,69 +972,46 @@ export const data: HomePageData = {
     leftTextReviews: [
       {
         id: 'left-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
+        name: 'Sabbir Ahmed',
+        role: 'Ecommerce Business Owner',
         avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: homeTestimonialQuote,
+        quote:
+          'TrendEvo made SMM orders much easier for my online shop. I can add funds with bKash, choose the service, and track everything from the dashboard.',
       },
       {
         id: 'left-2',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: homeTestimonialQuote,
-      },
-      {
-        id: 'left-3',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: homeTestimonialQuote,
-      },
-      {
-        id: 'left-4',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
+        name: 'Nusrat Jahan',
+        role: 'SMM Freelancer',
         avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: homeTestimonialQuote,
+        quote:
+          'As a freelancer, I need fast delivery and clear order status for client work. TrendEvo helps me manage Facebook and Instagram orders without wasting time.',
       },
     ],
     rightTextReviews: [
       {
         id: 'right-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: homeTestimonialQuote,
+        name: 'Rakib Hasan',
+        role: 'Digital Marketing Agency Owner',
+        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
+        quote:
+          'The dashboard is simple and the pricing works well for Bangladesh clients. It is useful when we manage multiple campaigns for different pages.',
       },
       {
         id: 'right-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        quote: homeTestimonialQuote,
-      },
-      {
-        id: 'right-3',
-        name: 'Lisa',
-        role: 'Business Owner',
+        name: 'Farhana Islam',
+        role: 'Content Creator',
         avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: homeTestimonialQuote,
-      },
-      {
-        id: 'right-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: homeTestimonialQuote,
+        quote:
+          'I use TrendEvo for YouTube and TikTok campaigns. The local payment options and support make the process easier than many foreign SMM panels.',
       },
     ],
     featuredReview: {
-      name: 'Ariyena Islam',
-      role: 'Business Owner',
-      avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
+      name: 'Sabbir Ahmed',
+      role: 'Ecommerce Business Owner',
+      avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
       image: '/images/testimonials/testimonials-featured-review-photo.webp',
-      quote: homeTestimonialQuote,
+      quote:
+        'TrendEvo made SMM orders much easier for my online shop. I can add funds with bKash, choose the service, and track everything from the dashboard.',
       youtubeVideoId: homeYoutubeReelVideoId,
     },
     videoReviews: [
@@ -1330,60 +1069,70 @@ export const data: HomePageData = {
 
   faq: {
     label: 'FAQ',
-    title: 'gt<Frequently> Asked Questions',
+    title: 'Frequently Asked Questions',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Got Questions About TrendEvo? We Have Answers. If you are new to SMM panels or have specific questions about our services, find your answers below. You can also contact our dedicated support team anytime via WhatsApp or Email.',
     bg: 'section-7',
     items: [
       {
-        question: 'What is an SMM panel and how does TrendEvo work?',
-        answer: homeFaqDefaultAnswer,
+        question: 'What is an SMM panel?',
+        answer:
+          'An SMM panel is an online platform where users can order social media services such as followers, likes, views, comments, subscribers, and website traffic. TrendEvo makes this easier for Bangladesh users with local payment options, clear pricing, and simple order tracking.',
       },
       {
-        question: 'How fast will my order be delivered?',
-        answer: homeFaqDefaultAnswer,
+        question: 'Can I use TrendEvo as a reseller?',
+        answer:
+          'Yes. TrendEvo is suitable for freelancers, agencies, and SMM resellers in Bangladesh. You can add funds with bKash, Nagad, or Rocket, place orders for clients, track progress from the dashboard, and manage repeat campaigns from one account.',
       },
       {
-        question: 'Are the followers and engagement real?',
-        answer: homeFaqDefaultAnswer,
+        question: 'How is TrendEvo different from other SMM panels available in Bangladesh?',
+        answer:
+          'TrendEvo focuses on simple ordering, local payment support, affordable pricing, secure orders, and fast service management. It is built for Bangladeshi businesses, creators, freelancers, agencies, and resellers who want an SMM panel that feels easy to use, not confusing.',
       },
       {
-        question: 'What payment methods do you accept?',
-        answer: homeFaqDefaultAnswer,
+        question: 'Can I pay with bKash, Nagad, or Rocket?',
+        answer:
+          'Yes. TrendEvo supports bKash, Nagad, and Rocket, making it a convenient choice for users looking for a reliable bKash SMM panel in Bangladesh. This allows customers to add funds easily and place orders without facing international payment issues or complicated payment methods.',
       },
       {
-        question: 'Do you offer reseller or API access?',
-        answer: homeFaqDefaultAnswer,
+        question: 'Do I need to share my password?',
+        answer:
+          'No. For standard SMM services, you only need to submit the correct public link. TrendEvo does not ask for your social media password.',
       },
       {
-        question: 'Is my account information safe?',
-        answer: homeFaqDefaultAnswer,
+        question: 'Which is the best SMM panel in Bangladesh?',
+        answer:
+          'TrendEvo is one of the fastest-growing SMM panels in Bangladesh, offering high-quality social media services, competitive pricing, fast delivery, and reliable customer support. With a wide range of services for Facebook, Instagram, TikTok, YouTube, and more, TrendEvo has become a trusted choice for creators, businesses, and resellers looking to grow their online presence.',
       },
       {
-        question: 'What happens if an order drops?',
-        answer: homeFaqDefaultAnswer,
+        question: 'Who can use TrendEvo?',
+        answer:
+          'TrendEvo is useful for local businesses, content creators, freelancers, ecommerce brands, digital agencies, and SMM resellers in Bangladesh.',
       },
       {
-        question: 'How can I contact support?',
-        answer: homeFaqDefaultAnswer,
+        question: 'How fast does delivery start?',
+        answer:
+          'Delivery time depends on the selected service. Many services start quickly, and every order includes clear status updates inside the dashboard.',
       },
       {
-        question: 'Can I place bulk orders?',
-        answer: homeFaqDefaultAnswer,
+        question: 'Can agencies place bulk orders?',
+        answer:
+          'Yes. TrendEvo supports bulk-friendly order management for agencies, freelancers, and resellers handling multiple client campaigns.',
       },
       {
-        question: 'Do you offer refunds?',
-        answer: homeFaqDefaultAnswer,
+        question: 'What should I do if I enter the wrong link?',
+        answer:
+          'Contact support as soon as possible. If the order has not started yet, the team may help you correct the issue based on service rules.',
       },
     ],
   },
 
   blog: {
     heading: {
-      badge: 'BLOG',
-      title: 'Our Recently Posted gt< Blogs>',
+      badge: 'Blog',
+      title: 'Latest SMM Tips for Bangladesh Marketers',
       subtitle:
-        'Smart strategies and expert insights to help you grow faster on social media. Learn how to boost engagement, reach the right audience, and turn followers into customers.',
+        'Read practical guides on SMM panels, social media growth, local marketing, creator strategy, and reseller business ideas for Bangladesh. Learn how to use Facebook, Instagram, YouTube, TikTok, and other platforms with better planning.',
       underlineSrc: '/images/blog/blog-section-underline.svg',
       underlineWidth: 60,
       titleClassName:
@@ -1391,48 +1140,14 @@ export const data: HomePageData = {
       subtitleClassName:
         'max-w-[996px] text-sm font-normal text-[#404a60] sm:text-base md:text-lg',
     },
-    posts: [
-      {
-        slug: 'tiktok-marketing-complete-guide',
-        title: 'TikTok Marketing: Complete Guide for Businesses',
-        excerpt:
-          'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-        imageSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-icon-3.webp',
-        authorName: 'SEAM RAHMAN',
-        authorAvatarSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-avatar.webp',
-        publishedAt: '20 Jan, 2026',
-        readTime: '16 min read',
-      },
-      {
-        slug: 'social-media-growth-strategies',
-        title: 'TikTok Marketing: Complete Guide for Businesses',
-        excerpt:
-          'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-        imageSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-icon.webp',
-        authorName: 'SEAM RAHMAN',
-        authorAvatarSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-avatar.webp',
-        publishedAt: '20 Jan, 2026',
-        readTime: '16 min read',
-      },
-      {
-        slug: 'building-brand-presence-online',
-        title: 'TikTok Marketing: Complete Guide for Businesses',
-        excerpt:
-          'Master TikTok marketing with our comprehensive guide covering content strategy, trends, and growth tactics for brands.',
-        imageSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-icon-2.webp',
-        authorName: 'SEAM RAHMAN',
-        authorAvatarSrc: '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-avatar.webp',
-        publishedAt: '20 Jan, 2026',
-        readTime: '16 min read',
-      },
-    ],
   },
 
   cta: {
-    title: 'Ready to gt<Grow your Social Media> in Bangladesh',
+    title: 'Ready to Grow with a Trusted SMM Panel in Bangladesh?',
     description:
-      'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
-    primaryButtonLabel: 'Register Now',
-    secondaryButtonLabel: 'See all Services',
+      'Join TrendEvo and manage your Facebook, Instagram, YouTube, TikTok, Telegram, and website traffic orders from one simple dashboard. Add funds with bKash, Nagad, or Rocket, choose your service, and start growing with secure order tracking.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All Services',
+    secondaryButtonHref: '/services',
   },
 };

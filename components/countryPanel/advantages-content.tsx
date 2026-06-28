@@ -40,15 +40,10 @@ export type AdvantagesSlug =
 
 export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
   home: {
-    badge: 'ADVANTAGES',
-    title: (
-      <>
-        Advantages of using{' '}
-        <span className="text-gradient">our panel services</span>
-      </>
-    ),
+    badge: 'Who Uses TrendEvo',
+    title: 'TrendEvo Works for Everyone in Bangladesh',
     subtitle:
-      'We provide SMM services on almost every social media platform. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
+      'TrendEvo is built for local businesses, content creators, freelancers, ecommerce brands, agencies, and resellers in Bangladesh. From simple orders to bulk SMM campaigns, everything is easy to manage with local payments, fast delivery, and clear tracking.',
     underlineSrc: '/images/advantages/advantages-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
@@ -61,58 +56,26 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     },
     leftAdvantages: [
       {
-        title: (
-          <>
-            Lowest-Cost <span className="text-gradient">SMM</span> and{' '}
-            <span className="text-gradient">Social Media</span> Marketing
-            Services
-          </>
-        ),
+        title: 'Small Business Owners',
         description:
-          'Affordable SMM services let businesses, freelancers, and creators grow online fast. Gain likes, followers, and engagement across Instagram, Facebook, and Twitter. Start small, test, and scale campaigns while boosting reach and visibility—maximizing results without overspending.',
+          'Your Facebook page, Instagram profile, or TikTok account may be active, but reaching the right people takes time. TrendEvo helps local shops, restaurants, salons, ecommerce stores, and service businesses in Bangladesh improve social proof with fast and affordable SMM services.',
       },
       {
-        title: (
-          <>
-            Reliable <span className="text-gradient">SMM</span> Reseller Support
-            for Growing <span className="text-gradient">Your Business</span>
-          </>
-        ),
+        title: 'Digital Marketing Agencies',
         description:
-          'SMM reseller support lets entrepreneurs, agencies, and freelancers grow fast without building from scratch. Deliver ready-made services under your brand, customize packages, and scale confidently while maintaining quality and boosting revenue.',
+          'Agencies need speed, control, and clear order tracking when handling multiple client campaigns. TrendEvo gives Bangladeshi agencies a simple SMM panel dashboard to manage Facebook, Instagram, YouTube, TikTok, and other platform orders from one place.',
       },
     ],
     rightAdvantages: [
       {
-        title: (
-          <>
-            Multiple <span className="text-gradient">Safe Payment</span> Options
-            for <span className="text-gradient">SMM</span> Orders
-          </>
-        ),
-        description: (
-          <>
-            <p className="mb-0">
-              Enjoy multiple safe payment options, including cards, PayPal, and
-              cryptocurrencies.All transactions are secure, encrypted, and
-              fraud-protected for peace of mind.
-            </p>
-            <p>
-              Focus on growing your social media presence without any payment
-              worries.
-            </p>
-          </>
-        ),
+        title: 'Content Creators & YouTubers',
+        description:
+          'Creators work hard on videos, reels, shorts, and posts, but good content often needs an early push. TrendEvo helps Bangladeshi content creators improve visibility with followers, views, likes, comments, watch time, and engagement services.',
       },
       {
-        title: (
-          <>
-            24/7 Live Support for All{' '}
-            <span className="text-gradient">SMM Services</span> What You Needs
-          </>
-        ),
+        title: 'Freelancers & SMM Resellers',
         description:
-          'Get 24/7 live support for all your SMM and Instagram panel needs.Instant help ensures smooth campaigns, quick issue resolution, and peace of mind.Focus on growth while experts are always ready to assist.',
+          'Freelancers and resellers need reliable pricing, easy payments, and repeat order support. TrendEvo works as a reseller-friendly SMM Panel BD platform where you can buy services, serve clients, and manage orders with bKash, Nagad, or Rocket.',
       },
     ],
     sectionBg: 'section-15',

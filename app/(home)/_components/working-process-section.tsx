@@ -3,7 +3,11 @@ import { Fragment } from 'react';
 
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
+import { data } from '@/app/(home)/page-data';
+import type { HomeWorkingProcessStep } from '@/app/(home)/page-data';
 import { cn } from '@/lib/utils';
+
+const { workingProcess } = data;
 
 const GRADIENT_TEXT =
   'w-fit bg-gradient-to-r from-[#ad26ff] to-[#ff3f85] bg-clip-text text-transparent';
@@ -20,42 +24,12 @@ const STEP_CARD_GRADIENT_DARK_BR =
 const CARD_CONTENT_BASE =
   'px-4 py-6 pb-8 sm:px-6 sm:py-8 sm:pb-10 lg:px-8 lg:py-0';
 
-const steps = [
-  {
-    number: '01',
-    title: 'Create Account',
-    description:
-      'Sign up quickly using your email or social login and get instant access to all TrendEvo services. Manage and track your orders easily from a single dashboard.',
-    highlighted: true,
-    corner: 'tl' as const,
-    contentClassName: `${CARD_CONTENT_BASE} lg:pt-[43px] lg:pl-[max(2rem,18%)] lg:pr-[max(2rem,13%)]`,
-  },
-  {
-    number: '02',
-    title: 'Add Funds',
-    description:
-      'Deposit funds securely via credit/debit card, bank transfer, or cryptocurrency. Your wallet is credited instantly so you can start placing orders immediately.',
-    highlighted: false,
-    contentClassName: `${CARD_CONTENT_BASE} lg:pt-10 lg:pl-[max(2rem,8.5%)] lg:pr-8`,
-  },
-  {
-    number: '03',
-    title: 'Select Service',
-    description:
-      'Select from Instagram, TikTok, YouTube, or Facebook services with clear pricing, delivery times, and reliability stats. Pick the package that fits your growth goals perfectly.',
-    highlighted: false,
-    contentClassName: `${CARD_CONTENT_BASE} lg:pt-12 lg:pl-[max(2rem,8.5%)] lg:pr-8`,
-  },
-  {
-    number: '04',
-    title: 'Place your order',
-    description:
-      'Enter your account details, select the desired quantity, and submit your order. Real-time validation ensures everything is accurate and ready to process quickly.',
-    highlighted: true,
-    corner: 'br' as const,
-    contentClassName: `${CARD_CONTENT_BASE} lg:pt-[52px] lg:pl-[max(2rem,11.5%)] lg:pr-[max(2rem,13%)]`,
-  },
-];
+const STEP_CONTENT_CLASSNAMES = [
+  `${CARD_CONTENT_BASE} lg:pt-[43px] lg:pl-[max(2rem,18%)] lg:pr-[max(2rem,13%)]`,
+  `${CARD_CONTENT_BASE} lg:pt-10 lg:pl-[max(2rem,8.5%)] lg:pr-8`,
+  `${CARD_CONTENT_BASE} lg:pt-12 lg:pl-[max(2rem,8.5%)] lg:pr-8`,
+  `${CARD_CONTENT_BASE} lg:pt-[52px] lg:pl-[max(2rem,11.5%)] lg:pr-[max(2rem,13%)]`,
+] as const;
 
 function ProcessCenterHub({ className }: { className?: string }) {
   return (
@@ -245,7 +219,7 @@ function ProcessStepCard({
   highlighted,
   corner,
   contentClassName,
-}: (typeof steps)[number]) {
+}: HomeWorkingProcessStep & { contentClassName: string }) {
   return (
     <article
       className={cn(
@@ -341,6 +315,8 @@ function ProcessStepCard({
 }
 
 export default function WorkingProcessSection() {
+  const { heading, steps } = workingProcess;
+
   return (
     <PrimarySection
       id="how-it-works"
@@ -350,19 +326,14 @@ export default function WorkingProcessSection() {
     >
       <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
         <SectionHeading
-          badge="WORKING PROCESS"
-          underlineSrc="/images/working-process/working-process-section-underline.svg"
-          underlineWidth={216}
-          title={
-            <>
-              Grow Your{' '}
-              <span className={GRADIENT_TEXT}>Socials in 4 Simple</span> Steps
-            </>
-          }
-          subtitle="A simple and efficient process designed to deliver fast and reliable results. Just place your order, and our system will handle the rest to help grow your social media presence smoothly."
-          titleClassName="max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#13203b] dark:text-[#efedf1] sm:text-[32px] md:text-[40px] lg:text-[48px]"
-          subtitleClassName="max-w-[868px] px-1 text-center text-sm text-[#4f586d] dark:text-[#c1c4cc] sm:px-0 sm:text-base md:text-lg"
-          className="gap-3 sm:gap-4"
+          badge={heading.badge}
+          underlineSrc={heading.underlineSrc}
+          underlineWidth={heading.underlineWidth}
+          title={heading.title}
+          subtitle={heading.subtitle}
+          titleClassName={heading.titleClassName}
+          subtitleClassName={heading.subtitleClassName}
+          className={heading.className}
         />
 
         <div className="relative w-full max-w-[1198px]">
@@ -373,7 +344,10 @@ export default function WorkingProcessSection() {
           <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:gap-x-[78px] lg:gap-y-[52px]">
             {steps.map((step, index) => (
               <Fragment key={step.number}>
-                <ProcessStepCard {...step} />
+                <ProcessStepCard
+                  {...step}
+                  contentClassName={STEP_CONTENT_CLASSNAMES[index]}
+                />
                 {index === 1 ? (
                   <div className="flex items-center justify-center py-2 md:col-span-2 lg:hidden">
                     <ProcessCenterHub />

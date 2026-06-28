@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'TrendEvo | Trusted SMM Panel',
+  title: 'Cheapest SMM Panel in Bangladesh Pay with bKash | TrendEvo',
   description:
-    'TrendEvo is a next-generation SMM panel delivering fast, secure social media growth for brands, creators, and agencies in Bangladesh.',
+    'TrendEvo is a trusted SMM Panel Bangladesh platform for Facebook, Instagram, YouTube, TikTok, and more. Pay easily with bKash, Nagad, or Rocket.',
 };
 
 export default function RootLayout({

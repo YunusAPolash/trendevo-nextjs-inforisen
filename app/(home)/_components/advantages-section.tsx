@@ -9,6 +9,7 @@ import {
   getAdvantagesContent,
   type AdvantagesSlug,
 } from '@/components/countryPanel/advantages-content';
+import { data as homePageData } from '@/app/(home)/page-data';
 
 function AdvantageCard({
   title,
@@ -51,6 +52,30 @@ type AdvantagesSectionProps = {
 export default function AdvantagesSection({
   slug = 'home',
 }: AdvantagesSectionProps) {
+  const content =
+    slug === 'home'
+      ? {
+          badge: homePageData.advantages.heading.badge,
+          title: homePageData.advantages.heading.title,
+          subtitle: homePageData.advantages.heading.subtitle,
+          underlineSrc: homePageData.advantages.heading.underlineSrc!,
+          underlineWidth: homePageData.advantages.heading.underlineWidth!,
+          titleClassName: homePageData.advantages.heading.titleClassName,
+          subtitleClassName: homePageData.advantages.heading.subtitleClassName,
+          centerImage: homePageData.advantages.image,
+          leftAdvantages: homePageData.advantages.leftItems.map((item) => ({
+            title: item.title,
+            description: item.description,
+          })),
+          rightAdvantages: homePageData.advantages.rightItems.map((item) => ({
+            title: item.title,
+            description: item.description,
+          })),
+          sectionBg: homePageData.advantages.sectionBg,
+          sectionClassName: homePageData.advantages.sectionClassName,
+        }
+      : getAdvantagesContent(slug);
+
   const {
     badge,
     title,
@@ -64,7 +89,7 @@ export default function AdvantagesSection({
     rightAdvantages,
     sectionBg,
     sectionClassName,
-  } = getAdvantagesContent(slug);
+  } = content;
 
   return (
     <PrimarySection

@@ -2,17 +2,11 @@ import Image from 'next/image';
 import PrimarySection from '@/components/sections/primary-section';
 import PrimaryButton from '@/components/buttons/primary-button';
 import SecondaryButton from '@/components/buttons/secondary-button';
-import { signInUrl, signUpUrl } from '@/lib/auth-urls';
+import { data } from '@/app/(home)/page-data';
+import { signUpUrl } from '@/lib/auth-urls';
 import { getStats, formatUsersTrustLabel } from '@/lib/stats';
 
-const avatars = [
-  '/images/reviews/home-hero-hero-1-avatar.png',
-  '/images/reviews/home-hero-hero-2-avatar.png',
-  '/images/reviews/home-hero-hero-3-avatar.png',
-  '/images/reviews/home-hero-hero-4-avatar.png',
-  '/images/reviews/home-hero-hero-5-avatar.png',
-  '/images/reviews/home-hero-hero-3-avatar.png',
-];
+const { hero } = data;
 
 export default async function HeroSection() {
   const { usersAll } = await getStats();
@@ -27,7 +21,7 @@ export default async function HeroSection() {
         <div className="flex min-w-0 flex-col gap-6 lg:max-w-[762px] lg:gap-8 lg:self-start">
           <div className="flex w-full max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border-l-2 border-[#cb7ef7] bg-white py-2 pl-1.5 pr-3 backdrop-blur-none sm:w-fit dark:bg-white/[0.07] dark:backdrop-blur-[10px]">
             <div className="flex -space-x-3">
-              {avatars.map((src, index) => (
+              {hero.trustBadge.avatarSrcs.map((src, index) => (
                 <Image
                   key={`${src}-${index}`}
                   src={src}
@@ -39,14 +33,14 @@ export default async function HeroSection() {
               ))}
             </div>
             <Image
-              src="/images/icons/home-hero-trust-star-rating-icon.png"
+              src={hero.trustBadge.ratingIconSrc}
               alt="rating"
               width={16}
               height={15}
               className="size-4 shrink-0"
             />
             <span className="text-gradient text-sm font-medium dark:bg-none dark:bg-clip-border dark:text-white">
-              (4.8)
+              {hero.trustBadge.rating}
             </span>
             <span className="text-gradient text-sm font-medium dark:bg-none dark:bg-clip-border dark:text-white">
               {formatUsersTrustLabel(usersAll)}
@@ -55,58 +49,47 @@ export default async function HeroSection() {
 
           <div className="space-y-6">
             <h1 className="text-[28px] font-semibold leading-[1.35] tracking-tight text-[#071431] sm:text-4xl md:text-5xl dark:text-[#efefef]">
-              Trusted{' '}
-              <span className="text-gradient">SMM Panel</span>
-              <br />
-              High-Speed Delivery With{' '}
-              <span className="text-gradient">Secure Services</span>
+              {hero.heading}
             </h1>
             <p className="max-w-2xl text-base leading-relaxed text-[#313131] sm:text-base md:text-lg dark:text-[#ebecef]">
-              <span className="text-gradient font-medium">TrendEvo</span> is a
-              next-generation viral growth platform crafted to help brands,
-              creators, and agencies unlock their full digital potential. We
-              combine speed, reliability, and scalable infrastructure to deliver
-              measurable growth in reach, engagement, and online visibility
-              across global markets.
+              {hero.description}
             </p>
             <div className="flex gap-2">
               <Image
-                src="/images/icons/home-hero-hero-fire-icon-illustration.png"
+                src={hero.trustBadge.promoIconSrc}
                 alt=""
                 width={24}
                 height={24}
                 className="size-6 shrink-0"
               />
               <p className="text-base leading-relaxed text-[#313131] md:text-lg dark:text-white">
-                Enjoy up to{' '}
-                <span className="font-semibold text-[#fc7f4d]">30%</span> bonus on
-                every deposit, starting at only $1.
+                {hero.promo}
               </p>
             </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-            <SecondaryButton
-              href={signInUrl}
-              className="h-10 shrink-0 border-[1.5px] border-[#d181ff] bg-white hover:bg-white/95 sm:h-11 md:h-[50px] md:w-[180px]"
-            >
-              Sign In
-            </SecondaryButton>
             <PrimaryButton
               href={signUpUrl}
               className="shrink-0 border-0 dark:border-[1.5px] dark:border-[#cc7aff]"
             >
-              Create an Account
+              {hero.primaryButtonLabel}
             </PrimaryButton>
+            <SecondaryButton
+              href={hero.secondaryButtonHref}
+              className="h-10 shrink-0 border-[1.5px] border-[#d181ff] bg-white hover:bg-white/95 sm:h-11 md:h-[50px] md:w-[180px]"
+            >
+              {hero.secondaryButtonLabel}
+            </SecondaryButton>
           </div>
         </div>
 
         <div className="mx-auto w-full min-w-0 max-w-[669px] lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end">
           <Image
-            src="/images/hero/home-hero-trendevo-platform-user-with-social-media-icons-and-analytics-illustration.webp"
-            alt="TrendEvo platform user with social media icons and analytics"
-            width={669}
-            height={728}
+            src={hero.illustration.src}
+            alt={hero.illustration.alt}
+            width={hero.illustration.width}
+            height={hero.illustration.height}
             priority
             sizes="(max-width: 1024px) 100vw, 669px"
             className="block h-auto w-full"

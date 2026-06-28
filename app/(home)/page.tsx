@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import AboutSection from '@/app/(home)/_components/about-section';
 import AdvantagesSection from '@/app/(home)/_components/advantages-section';
 import CtaSection from '@/app/(home)/_components/cta-section';
@@ -13,6 +14,14 @@ import WhyChooseUsSection from '@/app/(home)/_components/why-choose-us-section';
 import WorkingProcessSection from '@/app/(home)/_components/working-process-section';
 import FaqSection from '@/components/sections/faq-section';
 import OurService from '@/app/(home)/_components/our-service';
+
+export const metadata: Metadata = {
+  title: homePageData.seo.title,
+  description: homePageData.seo.description,
+  alternates: {
+    canonical: homePageData.seo.canonical,
+  },
+};
 
 export default function Home() {
   return (

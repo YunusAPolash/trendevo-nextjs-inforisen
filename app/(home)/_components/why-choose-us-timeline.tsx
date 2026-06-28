@@ -9,11 +9,10 @@ import {
 } from 'react';
 
 import { WhyChooseUsCard } from '@/app/(home)/_components/why-choose-us-card';
-import {
-  leftFeatures,
-  rightFeatures,
-  timelineSteps,
-} from '@/app/(home)/_components/why-choose-us-data';
+import { data } from '@/app/(home)/page-data';
+
+const { whyChooseUs } = data;
+const { leftFeatures, rightFeatures, timelineSteps, heading } = whyChooseUs;
 
 const TIMELINE_LINE_GRADIENT_LIGHT =
   'linear-gradient(90.06deg, rgb(209, 129, 255) 2.85%, rgb(255, 99, 190) 90.53%)';
@@ -84,7 +83,11 @@ function buildTimelineRail(
   return { x, y1, y2 };
 }
 
-export function WhyChooseUsDesktopTimeline() {
+export function WhyChooseUsDesktopTimeline({
+  cardDescription,
+}: {
+  cardDescription: string;
+}) {
   const layoutRef = useRef<HTMLDivElement>(null);
   const [rail, setRail] = useState<TimelineRail | null>(null);
 
@@ -184,11 +187,11 @@ export function WhyChooseUsDesktopTimeline() {
           key={step}
           className="relative grid grid-cols-[minmax(0,1fr)_72px_minmax(0,1fr)] items-center gap-x-2 lg:grid-cols-[minmax(0,1fr)_88px_minmax(0,1fr)] lg:gap-x-3 xl:grid-cols-[minmax(0,1fr)_107px_minmax(0,1fr)] xl:gap-x-6"
         >
-          <WhyChooseUsCard {...leftFeatures[index]} />
+          <WhyChooseUsCard {...leftFeatures[index]} description={cardDescription} />
           <div className="flex items-center justify-center py-2.5">
             <TimelineMarker number={step} />
           </div>
-          <WhyChooseUsCard {...rightFeatures[index]} />
+          <WhyChooseUsCard {...rightFeatures[index]} description={cardDescription} />
         </div>
       ))}
     </div>
