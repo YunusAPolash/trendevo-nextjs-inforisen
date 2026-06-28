@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
-import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
 import { data as tiktokFollowersPageData } from '@/app/(subservice)/buy-tiktok-followers/page-data';
-import TiktokFollowersCtaSection from '@/app/(subservice)/buy-tiktok-followers/_components/cta-section';
-import TiktokFollowersHeroSection from '@/app/(subservice)/buy-tiktok-followers/_components/hero-section';
-import TiktokFollowersOrderFormSection from '@/app/(subservice)/buy-tiktok-followers/_components/order-form-section';
-import TiktokFollowersWorkingProcessSection from '@/app/(subservice)/buy-tiktok-followers/_components/working-process-section';
+import TiktokFollowersCtaSection from './_components/cta-section';
+import TiktokFollowersHeroSection from './_components/hero-section';
+import TiktokFollowersOrderFormSection from './_components/order-form-section';
+import TiktokFollowersRelatedServicesSection from './_components/related-services-section';
+import TiktokFollowersThingsToKnowSection from './_components/things-to-know-section';
+import TiktokFollowersWhoShouldBuySection from './_components/who-should-buy-section';
+import TiktokFollowersWhyChooseSection from './_components/why-choose-section';
+import TiktokFollowersWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: tiktokFollowersPageData.seo.title,
   description: tiktokFollowersPageData.seo.description,
+  alternates: {
+    canonical: tiktokFollowersPageData.seo.canonical,
+  },
 };
 
 export default function TiktokFollowersPage() {
@@ -18,12 +23,12 @@ export default function TiktokFollowersPage() {
     <>
       <TiktokFollowersHeroSection />
       <TiktokFollowersOrderFormSection />
-      <TestimonialsSection data={tiktokFollowersPageData.testimonials} />
+      <TiktokFollowersWhyChooseSection />
+      <TiktokFollowersWhoShouldBuySection />
       <TiktokFollowersWorkingProcessSection />
-      {tiktokFollowersPageData.serviceLeadingSlugs.map((slug) => (
-        <ServiceLeading key={slug} slug={slug} />
-      ))}
+      <TiktokFollowersThingsToKnowSection />
       <FaqSection data={tiktokFollowersPageData.faq} />
+      <TiktokFollowersRelatedServicesSection />
       <TiktokFollowersCtaSection />
     </>
   );
