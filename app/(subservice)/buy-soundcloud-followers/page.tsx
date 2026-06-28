@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
-import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
 import { data as soundcloudFollowersPageData } from '@/app/(subservice)/buy-soundcloud-followers/page-data';
-import SoundcloudFollowersCtaSection from '@/app/(subservice)/buy-soundcloud-followers/_components/cta-section';
-import SoundcloudFollowersHeroSection from '@/app/(subservice)/buy-soundcloud-followers/_components/hero-section';
-import SoundcloudFollowersOrderFormSection from '@/app/(subservice)/buy-soundcloud-followers/_components/order-form-section';
-import SoundcloudFollowersWorkingProcessSection from '@/app/(subservice)/buy-soundcloud-followers/_components/working-process-section';
+import SoundcloudFollowersCtaSection from './_components/cta-section';
+import SoundcloudFollowersHeroSection from './_components/hero-section';
+import SoundcloudFollowersOrderFormSection from './_components/order-form-section';
+import SoundcloudFollowersRelatedServicesSection from './_components/related-services-section';
+import SoundcloudFollowersThingsToKnowSection from './_components/things-to-know-section';
+import SoundcloudFollowersWhoShouldBuySection from './_components/who-should-buy-section';
+import SoundcloudFollowersWhyChooseSection from './_components/why-choose-section';
+import SoundcloudFollowersWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: soundcloudFollowersPageData.seo.title,
   description: soundcloudFollowersPageData.seo.description,
+  alternates: {
+    canonical: soundcloudFollowersPageData.seo.canonical,
+  },
 };
 
 export default function SoundcloudFollowersPage() {
@@ -18,12 +23,12 @@ export default function SoundcloudFollowersPage() {
     <>
       <SoundcloudFollowersHeroSection />
       <SoundcloudFollowersOrderFormSection />
-      <TestimonialsSection data={soundcloudFollowersPageData.testimonials} />
+      <SoundcloudFollowersWhyChooseSection />
+      <SoundcloudFollowersWhoShouldBuySection />
       <SoundcloudFollowersWorkingProcessSection />
-      {soundcloudFollowersPageData.serviceLeadingSlugs.map((slug) => (
-        <ServiceLeading key={slug} slug={slug} />
-      ))}
+      <SoundcloudFollowersThingsToKnowSection />
       <FaqSection data={soundcloudFollowersPageData.faq} />
+      <SoundcloudFollowersRelatedServicesSection />
       <SoundcloudFollowersCtaSection />
     </>
   );
