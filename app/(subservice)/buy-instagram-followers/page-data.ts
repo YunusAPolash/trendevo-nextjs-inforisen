@@ -1,6 +1,8 @@
 import type { FaqSectionData } from '@/components/sections/faq-section';
 import type { ServiceWorkingProcessStep } from '@/components/sections/service-working-process-section';
-import type { TestimonialsSectionData } from '@/components/sections/testimonials-section';
+import type { ThingsToKnowSectionData } from '@/components/sections/things-to-know-section';
+import type { WhoShouldBuySectionData } from '@/components/sections/who-should-buy-section';
+import type { ServiceLeadingContent } from '@/components/serviceSmmPanel/service-leading-content';
 
 type SEO = {
   title: string;
@@ -13,10 +15,13 @@ type InstagramFollowersPageData = {
   hero: {
     bg: 'section-1';
     variant: 'wide';
+    trustLabel: string;
     title: string;
     description: string;
-    signInLabel: string;
-    createAccountLabel: string;
+    descriptionSecondary: string;
+    primaryButtonLabel: string;
+    secondaryButtonLabel: string;
+    secondaryButtonHref: string;
     trustBadgeBase: {
       avatarSrcs: string[];
       ratingIconSrc: string;
@@ -31,6 +36,16 @@ type InstagramFollowersPageData = {
       unoptimized: boolean;
     };
   };
+  orderForm: {
+    badge: string;
+    serviceLabel: string;
+    serviceTypeLabel: string;
+    urlFieldLabel: string;
+    urlPlaceholder: string;
+    submitLabel: string;
+  };
+  whyChoose: ServiceLeadingContent;
+  whoShouldBuy: WhoShouldBuySectionData;
   workingProcess: {
     badge: string;
     underlineSrc: string;
@@ -41,9 +56,11 @@ type InstagramFollowersPageData = {
     subtitleClassName: string;
     steps: ServiceWorkingProcessStep[];
   };
-  serviceLeadingSlugs: ['instagram-followers', 'instagram-followers-related-services'];
-  testimonials: TestimonialsSectionData;
+  thingsToKnow: ThingsToKnowSectionData;
   faq: FaqSectionData;
+  relatedServices: ServiceLeadingContent & {
+    ctaLabel: string;
+  };
   cta: {
     title: string;
     description: string;
@@ -53,27 +70,26 @@ type InstagramFollowersPageData = {
   };
 };
 
-const reviewQuote =
-  'This platform helped us boost our brand visibility significantly. The results are real and the process is super easy. Five stars!';
-
-const youtubeReelVideoId = 'LXb3EKWsInQ';
-
 export const data: InstagramFollowersPageData = {
   seo: {
-    title: 'Buy Instagram Followers | TrendEvo',
+    title: 'Buy Instagram Followers in Bangladesh | TrendEvo',
     description:
-      'Buy real Instagram followers at affordable prices. Fast delivery, secure checkout, and 24/7 support from TrendEvo in Bangladesh.',
+      'Buy Instagram Followers in Bangladesh with TrendEvo. Grow profile trust, brand credibility, and audience presence using bKash, Nagad, Rocket, and secure orders.',
     canonical: '/buy-instagram-followers',
   },
 
   hero: {
     bg: 'section-1',
     variant: 'wide',
-    title: 'Buy gt<Instagram Followers> in Real, Fast & Affordable price.',
+    trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi Creators, Influencers & Brands',
+    title: 'Buy gt<Instagram Followers> in Bangladesh for Stronger Profile Growth',
     description:
-      'Growing an Instagram profile can be tough. Consistent content and smart promotion are key, but results can be slow. At TrendEvo, we provide solutions to help your profile thrive with real followers and engagement.',
-    signInLabel: 'Sign In',
-    createAccountLabel: 'Create an Account',
+      'Instagram users often decide within seconds whether a profile feels worth following. A profile with a stronger follower base can look more trusted, more active, and more established. TrendEvo helps creators, influencers, small businesses, eCommerce stores, agencies, startups, freelancers, and personal brands buy Instagram followers in Bangladesh with simple ordering, local payment support, and secure delivery.',
+    descriptionSecondary:
+      'Our Instagram Followers Service is made for profiles that need better social proof, stronger brand authority, and a more professional first impression. You can choose a suitable package, pay through bKash, Nagad, Rocket, or other supported methods, and grow your Instagram presence without sharing your password.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All Services',
+    secondaryButtonHref: '/services',
     trustBadgeBase: {
       avatarSrcs: [
         '/images/reviews/home-hero-hero-1-avatar.png',
@@ -88,7 +104,7 @@ export const data: InstagramFollowersPageData = {
     },
     illustration: {
       src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
-      alt: 'Excited user celebrating Instagram profile growth with analytics chart',
+      alt: 'Buy Instagram Followers in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
       maxWidthClassName: 'max-w-[558px]',
@@ -96,256 +112,274 @@ export const data: InstagramFollowersPageData = {
     },
   },
 
+  orderForm: {
+    badge: 'Instagram Services',
+    serviceLabel: 'Followers',
+    serviceTypeLabel: 'Followers',
+    urlFieldLabel: 'Instagram Profile URL',
+    urlPlaceholder: 'https://instagram.com/yourprofile',
+    submitLabel: 'Pay Now With bKash/ Nagad',
+  },
+
+  whyChoose: {
+    badge: 'WHY CHOOSE US',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 190,
+    title: 'Why Choose TrendEvo to Buy gt<Instagram Followers> in Bangladesh',
+    subtitle:
+      'TrendEvo gives Bangladeshi Instagram users a simple way to build early profile trust without complex steps. With local payment options, clear order tracking, and a user-friendly dashboard, TrendEvo works as the best SMM Panel BD choice for creators, online brands, agencies, and resellers managing Instagram follower growth.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Fast Growth Support',
+        description:
+          'Your Instagram followers order starts after you submit it from the dashboard. Delivery speed may depend on the package size, but TrendEvo is designed for smooth and quick order processing.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: '-scale-y-100 rotate-180 object-cover',
+      },
+      {
+        title: 'Affordable Follower Packages',
+        description:
+          'You can buy Instagram followers in Bangladesh without spending a big budget. Our packages are suitable for new creators, online shops, fashion brands, cafés, educators, public figures, startups, and SMM resellers.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: 'object-cover',
+      },
+      {
+        title: 'Friendly Support Team',
+        description:
+          'Need help choosing the right Instagram Followers Panel service? TrendEvo support can guide you with package selection, order status, payment issues, and dashboard use.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[167%] max-w-none object-cover -translate-x-[34%] -translate-y-[13%]',
+      },
+    ],
+    bottomRowFeatures: [
+      {
+        title: 'Local Payment Options',
+        description:
+          'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes Instagram Marketing Bangladesh easier for users who prefer local payment systems.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[125%] max-w-none object-cover -translate-x-[11%] -translate-y-[12%]',
+      },
+      {
+        title: 'Profile Credibility Focus',
+        description:
+          'TrendEvo focuses on Instagram growth services that support profile trust and audience perception. You can start with a small package, review the result, and scale your Instagram followers based on your growth plan.',
+        iconFrameSrc:
+          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+      },
+    ],
+  },
+
+  whoShouldBuy: {
+    badge: 'Buy Instagram Followers',
+    title: 'Who Should Buy gt<Instagram Followers> in Bangladesh?',
+    subtitle:
+      'Instagram followers can make a profile look more reliable when people visit from reels, stories, ads, hashtags, influencer mentions, or local search. TrendEvo’s Instagram SMM Panel service is useful for Bangladeshi users who want stronger profile trust, better brand value, and a smoother base before posting regularly or running promotions.',
+    titleClassName:
+      'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    items: [
+      {
+        title: 'Content Creators and Influencers',
+        description:
+          'Bangladeshi creators often need a solid profile impression before brands, viewers, and collaborators take them seriously. Reel makers, travel vloggers, beauty creators, food reviewers, musicians, gamers, fitness trainers, and lifestyle influencers can use Instagram followers to make their profile look more active and collaboration-ready.',
+      },
+      {
+        title: 'Small Businesses and Local Brands',
+        description:
+          'Many local businesses in Bangladesh use Instagram as a product showcase and customer communication channel. Boutiques, salons, cafés, gyms, coaching centers, restaurants, and service-based brands can buy Instagram followers to build stronger page confidence before visitors check their posts, highlights, or inbox.',
+      },
+      {
+        title: 'E-commerce Stores and Fashion Brands',
+        description:
+          'Bangladeshi online shoppers often judge a store by its follower count before asking about price or delivery. Fashion pages, skincare brands, gadget sellers, home decor shops, jewellery stores, and handmade product sellers can use Instagram followers to improve social proof and support buyer confidence.',
+      },
+      {
+        title: 'Agencies, Freelancers, and Resellers',
+        description:
+          'Digital agencies, freelancers, and SMM resellers in Bangladesh need simple Instagram growth support for client work. TrendEvo helps them place Instagram follower orders from one dashboard with transparent pricing, local payment options, and reseller-friendly access for campaign-based projects.',
+      },
+      {
+        title: 'Startups, Public Figures, and Institutions',
+        description:
+          'Startups, public figures, trainers, NGOs, schools, and education brands need a trusted Instagram presence to reach the right audience. A stronger follower count can support launch campaigns, personal branding, admission promotions, social awareness, public updates, and community engagement across Bangladesh.',
+      },
+    ],
+  },
+
   workingProcess: {
     badge: 'WORKING PROCESS',
     underlineSrc: '/images/working-process/working-process-section-underline.svg',
     underlineWidth: 216,
-    title: 'How to Buy Instagram Followers gt<on TrendEvo>',
+    title: 'How to Buy Instagram Followers on TrendEvo — gt<Step by Step>',
     subtitle:
-      'An Instagram SMM panel helps businesses grow followers, likes, and engagement quickly and efficiently, saving time and boosting online presence.',
+      'Buying Instagram followers in Bangladesh should feel easy. TrendEvo keeps the full process simple, so creators, business owners, agencies, influencers, freelancers, and resellers can place orders without technical knowledge.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
     steps: [
       {
         number: '01',
-        title: 'Simple Registration',
+        title: 'Create Your TrendEvo Account',
         description:
-          'You’ll need to sign up quickly with just a few steps to start using our SMM panel.',
+          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse Instagram SMM Panel services, check prices, and manage your orders from one place.',
       },
       {
         number: '02',
         title: 'Add Funds to Your Balance',
         description:
-          'Single out the features and services that fit your needs or budget.',
+          'Add money to your account using supported payment methods in Bangladesh. You can fund your balance through bKash, Nagad, Rocket, or other available options before placing your Instagram followers order.',
       },
       {
         number: '03',
-        title: 'Find the Instagram Followers Service',
+        title: 'Choose Instagram Followers Service',
         description:
-          'Make payments safely via trusted methods to protect your information.',
+          'Go to the Instagram services section and select the follower package that matches your goal. You can choose a starter package, a creator growth package, or a reseller-friendly quantity.',
       },
       {
         number: '04',
-        title: 'Enter Your Instagram Profile URL & Place the Order',
+        title: 'Enter Your Instagram Profile URL',
         description:
-          'Monitor your progress easily and see how your social media improves.',
+          'Paste the correct Instagram profile link or username, select the quantity, and submit the order. You do not need to share your Instagram password. TrendEvo processes the order using your public profile information only.',
       },
     ],
   },
 
-  serviceLeadingSlugs: ['instagram-followers', 'instagram-followers-related-services'],
-
-  testimonials: {
-    sectionBackground:
-      'linear-gradient(64.26deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)',
-    badge: 'TESTIMONIALS',
-    title: 'Instagram Panel gt<Reviews>',
-    subtitle:
-      'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
-    underlineWidth: 169,
-    titleClassName:
-      'max-w-none whitespace-normal text-center text-2xl tracking-[0.36px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[36px] lg:text-[36px]',
-    subtitleClassName:
-      'max-w-[996px] text-center text-sm leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg',
-    customerTabLabel: 'Customer Reviews',
-    videoTabLabel: 'Video Reviews',
-    assets: {
-      starIconSrc: '/images/testimonials/testimonials-star-rating-icon.svg',
-      verifyBadgeSrc: '/images/testimonials/testimonials-verified-badge.svg',
-      customerReviewTabIconSrc:
-        '/images/testimonials/testimonials-customer-review-icon.svg',
-      videoReviewTabIconSrc:
-        '/images/testimonials/testimonials-clapperboard-icon.svg',
-      quoteOpenSrc: '/images/testimonials/testimonials-quote-mark-2.svg',
-      quoteCloseSrc: '/images/testimonials/testimonials-quote-mark.svg',
-      playIconSrc: '/images/testimonials/testimonials-video-play-icon.svg',
-      playOrbSrc: '/images/testimonials/testimonials-video-play-orb.webp',
-    },
-    leftTextReviews: [
-      {
-        id: 'left-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-2',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-3',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-4',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
+  thingsToKnow: {
+    badge: 'Things to Know',
+    title: 'Things to Know Before You Buy gt<Instagram Followers>',
+    paragraphs: [
+      'Buying Instagram followers can help your profile look more credible, but the best results come when your profile is ready for visitors. Before placing an order on TrendEvo, make sure your Instagram account is public, your profile link or username is correct, and your selected package fits your current profile size.',
+      'You do not need to share your Instagram password to buy Instagram followers in Bangladesh. TrendEvo only needs your public profile link or username to process the order. This keeps your account safer and makes the process simple for creators, businesses, influencers, agencies, and resellers.',
+      'For a natural profile appearance, avoid sudden oversized orders on a profile with no posts, weak bio, or empty highlights. Start with a suitable quantity, improve your profile look, and grow step by step. This helps your account look more believable to Bangladeshi visitors.',
+      'Instagram followers can support social proof, but they work best with strong content. Post reels, carousels, product photos, behind-the-scenes clips, testimonials, offers, and story highlights so new visitors have a reason to follow and trust your profile.',
     ],
-    rightTextReviews: [
-      {
-        id: 'right-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
-    ],
-    featuredReview: {
-      name: 'Ariyena Islam',
-      role: 'Business Owner',
-      avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
-      quote: reviewQuote,
-      youtubeVideoId: youtubeReelVideoId,
-    },
-    videoReviews: [
-      {
-        id: 'video-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-3.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-4.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-5',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-6',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-    ],
-    defaultTab: 'video',
+    ctaLabel: 'Create Your Account Now',
   },
 
   faq: {
-    label: 'FAQ',
-    title: 'gt<Frequently> Asked Questions',
+    label: 'Frequently Asked Questions',
+    title: 'Frequently Asked Questions — gt<Buy Instagram Followers> in Bangladesh',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Find clear answers about buying Instagram followers in Bangladesh, payment options, delivery, safety, order tracking, and how TrendEvo helps support Instagram profile growth.',
     bg: 'section-7',
     items: [
       {
-        question: 'What is an SMM Panel?',
+        question: 'Is it safe to buy Instagram followers from TrendEvo?',
         answer:
-          'An SMM panel is an online platform where you can buy social media marketing services such as Instagram followers, followers, and engagement. TrendEvo lets you place orders, track delivery, and manage your growth from one dashboard.',
+          'Yes, TrendEvo uses a simple order process where you only need to submit your public Instagram profile link or username. We never ask for your Instagram password, so your login details stay private.',
       },
       {
-        question: 'Can the SMM Panel target a specific group?',
+        question: 'Can I buy Instagram followers in Bangladesh with bKash?',
         answer:
-          'Yes. Depending on the service you choose, TrendEvo offers targeting options so your Instagram followers can align with your preferred audience type, region, or niche when available for that package.',
+          'Yes, you can add funds using bKash and then place your Instagram followers order from the TrendEvo dashboard. We also support other local payment options for Bangladeshi users.',
       },
       {
-        question: 'Is Using an SMM Panel Safe?',
+        question: 'Do you accept Nagad or Rocket payments?',
         answer:
-          'TrendEvo uses secure checkout, encrypted payments, and privacy-focused order handling. We never ask for your Instagram password — only your public post URL is required to deliver followers.',
+          'Yes, TrendEvo supports local payment methods such as Nagad, Rocket, and other available options. This makes it easier for creators, influencers, businesses, agencies, and resellers in Bangladesh.',
       },
       {
-        question: 'Does using an SMM Panel risk banning my account?',
+        question: 'Do I need to share my Instagram password?',
         answer:
-          'We deliver followers gradually using methods designed to look natural. While no service can guarantee zero platform risk, TrendEvo focuses on quality delivery and safe pacing to help protect your account.',
+          'No, you do not need to share your password. To buy Instagram followers, you only need to provide the correct Instagram profile link or username and choose your preferred quantity.',
       },
       {
-        question: 'Can I track the progress of my orders?',
+        question: 'How fast will my Instagram followers order start?',
         answer:
-          'Yes. After placing an order, you can monitor its status in real time from your TrendEvo dashboard and see updates as your Instagram followers delivery progresses.',
+          'Most orders start after submission and payment confirmation. Delivery time can vary based on service type, quantity, profile status, and current order volume.',
       },
       {
-        question: 'What payment methods do you accept?',
+        question: 'Can I track my Instagram followers order?',
         answer:
-          'TrendEvo supports multiple trusted payment options including local and international methods. Available gateways are shown at checkout when you add funds or pay for your order.',
+          'Yes, you can track your order status from the TrendEvo dashboard. The order panel helps you check whether your Instagram followers order is pending, processing, completed, or partially completed.',
       },
       {
-        question: 'Can I cancel my order instantly?',
+        question: 'Can I buy followers for a new Instagram account?',
         answer:
-          'Orders that have not started processing can often be cancelled from your account. Once delivery is in progress, cancellation may not be possible — contact our support team and we will review your request promptly.',
+          'Yes, new Instagram accounts can order followers. For a natural appearance, it is better to start with a smaller package, optimize your bio, publish useful content, and increase your follower count gradually.',
       },
       {
-        question: 'Do you have customer support?',
+        question: 'Do Instagram followers help with Reels growth?',
         answer:
-          'Yes. TrendEvo offers 24/7 customer support to help with orders, payments, and account questions. Reach out anytime through live chat or our contact channels if you need assistance.',
+          'Instagram followers can make your profile look stronger when people visit after watching a reel. Reels performance still depends on content quality, watch time, saves, shares, and audience response, but a trusted-looking profile can improve follow-through.',
+      },
+      {
+        question: 'Will buying Instagram followers increase my engagement rate?',
+        answer:
+          'Instagram followers can improve profile trust and social proof, but engagement rate also depends on your content, captions, posting time, reels quality, and audience interaction. For better results, combine growth with consistent content.',
+      },
+      {
+        question: 'Who can use TrendEvo’s Instagram followers service?',
+        answer:
+          'TrendEvo is useful for Bangladeshi creators, influencers, eCommerce stores, fashion brands, restaurants, freelancers, startups, public figures, educational institutions, digital agencies, and SMM resellers who want a stronger Instagram presence.',
       },
     ],
+    ctaTitle: 'Still have questions?',
+    ctaSubtitle:
+      "Can't find the answer you're looking for? Please get in touch with our team.",
+    ctaButtonLabel: 'Contact Support',
+    ctaButtonHref: '/contact-us',
+  },
+
+  relatedServices: {
+    badge: 'RELATED SERVICE',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 198,
+    title: 'Related Services You gt<Might Also Need>',
+    subtitle:
+      'Instagram followers help your profile look more trusted, but stronger growth comes when your content also gets engagement. TrendEvo offers related Instagram SMM services in Bangladesh to support visibility, profile authority, and brand awareness.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Buy Instagram Likes',
+        description:
+          'Increase the trust signal of your Instagram posts with more likes. Instagram likes help product photos, reels, carousels, offers, and brand updates look more popular to new visitors.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+      {
+        title: 'Buy Instagram Comments',
+        description:
+          'Add more visible interaction to your Instagram content with comments. This service is useful for product launches, reels, campaign posts, influencer content, and brand announcements that need stronger audience response.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+    ],
+    bottomRowFeatures: [],
+    ctaLabel: 'Sign Up Now',
   },
 
   cta: {
-    title: 'Ready to gt<Grow your Social Media> in Bangladesh',
+    title: 'Ready to Grow with a gt<Trusted SMM Panel> in Bangladesh?',
     description:
-      'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
-    primaryButtonLabel: 'Register Now',
-    secondaryButtonLabel: 'See all Services',
-    secondaryButtonHref: '/services',
+      'Join TrendEvo and manage your Instagram, Facebook, YouTube, TikTok, Telegram, and website traffic orders from one simple dashboard. Add funds with bKash, Nagad, or Rocket, choose your service, and start growing with secure order tracking.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All Instagram Services',
+    secondaryButtonHref: '/instagram-smm-panel',
   },
 };
