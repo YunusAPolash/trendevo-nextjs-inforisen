@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
-import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
 import { data as twitterFollowersPageData } from '@/app/(subservice)/buy-x-twitter-followers/page-data';
-import TwitterFollowersCtaSection from '@/app/(subservice)/buy-x-twitter-followers/_components/cta-section';
-import TwitterFollowersHeroSection from '@/app/(subservice)/buy-x-twitter-followers/_components/hero-section';
-import TwitterFollowersOrderFormSection from '@/app/(subservice)/buy-x-twitter-followers/_components/order-form-section';
-import TwitterFollowersWorkingProcessSection from '@/app/(subservice)/buy-x-twitter-followers/_components/working-process-section';
+import TwitterFollowersCtaSection from './_components/cta-section';
+import TwitterFollowersHeroSection from './_components/hero-section';
+import TwitterFollowersOrderFormSection from './_components/order-form-section';
+import TwitterFollowersRelatedServicesSection from './_components/related-services-section';
+import TwitterFollowersThingsToKnowSection from './_components/things-to-know-section';
+import TwitterFollowersWhoShouldBuySection from './_components/who-should-buy-section';
+import TwitterFollowersWhyChooseSection from './_components/why-choose-section';
+import TwitterFollowersWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: twitterFollowersPageData.seo.title,
   description: twitterFollowersPageData.seo.description,
+  alternates: {
+    canonical: twitterFollowersPageData.seo.canonical,
+  },
 };
 
 export default function TwitterFollowersPage() {
@@ -18,12 +23,12 @@ export default function TwitterFollowersPage() {
     <>
       <TwitterFollowersHeroSection />
       <TwitterFollowersOrderFormSection />
-      <TestimonialsSection data={twitterFollowersPageData.testimonials} />
+      <TwitterFollowersWhyChooseSection />
+      <TwitterFollowersWhoShouldBuySection />
       <TwitterFollowersWorkingProcessSection />
-      {twitterFollowersPageData.serviceLeadingSlugs.map((slug) => (
-        <ServiceLeading key={slug} slug={slug} />
-      ))}
+      <TwitterFollowersThingsToKnowSection />
       <FaqSection data={twitterFollowersPageData.faq} />
+      <TwitterFollowersRelatedServicesSection />
       <TwitterFollowersCtaSection />
     </>
   );

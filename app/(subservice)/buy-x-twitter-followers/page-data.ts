@@ -1,6 +1,8 @@
 import type { FaqSectionData } from '@/components/sections/faq-section';
 import type { ServiceWorkingProcessStep } from '@/components/sections/service-working-process-section';
-import type { TestimonialsSectionData } from '@/components/sections/testimonials-section';
+import type { ThingsToKnowSectionData } from '@/components/sections/things-to-know-section';
+import type { WhoShouldBuySectionData } from '@/components/sections/who-should-buy-section';
+import type { ServiceLeadingContent } from '@/components/serviceSmmPanel/service-leading-content';
 
 type SEO = {
   title: string;
@@ -13,10 +15,13 @@ type TwitterFollowersPageData = {
   hero: {
     bg: 'section-1';
     variant: 'wide';
+    trustLabel: string;
     title: string;
     description: string;
-    signInLabel: string;
-    createAccountLabel: string;
+    descriptionSecondary: string;
+    primaryButtonLabel: string;
+    secondaryButtonLabel: string;
+    secondaryButtonHref: string;
     trustBadgeBase: {
       avatarSrcs: string[];
       ratingIconSrc: string;
@@ -31,6 +36,18 @@ type TwitterFollowersPageData = {
       unoptimized: boolean;
     };
   };
+  orderForm: {
+    badge: string;
+    platformLabel: string;
+    orderPrefix: string;
+    serviceLabel: string;
+    serviceTypeLabel: string;
+    urlFieldLabel: string;
+    urlPlaceholder: string;
+    submitLabel: string;
+  };
+  whyChoose: ServiceLeadingContent;
+  whoShouldBuy: WhoShouldBuySectionData;
   workingProcess: {
     badge: string;
     underlineSrc: string;
@@ -41,9 +58,11 @@ type TwitterFollowersPageData = {
     subtitleClassName: string;
     steps: ServiceWorkingProcessStep[];
   };
-  serviceLeadingSlugs: ['twitter-followers', 'twitter-followers-related-services'];
-  testimonials: TestimonialsSectionData;
+  thingsToKnow: ThingsToKnowSectionData;
   faq: FaqSectionData;
+  relatedServices: ServiceLeadingContent & {
+    ctaLabel: string;
+  };
   cta: {
     title: string;
     description: string;
@@ -53,27 +72,26 @@ type TwitterFollowersPageData = {
   };
 };
 
-const reviewQuote =
-  'This platform helped us boost our brand visibility significantly. The results are real and the process is super easy. Five stars!';
-
-const youtubeReelVideoId = 'LXb3EKWsInQ';
-
 export const data: TwitterFollowersPageData = {
   seo: {
-    title: 'Buy Twitter Followers | TrendEvo',
+    title: 'Buy X (Twitter) Followers in Bangladesh | TrendEvo',
     description:
-      'Buy real Twitter followers at affordable prices. Fast delivery, secure checkout, and 24/7 support from TrendEvo in Bangladesh.',
+      'Buy X (Twitter) Followers in Bangladesh with TrendEvo. Build profile trust, authority, and audience growth using bKash, Nagad, Rocket, and secure orders.',
     canonical: '/buy-x-twitter-followers',
   },
 
   hero: {
     bg: 'section-1',
     variant: 'wide',
-    title: 'Buy gt<Twitter Followers> in Real, Fast & Affordable price.',
+    trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi Creators, Brands & Agencies',
+    title: 'Buy gt<X (Twitter) Followers> in Bangladesh for Stronger Profile Authority',
     description:
-      'Growing a Twitter profile can be tough. Consistent content and smart promotion are key, but results can be slow. At TrendEvo, we provide solutions to help your profile thrive with real followers and profile growth.',
-    signInLabel: 'Sign In',
-    createAccountLabel: 'Create an Account',
+      'Twitter, now known as X, is a fast-moving platform where people follow voices they find active, credible, and worth listening to. A profile with a stronger follower base can look more trusted in public conversations, trending topics, business discussions, and professional networks. TrendEvo helps entrepreneurs, creators, journalists, startups, public figures, digital agencies, SMEs, and local businesses buy X (Twitter) followers in Bangladesh through an X (Twitter) SMM Panel with simple ordering, local payment support, and secure delivery.',
+    descriptionSecondary:
+      'Our X (Twitter) Followers Service is made for profiles that need better social proof, stronger thought leadership, and a more professional presence. You can choose a suitable follower package, pay through bKash, Nagad, Rocket, or other supported methods, and grow your X profile without sharing your password.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All Services',
+    secondaryButtonHref: '/services',
     trustBadgeBase: {
       avatarSrcs: [
         '/images/reviews/home-hero-hero-1-avatar.png',
@@ -88,7 +106,7 @@ export const data: TwitterFollowersPageData = {
     },
     illustration: {
       src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
-      alt: 'Excited user celebrating Twitter profile growth with analytics chart',
+      alt: 'Buy X (Twitter) Followers in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
       maxWidthClassName: 'max-w-[558px]',
@@ -96,256 +114,276 @@ export const data: TwitterFollowersPageData = {
     },
   },
 
+  orderForm: {
+    badge: 'X (Twitter) Services',
+    platformLabel: 'X (Twitter)',
+    orderPrefix: 'Order X (Twitter)',
+    serviceLabel: 'Followers',
+    serviceTypeLabel: 'Followers',
+    urlFieldLabel: 'X (Twitter) Profile URL',
+    urlPlaceholder: 'https://x.com/yourprofile',
+    submitLabel: 'Pay Now With bKash/ Nagad',
+  },
+
+  whyChoose: {
+    badge: 'WHY CHOOSE US',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 190,
+    title: 'Why Choose TrendEvo to Buy gt<X (Twitter) Followers> in Bangladesh',
+    subtitle:
+      'TrendEvo is built for Bangladeshi users who want a simple way to grow their X profile with better trust and visibility. From local payment support to clear order tracking, the best SMM Panel in Bangladesh helps creators, brands, entrepreneurs, agencies, and resellers manage X (Twitter) growth from one clean dashboard.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Fast Follower Processing',
+        description:
+          'Your X (Twitter) followers order starts after you submit it from the dashboard. Delivery speed may depend on the package size, profile status, and current order volume, but TrendEvo keeps the process smooth and easy to follow.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: '-scale-y-100 rotate-180 object-cover',
+      },
+      {
+        title: 'Affordable Follower Packages',
+        description:
+          'You can buy X (Twitter) followers in Bangladesh without using a large marketing budget. Our packages work well for startup founders, creators, public figures, business owners, journalists, freelancers, agencies, and SMM resellers.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: 'object-cover',
+      },
+      {
+        title: 'Helpful Support Team',
+        description:
+          'Need help choosing the right X (Twitter) Follower Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[167%] max-w-none object-cover -translate-x-[34%] -translate-y-[13%]',
+      },
+    ],
+    bottomRowFeatures: [
+      {
+        title: 'Local Payment Options',
+        description:
+          'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes X Marketing Bangladesh easier for users who prefer trusted local payment systems.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[125%] max-w-none object-cover -translate-x-[11%] -translate-y-[12%]',
+      },
+      {
+        title: 'Authority-Focused Growth',
+        description:
+          'TrendEvo focuses on X (Twitter) followers that support profile trust, professional credibility, and audience perception. You can start with a small package, review the result, and scale your follower growth based on your profile strategy.',
+        iconFrameSrc:
+          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+      },
+    ],
+  },
+
+  whoShouldBuy: {
+    badge: 'Buy X (Twitter) Followers',
+    title: 'Who Should Buy gt<X (Twitter) Followers> in Bangladesh?',
+    subtitle:
+      'X (Twitter) followers help a profile look more established when people visit after reading a post, reply, thread, quote, or trending discussion. TrendEvo’s X growth service is useful for Bangladeshi users who want stronger profile authority, better audience confidence, and a more credible presence in public conversations.',
+    titleClassName:
+      'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    items: [
+      {
+        title: 'Entrepreneurs and Startup Founders',
+        description:
+          'Bangladeshi founders use X to share ideas, product updates, funding news, market opinions, and business lessons. A stronger follower count can help startup founders look more serious when investors, customers, partners, and media people check their profile.',
+      },
+      {
+        title: 'Creators, Influencers, and Personal Brands',
+        description:
+          'Creators need a profile that feels worth following after a viral post, thread, or opinion. Tech creators, writers, finance educators, lifestyle voices, designers, podcasters, and niche influencers can use X (Twitter) followers to improve profile trust and audience appeal.',
+      },
+      {
+        title: 'Journalists, Public Figures, and Professionals',
+        description:
+          'Journalists, speakers, consultants, public figures, researchers, and industry experts often use X to share updates and opinions. More followers can support stronger personal branding, professional networking, and public visibility.',
+      },
+      {
+        title: 'Agencies, Freelancers, and Resellers',
+        description:
+          'Digital agencies and freelancers often manage X profiles for clients. TrendEvo helps them place X (Twitter) follower orders from one dashboard with clear pricing, local payment support, and reseller-friendly access.',
+      },
+      {
+        title: 'SMEs, Local Businesses, and Community Pages',
+        description:
+          'Local businesses, eCommerce brands, NGOs, community pages, and service providers can use X to share news, offers, updates, and customer communication. X (Twitter) followers can help these profiles look more active and trusted to new visitors.',
+      },
+    ],
+  },
+
   workingProcess: {
     badge: 'WORKING PROCESS',
     underlineSrc: '/images/working-process/working-process-section-underline.svg',
     underlineWidth: 216,
-    title: 'How to Buy Twitter Followers gt<on TrendEvo>',
+    title: 'How to Buy X (Twitter) Followers on TrendEvo — gt<Step by Step>',
     subtitle:
-      'A Twitter SMM panel helps businesses grow followers, likes, and engagement quickly and efficiently, saving time and boosting online presence.',
+      'Buying X (Twitter) followers in Bangladesh should be simple and clear. TrendEvo keeps the full process easy, so creators, business owners, founders, agencies, freelancers, and resellers can place orders without technical knowledge.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
     steps: [
       {
         number: '01',
-        title: 'Simple Registration',
+        title: 'Create Your TrendEvo Account',
         description:
-          'You’ll need to sign up quickly with just a few steps to start using our SMM panel.',
+          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse X (Twitter) SMM Panel services, compare prices, and manage your orders from one place.',
       },
       {
         number: '02',
         title: 'Add Funds to Your Balance',
         description:
-          'Single out the features and services that fit your needs or budget.',
+          'Add money to your account using supported payment methods in Bangladesh. You can fund your balance through bKash, Nagad, Rocket, or other available options before placing your X (Twitter) followers order.',
       },
       {
         number: '03',
-        title: 'Find the Twitter Followers Service',
+        title: 'Choose X (Twitter) Followers Service',
         description:
-          'Make payments safely via trusted methods to protect your information.',
+          'Go to the Twitter or X services section and select the follower package that matches your profile goal. You can choose a starter package, a professional growth package, or a larger package for client profiles.',
       },
       {
         number: '04',
-        title: 'Enter Your Twitter Profile URL & Place the Order',
+        title: 'Enter Your X (Twitter) Profile URL',
         description:
-          'Monitor your progress easily and see how your social media improves.',
+          'Paste the correct X profile link or username, select the quantity, and submit the order. You do not need to share your X password. TrendEvo processes the order using your public profile information only.',
       },
     ],
   },
 
-  serviceLeadingSlugs: ['twitter-followers', 'twitter-followers-related-services'],
-
-  testimonials: {
-    sectionBackground:
-      'linear-gradient(64.26deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)',
-    badge: 'TESTIMONIALS',
-    title: 'Twitter Panel gt<Reviews>',
-    subtitle:
-      'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
-    underlineWidth: 169,
-    titleClassName:
-      'max-w-none whitespace-normal text-center text-2xl tracking-[0.36px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[36px] lg:text-[36px]',
-    subtitleClassName:
-      'max-w-[996px] text-center text-sm leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg',
-    customerTabLabel: 'Customer Reviews',
-    videoTabLabel: 'Video Reviews',
-    assets: {
-      starIconSrc: '/images/testimonials/testimonials-star-rating-icon.svg',
-      verifyBadgeSrc: '/images/testimonials/testimonials-verified-badge.svg',
-      customerReviewTabIconSrc:
-        '/images/testimonials/testimonials-customer-review-icon.svg',
-      videoReviewTabIconSrc:
-        '/images/testimonials/testimonials-clapperboard-icon.svg',
-      quoteOpenSrc: '/images/testimonials/testimonials-quote-mark-2.svg',
-      quoteCloseSrc: '/images/testimonials/testimonials-quote-mark.svg',
-      playIconSrc: '/images/testimonials/testimonials-video-play-icon.svg',
-      playOrbSrc: '/images/testimonials/testimonials-video-play-orb.webp',
-    },
-    leftTextReviews: [
-      {
-        id: 'left-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-2',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-3',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-4',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
+  thingsToKnow: {
+    badge: 'Things to Know',
+    title: 'Things to Know Before You Buy gt<X (Twitter) Followers>',
+    paragraphs: [
+      'Buying X (Twitter) followers can help your profile look more credible, but the best result comes when your profile is ready for visitors. Before placing an order on TrendEvo, make sure your X profile is public, your profile link or username is correct, and your selected package fits your current profile size.',
+      'You do not need to share your X (Twitter) password to buy X (Twitter) followers in Bangladesh. TrendEvo only needs your public profile link or username to process the order. This keeps the process safer and easier for creators, businesses, entrepreneurs, agencies, and resellers.',
+      'For a natural profile appearance, avoid sudden oversized orders on an account with no posts, weak bio, or unclear profile identity. Start with a suitable quantity, improve your bio, pin a strong post, and grow step by step. This helps your profile look more believable to Bangladeshi visitors.',
+      'X (Twitter) followers can support social proof, but they work best with regular posting. Share useful threads, industry opinions, product updates, short insights, news reactions, community posts, and professional content so new visitors have a reason to follow and trust your profile.',
     ],
-    rightTextReviews: [
-      {
-        id: 'right-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
-    ],
-    featuredReview: {
-      name: 'Ariyena Islam',
-      role: 'Business Owner',
-      avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
-      quote: reviewQuote,
-      youtubeVideoId: youtubeReelVideoId,
-    },
-    videoReviews: [
-      {
-        id: 'video-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-3.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-4.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-5',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-6',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-    ],
-    defaultTab: 'video',
+    ctaLabel: 'Create Your Account Now',
   },
 
   faq: {
-    label: 'FAQ',
-    title: 'gt<Frequently> Asked Questions',
+    label: 'Frequently Asked Questions',
+    title: 'Frequently Asked Questions — gt<Buy X (Twitter) Followers> in Bangladesh',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Find clear answers about buying X (Twitter) followers in Bangladesh, payment options, delivery, safety, order tracking, and how TrendEvo helps support X profile growth.',
     bg: 'section-7',
     items: [
       {
-        question: 'What is an SMM Panel?',
+        question: 'Is it safe to buy X (Twitter) followers from TrendEvo?',
         answer:
-          'An SMM panel is an online platform where you can buy social media marketing services such as Twitter followers, followers, and engagement. TrendEvo lets you place orders, track delivery, and manage your growth from one dashboard.',
+          'Yes, TrendEvo uses a simple order process where you only need to submit your public X profile link or username. We never ask for your Twitter or X password, so your login details stay private.',
       },
       {
-        question: 'Can the SMM Panel target a specific group?',
+        question: 'Can I buy X (Twitter) followers in Bangladesh with bKash?',
         answer:
-          'Yes. Depending on the service you choose, TrendEvo offers targeting options so your Twitter followers can align with your preferred audience type, region, or niche when available for that package.',
+          'Yes, you can add funds using bKash and then place your X (Twitter) followers order from the TrendEvo dashboard. We also support other local payment options for Bangladeshi users.',
       },
       {
-        question: 'Is Using an SMM Panel Safe?',
+        question: 'Do you accept Nagad or Rocket payments?',
         answer:
-          'TrendEvo uses secure checkout, encrypted payments, and privacy-focused order handling. We never ask for your Twitter password — only your public profile URL is required to deliver followers.',
+          'Yes, TrendEvo supports local payment methods such as Nagad, Rocket, and other available options. This makes it easier for creators, businesses, entrepreneurs, agencies, and resellers in Bangladesh.',
       },
       {
-        question: 'Does using an SMM Panel risk banning my account?',
+        question: 'Do I need to share my X (Twitter) password?',
         answer:
-          'We deliver followers gradually using methods designed to look natural. While no service can guarantee zero platform risk, TrendEvo focuses on quality delivery and safe pacing to help protect your profile.',
+          'No, you do not need to share your password. To buy X (Twitter) followers, you only need to provide the correct X profile link or username and choose your preferred quantity.',
       },
       {
-        question: 'Can I track the progress of my orders?',
+        question: 'How fast will my X (Twitter) followers order start?',
         answer:
-          'Yes. After placing an order, you can monitor its status in real time from your TrendEvo dashboard and see updates as your Twitter followers delivery progresses.',
+          'Most orders start after submission and payment confirmation. Delivery time can vary based on service type, quantity, profile status, and current order volume.',
       },
       {
-        question: 'What payment methods do you accept?',
+        question: 'Can I track my X (Twitter) followers order?',
         answer:
-          'TrendEvo supports multiple trusted payment options including local and international methods. Available gateways are shown at checkout when you add funds or pay for your order.',
+          'Yes, you can track your order status from the TrendEvo dashboard. The order panel helps you check whether your X (Twitter) followers order is pending, processing, completed, or partially completed.',
       },
       {
-        question: 'Can I cancel my order instantly?',
+        question: 'Can I buy followers for a new X profile?',
         answer:
-          'Orders that have not started processing can often be cancelled from your account. Once delivery is in progress, cancellation may not be possible — contact our support team and we will review your request promptly.',
+          'Yes, new X profiles can order followers. For a natural appearance, it is better to start with a smaller package, write a clear bio, publish useful posts, and increase your follower count gradually.',
       },
       {
-        question: 'Do you have customer support?',
+        question: 'Do X (Twitter) followers help with profile credibility?',
         answer:
-          'Yes. TrendEvo offers 24/7 customer support to help with orders, payments, and account questions. Reach out anytime through live chat or our contact channels if you need assistance.',
+          'Yes, a stronger follower count can improve how your profile looks when people visit after seeing your posts, replies, or threads. It supports social proof, but long-term trust also depends on content quality and consistency.',
+      },
+      {
+        question: 'Will buying X (Twitter) followers increase my post engagement?',
+        answer:
+          'X (Twitter) followers can improve profile trust, but engagement depends on your posts, topics, timing, replies, reposts, conversations, and audience interest. For better results, combine follower growth with regular content.',
+      },
+      {
+        question: 'Who can use TrendEvo’s X (Twitter) followers service?',
+        answer:
+          'TrendEvo is useful for Bangladeshi creators, entrepreneurs, startups, journalists, public figures, local businesses, SMEs, NGOs, digital agencies, freelancers, and SMM resellers who want a stronger X profile presence.',
       },
     ],
+    ctaTitle: 'Still have questions?',
+    ctaSubtitle:
+      "Can't find the answer you're looking for? Please get in touch with our team.",
+    ctaButtonLabel: 'Contact US',
+    ctaButtonHref: '/contact-us',
+  },
+
+  relatedServices: {
+    badge: 'RELATED SERVICE',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 198,
+    title: 'Related Services You gt<Might Also Need>',
+    subtitle:
+      'X (Twitter) followers help your profile look more trusted, but stronger growth comes when your posts also receive interaction and visibility. TrendEvo offers related X SMM services in Bangladesh to support profile authority, content reach, and audience engagement.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Buy X (Twitter) Likes',
+        description:
+          'Improve the trust signal of your X posts with more likes. X (Twitter) likes help threads, announcements, opinions, product updates, and campaign posts look more valuable to new viewers.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+      {
+        title: 'Buy X (Twitter) Retweets',
+        description:
+          'Increase the distribution of your X posts with more retweets. This service is useful for startup news, public updates, offers, awareness posts, launches, and content that needs wider reach.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+    ],
+    bottomRowFeatures: [],
+    ctaLabel: 'Sign Up Now',
   },
 
   cta: {
-    title: 'Ready to gt<Grow your Social Media> in Bangladesh',
+    title: 'Ready to Grow with a gt<Trusted SMM Panel> in Bangladesh?',
     description:
-      'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
-    primaryButtonLabel: 'Register Now',
-    secondaryButtonLabel: 'See all Services',
-    secondaryButtonHref: '/services',
+      'Join TrendEvo and manage your X (Twitter), Instagram, Facebook, YouTube, TikTok, Telegram, and website traffic orders from one simple dashboard. Add funds with bKash, Nagad, or Rocket, choose your service, and start growing with secure order tracking.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All X (Twitter) Services',
+    secondaryButtonHref: '/x-twitter-smm-panel',
   },
 };

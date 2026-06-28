@@ -9,7 +9,11 @@ import PrimarySection, {
 } from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import PrimaryButton from '@/components/buttons/primary-button';
+import { data } from '@/app/(subservice)/buy-x-twitter-followers/page-data';
+import { signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
+
+const { orderForm } = data;
 
 const MIN_QUANTITY = 100;
 const MAX_QUANTITY = 10000;
@@ -197,7 +201,7 @@ function FieldShell({
 }
 
 export default function TwitterFollowersOrderFormSection() {
-  const [targetUrl, setTargetUrl] = useState('https://x.com/yourprofile');
+  const [profileUrl, setProfileUrl] = useState(orderForm.urlPlaceholder);
   const [quantity, setQuantity] = useState(100);
 
   const totalAmount = useMemo(() => quantity * PRICE_PER_UNIT, [quantity]);
@@ -217,13 +221,13 @@ export default function TwitterFollowersOrderFormSection() {
         >
           <div className="relative z-10 flex flex-col gap-[30px]">
             <SectionHeading
-              badge="Twitter Services"
+              badge={orderForm.badge}
               underlineSrc="/images/facebook-page-followers/facebook-page-followers-section-underline.svg"
               underlineWidth={203}
               title={
                 <span className="flex flex-wrap items-center justify-center gap-[8px]">
                   <span className="text-[32px] font-semibold leading-none text-[#1a1a1a] dark:text-[#f5f6f7]">
-                    Order Twitter
+                    {orderForm.orderPrefix}
                   </span>
                   <span
                     className="flex size-[54px] shrink-0 items-center justify-center rounded-[27px] border border-[#d181ff] bg-[linear-gradient(93.46deg,rgba(209,129,255,0.1)_2.85%,rgba(255,99,190,0.1)_90.53%)] pb-3 pl-[13px] pr-3 pt-[13px]"
@@ -232,7 +236,7 @@ export default function TwitterFollowersOrderFormSection() {
                     <TwitterIcon variant="title" alt="Twitter" />
                   </span>
                   <span className="text-gradient text-[32px] font-semibold leading-none dark:from-[#9f00ff] dark:to-[#ff3fa2]">
-                    Followers
+                    {orderForm.serviceLabel}
                   </span>
                 </span>
               }
@@ -246,7 +250,7 @@ export default function TwitterFollowersOrderFormSection() {
                     <div className="flex items-center gap-[5px]">
                       <TwitterIcon variant="field" />
                       <span className="text-sm leading-normal text-[#535353] dark:text-[#f5f6f7]">
-                        Twitter
+                        {orderForm.platformLabel}
                       </span>
                     </div>
                   </FieldShell>
@@ -257,7 +261,7 @@ export default function TwitterFollowersOrderFormSection() {
                     <div className="flex items-center gap-[5px]">
                       <TwitterIcon variant="field" />
                       <span className="text-sm leading-normal text-[#535353] dark:text-[#f5f6f7]">
-                        Followers
+                        {orderForm.serviceTypeLabel}
                       </span>
                     </div>
                     <ChevronDown
@@ -268,13 +272,13 @@ export default function TwitterFollowersOrderFormSection() {
                 </FormField>
               </div>
 
-              <FormField label="Twitter Post URL">
+              <FormField label={orderForm.urlFieldLabel}>
                 <FieldShell>
                   <input
                     type="url"
-                    value={targetUrl}
-                    onChange={(event) => setTargetUrl(event.target.value)}
-                    placeholder="https://x.com/yourprofile"
+                    value={profileUrl}
+                    onChange={(event) => setProfileUrl(event.target.value)}
+                    placeholder={orderForm.urlPlaceholder}
                     className="w-full bg-transparent text-sm text-[#535353] outline-none placeholder:text-[#535353] dark:text-[#f5f6f7] dark:placeholder:text-[#f5f6f7]"
                   />
                 </FieldShell>
@@ -294,9 +298,10 @@ export default function TwitterFollowersOrderFormSection() {
 
             <PrimaryButton
               type="button"
+              href={signUpUrl}
               className="w-full rounded-[12px] border-0 md:h-[52px] md:px-7 md:text-lg"
             >
-              Buy Now
+              {orderForm.submitLabel}
             </PrimaryButton>
           </div>
         </PrimaryCard>
