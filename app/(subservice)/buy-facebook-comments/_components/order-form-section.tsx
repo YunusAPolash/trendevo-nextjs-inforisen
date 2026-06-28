@@ -9,8 +9,11 @@ import PrimarySection, {
 } from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import PrimaryButton from '@/components/buttons/primary-button';
+import { data } from '@/app/(subservice)/buy-facebook-comments/page-data';
+import { signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
 
+const { orderForm } = data;
 const MIN_QUANTITY = 100;
 const MAX_QUANTITY = 10000;
 const QUANTITY_STEP = 100;
@@ -205,7 +208,7 @@ function FieldShell({
 }
 
 export default function FacebookPageCommentsOrderFormSection() {
-  const [pageUrl, setPageUrl] = useState('https://facebook.com/yourpage');
+  const [pageUrl, setPageUrl] = useState(orderForm.urlPlaceholder);
   const [quantity, setQuantity] = useState(100);
 
   const totalAmount = useMemo(() => quantity * PRICE_PER_UNIT, [quantity]);
@@ -225,7 +228,7 @@ export default function FacebookPageCommentsOrderFormSection() {
         >
           <div className="relative z-10 flex flex-col gap-[30px]">
             <SectionHeading
-              badge="Facebook Services"
+              badge={orderForm.badge}
               underlineSrc="/images/facebook-page-followers/facebook-page-followers-section-underline.svg"
               underlineWidth={203}
               title={
@@ -240,7 +243,7 @@ export default function FacebookPageCommentsOrderFormSection() {
                     <FacebookIcon variant="title" alt="Facebook" />
                   </span>
                   <span className="text-gradient text-[32px] font-semibold leading-none dark:from-[#9f00ff] dark:to-[#ff3fa2]">
-                    Page Comments
+                    {orderForm.serviceLabel}
                   </span>
                 </span>
               }
@@ -265,7 +268,7 @@ export default function FacebookPageCommentsOrderFormSection() {
                     <div className="flex items-center gap-[5px]">
                       <FacebookIcon variant="field" />
                       <span className="text-sm leading-normal text-[#535353] dark:text-[#f5f6f7]">
-                        Page Comments
+                        {orderForm.serviceTypeLabel}
                       </span>
                     </div>
                     <ChevronDown
@@ -276,13 +279,13 @@ export default function FacebookPageCommentsOrderFormSection() {
                 </FormField>
               </div>
 
-              <FormField label="Facebook Page URL">
+              <FormField label={orderForm.urlFieldLabel}>
                 <FieldShell>
                   <input
                     type="url"
                     value={pageUrl}
                     onChange={(event) => setPageUrl(event.target.value)}
-                    placeholder="https://facebook.com/yourpage"
+                    placeholder={orderForm.urlPlaceholder}
                     className="w-full bg-transparent text-sm text-[#535353] outline-none placeholder:text-[#535353] dark:text-[#f5f6f7] dark:placeholder:text-[#f5f6f7]"
                   />
                 </FieldShell>
@@ -302,9 +305,10 @@ export default function FacebookPageCommentsOrderFormSection() {
 
             <PrimaryButton
               type="button"
+              href={signUpUrl}
               className="w-full rounded-[12px] border-0 md:h-[52px] md:px-7 md:text-lg"
             >
-              Buy Now
+              {orderForm.submitLabel}
             </PrimaryButton>
           </div>
         </PrimaryCard>

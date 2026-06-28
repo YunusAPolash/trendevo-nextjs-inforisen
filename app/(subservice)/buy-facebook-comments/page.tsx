@@ -1,29 +1,34 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
-import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
-import { data as facebookPageCommentsPageData } from '@/app/(subservice)/buy-facebook-comments/page-data';
-import FacebookPageCommentsCtaSection from '@/app/(subservice)/buy-facebook-comments/_components/cta-section';
-import FacebookPageCommentsHeroSection from '@/app/(subservice)/buy-facebook-comments/_components/hero-section';
-import FacebookPageCommentsOrderFormSection from '@/app/(subservice)/buy-facebook-comments/_components/order-form-section';
-import FacebookPageCommentsWorkingProcessSection from '@/app/(subservice)/buy-facebook-comments/_components/working-process-section';
+import { data as facebookCommentsPageData } from '@/app/(subservice)/buy-facebook-comments/page-data';
+import FacebookPageCommentsCtaSection from './_components/cta-section';
+import FacebookCommentsHeroSection from './_components/hero-section';
+import FacebookPageCommentsOrderFormSection from './_components/order-form-section';
+import FacebookCommentsRelatedServicesSection from './_components/related-services-section';
+import FacebookCommentsThingsToKnowSection from './_components/things-to-know-section';
+import FacebookCommentsWhoShouldBuySection from './_components/who-should-buy-section';
+import FacebookCommentsWhyChooseSection from './_components/why-choose-section';
+import FacebookPageCommentsWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
-  title: facebookPageCommentsPageData.seo.title,
-  description: facebookPageCommentsPageData.seo.description,
+  title: facebookCommentsPageData.seo.title,
+  description: facebookCommentsPageData.seo.description,
+  alternates: {
+    canonical: facebookCommentsPageData.seo.canonical,
+  },
 };
 
-export default function FacebookPageCommentsPage() {
+export default function FacebookCommentsPage() {
   return (
     <>
-      <FacebookPageCommentsHeroSection />
+      <FacebookCommentsHeroSection />
       <FacebookPageCommentsOrderFormSection />
-      <TestimonialsSection data={facebookPageCommentsPageData.testimonials} />
+      <FacebookCommentsWhyChooseSection />
+      <FacebookCommentsWhoShouldBuySection />
       <FacebookPageCommentsWorkingProcessSection />
-      {facebookPageCommentsPageData.serviceLeadingSlugs.map((slug) => (
-        <ServiceLeading key={slug} slug={slug} />
-      ))}
-      <FaqSection data={facebookPageCommentsPageData.faq} />
+      <FacebookCommentsThingsToKnowSection />
+      <FaqSection data={facebookCommentsPageData.faq} />
+      <FacebookCommentsRelatedServicesSection />
       <FacebookPageCommentsCtaSection />
     </>
   );

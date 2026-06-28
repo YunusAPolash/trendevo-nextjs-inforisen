@@ -1,6 +1,8 @@
 import type { FaqSectionData } from '@/components/sections/faq-section';
 import type { ServiceWorkingProcessStep } from '@/components/sections/service-working-process-section';
-import type { TestimonialsSectionData } from '@/components/sections/testimonials-section';
+import type { ThingsToKnowSectionData } from '@/components/sections/things-to-know-section';
+import type { WhoShouldBuySectionData } from '@/components/sections/who-should-buy-section';
+import type { ServiceLeadingContent } from '@/components/serviceSmmPanel/service-leading-content';
 
 type SEO = {
   title: string;
@@ -8,15 +10,18 @@ type SEO = {
   canonical?: string;
 };
 
-type FacebookPageCommentsPageData = {
+type FacebookCommentsPageData = {
   seo: SEO;
   hero: {
     bg: 'section-1';
     variant: 'wide';
+    trustLabel: string;
     title: string;
     description: string;
-    signInLabel: string;
-    createAccountLabel: string;
+    descriptionSecondary: string;
+    primaryButtonLabel: string;
+    secondaryButtonLabel: string;
+    secondaryButtonHref: string;
     trustBadgeBase: {
       avatarSrcs: string[];
       ratingIconSrc: string;
@@ -31,6 +36,16 @@ type FacebookPageCommentsPageData = {
       unoptimized: boolean;
     };
   };
+  orderForm: {
+    badge: string;
+    serviceLabel: string;
+    serviceTypeLabel: string;
+    urlFieldLabel: string;
+    urlPlaceholder: string;
+    submitLabel: string;
+  };
+  whyChoose: ServiceLeadingContent;
+  whoShouldBuy: WhoShouldBuySectionData;
   workingProcess: {
     badge: string;
     underlineSrc: string;
@@ -41,9 +56,11 @@ type FacebookPageCommentsPageData = {
     subtitleClassName: string;
     steps: ServiceWorkingProcessStep[];
   };
-  serviceLeadingSlugs: ['facebook-page-comments', 'facebook-page-comments-related-services'];
-  testimonials: TestimonialsSectionData;
+  thingsToKnow: ThingsToKnowSectionData;
   faq: FaqSectionData;
+  relatedServices: ServiceLeadingContent & {
+    ctaLabel: string;
+  };
   cta: {
     title: string;
     description: string;
@@ -53,27 +70,26 @@ type FacebookPageCommentsPageData = {
   };
 };
 
-const reviewQuote =
-  'This platform helped us boost our brand visibility significantly. The results are real and the process is super easy. Five stars!';
-
-const youtubeReelVideoId = 'LXb3EKWsInQ';
-
-export const data: FacebookPageCommentsPageData = {
+export const data: FacebookCommentsPageData = {
   seo: {
-    title: 'Buy Facebook Page Comments | TrendEvo',
+    title: 'Buy Facebook Comments in Bangladesh | TrendEvo',
     description:
-      'Buy real Facebook page comments at affordable prices. Fast delivery, secure checkout, and 24/7 support from TrendEvo in Bangladesh.',
+      'Buy Facebook Comments in Bangladesh with TrendEvo. Improve post engagement, social proof, and campaign interaction using bKash, Nagad, Rocket, and secure order tracking.',
     canonical: '/buy-facebook-comments',
   },
 
   hero: {
     bg: 'section-1',
     variant: 'wide',
-    title: 'Buy gt<Facebook Page Comments> in Real, Fast & Affordable price.',
+    trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi Brands, Creators & Agencies',
+    title: 'Buy gt<Facebook Comments> in Bangladesh for Stronger Post Engagement',
     description:
-      'Growing a Facebook page can be tough. Consistent content and smart promotion are key, but results can be slow. At TrendEvo, we provide solutions to help your Facebook page thrive with real comments and engagement.',
-    signInLabel: 'Sign In',
-    createAccountLabel: 'Create an Account',
+      'Facebook posts with active comments often get more attention than silent posts. When people see useful discussion under a product, offer, event, or campaign post, they feel more interested to read, react, and join the conversation. TrendEvo helps businesses, creators, agencies, eCommerce stores, restaurants, startups, and local brands buy Facebook comments in Bangladesh with simple ordering, local payment support, and smooth delivery.',
+    descriptionSecondary:
+      'Our Facebook Comments Service Bangladesh is made for posts that need better interaction, stronger social proof, and a more active brand image. You can choose a suitable Facebook comment package, pay with bKash, Nagad, Rocket, or other supported methods, and improve your post activity without sharing your Facebook password.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All Services',
+    secondaryButtonHref: '/services',
     trustBadgeBase: {
       avatarSrcs: [
         '/images/reviews/home-hero-hero-1-avatar.png',
@@ -88,7 +104,7 @@ export const data: FacebookPageCommentsPageData = {
     },
     illustration: {
       src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
-      alt: 'Excited user celebrating Facebook page growth with analytics chart',
+      alt: 'Buy Facebook Comments in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
       maxWidthClassName: 'max-w-[558px]',
@@ -96,256 +112,274 @@ export const data: FacebookPageCommentsPageData = {
     },
   },
 
+  orderForm: {
+    badge: 'Facebook Services',
+    serviceLabel: 'Comments',
+    serviceTypeLabel: 'Comments',
+    urlFieldLabel: 'Facebook Post URL',
+    urlPlaceholder: 'https://facebook.com/yourpage/posts/123456789',
+    submitLabel: 'Pay Now With bKash/ Nagad',
+  },
+
+  whyChoose: {
+    badge: 'WHY CHOOSE US',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 190,
+    title: 'Why Choose TrendEvo to Buy gt<Facebook Comments> in Bangladesh',
+    subtitle:
+      'TrendEvo is built for Bangladeshi users who want a simple and reliable way to increase Facebook post interaction. From local payment options to easy order tracking, our BD SMM Panel helps brands, agencies, page admins, and resellers manage Facebook engagement with more confidence.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Fast Comment Delivery',
+        description:
+          'Your Facebook comments order starts after submission from the dashboard. Delivery speed may depend on the selected package and post type, but TrendEvo is designed for quick and smooth order processing.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: '-scale-y-100 rotate-180 object-cover',
+      },
+      {
+        title: 'Affordable Comment Packages',
+        description:
+          'You can buy Facebook comments without a large advertising budget. Our pricing works well for small businesses, online shops, creators, restaurants, agencies, startups, and SMM resellers looking for cheap Facebook comments.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: 'object-cover',
+      },
+      {
+        title: 'Helpful Support Team',
+        description:
+          'Need help choosing the right Facebook Comment Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[167%] max-w-none object-cover -translate-x-[34%] -translate-y-[13%]',
+      },
+    ],
+    bottomRowFeatures: [
+      {
+        title: 'Local Payment Options',
+        description:
+          'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes Facebook Marketing Bangladesh easier for users who prefer familiar local payment systems.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[125%] max-w-none object-cover -translate-x-[11%] -translate-y-[12%]',
+      },
+      {
+        title: 'Engagement-Focused Service',
+        description:
+          'TrendEvo focuses on Facebook comments that help your posts look active and discussion-friendly. You can start with a small package, test the service, and increase your order size based on your campaign needs.',
+        iconFrameSrc:
+          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+      },
+    ],
+  },
+
+  whoShouldBuy: {
+    badge: 'Buy Facebook Comments',
+    title: 'Who Should Buy gt<Facebook Comments> in Bangladesh?',
+    subtitle:
+      'Facebook comments help a post look alive. TrendEvo’s Facebook SMM Panel is useful for Bangladeshi users who want more visible interaction, stronger campaign response, and better social proof under important posts.',
+    titleClassName:
+      'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    items: [
+      {
+        title: 'E-commerce Stores',
+        description:
+          'Online shops in Bangladesh need comments on product posts, flash sale updates, new arrivals, and offer campaigns. More comments can make a product post look active and encourage visitors to check prices, ask questions, or message the page.',
+      },
+      {
+        title: 'Restaurants and Food Brands',
+        description:
+          'Restaurants, cloud kitchens, bakeries, and home food sellers can use Facebook comments to create buzz around menus, discount offers, food photos, and delivery announcements. Active comments make food posts feel more popular and trusted.',
+      },
+      {
+        title: 'Local Businesses and SMEs',
+        description:
+          'Training centers, salons, gyms, electronics shops, travel agencies, and service providers can buy Facebook comments in Bangladesh to make promotional posts look more engaging. This helps customers feel that other people are noticing the business.',
+      },
+      {
+        title: 'Creators and Public Figures',
+        description:
+          'Creators, influencers, musicians, coaches, speakers, and public figures often need comments on reels, videos, announcements, and opinion posts. Facebook comments can support better audience interaction and make content look more discussion-worthy.',
+      },
+      {
+        title: 'Agencies, Startups, and Campaign Managers',
+        description:
+          'Digital agencies, startups, NGOs, and campaign teams can use TrendEvo to support product launches, event promotions, awareness posts, and client campaigns. A well-commented post can look stronger before boosting, sharing, or presenting results to clients.',
+      },
+    ],
+  },
+
   workingProcess: {
     badge: 'WORKING PROCESS',
     underlineSrc: '/images/working-process/working-process-section-underline.svg',
     underlineWidth: 216,
-    title: 'How to Buy Facebook Page Comments gt<on TrendEvo>',
+    title: 'How to Buy Facebook Comments on TrendEvo — gt<Step by Step>',
     subtitle:
-      'A Facebook SMM panel helps businesses grow followers, likes, and engagement quickly and efficiently, saving time and boosting online presence.',
+      'Buying Facebook comments in Bangladesh should be simple. TrendEvo keeps the full process easy, so business owners, creators, agencies, freelancers, and resellers can place comment orders without technical knowledge.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
     steps: [
       {
         number: '01',
-        title: 'Simple Registration',
+        title: 'Create Your TrendEvo Account',
         description:
-          'You’ll need to sign up quickly with just a few steps to start using our SMM panel.',
+          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse Facebook SMM Panel services, check prices, and manage your orders from one place.',
       },
       {
         number: '02',
         title: 'Add Funds to Your Balance',
         description:
-          'Single out the features and services that fit your needs or budget.',
+          'Add money to your account using supported payment methods in Bangladesh. You can fund your balance through bKash, Nagad, Rocket, or other available options before placing your Facebook comments order.',
       },
       {
         number: '03',
-        title: 'Find the Facebook Page Comments Service',
+        title: 'Choose Facebook Comments Service',
         description:
-          'Make payments safely via trusted methods to protect your information.',
+          'Go to the Facebook services section and select the comment package that matches your post goal. You can choose a starter package, a campaign-focused package, or a reseller-friendly quantity.',
       },
       {
         number: '04',
-        title: 'Enter Your Facebook Page URL & Place the Order',
+        title: 'Enter Your Facebook Post URL',
         description:
-          'Monitor your progress easily and see how your social media improves.',
+          'Paste the correct Facebook post link, select the quantity, and submit the order. You do not need to share your Facebook password. TrendEvo processes the order using the public post URL only.',
       },
     ],
   },
 
-  serviceLeadingSlugs: ['facebook-page-comments', 'facebook-page-comments-related-services'],
-
-  testimonials: {
-    sectionBackground:
-      'linear-gradient(64.26deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)',
-    badge: 'TESTIMONIALS',
-    title: 'Facebook Panel gt<Reviews>',
-    subtitle:
-      'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
-    underlineWidth: 169,
-    titleClassName:
-      'max-w-none whitespace-normal text-center text-2xl tracking-[0.36px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[36px] lg:text-[36px]',
-    subtitleClassName:
-      'max-w-[996px] text-center text-sm leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg',
-    customerTabLabel: 'Customer Reviews',
-    videoTabLabel: 'Video Reviews',
-    assets: {
-      starIconSrc: '/images/testimonials/testimonials-star-rating-icon.svg',
-      verifyBadgeSrc: '/images/testimonials/testimonials-verified-badge.svg',
-      customerReviewTabIconSrc:
-        '/images/testimonials/testimonials-customer-review-icon.svg',
-      videoReviewTabIconSrc:
-        '/images/testimonials/testimonials-clapperboard-icon.svg',
-      quoteOpenSrc: '/images/testimonials/testimonials-quote-mark-2.svg',
-      quoteCloseSrc: '/images/testimonials/testimonials-quote-mark.svg',
-      playIconSrc: '/images/testimonials/testimonials-video-play-icon.svg',
-      playOrbSrc: '/images/testimonials/testimonials-video-play-orb.webp',
-    },
-    leftTextReviews: [
-      {
-        id: 'left-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-2',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-3',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-4',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
+  thingsToKnow: {
+    badge: 'Things to Know',
+    title: 'Things to Know Before You Buy gt<Facebook Comments>',
+    paragraphs: [
+      'Buying Facebook comments can help your post look more active, but the best results come when your post already has a clear purpose. Before placing an order on TrendEvo, make sure your Facebook post is public, the post link is correct, and your selected package fits your content type.',
+      'You do not need to share your Facebook password to buy Facebook comments in Bangladesh. TrendEvo only needs your public post URL to process the order. This keeps your account safer and makes the process simple for businesses, creators, agencies, and resellers.',
+      'For a natural post appearance, avoid sudden oversized orders on a post with no reactions or weak content. Start with a suitable amount, publish useful captions, and add comments step by step. This helps the post look more believable to Bangladeshi visitors.',
+      'Facebook comments can support social proof and audience interaction, but they work best with strong content. Use clear product details, offer information, event dates, questions, customer benefits, and local context so people have a reason to read and respond.',
     ],
-    rightTextReviews: [
-      {
-        id: 'right-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
-    ],
-    featuredReview: {
-      name: 'Ariyena Islam',
-      role: 'Business Owner',
-      avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
-      quote: reviewQuote,
-      youtubeVideoId: youtubeReelVideoId,
-    },
-    videoReviews: [
-      {
-        id: 'video-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-3.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-4.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-5',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-6',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-    ],
-    defaultTab: 'video',
+    ctaLabel: 'Create Your Account Now',
   },
 
   faq: {
-    label: 'FAQ',
-    title: 'gt<Frequently> Asked Questions',
+    label: 'Frequently Asked Questions',
+    title: 'Frequently Asked Questions — gt<Buy Facebook Comments> in Bangladesh',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Find clear answers about buying Facebook comments in Bangladesh, payment options, delivery, safety, order tracking, and how TrendEvo helps improve Facebook post engagement.',
     bg: 'section-7',
     items: [
       {
-        question: 'What is an SMM Panel?',
+        question: 'Is it safe to buy Facebook comments from TrendEvo?',
         answer:
-          'An SMM panel is an online platform where you can buy social media marketing services such as Facebook page comments, followers, and engagement. TrendEvo lets you place orders, track delivery, and manage your growth from one dashboard.',
+          'Yes, TrendEvo uses a simple order process where you only need to submit your public Facebook post link. We never ask for your Facebook password, so your login details stay private.',
       },
       {
-        question: 'Can the SMM Panel target a specific group?',
+        question: 'Can I buy Facebook comments in Bangladesh with bKash?',
         answer:
-          'Yes. Depending on the service you choose, TrendEvo offers targeting options so your Facebook page comments can align with your preferred audience type, region, or niche when available for that package.',
+          'Yes, you can add funds using bKash and then place your Facebook comments order from the TrendEvo dashboard. We also support other local payment options for Bangladeshi users.',
       },
       {
-        question: 'Is Using an SMM Panel Safe?',
+        question: 'Do you accept Nagad or Rocket payments?',
         answer:
-          'TrendEvo uses secure checkout, encrypted payments, and privacy-focused order handling. We never ask for your Facebook password — only your public page URL is required to deliver comments.',
+          'Yes, TrendEvo supports local payment methods such as Nagad, Rocket, and other available options. This makes it easier for businesses, creators, agencies, and resellers in Bangladesh.',
       },
       {
-        question: 'Does using an SMM Panel risk banning my account?',
+        question: 'Do I need to share my Facebook password?',
         answer:
-          'We deliver comments gradually using methods designed to look natural. While no service can guarantee zero platform risk, TrendEvo focuses on quality delivery and safe pacing to help protect your Facebook page.',
+          'No, you do not need to share your password. To buy Facebook comments, you only need to provide the correct Facebook post URL and choose your preferred quantity.',
       },
       {
-        question: 'Can I track the progress of my orders?',
+        question: 'How fast will my Facebook comments order start?',
         answer:
-          'Yes. After placing an order, you can monitor its status in real time from your TrendEvo dashboard and see updates as your Facebook page comment delivery progresses.',
+          'Most orders start after submission and payment confirmation. Delivery time can vary based on service type, quantity, post link status, and current order volume.',
       },
       {
-        question: 'What payment methods do you accept?',
+        question: 'Can I track my Facebook comments order?',
         answer:
-          'TrendEvo supports multiple trusted payment options including local and international methods. Available gateways are shown at checkout when you add funds or pay for your order.',
+          'Yes, you can track your order status from the TrendEvo dashboard. The order panel helps you check whether your Facebook comments order is pending, processing, completed, or partially completed.',
       },
       {
-        question: 'Can I cancel my order instantly?',
+        question: 'Can I buy comments for a new Facebook post?',
         answer:
-          'Orders that have not started processing can often be cancelled from your account. Once delivery is in progress, cancellation may not be possible — contact our support team and we will review your request promptly.',
+          'Yes, new Facebook posts can receive comments. For a natural appearance, it is better to start with a smaller package and increase comment activity gradually as the post gains more reach.',
       },
       {
-        question: 'Do you have customer support?',
+        question: 'Are Facebook comments useful for product launches?',
         answer:
-          'Yes. TrendEvo offers 24/7 customer support to help with orders, payments, and account questions. Reach out anytime through live chat or our contact channels if you need assistance.',
+          'Yes, Facebook comments can help product launch posts look more active and trusted. They can support discussion, attract attention, and make visitors more comfortable checking the product details.',
+      },
+      {
+        question: 'Will buying Facebook comments improve my post engagement?',
+        answer:
+          'Facebook comments can improve visible engagement and social proof. However, stronger results come when comments are combined with useful content, clear offers, good visuals, and regular audience interaction.',
+      },
+      {
+        question: 'Who can use TrendEvo’s Facebook comments service?',
+        answer:
+          'TrendEvo is useful for Bangladeshi eCommerce stores, restaurants, local businesses, creators, public figures, startups, NGOs, digital agencies, freelancers, and SMM resellers who want more active-looking Facebook posts.',
       },
     ],
+    ctaTitle: 'Still have questions?',
+    ctaSubtitle:
+      "Can't find the answer you're looking for? Please get in touch with our team.",
+    ctaButtonLabel: 'Contact Support',
+    ctaButtonHref: '/contact-us',
+  },
+
+  relatedServices: {
+    badge: 'RELATED SERVICE',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 198,
+    title: 'Related Services You gt<Might Also Need>',
+    subtitle:
+      'Facebook comments help posts look active, but stronger campaign results come when your page also has followers and stronger like signals. TrendEvo offers related Facebook SMM services in Bangladesh to support visibility, trust, and campaign performance.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Buy Facebook Followers',
+        description:
+          'Grow your Facebook page with more followers and build a stronger first impression for new visitors. This service is useful for local businesses, creators, online shops, agencies, and new brand pages that want better page trust before promotion.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+      {
+        title: 'Buy Facebook Page Likes',
+        description:
+          'Increase the trust signal of your Facebook page with more page likes. Facebook Page Likes help new visitors see your page as more established, active, and reliable before they browse your posts, products, or services.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+    ],
+    bottomRowFeatures: [],
+    ctaLabel: 'Sign Up Now',
   },
 
   cta: {
-    title: 'Ready to gt<Grow your Social Media> in Bangladesh',
+    title: 'Ready to Grow with a gt<Trusted SMM Panel> in Bangladesh?',
     description:
-      'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
-    primaryButtonLabel: 'Register Now',
-    secondaryButtonLabel: 'See all Services',
-    secondaryButtonHref: '/services',
+      'Join TrendEvo and manage your Facebook, Instagram, YouTube, TikTok, Telegram, and website traffic orders from one simple dashboard. Add funds with bKash, Nagad, or Rocket, choose your service, and start growing with secure order tracking.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'View All Facebook Services',
+    secondaryButtonHref: '/facebook-smm-panel',
   },
 };
