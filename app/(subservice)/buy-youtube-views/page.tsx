@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
-import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
 import { data as youtubeViewsPageData } from '@/app/(subservice)/buy-youtube-views/page-data';
-import YoutubeViewsCtaSection from '@/app/(subservice)/buy-youtube-views/_components/cta-section';
-import YoutubeViewsHeroSection from '@/app/(subservice)/buy-youtube-views/_components/hero-section';
-import YoutubeViewsOrderFormSection from '@/app/(subservice)/buy-youtube-views/_components/order-form-section';
-import YoutubeViewsWorkingProcessSection from '@/app/(subservice)/buy-youtube-views/_components/working-process-section';
+import YoutubeViewsCtaSection from './_components/cta-section';
+import YoutubeViewsHeroSection from './_components/hero-section';
+import YoutubeViewsOrderFormSection from './_components/order-form-section';
+import YoutubeViewsRelatedServicesSection from './_components/related-services-section';
+import YoutubeViewsThingsToKnowSection from './_components/things-to-know-section';
+import YoutubeViewsWhoShouldBuySection from './_components/who-should-buy-section';
+import YoutubeViewsWhyChooseSection from './_components/why-choose-section';
+import YoutubeViewsWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: youtubeViewsPageData.seo.title,
   description: youtubeViewsPageData.seo.description,
+  alternates: {
+    canonical: youtubeViewsPageData.seo.canonical,
+  },
 };
 
 export default function YoutubeViewsPage() {
@@ -18,12 +23,12 @@ export default function YoutubeViewsPage() {
     <>
       <YoutubeViewsHeroSection />
       <YoutubeViewsOrderFormSection />
-      <TestimonialsSection data={youtubeViewsPageData.testimonials} />
+      <YoutubeViewsWhyChooseSection />
+      <YoutubeViewsWhoShouldBuySection />
       <YoutubeViewsWorkingProcessSection />
-      {youtubeViewsPageData.serviceLeadingSlugs.map((slug) => (
-        <ServiceLeading key={slug} slug={slug} />
-      ))}
+      <YoutubeViewsThingsToKnowSection />
       <FaqSection data={youtubeViewsPageData.faq} />
+      <YoutubeViewsRelatedServicesSection />
       <YoutubeViewsCtaSection />
     </>
   );
