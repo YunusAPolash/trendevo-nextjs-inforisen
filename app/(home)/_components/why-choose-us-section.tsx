@@ -27,19 +27,13 @@ export default function WhyChooseUsSection() {
           subtitleClassName={heading.subtitleClassName}
         />
 
-        <WhyChooseUsDesktopTimeline cardDescription={heading.subtitle} />
+        <WhyChooseUsDesktopTimeline />
 
         <div className="flex w-full flex-col gap-5 sm:gap-7 lg:hidden">
           {timelineSteps.map((step, index) => (
             <div key={step} className="flex flex-col gap-5 sm:gap-7">
-              <WhyChooseUsCard
-                {...leftFeatures[index]}
-                description={heading.subtitle}
-              />
-              <WhyChooseUsCard
-                {...rightFeatures[index]}
-                description={heading.subtitle}
-              />
+              <WhyChooseUsCard {...leftFeatures[index]} />
+              <WhyChooseUsCard {...rightFeatures[index]} />
             </div>
           ))}
         </div>

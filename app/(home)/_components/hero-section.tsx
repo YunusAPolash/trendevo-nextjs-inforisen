@@ -5,6 +5,7 @@ import SecondaryButton from '@/components/buttons/secondary-button';
 import { data } from '@/app/(home)/page-data';
 import { signUpUrl } from '@/lib/auth-urls';
 import { getStats, formatUsersTrustLabel } from '@/lib/stats';
+import { renderText } from '@/lib/utils/renderText';
 
 const { hero } = data;
 
@@ -49,7 +50,7 @@ export default async function HeroSection() {
 
           <div className="space-y-6">
             <h1 className="text-[28px] font-semibold leading-[1.35] tracking-tight text-[#071431] sm:text-4xl md:text-5xl dark:text-[#efefef]">
-              {hero.heading}
+              {renderText(hero.heading)}
             </h1>
             <p className="max-w-2xl text-base leading-relaxed text-[#313131] sm:text-base md:text-lg dark:text-[#ebecef]">
               {hero.description}

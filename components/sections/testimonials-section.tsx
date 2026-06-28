@@ -44,7 +44,7 @@ export type TestimonialFeaturedReview = {
   avatar: string;
   image: string;
   quote: string;
-  youtubeVideoId: string;
+  youtubeVideoId?: string;
 };
 
 export type TestimonialAssets = {
@@ -338,21 +338,23 @@ function FeaturedReviewCard({
         className="absolute left-6 top-5 z-10"
       />
 
-      <button
-        type="button"
-        onClick={onPlay}
-        aria-label={`Play ${featuredReview.name}'s video review`}
-        className="absolute left-1/2 top-1/2 z-10 flex size-16 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-[32px] bg-white/12 p-4 transition hover:bg-white/20"
-      >
-        <Image
-          src={assets.playIconSrc}
-          alt=""
-          aria-hidden
-          width={33}
-          height={33}
-          className="size-[33px]"
-        />
-      </button>
+      {featuredReview.youtubeVideoId ? (
+        <button
+          type="button"
+          onClick={onPlay}
+          aria-label={`Play ${featuredReview.name}'s video review`}
+          className="absolute left-1/2 top-1/2 z-10 flex size-16 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-[32px] bg-white/12 p-4 transition hover:bg-white/20"
+        >
+          <Image
+            src={assets.playIconSrc}
+            alt=""
+            aria-hidden
+            width={33}
+            height={33}
+            className="size-[33px]"
+          />
+        </button>
+      ) : null}
 
       <div className="absolute bottom-6 left-6 right-6 z-10 max-w-[363px] rounded-2xl border border-white/35 bg-white/30 p-4 backdrop-blur-[40px] dark:border-white/20 dark:bg-[#150b19]/70">
         <AuthorInfo
@@ -779,7 +781,11 @@ export default function TestimonialsSection({ data }: TestimonialsSectionProps) 
             rightTextReviews={rightTextReviews}
             featuredReview={featuredReview}
             assets={assets}
-            onPlayFeatured={() => openVideo(featuredReview.youtubeVideoId)}
+            onPlayFeatured={() => {
+              if (featuredReview.youtubeVideoId) {
+                openVideo(featuredReview.youtubeVideoId);
+              }
+            }}
           />
         ) : (
           <VideoReviewsSlider

@@ -9,7 +9,7 @@ export function WhyChooseUsCard({
   iconWidth,
   iconHeight,
   description,
-}: HomeWhyChooseUsFeature & { description: string }) {
+}: HomeWhyChooseUsFeature) {
   return (
     <PrimaryCard
       bg="card-2"

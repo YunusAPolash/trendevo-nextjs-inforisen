@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 
 import PrimarySection from '@/components/sections/primary-section';
 import { cn } from '@/lib/utils';
+import { renderText } from '@/lib/utils/renderText';
 
 const CTA_GRADIENT =
   'linear-gradient(219.3deg, rgb(255, 213, 245) 8.67%, rgb(254, 251, 255) 41.83%, rgb(236, 205, 255) 89.38%)';
@@ -101,7 +102,7 @@ export default function CtaSection({
                   </div>
 
                   <h2 className="relative z-10 text-2xl font-semibold leading-[1.35] tracking-[0.48px] text-[#313131] sm:text-[32px] md:text-[40px] lg:text-[48px] dark:text-white">
-                    {title}
+                    {typeof title === 'string' ? renderText(title) : title}
                   </h2>
                   <p className="relative z-10 text-sm font-normal leading-normal text-[#13203b] sm:text-base dark:text-white">
                     {description}

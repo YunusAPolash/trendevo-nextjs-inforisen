@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { renderText } from '@/lib/utils/renderText';
 
 type SectionHeadingProps = {
-  badge: string;
+  badge?: string;
   title: string | ReactNode;
   subtitle?: string;
   className?: string;
@@ -56,14 +56,16 @@ export default function SectionHeading({
             align === 'center' && 'items-center',
           )}
         >
-          <span
-            className={cn(
-              'text-gradient text-lg font-semibold leading-[1.45] sm:text-[22px] dark:bg-none dark:bg-clip-border dark:text-white',
-              badgeClassName,
-            )}
-          >
-            {badge}
-          </span>
+          {badge ? (
+            <span
+              className={cn(
+                'text-gradient text-lg font-semibold leading-[1.45] sm:text-[22px] dark:bg-none dark:bg-clip-border dark:text-white',
+                badgeClassName,
+              )}
+            >
+              {badge}
+            </span>
+          ) : null}
           <Image
             src={underlineSrc}
             alt=""

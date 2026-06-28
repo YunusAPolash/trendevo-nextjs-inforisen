@@ -11,7 +11,7 @@ type SEO = {
 };
 
 type SectionHeadingData = {
-  badge: string;
+  badge?: string;
   title: string;
   subtitle: string;
   underlineSrc?: string;
@@ -91,6 +91,7 @@ type HomeWorkingProcessStep = {
 
 type HomeWhyChooseUsFeature = {
   title: string;
+  description: string;
   icon: string;
   iconWidth: number;
   iconHeight: number;
@@ -195,6 +196,9 @@ type HomePageData = {
     secondaryButtonLabel: string;
     secondaryButtonHref: string;
   };
+  footer: {
+    blurb: string;
+  };
 };
 
 export type {
@@ -210,8 +214,6 @@ export type {
   HomePlatformMarqueeItem,
   SectionHeadingData,
 };
-
-const homeYoutubeReelVideoId = 'LXb3EKWsInQ';
 
 export const data: HomePageData = {
   seo: {
@@ -235,7 +237,7 @@ export const data: HomePageData = {
       rating: '(4.8)',
       promoIconSrc: '/images/icons/home-hero-hero-fire-icon-illustration.png',
     },
-    heading: 'Cheapest SMM Panel in Bangladesh With Fast & Secure Services',
+    heading: 'Cheapest SMM Panel in Bangladesh With gt<Fast & Secure Services>',
     description:
       'TrendEvo is a trusted and cheapest SMM Panel in Bangladesh platform built for businesses, creators, agencies, freelancers, and resellers. Order Facebook, Instagram, YouTube, TikTok, Telegram, and more from one simple dashboard. Add funds with bKash, Nagad, or Rocket and track every order easily.',
     promo: 'Instant delivery on selected SMM services with affordable pricing.',
@@ -298,7 +300,7 @@ export const data: HomePageData = {
   ourServices: {
     heading: {
       badge: 'Our Services',
-      title: 'All-in-One SMM Panel Services in Bangladesh',
+      title: 'All-in-One SMM Panel gt<Services in Bangladesh>',
       subtitle:
         'TrendEvo helps businesses, creators, agencies, and resellers buy SMM services in Bangladesh for Facebook, Instagram, YouTube, TikTok, and more. Get fast delivery, secure order tracking, affordable pricing, and easy payments with bKash, Nagad, or Rocket.',
       titleClassName: 'text-2xl sm:text-[28px] lg:text-[36px]',
@@ -316,12 +318,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore Facebook Services',
         exploreHref: '/facebook-smm-panel',
         services: [
-          { number: '01', title: 'Facebook Post Likes-', description: 'Improve post engagement and make your updates look more active.' },
-          { number: '02', title: 'Facebook Page Likes-', description: 'Build a stronger page presence for your business, brand, or community.' },
-          { number: '03', title: 'Facebook Comments-', description: 'Add relevant activity to posts and create better audience interaction.' },
-          { number: '04', title: 'Facebook Shares-', description: 'Help your content reach more people through wider post distribution.' },
-          { number: '05', title: 'Facebook Video Views-', description: 'Increase visibility for product videos, reels, reviews, and campaigns.' },
-          { number: '06', title: 'Facebook Reactions-', description: 'Make your Facebook posts look more natural with mixed reactions.' },
+          { number: '01', title: 'Facebook Post Likes', description: 'Improve post engagement and make your updates look more active.' },
+          { number: '02', title: 'Facebook Page Likes', description: 'Build a stronger page presence for your business, brand, or community.' },
+          { number: '03', title: 'Facebook Comments', description: 'Add relevant activity to posts and create better audience interaction.' },
+          { number: '04', title: 'Facebook Shares', description: 'Help your content reach more people through wider post distribution.' },
+          { number: '05', title: 'Facebook Video Views', description: 'Increase visibility for product videos, reels, reviews, and campaigns.' },
+          { number: '06', title: 'Facebook Reactions', description: 'Make your Facebook posts look more natural with mixed reactions.' },
         ],
       },
       {
@@ -335,12 +337,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore Instagram Services',
         exploreHref: '/instagram-smm-panel',
         services: [
-          { number: '01', title: 'Instagram Followers-', description: 'Build a stronger profile presence and make your account look more trusted.' },
-          { number: '02', title: 'Instagram Likes-', description: 'Improve post engagement for photos, reels, product posts, and brand updates.' },
-          { number: '03', title: 'Instagram Comments-', description: 'Add useful activity to posts and support better audience interaction.' },
-          { number: '04', title: 'Instagram Reels Views-', description: 'Increase reach for short videos, trending content, and promotional reels.' },
-          { number: '05', title: 'Instagram Story Views-', description: 'Boost visibility for daily updates, offers, launches, and announcements.' },
-          { number: '06', title: 'Instagram Saves-', description: 'Help important posts look more valuable and useful to your audience.' },
+          { number: '01', title: 'Instagram Followers', description: 'Build a stronger profile presence and make your account look more trusted.' },
+          { number: '02', title: 'Instagram Likes', description: 'Improve post engagement for photos, reels, product posts, and brand updates.' },
+          { number: '03', title: 'Instagram Comments', description: 'Add useful activity to posts and support better audience interaction.' },
+          { number: '04', title: 'Instagram Reels Views', description: 'Increase reach for short videos, trending content, and promotional reels.' },
+          { number: '05', title: 'Instagram Story Views', description: 'Boost visibility for daily updates, offers, launches, and announcements.' },
+          { number: '06', title: 'Instagram Saves', description: 'Help important posts look more valuable and useful to your audience.' },
         ],
       },
       {
@@ -355,12 +357,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore X (Twitter) Services',
         exploreHref: '/x-twitter-smm-panel',
         services: [
-          { number: '01', title: 'X (Twitter) Followers-', description: 'Build a stronger profile base and make your account look more active.' },
-          { number: '02', title: 'X (Twitter) Post Likes-', description: 'Improve engagement on tweets, updates, offers, and campaign posts.' },
-          { number: '03', title: 'X (Twitter) Retweets-', description: 'Help your posts reach more people through wider content sharing.' },
-          { number: '04', title: 'X (Twitter) Comments-', description: 'Add visible activity and support better discussion on important posts.' },
-          { number: '05', title: 'X (Twitter) Views-', description: 'Increase visibility for tweets, videos, and promotional content.' },
-          { number: '06', title: 'X (Twitter) Poll Votes-', description: 'Support poll activity for campaigns, feedback, and audience research.' },
+          { number: '01', title: 'X (Twitter) Followers', description: 'Build a stronger profile base and make your account look more active.' },
+          { number: '02', title: 'X (Twitter) Post Likes', description: 'Improve engagement on tweets, updates, offers, and campaign posts.' },
+          { number: '03', title: 'X (Twitter) Retweets', description: 'Help your posts reach more people through wider content sharing.' },
+          { number: '04', title: 'X (Twitter) Comments', description: 'Add visible activity and support better discussion on important posts.' },
+          { number: '05', title: 'X (Twitter) Views', description: 'Increase visibility for tweets, videos, and promotional content.' },
+          { number: '06', title: 'X (Twitter) Poll Votes', description: 'Support poll activity for campaigns, feedback, and audience research.' },
         ],
       },
       {
@@ -374,12 +376,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore YouTube Services',
         exploreHref: '/youtube-smm-panel',
         services: [
-          { number: '01', title: 'YouTube Subscribers-', description: 'Build a stronger channel base for new videos, tutorials, reviews, and brand content.' },
-          { number: '02', title: 'YouTube Views-', description: 'Improve video visibility for product videos, music videos, courses, and local campaigns.' },
-          { number: '03', title: 'YouTube Likes-', description: 'Add stronger engagement signals and make your content look more trusted.' },
-          { number: '04', title: 'YouTube Comments-', description: 'Create active discussion around videos, reviews, launches, and creator content.' },
-          { number: '05', title: 'YouTube Watch Time-', description: 'Support longer viewing activity for channels working on growth goals.' },
-          { number: '06', title: 'YouTube Shorts Views-', description: 'Increase reach for short videos, trends, reels-style clips, and quick promotions.' },
+          { number: '01', title: 'YouTube Subscribers', description: 'Build a stronger channel base for new videos, tutorials, reviews, and brand content.' },
+          { number: '02', title: 'YouTube Views', description: 'Improve video visibility for product videos, music videos, courses, and local campaigns.' },
+          { number: '03', title: 'YouTube Likes', description: 'Add stronger engagement signals and make your content look more trusted.' },
+          { number: '04', title: 'YouTube Comments', description: 'Create active discussion around videos, reviews, launches, and creator content.' },
+          { number: '05', title: 'YouTube Watch Time', description: 'Support longer viewing activity for channels working on growth goals.' },
+          { number: '06', title: 'YouTube Shorts Views', description: 'Increase reach for short videos, trends, reels-style clips, and quick promotions.' },
         ],
       },
       {
@@ -393,12 +395,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore TikTok Services',
         exploreHref: '/tiktok-smm-panel',
         services: [
-          { number: '01', title: 'TikTok Followers-', description: 'Build a stronger profile base for creators, shops, influencers, and personal brands.' },
-          { number: '02', title: 'TikTok Likes-', description: 'Improve engagement on videos, trends, product clips, and campaign content.' },
-          { number: '03', title: 'TikTok Views-', description: 'Increase visibility for short videos, viral-style content, and local promotions.' },
-          { number: '04', title: 'TikTok Comments-', description: 'Add active discussion and make videos feel more engaging.' },
-          { number: '05', title: 'TikTok Shares-', description: 'Help your content reach more users through wider video sharing.' },
-          { number: '06', title: 'TikTok Live Views-', description: 'Support live sessions, product showcases, creator events, and real-time campaigns.' },
+          { number: '01', title: 'TikTok Followers', description: 'Build a stronger profile base for creators, shops, influencers, and personal brands.' },
+          { number: '02', title: 'TikTok Likes', description: 'Improve engagement on videos, trends, product clips, and campaign content.' },
+          { number: '03', title: 'TikTok Views', description: 'Increase visibility for short videos, viral-style content, and local promotions.' },
+          { number: '04', title: 'TikTok Comments', description: 'Add active discussion and make videos feel more engaging.' },
+          { number: '05', title: 'TikTok Shares', description: 'Help your content reach more users through wider video sharing.' },
+          { number: '06', title: 'TikTok Live Views', description: 'Support live sessions, product showcases, creator events, and real-time campaigns.' },
         ],
       },
       {
@@ -412,12 +414,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore LinkedIn Services',
         exploreHref: '/buy-linkedin-followers',
         services: [
-          { number: '01', title: 'LinkedIn Followers-', description: 'Build a stronger profile or company page presence for professional branding.' },
-          { number: '02', title: 'LinkedIn Page Followers-', description: 'Grow your business page and make your brand look more established.' },
-          { number: '03', title: 'LinkedIn Post Likes-', description: 'Improve engagement on business updates, hiring posts, and industry content.' },
-          { number: '04', title: 'LinkedIn Comments-', description: 'Add useful interaction to posts, announcements, and professional discussions.' },
-          { number: '05', title: 'LinkedIn Shares-', description: 'Help important posts reach more people through wider content distribution.' },
-          { number: '06', title: 'LinkedIn Views-', description: 'Increase visibility for profiles, posts, videos, and company updates.' },
+          { number: '01', title: 'LinkedIn Followers', description: 'Build a stronger profile or company page presence for professional branding.' },
+          { number: '02', title: 'LinkedIn Page Followers', description: 'Grow your business page and make your brand look more established.' },
+          { number: '03', title: 'LinkedIn Post Likes', description: 'Improve engagement on business updates, hiring posts, and industry content.' },
+          { number: '04', title: 'LinkedIn Comments', description: 'Add useful interaction to posts, announcements, and professional discussions.' },
+          { number: '05', title: 'LinkedIn Shares', description: 'Help important posts reach more people through wider content distribution.' },
+          { number: '06', title: 'LinkedIn Views', description: 'Increase visibility for profiles, posts, videos, and company updates.' },
         ],
       },
       {
@@ -431,12 +433,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore Telegram Services',
         exploreHref: '/telegram-smm-panel',
         services: [
-          { number: '01', title: 'Telegram Members-', description: 'Grow channels and groups with a stronger member base.' },
-          { number: '02', title: 'Telegram Subscribers-', description: 'Build trust for updates, offers, news, and announcements.' },
-          { number: '03', title: 'Telegram Post Views-', description: 'Increase visibility on important posts and pinned messages.' },
-          { number: '04', title: 'Telegram Reactions-', description: 'Make channel posts look more active and engaging.' },
-          { number: '05', title: 'Telegram Poll Votes-', description: 'Support feedback, voting, and community decisions.' },
-          { number: '06', title: 'Telegram Group Members-', description: 'Grow niche groups for learning, business, and discussions.' },
+          { number: '01', title: 'Telegram Members', description: 'Grow channels and groups with a stronger member base.' },
+          { number: '02', title: 'Telegram Subscribers', description: 'Build trust for updates, offers, news, and announcements.' },
+          { number: '03', title: 'Telegram Post Views', description: 'Increase visibility on important posts and pinned messages.' },
+          { number: '04', title: 'Telegram Reactions', description: 'Make channel posts look more active and engaging.' },
+          { number: '05', title: 'Telegram Poll Votes', description: 'Support feedback, voting, and community decisions.' },
+          { number: '06', title: 'Telegram Group Members', description: 'Grow niche groups for learning, business, and discussions.' },
         ],
       },
       {
@@ -450,12 +452,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore Discord Services',
         exploreHref: '/buy-discord-members',
         services: [
-          { number: '01', title: 'Discord Members-', description: 'Grow servers with a stronger member base.' },
-          { number: '02', title: 'Discord Online Members-', description: 'Make your server look more active in real time.' },
-          { number: '03', title: 'Discord Reactions-', description: 'Add engagement to posts, updates, and announcements.' },
-          { number: '04', title: 'Discord Server Boosts-', description: 'Improve server appearance and unlock better features.' },
-          { number: '05', title: 'Discord Friend Requests-', description: 'Support profile growth and networking activity.' },
-          { number: '06', title: 'Discord Message Activity-', description: 'Add visible movement to selected server channels.' },
+          { number: '01', title: 'Discord Members', description: 'Grow servers with a stronger member base.' },
+          { number: '02', title: 'Discord Online Members', description: 'Make your server look more active in real time.' },
+          { number: '03', title: 'Discord Reactions', description: 'Add engagement to posts, updates, and announcements.' },
+          { number: '04', title: 'Discord Server Boosts', description: 'Improve server appearance and unlock better features.' },
+          { number: '05', title: 'Discord Friend Requests', description: 'Support profile growth and networking activity.' },
+          { number: '06', title: 'Discord Message Activity', description: 'Add visible movement to selected server channels.' },
         ],
       },
       {
@@ -469,12 +471,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore Spotify Services',
         exploreHref: '/spotify-smm-panel',
         services: [
-          { number: '01', title: 'Spotify Plays-', description: 'Increase track plays for songs, podcasts, and new releases.' },
-          { number: '02', title: 'Spotify Followers-', description: 'Build a stronger artist, playlist, or profile presence.' },
-          { number: '03', title: 'Spotify Monthly Listeners-', description: 'Support artist visibility with better listener activity.' },
-          { number: '04', title: 'Spotify Playlist Followers-', description: 'Grow playlists for music promotion and curation.' },
-          { number: '05', title: 'Spotify Saves-', description: 'Help tracks look more valuable to new listeners.' },
-          { number: '06', title: 'Spotify Podcast Plays-', description: 'Increase reach for podcast episodes and audio content.' },
+          { number: '01', title: 'Spotify Plays', description: 'Increase track plays for songs, podcasts, and new releases.' },
+          { number: '02', title: 'Spotify Followers', description: 'Build a stronger artist, playlist, or profile presence.' },
+          { number: '03', title: 'Spotify Monthly Listeners', description: 'Support artist visibility with better listener activity.' },
+          { number: '04', title: 'Spotify Playlist Followers', description: 'Grow playlists for music promotion and curation.' },
+          { number: '05', title: 'Spotify Saves', description: 'Help tracks look more valuable to new listeners.' },
+          { number: '06', title: 'Spotify Podcast Plays', description: 'Increase reach for podcast episodes and audio content.' },
         ],
       },
       {
@@ -488,12 +490,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore SoundCloud Services',
         exploreHref: '/soundcloud-smm-panel',
         services: [
-          { number: '01', title: 'SoundCloud Plays-', description: 'Increase plays for songs, mixes, podcasts, and new releases.' },
-          { number: '02', title: 'SoundCloud Followers-', description: 'Build a stronger artist profile and listener base.' },
-          { number: '03', title: 'SoundCloud Likes-', description: 'Improve track engagement and make music look more trusted.' },
-          { number: '04', title: 'SoundCloud Reposts-', description: 'Help tracks reach more listeners through wider sharing.' },
-          { number: '05', title: 'SoundCloud Comments-', description: 'Add activity to songs, mixes, and audio content.' },
-          { number: '06', title: 'SoundCloud Downloads-', description: 'Support track interest with better download activity.' },
+          { number: '01', title: 'SoundCloud Plays', description: 'Increase plays for songs, mixes, podcasts, and new releases.' },
+          { number: '02', title: 'SoundCloud Followers', description: 'Build a stronger artist profile and listener base.' },
+          { number: '03', title: 'SoundCloud Likes', description: 'Improve track engagement and make music look more trusted.' },
+          { number: '04', title: 'SoundCloud Reposts', description: 'Help tracks reach more listeners through wider sharing.' },
+          { number: '05', title: 'SoundCloud Comments', description: 'Add activity to songs, mixes, and audio content.' },
+          { number: '06', title: 'SoundCloud Downloads', description: 'Support track interest with better download activity.' },
         ],
       },
       {
@@ -507,12 +509,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore Snapchat Services',
         exploreHref: '/snapchat-smm-panel',
         services: [
-          { number: '01', title: 'Snapchat Followers-', description: 'Build a stronger profile base for creators and brands.' },
-          { number: '02', title: 'Snapchat Story Views-', description: 'Increase visibility for stories, offers, updates, and launches.' },
-          { number: '03', title: 'Snapchat Spotlight Views-', description: 'Support short video reach on Spotlight content.' },
-          { number: '04', title: 'Snapchat Shares-', description: 'Help selected content reach more users through sharing.' },
-          { number: '05', title: 'Snapchat Reactions-', description: 'Add engagement signals to stories and spotlight posts.' },
-          { number: '06', title: 'Snapchat Profile Visits-', description: 'Improve profile activity for campaigns and promotions.' },
+          { number: '01', title: 'Snapchat Followers', description: 'Build a stronger profile base for creators and brands.' },
+          { number: '02', title: 'Snapchat Story Views', description: 'Increase visibility for stories, offers, updates, and launches.' },
+          { number: '03', title: 'Snapchat Spotlight Views', description: 'Support short video reach on Spotlight content.' },
+          { number: '04', title: 'Snapchat Shares', description: 'Help selected content reach more users through sharing.' },
+          { number: '05', title: 'Snapchat Reactions', description: 'Add engagement signals to stories and spotlight posts.' },
+          { number: '06', title: 'Snapchat Profile Visits', description: 'Improve profile activity for campaigns and promotions.' },
         ],
       },
       {
@@ -526,12 +528,12 @@ export const data: HomePageData = {
         exploreLabel: 'Explore Website Traffic Services',
         exploreHref: '/services',
         services: [
-          { number: '01', title: 'Website Traffic-', description: 'Increase visits to websites, blogs, stores, and landing pages.' },
-          { number: '02', title: 'Targeted Traffic-', description: 'Send visitors based on selected country or campaign needs.' },
-          { number: '03', title: 'Organic Traffic-', description: 'Support natural-looking visit activity for selected pages.' },
-          { number: '04', title: 'Referral Traffic-', description: 'Get traffic from different source types for testing and tracking.' },
-          { number: '05', title: 'Social Traffic-', description: 'Send visitors from social platforms to offers and content pages.' },
-          { number: '06', title: 'Mobile Traffic-', description: 'Support mobile-focused campaigns, apps, and product pages.' },
+          { number: '01', title: 'Website Traffic', description: 'Increase visits to websites, blogs, stores, and landing pages.' },
+          { number: '02', title: 'Targeted Traffic', description: 'Send visitors based on selected country or campaign needs.' },
+          { number: '03', title: 'Organic Traffic', description: 'Support natural-looking visit activity for selected pages.' },
+          { number: '04', title: 'Referral Traffic', description: 'Get traffic from different source types for testing and tracking.' },
+          { number: '05', title: 'Social Traffic', description: 'Send visitors from social platforms to offers and content pages.' },
+          { number: '06', title: 'Mobile Traffic', description: 'Support mobile-focused campaigns, apps, and product pages.' },
         ],
       }
     ],
@@ -540,7 +542,7 @@ export const data: HomePageData = {
   about: {
     heading: {
       badge: 'About US',
-      title: 'Your Trusted SMM Panel in Bangladesh',
+      title: 'Your Trusted SMM Panel gt<in Bangladesh>',
       subtitle:
         'TrendEvo helps local businesses, creators, freelancers, agencies, and resellers grow faster with trusted SMM Panel in Bangladesh. From social proof to campaign visibility, our panel makes social media growth easier with bKash, Nagad, Rocket, and a simple dashboard.',
       align: 'left',
@@ -572,7 +574,7 @@ export const data: HomePageData = {
   workingProcess: {
     heading: {
       badge: 'Working Process',
-      title: 'Start Getting Results in 4 Easy Steps',
+      title: 'Start Getting Results in gt<4 Easy Steps>',
       subtitle:
         'TrendEvo keeps SMM panel ordering simple for Bangladesh users. Create a free account, add funds with local payment methods, choose a service, and track every order from one clean dashboard.',
       underlineSrc: '/images/working-process/working-process-section-underline.svg',
@@ -620,7 +622,7 @@ export const data: HomePageData = {
   whyChooseUs: {
     heading: {
       badge: 'Why Choose Us',
-      title: 'What Makes TrendEvo Different from Other SMM Panels in Bangladesh',
+      title: 'What Makes TrendEvo Different from Other SMM Panels gt<in Bangladesh>',
       subtitle:
         'TrendEvo is built for people who need a reliable SMM panel in Bangladesh without confusing steps, hidden delays, or payment trouble. From local creators to agencies, every order is easier to place, fund, and track.',
       underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
@@ -633,18 +635,24 @@ export const data: HomePageData = {
     leftFeatures: [
       {
         title: 'Affordable Price in Bangladesh',
+        description:
+          'Get budget-friendly SMM services for Facebook, Instagram, YouTube, TikTok, and more. TrendEvo keeps pricing practical for local businesses, freelancers, creators, and resellers.',
         icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
       {
         title: 'Real-Time Order Tracking',
+        description:
+          'Check your order status directly from the dashboard. You can see what is pending, processing, completed, or needs attention without contacting support every time.',
         icon: '/images/why-choose-us/why-choose-us-real-time-and-data-icon.webp',
         iconWidth: 43,
         iconHeight: 40,
       },
       {
         title: 'Fast & Stable Delivery',
+        description:
+          'Selected services start quickly after order placement. TrendEvo focuses on smooth processing, stable delivery, and clear service details before you buy.',
         icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
@@ -653,18 +661,24 @@ export const data: HomePageData = {
     rightFeatures: [
       {
         title: 'Bulk Order Support',
+        description:
+          'Manage multiple orders for clients, campaigns, pages, and platforms from one account. This helps agencies and resellers save time while handling repeat work.',
         icon: '/images/why-choose-us/why-choose-us-bulk-orders-provide-icon.png',
         iconWidth: 46,
         iconHeight: 40,
       },
       {
         title: 'Multiple SMM Services',
+        description:
+          'Order services for Facebook, Instagram, YouTube, TikTok, Telegram, LinkedIn, Spotify, SoundCloud, Snapchat, Discord, and website traffic from one panel.',
         icon: '/images/why-choose-us/why-choose-us-multitude-of-services-icon.webp',
         iconWidth: 57,
         iconHeight: 30,
       },
       {
         title: '24/7 Bangla & English Support',
+        description:
+          'Get help with payments, order links, service selection, and dashboard use whenever you need it. Our support is made for both beginners and regular SMM users.',
         icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
@@ -676,9 +690,9 @@ export const data: HomePageData = {
   paymentMethods: {
     heading: {
       badge: 'Payment Methods',
-      title: 'Easy SMM Panel Payments for Bangladesh Users',
+      title: 'Easy SMM Panel Payments for gt<Bangladesh Users>',
       subtitle:
-        'Many SMM panels are difficult for Bangladesh users because adding funds often means using international cards, dollar payments, or crypto methods that feel risky and confusing. TrendEvo removes that barrier. With TrendEvo, you can add funds to your SMM panel account using the payment methods you already use in Bangladesh. Add funds through bKash, Nagad, or Rocket, then order our affordable SMM services from one simple dashboard.',
+        'Many SMM panels are difficult for Bangladesh users because adding funds often means using international cards, dollar payments, or crypto methods that feel risky and confusing. TrendEvo removes that barrier.\n\nWith TrendEvo, you can add funds to your SMM panel account using the payment methods you already use in Bangladesh. Add funds through bKash, Nagad, or Rocket, then order our affordable SMM services from one simple dashboard.',
       underlineSrc: '/images/payment-methods/payment-methods-section-underline.svg',
       underlineWidth: 193,
       titleClassName:
@@ -757,7 +771,7 @@ export const data: HomePageData = {
   advantages: {
     heading: {
       badge: 'Who Uses TrendEvo',
-      title: 'TrendEvo Works for Everyone in Bangladesh',
+      title: 'TrendEvo Works for Everyone gt<in Bangladesh>',
       subtitle:
         'TrendEvo is built for local businesses, content creators, freelancers, ecommerce brands, agencies, and resellers in Bangladesh. From simple orders to bulk SMM campaigns, everything is easy to manage with local payments, fast delivery, and clear tracking.',
       underlineSrc: '/images/advantages/advantages-section-underline.svg',
@@ -803,7 +817,7 @@ export const data: HomePageData = {
   pricing: {
     heading: {
       badge: 'Pricing',
-      title: 'Affordable SMM Panel Pricing for Bangladesh',
+      title: 'Affordable SMM Panel Pricing gt<for Bangladesh>',
       subtitle:
         'TrendEvo keeps SMM pricing simple for creators, small businesses, freelancers, agencies, and resellers in Bangladesh. Choose the platform you need, check clear rates, add funds with bKash, Nagad, or Rocket, and order without hidden costs.',
       underlineSrc: '/images/pricing/pricing-section-underline.svg',
@@ -948,7 +962,7 @@ export const data: HomePageData = {
     sectionBackground:
       'linear-gradient(68.23deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)',
     badge: 'Customer Reviews',
-    title: 'Over 11,604 Users Across Bangladesh Trust TrendEvo',
+    title: 'Over 11,604 Users Across Bangladesh gt<Trust TrendEvo>',
     subtitle:
       'Read what real customers say about their experience with TrendEvo. These are genuine reviews from people who have used our services.',
     underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
@@ -992,7 +1006,7 @@ export const data: HomePageData = {
         id: 'right-1',
         name: 'Rakib Hasan',
         role: 'Digital Marketing Agency Owner',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
+        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
         quote:
           'The dashboard is simple and the pricing works well for Bangladesh clients. It is useful when we manage multiple campaigns for different pages.',
       },
@@ -1000,7 +1014,7 @@ export const data: HomePageData = {
         id: 'right-2',
         name: 'Farhana Islam',
         role: 'Content Creator',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
+        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
         quote:
           'I use TrendEvo for YouTube and TikTok campaigns. The local payment options and support make the process easier than many foreign SMM panels.',
       },
@@ -1012,67 +1026,23 @@ export const data: HomePageData = {
       image: '/images/testimonials/testimonials-featured-review-photo.webp',
       quote:
         'TrendEvo made SMM orders much easier for my online shop. I can add funds with bKash, choose the service, and track everything from the dashboard.',
-      youtubeVideoId: homeYoutubeReelVideoId,
     },
-    videoReviews: [
-      {
-        id: 'video-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        youtubeVideoId: homeYoutubeReelVideoId,
-      },
-      {
-        id: 'video-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        youtubeVideoId: homeYoutubeReelVideoId,
-      },
-      {
-        id: 'video-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail-3.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: homeYoutubeReelVideoId,
-      },
-      {
-        id: 'video-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail-4.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: homeYoutubeReelVideoId,
-      },
-      {
-        id: 'video-5',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: homeYoutubeReelVideoId,
-      },
-      {
-        id: 'video-6',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        thumbnail: '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: homeYoutubeReelVideoId,
-      },
-    ],
-    defaultTab: 'video',
+    videoReviews: [],
+    defaultTab: 'customer',
+    showTabSwitcher: false,
   },
 
   faq: {
-    label: 'FAQ',
-    title: 'Frequently Asked Questions',
+    label: 'Frequently Asked Questions',
+    title: 'Got Questions About TrendEvo? gt<We Have Answers>',
     subtitle:
-      'Got Questions About TrendEvo? We Have Answers. If you are new to SMM panels or have specific questions about our services, find your answers below. You can also contact our dedicated support team anytime via WhatsApp or Email.',
+      'If you are new to SMM panels or have specific questions about our services, find your answers below. You can also contact our dedicated support team anytime via WhatsApp or Email.',
     bg: 'section-7',
+    ctaTitle: 'Still have questions?',
+    ctaSubtitle:
+      "Can't find the answer you need? Contact our support team and get help with payments, orders, services, or dashboard use.",
+    ctaButtonLabel: 'Get in Touch',
+    ctaButtonHref: '/contact-us',
     items: [
       {
         question: 'What is an SMM panel?',
@@ -1129,8 +1099,7 @@ export const data: HomePageData = {
 
   blog: {
     heading: {
-      badge: 'Blog',
-      title: 'Latest SMM Tips for Bangladesh Marketers',
+      title: 'Latest SMM Tips gt<for Bangladesh Marketers>',
       subtitle:
         'Read practical guides on SMM panels, social media growth, local marketing, creator strategy, and reseller business ideas for Bangladesh. Learn how to use Facebook, Instagram, YouTube, TikTok, and other platforms with better planning.',
       underlineSrc: '/images/blog/blog-section-underline.svg',
@@ -1143,11 +1112,16 @@ export const data: HomePageData = {
   },
 
   cta: {
-    title: 'Ready to Grow with a Trusted SMM Panel in Bangladesh?',
+    title: 'Ready to gt<Grow with a Trusted SMM Panel> in Bangladesh?',
     description:
       'Join TrendEvo and manage your Facebook, Instagram, YouTube, TikTok, Telegram, and website traffic orders from one simple dashboard. Add funds with bKash, Nagad, or Rocket, choose your service, and start growing with secure order tracking.',
     primaryButtonLabel: 'Get Started Free',
     secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',
+  },
+
+  footer: {
+    blurb:
+      'TrendEvo is a trusted SMM panel in Bangladesh for businesses, creators, freelancers, agencies, and resellers. Order social media services for Facebook, Instagram, YouTube, TikTok, Telegram, LinkedIn, Spotify, SoundCloud, and more with easy payments through bKash, Nagad, or Rocket.',
   },
 };

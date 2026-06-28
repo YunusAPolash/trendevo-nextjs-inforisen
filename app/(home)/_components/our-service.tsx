@@ -340,16 +340,17 @@ export default function OurService() {
 
       <div className="container relative z-10 flex flex-col items-center gap-8 sm:gap-10 lg:gap-12">
         <SectionHeading
-          badge="our services"
-          title={
-            <>
-              Powerful <span className={GRADIENT_TEXT}>SMM Services</span> for
-              Fast Growth
-            </>
-          }
-          subtitle="Explore our comprehensive range of social media marketing services designed to help you grow your presence across all major platforms. From Facebook to TikTok. we've got you covered."
-          titleClassName="text-2xl sm:text-[28px] lg:text-[36px] dark:text-[#efedf1]"
-          subtitleClassName="text-sm sm:text-base md:text-lg dark:text-[#f5f6f7]"
+          badge={ourServicesHeading.badge}
+          title={ourServicesHeading.title}
+          subtitle={ourServicesHeading.subtitle}
+          titleClassName={cn(
+            ourServicesHeading.titleClassName,
+            'dark:text-[#efedf1]',
+          )}
+          subtitleClassName={cn(
+            ourServicesHeading.subtitleClassName,
+            'dark:text-[#f5f6f7]',
+          )}
         />
 
         <div className="flex w-full flex-col gap-6 sm:gap-8 lg:gap-9">
@@ -411,10 +412,10 @@ export default function OurService() {
                 </ul>
 
                 <PrimaryButton
-                  type="button"
+                  href={activePlatform.exploreHref}
                   className="self-start"
                 >
-                  View {activePlatform.label} Services
+                  {activePlatform.exploreLabel}
                 </PrimaryButton>
               </div>
             </div>

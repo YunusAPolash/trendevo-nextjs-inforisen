@@ -22,7 +22,6 @@ export default async function HomeBlog() {
     >
       <div className="container flex flex-col items-center gap-8 sm:gap-12">
         <SectionHeading
-          badge={blog.heading.badge}
           title={blog.heading.title}
           subtitle={blog.heading.subtitle}
           underlineSrc={blog.heading.underlineSrc}

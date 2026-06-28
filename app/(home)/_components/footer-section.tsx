@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import PrimarySection from '@/components/sections/primary-section';
+import { data as homePageData } from '@/app/(home)/page-data';
 import { cn } from '@/lib/utils';
+import { renderText } from '@/lib/utils/renderText';
 
 const quickLinks = [
   { label: 'Home', href: '/' },
@@ -243,12 +245,7 @@ export default function FooterSection() {
                 />
               </Link>
               <p className="text-[13px] font-medium leading-relaxed text-[#313131] sm:text-sm dark:text-[#ebecef]">
-                Trend Evo Panel is a trusted{' '}
-                <span className="text-gradient">SMM panel in Bangladesh</span>,
-                offering fast, secure, and affordable social media growth
-                services for all major platforms. With support for bKash and
-                Nagad, plus a fully automated, user-friendly system, we make
-                growing your online presence simple and effective.
+                {renderText(homePageData.footer.blurb)}
               </p>
             </div>
 

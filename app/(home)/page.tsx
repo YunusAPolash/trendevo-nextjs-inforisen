@@ -7,7 +7,6 @@ import HomeBlog from '@/app/(home)/_components/home-blog';
 import PaymentMethodsSection from '@/app/(home)/_components/payment-methods-section';
 import PlatformMarqueeSection from '@/app/(home)/_components/platform-marquee-section';
 import PricingSection from '@/app/(home)/_components/pricing-section';
-import StatsSection from '@/app/(home)/_components/stats-section';
 import { data as homePageData } from '@/app/(home)/page-data';
 import TestimonialsSection from '@/components/sections/testimonials-section';
 import WhyChooseUsSection from '@/app/(home)/_components/why-choose-us-section';
@@ -27,7 +26,6 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <StatsSection />
       <OurService />
       <AboutSection />
       <WorkingProcessSection />
