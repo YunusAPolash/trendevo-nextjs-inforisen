@@ -6,9 +6,9 @@ import TrustCard from './trust-card';
 import TrustConnectorVertical from './trust-connector-vertical';
 import TrustCrosshairCenter from './trust-crosshair-center';
 
-const { trust } = data;
+const { weAreDifferent } = data;
 
-type TrustCardData = (typeof trust.leftCards)[number];
+type TrustCardData = (typeof weAreDifferent.leftCards)[number];
 
 function TrustColumn({
   cards,
@@ -35,25 +35,31 @@ export default function TrustSection() {
     >
       <div className="container flex flex-col items-center gap-16">
         <SectionHeading
-          badge={trust.heading.badge}
-          title={renderText(trust.heading.title)}
-          subtitle={trust.heading.subtitle}
-          titleClassName={trust.heading.titleClassName}
-          subtitleClassName={trust.heading.subtitleClassName}
+          badge={weAreDifferent.heading.badge}
+          title={renderText(weAreDifferent.heading.title!)}
+          subtitle={weAreDifferent.heading.subtitle}
+          titleClassName={weAreDifferent.heading.titleClassName}
+          subtitleClassName={weAreDifferent.heading.subtitleClassName}
         />
 
         <div className="hidden w-full items-center justify-between gap-6 lg:flex">
-          <TrustColumn cards={trust.leftCards} connectorId="trust-connector-left" />
+          <TrustColumn
+            cards={weAreDifferent.leftCards}
+            connectorId="trust-connector-left"
+          />
           <TrustCrosshairCenter className="shrink-0 self-center" />
-          <TrustColumn cards={trust.rightCards} connectorId="trust-connector-right" />
+          <TrustColumn
+            cards={weAreDifferent.rightCards}
+            connectorId="trust-connector-right"
+          />
         </div>
 
         <div className="flex w-full flex-col gap-7 lg:hidden">
           {[
-            trust.leftCards[0],
-            trust.rightCards[0],
-            trust.leftCards[1],
-            trust.rightCards[1],
+            weAreDifferent.leftCards[0],
+            weAreDifferent.rightCards[0],
+            weAreDifferent.leftCards[1],
+            weAreDifferent.rightCards[1],
           ].map((card) => (
             <TrustCard key={card.title} {...card} />
           ))}

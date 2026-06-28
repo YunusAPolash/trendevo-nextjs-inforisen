@@ -4,34 +4,10 @@ import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import PrimaryButton from '@/components/buttons/primary-button';
 import { data } from '@/app/about-us/page-data';
+import { signUpUrl } from '@/lib/auth-urls';
 import { renderText } from '@/lib/utils/renderText';
 
-const { missionVision } = data;
-
-function FeatureList({ idPrefix }: { idPrefix: string }) {
-  return (
-    <ul className="flex w-full min-w-0 flex-col gap-4.5">
-      {missionVision.features.map((feature) => (
-        <li
-          key={`${idPrefix}-${feature}`}
-          className="flex w-full min-w-0 items-start gap-2"
-        >
-          <Image
-            src="/images/icons/site-check-icon.svg"
-            alt=""
-            width={24}
-            height={24}
-            className="mt-0.5 size-6 shrink-0"
-            aria-hidden
-          />
-          <span className="min-w-0 flex-1 text-base font-medium leading-normal break-words text-[#071431] sm:text-lg dark:text-[#dfe0e4]">
-            {feature}
-          </span>
-        </li>
-      ))}
-    </ul>
-  );
-}
+const { whatWeDo } = data;
 
 export default function MissionVisionSection() {
   return (
@@ -45,8 +21,8 @@ export default function MissionVisionSection() {
           <div className="relative mx-auto aspect-[567/698] w-full max-w-xl overflow-hidden lg:mx-0 lg:max-w-none">
             <div className="relative z-20 h-full w-full">
               <Image
-                src={missionVision.image.src}
-                alt={missionVision.image.alt}
+                src={whatWeDo.image.src}
+                alt={whatWeDo.image.alt}
                 fill
                 priority
                 className="object-contain object-bottom xl:object-center"
@@ -58,28 +34,31 @@ export default function MissionVisionSection() {
           <div className="flex w-full min-w-0 flex-col gap-10">
             <div className="flex w-full min-w-0 flex-col gap-7">
               <SectionHeading
-                align={missionVision.heading.align}
-                badge={missionVision.heading.badge}
-                title={renderText(missionVision.heading.title)}
-                subtitle={missionVision.heading.subtitle}
-                titleClassName={missionVision.heading.titleClassName}
-                subtitleClassName={missionVision.heading.subtitleClassName}
+                align={whatWeDo.heading.align}
+                badge={whatWeDo.heading.badge}
               />
 
-              <div className="flex w-full min-w-0 flex-col gap-10">
-                <FeatureList idPrefix="mission" />
-
-                <div className="flex w-full min-w-0 flex-col gap-6">
-                  <p className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl dark:text-[#c1c4cc]">
-                    {missionVision.platformDescription}
+              <div className="flex w-full min-w-0 flex-col gap-6">
+                {whatWeDo.paragraphs.map((paragraph) => (
+                  <p
+                    key={paragraph.slice(0, 48)}
+                    className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl dark:text-[#c1c4cc]"
+                  >
+                    {paragraph}
                   </p>
-                  <FeatureList idPrefix="vision" />
-                </div>
+                ))}
+
+                <p className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl dark:text-[#c1c4cc]">
+                  {whatWeDo.closingParagraph}
+                </p>
               </div>
             </div>
 
-            <PrimaryButton className="w-fit max-w-full gap-2 rounded-lg border-2 border-[#cc7aff] md:h-13 md:px-4.5 md:text-lg">
-              {missionVision.ctaLabel}
+            <PrimaryButton
+              href={signUpUrl}
+              className="w-fit max-w-full gap-2 rounded-lg border-2 border-[#cc7aff] md:h-13 md:px-4.5 md:text-lg"
+            >
+              {whatWeDo.ctaLabel}
               <ChevronsRight className="size-6 shrink-0" aria-hidden />
             </PrimaryButton>
           </div>

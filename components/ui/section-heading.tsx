@@ -5,7 +5,7 @@ import { renderText } from '@/lib/utils/renderText';
 
 type SectionHeadingProps = {
   badge?: string;
-  title: string | ReactNode;
+  title?: string | ReactNode | null;
   subtitle?: string;
   className?: string;
   align?: 'center' | 'left';
@@ -76,14 +76,16 @@ export default function SectionHeading({
             style={{ width: underlineWidth }}
           />
         </div>
-        <h2
-          className={cn(
-            'max-w-[961px] text-[28px] font-semibold leading-[1.35] tracking-[0.36px] text-[#071431] sm:text-[32px] lg:text-[36px] dark:text-[#efedf1]',
-            titleClassName,
-          )}
-        >
-          {renderHeadingText(title)}
-        </h2>
+        {title ? (
+          <h2
+            className={cn(
+              'max-w-[961px] text-[28px] font-semibold leading-[1.35] tracking-[0.36px] text-[#071431] sm:text-[32px] lg:text-[36px] dark:text-[#efedf1]',
+              titleClassName,
+            )}
+          >
+            {renderHeadingText(title)}
+          </h2>
+        ) : null}
       </div>
       {subtitle ? (
         <p

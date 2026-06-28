@@ -10,10 +10,12 @@ type SEO = {
 };
 
 type SectionHeadingData = {
-  badge: string;
-  title: string;
+  badge?: string;
+  title?: string;
   subtitle?: string;
   align?: 'left' | 'center';
+  underlineSrc?: string;
+  underlineWidth?: number;
   titleClassName?: string;
   subtitleClassName?: string;
 };
@@ -22,10 +24,11 @@ type AboutUsHeroData = {
   bg: 'section-1';
   variant: 'wide';
   decoration: 'contact';
-  eyebrow: string;
   title: string;
   description: string;
   primaryButtonLabel: string;
+  secondaryButtonLabel: string;
+  secondaryButtonHref: string;
   illustration: {
     src: string;
     alt: string;
@@ -46,28 +49,24 @@ type AboutUsTrustCard = {
 type AboutUsPageData = {
   seo: SEO;
   hero: AboutUsHeroData;
-  missionVision: {
+  whatWeDo: {
     heading: SectionHeadingData;
-    features: string[];
-    platformDescription: string;
+    paragraphs: string[];
+    closingParagraph: string;
     ctaLabel: string;
     image: {
       src: string;
       alt: string;
     };
   };
-  trust: {
+  weAreDifferent: {
     heading: SectionHeadingData;
     leftCards: [AboutUsTrustCard, AboutUsTrustCard];
     rightCards: [AboutUsTrustCard, AboutUsTrustCard];
   };
-  team: {
+  commitment: {
     heading: SectionHeadingData;
-    introParagraph: string;
-    founderParagraph: string;
-    checklistItems: string[];
-    ctaLabel: string;
-    ctaHref: string;
+    paragraphs: string[];
     image: {
       src: string;
       alt: string;
@@ -83,14 +82,13 @@ type AboutUsPageData = {
   };
 };
 
-const aboutUsFaqDefaultAnswer =
-  'TrendEvo provides fast, secure SMM services with transparent pricing, multiple payment options, and 24/7 support to help you grow across all major social platforms.';
+export type { AboutUsPageData, AboutUsTrustCard, SectionHeadingData };
 
 export const data: AboutUsPageData = {
   seo: {
-    title: 'About Us | TrendEvo',
+    title: 'About TrendEvo | Trusted SMM Panel in Bangladesh',
     description:
-      'Learn about TrendEvo — a trusted SMM panel helping businesses and creators grow on Facebook, Instagram, TikTok, and YouTube with fast, reliable services.',
+      'Learn about TrendEvo, a trusted SMM panel in Bangladesh offering affordable social media growth services, bKash, Nagad, Rocket payments, secure orders, and reseller support.',
     canonical: '/about-us',
   },
 
@@ -98,12 +96,13 @@ export const data: AboutUsPageData = {
     bg: 'section-1',
     variant: 'wide',
     decoration: 'contact',
-    eyebrow: 'Who We Are',
     title:
-      'Trend Evo – gt<Trusted SMM Panel> for Growing Businesses & Creators',
+      'Trusted SMM Panel in Bangladesh for gt<Smarter Social Media Growth>',
     description:
-      'Fast, reliable, and affordable gt<SMM services> to grow your social media presence. From Facebook and Instagram to TikTok and YouTube, Rendevo helps businesses and creators achieve real results. We provide trusted solutions and support to simplify social media marketing and boost growth.',
+      'TrendEvo helps businesses, creators, agencies, and resellers grow faster with reliable SMM panel services in Bangladesh. Our platform brings Facebook, Instagram, YouTube, TikTok, Telegram, and more into one simple dashboard. With affordable pricing, local payment options, secure orders, and fast processing, TrendEvo gives users a smarter way to build visibility, engagement, and trust online.',
     primaryButtonLabel: 'Get Started Now',
+    secondaryButtonLabel: 'See All Services',
+    secondaryButtonHref: '/services',
     illustration: {
       src: '/images/about/about-us-trendevo-specialist-representing-trusted-smm-panel-services-illustration.webp',
       alt: 'TrendEvo specialist representing trusted SMM panel services',
@@ -114,70 +113,66 @@ export const data: AboutUsPageData = {
     socialIcons: heroSocialIcons,
   },
 
-  missionVision: {
+  whatWeDo: {
     heading: {
-      badge: 'ABOUT US',
-      title: 'Our gt<Mission & Vision>',
-      subtitle:
-        'A reliable SMM platform designed to deliver fast, secure, and high-quality social media growth for individuals, businesses, and resellers.',
+      badge: 'What We Do',
       align: 'left',
-      titleClassName:
-        'max-w-2xl text-4xl leading-snug tracking-wide text-[#13203b] lg:text-5xl',
-      subtitleClassName: 'max-w-2xl text-xl font-medium',
     },
-    features: [
-      'Fast Delivery with Smooth and Reliable Performance',
-      'Real & High-Quality Engagement to Build Strong Social Proof',
-      'Safe, Secure & High Retention for Long-Term Growth',
+    paragraphs: [
+      'TrendEvo helps creators, businesses, agencies, and resellers manage social media growth from one simple dashboard. As a trusted SMM panel in Bangladesh, we provide fast, affordable, and easy-to-use services for people who want better visibility, engagement, and social proof.',
+      'Our services cover major platforms like Facebook, Instagram, YouTube, TikTok, Telegram, Spotify, and X-Twitter. Users can order followers, likes, views, comments, shares, subscribers, watch time, and other social media engagement services based on their needs and budget.',
+      'The process is simple. Create an account, add funds, choose your service, submit your link, and place your order. You can track every order from your dashboard without confusion.',
+      'TrendEvo also supports local payment methods like bKash, Nagad, and Rocket, making it easier for Bangladeshi users to use SMM services without international payment barriers.',
+      'For agencies, freelancers, and resellers, TrendEvo makes campaign management faster and more organized on our reseller smm panel in Bangladesh. With affordable pricing, secure orders, quick processing, and 24/7 support, we help users grow smarter across every major social platform.',
     ],
-    platformDescription:
-      'A reliable SMM platform designed to deliver fast, secure, and high-quality social media growth for individuals, businesses, and resellers.',
-    ctaLabel: 'Contact with Us',
+    closingParagraph:
+      'Ready to see what TrendEvo can do for your growth? Explore our services and choose the right package for your next campaign.',
+    ctaLabel: 'Create an Account Now',
     image: {
       src: '/images/about/about-us-our-mission-and-vision-illustration.png',
-      alt: 'TrendEvo specialist highlighting mission and vision for social media growth',
+      alt: 'TrendEvo specialist highlighting social media growth services',
     },
   },
 
-  trust: {
+  weAreDifferent: {
     heading: {
-      badge: 'WHY TRUST US',
-      title: 'Why Businesss Owner gt<Trust us>',
+      badge: 'We are Different',
+      title: 'Why We Are Different gt<from Other SMM Panels>',
       subtitle:
-        'Business owners trust us for delivering measurable growth with transparent, reliable services. Our dedicated support and commitment to excellence give businesses the confidence to succeed.',
+        'TrendEvo is built for users who need simple, secure, and affordable social media growth. We focus on local payments, fast service, clear order tracking, and reliable support.',
       titleClassName:
         'text-4xl leading-snug tracking-wide text-[#13203b] lg:text-5xl',
       subtitleClassName: 'max-w-6xl text-xl font-medium',
     },
     leftCards: [
       {
-        title: 'Built for Bangladesh',
+        title: 'Bangladesh-Focused Platform',
         description:
-          'While many SMM panels operate in Bangladesh, RendEvo stands out with a dedicated focus on the local market. Unlike international platforms that treat Bangladesh as secondary, our services are designed around the needs and expectations of Bangladeshi users.',
+          'TrendEvo is designed with Bangladeshi users in mind. We support local payment habits, affordable pricing needs, and easy service access for creators, businesses, freelancers, agencies, and resellers across Bangladesh.',
         iconSrc: '/images/about/about-us-built-for-bangladesh-icon.png',
         iconClassName: 'h-10 w-10 object-cover',
       },
       {
-        title: 'Local Payment and Pricing',
+        title: 'Simple Dashboard Experience',
         description:
-          'RendEvo supports local payments like bKash, Nagad, and Rocket, with pricing in Bangladeshi Taka. Our Bangla-speaking team ensures smooth, hassle-free social media growth aligned with local business needs.',
+          'Our dashboard is clean and easy to use. Users can add funds, choose services, place orders, track progress, and manage multiple campaigns without confusion or technical knowledge.',
         iconSrc: '/images/about/about-us-local-payment-and-pricing-icon.png',
         iconClassName: 'h-10 w-9 object-cover',
       },
     ],
     rightCards: [
       {
-        title: 'Stable and High Quality Services',
+        title: 'Fast and Secure Orders',
         description:
-          "RendEvo is more than just a transactional platform—we act as your long-term social media growth partner. Built with local expertise and insights, we are dedicated to supporting Bangladesh's dynamic digital economy while helping businesses achieve sustainable online growth.",
+          'TrendEvo focuses on quick order processing with safe order handling. Every user can place orders confidently, monitor status in real time, and manage social media growth more smoothly.',
         iconSrc:
           '/images/about/about-us-stable-and-high-quality-services-icon.webp',
         iconClassName: 'h-10 w-10 object-cover',
       },
       {
-        title: 'Local Support & Real Guidance',
+        title: 'Bangla and English Support for Resellers',
         description:
-          'We vet suppliers to ensure high-quality engagement and strong retention. Our system delivers orders accurately with minimal issues, while our guidance in English and Bangla helps you make smarter growth decisions.',
+          'TrendEvo helps resellers and agencies manage client campaigns from one platform. With flexible services, affordable rates, and organized order tracking, scaling an SMM business becomes easier.',
         iconSrc:
           '/images/about/about-us-local-support-and-real-guidance-icon.webp',
         iconClassName: 'h-10 w-8 object-cover',
@@ -185,88 +180,94 @@ export const data: AboutUsPageData = {
     ],
   },
 
-  team: {
+  commitment: {
     heading: {
-      badge: 'OUR TEAM',
-      title: 'The Team Behind Tgt<RendEvo>',
+      badge: 'Commitment',
+      title: 'Our Commitment gt<to You>',
       align: 'left',
       titleClassName:
         'text-4xl leading-snug tracking-wide text-[#13203b] lg:text-5xl',
     },
-    introParagraph:
-      'gt<RendEvo> is powered by a skilled team of digital marketing specialists, software engineers, social media strategists, and customer success experts. Each member shares a single mission: to help gt<Bangladeshi businesses> grow online with effective, results-driven social media solutions tailored to the local market.',
-    founderParagraph:
-      'Our founder, gt<Seam Rahman>, brings over gt<10 years of experience> guiding RendEvo\'s vision for impactful digital growth. The technical team ensures a secure, stable platform gt<24/7>, while our support staff offers personalized guidance in Bangla and English.',
-    checklistItems: [
-      'RendEvo makes digital marketing tools accessible to all Bangladeshi businesses.',
-      'We keep refining our services for reliable platform performance.',
-      'Client success drives us to maintain top social media growth standards.',
-      'RendEvo provides Bangladeshi businesses with reliable tools for online growth.',
+    paragraphs: [
+      'At TrendEvo, trust is the base of everything we do. As a reliable SMM panel in Bangladesh, we focus on clear service details, secure orders, fair pricing, and helpful support for every user.',
+      'Before you place an order, we try to keep service information simple and easy to understand. You can check the service type, order process, expected delivery flow, and important notes directly from the dashboard.',
+      'We work to process orders as quickly as possible. Many services start within a short time after order placement, and users can track their order status from their TrendEvo account.',
+      'If any issue happens, our support team is here to help. Whether it is about payment, order status, service selection, or dashboard use, we aim to give users a smooth and fair experience.',
+      'TrendEvo will never ask for your social media passwords. Our services work through public links, usernames, or profile URLs only. Your account safety matters to us, and our Privacy Policy explains how we handle user data.',
+      'Our promise is simple: affordable SMM services, local payment support, secure order handling, and a platform users can trust for long-term social media growth.',
     ],
-    ctaLabel: 'Our Services',
-    ctaHref: '/services',
     image: {
       src: '/images/about/about-us-trendevo-specialist-representing-trusted-smm-panel-services-illustration.webp',
-      alt: 'TrendEvo team specialist representing digital marketing expertise',
+      alt: 'TrendEvo commitment to secure and reliable SMM panel services',
     },
   },
 
   faq: {
-    label: 'FAQ',
-    title: 'gt<Frequently> Asked Questions',
+    label: 'Frequently Asked Questions',
+    title: '',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Find clear and simple answers to the most common questions about TrendEvo services, payments, orders, safety, and account management.',
     bg: 'section-7',
     items: [
       {
-        question: 'What is an SMM panel and how does TrendEvo work?',
-        answer: aboutUsFaqDefaultAnswer,
+        question: 'Is TrendEvo useful for Facebook page growth in Bangladesh?',
+        answer:
+          'Yes. TrendEvo helps Bangladeshi businesses, creators, and ecommerce sellers improve their Facebook page visibility with services like followers, likes, comments, shares, and post engagement.',
       },
       {
-        question: 'How fast will my order be delivered?',
-        answer: aboutUsFaqDefaultAnswer,
+        question: 'Can small businesses in Bangladesh use TrendEvo?',
+        answer:
+          'Yes. TrendEvo is suitable for small businesses, local shops, online stores, startups, and service providers in Bangladesh who want affordable social media growth from one dashboard.',
       },
       {
-        question: 'Are the followers and engagement real?',
-        answer: aboutUsFaqDefaultAnswer,
+        question: 'Do you provide SMM services for Bangladeshi resellers?',
+        answer:
+          'Yes. TrendEvo supports Bangladeshi resellers who want to manage client orders, offer social media growth services, and build their own SMM business with flexible pricing.',
+      },
+      {
+        question: 'Is TrendEvo safe to use?',
+        answer:
+          'Yes, TrendEvo is designed with secure order handling and simple account management. We do not ask for your social media passwords. Most services work through public links or usernames.',
+      },
+      {
+        question: 'Can I track my order progress?',
+        answer:
+          'Yes. After placing an order, you can track the order status from your TrendEvo dashboard. This helps you check whether your order is pending, processing, completed, or partially completed.',
       },
       {
         question: 'What payment methods do you accept?',
-        answer: aboutUsFaqDefaultAnswer,
+        answer:
+          'TrendEvo supports local payment methods for Bangladeshi users, including bKash, Nagad, and Rocket. This makes adding funds easier without using international cards.',
       },
       {
-        question: 'Do you offer reseller or API access?',
-        answer: aboutUsFaqDefaultAnswer,
+        question: 'How do I place an order on TrendEvo?',
+        answer:
+          'First, create an account and add funds. Then choose your service, enter the correct link, select the quantity, and submit your order. You can track everything from your dashboard.',
       },
       {
-        question: 'Is my account information safe?',
-        answer: aboutUsFaqDefaultAnswer,
+        question: 'Can using an SMM panel ban my account?',
+        answer:
+          'Using low-quality services or very fast unnatural growth can create risk. TrendEvo focuses on safer order handling, but users should choose services carefully and avoid sudden excessive orders.',
       },
       {
-        question: 'What happens if an order drops?',
-        answer: aboutUsFaqDefaultAnswer,
+        question: 'Do you offer support if my order has an issue?',
+        answer:
+          'Yes. TrendEvo provides support for order, payment, service, and dashboard-related questions. If you face any issue, you can contact our support team for guidance.',
       },
       {
-        question: 'How can I contact support?',
-        answer: aboutUsFaqDefaultAnswer,
-      },
-      {
-        question: 'Can I place bulk orders?',
-        answer: aboutUsFaqDefaultAnswer,
-      },
-      {
-        question: 'Do you offer refunds?',
-        answer: aboutUsFaqDefaultAnswer,
+        question: 'Can agencies and resellers use TrendEvo?',
+        answer:
+          'Yes. TrendEvo is suitable for agencies, freelancers, and resellers who manage multiple client campaigns. The dashboard makes it easier to order, track, and manage different services from one place.',
       },
     ],
   },
 
   cta: {
-    title: 'Ready to gt<Grow your Social Media> in Bangladesh',
+    title: 'Ready to gt<Grow Your Social Media> in Bangladesh?',
     description:
-      'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
-    primaryButtonLabel: 'Register Now',
-    secondaryButtonLabel: 'See all Services',
+      'Join over 56486 users who are already using TrendEvo to grow faster on Facebook, Instagram, YouTube, TikTok, and more. Getting started is free and takes less than 40 seconds.',
+    primaryButtonLabel: 'Create Free Account',
+    secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',
   },
 };
