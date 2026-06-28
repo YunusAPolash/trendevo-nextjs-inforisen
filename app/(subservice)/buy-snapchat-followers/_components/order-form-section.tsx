@@ -9,7 +9,11 @@ import PrimarySection, {
 } from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import PrimaryButton from '@/components/buttons/primary-button';
+import { data } from '@/app/(subservice)/buy-snapchat-followers/page-data';
+import { signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
+
+const { orderForm } = data;
 
 const MIN_QUANTITY = 100;
 const MAX_QUANTITY = 10000;
@@ -197,7 +201,7 @@ function FieldShell({
 }
 
 export default function SnapchatFollowersOrderFormSection() {
-  const [targetUrl, setTargetUrl] = useState('https://snapchat.com/add/yourprofile');
+  const [targetUrl, setTargetUrl] = useState(orderForm.urlPlaceholder);
   const [quantity, setQuantity] = useState(100);
 
   const totalAmount = useMemo(() => quantity * PRICE_PER_UNIT, [quantity]);
@@ -217,7 +221,7 @@ export default function SnapchatFollowersOrderFormSection() {
         >
           <div className="relative z-10 flex flex-col gap-[30px]">
             <SectionHeading
-              badge="Snapchat Services"
+              badge={orderForm.badge}
               underlineSrc="/images/facebook-page-followers/facebook-page-followers-section-underline.svg"
               underlineWidth={203}
               title={
@@ -232,7 +236,7 @@ export default function SnapchatFollowersOrderFormSection() {
                     <SnapchatIcon variant="title" alt="Snapchat" />
                   </span>
                   <span className="text-gradient text-[32px] font-semibold leading-none dark:from-[#9f00ff] dark:to-[#ff3fa2]">
-                    Followers
+                    {orderForm.serviceLabel}
                   </span>
                 </span>
               }
@@ -257,7 +261,7 @@ export default function SnapchatFollowersOrderFormSection() {
                     <div className="flex items-center gap-[5px]">
                       <SnapchatIcon variant="field" />
                       <span className="text-sm leading-normal text-[#535353] dark:text-[#f5f6f7]">
-                        Followers
+                        {orderForm.serviceTypeLabel}
                       </span>
                     </div>
                     <ChevronDown
@@ -268,13 +272,13 @@ export default function SnapchatFollowersOrderFormSection() {
                 </FormField>
               </div>
 
-              <FormField label="Snapchat Post URL">
+              <FormField label={orderForm.urlFieldLabel}>
                 <FieldShell>
                   <input
                     type="url"
                     value={targetUrl}
                     onChange={(event) => setTargetUrl(event.target.value)}
-                    placeholder="https://snapchat.com/add/yourprofile"
+                    placeholder={orderForm.urlPlaceholder}
                     className="w-full bg-transparent text-sm text-[#535353] outline-none placeholder:text-[#535353] dark:text-[#f5f6f7] dark:placeholder:text-[#f5f6f7]"
                   />
                 </FieldShell>
@@ -294,9 +298,10 @@ export default function SnapchatFollowersOrderFormSection() {
 
             <PrimaryButton
               type="button"
+              href={signUpUrl}
               className="w-full rounded-[12px] border-0 md:h-[52px] md:px-7 md:text-lg"
             >
-              Buy Now
+              {orderForm.submitLabel}
             </PrimaryButton>
           </div>
         </PrimaryCard>
