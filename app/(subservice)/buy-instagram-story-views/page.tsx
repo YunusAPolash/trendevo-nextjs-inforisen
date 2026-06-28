@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
-import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
 import { data as instagramStoryViewsPageData } from '@/app/(subservice)/buy-instagram-story-views/page-data';
-import InstagramStoryViewsCtaSection from '@/app/(subservice)/buy-instagram-story-views/_components/cta-section';
-import InstagramStoryViewsHeroSection from '@/app/(subservice)/buy-instagram-story-views/_components/hero-section';
-import InstagramStoryViewsOrderFormSection from '@/app/(subservice)/buy-instagram-story-views/_components/order-form-section';
-import InstagramStoryViewsWorkingProcessSection from '@/app/(subservice)/buy-instagram-story-views/_components/working-process-section';
+import InstagramStoryViewsCtaSection from './_components/cta-section';
+import InstagramStoryViewsHeroSection from './_components/hero-section';
+import InstagramStoryViewsOrderFormSection from './_components/order-form-section';
+import InstagramStoryViewsRelatedServicesSection from './_components/related-services-section';
+import InstagramStoryViewsThingsToKnowSection from './_components/things-to-know-section';
+import InstagramStoryViewsWhoShouldBuySection from './_components/who-should-buy-section';
+import InstagramStoryViewsWhyChooseSection from './_components/why-choose-section';
+import InstagramStoryViewsWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: instagramStoryViewsPageData.seo.title,
   description: instagramStoryViewsPageData.seo.description,
+  alternates: {
+    canonical: instagramStoryViewsPageData.seo.canonical,
+  },
 };
 
 export default function InstagramStoryViewsPage() {
@@ -18,12 +23,12 @@ export default function InstagramStoryViewsPage() {
     <>
       <InstagramStoryViewsHeroSection />
       <InstagramStoryViewsOrderFormSection />
-      <TestimonialsSection data={instagramStoryViewsPageData.testimonials} />
+      <InstagramStoryViewsWhyChooseSection />
+      <InstagramStoryViewsWhoShouldBuySection />
       <InstagramStoryViewsWorkingProcessSection />
-      {instagramStoryViewsPageData.serviceLeadingSlugs.map((slug) => (
-        <ServiceLeading key={slug} slug={slug} />
-      ))}
+      <InstagramStoryViewsThingsToKnowSection />
       <FaqSection data={instagramStoryViewsPageData.faq} />
+      <InstagramStoryViewsRelatedServicesSection />
       <InstagramStoryViewsCtaSection />
     </>
   );
