@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
-import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
-import ServiceAdvantage from '@/components/sections/service-advantage';
-import ServiceHero from '@/components/sections/serviceHero';
-import ServiceLeading from '@/components/sections/service-leading';
-import SocialService from '@/components/sections/social-service';
 import FaqSection from '@/components/sections/faq-section';
 import { data as youtubeSmmPanelPageData } from '@/app/(service)/youtube-smm-panel/page-data';
+import YoutubeSmmPanelAdvantageSection from './_components/advantage-section';
 import YoutubeSmmPanelCtaSection from './_components/cta-section';
+import YoutubeSmmPanelHeroSection from './_components/hero-section';
+import YoutubeSmmPanelLeadingSection from './_components/leading-section';
+import YoutubeSmmPanelSocialServiceSection from './_components/social-service-section';
 import YoutubeSmmPanelWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: youtubeSmmPanelPageData.seo.title,
   description: youtubeSmmPanelPageData.seo.description,
+  alternates: {
+    canonical: youtubeSmmPanelPageData.seo.canonical,
+  },
 };
 
 const schema = {
@@ -35,12 +37,11 @@ export default function YoutubeSmmPanelPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero slug={youtubeSmmPanelPageData.slug} />
-      <SocialService slug={youtubeSmmPanelPageData.slug} />
-      <StatsMarqueeSection />
-      <ServiceAdvantage slug={youtubeSmmPanelPageData.slug} />
+      <YoutubeSmmPanelHeroSection />
+      <YoutubeSmmPanelSocialServiceSection />
+      <YoutubeSmmPanelAdvantageSection />
       <YoutubeSmmPanelWorkingProcessSection />
-      <ServiceLeading slug={youtubeSmmPanelPageData.slug} />
+      <YoutubeSmmPanelLeadingSection />
       <FaqSection data={youtubeSmmPanelPageData.faq} />
       <YoutubeSmmPanelCtaSection />
     </>
