@@ -1,30 +1,35 @@
-import type { Metadata } from 'next';
-import FaqSection from '@/components/sections/faq-section';
-import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
-import { data as linkedinLikesPageData } from '@/app/(subservice)/buy-linkedin-likes/page-data';
-import LinkedinLikesCtaSection from '@/app/(subservice)/buy-linkedin-likes/_components/cta-section';
-import LinkedinLikesHeroSection from '@/app/(subservice)/buy-linkedin-likes/_components/hero-section';
-import LinkedinLikesOrderFormSection from '@/app/(subservice)/buy-linkedin-likes/_components/order-form-section';
-import LinkedinLikesWorkingProcessSection from '@/app/(subservice)/buy-linkedin-likes/_components/working-process-section';
-
-export const metadata: Metadata = {
-  title: linkedinLikesPageData.seo.title,
-  description: linkedinLikesPageData.seo.description,
-};
-
-export default function LinkedinLikesPage() {
-  return (
-    <>
-      <LinkedinLikesHeroSection />
-      <LinkedinLikesOrderFormSection />
-      <TestimonialsSection data={linkedinLikesPageData.testimonials} />
-      <LinkedinLikesWorkingProcessSection />
-      {linkedinLikesPageData.serviceLeadingSlugs.map((slug) => (
-        <ServiceLeading key={slug} slug={slug} />
-      ))}
-      <FaqSection data={linkedinLikesPageData.faq} />
-      <LinkedinLikesCtaSection />
-    </>
-  );
-}
+import type { Metadata } from 'next';
+import FaqSection from '@/components/sections/faq-section';
+import { data as linkedinLikesPageData } from '@/app/(subservice)/buy-linkedin-likes/page-data';
+import LinkedinLikesCtaSection from './_components/cta-section';
+import LinkedinLikesHeroSection from './_components/hero-section';
+import LinkedinLikesOrderFormSection from './_components/order-form-section';
+import LinkedinLikesRelatedServicesSection from './_components/related-services-section';
+import LinkedinLikesThingsToKnowSection from './_components/things-to-know-section';
+import LinkedinLikesWhoShouldBuySection from './_components/who-should-buy-section';
+import LinkedinLikesWhyChooseSection from './_components/why-choose-section';
+import LinkedinLikesWorkingProcessSection from './_components/working-process-section';
+
+export const metadata: Metadata = {
+  title: linkedinLikesPageData.seo.title,
+  description: linkedinLikesPageData.seo.description,
+  alternates: {
+    canonical: linkedinLikesPageData.seo.canonical,
+  },
+};
+
+export default function LinkedinLikesPage() {
+  return (
+    <>
+      <LinkedinLikesHeroSection />
+      <LinkedinLikesOrderFormSection />
+      <LinkedinLikesWhyChooseSection />
+      <LinkedinLikesWhoShouldBuySection />
+      <LinkedinLikesWorkingProcessSection />
+      <LinkedinLikesThingsToKnowSection />
+      <FaqSection data={linkedinLikesPageData.faq} />
+      <LinkedinLikesRelatedServicesSection />
+      <LinkedinLikesCtaSection />
+    </>
+  );
+}
