@@ -1,351 +1,385 @@
-import type { FaqSectionData } from '@/components/sections/faq-section';
-import type { ServiceWorkingProcessStep } from '@/components/sections/service-working-process-section';
-import type { TestimonialsSectionData } from '@/components/sections/testimonials-section';
-
-type SEO = {
-  title: string;
-  description: string;
-  canonical?: string;
-};
-
-type TiktokLikesPageData = {
-  seo: SEO;
-  hero: {
-    bg: 'section-1';
-    variant: 'wide';
-    title: string;
-    description: string;
-    signInLabel: string;
-    createAccountLabel: string;
-    trustBadgeBase: {
-      avatarSrcs: string[];
-      ratingIconSrc: string;
-      rating: string;
-    };
-    illustration: {
-      src: string;
-      alt: string;
-      width: number;
-      height: number;
-      maxWidthClassName: string;
-      unoptimized: boolean;
-    };
-  };
-  workingProcess: {
-    badge: string;
-    underlineSrc: string;
-    underlineWidth: number;
-    title: string;
-    subtitle: string;
-    titleClassName: string;
-    subtitleClassName: string;
-    steps: ServiceWorkingProcessStep[];
-  };
-  serviceLeadingSlugs: ['tiktok-likes', 'tiktok-likes-related-services'];
-  testimonials: TestimonialsSectionData;
-  faq: FaqSectionData;
-  cta: {
-    title: string;
-    description: string;
-    primaryButtonLabel: string;
-    secondaryButtonLabel: string;
-    secondaryButtonHref: string;
-  };
-};
-
-const reviewQuote =
-  'This platform helped us boost our brand visibility significantly. The results are real and the process is super easy. Five stars!';
-
-const youtubeReelVideoId = 'LXb3EKWsInQ';
-
-export const data: TiktokLikesPageData = {
-  seo: {
-    title: 'Buy TikTok Likes | TrendEvo',
-    description:
-      'Buy real TikTok likes at affordable prices. Fast delivery, secure checkout, and 24/7 support from TrendEvo in Bangladesh.',
-    canonical: '/buy-tiktok-likes',
-  },
-
-  hero: {
-    bg: 'section-1',
-    variant: 'wide',
-    title: 'Buy gt<TikTok Likes> in Real, Fast & Affordable price.',
-    description:
-      'Growing a TikTok profile can be tough. Consistent content and smart promotion are key, but results can be slow. At TrendEvo, we provide solutions to help your profile thrive with real likes and engagement.',
-    signInLabel: 'Sign In',
-    createAccountLabel: 'Create an Account',
-    trustBadgeBase: {
-      avatarSrcs: [
-        '/images/reviews/home-hero-hero-1-avatar.png',
-        '/images/reviews/home-hero-hero-2-avatar.png',
-        '/images/reviews/home-hero-hero-3-avatar.png',
-        '/images/reviews/home-hero-hero-4-avatar.png',
-        '/images/reviews/home-hero-hero-5-avatar.png',
-        '/images/reviews/home-hero-hero-3-avatar.png',
-      ],
-      ratingIconSrc: '/images/icons/home-hero-trust-star-rating-icon.png',
-      rating: '(4.8)',
-    },
-    illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
-      alt: 'Excited user celebrating TikTok profile growth with analytics chart',
-      width: 558,
-      height: 621,
-      maxWidthClassName: 'max-w-[558px]',
-      unoptimized: true,
-    },
-  },
-
-  workingProcess: {
-    badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
-    underlineWidth: 216,
-    title: 'How to Buy TikTok Likes gt<on TrendEvo>',
-    subtitle:
-      'A TikTok SMM panel helps businesses grow followers, likes, and engagement quickly and efficiently, saving time and boosting online presence.',
-    titleClassName:
-      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
-    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
-    steps: [
-      {
-        number: '01',
-        title: 'Simple Registration',
-        description:
-          'You’ll need to sign up quickly with just a few steps to start using our SMM panel.',
-      },
-      {
-        number: '02',
-        title: 'Add Funds to Your Balance',
-        description:
-          'Single out the features and services that fit your needs or budget.',
-      },
-      {
-        number: '03',
-        title: 'Find the TikTok Likes Service',
-        description:
-          'Make payments safely via trusted methods to protect your information.',
-      },
-      {
-        number: '04',
-        title: 'Enter Your TikTok Video URL & Place the Order',
-        description:
-          'Monitor your progress easily and see how your social media improves.',
-      },
-    ],
-  },
-
-  serviceLeadingSlugs: ['tiktok-likes', 'tiktok-likes-related-services'],
-
-  testimonials: {
-    sectionBackground:
-      'linear-gradient(64.26deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)',
-    badge: 'TESTIMONIALS',
-    title: 'TikTok Panel gt<Reviews>',
-    subtitle:
-      'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
-    underlineWidth: 169,
-    titleClassName:
-      'max-w-none whitespace-normal text-center text-2xl tracking-[0.36px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[36px] lg:text-[36px]',
-    subtitleClassName:
-      'max-w-[996px] text-center text-sm leading-normal text-[#404a60] dark:text-[#c1c4cc] sm:text-base md:text-lg',
-    customerTabLabel: 'Customer Reviews',
-    videoTabLabel: 'Video Reviews',
-    assets: {
-      starIconSrc: '/images/testimonials/testimonials-star-rating-icon.svg',
-      verifyBadgeSrc: '/images/testimonials/testimonials-verified-badge.svg',
-      customerReviewTabIconSrc:
-        '/images/testimonials/testimonials-customer-review-icon.svg',
-      videoReviewTabIconSrc:
-        '/images/testimonials/testimonials-clapperboard-icon.svg',
-      quoteOpenSrc: '/images/testimonials/testimonials-quote-mark-2.svg',
-      quoteCloseSrc: '/images/testimonials/testimonials-quote-mark.svg',
-      playIconSrc: '/images/testimonials/testimonials-video-play-icon.svg',
-      playOrbSrc: '/images/testimonials/testimonials-video-play-orb.webp',
-    },
-    leftTextReviews: [
-      {
-        id: 'left-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-2',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-3',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'left-4',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
-    ],
-    rightTextReviews: [
-      {
-        id: 'right-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote: reviewQuote,
-      },
-      {
-        id: 'right-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        quote: reviewQuote,
-      },
-    ],
-    featuredReview: {
-      name: 'Ariyena Islam',
-      role: 'Business Owner',
-      avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
-      quote: reviewQuote,
-      youtubeVideoId: youtubeReelVideoId,
-    },
-    videoReviews: [
-      {
-        id: 'video-1',
-        name: 'Seam Rahman',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-2',
-        name: 'Ariyan Khan',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-3',
-        name: 'Lisa',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-3.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-4',
-        name: 'Tamanna',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-4.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-5',
-        name: 'Rafi Islam',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail.webp',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-      {
-        id: 'video-6',
-        name: 'Nadia Ahmed',
-        role: 'Business Owner',
-        thumbnail:
-          '/images/testimonials/testimonials-video-review-thumbnail-2.webp',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-        youtubeVideoId: youtubeReelVideoId,
-      },
-    ],
-    defaultTab: 'video',
-  },
-
-  faq: {
-    label: 'FAQ',
-    title: 'gt<Frequently> Asked Questions',
-    subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
-    bg: 'section-7',
-    items: [
-      {
-        question: 'What is an SMM Panel?',
-        answer:
-          'An SMM panel is an online platform where you can buy social media marketing services such as TikTok likes, followers, and engagement. TrendEvo lets you place orders, track delivery, and manage your growth from one dashboard.',
-      },
-      {
-        question: 'Can the SMM Panel target a specific group?',
-        answer:
-          'Yes. Depending on the service you choose, TrendEvo offers targeting options so your TikTok likes can align with your preferred audience type, region, or niche when available for that package.',
-      },
-      {
-        question: 'Is Using an SMM Panel Safe?',
-        answer:
-          'TrendEvo uses secure checkout, encrypted payments, and privacy-focused order handling. We never ask for your TikTok password — only your public video URL is required to deliver likes.',
-      },
-      {
-        question: 'Does using an SMM Panel risk banning my account?',
-        answer:
-          'We deliver likes gradually using methods designed to look natural. While no service can guarantee zero platform risk, TrendEvo focuses on quality delivery and safe pacing to help protect your profile.',
-      },
-      {
-        question: 'Can I track the progress of my orders?',
-        answer:
-          'Yes. After placing an order, you can monitor its status in real time from your TrendEvo dashboard and see updates as your TikTok likes delivery progresses.',
-      },
-      {
-        question: 'What payment methods do you accept?',
-        answer:
-          'TrendEvo supports multiple trusted payment options including local and international methods. Available gateways are shown at checkout when you add funds or pay for your order.',
-      },
-      {
-        question: 'Can I cancel my order instantly?',
-        answer:
-          'Orders that have not started processing can often be cancelled from your account. Once delivery is in progress, cancellation may not be possible — contact our support team and we will review your request promptly.',
-      },
-      {
-        question: 'Do you have customer support?',
-        answer:
-          'Yes. TrendEvo offers 24/7 customer support to help with orders, payments, and account questions. Reach out anytime through live chat or our contact channels if you need assistance.',
-      },
-    ],
-  },
-
-  cta: {
-    title: 'Ready to gt<Grow your Social Media> in Bangladesh',
-    description:
-      'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
-    primaryButtonLabel: 'Register Now',
-    secondaryButtonLabel: 'See all Services',
-    secondaryButtonHref: '/services',
-  },
-};
+import type { FaqSectionData } from '@/components/sections/faq-section';
+import type { ServiceWorkingProcessStep } from '@/components/sections/service-working-process-section';
+import type { ThingsToKnowSectionData } from '@/components/sections/things-to-know-section';
+import type { WhoShouldBuySectionData } from '@/components/sections/who-should-buy-section';
+import type { ServiceLeadingContent } from '@/components/serviceSmmPanel/service-leading-content';
+
+type SEO = {
+  title: string;
+  description: string;
+  canonical?: string;
+};
+
+type TiktokLikesPageData = {
+  seo: SEO;
+  hero: {
+    bg: 'section-1';
+    variant: 'wide';
+    trustLabel: string;
+    title: string;
+    description: string;
+    descriptionSecondary: string;
+    primaryButtonLabel: string;
+    secondaryButtonLabel: string;
+    secondaryButtonHref: string;
+    trustBadgeBase: {
+      avatarSrcs: string[];
+      ratingIconSrc: string;
+      rating: string;
+    };
+    illustration: {
+      src: string;
+      alt: string;
+      width: number;
+      height: number;
+      maxWidthClassName: string;
+      unoptimized: boolean;
+    };
+  };
+  orderForm: {
+    badge: string;
+    serviceLabel: string;
+    serviceTypeLabel: string;
+    urlFieldLabel: string;
+    urlPlaceholder: string;
+    submitLabel: string;
+  };
+  whyChoose: ServiceLeadingContent;
+  whoShouldBuy: WhoShouldBuySectionData;
+  workingProcess: {
+    badge: string;
+    underlineSrc: string;
+    underlineWidth: number;
+    title: string;
+    subtitle: string;
+    titleClassName: string;
+    subtitleClassName: string;
+    steps: ServiceWorkingProcessStep[];
+  };
+  thingsToKnow: ThingsToKnowSectionData;
+  faq: FaqSectionData;
+  relatedServices: ServiceLeadingContent & {
+    ctaLabel: string;
+  };
+  cta: {
+    title: string;
+    description: string;
+    primaryButtonLabel: string;
+    secondaryButtonLabel: string;
+    secondaryButtonHref: string;
+  };
+};
+
+export const data: TiktokLikesPageData = {
+  seo: {
+    title: 'Buy TikTok Likes in Bangladesh | TrendEvo',
+    description:
+      'Buy TikTok Likes in Bangladesh with TrendEvo. Improve video engagement, FYP visibility, creator trust, and social proof using bKash, Nagad, Rocket, and secure orders.',
+    canonical: '/buy-tiktok-likes',
+  },
+
+  hero: {
+    bg: 'section-1',
+    variant: 'wide',
+    trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi TikTok Creators, Brands & Agencies',
+    title: 'Buy gt<TikTok Likes> in Bangladesh for Stronger Video Engagement',
+    description:
+      'TikTok likes can make a video feel more accepted when viewers discover it on the For You Page, profile grid, search results, or shared links. Stronger like activity can help new viewers feel that the content is already getting attention. TrendEvo helps creators, influencers, eCommerce sellers, local brands, agencies, startups, SMEs, and resellers buy TikTok likes in Bangladesh through a simple TikTok SMM Panel with local payment support and secure delivery.',
+    descriptionSecondary:
+      'Our TikTok Likes Service is built for videos that need better engagement signals, a cleaner first impression, and stronger creator trust. As a best SMM Panel BD option for TikTok marketing, TrendEvo lets you select a suitable TikTok like package, pay through bKash, Nagad, Rocket, or other supported methods, and improve video activity without sharing your password.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All Services',
+    secondaryButtonHref: '/services',
+    trustBadgeBase: {
+      avatarSrcs: [
+        '/images/reviews/home-hero-hero-1-avatar.png',
+        '/images/reviews/home-hero-hero-2-avatar.png',
+        '/images/reviews/home-hero-hero-3-avatar.png',
+        '/images/reviews/home-hero-hero-4-avatar.png',
+        '/images/reviews/home-hero-hero-5-avatar.png',
+        '/images/reviews/home-hero-hero-3-avatar.png',
+      ],
+      ratingIconSrc: '/images/icons/home-hero-trust-star-rating-icon.png',
+      rating: '(4.8)',
+    },
+    illustration: {
+      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      alt: 'Buy TikTok Likes in Bangladesh with TrendEvo',
+      width: 558,
+      height: 621,
+      maxWidthClassName: 'max-w-[558px]',
+      unoptimized: true,
+    },
+  },
+
+  orderForm: {
+    badge: 'TikTok Services',
+    serviceLabel: 'Likes',
+    serviceTypeLabel: 'Likes',
+    urlFieldLabel: 'TikTok Video URL',
+    urlPlaceholder: 'https://tiktok.com/@username/video/123456789',
+    submitLabel: 'Pay Now With bKash/ Nagad',
+  },
+
+  whyChoose: {
+    badge: 'WHY CHOOSE US',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 190,
+    title: 'Why Choose TrendEvo to Buy gt<TikTok Likes> in Bangladesh',
+    subtitle:
+      'TrendEvo is built for Bangladeshi users who want a simple way to increase TikTok video engagement. From local payment support to easy order tracking, our Bangladesh SMM Panel helps creators, influencers, brands, agencies, and resellers manage TikTok likes from one clean dashboard.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Fast Like Processing',
+        description:
+          'Your TikTok likes order starts after you submit it from the dashboard. Delivery speed may depend on the video status, package size, and current order volume, but TrendEvo keeps the process smooth and easy to follow.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: '-scale-y-100 rotate-180 object-cover',
+      },
+      {
+        title: 'Affordable Like Packages',
+        description:
+          'You can buy TikTok likes in Bangladesh without using a large promotion budget. Our packages work well for new creators, influencers, online stores, fashion brands, restaurants, agencies, freelancers, and SMM resellers.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconClassName: 'object-cover',
+      },
+      {
+        title: 'Helpful Support Team',
+        description:
+          'Need help choosing the right TikTok Like Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[167%] max-w-none object-cover -translate-x-[34%] -translate-y-[13%]',
+      },
+    ],
+    bottomRowFeatures: [
+      {
+        title: 'Local Payment Options',
+        description:
+          'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes TikTok Marketing Bangladesh easier for users who prefer trusted local payment systems.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        iconWidth: 40,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'size-[125%] max-w-none object-cover -translate-x-[11%] -translate-y-[12%]',
+      },
+      {
+        title: 'Engagement-Focused Growth',
+        description:
+          'TrendEvo focuses on TikTok likes that support video credibility, audience response, and social proof. You can start with a small package, review the result, and scale your activity based on your content plan.',
+        iconFrameSrc:
+          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+      },
+    ],
+  },
+
+  whoShouldBuy: {
+    badge: 'Buy TikTok Likes',
+    title: 'Who Should Buy gt<TikTok Likes> in Bangladesh?',
+    subtitle:
+      'TikTok likes help videos look more appealing when viewers discover them through the For You Page, search, hashtags, profile visits, duets, stitches, or shared links. TrendEvo’s TikTok engagement service is useful for Bangladeshi users who want stronger video interaction, better content trust, and more visible audience response.',
+    titleClassName:
+      'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    items: [
+      {
+        title: 'TikTok Creators and Influencers',
+        description:
+          'Bangladeshi creators need likes to make videos feel more accepted by viewers. Comedy creators, fashion influencers, food reviewers, travel vloggers, educators, musicians, fitness pages, and lifestyle creators can use TikTok likes to improve content appeal after people watch their videos.',
+      },
+      {
+        title: 'E-commerce Stores and Fashion Brands',
+        description:
+          'Online businesses in Bangladesh use TikTok for product demos, unboxing clips, short reviews, and trend-based promotions. Clothing shops, beauty brands, gadget sellers, jewelry pages, and handmade product stores can buy TikTok likes to make product videos look more trusted.',
+      },
+      {
+        title: 'Local Businesses and SMEs',
+        description:
+          'Restaurants, cafés, cloud kitchens, salons, gyms, training centers, and service providers can use TikTok likes to boost offer videos, menu clips, service reels, customer moments, and local promotional content.',
+      },
+      {
+        title: 'Agencies, Freelancers, and Resellers',
+        description:
+          'Digital agencies and freelancers often manage TikTok engagement for client accounts. TrendEvo helps them place TikTok likes orders from one dashboard with clear pricing, local payment support, and reseller-friendly access.',
+      },
+      {
+        title: 'Startups, Public Figures, and Community Pages',
+        description:
+          'Startups, public figures, NGOs, media pages, and community projects need videos that look active and audience-approved. TikTok likes can support awareness clips, launch content, public messages, educational videos, and campaign posts.',
+      },
+    ],
+  },
+
+  workingProcess: {
+    badge: 'WORKING PROCESS',
+    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineWidth: 216,
+    title: 'How to Buy TikTok Likes on TrendEvo — gt<Step by Step>',
+    subtitle:
+      'Buying TikTok likes in Bangladesh should be simple and clear. TrendEvo keeps the full process easy, so creators, business owners, influencers, agencies, freelancers, and resellers can place orders without technical knowledge.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    steps: [
+      {
+        number: '01',
+        title: 'Create Your TrendEvo Account',
+        description:
+          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse TikTok SMM Panel services, compare prices, and manage your orders from one place.',
+      },
+      {
+        number: '02',
+        title: 'Add Funds to Your Balance',
+        description:
+          'Add money to your account using supported payment methods in Bangladesh. You can fund your balance through bKash, Nagad, Rocket, or other available options before placing your TikTok likes order.',
+      },
+      {
+        number: '03',
+        title: 'Choose TikTok Likes Service',
+        description:
+          'Go to the TikTok services section and select the likes package that matches your video goal. You can choose a starter package, a content boost package, or a larger package for client campaigns.',
+      },
+      {
+        number: '04',
+        title: 'Enter Your TikTok Video URL',
+        description:
+          'Paste the correct TikTok video link, select the quantity, and submit the order. You do not need to share your TikTok password. TrendEvo processes the order using the public video URL only.',
+      },
+    ],
+  },
+
+  thingsToKnow: {
+    badge: 'Things to Know',
+    title: 'Things to Know Before You Buy gt<TikTok Likes>',
+    paragraphs: [
+      'Buying TikTok likes can help your video look more active, but the best result comes when your content is ready for attention. Before placing an order on TrendEvo, make sure your TikTok video is public, your video link is correct, and your selected package fits your current video activity.',
+      'You do not need to share your TikTok password to buy TikTok likes in Bangladesh. TrendEvo only needs your public video URL to process the order. This keeps the process safer and easier for creators, businesses, influencers, agencies, and resellers.',
+      'For a natural video appearance, avoid sudden oversized orders on videos with weak hooks, unclear captions, or very low activity. Start with a suitable quantity, improve your opening seconds, and grow engagement step by step. This helps your TikTok video look more believable to Bangladeshi viewers.',
+      'TikTok likes can support social proof, but they work best with strong videos. Use quick hooks, clear visuals, trending sounds, relatable topics, product benefits, local context, and strong captions so viewers have a reason to watch, like, and share.',
+    ],
+    ctaLabel: 'Create Your Account Now',
+  },
+
+  faq: {
+    label: 'Frequently Asked Questions',
+    title: 'Frequently Asked Questions — gt<Buy TikTok Likes> in Bangladesh',
+    subtitle:
+      'Find clear answers about buying TikTok likes in Bangladesh, payment options, delivery, safety, order tracking, and how TrendEvo helps support TikTok video engagement.',
+    bg: 'section-7',
+    items: [
+      {
+        question: 'Is it safe to buy TikTok likes from TrendEvo?',
+        answer:
+          'Yes, TrendEvo uses a simple order process where you only need to submit your public TikTok video link. We never ask for your TikTok password, so your login details stay private.',
+      },
+      {
+        question: 'Can I buy TikTok likes in Bangladesh with bKash?',
+        answer:
+          'Yes, you can add funds using bKash and then place your TikTok likes order from the TrendEvo dashboard. We also support other local payment options for Bangladeshi users.',
+      },
+      {
+        question: 'Do you accept Nagad or Rocket payments?',
+        answer:
+          'Yes, TrendEvo supports local payment methods such as Nagad, Rocket, and other available options. This makes it easier for creators, businesses, influencers, agencies, and resellers in Bangladesh.',
+      },
+      {
+        question: 'Do I need to share my TikTok password?',
+        answer:
+          'No, you do not need to share your password. To buy TikTok likes, you only need to provide the correct TikTok video URL and choose your preferred quantity.',
+      },
+      {
+        question: 'How fast will my TikTok likes order start?',
+        answer:
+          'Most orders start after submission and payment confirmation. Delivery time can vary based on service type, quantity, video status, and current order volume.',
+      },
+      {
+        question: 'Can I track my TikTok likes order?',
+        answer:
+          'Yes, you can track your order status from the TrendEvo dashboard. The order panel helps you check whether your TikTok likes order is pending, processing, completed, or partially completed.',
+      },
+      {
+        question: 'Can I buy likes for a new TikTok video?',
+        answer:
+          'Yes, new TikTok videos can order likes. For a natural appearance, it is better to start with a smaller package, improve your video hook, and increase engagement gradually.',
+      },
+      {
+        question: 'Do TikTok likes help with video credibility?',
+        answer:
+          'Yes, TikTok likes make a video look more appreciated and viewer-approved. They support social proof, but long-term credibility also depends on content quality, consistency, and audience response.',
+      },
+      {
+        question: 'Will buying TikTok likes help my video reach the FYP?',
+        answer:
+          'TikTok likes support engagement signals, but FYP reach depends on many factors such as watch time, completion rate, replays, shares, comments, topic interest, and video quality.',
+      },
+      {
+        question: 'Who can use TrendEvo’s TikTok likes service?',
+        answer:
+          'TrendEvo is useful for Bangladeshi creators, influencers, eCommerce stores, local businesses, SMEs, startups, public figures, NGOs, digital agencies, freelancers, and SMM resellers who want stronger TikTok video engagement.',
+      },
+    ],
+    ctaTitle: 'Still have questions?',
+    ctaSubtitle:
+      "Can't find the answer you're looking for? Please get in touch with our team.",
+    ctaButtonLabel: 'Contact US',
+    ctaButtonHref: '/contact-us',
+  },
+
+  relatedServices: {
+    badge: 'RELATED SERVICE',
+    underlineSrc: '/images/why-choose-us/why-choose-us-section-underline.svg',
+    underlineWidth: 198,
+    title: 'Related Services You gt<Might Also Need>',
+    subtitle:
+      'TikTok likes help your videos look more engaging, but stronger growth comes when your content also gains views and profile trust. TrendEvo offers related TikTok SMM services in Bangladesh to support video performance, creator credibility, and brand awareness.',
+    titleClassName:
+      'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
+    subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
+    topRowFeatures: [
+      {
+        title: 'Buy TikTok Views',
+        description:
+          'Increase visibility for your TikTok videos with more views. This service helps product videos, trend clips, creator content, educational posts, and campaign videos look more active to new viewers.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+      {
+        title: 'Buy TikTok Followers',
+        description:
+          'Grow your TikTok profile authority with more followers. This service helps creators, brands, and businesses build a stronger first impression when people visit after watching your videos.',
+        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        iconWidth: 39,
+        iconHeight: 40,
+        iconWrapperClassName: 'overflow-hidden',
+        iconClassName:
+          'h-[128.12%] w-[120.8%] object-cover -translate-x-[10.27%] -translate-y-[9.29%]',
+      },
+    ],
+    bottomRowFeatures: [],
+    ctaLabel: 'Sign Up Now',
+  },
+
+  cta: {
+    title: 'Ready to Grow with a gt<Trusted SMM Panel> in Bangladesh?',
+    description:
+      'Join TrendEvo and manage your TikTok, Instagram, Facebook, YouTube, Twitter (X), Telegram, and website traffic orders from one simple dashboard. Add funds with bKash, Nagad, or Rocket, choose your service, and start growing with secure order tracking.',
+    primaryButtonLabel: 'Get Started Free',
+    secondaryButtonLabel: 'See All TikTok Services',
+    secondaryButtonHref: '/tiktok-smm-panel',
+  },
+};
