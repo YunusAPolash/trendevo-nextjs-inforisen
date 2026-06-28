@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
-import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
-import ServiceAdvantage from '@/components/sections/service-advantage';
-import ServiceHero from '@/components/sections/serviceHero';
-import ServiceLeading from '@/components/sections/service-leading';
-import SocialService from '@/components/sections/social-service';
 import FaqSection from '@/components/sections/faq-section';
 import { data as spotifySmmPanelPageData } from '@/app/(service)/spotify-smm-panel/page-data';
+import SpotifySmmPanelAdvantageSection from './_components/advantage-section';
 import SpotifySmmPanelCtaSection from './_components/cta-section';
+import SpotifySmmPanelHeroSection from './_components/hero-section';
+import SpotifySmmPanelLeadingSection from './_components/leading-section';
+import SpotifySmmPanelSocialServiceSection from './_components/social-service-section';
 import SpotifySmmPanelWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: spotifySmmPanelPageData.seo.title,
   description: spotifySmmPanelPageData.seo.description,
+  alternates: {
+    canonical: spotifySmmPanelPageData.seo.canonical,
+  },
 };
 
 const schema = {
@@ -35,12 +37,11 @@ export default function SpotifySmmPanelPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero slug={spotifySmmPanelPageData.slug} />
-      <SocialService slug={spotifySmmPanelPageData.slug} />
-      <StatsMarqueeSection />
-      <ServiceAdvantage slug={spotifySmmPanelPageData.slug} />
+      <SpotifySmmPanelHeroSection />
+      <SpotifySmmPanelSocialServiceSection />
+      <SpotifySmmPanelAdvantageSection />
       <SpotifySmmPanelWorkingProcessSection />
-      <ServiceLeading slug={spotifySmmPanelPageData.slug} />
+      <SpotifySmmPanelLeadingSection />
       <FaqSection data={spotifySmmPanelPageData.faq} />
       <SpotifySmmPanelCtaSection />
     </>

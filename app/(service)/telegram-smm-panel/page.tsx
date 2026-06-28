@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
-import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
-import ServiceAdvantage from '@/components/sections/service-advantage';
-import ServiceHero from '@/components/sections/serviceHero';
-import ServiceLeading from '@/components/sections/service-leading';
-import SocialService from '@/components/sections/social-service';
 import FaqSection from '@/components/sections/faq-section';
 import { data as telegramSmmPanelPageData } from '@/app/(service)/telegram-smm-panel/page-data';
+import TelegramSmmPanelAdvantageSection from './_components/advantage-section';
 import TelegramSmmPanelCtaSection from './_components/cta-section';
+import TelegramSmmPanelHeroSection from './_components/hero-section';
+import TelegramSmmPanelLeadingSection from './_components/leading-section';
+import TelegramSmmPanelSocialServiceSection from './_components/social-service-section';
 import TelegramSmmPanelWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: telegramSmmPanelPageData.seo.title,
   description: telegramSmmPanelPageData.seo.description,
+  alternates: {
+    canonical: telegramSmmPanelPageData.seo.canonical,
+  },
 };
 
 const schema = {
@@ -35,12 +37,11 @@ export default function TelegramSmmPanelPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero slug={telegramSmmPanelPageData.slug} />
-      <SocialService slug={telegramSmmPanelPageData.slug} />
-      <StatsMarqueeSection />
-      <ServiceAdvantage slug={telegramSmmPanelPageData.slug} />
+      <TelegramSmmPanelHeroSection />
+      <TelegramSmmPanelSocialServiceSection />
+      <TelegramSmmPanelAdvantageSection />
       <TelegramSmmPanelWorkingProcessSection />
-      <ServiceLeading slug={telegramSmmPanelPageData.slug} />
+      <TelegramSmmPanelLeadingSection />
       <FaqSection data={telegramSmmPanelPageData.faq} />
       <TelegramSmmPanelCtaSection />
     </>

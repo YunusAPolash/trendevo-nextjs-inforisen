@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
-import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
-import ServiceAdvantage from '@/components/sections/service-advantage';
-import ServiceHero from '@/components/sections/serviceHero';
-import ServiceLeading from '@/components/sections/service-leading';
-import SocialService from '@/components/sections/social-service';
 import FaqSection from '@/components/sections/faq-section';
 import { data as tiktokSmmPanelPageData } from '@/app/(service)/tiktok-smm-panel/page-data';
+import TiktokSmmPanelAdvantageSection from './_components/advantage-section';
 import TiktokSmmPanelCtaSection from './_components/cta-section';
+import TiktokSmmPanelHeroSection from './_components/hero-section';
+import TiktokSmmPanelLeadingSection from './_components/leading-section';
+import TiktokSmmPanelSocialServiceSection from './_components/social-service-section';
 import TiktokSmmPanelWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: tiktokSmmPanelPageData.seo.title,
   description: tiktokSmmPanelPageData.seo.description,
+  alternates: {
+    canonical: tiktokSmmPanelPageData.seo.canonical,
+  },
 };
 
 const schema = {
@@ -35,12 +37,11 @@ export default function TiktokSmmPanelPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero slug={tiktokSmmPanelPageData.slug} />
-      <SocialService slug={tiktokSmmPanelPageData.slug} />
-      <StatsMarqueeSection />
-      <ServiceAdvantage slug={tiktokSmmPanelPageData.slug} />
+      <TiktokSmmPanelHeroSection />
+      <TiktokSmmPanelSocialServiceSection />
+      <TiktokSmmPanelAdvantageSection />
       <TiktokSmmPanelWorkingProcessSection />
-      <ServiceLeading slug={tiktokSmmPanelPageData.slug} />
+      <TiktokSmmPanelLeadingSection />
       <FaqSection data={tiktokSmmPanelPageData.faq} />
       <TiktokSmmPanelCtaSection />
     </>

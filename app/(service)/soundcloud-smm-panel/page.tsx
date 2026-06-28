@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
-import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
-import ServiceAdvantage from '@/components/sections/service-advantage';
-import ServiceHero from '@/components/sections/serviceHero';
-import ServiceLeading from '@/components/sections/service-leading';
-import SocialService from '@/components/sections/social-service';
 import FaqSection from '@/components/sections/faq-section';
 import { data as soundcloudSmmPanelPageData } from '@/app/(service)/soundcloud-smm-panel/page-data';
+import SoundcloudSmmPanelAdvantageSection from './_components/advantage-section';
 import SoundcloudSmmPanelCtaSection from './_components/cta-section';
+import SoundcloudSmmPanelHeroSection from './_components/hero-section';
+import SoundcloudSmmPanelLeadingSection from './_components/leading-section';
+import SoundcloudSmmPanelSocialServiceSection from './_components/social-service-section';
 import SoundcloudSmmPanelWorkingProcessSection from './_components/working-process-section';
 
 export const metadata: Metadata = {
   title: soundcloudSmmPanelPageData.seo.title,
   description: soundcloudSmmPanelPageData.seo.description,
+  alternates: {
+    canonical: soundcloudSmmPanelPageData.seo.canonical,
+  },
 };
 
 const schema = {
@@ -35,12 +37,11 @@ export default function SoundcloudSmmPanelPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero slug={soundcloudSmmPanelPageData.slug} />
-      <SocialService slug={soundcloudSmmPanelPageData.slug} />
-      <StatsMarqueeSection />
-      <ServiceAdvantage slug={soundcloudSmmPanelPageData.slug} />
+      <SoundcloudSmmPanelHeroSection />
+      <SoundcloudSmmPanelSocialServiceSection />
+      <SoundcloudSmmPanelAdvantageSection />
       <SoundcloudSmmPanelWorkingProcessSection />
-      <ServiceLeading slug={soundcloudSmmPanelPageData.slug} />
+      <SoundcloudSmmPanelLeadingSection />
       <FaqSection data={soundcloudSmmPanelPageData.faq} />
       <SoundcloudSmmPanelCtaSection />
     </>
