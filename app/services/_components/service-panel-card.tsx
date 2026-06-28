@@ -11,6 +11,7 @@ type ServicePanelCardProps = {
   iconAlt: string;
   title: string;
   description: string;
+  buttonLabel: string;
   className?: string;
 };
 
@@ -21,6 +22,7 @@ export default function ServicePanelCard({
   iconAlt,
   title,
   description,
+  buttonLabel,
   className,
 }: ServicePanelCardProps) {
   return (
@@ -87,7 +89,7 @@ export default function ServicePanelCard({
             showArrow
             className="w-full border-[1.5px] border-[#cc7aff] sm:w-fit"
           >
-            Get Started Now
+            {buttonLabel}
           </PrimaryButton>
         </div>
       </div>

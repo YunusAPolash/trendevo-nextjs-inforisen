@@ -1,7 +1,6 @@
 import HeroSection from '@/components/sections/hero-section';
 import PrimaryButton from '@/components/buttons/primary-button';
 import { data } from '@/app/services/page-data';
-import { signUpUrl } from '@/lib/auth-urls';
 import { renderText } from '@/lib/utils/renderText';
 
 const { hero } = data;
@@ -17,7 +16,7 @@ export default function ServicesHeroSection() {
       description={renderText(hero.description)}
       descriptionClassName={hero.descriptionClassName}
       actions={
-        <PrimaryButton href={signUpUrl} showArrow className="w-fit">
+        <PrimaryButton href={hero.primaryButtonHref} showArrow className="w-fit">
           {hero.primaryButtonLabel}
         </PrimaryButton>
       }

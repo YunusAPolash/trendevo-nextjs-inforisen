@@ -7,6 +7,9 @@ import ServicesGridSection from './_components/services-grid-section';
 export const metadata: Metadata = {
   title: servicesPageData.seo.title,
   description: servicesPageData.seo.description,
+  alternates: {
+    canonical: servicesPageData.seo.canonical,
+  },
 };
 
 export default function ServicesPage() {

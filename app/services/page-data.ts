@@ -7,12 +7,22 @@ type SEO = {
   canonical?: string;
 };
 
+type SectionHeadingData = {
+  badge?: string;
+  title?: string;
+  subtitle?: string;
+  titleClassName?: string;
+  subtitleClassName?: string;
+};
+
 type ServicePanelItem = {
   backgroundGradient: string;
   darkOverlaySrc: string;
   iconSrc: string;
   iconAlt: string;
   title: string;
+  description: string;
+  buttonLabel: string;
 };
 
 type ServicesPageData = {
@@ -26,6 +36,7 @@ type ServicesPageData = {
     description: string;
     descriptionClassName: string;
     primaryButtonLabel: string;
+    primaryButtonHref: string;
     illustration: {
       src: string;
       alt: string;
@@ -36,7 +47,8 @@ type ServicesPageData = {
     socialIcons: HeroSocialIcon[];
   };
   servicesGrid: {
-    serviceDescription: string;
+    id: string;
+    heading: SectionHeadingData;
     items: ServicePanelItem[];
   };
   cta: {
@@ -48,14 +60,11 @@ type ServicesPageData = {
   };
 };
 
-const serviceDescription =
-  'Grow your Facebook page fast with likes, followers, and engagement. Reliable, affordable, and easy social media growth solutions.';
-
 export const data: ServicesPageData = {
   seo: {
-    title: 'Services | TrendEvo',
+    title: 'SMM Panel Services in Bangladesh | TrendEvo',
     description:
-      'Boost your social media growth with TrendEvo services for Instagram, Facebook, YouTube, TikTok, Telegram, and X.',
+      'TrendEvo provides reliable SMM panel services in Bangladesh for creators, businesses, agencies, freelancers, and resellers. Order Facebook, Instagram, YouTube, TikTok, Telegram, Spotify, and more from one dashboard.',
     canonical: '/services',
   },
 
@@ -63,14 +72,15 @@ export const data: ServicesPageData = {
     bg: 'section-1',
     variant: 'wide',
     decoration: 'contact',
-    title: 'Boost Your Social Media Growth with gt<Trend Evo Services>',
+    title: 'SMM Panel Services gt<in Bangladesh>',
     titleClassName:
       'text-4xl font-semibold leading-[1.35] tracking-wide text-[#313131] sm:text-5xl lg:text-[48px]',
     description:
-      'Boost your social media growth with Trend Evo. Reach more followers on gt<Instagram, Facebook, YouTube, and TikTok>. Engage your audience like never before with reliable, fast services. Take your online presence to the next level and grow confidently.',
+      'TrendEvo provides reliable SMM panel services in Bangladesh for creators, businesses, agencies, freelancers, and resellers. From one simple dashboard, you can order social media growth services for Facebook, Instagram, YouTube, TikTok, Telegram, Spotify, and more.',
     descriptionClassName:
       'max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56]',
-    primaryButtonLabel: 'Get Started Now',
+    primaryButtonLabel: 'Explore Our Services',
+    primaryButtonHref: '#our-smm-panel-services',
     illustration: {
       src: '/images/services/services-trendevo-specialist-presenting-social-media-growth-services-illustration.webp',
       alt: 'TrendEvo specialist presenting social media growth services',
@@ -82,7 +92,16 @@ export const data: ServicesPageData = {
   },
 
   servicesGrid: {
-    serviceDescription,
+    id: 'our-smm-panel-services',
+    heading: {
+      title: 'Our SMM Panel gt<Services>',
+      subtitle:
+        'Choose the right service for your social media growth. TrendEvo brings all major platforms into one simple dashboard so you can grow faster, manage orders easily, and build stronger online visibility in Bangladesh.',
+      titleClassName:
+        'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
+      subtitleClassName:
+        'max-w-[996px] text-sm font-normal text-[#404a60] sm:text-base md:text-lg',
+    },
     items: [
       {
         backgroundGradient:
@@ -92,6 +111,9 @@ export const data: ServicesPageData = {
         iconSrc: '/images/services/services-facebook-smm-panel-icon.png',
         iconAlt: 'Facebook',
         title: 'Facebook SMM Panel',
+        description:
+          'Grow your Facebook page with likes, followers, views, comments, shares, and engagement services. TrendEvo helps businesses, creators, and agencies improve Facebook visibility with fast processing and affordable pricing.',
+        buttonLabel: 'Get Started Now',
       },
       {
         backgroundGradient:
@@ -101,6 +123,9 @@ export const data: ServicesPageData = {
         iconSrc: '/images/services/services-instagram-smm-panel-icon.png',
         iconAlt: 'Instagram',
         title: 'Instagram SMM Panel',
+        description:
+          'Build a stronger Instagram profile with followers, likes, comments, views, and reel engagement. Our Instagram SMM Panel is made for creators, influencers, online shops, and brands that want better reach and social proof.',
+        buttonLabel: 'Get Started Now',
       },
       {
         backgroundGradient:
@@ -109,7 +134,10 @@ export const data: ServicesPageData = {
           '/images/services/overlays/services-youtube-smm-panel-decoration.svg',
         iconSrc: '/images/services/services-youtube-smm-panel-icon.png',
         iconAlt: 'YouTube',
-        title: 'Youtube SMM Panel',
+        title: 'YouTube SMM Panel',
+        description:
+          'Promote your YouTube channel with subscribers, views, likes, comments, and watch time support. TrendEvo helps video creators, music channels, educators, and businesses grow their YouTube presence more easily.',
+        buttonLabel: 'Get Started Now',
       },
       {
         backgroundGradient:
@@ -119,6 +147,9 @@ export const data: ServicesPageData = {
         iconSrc: '/images/services/services-tiktok-smm-panel-icon.png',
         iconAlt: 'TikTok',
         title: 'TikTok SMM Panel',
+        description:
+          'Boost your TikTok profile with followers, likes, views, and comments. TrendEvo supports short-form content creators, small businesses, influencers, and agencies that want faster attention on TikTok.',
+        buttonLabel: 'Get Started Now',
       },
       {
         backgroundGradient:
@@ -128,6 +159,9 @@ export const data: ServicesPageData = {
         iconSrc: '/images/services/services-telegram-smm-panel-icon.png',
         iconAlt: 'Telegram',
         title: 'Telegram SMM Panel',
+        description:
+          'Grow your Telegram channel or group with members, post views, reactions, and engagement services. This is useful for communities, ecommerce groups, course channels, crypto projects, and business updates.',
+        buttonLabel: 'Get Started Now',
       },
       {
         backgroundGradient:
@@ -136,17 +170,20 @@ export const data: ServicesPageData = {
           '/images/services/overlays/services-x-twitter-smm-panel-decoration.svg',
         iconSrc: '/images/services/services-x-twitter-smm-panel-icon.png',
         iconAlt: 'X (Twitter)',
-        title: 'X(Twitter) SMM Panel',
+        title: 'X Twitter SMM Panel',
+        description:
+          'Improve your X Twitter profile with followers, likes, views, reposts, and engagement. TrendEvo helps brands, creators, public pages, and agencies make their posts look more active and trusted.',
+        buttonLabel: 'Get Started Now',
       },
     ],
   },
 
   cta: {
-    title: 'Ready to gt<Grow your Social Media> in Bangladesh',
+    title: 'Ready to gt<Grow Your Social Media> in Bangladesh?',
     description:
-      'Join thousands of users growing faster with TrendEvo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds. We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
-    primaryButtonLabel: 'Register Now',
-    secondaryButtonLabel: 'See all Services',
-    secondaryButtonHref: '/services',
+      'Join over 56486 users who are already using TrendEvo to grow faster on Facebook, Instagram, YouTube, TikTok, and more. Getting started is free and takes less than 40 seconds.',
+    primaryButtonLabel: 'Create Free Account',
+    secondaryButtonLabel: 'See All Services',
+    secondaryButtonHref: '/services/pricing',
   },
 };
