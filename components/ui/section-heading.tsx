@@ -8,6 +8,8 @@ type SectionHeadingProps = {
   subtitle?: string;
   className?: string;
   align?: 'center' | 'left';
+  /** @deprecated Ignored — underline uses gradient bar via `underlineWidth` */
+  underlineSrc?: string;
   underlineWidth?: number;
   titleClassName?: string;
   subtitleClassName?: string;

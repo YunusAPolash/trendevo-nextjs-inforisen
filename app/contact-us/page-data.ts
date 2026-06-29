@@ -136,7 +136,7 @@ export const data: ContactUsPageData = {
   cta: {
     title: 'Ready to gt<Grow Your Social Media> in Bangladesh?',
     description:
-      'Join over 56486 users who are already using lnk</about-us|TrendEvo> to grow faster on Facebook, Instagram, YouTube, TikTok, and more. Getting started is free and takes less than 40 seconds.',
+      'Join over 56486 users who are already using TrendEvo to grow faster on Facebook, Instagram, YouTube, TikTok, and more. Getting started is free and takes less than 40 seconds.',
     primaryButtonLabel: 'Create Free Account',
     secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',

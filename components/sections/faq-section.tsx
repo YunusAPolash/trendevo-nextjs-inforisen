@@ -132,7 +132,6 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
           badge={label}
           title={title}
           subtitle={subtitle}
-          underlineSrc="/images/icons/faq-section-underline.svg"
           underlineWidth={44}
           titleClassName="max-w-[996px] text-2xl tracking-wide sm:text-4xl md:text-5xl"
           subtitleClassName="max-w-3xl text-sm sm:text-base md:text-lg"

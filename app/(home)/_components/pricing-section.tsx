@@ -187,7 +187,6 @@ export default function PricingSection() {
         <div className="flex w-full flex-col items-center gap-6 sm:gap-8 lg:gap-[34px]">
           <SectionHeading
             badge={heading.badge}
-            underlineSrc={heading.underlineSrc}
             underlineWidth={heading.underlineWidth}
             title={heading.title}
             subtitle={heading.subtitle}

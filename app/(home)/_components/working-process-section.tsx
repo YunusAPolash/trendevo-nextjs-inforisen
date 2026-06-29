@@ -327,7 +327,6 @@ export default function WorkingProcessSection() {
       <div className="container flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
         <SectionHeading
           badge={heading.badge}
-          underlineSrc={heading.underlineSrc}
           underlineWidth={heading.underlineWidth}
           title={heading.title}
           subtitle={heading.subtitle}

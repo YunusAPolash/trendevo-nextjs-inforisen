@@ -1,48 +1,75 @@
 import Link from 'next/link';
 import { Fragment, type ReactNode } from 'react';
-import { resellerApiUrl, signUpUrl } from '@/lib/auth-urls';
 
 export const inlineLinkClassName =
   'font-semibold text-[#8f2acd] underline decoration-[#8f2acd]/35 underline-offset-2 transition-colors hover:text-[#ae4de8] hover:decoration-[#ae4de8] dark:text-[#ae4de8] dark:decoration-[#ae4de8]/40 dark:hover:text-[#cc7aff]';
 
-function resolveLinkHref(href: string): string {
-  const normalized = href.startsWith('/') ? href : `/${href}`;
+const STYLED_TOKEN =
+  /(gt<[^>]+>|lnk<[^|>]+\|[^>]+>|\[[^\]]+\]\([^)]+\))/g;
 
-  if (normalized === '/signup') {
-    return signUpUrl;
+function isAbsoluteHref(href: string): boolean {
+  return /^https?:\/\//i.test(href.trim());
+}
+
+function parseLinkToken(part: string): { label: string; href: string } | null {
+  const markdown = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+  if (markdown) {
+    return { label: markdown[1], href: markdown[2].trim() };
   }
 
-  if (normalized === '/api') {
-    return resellerApiUrl;
+  const lnk = part.match(/^lnk<(.+)>$/);
+  if (!lnk) {
+    return null;
   }
 
-  return normalized;
+  const pipe = lnk[1].indexOf('|');
+  if (pipe === -1) {
+    return null;
+  }
+
+  const left = lnk[1].slice(0, pipe);
+  const right = lnk[1].slice(pipe + 1);
+
+  // lnk<label|href> — href is absolute URL or path
+  if (isAbsoluteHref(right) || right.startsWith('/')) {
+    return { label: left, href: right };
+  }
+
+  // legacy lnk</path|label>
+  if (isAbsoluteHref(left) || left === '' || left.startsWith('/')) {
+    return { label: right, href: left === '' ? '/' : left };
+  }
+
+  return { label: left, href: right };
 }
 
 function InlineLink({ href, label }: { href: string; label: string }) {
-  const resolvedHref = resolveLinkHref(href);
-  const isExternal = resolvedHref.startsWith('http') || resolvedHref === '#';
+  const trimmedHref = href.trim();
 
-  if (isExternal) {
+  if (isAbsoluteHref(trimmedHref)) {
     return (
-      <a href={resolvedHref} className={inlineLinkClassName}>
+      <a href={trimmedHref} className={inlineLinkClassName}>
         {label}
       </a>
     );
   }
 
+  const internalHref = trimmedHref.startsWith('/')
+    ? trimmedHref
+    : `/${trimmedHref}`;
+
   return (
-    <Link href={resolvedHref} className={inlineLinkClassName}>
+    <Link href={internalHref} className={inlineLinkClassName}>
       {label}
     </Link>
   );
 }
 
 function renderStyledLine(line: string, lineKey: number): ReactNode[] {
-  const parts = line.split(/(gt<[^>]+>|lnk<[^>]+>)/);
+  const parts = line.split(STYLED_TOKEN);
 
   return parts.flatMap((part, i) => {
-    const gradientMatch = part.match(/gt<(.+)>/);
+    const gradientMatch = part.match(/^gt<(.+)>$/);
     if (gradientMatch) {
       return (
         <span key={`${lineKey}-g-${i}`} className="text-gradient">
@@ -51,14 +78,13 @@ function renderStyledLine(line: string, lineKey: number): ReactNode[] {
       );
     }
 
-    const linkMatch = part.match(/lnk<(\/?[^|>]*)\|([^>]+)>/);
-    if (linkMatch) {
-      const href = linkMatch[1] === '' ? '/' : linkMatch[1];
+    const link = parseLinkToken(part);
+    if (link) {
       return (
         <InlineLink
           key={`${lineKey}-l-${i}`}
-          href={href}
-          label={linkMatch[2]}
+          href={link.href}
+          label={link.label}
         />
       );
     }

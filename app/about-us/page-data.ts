@@ -123,7 +123,7 @@ export const data: AboutUsPageData = {
       'Our services cover major platforms like lnk</facebook-smm-panel|Facebook>, lnk</instagram-smm-panel|Instagram>, lnk</youtube-smm-panel|YouTube>, lnk</tiktok-smm-panel|TikTok>, lnk</telegram-smm-panel|Telegram>, lnk</spotify-smm-panel|Spotify>, and lnk</x-twitter-smm-panel|X-Twitter>. Users can order followers, likes, views, comments, shares, subscribers, watch time, and other social media engagement services based on their needs and budget.',
       'The process is simple. Create an account, add funds, choose your service, submit your link, and place your order. You can track every order from your dashboard without confusion.',
       'TrendEvo also supports local payment methods like bKash, Nagad, and Rocket, making it easier for Bangladeshi users to use SMM services without international payment barriers.',
-      'For agencies, freelancers, and resellers, TrendEvo makes campaign management faster and more organized on our lnk</api|reseller smm panel in Bangladesh>. With affordable pricing, secure orders, quick processing, and 24/7 support, we help users grow smarter across every major social platform.',
+      'For agencies, freelancers, and resellers, TrendEvo makes campaign management faster and more organized on our lnk<reseller smm panel in Bangladesh|https://trendevo.com/api>. With affordable pricing, secure orders, quick processing, and 24/7 support, we help users grow smarter across every major social platform.',
     ],
     closingParagraph:
       'Ready to see what TrendEvo can do for your growth? Explore our services and choose the right package for your next campaign.',
@@ -265,7 +265,7 @@ export const data: AboutUsPageData = {
   cta: {
     title: 'Ready to gt<Grow Your Social Media> in Bangladesh?',
     description:
-      'Join over 56486 users who are already using lnk</about-us|TrendEvo> to grow faster on Facebook, Instagram, YouTube, TikTok, and more. Getting started is free and takes less than 40 seconds.',
+      'Join over 56486 users who are already using TrendEvo to grow faster on Facebook, Instagram, YouTube, TikTok, and more. Getting started is free and takes less than 40 seconds.',
     primaryButtonLabel: 'Create Free Account',
     secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',

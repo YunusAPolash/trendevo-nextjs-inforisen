@@ -58,7 +58,6 @@ export default function PaymentMethodsSection() {
           badge={heading.badge}
           title={heading.title}
           subtitle={heading.subtitle}
-          underlineSrc={heading.underlineSrc}
           underlineWidth={heading.underlineWidth}
           badgeClassName="dark:bg-none dark:bg-clip-border dark:text-white"
           titleClassName={heading.titleClassName}

@@ -58,7 +58,6 @@ export default function AdvantagesSection({
           badge: homePageData.advantages.heading.badge,
           title: homePageData.advantages.heading.title,
           subtitle: homePageData.advantages.heading.subtitle,
-          underlineSrc: homePageData.advantages.heading.underlineSrc!,
           underlineWidth: homePageData.advantages.heading.underlineWidth!,
           titleClassName: homePageData.advantages.heading.titleClassName,
           subtitleClassName: homePageData.advantages.heading.subtitleClassName,
@@ -80,7 +79,6 @@ export default function AdvantagesSection({
     badge,
     title,
     subtitle,
-    underlineSrc,
     underlineWidth,
     titleClassName,
     subtitleClassName,
@@ -103,7 +101,6 @@ export default function AdvantagesSection({
           badge={badge}
           title={title}
           subtitle={subtitle}
-          underlineSrc={underlineSrc}
           underlineWidth={underlineWidth}
           badgeClassName="dark:bg-none dark:bg-clip-border dark:text-white"
           titleClassName={cn(titleClassName, 'dark:text-[#efedf1]')}

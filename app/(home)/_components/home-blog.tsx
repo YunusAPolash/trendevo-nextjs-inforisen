@@ -24,7 +24,6 @@ export default async function HomeBlog() {
         <SectionHeading
           title={blog.heading.title}
           subtitle={blog.heading.subtitle}
-          underlineSrc={blog.heading.underlineSrc}
           underlineWidth={blog.heading.underlineWidth}
           titleClassName={blog.heading.titleClassName}
           subtitleClassName={blog.heading.subtitleClassName}
