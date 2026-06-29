@@ -6,7 +6,7 @@ import { data } from '@/app/(home)/page-data';
 import { signUpUrl } from '@/lib/auth-urls';
 import { getStats, formatUsersTrustLabel } from '@/lib/stats';
 import { renderText } from '@/lib/utils/renderText';
-
+import HeroImage from './hero-image';
 const { hero } = data;
 
 export default async function HeroSection() {
@@ -86,15 +86,7 @@ export default async function HeroSection() {
         </div>
 
         <div className="mx-auto w-full min-w-0 max-w-[669px] lg:mx-0 lg:-mt-16 lg:justify-self-end lg:self-end">
-          <Image
-            src={hero.illustration.src}
-            alt={hero.illustration.alt}
-            width={hero.illustration.width}
-            height={hero.illustration.height}
-            priority
-            sizes="(max-width: 1024px) 100vw, 669px"
-            className="block h-auto w-full"
-          />
+          <HeroImage />
         </div>
       </div>
     </PrimarySection>
