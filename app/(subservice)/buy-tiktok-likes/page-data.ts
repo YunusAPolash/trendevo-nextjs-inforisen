@@ -84,9 +84,9 @@ export const data: TiktokLikesPageData = {
     trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi TikTok Creators, Brands & Agencies',
     title: 'Buy gt<TikTok Likes> in Bangladesh for Stronger Video Engagement',
     description:
-      'TikTok likes can make a video feel more accepted when viewers discover it on the For You Page, profile grid, search results, or shared links. Stronger like activity can help new viewers feel that the content is already getting attention. TrendEvo helps creators, influencers, eCommerce sellers, local brands, agencies, startups, SMEs, and resellers buy TikTok likes in Bangladesh through a simple TikTok SMM Panel with local payment support and secure delivery.',
+      'TikTok likes can make a video feel more accepted when viewers discover it on the For You Page, profile grid, search results, or shared links. Stronger like activity can help new viewers feel that the content is already getting attention. TrendEvo helps creators, influencers, eCommerce sellers, local brands, agencies, startups, SMEs, and resellers buy TikTok likes in Bangladesh through a simple lnk<TikTok SMM Panel|/tiktok-smm-panel> with local payment support and secure delivery.',
     descriptionSecondary:
-      'Our TikTok Likes Service is built for videos that need better engagement signals, a cleaner first impression, and stronger creator trust. As a best SMM Panel BD option for TikTok marketing, TrendEvo lets you select a suitable TikTok like package, pay through bKash, Nagad, Rocket, or other supported methods, and improve video activity without sharing your password.',
+      'Our TikTok Likes Service is built for videos that need better engagement signals, a cleaner first impression, and stronger creator trust. As a lnk<best SMM Panel BD|/> option for TikTok marketing, TrendEvo lets you select a suitable TikTok like package, pay through bKash, Nagad, Rocket, or other supported methods, and improve video activity without sharing your password.',
     primaryButtonLabel: 'Get Started Free',
     secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',
@@ -127,7 +127,7 @@ export const data: TiktokLikesPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<TikTok Likes> in Bangladesh',
     subtitle:
-      'TrendEvo is built for Bangladeshi users who want a simple way to increase TikTok video engagement. From local payment support to easy order tracking, our Bangladesh SMM Panel helps creators, influencers, brands, agencies, and resellers manage TikTok likes from one clean dashboard.',
+      'lnk<TrendEvo|/about-us> is built for Bangladeshi users who want a simple way to increase TikTok video engagement. From local payment support to easy order tracking, our Bangladesh SMM Panel helps creators, influencers, brands, agencies, and resellers manage TikTok likes from one clean dashboard.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

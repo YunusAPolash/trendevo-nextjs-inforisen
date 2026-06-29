@@ -127,7 +127,7 @@ export const data: InstagramSharesPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<Instagram Shares> in Bangladesh',
     subtitle:
-      'TrendEvo is designed for Bangladeshi users who want an easier way to improve Instagram content reach and sharing activity. With local payment support, clear order tracking, and a smooth SMM Panel Bangladesh dashboard, creators, brands, agencies, influencers, and resellers can manage Instagram share orders from one place.',
+      'lnk<TrendEvo|/about-us> is designed for Bangladeshi users who want an easier way to improve Instagram content reach and sharing activity. With local payment support, clear order tracking, and a smooth lnk<SMM Panel Bangladesh|/> dashboard, creators, brands, agencies, influencers, and resellers can manage Instagram share orders from one place.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -188,7 +188,7 @@ export const data: InstagramSharesPageData = {
     badge: 'Buy Instagram Shares',
     title: 'Who Should Buy gt<Instagram Shares> in Bangladesh?',
     subtitle:
-      'Instagram shares help content travel from one viewer to another. TrendEvo’s Instagram SMM Panel support is useful for Bangladeshi users who want wider content reach, better Reels distribution, stronger social proof, and more visibility around important campaigns.',
+      'Instagram shares help content travel from one viewer to another. TrendEvo’s lnk<Instagram SMM Panel|/instagram-smm-panel> support is useful for Bangladeshi users who want wider content reach, better Reels distribution, stronger social proof, and more visibility around important campaigns.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -211,7 +211,7 @@ export const data: InstagramSharesPageData = {
       {
         title: 'Agencies, Freelancers, and Resellers',
         description:
-          'Digital agencies and freelancers often need shared support for client content. TrendEvo helps them place Instagram shares orders from one dashboard with clear pricing, local payment options, and SMM reseller API access.',
+          'Digital agencies and freelancers often need shared support for client content. TrendEvo helps them place Instagram shares orders from one dashboard with clear pricing, local payment options, and lnk<SMM reseller API|https://trendevo.com/api> access.',
       },
       {
         title: 'Startups, Personal Brands, and Institutions',

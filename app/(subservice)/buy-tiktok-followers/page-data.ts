@@ -84,9 +84,9 @@ export const data: TiktokFollowersPageData = {
     trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi TikTok Creators, Brands & Agencies',
     title: 'Buy gt<TikTok Followers> in Bangladesh for Stronger Creator Growth',
     description:
-      'TikTok moves fast, and people often judge a profile before watching more videos. A profile with a stronger follower base can look more trusted, more active, and more worth following. TrendEvo helps TikTok creators, influencers, eCommerce brands, local businesses, digital agencies, startups, SMEs, and resellers buy TikTok followers in Bangladesh through our TikTok SMM Panel with simple ordering, local payment support, and secure delivery.',
+      'TikTok moves fast, and people often judge a profile before watching more videos. A profile with a stronger follower base can look more trusted, more active, and more worth following. TrendEvo helps TikTok creators, influencers, eCommerce brands, local businesses, digital agencies, startups, SMEs, and resellers buy TikTok followers in Bangladesh through our lnk<TikTok SMM Panel|/tiktok-smm-panel> with simple ordering, local payment support, and secure delivery.',
     descriptionSecondary:
-      'Our TikTok Followers Service is made for profiles that need better credibility, stronger audience trust, and a more professional creator image. As a best SMM Panel BD choice for TikTok growth, TrendEvo lets you choose a suitable follower package, pay through bKash, Nagad, Rocket, or other supported methods, and grow your TikTok profile without sharing your password.',
+      'Our TikTok Followers Service is made for profiles that need better credibility, stronger audience trust, and a more professional creator image. As a lnk<best SMM Panel BD|/> choice for TikTok growth, TrendEvo lets you choose a suitable follower package, pay through bKash, Nagad, Rocket, or other supported methods, and grow your TikTok profile without sharing your password.',
     primaryButtonLabel: 'Get Started Free',
     secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',
@@ -127,7 +127,7 @@ export const data: TiktokFollowersPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<TikTok Followers> in Bangladesh',
     subtitle:
-      'TrendEvo is built for Bangladeshi users who want a simple way to improve TikTok profile credibility. From local payment support to easy order tracking, our SMM Panel helps creators, influencers, brands, agencies, and resellers manage TikTok follower growth from one clean dashboard.',
+      'lnk<TrendEvo|/about-us> is built for Bangladeshi users who want a simple way to improve TikTok profile credibility. From local payment support to easy order tracking, our SMM Panel helps creators, influencers, brands, agencies, and resellers manage TikTok follower growth from one clean dashboard.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

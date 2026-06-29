@@ -84,7 +84,7 @@ export const data: YoutubeCommentsPageData = {
     trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi YouTubers, Brands & Agencies',
     title: 'Buy gt<YouTube Comments> in Bangladesh for Stronger Viewer Interaction',
     description:
-      'YouTube comments make a video feel active, useful, and worth discussing. When viewers see conversations under a tutorial, review, vlog, product video, or music release, they are more likely to trust the content and spend more time with it. TrendEvo helps YouTubers, educators, businesses, eCommerce brands, agencies, startups, SMEs, and local creators buy YouTube comments in Bangladesh through the best YouTube SMM Panel in Bangladesh with simple ordering, local payment support, and secure delivery.',
+      'YouTube comments make a video feel active, useful, and worth discussing. When viewers see conversations under a tutorial, review, vlog, product video, or music release, they are more likely to trust the content and spend more time with it. TrendEvo helps YouTubers, educators, businesses, eCommerce brands, agencies, startups, SMEs, and local creators buy YouTube comments in Bangladesh through the lnk<best YouTube SMM Panel in Bangladesh|/youtube-smm-panel> with simple ordering, local payment support, and secure delivery.',
     descriptionSecondary:
       'Our YouTube Comments Service is made for videos that need better audience interaction, stronger social proof, and a more active community feel. You can choose a suitable YouTube comment package, pay through bKash, Nagad, Rocket, or other supported methods, and improve your video credibility without sharing your password.',
     primaryButtonLabel: 'Get Started Free',
@@ -127,7 +127,7 @@ export const data: YoutubeCommentsPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<YouTube Comments> in Bangladesh',
     subtitle:
-      'TrendEvo is built for Bangladeshi users who want a simple way to increase YouTube audience interaction. From local payment support to clear order tracking, our SMM Panel helps creators, brands, educators, agencies, and resellers manage YouTube comments from one easy dashboard.',
+      'lnk<TrendEvo|/about-us> is built for Bangladeshi users who want a simple way to increase YouTube audience interaction. From local payment support to clear order tracking, our lnk<SMM Panel|/> helps creators, brands, educators, agencies, and resellers manage YouTube comments from one easy dashboard.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -236,7 +236,7 @@ export const data: YoutubeCommentsPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse YouTube SMM Panel services in Bangladesh, compare prices, and manage your orders from one place.',
+          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse YouTube lnk<SMM Panel services in Bangladesh|/services>, compare prices, and manage your orders from one place.',
       },
       {
         number: '02',

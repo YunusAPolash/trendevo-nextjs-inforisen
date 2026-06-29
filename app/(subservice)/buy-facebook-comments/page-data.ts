@@ -84,7 +84,7 @@ export const data: FacebookCommentsPageData = {
     trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi Brands, Creators & Agencies',
     title: 'Buy gt<Facebook Comments> in Bangladesh for Stronger Post Engagement',
     description:
-      'Facebook posts with active comments often get more attention than silent posts. When people see useful discussion under a product, offer, event, or campaign post, they feel more interested to read, react, and join the conversation. TrendEvo helps businesses, creators, agencies, eCommerce stores, restaurants, startups, and local brands buy Facebook comments in Bangladesh with simple ordering, local payment support, and smooth delivery.',
+      'Facebook posts with active comments often get more attention than silent posts. When people see useful discussion under a product, offer, event, or campaign post, they feel more interested to read, react, and join the conversation. lnk<TrendEvo|/about-us> helps businesses, creators, agencies, eCommerce stores, restaurants, startups, and local brands buy Facebook comments in Bangladesh with simple ordering, local payment support, and smooth delivery.',
     descriptionSecondary:
       'Our Facebook Comments Service Bangladesh is made for posts that need better interaction, stronger social proof, and a more active brand image. You can choose a suitable Facebook comment package, pay with bKash, Nagad, Rocket, or other supported methods, and improve your post activity without sharing your Facebook password.',
     primaryButtonLabel: 'Get Started Free',
@@ -127,7 +127,7 @@ export const data: FacebookCommentsPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<Facebook Comments> in Bangladesh',
     subtitle:
-      'TrendEvo is built for Bangladeshi users who want a simple and reliable way to increase Facebook post interaction. From local payment options to easy order tracking, our BD SMM Panel helps brands, agencies, page admins, and resellers manage Facebook engagement with more confidence.',
+      'TrendEvo is built for Bangladeshi users who want a simple and reliable way to increase Facebook post interaction. From local payment options to easy order tracking, our lnk<BD SMM Panel|/> helps brands, agencies, page admins, and resellers manage Facebook engagement with more confidence.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -188,7 +188,7 @@ export const data: FacebookCommentsPageData = {
     badge: 'Buy Facebook Comments',
     title: 'Who Should Buy gt<Facebook Comments> in Bangladesh?',
     subtitle:
-      'Facebook comments help a post look alive. TrendEvo’s Facebook SMM Panel is useful for Bangladeshi users who want more visible interaction, stronger campaign response, and better social proof under important posts.',
+      'Facebook comments help a post look alive. TrendEvo’s lnk<Facebook SMM Panel|/facebook-smm-panel> is useful for Bangladeshi users who want more visible interaction, stronger campaign response, and better social proof under important posts.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

@@ -20,7 +20,7 @@ export default async function QuoraUpvotesHeroSection() {
         label: formatUsersTrustLabel(usersAll),
       }}
       title={renderText(hero.title)}
-      description={hero.description}
+      description={renderText(hero.description)}
       actions={
         <div className="flex flex-wrap items-center gap-3">
           <SecondaryButton href={signInUrl} className="h-[50px] w-[180px] shrink-0">

@@ -84,9 +84,9 @@ export const data: YoutubeLikesPageData = {
     trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi YouTubers, Brands & Agencies',
     title: 'Buy gt<YouTube Likes> in Bangladesh for Stronger Video Engagement',
     description:
-      'YouTube likes help viewers understand that a video is useful, interesting, or worth watching. When a video has more likes, it can look more trusted and engaging to new audiences. TrendEvo helps YouTubers, creators, businesses, educational channels, eCommerce brands, agencies, startups, SMEs, and local brands buy YouTube likes in Bangladesh through an easy YouTube SMM Panel with simple ordering, local payment support, and secure delivery.',
+      'YouTube likes help viewers understand that a video is useful, interesting, or worth watching. When a video has more likes, it can look more trusted and engaging to new audiences. TrendEvo helps YouTubers, creators, businesses, educational channels, eCommerce brands, agencies, startups, SMEs, and local brands buy YouTube likes in Bangladesh through an easy lnk<YouTube SMM Panel|/youtube-smm-panel> with simple ordering, local payment support, and secure delivery.',
     descriptionSecondary:
-      'Our YouTube Likes Service is made for videos that need better engagement, stronger social proof, and a more positive viewer response. As the best SMM Panel in Bangladesh for YouTube growth, TrendEvo lets you choose a suitable YouTube like package, pay through bKash, Nagad, Rocket, or other supported methods, and improve your video credibility without sharing your password.',
+      'Our YouTube Likes Service is made for videos that need better engagement, stronger social proof, and a more positive viewer response. As the lnk<best SMM Panel in Bangladesh|/> for YouTube growth, TrendEvo lets you choose a suitable YouTube like package, pay through bKash, Nagad, Rocket, or other supported methods, and improve your video credibility without sharing your password.',
     primaryButtonLabel: 'Get Started Free',
     secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',
@@ -127,7 +127,7 @@ export const data: YoutubeLikesPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<YouTube Likes> in Bangladesh',
     subtitle:
-      'TrendEvo is built for Bangladeshi users who want a simple way to increase YouTube video engagement. From local payment support to clear order tracking, our Bangladesh SMM Panel helps creators, brands, educators, agencies, and resellers manage YouTube likes from one easy dashboard.',
+      'lnk<TrendEvo|/about-us> is built for Bangladeshi users who want a simple way to increase YouTube video engagement. From local payment support to clear order tracking, our Bangladesh SMM Panel helps creators, brands, educators, agencies, and resellers manage YouTube likes from one easy dashboard.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

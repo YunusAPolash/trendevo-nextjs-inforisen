@@ -84,7 +84,7 @@ export const data: InstagramAutoLikesPageData = {
     trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi Creators, Brands & Agencies',
     title: 'Buy gt<Instagram Auto Likes> in Bangladesh for Consistent Post Engagement',
     description:
-      'Instagram growth becomes easier when every new post gets early engagement. Auto Likes help your photos, Reels, and carousels receive likes automatically after publishing, so your content does not start from zero. TrendEvo helps creators, influencers, eCommerce brands, restaurants, agencies, startups, SMEs, and local businesses buy Instagram Auto Likes in Bangladesh through a simple Instagram SMM Panel with local payment support and secure order tracking.',
+      'Instagram growth becomes easier when every new post gets early engagement. Auto Likes help your photos, Reels, and carousels receive likes automatically after publishing, so your content does not start from zero. TrendEvo helps creators, influencers, eCommerce brands, restaurants, agencies, startups, SMEs, and local businesses buy Instagram Auto Likes in Bangladesh through a simple lnk<Instagram SMM Panel|/instagram-smm-panel> with local payment support and secure order tracking.',
     descriptionSecondary:
       'Our Instagram Auto Likes Service is made for users who post regularly and want stable engagement without placing a new order every time. You can choose a suitable Auto Likes package, pay through bKash, Nagad, Rocket, or other supported methods, and support your Instagram marketing without sharing your password.',
     primaryButtonLabel: 'Get Started Free',
@@ -127,7 +127,7 @@ export const data: InstagramAutoLikesPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<Instagram Auto Likes> in Bangladesh',
     subtitle:
-      'TrendEvo is built for Bangladeshi users who want a smarter way to keep Instagram content active. From automatic delivery to easy dashboard tracking, our cheapest SMM Panel BD solution helps creators, brands, influencers, agencies, and resellers manage consistent Instagram likes from one simple platform.',
+      'lnk<TrendEvo|/about-us> is built for Bangladeshi users who want a smarter way to keep Instagram content active. From automatic delivery to easy dashboard tracking, our lnk<cheapest SMM Panel BD|/> solution helps creators, brands, influencers, agencies, and resellers manage consistent Instagram likes from one simple platform.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -236,7 +236,7 @@ export const data: InstagramAutoLikesPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse Instagram SMM Panel services, compare Auto Likes packages, and manage your orders from one place.',
+          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse Instagram lnk<SMM Panel services|/services>, compare Auto Likes packages, and manage your orders from one place.',
       },
       {
         number: '02',

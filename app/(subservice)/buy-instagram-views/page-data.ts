@@ -84,7 +84,7 @@ export const data: InstagramViewsPageData = {
     trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi Creators, Brands & Agencies',
     title: 'Buy gt<Instagram Views> in Bangladesh for Better Content Visibility',
     description:
-      'Instagram is a visual platform where views can shape the first impression of your content. When a Reel, video, or story gets more views, it can look more active, more interesting, and more worth watching. TrendEvo helps creators, influencers, eCommerce brands, restaurants, agencies, startups, SMEs, and local businesses buy Instagram views in Bangladesh through an easy Instagram SMM Panel with local payment support and secure delivery.',
+      'Instagram is a visual platform where views can shape the first impression of your content. When a Reel, video, or story gets more views, it can look more active, more interesting, and more worth watching. TrendEvo helps creators, influencers, eCommerce brands, restaurants, agencies, startups, SMEs, and local businesses buy Instagram views in Bangladesh through an easy lnk<Instagram SMM Panel|/instagram-smm-panel> with local payment support and secure delivery.',
     descriptionSecondary:
       'Our Instagram Views Service is built for users who want stronger Reels visibility, better video performance, and more audience attention on important content. You can choose a suitable view package, pay through bKash, Nagad, Rocket, or other supported methods, and support your Instagram marketing without sharing your password.',
     primaryButtonLabel: 'Get Started Free',
@@ -127,7 +127,7 @@ export const data: InstagramViewsPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<Instagram Views> in Bangladesh',
     subtitle:
-      'TrendEvo is made for Bangladeshi users who want a simple way to increase Instagram video visibility. From local payment support to clear order tracking, our SMM Panel Bangladesh dashboard helps creators, brands, influencers, agencies, and resellers manage Instagram views from one easy place.',
+      'lnk<TrendEvo|/about-us> is made for Bangladeshi users who want a simple way to increase Instagram video visibility. From local payment support to clear order tracking, our lnk<SMM Panel Bangladesh|/> dashboard helps creators, brands, influencers, agencies, and resellers manage Instagram views from one easy place.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -236,7 +236,7 @@ export const data: InstagramViewsPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse Instagram SMM Panel services, compare prices, and manage your orders from one place.',
+          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse Instagram lnk<SMM Panel services|/services>, compare prices, and manage your orders from one place.',
       },
       {
         number: '02',

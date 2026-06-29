@@ -84,9 +84,9 @@ export const data: InstagramStoryViewsPageData = {
     trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi Creators, Brands & Agencies',
     title: 'Buy gt<Instagram Story Views> in Bangladesh for Better Daily Visibility',
     description:
-      'Instagram Stories are one of the fastest ways to stay visible in front of your audience. When your Stories get more views, your daily updates, offers, behind-the-scenes content, polls, and announcements look more active and worth checking. TrendEvo helps creators, influencers, eCommerce brands, restaurants, agencies, startups, SMEs, and local businesses buy Instagram Story Views in Bangladesh through an easy Instagram SMM Panel with local payment support and secure delivery.',
+      'Instagram Stories are one of the fastest ways to stay visible in front of your audience. When your Stories get more views, your daily updates, offers, behind-the-scenes content, polls, and announcements look more active and worth checking. TrendEvo helps creators, influencers, eCommerce brands, restaurants, agencies, startups, SMEs, and local businesses buy Instagram Story Views in Bangladesh through an easy lnk<Instagram SMM Panel|/instagram-smm-panel> with local payment support and secure delivery.',
     descriptionSecondary:
-      'Our Instagram Story Views Service is made for users who want stronger daily content performance, better audience reach, and more visible activity on temporary posts. As a best SMM Panel BD choice for Instagram growth, TrendEvo lets you choose a suitable Story Views package, pay through bKash, Nagad, Rocket, or other supported methods, and support your Instagram marketing without sharing your password.',
+      'Our Instagram Story Views Service is made for users who want stronger daily content performance, better audience reach, and more visible activity on temporary posts. As a lnk<best SMM Panel BD|/> choice for Instagram growth, TrendEvo lets you choose a suitable Story Views package, pay through bKash, Nagad, Rocket, or other supported methods, and support your Instagram marketing without sharing your password.',
     primaryButtonLabel: 'Get Started Free',
     secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',
@@ -127,7 +127,7 @@ export const data: InstagramStoryViewsPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<Instagram Story Views> in Bangladesh',
     subtitle:
-      'For Bangladeshi users, Instagram Stories often work as a quick trust point before customers visit a profile, reply to an offer, or check a product. TrendEvo makes Story Views easier to manage with local payment support, clear order updates, and a simple SMM Panel dashboard for creators, brands, influencers, agencies, and resellers.',
+      'For Bangladeshi users, Instagram Stories often work as a quick trust point before customers visit a profile, reply to an offer, or check a product. lnk<TrendEvo|/about-us> makes Story Views easier to manage with local payment support, clear order updates, and a simple lnk<SMM Panel dashboard|https://trendevo.com/signup> for creators, brands, influencers, agencies, and resellers.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

@@ -127,7 +127,7 @@ export const data: InstagramFollowersPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<Instagram Followers> in Bangladesh',
     subtitle:
-      'TrendEvo gives Bangladeshi Instagram users a simple way to build early profile trust without complex steps. With local payment options, clear order tracking, and a user-friendly dashboard, TrendEvo works as the best SMM Panel BD choice for creators, online brands, agencies, and resellers managing Instagram follower growth.',
+      'lnk<TrendEvo|/about-us> gives Bangladeshi Instagram users a simple way to build early profile trust without complex steps. With local payment options, clear order tracking, and a user-friendly dashboard, TrendEvo works as the lnk<best SMM Panel BD|/> choice for creators, online brands, agencies, and resellers managing Instagram follower growth.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -188,7 +188,7 @@ export const data: InstagramFollowersPageData = {
     badge: 'Buy Instagram Followers',
     title: 'Who Should Buy gt<Instagram Followers> in Bangladesh?',
     subtitle:
-      'Instagram followers can make a profile look more reliable when people visit from reels, stories, ads, hashtags, influencer mentions, or local search. TrendEvo’s Instagram SMM Panel service is useful for Bangladeshi users who want stronger profile trust, better brand value, and a smoother base before posting regularly or running promotions.',
+      'Instagram followers can make a profile look more reliable when people visit from reels, stories, ads, hashtags, influencer mentions, or local search. TrendEvo’s lnk<Instagram SMM Panel|/instagram-smm-panel> service is useful for Bangladeshi users who want stronger profile trust, better brand value, and a smoother base before posting regularly or running promotions.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -236,7 +236,7 @@ export const data: InstagramFollowersPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse Instagram SMM Panel services, check prices, and manage your orders from one place.',
+          'lnk<Sign up|https://trendevo.com/signup> with basic details and enter the TrendEvo dashboard. From there, you can browse Instagram SMM Panel services, check prices, and manage your orders from one place.',
       },
       {
         number: '02',

@@ -19,8 +19,8 @@ export default function YoutubeLikesHeroSection() {
       title={renderText(hero.title)}
       description={
         <div className="flex flex-col gap-4">
-          <p>{hero.description}</p>
-          <p>{hero.descriptionSecondary}</p>
+          <p>{renderText(hero.description)}</p>
+          <p>{renderText(hero.descriptionSecondary)}</p>
         </div>
       }
       actions={

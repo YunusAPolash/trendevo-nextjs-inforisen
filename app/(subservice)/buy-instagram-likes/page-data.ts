@@ -127,7 +127,7 @@ export const data: InstagramLikesPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<Instagram Likes> in Bangladesh',
     subtitle:
-      'TrendEvo is built for Bangladeshi users who want a simple way to improve Instagram post activity. From local payment support to easy order tracking, our SMM Panel helps creators, online stores, agencies, influencers, and resellers manage Instagram engagement from one clean dashboard.',
+      'TrendEvo is built for Bangladeshi users who want a simple way to improve Instagram post activity. From local payment support to easy order tracking, our lnk<SMM Panel|/> helps creators, online stores, agencies, influencers, and resellers manage Instagram engagement from one clean dashboard.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -144,7 +144,7 @@ export const data: InstagramLikesPageData = {
       {
         title: 'Affordable Like Packages',
         description:
-          'You can buy Instagram likes in Bangladesh without spending a large budget. Our packages work well for new creators, fashion brands, product sellers, cafés, startups, freelancers, agencies, and SMM resellers.',
+          'You can buy Instagram likes in Bangladesh without spending a large budget. Our packages work well for new creators, fashion brands, product sellers, cafés, startups, freelancers, agencies, and lnk<SMM resellers|https://trendevo.com/api>.',
         icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
@@ -188,7 +188,7 @@ export const data: InstagramLikesPageData = {
     badge: 'Buy Instagram Likes',
     title: 'Who Should Buy gt<Instagram Likes> in Bangladesh?',
     subtitle:
-      'Instagram likes can make content look more active when people find it through Reels, Explore, hashtags, stories, ads, or profile visits. TrendEvo’s Instagram SMM Panel support is useful for Bangladeshi users who want stronger post credibility, better content response, and a more professional Instagram presence.',
+      'Instagram likes can make content look more active when people find it through Reels, Explore, hashtags, stories, ads, or profile visits. TrendEvo’s lnk<Instagram SMM Panel|/instagram-smm-panel> support is useful for Bangladeshi users who want stronger post credibility, better content response, and a more professional Instagram presence.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

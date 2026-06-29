@@ -84,9 +84,9 @@ export const data: YoutubeSubscribersPageData = {
     trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi YouTubers, Creators & Agencies',
     title: 'Buy gt<YouTube Subscribers> in Bangladesh for Stronger Channel Growth',
     description:
-      'A YouTube channel with more subscribers can look more trusted, active, and ready for long-term growth. When viewers land on your channel after watching a video, the subscriber count often helps them decide whether the channel is worth following. TrendEvo helps YouTubers, educators, businesses, eCommerce brands, agencies, startups, and local creators buy YouTube subscribers in Bangladesh through an easy YouTube SMM Panel with simple ordering, local payment support, and secure delivery.',
+      'A YouTube channel with more subscribers can look more trusted, active, and ready for long-term growth. When viewers land on your channel after watching a video, the subscriber count often helps them decide whether the channel is worth following. TrendEvo helps YouTubers, educators, businesses, eCommerce brands, agencies, startups, and local creators buy YouTube subscribers in Bangladesh through an easy lnk<YouTube SMM Panel|/youtube-smm-panel> with simple ordering, local payment support, and secure delivery.',
     descriptionSecondary:
-      'Our YouTube Subscribers Service is made for channels that need better credibility, stronger audience trust, and a more professional channel presence. As a best SMM Panel choice for YouTube growth, TrendEvo lets you choose a suitable subscriber package, pay through bKash, Nagad, Rocket, or other supported methods, and grow your YouTube channel without sharing your password.',
+      'Our YouTube Subscribers Service is made for channels that need better credibility, stronger audience trust, and a more professional channel presence. As a lnk<best SMM Panel|/> choice for YouTube growth, TrendEvo lets you choose a suitable subscriber package, pay through bKash, Nagad, Rocket, or other supported methods, and grow your YouTube channel without sharing your password.',
     primaryButtonLabel: 'Get Started Free',
     secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',
@@ -127,7 +127,7 @@ export const data: YoutubeSubscribersPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<YouTube Subscribers> in Bangladesh',
     subtitle:
-      'TrendEvo is built for Bangladeshi users who want a simple way to improve YouTube channel credibility. From local payment support to easy order tracking, our Bangladesh SMM Panel helps creators, businesses, agencies, educators, and resellers manage YouTube subscriber growth from one clean dashboard.',
+      'lnk<TrendEvo|/about-us> is built for Bangladeshi users who want a simple way to improve YouTube channel credibility. From local payment support to easy order tracking, our Bangladesh SMM Panel helps creators, businesses, agencies, educators, and resellers manage YouTube subscriber growth from one clean dashboard.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -236,7 +236,7 @@ export const data: YoutubeSubscribersPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse YouTube SMM Panel services, compare prices, and manage your orders from one place.',
+          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse YouTube lnk<SMM Panel services|/services>, compare prices, and manage your orders from one place.',
       },
       {
         number: '02',

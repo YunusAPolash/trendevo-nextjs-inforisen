@@ -121,7 +121,7 @@ export const data: FacebookPageLikesPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<Facebook Page Likes> in Bangladesh',
     subtitle:
-      'TrendEvo is made for Bangladeshi users who want a simple way to improve Facebook page credibility. As the best facebook SMM panel, TrendEvo helps business owners, agencies, resellers, and creators manage Facebook Page Likes with secure payment options, clear order tracking, and better control.',
+      'TrendEvo is made for Bangladeshi users who want a simple way to improve Facebook page credibility. As the best lnk<facebook SMM panel|/facebook-smm-panel>, TrendEvo helps business owners, agencies, resellers, and creators manage Facebook Page Likes with secure payment options, clear order tracking, and better control.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -182,7 +182,7 @@ export const data: FacebookPageLikesPageData = {
     badge: 'Buy Facebook Page Likes',
     title: 'Who Should Buy gt<Facebook Page Likes> in Bangladesh?',
     subtitle:
-      'Facebook Page Likes can make a business page look more trusted and accepted when new visitors check it for the first time. TrendEvo’s Facebook Page Likes service is useful for Bangladeshi users who want stronger trust signals, better brand presentation, and a more professional page before running ads, launching offers, or sending traffic from other platforms. As a reliable SMM Panel BD, TrendEvo also helps local businesses, creators, agencies, and resellers manage page growth with easy ordering and local payment support.',
+      'Facebook Page Likes can make a business page look more trusted and accepted when new visitors check it for the first time. TrendEvo’s Facebook Page Likes service is useful for Bangladeshi users who want stronger trust signals, better brand presentation, and a more professional page before running ads, launching offers, or sending traffic from other platforms. As a reliable lnk<SMM Panel BD|/>, TrendEvo also helps local businesses, creators, agencies, and resellers manage page growth with easy ordering and local payment support.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -221,7 +221,7 @@ export const data: FacebookPageLikesPageData = {
     underlineWidth: 216,
     title: 'How to Buy Facebook Page Likes on TrendEvo — gt<Step by Step>',
     subtitle:
-      'Buying Facebook Page Likes in Bangladesh should be quick and simple. TrendEvo keeps the process easy for business owners, page admins, agencies, freelancers, and resellers who want to improve page trust without technical steps.',
+      'Buying Facebook Page Likes in Bangladesh should be quick and simple. lnk<TrendEvo|/about-us> keeps the process easy for business owners, page admins, agencies, freelancers, and resellers who want to improve page trust without technical steps.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

@@ -127,7 +127,7 @@ export const data: SoundcloudFollowersPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<SoundCloud Followers> in Bangladesh',
     subtitle:
-      'TrendEvo is built for Bangladeshi artists, creators, agencies, and music marketers who want a simple way to grow SoundCloud profiles. From local payment support to easy order tracking, every part of the platform helps musicians, producers, DJs, labels, and resellers manage SoundCloud growth with more confidence.',
+      'lnk<TrendEvo|/about-us> is a trusted lnk<SoundCloud SMM Panel|/soundcloud-smm-panel> made for Bangladeshi artists, creators, agencies, and music marketers who want an easier way to grow SoundCloud profiles. As a reliable lnk<SMM Panel BD|/>, TrendEvo offers local payment support, simple order tracking, and smooth service management so musicians, producers, DJs, labels, and resellers can build SoundCloud growth with more confidence.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

@@ -121,7 +121,7 @@ export const data: FacebookFollowersPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<Facebook Followers> in Bangladesh',
     subtitle:
-      'TrendEvo is built for users in Bangladesh who want a simple and reliable way to grow Facebook pages. As a trusted Facebook SMM Panel in Bangladesh, TrendEvo helps creators, brands, agencies, and resellers manage Facebook follower growth with local payment support, easy order tracking, and a user-friendly dashboard.',
+      'TrendEvo is built for users in Bangladesh who want a simple and reliable way to grow Facebook pages. As a trusted lnk<Facebook SMM Panel|/facebook-smm-panel> in Bangladesh, TrendEvo helps creators, brands, agencies, and resellers manage Facebook follower growth with local payment support, easy order tracking, and a user-friendly dashboard.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -182,7 +182,7 @@ export const data: FacebookFollowersPageData = {
     badge: 'Buy Facebook Followers',
     title: 'Who Should Buy gt<Facebook Followers> in Bangladesh?',
     subtitle:
-      'A strong follower count can help a Facebook page look more active when someone visits it for the first time. TrendEvo’s Facebook followers service is useful for Bangladeshi users who want better page trust, stronger brand presentation, and a smoother start before running ads, posting offers, or building long-term content. As a reliable SMM Panel BD, TrendEvo also helps local businesses, creators, agencies, and resellers manage Facebook follower growth with easier ordering and local payment support.',
+      'A strong follower count can help a Facebook page look more active when someone visits it for the first time. TrendEvo’s Facebook followers service is useful for Bangladeshi users who want better page trust, stronger brand presentation, and a smoother start before running ads, posting offers, or building long-term content. As a reliable lnk<SMM Panel BD|/>, TrendEvo also helps local businesses, creators, agencies, and resellers manage Facebook follower growth with easier ordering and local payment support.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -221,7 +221,7 @@ export const data: FacebookFollowersPageData = {
     underlineWidth: 216,
     title: 'How to Buy Facebook Followers on TrendEvo — gt<Step by Step>',
     subtitle:
-      'Buying Facebook followers in Bangladesh should not feel confusing. TrendEvo keeps the full process simple, so creators, page owners, agencies, and resellers can place orders without technical knowledge.',
+      'Buying Facebook followers in Bangladesh should not feel confusing. lnk<TrendEvo|/about-us> keeps the full process simple, so creators, page owners, agencies, and resellers can place orders without technical knowledge.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

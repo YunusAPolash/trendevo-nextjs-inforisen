@@ -84,9 +84,9 @@ export const data: YoutubeViewsPageData = {
     trustLabel: '⭐ 4.8 Rating | Trusted by Bangladeshi YouTubers, Brands & Agencies',
     title: 'Buy gt<YouTube Views> in Bangladesh for Better Video Visibility',
     description:
-      'YouTube views help a video look more active when people find it through search, Shorts, suggested videos, ads, or channel visits. A video with stronger views can attract more attention, build audience confidence, and support better content discovery. TrendEvo helps YouTubers, creators, businesses, educational channels, eCommerce brands, agencies, startups, SMEs, and local brands buy YouTube views in Bangladesh through an easy YouTube SMM Panel with local payment support and secure delivery.',
+      'YouTube views help a video look more active when people find it through search, Shorts, suggested videos, ads, or channel visits. A video with stronger views can attract more attention, build audience confidence, and support better content discovery. TrendEvo helps YouTubers, creators, businesses, educational channels, eCommerce brands, agencies, startups, SMEs, and local brands buy YouTube views in Bangladesh through an easy lnk<YouTube SMM Panel|/youtube-smm-panel> with local payment support and secure delivery.',
     descriptionSecondary:
-      'Our YouTube Views Service is made for videos that need stronger visibility, better watch activity, and a more trusted first impression. As a best SMM Panel choice for YouTube growth, TrendEvo lets you choose a suitable view package, pay through bKash, Nagad, Rocket, or other supported methods, and improve your YouTube content performance without sharing your password.',
+      'Our YouTube Views Service is made for videos that need stronger visibility, better watch activity, and a more trusted first impression. As a lnk<best SMM Panel|/> choice for YouTube growth, TrendEvo lets you choose a suitable view package, pay through bKash, Nagad, Rocket, or other supported methods, and improve your YouTube content performance without sharing your password.',
     primaryButtonLabel: 'Get Started Free',
     secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',
@@ -127,7 +127,7 @@ export const data: YoutubeViewsPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<YouTube Views> in Bangladesh',
     subtitle:
-      'TrendEvo is built for Bangladeshi users who want a simple way to improve YouTube video reach. From local payment support to clear order tracking, our Bangladesh SMM Panel helps creators, brands, agencies, educators, and resellers manage YouTube views from one simple dashboard.',
+      'lnk<TrendEvo|/about-us> is built for Bangladeshi users who want a simple way to improve YouTube video reach. From local payment support to clear order tracking, our Bangladesh SMM Panel helps creators, brands, agencies, educators, and resellers manage YouTube views from one simple dashboard.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

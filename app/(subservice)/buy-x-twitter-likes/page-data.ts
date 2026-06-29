@@ -131,7 +131,7 @@ export const data: TwitterLikesPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<X (Twitter) Likes> in Bangladesh',
     subtitle:
-      'TrendEvo is built for Bangladeshi users who want a simple way to improve tweet engagement and post credibility. From local payment support to clear order tracking, the best SMM Panel in Bangladesh helps creators, brands, entrepreneurs, agencies, and resellers manage X (Twitter) likes from one clean dashboard.',
+      'lnk<TrendEvo|/about-us> is built for Bangladeshi users who want a simple way to improve tweet engagement and post credibility. From local payment support to clear order tracking, the lnk<best SMM Panel in bangladesh|/> helps creators, brands, entrepreneurs, agencies, and resellers manage X (Twitter) likes from one clean dashboard.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -192,7 +192,7 @@ export const data: TwitterLikesPageData = {
     badge: 'Buy X (Twitter) Likes',
     title: 'Who Should Buy gt<X (Twitter) Likes> in Bangladesh?',
     subtitle:
-      'X (Twitter) likes help posts look more accepted when people see them in feeds, replies, quote posts, search results, trending topics, or profile timelines. TrendEvo’s X (Twitter) SMM Panel is useful for Bangladeshi users who want stronger tweet credibility, better audience confidence, and more visible interaction around important posts.',
+      'X (Twitter) likes help posts look more accepted when people see them in feeds, replies, quote posts, search results, trending topics, or profile timelines. TrendEvo’s lnk<X (Twitter) SMM Panel|/x-twitter-smm-panel> is useful for Bangladeshi users who want stronger tweet credibility, better audience confidence, and more visible interaction around important posts.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -240,7 +240,7 @@ export const data: TwitterLikesPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'Sign up with basic details and enter the TrendEvo dashboard. From there, you can browse X (Twitter) SMM Panel services, compare prices, and manage your orders from one place.',
+          'lnk<Sign up|https://trendevo.com/signup> with basic details and enter the TrendEvo dashboard. From there, you can browse X (Twitter) SMM Panel services, compare prices, and manage your orders from one place.',
       },
       {
         number: '02',

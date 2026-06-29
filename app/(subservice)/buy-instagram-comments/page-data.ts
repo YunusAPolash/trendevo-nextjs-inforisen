@@ -127,7 +127,7 @@ export const data: InstagramCommentsPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<Instagram Comments> in Bangladesh',
     subtitle:
-      'TrendEvo is made for Bangladeshi users who want a simple way to increase Instagram content interaction. From local payment options to clear order tracking, our cheapest SMM Panel in Bangladesh helps creators, brands, agencies, influencers, and resellers manage Instagram comments from one easy dashboard.',
+      'lnk<TrendEvo|/> is made for Bangladeshi users who want a simple way to increase Instagram content interaction. From local payment options to clear order tracking, our lnk<cheapest SMM Panel in Bangladesh|/> helps creators, brands, agencies, influencers, and resellers manage Instagram comments from one easy dashboard.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -144,7 +144,7 @@ export const data: InstagramCommentsPageData = {
       {
         title: 'Affordable Comment Packages',
         description:
-          'You can buy Instagram comments in Bangladesh without using a large marketing budget. Our packages work well for creators, online shops, fashion pages, cafés, startups, agencies, freelancers, and SMM resellers.',
+          'You can buy Instagram comments in Bangladesh without using a large marketing budget. Our packages work well for creators, online shops, fashion pages, cafés, startups, agencies, freelancers, and lnk<SMM resellers|https://trendevo.com/api>.',
         icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
@@ -188,7 +188,7 @@ export const data: InstagramCommentsPageData = {
     badge: 'Buy Instagram Comments',
     title: 'Who Should Buy gt<Instagram Comments> in Bangladesh?',
     subtitle:
-      'Instagram comments help posts and Reels look more active when people find them through Explore, hashtags, profile visits, stories, shares, or ads. TrendEvo’s Instagram SMM Panel is useful for Bangladeshi users who want stronger content discussions, better brand credibility, and more visible audience interaction.',
+      'Instagram comments help posts and Reels look more active when people find them through Explore, hashtags, profile visits, stories, shares, or ads. TrendEvo’s lnk<Instagram SMM Panel|/instagram-smm-panel> is useful for Bangladeshi users who want stronger content discussions, better brand credibility, and more visible audience interaction.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
