@@ -71,7 +71,7 @@ export const data: ContactUsPageData = {
     titleClassName:
       'text-[28px] font-semibold leading-[1.35] tracking-tight text-[#071431] sm:text-4xl md:text-5xl',
     description:
-      'Whether you need help with an order, payment, service, or account setup, TrendEvo support is ready to assist. We make SMM panel BD support simple for creators, businesses, agencies, and resellers who want smooth social media growth in Bangladesh.',
+      'Whether you need help with an order, payment, service, or account setup, lnk</about-us|TrendEvo> support is ready to assist. We make lnk</|SMM panel BD> support simple for creators, businesses, agencies, and resellers who want smooth social media growth in Bangladesh.',
     descriptionClassName:
       'max-w-2xl text-base leading-relaxed text-[#343e56] sm:text-base md:text-lg',
     primaryButtonLabel: 'Get Started Now',
@@ -136,7 +136,7 @@ export const data: ContactUsPageData = {
   cta: {
     title: 'Ready to gt<Grow Your Social Media> in Bangladesh?',
     description:
-      'Join over 56486 users who are already using TrendEvo to grow faster on Facebook, Instagram, YouTube, TikTok, and more. Getting started is free and takes less than 40 seconds.',
+      'Join over 56486 users who are already using lnk</about-us|TrendEvo> to grow faster on Facebook, Instagram, YouTube, TikTok, and more. Getting started is free and takes less than 40 seconds.',
     primaryButtonLabel: 'Create Free Account',
     secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',

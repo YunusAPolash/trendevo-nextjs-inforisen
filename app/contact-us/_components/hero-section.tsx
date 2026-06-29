@@ -15,7 +15,7 @@ export default function ContactUsHeroSection() {
       leftColumnClassName={hero.leftColumnClassName}
       title={renderText(hero.title)}
       titleClassName={hero.titleClassName}
-      description={hero.description}
+      description={renderText(hero.description)}
       descriptionClassName={hero.descriptionClassName}
       actions={
         <PrimaryButton href={signUpUrl} showArrow className="w-fit">

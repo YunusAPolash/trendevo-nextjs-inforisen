@@ -3,3 +3,4 @@ const perfectAppBaseUrl =
 
 export const signInUrl = perfectAppBaseUrl || '#';
 export const signUpUrl = perfectAppBaseUrl ? `${perfectAppBaseUrl}/signup` : '#';
+export const resellerApiUrl = perfectAppBaseUrl ? `${perfectAppBaseUrl}/api` : '#';

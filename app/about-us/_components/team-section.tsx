@@ -43,7 +43,7 @@ export default function TeamSection() {
                     key={paragraph.slice(0, 48)}
                     className="w-full min-w-0 text-base font-medium leading-normal break-words text-[#404a60] sm:text-lg lg:text-xl dark:text-[#c1c4cc]"
                   >
-                    {paragraph}
+                    {renderText(paragraph)}
                   </p>
                 ))}
               </div>

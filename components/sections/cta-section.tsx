@@ -105,7 +105,7 @@ export default function CtaSection({
                     {typeof title === 'string' ? renderText(title) : title}
                   </h2>
                   <p className="relative z-10 text-sm font-normal leading-normal text-[#13203b] sm:text-base dark:text-white">
-                    {description}
+                    {renderText(description)}
                   </p>
                 </div>
 
