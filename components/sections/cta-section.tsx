@@ -9,7 +9,7 @@ const CTA_GRADIENT =
   'linear-gradient(219.3deg, rgb(255, 213, 245) 8.67%, rgb(254, 251, 255) 41.83%, rgb(236, 205, 255) 89.38%)';
 
 const CTA_CARD_DARK_BG =
-  "bg-[url('/images/backgrounds/section-bgg-12-dark.svg')]";
+  "bg-[url('/images/backgrounds/section-bg-12-dark.svg')]";
 
 type CtaSectionProps = {
   title: ReactNode;

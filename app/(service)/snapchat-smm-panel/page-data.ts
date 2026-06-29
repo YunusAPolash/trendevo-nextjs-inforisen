@@ -157,7 +157,7 @@ export const data: SnapchatSmmPanelPageData = {
       'Grow your Snapchat presence with affordable pricing, bKash, Nagad, Rocket payment options, and services built for stronger attention, better content reach, and more visible activity in Bangladesh.',
     buttonLabel: 'Get Started Now',
     image: {
-      src: '/images/service-smm-panel/snapchat-smm-panel/boost-snapchat-reach-and-engagement-with-trendevo.webp',
+      src: '/images/service/snapchat-smm-panel/grow-faster-with-a-trusted-snapchat-smm-panel-in-bangladesh.webp',
       alt: 'Grow faster with TrendEvo Snapchat SMM Panel in Bangladesh',
       width: 687,
       height: 648,
@@ -172,14 +172,14 @@ export const data: SnapchatSmmPanelPageData = {
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/snapchat-smm-panel/snapchat-effect.svg',
+      src: '/images/service/snapchat-smm-panel/snapchat-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 256,
       height: 258,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[150px] lg:block xl:w-[256px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/snapchat-smm-panel/snapchat-effect.svg',
+      src: '/images/service/snapchat-smm-panel/snapchat-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 256,
       height: 258,
       className:
@@ -190,7 +190,7 @@ export const data: SnapchatSmmPanelPageData = {
         title: 'Snapchat Subscribers',
         description:
           'Grow your Snapchat profile with more subscribers. This service is useful for creators, influencers, lifestyle pages, small brands, and public profiles that want to look more established to new viewers.',
-        icon: '/images/our-services/platforms/our-services-snapchat-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/snapchat-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },

@@ -41,7 +41,7 @@ function ProcessCenterHub({ className }: { className?: string }) {
     >
       <div className="pointer-events-none absolute inset-0 motion-safe:animate-[spin_12s_linear_infinite] dark:hidden">
         <Image
-          src="/images/working-process/working-process-outer-circlesvg-decoration.svg"
+          src="/images/working-process/working-process-outer-circle-decoration.svg"
           alt="Decorative working process outer circle"
           aria-hidden
           width={188}
@@ -239,11 +239,19 @@ function ProcessStepCard({
           <Image
             src="/images/working-process/working-process-card-corner-tl-decoration.svg"
             alt="Decorative working process card corner accent"
+            aria-hidden
+            width={166}
+            height={166}
+            className="pointer-events-none absolute left-0 top-0 z-0 size-20 opacity-50 dark:hidden sm:size-28 sm:opacity-40 md:-left-[60px] md:-top-8 md:size-[140px] lg:-left-[80px] lg:-top-[40px] lg:size-[166px]"
             unoptimized
           />
           <Image
             src="/images/working-process/dark/working-process-card-corner-tl-decoration.svg"
             alt="Decorative working process card corner accent for dark mode"
+            aria-hidden
+            width={166}
+            height={166}
+            className="pointer-events-none absolute left-0 top-0 z-0 hidden size-20 opacity-50 dark:block sm:size-28 sm:opacity-40 md:-left-[60px] md:-top-8 md:size-[140px] lg:-left-[80px] lg:-top-[40px] lg:size-[166px]"
             unoptimized
           />
         </>
@@ -254,11 +262,19 @@ function ProcessStepCard({
           <Image
             src="/images/working-process/working-process-card-corner-br-decoration.svg"
             alt="Decorative working process card corner accent"
+            aria-hidden
+            width={166}
+            height={166}
+            className="pointer-events-none absolute bottom-0 right-0 z-0 size-20 opacity-50 dark:hidden sm:size-28 sm:opacity-40 md:-bottom-8 md:-right-[60px] md:size-[140px] lg:-bottom-[40px] lg:-right-[80px] lg:size-[166px]"
             unoptimized
           />
           <Image
             src="/images/working-process/dark/working-process-card-corner-br-decoration.svg"
             alt="Decorative working process card corner accent for dark mode"
+            aria-hidden
+            width={166}
+            height={166}
+            className="pointer-events-none absolute bottom-0 right-0 z-0 hidden size-20 opacity-50 dark:block sm:size-28 sm:opacity-40 md:-bottom-8 md:-right-[60px] md:size-[140px] lg:-bottom-[40px] lg:-right-[80px] lg:size-[166px]"
             unoptimized
           />
         </>

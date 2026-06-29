@@ -103,7 +103,7 @@ export const data: InstagramCommentsPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-instagram-comments/buy-instagram-comments-in-bangladesh-for-better-audience-interaction.webp',
       alt: 'Buy Instagram Comments in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -136,7 +136,7 @@ export const data: InstagramCommentsPageData = {
         title: 'Fast Comment Processing',
         description:
           'Your Instagram comments order starts after you submit it from the dashboard. Delivery speed may depend on the package size, content type, and current order volume, but TrendEvo keeps the process smooth and easy to manage.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -145,7 +145,7 @@ export const data: InstagramCommentsPageData = {
         title: 'Affordable Comment Packages',
         description:
           'You can buy Instagram comments in Bangladesh without using a large marketing budget. Our packages work well for creators, online shops, fashion pages, cafés, startups, agencies, freelancers, and lnk<SMM resellers|https://trendevo.com/api>.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -154,7 +154,7 @@ export const data: InstagramCommentsPageData = {
         title: 'Helpful Support Team',
         description:
           'Need help choosing the right Instagram Comment Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -167,7 +167,7 @@ export const data: InstagramCommentsPageData = {
         title: 'Local Payment Options',
         description:
           'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes Instagram Marketing Bangladesh easier for users who prefer trusted local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -179,7 +179,7 @@ export const data: InstagramCommentsPageData = {
         description:
           'TrendEvo focuses on Instagram comments that support visible engagement, content trust, and audience response. You can start with a small order, test the service, and increase your comment activity based on your campaign plan.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -223,7 +223,7 @@ export const data: InstagramCommentsPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy Instagram Comments on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -351,7 +351,7 @@ export const data: InstagramCommentsPageData = {
         title: 'Buy Instagram Likes',
         description:
           'Increase the trust signal of your Instagram posts with more likes. Instagram likes help Reels, product photos, carousels, offers, and brand updates look more popular to new visitors.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -362,7 +362,7 @@ export const data: InstagramCommentsPageData = {
         title: 'Buy Instagram Followers',
         description:
           'Grow your profile authority with more Instagram followers. This service helps creators, brands, and businesses build a stronger first impression when people visit after seeing your content.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

@@ -103,7 +103,7 @@ export const data: YoutubeLikesPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-youtube-likes/buy-youtube-likes-in-bangladesh-for-stronger-video-engagement.webp',
       alt: 'Buy YouTube Likes in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -136,7 +136,7 @@ export const data: YoutubeLikesPageData = {
         title: 'Fast Like Processing',
         description:
           'Your YouTube likes order starts after you submit it from the dashboard. Delivery speed may depend on the video status, package size, and current order volume, but TrendEvo keeps the process smooth and easy to follow.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -145,7 +145,7 @@ export const data: YoutubeLikesPageData = {
         title: 'Affordable Like Packages',
         description:
           'You can buy YouTube likes in Bangladesh without spending a large promotion budget. Our packages work well for new YouTubers, tutorial channels, product reviews, music videos, business content, agencies, and SMM resellers.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -154,7 +154,7 @@ export const data: YoutubeLikesPageData = {
         title: 'Helpful Support Team',
         description:
           'Need help choosing the right YouTube Like Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -167,7 +167,7 @@ export const data: YoutubeLikesPageData = {
         title: 'Local Payment Options',
         description:
           'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes YouTube Marketing Bangladesh easier for users who prefer trusted local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -179,7 +179,7 @@ export const data: YoutubeLikesPageData = {
         description:
           'TrendEvo focuses on YouTube likes that support viewer confidence, video credibility, and audience response. You can start with a small package, review the result, and increase likes based on your video campaign plan.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -223,7 +223,7 @@ export const data: YoutubeLikesPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy YouTube Likes on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -351,7 +351,7 @@ export const data: YoutubeLikesPageData = {
         title: 'Buy YouTube Views',
         description:
           'Increase visibility for your YouTube videos with more views. This service helps tutorials, product reviews, music videos, Shorts, business content, and campaign videos look more active to new viewers.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -362,7 +362,7 @@ export const data: YoutubeLikesPageData = {
         title: 'Buy YouTube Subscribers',
         description:
           'Grow your channel authority with more YouTube subscribers. This service helps creators, businesses, and educational channels build a stronger first impression when viewers visit your channel.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

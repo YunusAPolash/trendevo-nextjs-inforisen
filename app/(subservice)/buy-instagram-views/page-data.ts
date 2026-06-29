@@ -103,7 +103,7 @@ export const data: InstagramViewsPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-instagram-views/buy-instagram-views-in-bangladesh-for-better-content-visibility.webp',
       alt: 'Buy Instagram Views in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -136,7 +136,7 @@ export const data: InstagramViewsPageData = {
         title: 'Fast View Delivery',
         description:
           'Your Instagram views order starts after you submit it from the dashboard. Delivery speed may depend on the content type, order size, and current volume, but TrendEvo keeps the process smooth for Reels, videos, and supported content.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -145,7 +145,7 @@ export const data: InstagramViewsPageData = {
         title: 'Affordable View Packages',
         description:
           'You can buy Instagram views in Bangladesh without using a large promotion budget. Our packages work well for Reels creators, online shops, fashion pages, cafés, startups, agencies, freelancers, and SMM resellers.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -154,7 +154,7 @@ export const data: InstagramViewsPageData = {
         title: 'Helpful Support Team',
         description:
           'Need help choosing the right Instagram View Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -167,7 +167,7 @@ export const data: InstagramViewsPageData = {
         title: 'Local Payment Options',
         description:
           'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes Instagram Marketing Bangladesh easier for users who prefer trusted local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -179,7 +179,7 @@ export const data: InstagramViewsPageData = {
         description:
           'TrendEvo focuses on Instagram views that support content exposure, audience reach, and social proof. You can start with a small order, review the result, and increase view activity based on your content plan.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -223,7 +223,7 @@ export const data: InstagramViewsPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy Instagram Views on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -351,7 +351,7 @@ export const data: InstagramViewsPageData = {
         title: 'Buy Instagram Likes',
         description:
           'Increase the trust signal of your Instagram posts and Reels with more likes. Instagram likes help product videos, reels, carousels, offers, and brand updates look more popular to new visitors.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -362,7 +362,7 @@ export const data: InstagramViewsPageData = {
         title: 'Buy Instagram Comments',
         description:
           'Add more visible discussion to your Instagram content with comments. This service is useful for Reels, product launches, influencer content, campaign posts, brand announcements, and promotional updates.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

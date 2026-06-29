@@ -157,7 +157,7 @@ export const data: InstagramSmmPanelPageData = {
       'Get faster Instagram growth with affordable pricing, bKash, Nagad, Rocket payment support, and services made for real branding, content reach, and audience growth in Bangladesh.',
     buttonLabel: 'Get Started Now',
     image: {
-      src: '/images/service-smm-panel/instagram-smm-panel/boost-instagram-reach-and-engagement-with-trendevo.webp',
+      src: '/images/service/instagram-smm-panel/grow-faster-with-a-trusted-instagram-smm-panel-in-bangladesh.webp',
       alt: 'Grow faster with TrendEvo Instagram SMM Panel in Bangladesh',
       width: 687,
       height: 648,
@@ -172,14 +172,14 @@ export const data: InstagramSmmPanelPageData = {
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/instagram-smm-panel/instagram-effect.svg',
+      src: '/images/service/instagram-smm-panel/instagram-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 221,
       height: 230,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[140px] lg:block xl:w-[221px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/instagram-smm-panel/instagram-effect.svg',
+      src: '/images/service/instagram-smm-panel/instagram-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 221,
       height: 230,
       className:
@@ -190,7 +190,7 @@ export const data: InstagramSmmPanelPageData = {
         title: 'Instagram Followers',
         description:
           'Build a stronger audience base for your Instagram profile by using our lnk<instagram followers|/buy-instagram-followers> service. This service is useful for online shops, personal brands, creators, influencers, startups, and SMEs that want their profile to look active and trustworthy.',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },

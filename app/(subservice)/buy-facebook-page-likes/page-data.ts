@@ -100,7 +100,7 @@ export const data: FacebookPageLikesPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-facebook-page-likes/buy-facebook-page-likes-in-bangladesh-for-stronger-brand-trust.webp',
       alt: 'Buy Facebook Page Likes in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -130,7 +130,7 @@ export const data: FacebookPageLikesPageData = {
         title: 'Quick Order Processing',
         description:
           'Your Facebook Page Likes order starts after you place it from the dashboard. Processing speed may vary by package size, but TrendEvo keeps the order flow smooth and easy to follow.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -139,7 +139,7 @@ export const data: FacebookPageLikesPageData = {
         title: 'Budget-Friendly Packages',
         description:
           'You can buy Facebook Page Likes in Bangladesh without needing a large marketing budget. Our packages are suitable for new business pages, e-commerce brands, restaurants, local shops, startups, and reseller projects.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -148,7 +148,7 @@ export const data: FacebookPageLikesPageData = {
         title: 'Support When You Need It',
         description:
           'Have a question about service selection, order status, payment, or dashboard use? TrendEvo support is available to help you choose the right Facebook Page Likes package and solve order-related issues.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -161,7 +161,7 @@ export const data: FacebookPageLikesPageData = {
         title: 'Local Payment Support',
         description:
           'Pay through bKash, Nagad, Rocket, and other available methods. TrendEvo makes Facebook Page Likes easier for Bangladeshi users who prefer familiar local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -173,7 +173,7 @@ export const data: FacebookPageLikesPageData = {
         description:
           'TrendEvo focuses on Facebook Page Likes that support brand appearance and page authority. You can begin with a small order, review the result, and scale your page growth based on your business needs.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -217,7 +217,7 @@ export const data: FacebookPageLikesPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy Facebook Page Likes on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -345,7 +345,7 @@ export const data: FacebookPageLikesPageData = {
         title: 'Buy Facebook Followers',
         description:
           'Grow your Facebook page with more followers and build a stronger first impression. This service is useful for new pages, online shops, creators, local brands, and businesses that want better page trust before running ads or promotions.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -356,7 +356,7 @@ export const data: FacebookPageLikesPageData = {
         title: 'Buy Facebook Comments',
         description:
           'Add a more visible response to your Facebook posts with comments. This can help product launches, event posts, promotional updates, service announcements, and local business campaigns look more active.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

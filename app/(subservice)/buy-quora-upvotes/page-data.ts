@@ -87,7 +87,7 @@ export const data: QuoraUpvotesPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-quora-upvotes/buy-quora-upvotes-in-real-fast-and-affordable-price.webp',
       alt: 'Excited user celebrating Quora growth with analytics chart',
       width: 558,
       height: 621,
@@ -98,7 +98,7 @@ export const data: QuoraUpvotesPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy Quora Upvotes gt<on TrendEvo>',
     subtitle:
@@ -143,7 +143,7 @@ export const data: QuoraUpvotesPageData = {
     title: 'Quora Panel gt<Reviews>',
     subtitle:
       'Discover what our clients say about working with us. From increased engagement to faster social media growth, their real experiences highlight the trust, quality, and results our SMM platform consistently delivers.',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     titleClassName:
       'max-w-none whitespace-normal text-center text-2xl tracking-[0.36px] text-[#071431] dark:text-[#efedf1] sm:text-[32px] md:text-[36px] lg:text-[36px]',
@@ -227,7 +227,7 @@ export const data: QuoraUpvotesPageData = {
       name: 'Ariyena Islam',
       role: 'Business Owner',
       avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote: reviewQuote,
       youtubeVideoId: youtubeReelVideoId,
     },

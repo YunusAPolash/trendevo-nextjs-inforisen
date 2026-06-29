@@ -103,7 +103,7 @@ export const data: SpotifyPlaysPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-spotify-plays/buy-spotify-plays-in-bangladesh-for-better-music-streaming-growth.webp',
       alt: 'Buy Spotify Plays in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -136,7 +136,7 @@ export const data: SpotifyPlaysPageData = {
         title: 'Instant Start, Fast Delivery',
         description:
           'Your Spotify plays order starts processing after submission. Delivery speed may depend on the selected package and order size, but TrendEvo is designed for quick and smooth order handling.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -145,7 +145,7 @@ export const data: SpotifyPlaysPageData = {
         title: 'Affordable Prices',
         description:
           'You can buy Spotify plays in Bangladesh without spending a large music promotion budget. Our pricing works well for new songs, indie artists, producers, DJs, small labels, and music marketing agencies.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -154,7 +154,7 @@ export const data: SpotifyPlaysPageData = {
         title: '24/7 Support',
         description:
           'Need help before or after placing an order? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -167,7 +167,7 @@ export const data: SpotifyPlaysPageData = {
         title: 'Local Payment Options',
         description:
           'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes Spotify streaming promotion easier for Bangladeshi users who prefer local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -179,7 +179,7 @@ export const data: SpotifyPlaysPageData = {
         description:
           'TrendEvo focuses on stable Spotify plays services that help improve song presence and streaming signals. You can start small, test the service, and scale based on your release goals.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -223,7 +223,7 @@ export const data: SpotifyPlaysPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy Spotify Plays on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -351,7 +351,7 @@ export const data: SpotifyPlaysPageData = {
         title: 'Buy Spotify Followers',
         description:
           'Grow your Spotify artist profile with more followers. Spotify followers help your profile look more established, support artist branding, and make new listeners more comfortable exploring your music.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -362,7 +362,7 @@ export const data: SpotifyPlaysPageData = {
         title: 'Buy Spotify Monthly Listeners',
         description:
           'Increase listener activity around your Spotify profile with more monthly listeners. This service is useful for new releases, playlist campaigns, album promotion, and artist visibility projects that need stronger audience signals.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

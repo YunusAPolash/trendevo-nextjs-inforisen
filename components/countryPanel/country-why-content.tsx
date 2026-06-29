@@ -54,7 +54,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Built for the UK',
         description:
           'While many SMM panels operate globally, TrendEvo stands out with a dedicated focus on the UK market. Unlike international platforms that treat the UK as secondary, our services are designed around the needs and expectations of UK users.',
-        icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
+        icon: '/images/why-choose-us/what-makes-trendevo-different-from-other-smm-panels-in-bangladesh-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -72,7 +72,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Fast & Reliable Delivery',
         description:
           'Our system is designed to process orders quickly and efficiently. Once you place an order, our automated platform starts delivering almost instantly, ensuring fast results without compromising service stability.',
-        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
+        icon: '/images/why-choose-us/fast-and-stable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -80,7 +80,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: '24/7 Dedicated Customer Support',
         description:
           'Our support team is available around the clock to assist UK users with orders, delivery questions, and account guidance whenever you need help.',
-        icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
+        icon: '/images/why-choose-us/24-7-bangla-and-english-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },
@@ -111,7 +111,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Built for Vietnam',
         description:
           'While many SMM panels operate globally, TrendEvo stands out with a dedicated focus on the Vietnamese market. Unlike international platforms that treat Vietnam as secondary, our services are designed around the needs and expectations of local users.',
-        icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
+        icon: '/images/why-choose-us/what-makes-trendevo-different-from-other-smm-panels-in-bangladesh-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -129,7 +129,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Fast & Reliable Delivery',
         description:
           'Our system is designed to process orders quickly and efficiently. Once you place an order, our automated platform starts delivering almost instantly, ensuring fast results without compromising service stability.',
-        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
+        icon: '/images/why-choose-us/fast-and-stable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -137,7 +137,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: '24/7 Dedicated Customer Support',
         description:
           'Our support team is available around the clock to assist Vietnamese users with orders, delivery questions, and account guidance whenever you need help.',
-        icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
+        icon: '/images/why-choose-us/24-7-bangla-and-english-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },
@@ -168,7 +168,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Built for Thailand',
         description:
           'While many SMM panels operate globally, TrendEvo stands out with a dedicated focus on the Thai market. Unlike international platforms that treat Thailand as secondary, our services are designed around the needs and expectations of local users.',
-        icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
+        icon: '/images/why-choose-us/what-makes-trendevo-different-from-other-smm-panels-in-bangladesh-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -186,7 +186,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Fast & Reliable Delivery',
         description:
           'Our system is designed to process orders quickly and efficiently. Once you place an order, our automated platform starts delivering almost instantly, ensuring fast results without compromising service stability.',
-        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
+        icon: '/images/why-choose-us/fast-and-stable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -194,7 +194,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: '24/7 Dedicated Customer Support',
         description:
           'Our support team is available around the clock to assist Thai users with orders, delivery questions, and account guidance whenever you need help.',
-        icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
+        icon: '/images/why-choose-us/24-7-bangla-and-english-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },
@@ -225,7 +225,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Built for Pakistan',
         description:
           'While many SMM panels operate globally, TrendEvo stands out with a dedicated focus on the Pakistani market. Unlike international platforms that treat Pakistan as secondary, our services are designed around the needs and expectations of local users.',
-        icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
+        icon: '/images/why-choose-us/what-makes-trendevo-different-from-other-smm-panels-in-bangladesh-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -243,7 +243,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Fast & Reliable Delivery',
         description:
           'Our system is designed to process orders quickly and efficiently. Once you place an order, our automated platform starts delivering almost instantly, ensuring fast results without compromising service stability.',
-        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
+        icon: '/images/why-choose-us/fast-and-stable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -251,7 +251,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: '24/7 Dedicated Customer Support',
         description:
           'Our support team is available around the clock to assist Pakistani users with orders, delivery questions, and account guidance whenever you need help.',
-        icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
+        icon: '/images/why-choose-us/24-7-bangla-and-english-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },
@@ -282,7 +282,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Built for Nigeria',
         description:
           'While many SMM panels operate globally, TrendEvo stands out with a dedicated focus on the Nigerian market. Unlike international platforms that treat Nigeria as secondary, our services are designed around the needs and expectations of local users.',
-        icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
+        icon: '/images/why-choose-us/what-makes-trendevo-different-from-other-smm-panels-in-bangladesh-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -300,7 +300,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Fast & Reliable Delivery',
         description:
           'Our system is designed to process orders quickly and efficiently. Once you place an order, our automated platform starts delivering almost instantly, ensuring fast results without compromising service stability.',
-        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
+        icon: '/images/why-choose-us/fast-and-stable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -308,7 +308,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: '24/7 Dedicated Customer Support',
         description:
           'Our support team is available around the clock to assist Nigerian users with orders, delivery questions, and account guidance whenever you need help.',
-        icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
+        icon: '/images/why-choose-us/24-7-bangla-and-english-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },
@@ -339,7 +339,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Built for Brazil',
         description:
           'While many SMM panels operate globally, TrendEvo stands out with a dedicated focus on the Brazilian market. Unlike international platforms that treat Brazil as secondary, our services are designed around the needs and expectations of local users.',
-        icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
+        icon: '/images/why-choose-us/what-makes-trendevo-different-from-other-smm-panels-in-bangladesh-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -357,7 +357,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Fast & Reliable Delivery',
         description:
           'Our system is designed to process orders quickly and efficiently. Once you place an order, our automated platform starts delivering almost instantly, ensuring fast results without compromising service stability.',
-        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
+        icon: '/images/why-choose-us/fast-and-stable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -365,7 +365,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: '24/7 Dedicated Customer Support',
         description:
           'Our support team is available around the clock to assist Brazilian users with orders, delivery questions, and account guidance whenever you need help.',
-        icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
+        icon: '/images/why-choose-us/24-7-bangla-and-english-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },
@@ -396,7 +396,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Built for Egypt',
         description:
           'While many SMM panels operate globally, TrendEvo stands out with a dedicated focus on the Egyptian market. Unlike international platforms that treat Egypt as secondary, our services are designed around the needs and expectations of local users.',
-        icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
+        icon: '/images/why-choose-us/what-makes-trendevo-different-from-other-smm-panels-in-bangladesh-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -414,7 +414,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Fast & Reliable Delivery',
         description:
           'Our system is designed to process orders quickly and efficiently. Once you place an order, our automated platform starts delivering almost instantly, ensuring fast results without compromising service stability.',
-        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
+        icon: '/images/why-choose-us/fast-and-stable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -422,7 +422,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: '24/7 Dedicated Customer Support',
         description:
           'Our support team is available around the clock to assist Egyptian users with orders, delivery questions, and account guidance whenever you need help.',
-        icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
+        icon: '/images/why-choose-us/24-7-bangla-and-english-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },
@@ -453,7 +453,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Built for India',
         description:
           'While many SMM panels operate globally, TrendEvo stands out with a dedicated focus on the Indian market. Unlike international platforms that treat India as secondary, our services are designed around the needs and expectations of local users.',
-        icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
+        icon: '/images/why-choose-us/what-makes-trendevo-different-from-other-smm-panels-in-bangladesh-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -471,7 +471,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Fast & Reliable Delivery',
         description:
           'Our system is designed to process orders quickly and efficiently. Once you place an order, our automated platform starts delivering almost instantly, ensuring fast results without compromising service stability.',
-        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
+        icon: '/images/why-choose-us/fast-and-stable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -479,7 +479,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: '24/7 Dedicated Customer Support',
         description:
           'Our support team is available around the clock to assist Indian users with orders, delivery questions, and account guidance whenever you need help.',
-        icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
+        icon: '/images/why-choose-us/24-7-bangla-and-english-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },
@@ -510,7 +510,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Built for Indonesia',
         description:
           'While many SMM panels operate globally, TrendEvo stands out with a dedicated focus on the Indonesian market. Unlike international platforms that treat Indonesia as secondary, our services are designed around the needs and expectations of local users.',
-        icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
+        icon: '/images/why-choose-us/what-makes-trendevo-different-from-other-smm-panels-in-bangladesh-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -528,7 +528,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: 'Fast & Reliable Delivery',
         description:
           'Our system is designed to process orders quickly and efficiently. Once you place an order, our automated platform starts delivering almost instantly, ensuring fast results without compromising service stability.',
-        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
+        icon: '/images/why-choose-us/fast-and-stable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -536,7 +536,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
         title: '24/7 Dedicated Customer Support',
         description:
           'Our support team is available around the clock to assist Indonesian users with orders, delivery questions, and account guidance whenever you need help.',
-        icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
+        icon: '/images/why-choose-us/24-7-bangla-and-english-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },

@@ -237,7 +237,7 @@ export const data: HomePageData = {
     secondaryButtonLabel: 'See Our Services',
     secondaryButtonHref: '/services',
     illustration: {
-      src: '/images/hero/cheapest-smm-panel-in-bangladesh-with-fast-&-secure-services.png',
+      src: '/images/home/cheapest-smm-panel-in-bangladesh-with-fast-and-secure-services.png',
       alt: 'TrendEvo platform user with social media icons and analytics',
       width: 669,
       height: 728,
@@ -249,7 +249,7 @@ export const data: HomePageData = {
       {
         key: 'ordersCompleted',
         label: 'Total Completed Orders',
-        icon: '/images/stats/home-stats-total-completed-orders-icon.png',
+        icon: '/images/stats/total-completed-orders-icon.png',
         width: 167,
         height: 150,
         displayWidth: 111,
@@ -259,7 +259,7 @@ export const data: HomePageData = {
       {
         key: 'servicesAll',
         label: 'Total Services Available',
-        icon: '/images/stats/home-stats-total-services-available-icon.png',
+        icon: '/images/stats/total-services-available-icon.png',
         width: 152,
         height: 150,
         displayWidth: 101,
@@ -269,7 +269,7 @@ export const data: HomePageData = {
       {
         key: 'usersAll',
         label: 'Total Users',
-        icon: '/images/stats/home-stats-total-users-icon.png',
+        icon: '/images/stats/total-users-icon.png',
         width: 188,
         height: 150,
         displayWidth: 125,
@@ -279,7 +279,7 @@ export const data: HomePageData = {
       {
         key: 'satisfaction',
         label: 'Customer Satisfaction Rate',
-        icon: '/images/stats/home-stats-customer-satisfaction-rate-icon.png',
+        icon: '/images/stats/customer-satisfaction-rate-icon.png',
         width: 144,
         height: 150,
         displayWidth: 96,
@@ -302,8 +302,8 @@ export const data: HomePageData = {
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        icon: '/images/our-services/platforms/facebook-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/facebook-decoration.webp',
         marketingTitle: 'Facebook SMM Panel Services',
         description:
           'Use TrendEvo’s lnk</facebook-smm-panel|Facebook SMM Panel> Services to build social proof, improve post activity, and support page growth in Bangladesh. Perfect for businesses, creators, agencies, resellers, and local brands that want faster Facebook visibility.',
@@ -321,8 +321,8 @@ export const data: HomePageData = {
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/instagram-decoration.png',
         marketingTitle: 'Instagram SMM Panel Services',
         description:
           'Use our lnk</instagram-smm-panel|Instagram SMM Panel> Services to grow your profile, improve content reach, and build stronger social proof in Bangladesh. Ideal for creators, influencers, online shops, agencies, resellers, and brands that want better Instagram visibility.',
@@ -340,9 +340,9 @@ export const data: HomePageData = {
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconClassName: 'scale-150',
-        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
+        decorationImage: '/images/our-services/decorations/x-twitter-decoration.png',
         marketingTitle: 'X (Twitter) SMM Panel Services',
         description:
           'Use the best lnk</x-twitter-smm-panel|X (Twitter) SMM Panel> Services to improve profile activity, post engagement, and brand visibility in Bangladesh. Best for creators, startups, agencies, resellers, public figures, and businesses that want faster reach on X.',
@@ -360,8 +360,8 @@ export const data: HomePageData = {
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/youtube-decoration.png',
         marketingTitle: 'YouTube SMM Panel Services',
         description:
           'Use TrendEvo’s lnk</youtube-smm-panel|YouTube SMM Panel> Services to support channel growth, video reach, and viewer trust in Bangladesh. This service is useful for Bangladeshi creators, educators, reviewers, agencies, and brands that want more visibility from a reliable SMM Panel BD platform.',
@@ -379,8 +379,8 @@ export const data: HomePageData = {
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/tiktok-decoration.png',
         marketingTitle: 'TikTok SMM Panel Services',
         description:
           'Use TrendEvo’s lnk</tiktok-smm-panel|TikTok SMM Panel> Services to support short-video reach, profile activity, and content visibility in Bangladesh. It is helpful for creators, online shops, influencers, agencies, and resellers who want faster TikTok growth from a simple SMM panel dashboard.',
@@ -398,8 +398,8 @@ export const data: HomePageData = {
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/linkedin-decoration.png',
         marketingTitle: 'LinkedIn SMM Panel Services',
         description:
           'The best LinkedIn SMM Panel Services to improve professional visibility, company page trust, and content engagement. This service is useful for Bangladeshi startups, agencies, consultants, recruiters, B2B brands, and professionals who want a stronger LinkedIn presence.',
@@ -417,8 +417,8 @@ export const data: HomePageData = {
       {
         id: 'telegram',
         label: 'Telegram',
-        icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-telegram-members-decoration.png',
+        icon: '/images/our-services/platforms/telegram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/telegram-decoration.png',
         marketingTitle: 'Telegram SMM Panel Services',
         description:
           'Grow Telegram channels and groups with our lnk</telegram-smm-panel|Telegram SMM panel> in Bangladesh. Useful for course groups, news channels, reseller communities, crypto updates, agencies, and digital sellers. Add funds with bKash, Nagad, or Rocket and manage every order from one dashboard.',
@@ -436,8 +436,8 @@ export const data: HomePageData = {
       {
         id: 'discord',
         label: 'Discord',
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-discord-members-decoration.png',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/discord-decoration.png',
         marketingTitle: 'Discord SMM Panel Services',
         description:
           'Build stronger Discord servers with TrendEvo’s SMM panel in Bangladesh. Useful for gaming groups, crypto communities, NFT projects, course servers, agencies, and online brands. Add funds with bKash, Nagad, or Rocket and manage Discord orders from one dashboard.',
@@ -455,8 +455,8 @@ export const data: HomePageData = {
       {
         id: 'spotify',
         label: 'Spotify',
-        icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-spotify-plays-decoration.png',
+        icon: '/images/our-services/platforms/spotify-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/spotify-decoration.png',
         marketingTitle: 'Spotify SMM Panel Services',
         description:
           'Promote Spotify tracks, artists, and playlists with lnk</spotify-smm-panel|Spotify SMM panel> in Bangladesh. Useful for musicians, labels, podcast creators, agencies, and music promoters. Add funds with bKash, Nagad, or Rocket and manage Spotify growth from one dashboard.',
@@ -474,8 +474,8 @@ export const data: HomePageData = {
       {
         id: 'soundcloud',
         label: 'SoundCloud',
-        icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
-        decorationImage: '/images/our-services/decorations/our-services-soundcloud-plays-decoration.png',
+        icon: '/images/our-services/platforms/soundcloud-platform-icon.png',
+        decorationImage: '/images/our-services/decorations/soundcloud-decoration.png',
         marketingTitle: 'SoundCloud SMM Panel Services',
         description:
           'Grow SoundCloud tracks, profiles, and music pages with lnk</soundcloud-smm-panel|SoundCloud SMM Panel> BD. Useful for independent artists, DJs, producers, podcast creators, agencies, and music promoters. Add funds with bKash, Nagad, or Rocket and manage SoundCloud orders easily.',
@@ -493,8 +493,8 @@ export const data: HomePageData = {
       {
         id: 'snapchat',
         label: 'Snapchat',
-        icon: '/images/our-services/platforms/our-services-snapchat-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-snapchat-followers-decoration.png',
+        icon: '/images/our-services/platforms/snapchat-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/snapchat-decoration.png',
         marketingTitle: 'Snapchat SMM Panel Services',
         description:
           'Grow Snapchat profiles and content reach with lnk</snapchat-smm-panel|Snapchat SMM panel> in Bangladesh. Useful for creators, lifestyle brands, ecommerce shops, influencers, agencies, and youth-focused campaigns. Add funds with bKash, Nagad, or Rocket and manage Snapchat orders easily.',
@@ -512,8 +512,8 @@ export const data: HomePageData = {
       {
         id: 'website-traffic',
         label: 'Website Traffic',
-        icon: '/images/our-services/platforms/our-services-organic-traffic-platform-icon.png',
-        decorationImage: '/images/our-services/decorations/our-services-organic-traffic-decoration.png',
+        icon: '/images/our-services/platforms/website-traffic-platform-icon.png',
+        decorationImage: '/images/our-services/decorations/website-traffic-decoration.png',
         marketingTitle: 'Website Traffic SMM Panel Services',
         description:
           'Send traffic to websites, blogs, landing pages, and product pages with TrendEvo’s SMM panel in Bangladesh. Useful for ecommerce brands, agencies, affiliate marketers, freelancers, and businesses testing online campaigns. Add funds with bKash, Nagad, or Rocket and manage traffic orders easily.',
@@ -558,7 +558,7 @@ export const data: HomePageData = {
     ctaLabel: 'About Us',
     ctaHref: '/about-us',
     image: {
-      src: '/images/about/about-us-trendevo-growth-partner-illustration.webp',
+      src: '/images/about/your-trusted-smm-panel-in-bangladesh.webp',
       alt: 'TrendEvo growth partner',
     },
   },
@@ -569,7 +569,7 @@ export const data: HomePageData = {
       title: 'Start Getting Results in gt<4 Easy Steps>',
       subtitle:
         'TrendEvo keeps SMM panel ordering simple for Bangladesh users. lnk<Create a free account|https://trendevo.com/signup>, add funds with local payment methods, choose a service, and track every order from one clean dashboard.',
-      underlineSrc: '/images/working-process/working-process-section-underline.svg',
+      underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
       underlineWidth: 216,
       titleClassName:
         'max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -629,7 +629,7 @@ export const data: HomePageData = {
         title: 'Affordable Price in Bangladesh',
         description:
           'Get budget-friendly SMM services for Facebook, Instagram, YouTube, TikTok, and more. TrendEvo keeps pricing practical for local businesses, freelancers, creators, and resellers.',
-        icon: '/images/why-choose-us/why-choose-us-cheapest-smm-panel-icon.png',
+        icon: '/images/why-choose-us/what-makes-trendevo-different-from-other-smm-panels-in-bangladesh-icon.png',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -637,7 +637,7 @@ export const data: HomePageData = {
         title: 'Real-Time Order Tracking',
         description:
           'Check your order status directly from the dashboard. You can see what is pending, processing, completed, or needs attention without contacting support every time.',
-        icon: '/images/why-choose-us/why-choose-us-real-time-and-data-icon.webp',
+        icon: '/images/why-choose-us/real-time-order-tracking-icon.webp',
         iconWidth: 43,
         iconHeight: 40,
       },
@@ -645,7 +645,7 @@ export const data: HomePageData = {
         title: 'Fast & Stable Delivery',
         description:
           'Selected services start quickly after order placement. TrendEvo focuses on smooth processing, stable delivery, and clear service details before you buy.',
-        icon: '/images/why-choose-us/why-choose-us-fast-and-reliable-delivery-icon.png',
+        icon: '/images/why-choose-us/fast-and-stable-delivery-icon.png',
         iconWidth: 40,
         iconHeight: 40,
       },
@@ -655,7 +655,7 @@ export const data: HomePageData = {
         title: 'Bulk Order Support',
         description:
           'Manage multiple orders for clients, campaigns, pages, and platforms from one account. This helps agencies and resellers save time while handling repeat work.',
-        icon: '/images/why-choose-us/why-choose-us-bulk-orders-provide-icon.png',
+        icon: '/images/why-choose-us/bulk-order-support-icon.png',
         iconWidth: 46,
         iconHeight: 40,
       },
@@ -663,7 +663,7 @@ export const data: HomePageData = {
         title: 'Multiple SMM Services',
         description:
           'Order services for Facebook, Instagram, YouTube, TikTok, Telegram, LinkedIn, Spotify, SoundCloud, Snapchat, Discord, and website traffic from one panel.',
-        icon: '/images/why-choose-us/why-choose-us-multitude-of-services-icon.webp',
+        icon: '/images/why-choose-us/multiple-smm-services-icon.webp',
         iconWidth: 57,
         iconHeight: 30,
       },
@@ -671,7 +671,7 @@ export const data: HomePageData = {
         title: '24/7 Bangla & English Support',
         description:
           'Get help with payments, order links, service selection, and dashboard use whenever you need it. Our support is made for both beginners and regular SMM users.',
-        icon: '/images/why-choose-us/why-choose-us-24-7-dedicated-customer-support-icon.webp',
+        icon: '/images/why-choose-us/24-7-bangla-and-english-support-icon.webp',
         iconWidth: 47,
         iconHeight: 40,
       },
@@ -693,7 +693,7 @@ export const data: HomePageData = {
         'max-w-[924px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     },
     image: {
-      src: '/images/payment-methods/payment-methods-supported-payment-methods-including-visa-bkash-nagad-bitcoin-mastercard-and-more-icon.png',
+      src: '/images/payment-methods/easy-smm-panel-payments-for-bangladesh-users.png',
       alt: 'Supported payment methods including Visa, bKash, Nagad, Bitcoin, Mastercard, and more',
       width: 1920,
       height: 470,
@@ -766,7 +766,7 @@ export const data: HomePageData = {
       title: 'TrendEvo Works for Everyone gt<in Bangladesh>',
       subtitle:
         'TrendEvo is built for local businesses, content creators, freelancers, ecommerce brands, agencies, and resellers in Bangladesh. From simple orders to bulk SMM campaigns, everything is easy to manage with local payments, fast delivery, and clear tracking.',
-      underlineSrc: '/images/advantages/advantages-section-underline.svg',
+      underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
       underlineWidth: 150,
       titleClassName:
         'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -798,7 +798,7 @@ export const data: HomePageData = {
       },
     ],
     image: {
-      src: '/images/advantages/advantages-illustration.png',
+      src: '/images/advantages/trendevo-works-for-everyone-in-bangladesh.png',
       alt: 'SMM panel advantages illustration',
     },
     sectionBg: 'section-15',
@@ -830,7 +830,7 @@ export const data: HomePageData = {
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/icons/pricing-facebook-platform-icon.webp',
+        icon: '/images/pricing/facebook-platform-icon.webp',
         plans: [
           { startingPrice: '$0.29', serviceName: 'Facebook Followers', buyLabel: 'Buy Facebook Followers', buyHref: '/buy-facebook-followers' },
           { startingPrice: '$0.19', serviceName: 'Facebook Likes', buyLabel: 'Buy Facebook Likes', buyHref: '/buy-facebook-page-likes' },
@@ -840,7 +840,7 @@ export const data: HomePageData = {
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/icons/pricing-instagram-platform-icon.webp',
+        icon: '/images/pricing/instagram-platform-icon.webp',
         plans: [
           { startingPrice: '$0.35', serviceName: 'Instagram Followers', buyLabel: 'Buy Instagram Followers', buyHref: '/buy-instagram-followers' },
           { startingPrice: '$0.25', serviceName: 'Instagram Likes', buyLabel: 'Buy Instagram Likes', buyHref: '/buy-instagram-likes' },
@@ -850,7 +850,7 @@ export const data: HomePageData = {
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/icons/pricing-youtube-platform-icon.webp',
+        icon: '/images/pricing/youtube-platform-icon.webp',
         plans: [
           { startingPrice: '$0.85', serviceName: 'YouTube Views', buyLabel: 'Buy YouTube Views', buyHref: '/buy-youtube-views' },
           { startingPrice: '$3.85', serviceName: 'YouTube Likes', buyLabel: 'Buy YouTube Likes', buyHref: '/buy-youtube-likes' },
@@ -860,7 +860,7 @@ export const data: HomePageData = {
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         plans: [
           { startingPrice: '$5.78', serviceName: 'Twitter Followers', buyLabel: 'Buy Twitter Followers', buyHref: '/buy-x-twitter-followers' },
           { startingPrice: '$2.83', serviceName: 'Twitter Likes', buyLabel: 'Buy Twitter Likes', buyHref: '/buy-x-twitter-likes' },
@@ -870,7 +870,7 @@ export const data: HomePageData = {
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
         plans: [
           { startingPrice: '$23.20', serviceName: 'LinkedIn Page Followers', buyLabel: 'Buy LinkedIn Page Followers', buyHref: '/buy-linkedin-followers' },
           { startingPrice: '$13.98', serviceName: 'LinkedIn Post Likes', buyLabel: 'Buy LinkedIn Post Likes', buyHref: '/buy-linkedin-likes' },
@@ -880,7 +880,7 @@ export const data: HomePageData = {
       {
         id: 'telegram',
         label: 'Telegram',
-        icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/telegram-platform-icon.webp',
         plans: [
           { startingPrice: '$0.99', serviceName: 'Telegram Members', buyLabel: 'Buy Telegram Members', buyHref: '/buy-telegram-members' },
           { startingPrice: '$0.03', serviceName: 'Telegram Mix Reaction', buyLabel: 'Buy Telegram Mix Reaction', buyHref: '/buy-telegram-members' },
@@ -890,7 +890,7 @@ export const data: HomePageData = {
       {
         id: 'spotify',
         label: 'Spotify',
-        icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
+        icon: '/images/our-services/platforms/spotify-platform-icon.webp',
         plans: [
           { startingPrice: '$0.12', serviceName: 'Spotify Plays', buyLabel: 'Buy Spotify Plays', buyHref: '/buy-spotify-plays' },
           { startingPrice: '$0.63', serviceName: 'Spotify Premium Plays', buyLabel: 'Buy Spotify Premium Plays', buyHref: '/buy-spotify-plays' },
@@ -910,7 +910,7 @@ export const data: HomePageData = {
       {
         id: 'soundcloud',
         label: 'SoundCloud',
-        icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+        icon: '/images/our-services/platforms/soundcloud-platform-icon.png',
         plans: [
           { startingPrice: '$12.12', serviceName: 'SoundCloud Followers', buyLabel: 'Buy SoundCloud Followers', buyHref: '/buy-soundcloud-followers' },
           { startingPrice: '$1.63', serviceName: 'SoundCloud Plays', buyLabel: 'Buy SoundCloud Plays', buyHref: '/buy-soundcloud-plays' },
@@ -920,7 +920,7 @@ export const data: HomePageData = {
       {
         id: 'discord',
         label: 'Discord',
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         plans: [
           { startingPrice: '$4.15', serviceName: 'Discord Send Reactions', buyLabel: 'Buy Discord Send Reactions', buyHref: '/buy-discord-members' },
           { startingPrice: '$5.63', serviceName: 'Discord Add Reactions', buyLabel: 'Buy Discord Add Reactions', buyHref: '/buy-discord-members' },
@@ -930,7 +930,7 @@ export const data: HomePageData = {
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/icons/pricing-tiktok-platform-icon.webp',
+        icon: '/images/pricing/tiktok-platform-icon.webp',
         plans: [
           { startingPrice: '$8.15', serviceName: 'TikTok Followers', buyLabel: 'Buy TikTok Followers', buyHref: '/buy-tiktok-followers' },
           { startingPrice: '$0.63', serviceName: 'TikTok Likes', buyLabel: 'Buy TikTok Likes', buyHref: '/buy-tiktok-likes' },
@@ -940,7 +940,7 @@ export const data: HomePageData = {
       {
         id: 'website-traffic',
         label: 'Website Traffic',
-        icon: '/images/our-services/platforms/our-services-organic-traffic-platform-icon.png',
+        icon: '/images/our-services/platforms/website-traffic-platform-icon.png',
         plans: [
           { startingPrice: '$0.15', serviceName: 'Website Traffic', buyLabel: 'Buy Website Traffic', buyHref: '/services' },
           { startingPrice: '$0.63', serviceName: 'Mix Website Traffic', buyLabel: 'Buy Mix Website Traffic', buyHref: '/services' },
@@ -957,7 +957,7 @@ export const data: HomePageData = {
     title: 'Over 11,604 Users Across Bangladesh gt<Trust TrendEvo>',
     subtitle:
       'Read what real customers say about their experience with TrendEvo. These are genuine reviews from people who have used our services.',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     titleClassName:
       'max-w-none whitespace-normal text-center text-2xl tracking-[0.48px] text-[#071431] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -1015,7 +1015,7 @@ export const data: HomePageData = {
       name: 'Sabbir Ahmed',
       role: 'Ecommerce Business Owner',
       avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote:
         'TrendEvo made SMM orders much easier for my online shop. I can add funds with bKash, choose the service, and track everything from the dashboard.',
     },
@@ -1094,7 +1094,7 @@ export const data: HomePageData = {
       title: 'Latest SMM Tips gt<for Bangladesh Marketers>',
       subtitle:
         'Read practical guides on SMM panels, social media growth, local marketing, creator strategy, and reseller business ideas for Bangladesh. Learn how to use Facebook, Instagram, YouTube, TikTok, and other platforms with better planning.',
-      underlineSrc: '/images/blog/blog-section-underline.svg',
+      underlineSrc: '/images/blog/latest-smm-tips-for-bangladesh-marketers-section-underline.svg',
       underlineWidth: 60,
       titleClassName:
         'max-w-[961px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',

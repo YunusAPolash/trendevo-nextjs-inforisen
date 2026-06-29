@@ -35,7 +35,7 @@ function PrimaryButtonContent({
         {showArrow ? (
           <span className="ml-1.5 flex size-6 items-center justify-center rounded-full sm:ml-2 sm:size-8">
             <Image
-              src="/images/icons/site-button-arroww-icon.png"
+              src="/images/icons/site-button-arrow-icon.png"
               alt="Button arrow icon"
               aria-hidden
               width={16}
@@ -108,7 +108,7 @@ export default function PrimaryButton({
       {showArrow ? (
         <span className="ml-1.5 flex size-6 items-center justify-center rounded-full sm:ml-2 sm:size-8">
           <Image
-            src="/images/icons/site-button-arroww-icon.png"
+            src="/images/icons/site-button-arrow-icon.png"
               alt="Button arrow icon"
             aria-hidden
             width={16}

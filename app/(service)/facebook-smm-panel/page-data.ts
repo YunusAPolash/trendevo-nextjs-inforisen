@@ -157,7 +157,7 @@ export const data: FacebookSmmPanelPageData = {
       'Get faster Facebook growth with affordable pricing, bKash, Nagad, Rocket payment support, and services made for real marketing goals in Bangladesh.',
     buttonLabel: 'Get Started Now',
     image: {
-      src: '/images/service-smm-panel/facebook-smm-panel/boost-facebook-reach-and-engagement-with-trendevo.png',
+      src: '/images/service/facebook-smm-panel/grow-faster-with-a-trusted-facebook-smm-panel-in-bangladesh.png',
       alt: 'Grow faster with TrendEvo Facebook SMM Panel in Bangladesh',
       width: 687,
       height: 648,
@@ -172,14 +172,14 @@ export const data: FacebookSmmPanelPageData = {
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/facebook-smm-panel-decorative-facebook-left-icon.webp',
+      src: '/images/service/facebook-smm-panel/facebook-smm-panel-services-built-for-bangladesh-decorative-left.webp',
       width: 183,
       height: 190,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[140px] blur-[2px] lg:block xl:w-[183px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/facebook-smm-panel-decorative-facebook-right-icon.webp',
+      src: '/images/service/facebook-smm-panel/facebook-smm-panel-services-built-for-bangladesh-decorative-right.webp',
       width: 199,
       height: 207,
       className:

@@ -9,7 +9,7 @@ const cardBackgroundClasses = {
   'card-5': "bg-[url('/images/backgrounds/card-bg-5.webp')]",
   'card-7': "bg-[url('/images/backgrounds/card-bg-7.webp')]",
   'card-9': "bg-[url('/images/backgrounds/card-bg-9.svg')]",
-  'card-10': "bg-[url('/images/backgrounds/card-bgg-10.webp')]",
+  'card-10': "bg-[url('/images/backgrounds/card-bg-10.webp')]",
   'card-8': "bg-[url('/images/backgrounds/card-bg-8.svg')]",
   'card-11': "bg-[url('/images/backgrounds/card-bg-11.webp')]",
   'blog-hero': "bg-[url('/images/blog/blog-bg-icon.png')]",

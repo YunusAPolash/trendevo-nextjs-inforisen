@@ -157,7 +157,7 @@ export const data: SpotifySmmPanelPageData = {
       'Push your tracks further with flexible pricing, bKash, Nagad, Rocket payment support, and Spotify-focused services made for stronger listener reach, better artist profile trust, and smoother release promotion.',
     buttonLabel: 'Get Started Now',
     image: {
-      src: '/images/service-smm-panel/spotify-smm-panel/boost-spotify-reach-and-engagement-with-trendevo.webp',
+      src: '/images/service/spotify-smm-panel/grow-faster-with-a-trusted-spotify-smm-panel-in-bangladesh.webp',
       alt: 'Grow faster with TrendEvo Spotify SMM Panel in Bangladesh',
       width: 687,
       height: 648,
@@ -172,14 +172,14 @@ export const data: SpotifySmmPanelPageData = {
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/spotify-smm-panel/spotify-effectsvg.svg',
+      src: '/images/service/spotify-smm-panel/spotify-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 251,
       height: 251,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[150px] lg:block xl:w-[251px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/spotify-smm-panel/spotify-effectsvg.svg',
+      src: '/images/service/spotify-smm-panel/spotify-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 251,
       height: 251,
       className:
@@ -190,7 +190,7 @@ export const data: SpotifySmmPanelPageData = {
         title: 'Spotify Plays',
         description:
           'Give your tracks more listening activity with lnk<Spotify plays|/buy-spotify-plays>. This service is useful for singles, albums, EPs, remixes, cover songs, lo-fi tracks, nasheeds, podcasts, and independent releases that need stronger early traction.',
-        icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
+        icon: '/images/our-services/platforms/spotify-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },

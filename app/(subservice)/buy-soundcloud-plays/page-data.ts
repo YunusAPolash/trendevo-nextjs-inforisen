@@ -103,7 +103,7 @@ export const data: SoundcloudPlaysPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-soundcloud-plays/buy-soundcloud-plays-in-bangladesh-for-better-track-visibility.webp',
       alt: 'Buy SoundCloud Plays in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -136,7 +136,7 @@ export const data: SoundcloudPlaysPageData = {
         title: 'Instant Start, Fast Delivery',
         description:
           'Your SoundCloud plays order starts processing after submission. Delivery speed may depend on the selected package and order size, but TrendEvo is designed for quick handling and smooth order progress.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -145,7 +145,7 @@ export const data: SoundcloudPlaysPageData = {
         title: 'Affordable Prices',
         description:
           'You can buy SoundCloud plays in Bangladesh without a large music promotion budget. Our pricing works well for new artists, producers, singers, DJs, beat makers, record labels, agencies, and SMM resellers.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -154,7 +154,7 @@ export const data: SoundcloudPlaysPageData = {
         title: '24/7 Support',
         description:
           'Need help before or after placing an order? TrendEvo support is available to guide you with service selection, order status, payment issues, and dashboard use.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -167,7 +167,7 @@ export const data: SoundcloudPlaysPageData = {
         title: 'Local Payment Options',
         description:
           'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes SoundCloud promotion easier for Bangladeshi users who prefer fast and familiar local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -179,7 +179,7 @@ export const data: SoundcloudPlaysPageData = {
         description:
           'TrendEvo focuses on stable SoundCloud plays services that help improve track presence and music credibility. You can start small, test the service, and scale based on your release plan, campaign size, or promotion goal.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -223,7 +223,7 @@ export const data: SoundcloudPlaysPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy SoundCloud Plays on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -351,7 +351,7 @@ export const data: SoundcloudPlaysPageData = {
         title: 'Buy SoundCloud Followers',
         description:
           'Grow your SoundCloud profile with more followers and improve your artist credibility. SoundCloud followers are useful for musicians, producers, DJs, beat makers, singers, labels, and creators who want a stronger music presence.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -362,7 +362,7 @@ export const data: SoundcloudPlaysPageData = {
         title: 'Buy SoundCloud Likes',
         description:
           'Add more trust signals to your SoundCloud tracks with more likes. SoundCloud likes help your songs look more appreciated and can support stronger credibility when new listeners visit your music profile.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

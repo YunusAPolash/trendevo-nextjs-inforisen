@@ -53,14 +53,14 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/facebook-smm-panel-decorative-facebook-left-icon.webp',
+      src: '/images/service/facebook-smm-panel/facebook-smm-panel-services-built-for-bangladesh-decorative-left.webp',
       width: 183,
       height: 190,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[140px] blur-[2px] lg:block xl:w-[183px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/facebook-smm-panel-decorative-facebook-right-icon.webp',
+      src: '/images/service/facebook-smm-panel/facebook-smm-panel-services-built-for-bangladesh-decorative-right.webp',
       width: 199,
       height: 207,
       className:
@@ -155,14 +155,14 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/instagram-smm-panel/instagram-effect.svg',
+      src: '/images/service/instagram-smm-panel/instagram-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 221,
       height: 230,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[140px] lg:block xl:w-[221px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/instagram-smm-panel/instagram-effect.svg',
+      src: '/images/service/instagram-smm-panel/instagram-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 221,
       height: 230,
       className:
@@ -173,7 +173,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Instagram Followers',
         description:
           'Get more real followers for your Instagram profile. Our solution helps boost your audience and reach more people organically.',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -257,14 +257,14 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/telegram-smm-panel/telegram-effect.svg',
+      src: '/images/service/telegram-smm-panel/telegram-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 195,
       height: 192,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[130px] lg:block xl:w-[195px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/telegram-smm-panel/telegram-effect.svg',
+      src: '/images/service/telegram-smm-panel/telegram-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 195,
       height: 192,
       className:
@@ -275,7 +275,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Telegram Channel Members',
         description:
           'Get more real members for your Telegram channel. Our solution helps boost your audience and reach more people.',
-        icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/telegram-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -359,14 +359,14 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/youtube-smm-panel/youtube-effect.svg',
+      src: '/images/service/youtube-smm-panel/youtube-smm-panel-services-for-bangladeshi-creators-decorative-left.svg',
       width: 232,
       height: 239,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[140px] lg:block xl:w-[232px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/youtube-smm-panel/youtube-effect-top.svg',
+      src: '/images/service/youtube-smm-panel/youtube-smm-panel-services-for-bangladeshi-creators-decorative-right.svg',
       width: 232,
       height: 239,
       className:
@@ -377,7 +377,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'YouTube Subscribers',
         description:
           'Get more real subscribers for your YouTube channel. Our solution helps boost your audience and reach more viewers organically.',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -461,14 +461,14 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/tiktok-smm-panel/tiktok-effect.svg',
+      src: '/images/service/tiktok-smm-panel/tiktok-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 189,
       height: 205,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[130px] lg:block xl:w-[189px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/tiktok-smm-panel/tiktok-effect.svg',
+      src: '/images/service/tiktok-smm-panel/tiktok-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 189,
       height: 205,
       className:
@@ -479,7 +479,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'TikTok Followers',
         description:
           'Get more real followers for your TikTok profile. Our solution helps boost your audience and reach more people organically.',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -563,14 +563,14 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/x-twitter-smm-panel/twitter-effect.svg',
+      src: '/images/service/x-twitter-smm-panel/x-twitter-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 199,
       height: 205,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[135px] lg:block xl:w-[199px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/x-twitter-smm-panel/twitter-effect.svg',
+      src: '/images/service/x-twitter-smm-panel/x-twitter-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 199,
       height: 205,
       className:
@@ -581,7 +581,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'X Followers',
         description:
           'Get more real followers for your X (Twitter) profile. Our solution helps boost your audience and reach more people organically.',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -665,14 +665,14 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/spotify-smm-panel/spotify-effectsvg.svg',
+      src: '/images/service/spotify-smm-panel/spotify-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 251,
       height: 251,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[150px] lg:block xl:w-[251px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/spotify-smm-panel/spotify-effectsvg.svg',
+      src: '/images/service/spotify-smm-panel/spotify-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 251,
       height: 251,
       className:
@@ -683,7 +683,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Spotify Plays',
         description:
           'Get more plays on your tracks to increase reach, discoverability, and listener growth on Spotify.',
-        icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
+        icon: '/images/our-services/platforms/spotify-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -767,14 +767,14 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/soundcloud-smm-panel/soundcloud-effect.svg',
+      src: '/images/service/soundcloud-smm-panel/soundcloud-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 255,
       height: 257,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[150px] lg:block xl:w-[255px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/soundcloud-smm-panel/soundcloud-effect.svg',
+      src: '/images/service/soundcloud-smm-panel/soundcloud-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 255,
       height: 257,
       className:
@@ -785,7 +785,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'SoundCloud Plays',
         description:
           'Get more plays on your tracks to increase reach, discoverability, and listener growth on SoundCloud.',
-        icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+        icon: '/images/our-services/platforms/soundcloud-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -887,7 +887,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Twitch Followers',
         description:
           'Grow your channel with more lnk<Twitch followers|/buy-twitch-followers>. This service is useful for gamers, streamers, esports players, influencers, and content creators who want their channel to look more established to new visitors.',
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },
@@ -971,14 +971,14 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/snapchat-smm-panel/snapchat-effect.svg',
+      src: '/images/service/snapchat-smm-panel/snapchat-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 256,
       height: 258,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[150px] lg:block xl:w-[256px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/snapchat-smm-panel/snapchat-effect.svg',
+      src: '/images/service/snapchat-smm-panel/snapchat-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 256,
       height: 258,
       className:
@@ -989,7 +989,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
         title: 'Snapchat Followers',
         description:
           'Get more real followers for your Snapchat profile. Our solution helps boost your audience and reach more people organically.',
-        icon: '/images/our-services/platforms/our-services-snapchat-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/snapchat-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },

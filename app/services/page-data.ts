@@ -82,7 +82,7 @@ export const data: ServicesPageData = {
     primaryButtonLabel: 'Explore Our Services',
     primaryButtonHref: '#our-smm-panel-services',
     illustration: {
-      src: '/images/services/services-trendevo-specialist-presenting-social-media-growth-services-illustration.webp',
+      src: '/images/services/smm-panel-services-in-bangladesh.webp',
       alt: 'TrendEvo specialist presenting social media growth services',
       width: 468,
       height: 581,

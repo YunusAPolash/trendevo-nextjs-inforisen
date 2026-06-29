@@ -157,7 +157,7 @@ export const data: TelegramSmmPanelPageData = {
       'Build your Telegram presence faster with affordable pricing, bKash, Nagad, Rocket payment support, and services designed for active communities, announcement channels, business updates, and audience growth in Bangladesh.',
     buttonLabel: 'Get Started Now',
     image: {
-      src: '/images/service-smm-panel/telegram-smm-panel/boost-telegram-reach-and-engagement-with-trendevo.webp',
+      src: '/images/service/telegram-smm-panel/grow-faster-with-a-trusted-telegram-smm-panel-in-bangladesh.webp',
       alt: 'Grow faster with TrendEvo Telegram SMM Panel in Bangladesh',
       width: 687,
       height: 648,
@@ -172,14 +172,14 @@ export const data: TelegramSmmPanelPageData = {
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/telegram-smm-panel/telegram-effect.svg',
+      src: '/images/service/telegram-smm-panel/telegram-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 195,
       height: 192,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[130px] lg:block xl:w-[195px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/telegram-smm-panel/telegram-effect.svg',
+      src: '/images/service/telegram-smm-panel/telegram-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 195,
       height: 192,
       className:
@@ -198,7 +198,7 @@ export const data: TelegramSmmPanelPageData = {
         title: 'Telegram Members',
         description:
           'Grow lnk<Telegram members|/buy-telegram-members> for communities, online businesses, coaching programs, reseller networks, customer support groups, and niche discussions. More members help your group look more active and valuable to new joiners.',
-        icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/telegram-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },

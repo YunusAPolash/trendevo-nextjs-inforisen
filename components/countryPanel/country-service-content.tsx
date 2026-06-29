@@ -65,8 +65,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        icon: '/images/our-services/platforms/facebook-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/facebook-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in the UK',
         description:
           'Boost your UK brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -107,8 +107,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/instagram-decoration.png',
         marketingTitle: 'Instagram Marketing Services in the UK',
         description:
           'Grow your Instagram presence in the UK with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -149,9 +149,9 @@ export const countryServiceContent: Record<
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconClassName: 'scale-150',
-        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
+        decorationImage: '/images/our-services/decorations/x-twitter-decoration.png',
         marketingTitle: 'X (Twitter) Marketing Services in the UK',
         description:
           'Amplify your voice on X with followers, retweets, and engagement that positions your UK brand at the center of trending conversations.',
@@ -192,8 +192,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/youtube-decoration.png',
         marketingTitle: 'YouTube Marketing Services in the UK',
         description:
           'Accelerate UK channel growth with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -234,8 +234,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/tiktok-decoration.png',
         marketingTitle: 'TikTok Marketing Services in the UK',
         description:
           'Go viral faster in the UK with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -276,8 +276,8 @@ export const countryServiceContent: Record<
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/linkedin-decoration.png',
         marketingTitle: 'LinkedIn Marketing Services in the UK',
         description:
           'Strengthen your UK professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -335,8 +335,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        icon: '/images/our-services/platforms/facebook-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/facebook-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in Bangladesh',
         description:
           'Boost your Bangladeshi brand visibility and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns built for the local market.',
@@ -377,8 +377,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/instagram-decoration.png',
         marketingTitle: 'Instagram Marketing Services in Bangladesh',
         description:
           'Grow your Instagram presence in Bangladesh with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -419,8 +419,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/youtube-decoration.png',
         marketingTitle: 'YouTube Marketing Services in Bangladesh',
         description:
           'Accelerate channel growth in Bangladesh with views, subscribers, and engagement that helps your videos rank higher.',
@@ -461,8 +461,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/tiktok-decoration.png',
         marketingTitle: 'TikTok Marketing Services in Bangladesh',
         description:
           'Go viral faster in Bangladesh with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -503,8 +503,8 @@ export const countryServiceContent: Record<
       {
         id: 'telegram',
         label: 'Telegram',
-        icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-telegram-members-decoration.png',
+        icon: '/images/our-services/platforms/telegram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/telegram-decoration.png',
         marketingTitle: 'Telegram Marketing Services in Bangladesh',
         description:
           'Grow your Telegram channel or group in Bangladesh with members and engagement that builds an active, responsive community.',
@@ -545,9 +545,9 @@ export const countryServiceContent: Record<
       {
         id: 'website-traffic',
         label: 'Website Traffic',
-        icon: '/images/our-services/platforms/our-services-organic-traffic-platform-icon.png',
+        icon: '/images/our-services/platforms/website-traffic-platform-icon.png',
         decorationImage:
-          '/images/our-services/decorations/our-services-organic-traffic-decoration.png',
+          '/images/our-services/decorations/website-traffic-decoration.png',
         marketingTitle: 'Website Traffic Services in Bangladesh',
         description:
           'Drive targeted visitors to your Bangladeshi website with high-quality traffic that improves rankings, conversions, and online visibility.',
@@ -605,8 +605,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        icon: '/images/our-services/platforms/facebook-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/facebook-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in Vietnam',
         description:
           'Boost your Vietnamese brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -647,8 +647,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/instagram-decoration.png',
         marketingTitle: 'Instagram Marketing Services in Vietnam',
         description:
           'Grow your Instagram presence in Vietnam with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -689,9 +689,9 @@ export const countryServiceContent: Record<
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconClassName: 'scale-150',
-        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
+        decorationImage: '/images/our-services/decorations/x-twitter-decoration.png',
         marketingTitle: 'X (Twitter) Marketing Services in Vietnam',
         description:
           'Amplify your voice on X with followers, retweets, and engagement that positions your Vietnamese brand at the center of trending conversations.',
@@ -732,8 +732,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/youtube-decoration.png',
         marketingTitle: 'YouTube Marketing Services in Vietnam',
         description:
           'Accelerate channel growth in Vietnam with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -774,8 +774,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/tiktok-decoration.png',
         marketingTitle: 'TikTok Marketing Services in Vietnam',
         description:
           'Go viral faster in Vietnam with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -816,8 +816,8 @@ export const countryServiceContent: Record<
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/linkedin-decoration.png',
         marketingTitle: 'LinkedIn Marketing Services in Vietnam',
         description:
           'Strengthen your Vietnamese professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -875,8 +875,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        icon: '/images/our-services/platforms/facebook-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/facebook-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in Thailand',
         description:
           'Boost your Thai brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -917,8 +917,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/instagram-decoration.png',
         marketingTitle: 'Instagram Marketing Services in Thailand',
         description:
           'Grow your Instagram presence in Thailand with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -959,9 +959,9 @@ export const countryServiceContent: Record<
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconClassName: 'scale-150',
-        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
+        decorationImage: '/images/our-services/decorations/x-twitter-decoration.png',
         marketingTitle: 'X (Twitter) Marketing Services in Thailand',
         description:
           'Amplify your voice on X with followers, retweets, and engagement that positions your Thai brand at the center of trending conversations.',
@@ -1002,8 +1002,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/youtube-decoration.png',
         marketingTitle: 'YouTube Marketing Services in Thailand',
         description:
           'Accelerate channel growth in Thailand with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -1044,8 +1044,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/tiktok-decoration.png',
         marketingTitle: 'TikTok Marketing Services in Thailand',
         description:
           'Go viral faster in Thailand with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -1086,8 +1086,8 @@ export const countryServiceContent: Record<
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/linkedin-decoration.png',
         marketingTitle: 'LinkedIn Marketing Services in Thailand',
         description:
           'Strengthen your Thai professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -1145,8 +1145,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        icon: '/images/our-services/platforms/facebook-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/facebook-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in Pakistan',
         description:
           'Boost your Pakistani brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -1187,8 +1187,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/instagram-decoration.png',
         marketingTitle: 'Instagram Marketing Services in Pakistan',
         description:
           'Grow your Instagram presence in Pakistan with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -1229,9 +1229,9 @@ export const countryServiceContent: Record<
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconClassName: 'scale-150',
-        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
+        decorationImage: '/images/our-services/decorations/x-twitter-decoration.png',
         marketingTitle: 'X (Twitter) Marketing Services in Pakistan',
         description:
           'Amplify your voice on X with followers, retweets, and engagement that positions your Pakistani brand at the center of trending conversations.',
@@ -1272,8 +1272,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/youtube-decoration.png',
         marketingTitle: 'YouTube Marketing Services in Pakistan',
         description:
           'Accelerate channel growth in Pakistan with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -1314,8 +1314,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/tiktok-decoration.png',
         marketingTitle: 'TikTok Marketing Services in Pakistan',
         description:
           'Go viral faster in Pakistan with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -1356,8 +1356,8 @@ export const countryServiceContent: Record<
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/linkedin-decoration.png',
         marketingTitle: 'LinkedIn Marketing Services in Pakistan',
         description:
           'Strengthen your Pakistani professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -1415,8 +1415,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        icon: '/images/our-services/platforms/facebook-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/facebook-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in Nigeria',
         description:
           'Boost your Nigerian brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -1457,8 +1457,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/instagram-decoration.png',
         marketingTitle: 'Instagram Marketing Services in Nigeria',
         description:
           'Grow your Instagram presence in Nigeria with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -1499,9 +1499,9 @@ export const countryServiceContent: Record<
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconClassName: 'scale-150',
-        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
+        decorationImage: '/images/our-services/decorations/x-twitter-decoration.png',
         marketingTitle: 'X (Twitter) Marketing Services in Nigeria',
         description:
           'Amplify your voice on X with followers, retweets, and engagement that positions your Nigerian brand at the center of trending conversations.',
@@ -1542,8 +1542,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/youtube-decoration.png',
         marketingTitle: 'YouTube Marketing Services in Nigeria',
         description:
           'Accelerate channel growth in Nigeria with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -1584,8 +1584,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/tiktok-decoration.png',
         marketingTitle: 'TikTok Marketing Services in Nigeria',
         description:
           'Go viral faster in Nigeria with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -1626,8 +1626,8 @@ export const countryServiceContent: Record<
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/linkedin-decoration.png',
         marketingTitle: 'LinkedIn Marketing Services in Nigeria',
         description:
           'Strengthen your Nigerian professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -1685,8 +1685,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        icon: '/images/our-services/platforms/facebook-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/facebook-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in Brazil',
         description:
           'Boost your Brazilian brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -1727,8 +1727,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/instagram-decoration.png',
         marketingTitle: 'Instagram Marketing Services in Brazil',
         description:
           'Grow your Instagram presence in Brazil with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -1769,9 +1769,9 @@ export const countryServiceContent: Record<
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconClassName: 'scale-150',
-        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
+        decorationImage: '/images/our-services/decorations/x-twitter-decoration.png',
         marketingTitle: 'X (Twitter) Marketing Services in Brazil',
         description:
           'Amplify your voice on X with followers, retweets, and engagement that positions your Brazilian brand at the center of trending conversations.',
@@ -1812,8 +1812,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/youtube-decoration.png',
         marketingTitle: 'YouTube Marketing Services in Brazil',
         description:
           'Accelerate channel growth in Brazil with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -1854,8 +1854,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/tiktok-decoration.png',
         marketingTitle: 'TikTok Marketing Services in Brazil',
         description:
           'Go viral faster in Brazil with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -1896,8 +1896,8 @@ export const countryServiceContent: Record<
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/linkedin-decoration.png',
         marketingTitle: 'LinkedIn Marketing Services in Brazil',
         description:
           'Strengthen your Brazilian professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -1955,8 +1955,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        icon: '/images/our-services/platforms/facebook-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/facebook-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in Egypt',
         description:
           'Boost your Egyptian brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -1997,8 +1997,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/instagram-decoration.png',
         marketingTitle: 'Instagram Marketing Services in Egypt',
         description:
           'Grow your Instagram presence in Egypt with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -2039,9 +2039,9 @@ export const countryServiceContent: Record<
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconClassName: 'scale-150',
-        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
+        decorationImage: '/images/our-services/decorations/x-twitter-decoration.png',
         marketingTitle: 'X (Twitter) Marketing Services in Egypt',
         description:
           'Amplify your voice on X with followers, retweets, and engagement that positions your Egyptian brand at the center of trending conversations.',
@@ -2082,8 +2082,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/youtube-decoration.png',
         marketingTitle: 'YouTube Marketing Services in Egypt',
         description:
           'Accelerate channel growth in Egypt with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -2124,8 +2124,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/tiktok-decoration.png',
         marketingTitle: 'TikTok Marketing Services in Egypt',
         description:
           'Go viral faster in Egypt with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -2166,8 +2166,8 @@ export const countryServiceContent: Record<
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/linkedin-decoration.png',
         marketingTitle: 'LinkedIn Marketing Services in Egypt',
         description:
           'Strengthen your Egyptian professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -2225,8 +2225,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        icon: '/images/our-services/platforms/facebook-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/facebook-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in India',
         description:
           'Boost your Indian brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -2267,8 +2267,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/instagram-decoration.png',
         marketingTitle: 'Instagram Marketing Services in India',
         description:
           'Grow your Instagram presence in India with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -2309,9 +2309,9 @@ export const countryServiceContent: Record<
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconClassName: 'scale-150',
-        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
+        decorationImage: '/images/our-services/decorations/x-twitter-decoration.png',
         marketingTitle: 'X (Twitter) Marketing Services in India',
         description:
           'Amplify your voice on X with followers, retweets, and engagement that positions your Indian brand at the center of trending conversations.',
@@ -2352,8 +2352,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/youtube-decoration.png',
         marketingTitle: 'YouTube Marketing Services in India',
         description:
           'Accelerate channel growth in India with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -2394,8 +2394,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/tiktok-decoration.png',
         marketingTitle: 'TikTok Marketing Services in India',
         description:
           'Go viral faster in India with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -2436,8 +2436,8 @@ export const countryServiceContent: Record<
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/linkedin-decoration.png',
         marketingTitle: 'LinkedIn Marketing Services in India',
         description:
           'Strengthen your Indian professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',
@@ -2495,8 +2495,8 @@ export const countryServiceContent: Record<
       {
         id: 'facebook',
         label: 'Facebook',
-        icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
+        icon: '/images/our-services/platforms/facebook-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/facebook-decoration.webp',
         marketingTitle: 'Facebook Marketing Services in Indonesia',
         description:
           'Boost your Indonesian brand visibility, connect with your ideal audience, and drive more traffic, engagement, and sales through strategic Facebook marketing campaigns.',
@@ -2537,8 +2537,8 @@ export const countryServiceContent: Record<
       {
         id: 'instagram',
         label: 'Instagram',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/instagram-decoration.png',
         marketingTitle: 'Instagram Marketing Services in Indonesia',
         description:
           'Grow your Instagram presence in Indonesia with targeted followers, likes, and engagement that builds authentic brand authority.',
@@ -2579,9 +2579,9 @@ export const countryServiceContent: Record<
       {
         id: 'twitter',
         label: 'X (Twitter)',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconClassName: 'scale-150',
-        decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
+        decorationImage: '/images/our-services/decorations/x-twitter-decoration.png',
         marketingTitle: 'X (Twitter) Marketing Services in Indonesia',
         description:
           'Amplify your voice on X with followers, retweets, and engagement that positions your Indonesian brand at the center of trending conversations.',
@@ -2622,8 +2622,8 @@ export const countryServiceContent: Record<
       {
         id: 'youtube',
         label: 'YouTube',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/youtube-decoration.png',
         marketingTitle: 'YouTube Marketing Services in Indonesia',
         description:
           'Accelerate channel growth in Indonesia with views, subscribers, and engagement that helps your videos rank higher and reach more viewers.',
@@ -2664,8 +2664,8 @@ export const countryServiceContent: Record<
       {
         id: 'tiktok',
         label: 'TikTok',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/tiktok-decoration.png',
         marketingTitle: 'TikTok Marketing Services in Indonesia',
         description:
           'Go viral faster in Indonesia with TikTok followers, views, and engagement designed to boost your content in the For You feed.',
@@ -2706,8 +2706,8 @@ export const countryServiceContent: Record<
       {
         id: 'linkedin',
         label: 'LinkedIn',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
-        decorationImage: '/images/our-services/decorations/our-services-linkedin-followers-decoration.png',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
+        decorationImage: '/images/our-services/decorations/linkedin-decoration.png',
         marketingTitle: 'LinkedIn Marketing Services in Indonesia',
         description:
           'Strengthen your Indonesian professional brand with LinkedIn connections, followers, and engagement that opens doors to new opportunities.',

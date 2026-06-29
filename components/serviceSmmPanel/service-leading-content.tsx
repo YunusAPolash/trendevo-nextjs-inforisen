@@ -194,7 +194,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your page now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -203,7 +203,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -212,7 +212,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -225,7 +225,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -237,7 +237,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         description:
           "We deliver genuine Facebook followers from active profiles, ensuring lasting engagement. Our packages include a refill guarantee, so any drops are promptly replenished, maintaining your follower count and enhancing your page's credibility.",
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -261,7 +261,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Facebook Comments',
         description:
           "We provide real Facebook followers sourced from engaged users, ensuring sustained activity on your page. Our packages come with a drop protection policy, where any decrease in followers is quickly restored, securing your growth and boosting your page's authority.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -272,7 +272,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Facebook Likes',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -302,7 +302,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Likes can roll in slowly, like real growth. Or, they can surge fast, boosting your page now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -311,7 +311,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -320,7 +320,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -333,7 +333,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -345,7 +345,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         description:
           "We deliver genuine Facebook page likes from active profiles, ensuring lasting engagement. Our packages include a refill guarantee, so any drops are promptly replenished, maintaining your like count and enhancing your page's credibility.",
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -370,13 +370,13 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         description:
           "We provide real Facebook followers sourced from engaged users, ensuring sustained activity on your page. Our packages come with a drop protection policy, where any decrease in followers is quickly restored, securing your growth and boosting your page's authority.",
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
       {
         title: 'Buy Facebook Comments',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -406,7 +406,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Comments can roll in slowly, like real growth. Or, they can surge fast, boosting your page now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -415,7 +415,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -424,7 +424,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -437,7 +437,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -448,7 +448,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Comments from Quality Sources',
         description:
           "We deliver genuine Facebook page comments from active profiles, ensuring lasting engagement. Our packages include a refill guarantee, so any drops are promptly replenished, maintaining your comment count and enhancing your page's credibility.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -478,13 +478,13 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         description:
           "We provide real Facebook followers sourced from engaged users, ensuring sustained activity on your page. Our packages come with a drop protection policy, where any decrease in followers is quickly restored, securing your growth and boosting your page's authority.",
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
       {
         title: 'Buy Facebook Likes',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -514,7 +514,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Comments can roll in slowly, like real growth. Or, they can surge fast, boosting your post now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -523,7 +523,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -532,7 +532,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -545,7 +545,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -583,7 +583,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Instagram Followers',
         description:
           "We provide real Instagram followers sourced from engaged users, ensuring sustained activity on your profile. Our packages come with a drop protection policy, where any decrease in followers is quickly restored, securing your growth and boosting your profile's authority.",
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -629,7 +629,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Likes can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -638,7 +638,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -647,7 +647,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -660,7 +660,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -698,7 +698,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Instagram Followers',
         description:
           'We provide real Instagram followers sourced from engaged users, ensuring sustained activity on your profile. Our packages come with a drop protection policy to secure your growth.',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -744,7 +744,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -753,7 +753,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -762,7 +762,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -775,7 +775,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -786,7 +786,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Followers from Quality Sources',
         description:
           "We deliver genuine Instagram followers from active profiles, ensuring lasting growth. Our packages include a refill guarantee, so any drops are promptly replenished, maintaining your follower count and enhancing your profile's credibility.",
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -859,7 +859,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Views can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -868,7 +868,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -877,7 +877,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -890,7 +890,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -937,7 +937,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Instagram Followers',
         description:
           'We provide real Instagram followers sourced from engaged users, ensuring sustained activity on your profile. Our packages come with a drop protection policy to secure your growth.',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -974,7 +974,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Shares can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -983,7 +983,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -992,7 +992,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1005,7 +1005,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1052,7 +1052,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Instagram Followers',
         description:
           'We provide real Instagram followers sourced from engaged users, ensuring sustained activity on your profile. Our packages come with a drop protection policy to secure your growth.',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1089,7 +1089,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Auto-Likes can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -1098,7 +1098,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1107,7 +1107,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1120,7 +1120,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1167,7 +1167,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Instagram Followers',
         description:
           'We provide real Instagram followers sourced from engaged users, ensuring sustained activity on your profile. Our packages come with a drop protection policy to secure your growth.',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1204,7 +1204,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Story Views can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -1213,7 +1213,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1222,7 +1222,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1235,7 +1235,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1282,7 +1282,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Instagram Followers',
         description:
           'We provide real Instagram followers sourced from engaged users, ensuring sustained activity on your profile. Our packages come with a drop protection policy to secure your growth.',
-        icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/instagram-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1435,7 +1435,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Subscribers can roll in slowly, like real growth. Or, they can surge fast, boosting your channel now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -1444,7 +1444,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1453,7 +1453,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1466,7 +1466,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1477,7 +1477,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Subscribers from Quality Sources',
         description:
           "We deliver genuine YouTube subscribers from active users, ensuring lasting channel growth. Our packages include a refill guarantee, so any drops are promptly replenished, maintaining your subscriber count and enhancing your channel's credibility.",
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -1550,7 +1550,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Views can roll in slowly, like real growth. Or, they can surge fast, boosting your video now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -1559,7 +1559,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1568,7 +1568,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1581,7 +1581,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1619,7 +1619,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy YouTube Subscribers',
         description:
           'Grow your YouTube channel with real subscribers. TrendEvo offers affordable packages with fast delivery to help you reach monetization and build authority faster.',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1665,7 +1665,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Comments can roll in slowly, like real growth. Or, they can surge fast, boosting your video now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -1674,7 +1674,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1683,7 +1683,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1696,7 +1696,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1734,7 +1734,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy YouTube Subscribers',
         description:
           'Grow your YouTube channel with real subscribers. TrendEvo offers affordable packages with fast delivery to help you reach monetization and build authority faster.',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1780,7 +1780,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Likes can roll in slowly, like real growth. Or, they can surge fast, boosting your video now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -1789,7 +1789,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1798,7 +1798,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1811,7 +1811,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1849,7 +1849,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy YouTube Subscribers',
         description:
           'Grow your YouTube channel with real subscribers. TrendEvo offers affordable packages with fast delivery to help you reach monetization and build authority faster.',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1953,7 +1953,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -1962,7 +1962,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -1971,7 +1971,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1984,7 +1984,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -1995,7 +1995,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Followers from Quality Sources',
         description:
           "We deliver genuine TikTok followers from active users, ensuring lasting growth. Our packages include a refill guarantee, so any drops are promptly replenished, maintaining your follower count and enhancing your profile's credibility.",
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -2068,7 +2068,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Likes can roll in slowly, like real growth. Or, they can surge fast, boosting your video now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -2077,7 +2077,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -2086,7 +2086,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2099,7 +2099,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2137,7 +2137,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy TikTok Followers',
         description:
           'Grow your TikTok profile with real followers. TrendEvo offers affordable packages with fast delivery to help you build authority and reach more people.',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -2183,7 +2183,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Views can roll in slowly, like real growth. Or, they can surge fast, boosting your video now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -2192,7 +2192,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -2201,7 +2201,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2214,7 +2214,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2252,7 +2252,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy TikTok Followers',
         description:
           'Grow your TikTok profile with real followers. TrendEvo offers affordable packages with fast delivery to help you build authority and reach more people.',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -2356,7 +2356,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -2365,7 +2365,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -2374,7 +2374,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2387,7 +2387,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2398,7 +2398,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Followers from Quality Sources',
         description:
           "We deliver genuine Twitter followers from active profiles, ensuring lasting growth. Our packages include a refill guarantee, so any drops are promptly replenished, maintaining your follower count and enhancing your profile's credibility.",
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -2462,7 +2462,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Likes can roll in slowly, like real growth. Or, they can surge fast, boosting your post now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -2471,7 +2471,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -2480,7 +2480,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2493,7 +2493,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2531,7 +2531,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Twitter Followers',
         description:
           'Grow your Twitter profile with real followers. TrendEvo offers affordable packages with fast delivery to help you build authority and reach more people.',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -2626,7 +2626,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -2635,7 +2635,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -2644,7 +2644,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2657,7 +2657,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2668,7 +2668,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Followers from Quality Sources',
         description:
           "We deliver genuine LinkedIn followers from active professionals, ensuring lasting growth. Our packages include a refill guarantee, so any drops are promptly replenished, maintaining your follower count and enhancing your profile's credibility.",
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -2732,7 +2732,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Likes can roll in slowly, like real growth. Or, they can surge fast, boosting your post now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -2741,7 +2741,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -2750,7 +2750,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2763,7 +2763,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2801,7 +2801,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy LinkedIn Followers',
         description:
           'Grow your LinkedIn profile with real followers. TrendEvo offers affordable packages with fast delivery to help you build professional authority and reach more people.',
-        icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -2838,7 +2838,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Plays can roll in slowly, like real growth. Or, they can surge fast, boosting your track now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -2847,7 +2847,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -2856,7 +2856,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2869,7 +2869,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2880,7 +2880,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Plays from Quality Sources',
         description:
           "We deliver genuine Spotify plays from active listeners, helping your tracks reach more people. Our packages boost discoverability and enhance your music's credibility on the platform.",
-        icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
+        icon: '/images/our-services/platforms/spotify-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -2953,7 +2953,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -2962,7 +2962,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -2971,7 +2971,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -2984,7 +2984,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3022,7 +3022,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Spotify Plays',
         description:
           'Get more plays on your Spotify tracks to increase reach, discoverability, and listener growth on the platform.',
-        icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
+        icon: '/images/our-services/platforms/spotify-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3068,7 +3068,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Monthly Listeners can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -3077,7 +3077,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -3086,7 +3086,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3099,7 +3099,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3137,7 +3137,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Spotify Plays',
         description:
           'Get more plays on your Spotify tracks to increase reach, discoverability, and listener growth on the platform.',
-        icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
+        icon: '/images/our-services/platforms/spotify-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3241,7 +3241,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Members can roll in slowly, like real growth. Or, they can surge fast, boosting your channel now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -3250,7 +3250,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -3259,7 +3259,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3272,7 +3272,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3283,7 +3283,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Members from Quality Sources',
         description:
           "We deliver genuine Telegram members from active users, helping your channel or group grow faster. Our packages boost credibility and attract more organic subscribers.",
-        icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/telegram-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3338,7 +3338,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -3347,7 +3347,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -3356,7 +3356,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3369,7 +3369,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3380,7 +3380,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Followers from Quality Sources',
         description:
           "We deliver genuine Snapchat followers from active users, ensuring lasting growth. Our packages help maintain your follower count and enhance your profile's credibility.",
-        icon: '/images/our-services/platforms/our-services-snapchat-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/snapchat-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3407,7 +3407,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Snapchat SMM Panel',
         description:
           'Access more Snapchat growth services from TrendEvo — fast delivery, secure checkout, and 24/7 support to help you scale your presence.',
-        icon: '/images/our-services/platforms/our-services-snapchat-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/snapchat-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3435,7 +3435,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -3444,7 +3444,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -3453,7 +3453,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3466,7 +3466,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3504,7 +3504,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy SoundCloud Plays',
         description:
           'Get more plays on your SoundCloud tracks to increase reach, discoverability, and listener growth.',
-        icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+        icon: '/images/our-services/platforms/soundcloud-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3513,7 +3513,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'SoundCloud SMM Panel',
         description:
           'Access more SoundCloud growth services from TrendEvo — fast delivery, secure checkout, and 24/7 support to help you scale your presence.',
-        icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+        icon: '/images/our-services/platforms/soundcloud-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3541,7 +3541,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Plays can roll in slowly, like real growth. Or, they can surge fast, boosting your track now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -3550,7 +3550,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -3559,7 +3559,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3572,7 +3572,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3583,7 +3583,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Plays from Quality Sources',
         description:
           "We deliver genuine SoundCloud plays from active listeners, helping your tracks reach more people. Our packages boost discoverability and enhance your music's credibility.",
-        icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+        icon: '/images/our-services/platforms/soundcloud-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3619,7 +3619,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'SoundCloud SMM Panel',
         description:
           'Access more SoundCloud growth services from TrendEvo — fast delivery, secure checkout, and 24/7 support to help you scale your presence.',
-        icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+        icon: '/images/our-services/platforms/soundcloud-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3647,7 +3647,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Members can roll in slowly, like real growth. Or, they can surge fast, boosting your server now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -3656,7 +3656,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -3665,7 +3665,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3678,7 +3678,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3689,7 +3689,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Members from Quality Sources',
         description:
           "We deliver genuine Discord members from active users, helping your server grow faster. Our packages boost community credibility and keep your channels active.",
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3716,7 +3716,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Discord Account',
         description:
           'Get quality Discord accounts with secure delivery and support from TrendEvo.',
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3753,7 +3753,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Account can roll in slowly, like real growth. Or, they can surge fast, boosting your account now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -3762,7 +3762,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -3771,7 +3771,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3784,7 +3784,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3795,7 +3795,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Quality Discord Accounts',
         description:
           "We provide reliable Discord accounts suited to your needs. TrendEvo ensures secure delivery and support so you can get started on Discord without hassle.",
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3822,7 +3822,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Discord Members',
         description:
           'Grow your Discord channel or community with real members. TrendEvo offers affordable packages with fast delivery.',
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3859,7 +3859,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your channel now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -3868,7 +3868,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -3877,7 +3877,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3890,7 +3890,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3901,7 +3901,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Followers from Quality Sources',
         description:
           "We deliver genuine Twitch followers from active viewers, ensuring lasting growth. Our packages help maintain your follower count and enhance your channel's credibility.",
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3937,7 +3937,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Twitch SMM Panel',
         description:
           'Access more Twitch growth services from TrendEvo — fast delivery, secure checkout, and 24/7 support to help you scale your presence.',
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -3965,7 +3965,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Viewers can roll in slowly, like real growth. Or, they can surge fast, boosting your channel now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -3974,7 +3974,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -3983,7 +3983,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -3996,7 +3996,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4034,7 +4034,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Twitch Followers',
         description:
           'Grow your Twitch profile with real followers. TrendEvo offers affordable packages with fast delivery to help you build authority.',
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -4043,7 +4043,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Twitch SMM Panel',
         description:
           'Access more Twitch growth services from TrendEvo — fast delivery, secure checkout, and 24/7 support to help you scale your presence.',
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -4071,7 +4071,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your channel now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -4080,7 +4080,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -4089,7 +4089,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4102,7 +4102,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4113,7 +4113,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Followers from Quality Sources',
         description:
           "We deliver genuine Kick followers from active viewers, ensuring lasting growth. Our packages help maintain your follower count and enhance your channel's credibility.",
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -4149,7 +4149,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Kick Growth Services',
         description:
           'Access more Kick growth services from TrendEvo — fast delivery, secure checkout, and 24/7 support to help you scale your presence.',
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -4177,7 +4177,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Viewers can roll in slowly, like real growth. Or, they can surge fast, boosting your channel now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -4186,7 +4186,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -4195,7 +4195,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4208,7 +4208,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4246,7 +4246,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Kick Followers',
         description:
           'Grow your Kick profile with real followers. TrendEvo offers affordable packages with fast delivery to help you build authority.',
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -4255,7 +4255,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Kick Growth Services',
         description:
           'Access more Kick growth services from TrendEvo — fast delivery, secure checkout, and 24/7 support to help you scale your presence.',
-        icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+        icon: '/images/our-services/platforms/discord-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -4283,7 +4283,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Upvotes can roll in slowly, like real growth. Or, they can surge fast, boosting your post now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -4292,7 +4292,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -4301,7 +4301,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4314,7 +4314,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4389,7 +4389,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Account can roll in slowly, like real growth. Or, they can surge fast, boosting your account now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -4398,7 +4398,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -4407,7 +4407,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4420,7 +4420,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4495,7 +4495,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -4504,7 +4504,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -4513,7 +4513,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4526,7 +4526,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4582,7 +4582,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Threads Followers',
         description:
           'Grow your Threads profile with real followers. TrendEvo offers affordable packages with fast delivery to help you build authority.',
-        icon: '/images/icons/pricing-instagram-platform-icon.webp',
+        icon: '/images/pricing/instagram-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -4610,7 +4610,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Upvotes can roll in slowly, like real growth. Or, they can surge fast, boosting your answer now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -4619,7 +4619,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -4628,7 +4628,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4641,7 +4641,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4697,7 +4697,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Threads Followers',
         description:
           'Grow your Threads profile with real followers. TrendEvo offers affordable packages with fast delivery to help you build authority.',
-        icon: '/images/icons/pricing-instagram-platform-icon.webp',
+        icon: '/images/pricing/instagram-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -4725,7 +4725,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your channel now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -4734,7 +4734,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -4743,7 +4743,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4756,7 +4756,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4812,7 +4812,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Buy Threads Followers',
         description:
           'Grow your Threads profile with real followers. TrendEvo offers affordable packages with fast delivery to help you build authority.',
-        icon: '/images/icons/pricing-instagram-platform-icon.webp',
+        icon: '/images/pricing/instagram-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',
@@ -4840,7 +4840,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Instant Start, Fast Delivery',
         description:
           "Once your payment clears, we're on it. Delivery speed hinges on your chosen plan. Followers can roll in slowly, like real growth. Or, they can surge fast, boosting your profile now.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -4849,7 +4849,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Affordable Prices',
         description:
           "We price in your money, so it's easy on wallets. Budding bosses, freelancers, students, and creators, take note. Big wins don't need big money spent. Start small to test, then go big later.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -4858,7 +4858,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: '24/7 Support',
         description:
           "Our team's here for you all day, every day. Reach out on WhatsApp or email anytime. Got questions on your order or need package advice? Expect quick help in your language.",
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4871,7 +4871,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Local Payment — bKash, Nagad, Rocket, and More',
         description:
           'Pay with ease using your preferred local method. We accept bKash, Nagad, Upay, and Rocket, ensuring instant crediting of your TrendEvo balance. Enjoy hassle-free transactions without the need for credit cards or international payment gateways.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -4882,7 +4882,7 @@ export const serviceLeadingContent: Record<ServiceLeadingSlug, ServiceLeadingCon
         title: 'Real Followers from Quality Sources',
         description:
           "We deliver genuine Threads followers from active profiles, ensuring lasting growth. Our packages help maintain your follower count and enhance your profile's credibility.",
-        icon: '/images/icons/pricing-instagram-platform-icon.webp',
+        icon: '/images/pricing/instagram-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
         iconClassName: 'object-cover',

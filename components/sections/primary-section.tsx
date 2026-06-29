@@ -33,7 +33,7 @@ const sectionDarkBackgroundClasses = {
   'section-6-dark': "bg-[url('/images/backgrounds/section-bg-6-dark.svg')]",
   'section-15-dark': "bg-[url('/images/backgrounds/section-bg-15-dark.svg')]",
   'section-13-dark': "bg-[url('/images/backgrounds/section-bg-13-dark.svg')]",
-  'section-12-dark': "bg-[url('/images/backgrounds/section-bgg-12-dark.svg')]",
+  'section-12-dark': "bg-[url('/images/backgrounds/section-bg-12-dark.svg')]",
   'section-14-dark': "bg-[url('/images/backgrounds/section-bg-14-dark.webp')]",
   'section-footer-dark':
     "bg-[url('/images/backgrounds/section-bg-footer.webp')]",

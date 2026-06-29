@@ -103,7 +103,7 @@ export const data: TelegramMembersPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-telegram-members/buy-telegram-members-in-bangladesh-for-strong-community-growth.webp',
       alt: 'Buy Telegram Members in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -136,7 +136,7 @@ export const data: TelegramMembersPageData = {
         title: 'Instant Start, Fast Delivery',
         description:
           'Your Telegram members order starts processing after submission. Delivery speed may depend on the selected package and quantity, but TrendEvo is designed for quick handling and smooth order progress.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -145,7 +145,7 @@ export const data: TelegramMembersPageData = {
         title: 'Affordable Prices',
         description:
           'You can buy Telegram members in Bangladesh without a large marketing budget. Our pricing works well for small businesses, new communities, crypto projects, online brands, creators, agencies, and SMM resellers.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -154,7 +154,7 @@ export const data: TelegramMembersPageData = {
         title: '24/7 Support',
         description:
           'Need help choosing the right Telegram members package? TrendEvo support is ready to guide you with service selection, payment issues, order status, and dashboard use.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -167,7 +167,7 @@ export const data: TelegramMembersPageData = {
         title: 'Local Payment Options',
         description:
           'Pay easily through bKash, Nagad, Rocket, and other supported payment methods. TrendEvo makes Telegram growth easier for Bangladeshi users who prefer fast and familiar local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -179,7 +179,7 @@ export const data: TelegramMembersPageData = {
         description:
           'TrendEvo focuses on stable Telegram member services that help improve group presence, channel authority, and community trust. You can start small, test the service, and increase your order based on your growth plan.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -223,7 +223,7 @@ export const data: TelegramMembersPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy Telegram Members on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -351,7 +351,7 @@ export const data: TelegramMembersPageData = {
         title: 'Buy Telegram Channel Subscribers',
         description:
           'Grow your Telegram channel with more subscribers and improve your broadcast reach. This service is useful for news channels, offer channels, education channels, crypto updates, creator communities, and brand announcement channels.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -362,7 +362,7 @@ export const data: TelegramMembersPageData = {
         title: 'Buy Telegram Post Views',
         description:
           'Increase visibility on your Telegram posts with more views. Telegram post views help your updates look more active and can support stronger content distribution for campaigns, product news, offers, and community announcements.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

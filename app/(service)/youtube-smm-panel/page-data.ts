@@ -157,7 +157,7 @@ export const data: YoutubeSmmPanelPageData = {
       'Get faster YouTube growth with affordable pricing, bKash, Nagad, Rocket payment support, and services made for real video marketing goals in Bangladesh.',
     buttonLabel: 'Get Started Now',
     image: {
-      src: '/images/service-smm-panel/youtube-smm-panel/boost-youtube-reach-and-engagement-with-trendevo.webp',
+      src: '/images/service/youtube-smm-panel/grow-faster-with-a-trusted-youtube-smm-panel-in-bangladesh.webp',
       alt: 'Grow faster with TrendEvo YouTube SMM Panel in Bangladesh',
       width: 687,
       height: 648,
@@ -172,14 +172,14 @@ export const data: YoutubeSmmPanelPageData = {
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/youtube-smm-panel/youtube-effect.svg',
+      src: '/images/service/youtube-smm-panel/youtube-smm-panel-services-for-bangladeshi-creators-decorative-left.svg',
       width: 232,
       height: 239,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[140px] lg:block xl:w-[232px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/youtube-smm-panel/youtube-effect-top.svg',
+      src: '/images/service/youtube-smm-panel/youtube-smm-panel-services-for-bangladeshi-creators-decorative-right.svg',
       width: 232,
       height: 239,
       className:
@@ -190,7 +190,7 @@ export const data: YoutubeSmmPanelPageData = {
         title: 'YouTube Subscribers',
         description:
           'Build a stronger audience base for your YouTube channel by using our lnk<youtube subscribers|/buy-youtube-subscribers> service. This service is useful for creators, educators, vloggers, businesses, musicians, and startups that want their channel to look active and trustworthy.',
-        icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+        icon: '/images/our-services/platforms/youtube-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },

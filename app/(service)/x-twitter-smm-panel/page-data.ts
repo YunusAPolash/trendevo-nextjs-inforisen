@@ -157,7 +157,7 @@ export const data: XTwitterSmmPanelPageData = {
       'Strengthen your X (Twitter) presence with affordable pricing, lnk<bKash, Nagad, Rocket payment support|https://trendevo.com/signup>, and services made for brand promotion, creator growth, public reach, and social media visibility in Bangladesh.',
     buttonLabel: 'Get Started Now',
     image: {
-      src: '/images/service-smm-panel/x-twitter-smm-panel/boost-x-reach-and-engagement-with-trendevo.webp',
+      src: '/images/service/x-twitter-smm-panel/grow-faster-with-a-trusted-x-twitter-smm-panel-in-bangladesh.webp',
       alt: 'Grow faster with TrendEvo X (Twitter) SMM Panel in Bangladesh',
       width: 687,
       height: 648,
@@ -172,14 +172,14 @@ export const data: XTwitterSmmPanelPageData = {
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/x-twitter-smm-panel/twitter-effect.svg',
+      src: '/images/service/x-twitter-smm-panel/x-twitter-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 199,
       height: 205,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[135px] lg:block xl:w-[199px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/x-twitter-smm-panel/twitter-effect.svg',
+      src: '/images/service/x-twitter-smm-panel/x-twitter-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 199,
       height: 205,
       className:
@@ -190,7 +190,7 @@ export const data: XTwitterSmmPanelPageData = {
         title: 'X (Twitter) Followers',
         description:
           'Build a stronger audience base for your lnk<X (Twitter) followers|/buy-x-twitter-followers>. This service is useful for founders, creators, agencies, journalists, influencers, local brands, and businesses that want their profile to look active and trustworthy.',
-        icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+        icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },

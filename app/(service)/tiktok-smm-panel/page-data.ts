@@ -157,7 +157,7 @@ export const data: TiktokSmmPanelPageData = {
       'Get faster TikTok growth with affordable pricing, lnk<bKash, Nagad, Rocket payment support|/services>, and services made for short-video marketing, creator growth, and brand visibility in Bangladesh.',
     buttonLabel: 'Get Started Now',
     image: {
-      src: '/images/service-smm-panel/tiktok-smm-panel/boost-tiktok-reach-and-engagement-with-trendevo.webp',
+      src: '/images/service/tiktok-smm-panel/grow-faster-with-a-trusted-tiktok-smm-panel-in-bangladesh.webp',
       alt: 'Grow faster with TrendEvo TikTok SMM Panel in Bangladesh',
       width: 687,
       height: 648,
@@ -172,14 +172,14 @@ export const data: TiktokSmmPanelPageData = {
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/tiktok-smm-panel/tiktok-effect.svg',
+      src: '/images/service/tiktok-smm-panel/tiktok-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 189,
       height: 205,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[130px] lg:block xl:w-[189px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/tiktok-smm-panel/tiktok-effect.svg',
+      src: '/images/service/tiktok-smm-panel/tiktok-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 189,
       height: 205,
       className:
@@ -190,7 +190,7 @@ export const data: TiktokSmmPanelPageData = {
         title: 'TikTok Followers',
         description:
           'Build a stronger audience base for your TikTok profile by using our lnk<tiktok followers|/buy-tiktok-followers> service. This service is useful for creators, influencers, online shops, personal brands, musicians, and small businesses that want their profile to look active and trustworthy.',
-        icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
+        icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
       },

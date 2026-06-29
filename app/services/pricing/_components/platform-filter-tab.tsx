@@ -14,7 +14,7 @@ function WebsiteTrafficIcon() {
   return (
     <div className="relative h-[17px] w-[20.621px] shrink-0">
       <Image
-        src="/images/our-services/platforms/our-services-wt-5-platform-icon.svg"
+        src="/images/our-services/platforms/website-traffic-platform-icon-layer-5.svg"
         alt="Website traffic platform icon layer"
         aria-hidden
         fill
@@ -22,7 +22,7 @@ function WebsiteTrafficIcon() {
         unoptimized
       />
       <Image
-        src="/images/our-services/platforms/our-services-wt-7-platform-icon.svg"
+        src="/images/our-services/platforms/website-traffic-platform-icon-layer-7.svg"
         alt="Website traffic platform icon overlay"
         aria-hidden
         fill
@@ -30,7 +30,7 @@ function WebsiteTrafficIcon() {
         unoptimized
       />
       <Image
-        src="/images/our-services/platforms/our-services-wt-8-platform-icon.svg"
+        src="/images/our-services/platforms/website-traffic-platform-icon-layer-8.svg"
         alt="Website traffic platform icon highlight"
         aria-hidden
         fill

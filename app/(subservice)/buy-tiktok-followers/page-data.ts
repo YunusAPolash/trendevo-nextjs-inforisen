@@ -103,7 +103,7 @@ export const data: TiktokFollowersPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-tiktok-followers/buy-tiktok-followers-in-bangladesh-for-stronger-creator-growth.webp',
       alt: 'Buy TikTok Followers in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -136,7 +136,7 @@ export const data: TiktokFollowersPageData = {
         title: 'Fast Follower Processing',
         description:
           'Your TikTok followers order starts after you submit it from the dashboard. Delivery speed may depend on the package size, profile status, and current order volume, but TrendEvo keeps the process smooth and easy to follow.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -145,7 +145,7 @@ export const data: TiktokFollowersPageData = {
         title: 'Affordable Follower Packages',
         description:
           'You can buy TikTok followers in Bangladesh without using a large promotion budget. Our packages work well for new creators, influencers, online stores, fashion brands, restaurants, agencies, freelancers, and SMM resellers.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -154,7 +154,7 @@ export const data: TiktokFollowersPageData = {
         title: 'Helpful Support Team',
         description:
           'Need help choosing the right TikTok Follower Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -167,7 +167,7 @@ export const data: TiktokFollowersPageData = {
         title: 'Local Payment Options',
         description:
           'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes TikTok Marketing Bangladesh easier for users who prefer trusted local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -179,7 +179,7 @@ export const data: TiktokFollowersPageData = {
         description:
           'TrendEvo focuses on TikTok followers that support profile trust, audience confidence, and creator authority. You can start with a small package, review the result, and scale your follower growth based on your content plan.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -223,7 +223,7 @@ export const data: TiktokFollowersPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy TikTok Followers on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -351,7 +351,7 @@ export const data: TiktokFollowersPageData = {
         title: 'Buy TikTok Views',
         description:
           'Increase visibility for your TikTok videos with more views. This service helps product videos, trend clips, creator content, educational posts, and campaign videos look more active to new viewers.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -362,7 +362,7 @@ export const data: TiktokFollowersPageData = {
         title: 'Buy TikTok Likes',
         description:
           'Improve the engagement signal of your TikTok videos with more likes. TikTok likes help videos look more appreciated, viewer-approved, and trusted when new audiences check your content.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

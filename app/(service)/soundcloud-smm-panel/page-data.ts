@@ -157,7 +157,7 @@ export const data: SoundcloudSmmPanelPageData = {
       'Use TrendEvo to support your SoundCloud promotion with affordable pricing, bKash, Nagad, Rocket payment options, and services made for artists who want stronger audio visibility in Bangladesh.',
     buttonLabel: 'Get Started Now',
     image: {
-      src: '/images/service-smm-panel/soundcloud-smm-panel/boost-soundcloud-reach-and-engagement-with-trendevo.webp',
+      src: '/images/service/soundcloud-smm-panel/grow-faster-with-a-trusted-soundcloud-smm-panel-in-bangladesh.webp',
       alt: 'Grow faster with TrendEvo SoundCloud SMM Panel in Bangladesh',
       width: 687,
       height: 648,
@@ -172,14 +172,14 @@ export const data: SoundcloudSmmPanelPageData = {
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
     decorativeLeft: {
-      src: '/images/service-smm-panel/soundcloud-smm-panel/soundcloud-effect.svg',
+      src: '/images/service/soundcloud-smm-panel/soundcloud-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 255,
       height: 257,
       className:
         'pointer-events-none absolute -left-12 bottom-16 hidden h-auto w-[150px] lg:block xl:w-[255px]',
     },
     decorativeRight: {
-      src: '/images/service-smm-panel/soundcloud-smm-panel/soundcloud-effect.svg',
+      src: '/images/service/soundcloud-smm-panel/soundcloud-smm-panel-services-built-for-bangladesh-decorative-left.svg',
       width: 255,
       height: 257,
       className:
@@ -190,7 +190,7 @@ export const data: SoundcloudSmmPanelPageData = {
         title: 'SoundCloud Plays',
         description:
           'Get more lnk<SoundCloud plays|/buy-soundcloud-plays>, remixes, beats, DJ sets, podcasts, and spoken audio. This service helps new uploads look more active when listeners open your track page for the first time.',
-        icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+        icon: '/images/our-services/platforms/soundcloud-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
       },

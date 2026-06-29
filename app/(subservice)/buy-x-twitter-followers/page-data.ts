@@ -105,7 +105,7 @@ export const data: TwitterFollowersPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-x-twitter-followers/buy-x-twitter-followers-in-bangladesh-for-stronger-profile-authority.webp',
       alt: 'Buy X (Twitter) Followers in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -140,7 +140,7 @@ export const data: TwitterFollowersPageData = {
         title: 'Fast Follower Processing',
         description:
           'Your X (Twitter) followers order starts after you submit it from the dashboard. Delivery speed may depend on the package size, profile status, and current order volume, but TrendEvo keeps the process smooth and easy to follow.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -149,7 +149,7 @@ export const data: TwitterFollowersPageData = {
         title: 'Affordable Follower Packages',
         description:
           'You can buy X (Twitter) followers in Bangladesh without using a large marketing budget. Our packages work well for startup founders, creators, public figures, business owners, journalists, freelancers, agencies, and SMM resellers.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -158,7 +158,7 @@ export const data: TwitterFollowersPageData = {
         title: 'Helpful Support Team',
         description:
           'Need help choosing the right X (Twitter) Follower Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -171,7 +171,7 @@ export const data: TwitterFollowersPageData = {
         title: 'Local Payment Options',
         description:
           'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes X Marketing Bangladesh easier for users who prefer trusted local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -183,7 +183,7 @@ export const data: TwitterFollowersPageData = {
         description:
           'TrendEvo focuses on X (Twitter) followers that support profile trust, professional credibility, and audience perception. You can start with a small package, review the result, and scale your follower growth based on your profile strategy.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -227,7 +227,7 @@ export const data: TwitterFollowersPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy X (Twitter) Followers on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -355,7 +355,7 @@ export const data: TwitterFollowersPageData = {
         title: 'Buy X (Twitter) Likes',
         description:
           'Improve the trust signal of your X posts with more likes. X (Twitter) likes help threads, announcements, opinions, product updates, and campaign posts look more valuable to new viewers.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -366,7 +366,7 @@ export const data: TwitterFollowersPageData = {
         title: 'Buy X (Twitter) Retweets',
         description:
           'Increase the distribution of your X posts with more retweets. This service is useful for startup news, public updates, offers, awareness posts, launches, and content that needs wider reach.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

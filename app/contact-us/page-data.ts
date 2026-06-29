@@ -76,7 +76,7 @@ export const data: ContactUsPageData = {
       'max-w-2xl text-base leading-relaxed text-[#343e56] sm:text-base md:text-lg',
     primaryButtonLabel: 'Get Started Now',
     illustration: {
-      src: '/images/contact-us/contact-us-trendevo-support-specialist-pointing-to-contact-options-illustration.webp',
+      src: '/images/contact-us/email-address.webp',
       alt: 'TrendEvo support specialist pointing to contact options',
       width: 583,
       height: 648,

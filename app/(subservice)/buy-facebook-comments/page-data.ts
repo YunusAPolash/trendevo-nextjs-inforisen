@@ -103,7 +103,7 @@ export const data: FacebookCommentsPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-facebook-comments/buy-facebook-comments-in-bangladesh-for-stronger-post-engagement.webp',
       alt: 'Buy Facebook Comments in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -136,7 +136,7 @@ export const data: FacebookCommentsPageData = {
         title: 'Fast Comment Delivery',
         description:
           'Your Facebook comments order starts after submission from the dashboard. Delivery speed may depend on the selected package and post type, but TrendEvo is designed for quick and smooth order processing.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -145,7 +145,7 @@ export const data: FacebookCommentsPageData = {
         title: 'Affordable Comment Packages',
         description:
           'You can buy Facebook comments without a large advertising budget. Our pricing works well for small businesses, online shops, creators, restaurants, agencies, startups, and SMM resellers looking for cheap Facebook comments.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -154,7 +154,7 @@ export const data: FacebookCommentsPageData = {
         title: 'Helpful Support Team',
         description:
           'Need help choosing the right Facebook Comment Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -167,7 +167,7 @@ export const data: FacebookCommentsPageData = {
         title: 'Local Payment Options',
         description:
           'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes Facebook Marketing Bangladesh easier for users who prefer familiar local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -179,7 +179,7 @@ export const data: FacebookCommentsPageData = {
         description:
           'TrendEvo focuses on Facebook comments that help your posts look active and discussion-friendly. You can start with a small package, test the service, and increase your order size based on your campaign needs.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -223,7 +223,7 @@ export const data: FacebookCommentsPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy Facebook Comments on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -351,7 +351,7 @@ export const data: FacebookCommentsPageData = {
         title: 'Buy Facebook Followers',
         description:
           'Grow your Facebook page with more followers and build a stronger first impression for new visitors. This service is useful for local businesses, creators, online shops, agencies, and new brand pages that want better page trust before promotion.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -362,7 +362,7 @@ export const data: FacebookCommentsPageData = {
         title: 'Buy Facebook Page Likes',
         description:
           'Increase the trust signal of your Facebook page with more page likes. Facebook Page Likes help new visitors see your page as more established, active, and reliable before they browse your posts, products, or services.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

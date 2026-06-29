@@ -104,7 +104,7 @@ export const data: AboutUsPageData = {
     secondaryButtonLabel: 'See All Services',
     secondaryButtonHref: '/services',
     illustration: {
-      src: '/images/about/about-us-trendevo-specialist-representing-trusted-smm-panel-services-illustration.webp',
+      src: '/images/about-us/trusted-smm-panel-in-bangladesh-for-smarter-social-media-growth.webp',
       alt: 'TrendEvo specialist representing trusted SMM panel services',
       width: 547,
       height: 673,
@@ -197,7 +197,7 @@ export const data: AboutUsPageData = {
       'Our promise is simple: affordable SMM services, local payment support, secure order handling, and a platform users can trust for long-term social media growth.',
     ],
     image: {
-      src: '/images/about/about-us-trendevo-specialist-representing-trusted-smm-panel-services-illustration.webp',
+      src: '/images/about-us/trusted-smm-panel-in-bangladesh-for-smarter-social-media-growth.webp',
       alt: 'TrendEvo commitment to secure and reliable SMM panel services',
     },
   },

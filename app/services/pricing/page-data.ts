@@ -74,64 +74,64 @@ export const data: ServicesPricingPageData = {
     {
       id: 'facebook',
       label: 'Facebook',
-      icon: '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+      icon: '/images/our-services/platforms/facebook-platform-icon.webp',
     },
     {
       id: 'instagram',
       label: 'Instagram',
-      icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
+      icon: '/images/our-services/platforms/instagram-platform-icon.webp',
     },
     {
       id: 'twitter',
       label: 'X (Twitter)',
-      icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
+      icon: '/images/our-services/platforms/x-twitter-platform-icon.png',
       iconClassName: 'scale-150',
     },
     {
       id: 'youtube',
       label: 'YouTube',
-      icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
+      icon: '/images/our-services/platforms/youtube-platform-icon.webp',
     },
     {
       id: 'tiktok',
       label: 'TikTok',
-      icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
+      icon: '/images/our-services/platforms/tiktok-platform-icon.webp',
     },
     {
       id: 'linkedin',
       label: 'LinkedIn',
-      icon: '/images/our-services/platforms/our-services-linkedin-followers-platform-icon.webp',
+      icon: '/images/our-services/platforms/linkedin-platform-icon.webp',
     },
     {
       id: 'telegram',
       label: 'Telegram',
-      icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
+      icon: '/images/our-services/platforms/telegram-platform-icon.webp',
     },
     {
       id: 'discord',
       label: 'Discord',
-      icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
+      icon: '/images/our-services/platforms/discord-platform-icon.webp',
     },
     {
       id: 'spotify',
       label: 'Spotify',
-      icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
+      icon: '/images/our-services/platforms/spotify-platform-icon.webp',
     },
     {
       id: 'soundcloud',
       label: 'SoundCloud',
-      icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
+      icon: '/images/our-services/platforms/soundcloud-platform-icon.png',
       composedIcon: true,
     },
     {
       id: 'snapchat',
       label: 'Snapchat',
-      icon: '/images/our-services/platforms/our-services-snapchat-followers-platform-icon.webp',
+      icon: '/images/our-services/platforms/snapchat-platform-icon.webp',
     },
     {
       id: 'website-traffic',
       label: 'Website Traffic',
-      icon: '/images/our-services/platforms/our-services-website-traffic-platform-icon.png',
+      icon: '/images/our-services/platforms/website-traffic-platform-icon.png',
       composedIcon: true,
     },
   ],
@@ -141,35 +141,35 @@ export const data: ServicesPricingPageData = {
       id: 'premium-mixed-regions',
       title: 'Premium Facebook Video Views | Mixed Regions',
       platformIcon:
-        '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+        '/images/our-services/platforms/facebook-platform-icon.webp',
       rows: premiumRows,
     },
     {
       id: 'premium-mixed-regions-2',
       title: 'Premium Facebook Video Views | Mixed Regions',
       platformIcon:
-        '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+        '/images/our-services/platforms/facebook-platform-icon.webp',
       rows: premiumRows,
     },
     {
       id: 'standard-global',
       title: 'Standard Facebook Video Views | Global',
       platformIcon:
-        '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+        '/images/our-services/platforms/facebook-platform-icon.webp',
       rows: premiumRows,
     },
     {
       id: 'economy-local',
       title: 'Economy Facebook Video Views | Local',
       platformIcon:
-        '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+        '/images/our-services/platforms/facebook-platform-icon.webp',
       rows: premiumRows,
     },
     {
       id: 'economy-local-2',
       title: 'Economy Facebook Video Views | Local',
       platformIcon:
-        '/images/our-services/platforms/our-services-facebook-post-likes-platform-icon.webp',
+        '/images/our-services/platforms/facebook-platform-icon.webp',
       rows: premiumRows,
     },
   ],

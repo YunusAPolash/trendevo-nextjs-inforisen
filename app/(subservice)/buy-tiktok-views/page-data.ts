@@ -208,7 +208,7 @@ export const data: TiktokViewsPageData = {
 
     illustration: {
 
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-tiktok-views/buy-tiktok-views-in-bangladesh-for-better-video-reach.webp',
 
       alt: 'Buy TikTok Views in Bangladesh with TrendEvo',
 
@@ -274,7 +274,7 @@ export const data: TiktokViewsPageData = {
 
           'Your TikTok views order starts after you submit it from the dashboard. Delivery speed may depend on the video status, package size, and current order volume, but TrendEvo keeps the process smooth and easy to follow.',
 
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
 
         iconWidth: 40,
 
@@ -292,7 +292,7 @@ export const data: TiktokViewsPageData = {
 
           'You can buy TikTok views in Bangladesh without using a large promotion budget. Our packages work well for new creators, influencers, online stores, fashion brands, restaurants, agencies, freelancers, and SMM resellers.',
 
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
 
         iconWidth: 40,
 
@@ -310,7 +310,7 @@ export const data: TiktokViewsPageData = {
 
           'Need help choosing the right TikTok View Package? TrendEvo support can guide you with service selection, order status, payment issues, and dashboard use.',
 
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
 
         iconWidth: 40,
 
@@ -336,7 +336,7 @@ export const data: TiktokViewsPageData = {
 
           'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes TikTok Marketing Bangladesh easier for users who prefer trusted local payment systems.',
 
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
 
         iconWidth: 40,
 
@@ -360,7 +360,7 @@ export const data: TiktokViewsPageData = {
 
         iconFrameSrc:
 
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
 
       },
 
@@ -448,7 +448,7 @@ export const data: TiktokViewsPageData = {
 
     badge: 'WORKING PROCESS',
 
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
 
     underlineWidth: 216,
 
@@ -704,7 +704,7 @@ export const data: TiktokViewsPageData = {
 
           'Improve the engagement signal of your TikTok videos with more likes. TikTok likes help product videos, trend clips, creator content, educational posts, and campaign videos look more appreciated by viewers.',
 
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
 
         iconWidth: 39,
 
@@ -726,7 +726,7 @@ export const data: TiktokViewsPageData = {
 
           'Grow your TikTok profile authority with more followers. This service helps creators, brands, and businesses build a stronger first impression when people visit after watching your videos.',
 
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
 
         iconWidth: 39,
 

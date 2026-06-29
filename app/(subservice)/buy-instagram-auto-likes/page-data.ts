@@ -103,7 +103,7 @@ export const data: InstagramAutoLikesPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-instagram-auto-likes/buy-instagram-auto-likes-in-bangladesh-for-consistent-post-engagement.webp',
       alt: 'Buy Instagram Auto Likes in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -136,7 +136,7 @@ export const data: InstagramAutoLikesPageData = {
         title: 'Automatic Like Delivery',
         description:
           'Your Instagram Auto Likes package works on new eligible posts after setup. Delivery may depend on service rules, package size, and content status, but TrendEvo keeps the process smooth for regular content activity.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -145,7 +145,7 @@ export const data: InstagramAutoLikesPageData = {
         title: 'Affordable Auto Like Packages',
         description:
           'You can buy Instagram Auto Likes in Bangladesh without spending a large promotion budget. Our packages work well for creators, fashion pages, online stores, restaurants, startups, agencies, freelancers, and SMM resellers.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -154,7 +154,7 @@ export const data: InstagramAutoLikesPageData = {
         title: 'Helpful Support Team',
         description:
           'Need help choosing the right Instagram Auto Likes package? TrendEvo support can guide you with package setup, order status, payment issues, and dashboard use.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -167,7 +167,7 @@ export const data: InstagramAutoLikesPageData = {
         title: 'Local Payment Options',
         description:
           'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes Instagram Marketing Bangladesh easier for users who prefer trusted local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -179,7 +179,7 @@ export const data: InstagramAutoLikesPageData = {
         description:
           'TrendEvo focuses on Instagram Auto Likes that support regular post activity, content trust, and audience perception. You can choose a suitable package, keep posting, and maintain engagement across your latest content.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -223,7 +223,7 @@ export const data: InstagramAutoLikesPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy Instagram Auto Likes on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -351,7 +351,7 @@ export const data: InstagramAutoLikesPageData = {
         title: 'Buy Instagram Followers',
         description:
           'Grow your profile authority with more Instagram followers. This service helps creators, brands, and businesses build a stronger first impression when people visit your profile after seeing your content.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -362,7 +362,7 @@ export const data: InstagramAutoLikesPageData = {
         title: 'Buy Instagram Comments',
         description:
           'Add more visible interaction to your Instagram posts and Reels with comments. This service is useful for product launches, influencer posts, campaign content, brand announcements, and promotional updates.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',

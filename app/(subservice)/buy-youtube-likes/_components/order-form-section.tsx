@@ -21,7 +21,7 @@ const QUANTITY_STEP = 100;
 const PRICE_PER_UNIT = 1.2;
 
 const YOUTUBE_ICON =
-  '/images/icons/pricing-youtube-platform-icon.webp';
+  '/images/pricing/youtube-platform-icon.webp';
 const TITLE_YOUTUBE_ICON_SIZE = 29;
 const FORM_YOUTUBE_ICON_SIZE = 20;
 
@@ -49,9 +49,9 @@ function YoutubeIcon({
   );
 }
 const SLIDER_THUMB_SRC =
-  '/images/facebook-page-followers/facebook-page-followers-quantity-slider-thumb-decoration.svg';
+  '/images/subservice/shared/order-form-quantity-slider-thumb-decoration.svg';
 const SLIDER_TOOLTIP_SRC =
-  '/images/facebook-page-followers/facebook-page-followers-quantity-slider-tooltip-decoration.svg';
+  '/images/subservice/shared/order-form-quantity-slider-tooltip-decoration.svg';
 const SLIDER_RAIL_HEIGHT = 38;
 const SLIDER_TRACK_Y = 25;
 const SLIDER_THUMB_WIDTH = 47;
@@ -222,7 +222,7 @@ export default function YoutubeLikesOrderFormSection() {
           <div className="relative z-10 flex flex-col gap-[30px]">
             <SectionHeading
               badge={orderForm.badge}
-              underlineSrc="/images/facebook-page-followers/facebook-page-followers-section-underline.svg"
+              underlineSrc="/images/subservice/shared/order-form-section-underline.svg"
               underlineWidth={203}
               title={
                 <span className="flex flex-wrap items-center justify-center gap-[8px]">

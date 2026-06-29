@@ -23,6 +23,19 @@ type WhoShouldBuySectionProps = {
   data: WhoShouldBuySectionData;
 };
 
+/** Balance incomplete last rows on multi-column grids (e.g. 5 cards in a 3-col layout). */
+function audienceCardGridClass(index: number, total: number) {
+  const lgRemainder = total % 3;
+  const smRemainder = total % 2;
+
+  return cn(
+    smRemainder === 1 && index === total - 1 && 'sm:col-span-2',
+    lgRemainder === 2 && index >= total - 2 && 'lg:col-span-3',
+    lgRemainder === 1 && index === total - 1 && 'lg:col-span-4 lg:col-start-2',
+    (lgRemainder === 0 || index < total - lgRemainder) && 'lg:col-span-2',
+  );
+}
+
 function AudienceCard({ title, description }: WhoShouldBuyItem) {
   return (
     <PrimaryCard
@@ -64,9 +77,14 @@ export default function WhoShouldBuySection({ data }: WhoShouldBuySectionProps) 
           )}
         />
 
-        <div className="grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-7">
-          {data.items.map((item) => (
-            <AudienceCard key={item.title} {...item} />
+        <div className="grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-6 lg:gap-7">
+          {data.items.map((item, index) => (
+            <div
+              key={item.title}
+              className={audienceCardGridClass(index, data.items.length)}
+            >
+              <AudienceCard {...item} />
+            </div>
           ))}
         </div>
       </div>

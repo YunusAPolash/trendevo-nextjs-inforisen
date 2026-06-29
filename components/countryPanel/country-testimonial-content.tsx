@@ -64,7 +64,7 @@ export const countryTestimonialContent: Record<
   'smm-panel-uk': {
     sectionBg: 'section-17',
     badge: 'TESTIMONIALS',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     title: (
       <>
@@ -116,7 +116,7 @@ export const countryTestimonialContent: Record<
       name: 'Ariyena Islam',
       role: 'Business Owner',
       avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote: ukReviewQuote,
       youtubeVideoId: ukYoutubeVideoId,
     },
@@ -136,7 +136,7 @@ export const countryTestimonialContent: Record<
   'smm-panel-bangladesh': {
     sectionBg: 'section-10',
     badge: 'TESTIMONIALS',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     title: (
       <>
@@ -189,7 +189,7 @@ export const countryTestimonialContent: Record<
       name: 'Ariyena Islam',
       role: 'Business Owner',
       avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote: ukReviewQuote,
       youtubeVideoId: ukYoutubeVideoId,
     },
@@ -209,7 +209,7 @@ export const countryTestimonialContent: Record<
   'smm-panel-vietnam': {
     sectionBg: 'section-17',
     badge: 'TESTIMONIALS',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     title: (
       <>
@@ -261,7 +261,7 @@ export const countryTestimonialContent: Record<
       name: 'Duc Vo',
       role: 'Business Owner',
       avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote: ukReviewQuote,
       youtubeVideoId: ukYoutubeVideoId,
     },
@@ -281,7 +281,7 @@ export const countryTestimonialContent: Record<
   'smm-panel-thailand': {
     sectionBg: 'section-17',
     badge: 'TESTIMONIALS',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     title: (
       <>
@@ -333,7 +333,7 @@ export const countryTestimonialContent: Record<
       name: 'Krit V.',
       role: 'Business Owner',
       avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote: ukReviewQuote,
       youtubeVideoId: ukYoutubeVideoId,
     },
@@ -353,7 +353,7 @@ export const countryTestimonialContent: Record<
   'smm-panel-pakistan': {
     sectionBg: 'section-17',
     badge: 'TESTIMONIALS',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     title: (
       <>
@@ -405,7 +405,7 @@ export const countryTestimonialContent: Record<
       name: 'Usman Ali',
       role: 'Business Owner',
       avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote: ukReviewQuote,
       youtubeVideoId: ukYoutubeVideoId,
     },
@@ -425,7 +425,7 @@ export const countryTestimonialContent: Record<
   'smm-panel-nigeria': {
     sectionBg: 'section-17',
     badge: 'TESTIMONIALS',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     title: (
       <>
@@ -477,7 +477,7 @@ export const countryTestimonialContent: Record<
       name: 'Emeka Johnson',
       role: 'Business Owner',
       avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote: ukReviewQuote,
       youtubeVideoId: ukYoutubeVideoId,
     },
@@ -497,7 +497,7 @@ export const countryTestimonialContent: Record<
   'smm-panel-brazil': {
     sectionBg: 'section-17',
     badge: 'TESTIMONIALS',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     title: (
       <>
@@ -549,7 +549,7 @@ export const countryTestimonialContent: Record<
       name: 'Rafael Oliveira',
       role: 'Business Owner',
       avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote: ukReviewQuote,
       youtubeVideoId: ukYoutubeVideoId,
     },
@@ -569,7 +569,7 @@ export const countryTestimonialContent: Record<
   'smm-panel-egypt': {
     sectionBg: 'section-17',
     badge: 'TESTIMONIALS',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     title: (
       <>
@@ -621,7 +621,7 @@ export const countryTestimonialContent: Record<
       name: 'Karim Farouk',
       role: 'Business Owner',
       avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote: ukReviewQuote,
       youtubeVideoId: ukYoutubeVideoId,
     },
@@ -641,7 +641,7 @@ export const countryTestimonialContent: Record<
   'smm-panel-india': {
     sectionBg: 'section-17',
     badge: 'TESTIMONIALS',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     title: (
       <>
@@ -693,7 +693,7 @@ export const countryTestimonialContent: Record<
       name: 'Vikram Singh',
       role: 'Business Owner',
       avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote: ukReviewQuote,
       youtubeVideoId: ukYoutubeVideoId,
     },
@@ -713,7 +713,7 @@ export const countryTestimonialContent: Record<
   'smm-panel-indonesia': {
     sectionBg: 'section-17',
     badge: 'TESTIMONIALS',
-    underlineSrc: '/images/testimonials/testimonials-section-underline.svg',
+    underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
     underlineWidth: 169,
     title: (
       <>
@@ -765,7 +765,7 @@ export const countryTestimonialContent: Record<
       name: 'Rizki Hidayat',
       role: 'Business Owner',
       avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote: ukReviewQuote,
       youtubeVideoId: ukYoutubeVideoId,
     },

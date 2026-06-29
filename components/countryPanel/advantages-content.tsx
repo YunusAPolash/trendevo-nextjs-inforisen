@@ -44,14 +44,14 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     title: 'TrendEvo Works for Everyone in Bangladesh',
     subtitle:
       'TrendEvo is built for local businesses, content creators, freelancers, ecommerce brands, agencies, and resellers in Bangladesh. From simple orders to bulk SMM campaigns, everything is easy to manage with local payments, fast delivery, and clear tracking.',
-    underlineSrc: '/images/advantages/advantages-section-underline.svg',
+    underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/advantages/advantages-illustration.png',
+      src: '/images/advantages/trendevo-works-for-everyone-in-bangladesh.png',
       alt: 'SMM panel advantages illustration',
     },
     leftAdvantages: [
@@ -92,7 +92,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/advantages-section-underline.svg',
+    underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -172,14 +172,14 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform for Bangladeshi businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/advantages-section-underline.svg',
+    underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName:
       'max-w-[868px] text-sm font-medium text-[#4f586d] sm:text-base md:text-lg',
     centerImage: {
-      src: '/images/advantages/advantages-illustration.png',
+      src: '/images/advantages/trendevo-works-for-everyone-in-bangladesh.png',
       alt: 'Bangladesh SMM panel advantages illustration',
     },
     leftAdvantages: [
@@ -252,7 +252,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform for Vietnamese businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/advantages-section-underline.svg',
+    underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -332,7 +332,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform for Thai businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/advantages-section-underline.svg',
+    underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -412,7 +412,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform for Pakistani businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/advantages-section-underline.svg',
+    underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -492,7 +492,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform for Nigerian businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/advantages-section-underline.svg',
+    underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -572,7 +572,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform for Brazilian businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/advantages-section-underline.svg',
+    underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -652,7 +652,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform for Egyptian businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/advantages-section-underline.svg',
+    underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -732,7 +732,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform for Indian businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/advantages-section-underline.svg',
+    underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',
@@ -812,7 +812,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
     ),
     subtitle:
       'We provide SMM services on almost every social media platform for Indonesian businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
-    underlineSrc: '/images/advantages/advantages-section-underline.svg',
+    underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
       'whitespace-normal text-2xl tracking-[0.48px] text-[#13203b] sm:text-[32px] md:text-[40px] lg:text-[48px]',

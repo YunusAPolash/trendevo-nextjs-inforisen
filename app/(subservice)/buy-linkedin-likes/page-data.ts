@@ -103,7 +103,7 @@ export const data: LinkedinLikesPageData = {
       rating: '(4.8)',
     },
     illustration: {
-      src: '/images/facebook-page-followers/facebook-page-followers-excited-user-celebrating-facebook-page-growth-with-analytics-chart-illustration.webp',
+      src: '/images/subservice/buy-linkedin-likes/buy-linkedin-likes-in-bangladesh-for-stronger-post-engagement.webp',
       alt: 'Buy LinkedIn Likes in Bangladesh with TrendEvo',
       width: 558,
       height: 621,
@@ -136,7 +136,7 @@ export const data: LinkedinLikesPageData = {
         title: 'Instant Start, Fast Delivery',
         description:
           'Your LinkedIn Likes order starts processing after submission. Delivery speed may depend on the package size, but TrendEvo is designed for quick and smooth order handling.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-instant-start-fast-delivery-icon.webp',
+        icon: '/images/subservice/shared/instant-start-fast-delivery-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: '-scale-y-100 rotate-180 object-cover',
@@ -145,7 +145,7 @@ export const data: LinkedinLikesPageData = {
         title: 'Affordable Prices',
         description:
           'You can buy LinkedIn Likes in Bangladesh without spending a large budget. Our pricing works well for personal brands, company pages, startups, freelancers, SMEs, agencies, and SMM resellers.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-affordable-prices-icon.webp',
+        icon: '/images/subservice/shared/affordable-prices-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconClassName: 'object-cover',
@@ -154,7 +154,7 @@ export const data: LinkedinLikesPageData = {
         title: '24/7 Support',
         description:
           'Need help before or after placing an order? TrendEvo support is available to guide you with service selection, order status, payment issues, and dashboard use.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-24-7-support-icon.webp',
+        icon: '/images/subservice/shared/24-7-support-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -167,7 +167,7 @@ export const data: LinkedinLikesPageData = {
         title: 'Local Payment Options',
         description:
           'Pay easily through bKash, Nagad, Rocket, and other supported methods. TrendEvo makes LinkedIn post engagement easier for Bangladeshi users who prefer local payment systems.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-local-payment-bkash-nagad-rocket-and-more-icon.webp',
+        icon: '/images/subservice/shared/local-payment-options-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -179,7 +179,7 @@ export const data: LinkedinLikesPageData = {
         description:
           'TrendEvo focuses on stable LinkedIn Likes services that help improve post presence, professional trust, and social proof. You can start small, test the service, and scale based on your content goals.',
         iconFrameSrc:
-          '/images/facebook-page-followers/facebook-page-followers-real-followers-from-quality-sources-decoration.png',
+          '/images/subservice/shared/real-followers-from-quality-sources-decoration.png',
       },
     ],
   },
@@ -223,7 +223,7 @@ export const data: LinkedinLikesPageData = {
 
   workingProcess: {
     badge: 'WORKING PROCESS',
-    underlineSrc: '/images/working-process/working-process-section-underline.svg',
+    underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
     underlineWidth: 216,
     title: 'How to Buy LinkedIn Likes on TrendEvo — gt<Step by Step>',
     subtitle:
@@ -351,7 +351,7 @@ export const data: LinkedinLikesPageData = {
         title: 'Buy LinkedIn Followers',
         description:
           'Grow your LinkedIn profile or company page with more followers. LinkedIn followers help improve professional credibility, support long-term audience growth, and make your personal brand or business page look more established.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-likes-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-page-likes-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
@@ -362,7 +362,7 @@ export const data: LinkedinLikesPageData = {
         title: 'Buy LinkedIn Comments',
         description:
           'Add more activity to your LinkedIn posts with relevant comments. This service is useful for thought leadership posts, hiring updates, company announcements, product launches, case studies, and B2B campaign content that needs stronger interaction.',
-        icon: '/images/facebook-page-followers/facebook-page-followers-buy-facebook-comments-icon.webp',
+        icon: '/images/subservice/shared/buy-facebook-comments-icon.webp',
         iconWidth: 39,
         iconHeight: 40,
         iconWrapperClassName: 'overflow-hidden',
