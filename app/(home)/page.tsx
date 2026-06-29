@@ -13,6 +13,7 @@ import WhyChooseUsSection from '@/app/(home)/_components/why-choose-us-section';
 import WorkingProcessSection from '@/app/(home)/_components/working-process-section';
 import FaqSection from '@/components/sections/faq-section';
 import OurService from '@/app/(home)/_components/our-service';
+import StatsSection from '@/app/(home)/_components/stats-section';
 
 export const metadata: Metadata = {
   title: homePageData.seo.title,
@@ -26,6 +27,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <StatsSection />
       <OurService />
       <AboutSection />
       <WorkingProcessSection />
