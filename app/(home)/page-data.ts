@@ -294,7 +294,7 @@ export const data: HomePageData = {
       badge: 'Our Services',
       title: 'All-in-One SMM Panel gt<Services in Bangladesh>',
       subtitle:
-        'TrendEvo helps businesses, creators, agencies, and resellers buy SMM services in Bangladesh for Facebook, Instagram, YouTube, TikTok, and more. Get fast delivery, secure order tracking, affordable pricing, and easy payments with bKash, Nagad, or Rocket.',
+        'TrendEvo helps businesses, creators, agencies, and resellers lnk</services|buy SMM services in Bangladesh> for Facebook, Instagram, YouTube, TikTok, and more. Get fast delivery, secure order tracking, affordable pricing, and easy payments with bKash, Nagad, or Rocket.',
       titleClassName: 'text-2xl sm:text-[28px] lg:text-[36px]',
       subtitleClassName: 'text-sm sm:text-base md:text-lg',
     },
@@ -306,7 +306,7 @@ export const data: HomePageData = {
         decorationImage: '/images/our-services/decorations/our-services-facebook-post-likes-decoration.webp',
         marketingTitle: 'Facebook SMM Panel Services',
         description:
-          'Use TrendEvo’s Facebook SMM Panel Services to build social proof, improve post activity, and support page growth in Bangladesh. Perfect for businesses, creators, agencies, resellers, and local brands that want faster Facebook visibility.',
+          'Use TrendEvo’s lnk</facebook-smm-panel|Facebook SMM Panel> Services to build social proof, improve post activity, and support page growth in Bangladesh. Perfect for businesses, creators, agencies, resellers, and local brands that want faster Facebook visibility.',
         exploreLabel: 'Explore Facebook Services',
         exploreHref: '/facebook-smm-panel',
         services: [
@@ -325,7 +325,7 @@ export const data: HomePageData = {
         decorationImage: '/images/our-services/decorations/our-services-instagram-followers-decoration.png',
         marketingTitle: 'Instagram SMM Panel Services',
         description:
-          'Use our Instagram SMM Panel Services to grow your profile, improve content reach, and build stronger social proof in Bangladesh. Ideal for creators, influencers, online shops, agencies, resellers, and brands that want better Instagram visibility.',
+          'Use our lnk</instagram-smm-panel|Instagram SMM Panel> Services to grow your profile, improve content reach, and build stronger social proof in Bangladesh. Ideal for creators, influencers, online shops, agencies, resellers, and brands that want better Instagram visibility.',
         exploreLabel: 'Explore Instagram Services',
         exploreHref: '/instagram-smm-panel',
         services: [
@@ -345,7 +345,7 @@ export const data: HomePageData = {
         decorationImage: '/images/our-services/decorations/our-services-x-followers-decoration.png',
         marketingTitle: 'X (Twitter) SMM Panel Services',
         description:
-          'Use the best X (Twitter) SMM Panel Services to improve profile activity, post engagement, and brand visibility in Bangladesh. Best for creators, startups, agencies, resellers, public figures, and businesses that want faster reach on X.',
+          'Use the best lnk</x-twitter-smm-panel|X (Twitter) SMM Panel> Services to improve profile activity, post engagement, and brand visibility in Bangladesh. Best for creators, startups, agencies, resellers, public figures, and businesses that want faster reach on X.',
         exploreLabel: 'Explore X (Twitter) Services',
         exploreHref: '/x-twitter-smm-panel',
         services: [
@@ -364,7 +364,7 @@ export const data: HomePageData = {
         decorationImage: '/images/our-services/decorations/our-services-youtube-subscribers-decoration.png',
         marketingTitle: 'YouTube SMM Panel Services',
         description:
-          'Use TrendEvo’s YouTube SMM Panel Services to support channel growth, video reach, and viewer trust in Bangladesh. This service is useful for Bangladeshi creators, educators, reviewers, agencies, and brands that want more visibility from a reliable SMM Panel BD platform.',
+          'Use TrendEvo’s lnk</youtube-smm-panel|YouTube SMM Panel> Services to support channel growth, video reach, and viewer trust in Bangladesh. This service is useful for Bangladeshi creators, educators, reviewers, agencies, and brands that want more visibility from a reliable SMM Panel BD platform.',
         exploreLabel: 'Explore YouTube Services',
         exploreHref: '/youtube-smm-panel',
         services: [
@@ -383,7 +383,7 @@ export const data: HomePageData = {
         decorationImage: '/images/our-services/decorations/our-services-tiktok-followers-decoration.png',
         marketingTitle: 'TikTok SMM Panel Services',
         description:
-          'Use TrendEvo’s TikTok SMM Panel Services to support short-video reach, profile activity, and content visibility in Bangladesh. It is helpful for creators, online shops, influencers, agencies, and resellers who want faster TikTok growth from a simple SMM panel dashboard.',
+          'Use TrendEvo’s lnk</tiktok-smm-panel|TikTok SMM Panel> Services to support short-video reach, profile activity, and content visibility in Bangladesh. It is helpful for creators, online shops, influencers, agencies, and resellers who want faster TikTok growth from a simple SMM panel dashboard.',
         exploreLabel: 'Explore TikTok Services',
         exploreHref: '/tiktok-smm-panel',
         services: [
@@ -421,7 +421,7 @@ export const data: HomePageData = {
         decorationImage: '/images/our-services/decorations/our-services-telegram-members-decoration.png',
         marketingTitle: 'Telegram SMM Panel Services',
         description:
-          'Grow Telegram channels and groups with our Telegram SMM panel in Bangladesh. Useful for course groups, news channels, reseller communities, crypto updates, agencies, and digital sellers. Add funds with bKash, Nagad, or Rocket and manage every order from one dashboard.',
+          'Grow Telegram channels and groups with our lnk</telegram-smm-panel|Telegram SMM panel> in Bangladesh. Useful for course groups, news channels, reseller communities, crypto updates, agencies, and digital sellers. Add funds with bKash, Nagad, or Rocket and manage every order from one dashboard.',
         exploreLabel: 'Explore Telegram Services',
         exploreHref: '/telegram-smm-panel',
         services: [
@@ -459,7 +459,7 @@ export const data: HomePageData = {
         decorationImage: '/images/our-services/decorations/our-services-spotify-plays-decoration.png',
         marketingTitle: 'Spotify SMM Panel Services',
         description:
-          'Promote Spotify tracks, artists, and playlists with Spotify SMM panel in Bangladesh. Useful for musicians, labels, podcast creators, agencies, and music promoters. Add funds with bKash, Nagad, or Rocket and manage Spotify growth from one dashboard.',
+          'Promote Spotify tracks, artists, and playlists with lnk</spotify-smm-panel|Spotify SMM panel> in Bangladesh. Useful for musicians, labels, podcast creators, agencies, and music promoters. Add funds with bKash, Nagad, or Rocket and manage Spotify growth from one dashboard.',
         exploreLabel: 'Explore Spotify Services',
         exploreHref: '/spotify-smm-panel',
         services: [
@@ -478,7 +478,7 @@ export const data: HomePageData = {
         decorationImage: '/images/our-services/decorations/our-services-soundcloud-plays-decoration.png',
         marketingTitle: 'SoundCloud SMM Panel Services',
         description:
-          'Grow SoundCloud tracks, profiles, and music pages with SoundCloud SMM Panel BD. Useful for independent artists, DJs, producers, podcast creators, agencies, and music promoters. Add funds with bKash, Nagad, or Rocket and manage SoundCloud orders easily.',
+          'Grow SoundCloud tracks, profiles, and music pages with lnk</soundcloud-smm-panel|SoundCloud SMM Panel> BD. Useful for independent artists, DJs, producers, podcast creators, agencies, and music promoters. Add funds with bKash, Nagad, or Rocket and manage SoundCloud orders easily.',
         exploreLabel: 'Explore SoundCloud Services',
         exploreHref: '/soundcloud-smm-panel',
         services: [
@@ -497,7 +497,7 @@ export const data: HomePageData = {
         decorationImage: '/images/our-services/decorations/our-services-snapchat-followers-decoration.png',
         marketingTitle: 'Snapchat SMM Panel Services',
         description:
-          'Grow Snapchat profiles and content reach with Snapchat SMM panel in Bangladesh. Useful for creators, lifestyle brands, ecommerce shops, influencers, agencies, and youth-focused campaigns. Add funds with bKash, Nagad, or Rocket and manage Snapchat orders easily.',
+          'Grow Snapchat profiles and content reach with lnk</snapchat-smm-panel|Snapchat SMM panel> in Bangladesh. Useful for creators, lifestyle brands, ecommerce shops, influencers, agencies, and youth-focused campaigns. Add funds with bKash, Nagad, or Rocket and manage Snapchat orders easily.',
         exploreLabel: 'Explore Snapchat Services',
         exploreHref: '/snapchat-smm-panel',
         services: [
@@ -536,7 +536,7 @@ export const data: HomePageData = {
       badge: 'About US',
       title: 'Your Trusted SMM Panel gt<in Bangladesh>',
       subtitle:
-        'TrendEvo helps local businesses, creators, freelancers, agencies, and resellers grow faster with trusted SMM Panel in Bangladesh. From social proof to campaign visibility, our panel makes social media growth easier with bKash, Nagad, Rocket, and a simple dashboard.',
+        'TrendEvo helps local businesses, creators, freelancers, agencies, and resellers grow faster with lnk</about-us|trusted SMM Panel in Bangladesh>. From social proof to campaign visibility, our panel makes social media growth easier with bKash, Nagad, Rocket, and a simple dashboard.',
       align: 'left',
       underlineWidth: 114,
       titleClassName:
@@ -568,7 +568,7 @@ export const data: HomePageData = {
       badge: 'Working Process',
       title: 'Start Getting Results in gt<4 Easy Steps>',
       subtitle:
-        'TrendEvo keeps SMM panel ordering simple for Bangladesh users. Create a free account, add funds with local payment methods, choose a service, and track every order from one clean dashboard.',
+        'TrendEvo keeps SMM panel ordering simple for Bangladesh users. lnk</signup|Create a free account>, add funds with local payment methods, choose a service, and track every order from one clean dashboard.',
       underlineSrc: '/images/working-process/working-process-section-underline.svg',
       underlineWidth: 216,
       titleClassName:
@@ -1028,7 +1028,7 @@ export const data: HomePageData = {
     label: 'Frequently Asked Questions',
     title: 'Got Questions About TrendEvo? gt<We Have Answers>',
     subtitle:
-      'If you are new to SMM panels or have specific questions about our services, find your answers below. You can also contact our dedicated support team anytime via WhatsApp or Email.',
+      'If you are new to SMM panels or have specific questions about our services, find your answers below. You can also lnk</contact-us|contact our dedicated support team> anytime via WhatsApp or Email.',
     bg: 'section-7',
     ctaTitle: 'Still have questions?',
     ctaSubtitle:

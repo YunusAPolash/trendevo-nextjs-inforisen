@@ -9,6 +9,7 @@ import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
+import { renderText } from '@/lib/utils/renderText';
 
 const GRADIENT_TEXT =
   'bg-gradient-to-r from-[#ad26ff] to-[#ff3f85] bg-clip-text text-transparent';
@@ -385,7 +386,7 @@ export default function OurService() {
                   {activePlatform.marketingTitle}
                 </h3>
                 <p className="text-sm font-medium leading-normal text-[#222e48] sm:text-base dark:text-white">
-                  {activePlatform.description}
+                  {renderText(activePlatform.description)}
                 </p>
               </div>
 
