@@ -202,17 +202,9 @@ type HomePageData = {
 };
 
 export type {
-  HomePageData,
-  HomeHeroData,
-  HomeStatItem,
-  HomeStatKey,
-  HomePlatformService,
-  HomePricingPlatform,
-  HomePricingPlan,
-  HomeWhyChooseUsFeature,
-  HomeWorkingProcessStep,
-  HomePlatformMarqueeItem,
-  SectionHeadingData,
+  HomeHeroData, HomePageData, HomePlatformMarqueeItem, HomePlatformService, HomePricingPlan, HomePricingPlatform, HomeStatItem,
+  HomeStatKey, HomeWhyChooseUsFeature,
+  HomeWorkingProcessStep, SectionHeadingData
 };
 
 export const data: HomePageData = {
@@ -245,7 +237,7 @@ export const data: HomePageData = {
     secondaryButtonLabel: 'See Our Services',
     secondaryButtonHref: '/services',
     illustration: {
-      src: '/images/hero/home-hero-trendevo-platform-user-with-social-media-icons-and-analytics-illustration.webp',
+      src: '/images/hero/cheapest-smm-panel-in-bangladesh-with-fast-&-secure-services.png',
       alt: 'TrendEvo platform user with social media icons and analytics',
       width: 669,
       height: 728,
