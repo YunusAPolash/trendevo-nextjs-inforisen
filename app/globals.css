@@ -188,6 +188,10 @@
       animation: none;
     }
 
+    .underline-effect-dot {
+      animation: none;
+    }
+
     [data-shine]:hover .button-shine-layer {
       animation: none;
     }
@@ -207,6 +211,10 @@
   .hero-badge-bounce-shake {
     animation: hero-badge-bounce-shake 10s ease-in-out infinite;
     will-change: transform;
+  }
+  .underline-effect-dot {
+    animation: underline-dot-slide 6s ease-in-out infinite;
+    will-change: left;
   }
 }
   
@@ -310,5 +318,17 @@
   50% {
     transform: translateY(0) translateX(0) rotate(0deg);
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes underline-dot-slide {
+  0%,
+  100% {
+    left: 0;
+    rotate: 0deg;
+  }
+  50% {
+    left: calc(100% - 0.75rem);
+    rotate: 180deg;
   }
 }

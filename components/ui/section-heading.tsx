@@ -1,27 +1,25 @@
-import Image from 'next/image';
-import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import { renderText } from '@/lib/utils/renderText';
-
+import type { ReactNode } from 'react';
+import UnderlineEffect from './underline-effect';
 type SectionHeadingProps = {
   badge?: string;
   title?: string | ReactNode | null;
   subtitle?: string;
   className?: string;
   align?: 'center' | 'left';
-  underlineSrc?: string;
   underlineWidth?: number;
   titleClassName?: string;
   subtitleClassName?: string;
   badgeClassName?: string;
 };
 
-const DEFAULT_UNDERLINE_SRC = '/images/our-services/ui/our-services-section-underline.svg';
-const DEFAULT_UNDERLINE_WIDTH = 131;
 
 function renderHeadingText(value: string | ReactNode): ReactNode {
   return typeof value === 'string' ? renderText(value) : value;
 }
+
+const DEFAULT_UNDERLINE_WIDTH = 131;
 
 export default function SectionHeading({
   badge,
@@ -29,9 +27,8 @@ export default function SectionHeading({
   subtitle,
   className,
   align = 'center',
-  underlineSrc = DEFAULT_UNDERLINE_SRC,
+  titleClassName, 
   underlineWidth = DEFAULT_UNDERLINE_WIDTH,
-  titleClassName,
   subtitleClassName,
   badgeClassName,
 }: SectionHeadingProps) {
@@ -66,15 +63,7 @@ export default function SectionHeading({
               {badge}
             </span>
           ) : null}
-          <Image
-            src={underlineSrc}
-            alt=""
-            aria-hidden
-            width={underlineWidth}
-            height={8}
-            className="h-2"
-            style={{ width: underlineWidth }}
-          />
+          <UnderlineEffect underlineWidth={underlineWidth} />
         </div>
         {title ? (
           <h2

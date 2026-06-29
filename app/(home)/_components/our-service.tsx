@@ -297,7 +297,7 @@ function PlatformTab({
       aria-pressed={isActive}
       aria-label={platform.label}
       className={cn(
-        'flex w-full items-center justify-center rounded-[8px] bg-transparent px-2 py-2 transition-all sm:px-3 sm:py-2.5 md:px-[16px] md:py-[10px]',
+        'flex w-full items-center justify-center rounded-[8px] bg-transparent px-2 py-2 transition-all sm:px-3 sm:py-2.5 md:px-[16px] md:py-[10px] cursor-pointer',
         !isActive && 'border-[0.5px] border-solid border-[#8f2acd]',
       )}
       style={{
