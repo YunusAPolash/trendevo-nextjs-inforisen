@@ -167,7 +167,7 @@ export const data: SpotifySmmPanelPageData = {
   socialServices: {
     title: 'Spotify SMM Panel Services gt<Built for Bangladesh>',
     subtitle:
-      'lnk</about-us|TrendEvo> is designed for Bangladeshi artists, bands, producers, music marketers, playlist owners, agencies, and resellers who want a smoother way to promote Spotify content. Whether you are releasing your first single, pushing an EP, growing a playlist, or managing music campaigns for clients, our Spotify lnk</|SMM Panel BD> helps you handle promotion with better speed, control, and affordability.',
+      'lnk<TrendEvo|/about-us> is designed for Bangladeshi artists, bands, producers, music marketers, playlist owners, agencies, and resellers who want a smoother way to promote Spotify content. Whether you are releasing your first single, pushing an EP, growing a playlist, or managing music campaigns for clients, our Spotify lnk<SMM Panel BD|/> helps you handle promotion with better speed, control, and affordability.',
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
@@ -189,7 +189,7 @@ export const data: SpotifySmmPanelPageData = {
       {
         title: 'Spotify Plays',
         description:
-          'Give your tracks more listening activity with lnk</buy-spotify-plays|Spotify plays>. This service is useful for singles, albums, EPs, remixes, cover songs, lo-fi tracks, nasheeds, podcasts, and independent releases that need stronger early traction.',
+          'Give your tracks more listening activity with lnk<Spotify plays|/buy-spotify-plays>. This service is useful for singles, albums, EPs, remixes, cover songs, lo-fi tracks, nasheeds, podcasts, and independent releases that need stronger early traction.',
         icon: '/images/our-services/platforms/our-services-spotify-plays-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
@@ -197,7 +197,7 @@ export const data: SpotifySmmPanelPageData = {
       {
         title: 'Spotify Artist Followers',
         description:
-          'Build long-term audience value for your artist profile. More lnk</buy-spotify-followers|Spotify followers> can help your profile look more established when new listeners, playlist curators, music fans, or potential collaborators check your work.',
+          'Build long-term audience value for your artist profile. More lnk<Spotify followers|/buy-spotify-followers> can help your profile look more established when new listeners, playlist curators, music fans, or potential collaborators check your work.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
@@ -205,7 +205,7 @@ export const data: SpotifySmmPanelPageData = {
       {
         title: 'Spotify Monthly Listeners',
         description:
-          'Improve your artist profile activity with lnk</buy-spotify-monthly-listeners|Spotify monthly listeners>. This helps artists show that their music is reaching active listeners during release campaigns, promotions, and profile-building stages.',
+          'Improve your artist profile activity with lnk<Spotify monthly listeners|/buy-spotify-monthly-listeners>. This helps artists show that their music is reaching active listeners during release campaigns, promotions, and profile-building stages.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-profile-followers-icon.webp',
         iconWidth: 40,
         iconHeight: 40,
@@ -266,7 +266,7 @@ export const data: SpotifySmmPanelPageData = {
   advantages: {
     title: 'Why Bangladeshi Artists Use a gt<Spotify SMM Panel> for Faster Growth',
     subtitle:
-      'Spotify growth is not only about uploading a song. Artists need listeners, repeat plays, saved tracks, profile activity, and release momentum. A Spotify SMM Panel helps Bangladeshi musicians, labels, agencies, and lnk</api|resellers> support those signals without managing every promotion step manually.',
+      'Spotify growth is not only about uploading a song. Artists need listeners, repeat plays, saved tracks, profile activity, and release momentum. A Spotify SMM Panel helps Bangladeshi musicians, labels, agencies, and lnk<resellers|https://trendevo.com/api> support those signals without managing every promotion step manually.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -357,7 +357,7 @@ export const data: SpotifySmmPanelPageData = {
   leading: {
     title: 'Why Choose TrendEvo for gt<Spotify SMM Panel Services> in Bangladesh',
     subtitle:
-      'lnk</about-us|TrendEvo> helps Bangladeshi artists, producers, labels, playlist owners, agencies, and resellers promote Spotify content with better control, simple payment, and reliable order management. Our platform is made for users who want affordable Spotify growth without dealing with confusing tools or international payment barriers.',
+      'lnk<TrendEvo|/about-us> helps Bangladeshi artists, producers, labels, playlist owners, agencies, and resellers promote Spotify content with better control, simple payment, and reliable order management. Our platform is made for users who want affordable Spotify growth without dealing with confusing tools or international payment barriers.',
     titleClassName:
       'whitespace-normal max-w-[1200px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

@@ -167,7 +167,7 @@ export const data: YoutubeSmmPanelPageData = {
   socialServices: {
     title: 'YouTube SMM Panel Services gt<for Bangladeshi Creators>',
     subtitle:
-      'lnk</about-us|TrendEvo> brings all major YouTube growth services into one simple dashboard for Bangladeshi creators, businesses, agencies, musicians, influencers, and resellers. Whether you want more channel trust, video reach, audience engagement, Shorts visibility, or monetization support, our YouTube lnk</|SMM Panel in Bangladesh> services help you manage growth faster and more affordably.',
+      'lnk<TrendEvo|/about-us> brings all major YouTube growth services into one simple dashboard for Bangladeshi creators, businesses, agencies, musicians, influencers, and resellers. Whether you want more channel trust, video reach, audience engagement, Shorts visibility, or monetization support, our YouTube lnk<SMM Panel in Bangladesh|/> services help you manage growth faster and more affordably.',
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
@@ -189,7 +189,7 @@ export const data: YoutubeSmmPanelPageData = {
       {
         title: 'YouTube Subscribers',
         description:
-          'Build a stronger audience base for your YouTube channel by using our lnk</buy-youtube-subscribers|youtube subscribers> service. This service is useful for creators, educators, vloggers, businesses, musicians, and startups that want their channel to look active and trustworthy.',
+          'Build a stronger audience base for your YouTube channel by using our lnk<youtube subscribers|/buy-youtube-subscribers> service. This service is useful for creators, educators, vloggers, businesses, musicians, and startups that want their channel to look active and trustworthy.',
         icon: '/images/our-services/platforms/our-services-youtube-subscribers-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
@@ -197,7 +197,7 @@ export const data: YoutubeSmmPanelPageData = {
       {
         title: 'YouTube Video Views',
         description:
-          'Increase views on your YouTube videos, product reviews, tutorials, music videos, podcasts, and promotional content. More lnk</buy-youtube-views|youtube views> help your videos look active and worth watching.',
+          'Increase views on your YouTube videos, product reviews, tutorials, music videos, podcasts, and promotional content. More lnk<youtube views|/buy-youtube-views> help your videos look active and worth watching.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
         iconWidth: 40,
         iconHeight: 40,
@@ -213,7 +213,7 @@ export const data: YoutubeSmmPanelPageData = {
       {
         title: 'YouTube Likes',
         description:
-          'Improve your video engagement with more lnk</buy-youtube-likes|YouTube likes>. Likes help videos look more valuable and can support better viewer trust when people discover your content.',
+          'Improve your video engagement with more lnk<YouTube likes|/buy-youtube-likes>. Likes help videos look more valuable and can support better viewer trust when people discover your content.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
         iconWidth: 60,
         iconHeight: 54,
@@ -221,7 +221,7 @@ export const data: YoutubeSmmPanelPageData = {
       {
         title: 'YouTube Comments',
         description:
-          'Create stronger conversations around your videos with lnk</buy-youtube-comments|YouTube comments>. This works well for reviews, tutorials, product videos, music releases, educational content, and brand campaigns.',
+          'Create stronger conversations around your videos with lnk<YouTube comments|/buy-youtube-comments>. This works well for reviews, tutorials, product videos, music releases, educational content, and brand campaigns.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
         iconWidth: 54,
         iconHeight: 54,
@@ -357,7 +357,7 @@ export const data: YoutubeSmmPanelPageData = {
   leading: {
     title: 'Why Choose TrendEvo for gt<YouTube SMM Panel Services> in Bangladesh',
     subtitle:
-      'TrendEvo helps Bangladeshi creators, businesses, agencies, musicians, influencers, and resellers manage YouTube growth with speed, safety, and better control. Our platform combines local payment support, affordable pricing, smooth order tracking, and reliable lnk</services|YouTube SMM services> in one simple dashboard.',
+      'TrendEvo helps Bangladeshi creators, businesses, agencies, musicians, influencers, and resellers manage YouTube growth with speed, safety, and better control. Our platform combines local payment support, affordable pricing, smooth order tracking, and reliable lnk<YouTube SMM services|/services> in one simple dashboard.',
     titleClassName:
       'whitespace-normal max-w-[1200px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

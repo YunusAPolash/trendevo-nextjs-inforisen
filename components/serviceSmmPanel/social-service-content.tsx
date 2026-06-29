@@ -864,7 +864,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       </>
     ),
     subtitle:
-      'lnk</about-us|TrendEvo> gives Bangladeshi streamers, gaming creators, esports teams, agencies, and resellers a simple way to promote Twitch channels without handling every growth task manually. From live gaming streams to tournaments, podcast-style broadcasts, music sessions, and community streams, our Twitch SMM Panel in Bangladesh helps you build stronger activity around your content.',
+      'lnk<TrendEvo|/about-us> gives Bangladeshi streamers, gaming creators, esports teams, agencies, and resellers a simple way to promote Twitch channels without handling every growth task manually. From live gaming streams to tournaments, podcast-style broadcasts, music sessions, and community streams, our Twitch SMM Panel in Bangladesh helps you build stronger activity around your content.',
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
@@ -886,7 +886,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       {
         title: 'Twitch Followers',
         description:
-          'Grow your channel with more lnk</buy-twitch-followers|Twitch followers>. This service is useful for gamers, streamers, esports players, influencers, and content creators who want their channel to look more established to new visitors.',
+          'Grow your channel with more lnk<Twitch followers|/buy-twitch-followers>. This service is useful for gamers, streamers, esports players, influencers, and content creators who want their channel to look more established to new visitors.',
         icon: '/images/our-services/platforms/our-services-discord-members-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
@@ -894,7 +894,7 @@ export const socialServiceContent: Record<SocialServiceSlug, SocialServiceConten
       {
         title: 'Twitch Live Views',
         description:
-          'Bring more activity to your live streams with lnk</buy-twitch-viewers|Twitch viewers>. This helps gaming sessions, esports matches, Q&A streams, reaction streams, and community events look more active while they are running.',
+          'Bring more activity to your live streams with lnk<Twitch viewers|/buy-twitch-viewers>. This helps gaming sessions, esports matches, Q&A streams, reaction streams, and community events look more active while they are running.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
         iconWidth: 40,
         iconHeight: 40,

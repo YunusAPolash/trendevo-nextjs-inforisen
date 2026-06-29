@@ -154,7 +154,7 @@ export const data: XTwitterSmmPanelPageData = {
     description:
       'TrendEvo gives Bangladeshi businesses, creators, agencies, public figures, startup founders, and resellers a simple way to grow on X (Twitter). Manage followers, post likes, reposts, comments, views, impressions, and engagement through one secure dashboard.',
     descriptionSecondary:
-      'Strengthen your X (Twitter) presence with affordable pricing, lnk</signup|bKash, Nagad, Rocket payment support>, and services made for brand promotion, creator growth, public reach, and social media visibility in Bangladesh.',
+      'Strengthen your X (Twitter) presence with affordable pricing, lnk<bKash, Nagad, Rocket payment support|https://trendevo.com/signup>, and services made for brand promotion, creator growth, public reach, and social media visibility in Bangladesh.',
     buttonLabel: 'Get Started Now',
     image: {
       src: '/images/service-smm-panel/x-twitter-smm-panel/boost-x-reach-and-engagement-with-trendevo.webp',
@@ -167,7 +167,7 @@ export const data: XTwitterSmmPanelPageData = {
   socialServices: {
     title: 'X (Twitter) SMM Panel Services gt<Built for Bangladesh>',
     subtitle:
-      'lnk</about-us|TrendEvo> brings all major X (Twitter) growth services into one simple dashboard for Bangladeshi businesses, creators, agencies, professionals, startup teams, and resellers. Whether you want more profile trust, post engagement, tweet visibility, campaign reach, or brand authority, our X (Twitter) lnk</|SMM Panel BD> services help you manage growth faster and more affordably.',
+      'lnk<TrendEvo|/about-us> brings all major X (Twitter) growth services into one simple dashboard for Bangladeshi businesses, creators, agencies, professionals, startup teams, and resellers. Whether you want more profile trust, post engagement, tweet visibility, campaign reach, or brand authority, our X (Twitter) lnk<SMM Panel BD|/> services help you manage growth faster and more affordably.',
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
@@ -189,7 +189,7 @@ export const data: XTwitterSmmPanelPageData = {
       {
         title: 'X (Twitter) Followers',
         description:
-          'Build a stronger audience base for your lnk</buy-x-twitter-followers|X (Twitter) followers>. This service is useful for founders, creators, agencies, journalists, influencers, local brands, and businesses that want their profile to look active and trustworthy.',
+          'Build a stronger audience base for your lnk<X (Twitter) followers|/buy-x-twitter-followers>. This service is useful for founders, creators, agencies, journalists, influencers, local brands, and businesses that want their profile to look active and trustworthy.',
         icon: '/images/our-services/platforms/our-services-x-followers-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
@@ -197,7 +197,7 @@ export const data: XTwitterSmmPanelPageData = {
       {
         title: 'X (Twitter) Likes',
         description:
-          'Improve your post engagement with more lnk</buy-x-twitter-likes|X (Twitter) likes>. Likes help your tweets, updates, opinions, campaign posts, and brand messages look more interesting when new users see them.',
+          'Improve your post engagement with more lnk<X (Twitter) likes|/buy-x-twitter-likes>. Likes help your tweets, updates, opinions, campaign posts, and brand messages look more interesting when new users see them.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
         iconWidth: 60,
         iconHeight: 54,
@@ -312,7 +312,7 @@ export const data: XTwitterSmmPanelPageData = {
         step: '06',
         title: 'Useful for Brands, Creators & Resellers',
         description:
-          'Our X (Twitter) lnk</services|SMM Panel services> are suitable for personal brands, startup founders, agencies, local businesses, influencers, public figures, news pages, and reseller clients. You can manage different growth needs in one place.',
+          'Our X (Twitter) lnk<SMM Panel services|/services> are suitable for personal brands, startup founders, agencies, local businesses, influencers, public figures, news pages, and reseller clients. You can manage different growth needs in one place.',
         icon: '/images/service-smm-panel/facebook-smm-panel-community-growth-in-private-groups-icon.png',
       },
     ],

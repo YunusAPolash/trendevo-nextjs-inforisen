@@ -152,7 +152,7 @@ export const data: SoundcloudSmmPanelPageData = {
   hero: {
     title: 'Grow Faster with a Trusted gt<SoundCloud SMM Panel> in Bangladesh',
     description:
-      'TrendEvo helps Bangladeshi singers, DJs, beat makers, podcasters, remix artists, labels, agencies, and resellers promote SoundCloud content with better control. Whether you are pushing a new track, building an artist profile, or increasing attention around a podcast episode, our lnk</|best smm panel bd> helps you manage plays, followers, likes, reposts, comments, and music engagement from one simple dashboard.',
+      'TrendEvo helps Bangladeshi singers, DJs, beat makers, podcasters, remix artists, labels, agencies, and resellers promote SoundCloud content with better control. Whether you are pushing a new track, building an artist profile, or increasing attention around a podcast episode, our lnk<best smm panel bd|/> helps you manage plays, followers, likes, reposts, comments, and music engagement from one simple dashboard.',
     descriptionSecondary:
       'Use TrendEvo to support your SoundCloud promotion with affordable pricing, bKash, Nagad, Rocket payment options, and services made for artists who want stronger audio visibility in Bangladesh.',
     buttonLabel: 'Get Started Now',
@@ -167,7 +167,7 @@ export const data: SoundcloudSmmPanelPageData = {
   socialServices: {
     title: 'SoundCloud SMM Panel Services gt<Built for Bangladesh>',
     subtitle:
-      'lnk</about-us|TrendEvo> gives Bangladeshi audio creators and music marketers a practical way to grow SoundCloud without handling everything manually. From underground rap to electronic mixes, podcast episodes, cover songs, beat packs, and independent releases, our SoundCloud SMM Panel in Bangladesh helps you add the right activity around your content at the right time.',
+      'lnk<TrendEvo|/about-us> gives Bangladeshi audio creators and music marketers a practical way to grow SoundCloud without handling everything manually. From underground rap to electronic mixes, podcast episodes, cover songs, beat packs, and independent releases, our SoundCloud SMM Panel in Bangladesh helps you add the right activity around your content at the right time.',
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
@@ -189,7 +189,7 @@ export const data: SoundcloudSmmPanelPageData = {
       {
         title: 'SoundCloud Plays',
         description:
-          'Get more lnk</buy-soundcloud-plays|SoundCloud plays>, remixes, beats, DJ sets, podcasts, and spoken audio. This service helps new uploads look more active when listeners open your track page for the first time.',
+          'Get more lnk<SoundCloud plays|/buy-soundcloud-plays>, remixes, beats, DJ sets, podcasts, and spoken audio. This service helps new uploads look more active when listeners open your track page for the first time.',
         icon: '/images/our-services/platforms/our-services-soundcloud-plays-platform-icon.png',
         iconWidth: 54,
         iconHeight: 54,
@@ -197,7 +197,7 @@ export const data: SoundcloudSmmPanelPageData = {
       {
         title: 'SoundCloud Followers',
         description:
-          'Grow your profile with more lnk</buy-soundcloud-followers|soundcloud followers>. This is useful for artists, producers, DJs, and podcasters who want their profile to look more credible to listeners, labels, and collaborators.',
+          'Grow your profile with more lnk<soundcloud followers|/buy-soundcloud-followers>. This is useful for artists, producers, DJs, and podcasters who want their profile to look more credible to listeners, labels, and collaborators.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
@@ -321,7 +321,7 @@ export const data: SoundcloudSmmPanelPageData = {
   workingProcess: {
     title: 'How TrendEvo gt<SoundCloud SMM Panel> Works',
     subtitle:
-      'TrendEvo keeps SoundCloud promotion simple for Bangladeshi users. You choose the service that matches your goal, submit your SoundCloud link, complete payment, and manage the lnk</signup|order from your dashboard>.',
+      'TrendEvo keeps SoundCloud promotion simple for Bangladeshi users. You choose the service that matches your goal, submit your SoundCloud link, complete payment, and manage the lnk<order from your dashboard|https://trendevo.com/signup>.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

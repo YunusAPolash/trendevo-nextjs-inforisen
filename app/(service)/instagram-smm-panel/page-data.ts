@@ -189,7 +189,7 @@ export const data: InstagramSmmPanelPageData = {
       {
         title: 'Instagram Followers',
         description:
-          'Build a stronger audience base for your Instagram profile by using our lnk</buy-instagram-followers|instagram followers> service. This service is useful for online shops, personal brands, creators, influencers, startups, and SMEs that want their profile to look active and trustworthy.',
+          'Build a stronger audience base for your Instagram profile by using our lnk<instagram followers|/buy-instagram-followers> service. This service is useful for online shops, personal brands, creators, influencers, startups, and SMEs that want their profile to look active and trustworthy.',
         icon: '/images/our-services/platforms/our-services-instagram-followers-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
@@ -197,7 +197,7 @@ export const data: InstagramSmmPanelPageData = {
       {
         title: 'Instagram Likes',
         description:
-          'Improve your post engagement with more lnk</buy-instagram-likes|Instagram likes>. This helps product posts, lifestyle content, portfolio updates, brand campaigns, and promotional content look more attractive to new visitors.',
+          'Improve your post engagement with more lnk<Instagram likes|/buy-instagram-likes>. This helps product posts, lifestyle content, portfolio updates, brand campaigns, and promotional content look more attractive to new visitors.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-like-icon.png',
         iconWidth: 60,
         iconHeight: 54,
@@ -205,7 +205,7 @@ export const data: InstagramSmmPanelPageData = {
       {
         title: 'Instagram Reels Views',
         description:
-          'Increase your lnk</buy-instagram-views|Instagram Reels views> and short-form videos. This service is useful for creators, fashion brands, ecommerce stores, restaurants, coaches, and influencers who want better visibility through Reels content.',
+          'Increase your lnk<Instagram Reels views|/buy-instagram-views> and short-form videos. This service is useful for creators, fashion brands, ecommerce stores, restaurants, coaches, and influencers who want better visibility through Reels content.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
         iconWidth: 40,
         iconHeight: 40,
@@ -213,7 +213,7 @@ export const data: InstagramSmmPanelPageData = {
       {
         title: 'Instagram Story Views',
         description:
-          'Make your Instagram stories look more active with lnk</buy-instagram-story-views|instagram story views> service. This helps daily updates, offers, polls, product launches, event reminders, and behind-the-scenes content receive stronger audience signals.',
+          'Make your Instagram stories look more active with lnk<instagram story views|/buy-instagram-story-views> service. This helps daily updates, offers, polls, product launches, event reminders, and behind-the-scenes content receive stronger audience signals.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
         iconWidth: 70,
         iconHeight: 54,
@@ -221,7 +221,7 @@ export const data: InstagramSmmPanelPageData = {
       {
         title: 'Instagram Comments',
         description:
-          'Create better conversations around your Instagram posts and Reels with lnk</buy-instagram-comments|instagram comments> service. This works well for campaigns, product launches, influencer content, brand announcements, and audience engagement.',
+          'Create better conversations around your Instagram posts and Reels with lnk<instagram comments|/buy-instagram-comments> service. This works well for campaigns, product launches, influencer content, brand announcements, and audience engagement.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
         iconWidth: 54,
         iconHeight: 54,
@@ -266,7 +266,7 @@ export const data: InstagramSmmPanelPageData = {
   advantages: {
     title: 'Why Bangladeshi Brands Use an gt<Instagram SMM Panel> for Faster Growth',
     subtitle:
-      'lnk</|BD SMM Panel> helps businesses, creators, influencers, and agencies grow their Instagram presence with less manual effort. TrendEvo makes it easier to improve profile trust, Reels performance, story activity, post engagement, and campaign visibility from one simple dashboard.',
+      'lnk<BD SMM Panel|/> helps businesses, creators, influencers, and agencies grow their Instagram presence with less manual effort. TrendEvo makes it easier to improve profile trust, Reels performance, story activity, post engagement, and campaign visibility from one simple dashboard.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -357,7 +357,7 @@ export const data: InstagramSmmPanelPageData = {
   leading: {
     title: 'Why Choose TrendEvo for gt<Instagram SMM Panel Services> in Bangladesh',
     subtitle:
-      'lnk</about-us|TrendEvo> helps Bangladeshi businesses, creators, influencers, agencies, and resellers manage Instagram growth with speed, safety, and better control. Our platform combines local payment support, affordable pricing, smooth order tracking, and reliable Instagram SMM services in one simple dashboard.',
+      'lnk<TrendEvo|/about-us> helps Bangladeshi businesses, creators, influencers, agencies, and resellers manage Instagram growth with speed, safety, and better control. Our platform combines local payment support, affordable pricing, smooth order tracking, and reliable Instagram SMM services in one simple dashboard.',
     titleClassName:
       'whitespace-normal max-w-[1200px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

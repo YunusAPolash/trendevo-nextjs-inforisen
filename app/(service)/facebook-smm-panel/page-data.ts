@@ -152,7 +152,7 @@ export const data: FacebookSmmPanelPageData = {
   hero: {
     title: 'Grow Faster with a Trusted gt<Facebook SMM Panel> in Bangladesh',
     description:
-      'lnk</about-us|TrendEvo> helps Bangladeshi businesses, creators, agencies, and resellers build a stronger Facebook presence with reliable followers, page likes, post engagement, comments, shares, and video views. Our Facebook SMM Panel makes every order simple, secure, and easy to track from one clean dashboard.',
+      'lnk<TrendEvo|/about-us> helps Bangladeshi businesses, creators, agencies, and resellers build a stronger Facebook presence with reliable followers, page likes, post engagement, comments, shares, and video views. Our Facebook SMM Panel makes every order simple, secure, and easy to track from one clean dashboard.',
     descriptionSecondary:
       'Get faster Facebook growth with affordable pricing, bKash, Nagad, Rocket payment support, and services made for real marketing goals in Bangladesh.',
     buttonLabel: 'Get Started Now',
@@ -167,7 +167,7 @@ export const data: FacebookSmmPanelPageData = {
   socialServices: {
     title: 'Facebook SMM Panel Services gt<Built for Bangladesh>',
     subtitle:
-      'TrendEvo brings all major Facebook growth services into one simple dashboard for Bangladeshi businesses, creators, agencies, and resellers. Whether you want more page trust, post engagement, video reach, group activity, or campaign support, our facebook lnk</|SMM panel BD> services help you manage growth faster and more affordably.',
+      'TrendEvo brings all major Facebook growth services into one simple dashboard for Bangladeshi businesses, creators, agencies, and resellers. Whether you want more page trust, post engagement, video reach, group activity, or campaign support, our facebook lnk<SMM panel BD|/> services help you manage growth faster and more affordably.',
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
@@ -189,7 +189,7 @@ export const data: FacebookSmmPanelPageData = {
       {
         title: 'Facebook Page Followers',
         description:
-          'Build a stronger audience base for your Facebook business page. lnk</buy-facebook-followers|Facebook page followers> are useful for ecommerce shops, local brands, service providers, and startups that want their page to look active and trustworthy.',
+          'Build a stronger audience base for your Facebook business page. lnk<Facebook page followers|/buy-facebook-followers> are useful for ecommerce shops, local brands, service providers, and startups that want their page to look active and trustworthy.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
@@ -197,7 +197,7 @@ export const data: FacebookSmmPanelPageData = {
       {
         title: 'Facebook Page Likes',
         description:
-          'Improve your page’s first impression with more lnk</buy-facebook-page-likes|Facebook page likes>. This helps Bangladeshi businesses build trust when customers visit their page, check reviews, or contact through Messenger.',
+          'Improve your page’s first impression with more lnk<Facebook page likes|/buy-facebook-page-likes>. This helps Bangladeshi businesses build trust when customers visit their page, check reviews, or contact through Messenger.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-like-icon.png',
         iconWidth: 54,
         iconHeight: 54,
@@ -229,7 +229,7 @@ export const data: FacebookSmmPanelPageData = {
       {
         title: 'Facebook Comments',
         description:
-          'Create stronger conversations around your content with lnk</buy-facebook-comments|Facebook comments>. This works well for promotional posts, product launches, polls, reviews, and community campaigns.',
+          'Create stronger conversations around your content with lnk<Facebook comments|/buy-facebook-comments>. This works well for promotional posts, product launches, polls, reviews, and community campaigns.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-post-react-icon.png',
         iconWidth: 54,
         iconHeight: 54,
@@ -357,7 +357,7 @@ export const data: FacebookSmmPanelPageData = {
   leading: {
     title: 'Why Choose TrendEvo for gt<Facebook SMM Panel Services> in Bangladesh',
     subtitle:
-      'TrendEvo helps Bangladeshi businesses, creators, agencies, and resellers manage Facebook growth with speed, safety, and better control. Our platform combines local payment support, affordable pricing, smooth order tracking, and reliable lnk</services|Facebook SMM services> in one simple dashboard.',
+      'TrendEvo helps Bangladeshi businesses, creators, agencies, and resellers manage Facebook growth with speed, safety, and better control. Our platform combines local payment support, affordable pricing, smooth order tracking, and reliable lnk<Facebook SMM services|/services> in one simple dashboard.',
     titleClassName:
       'whitespace-normal max-w-[1200px] text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
