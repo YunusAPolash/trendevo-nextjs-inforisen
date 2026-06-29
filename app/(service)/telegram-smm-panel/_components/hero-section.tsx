@@ -22,8 +22,8 @@ export default function TelegramSmmPanelHeroSection() {
               {renderText(hero.title)}
             </h1>
             <div className="flex max-w-[762px] flex-col gap-4 text-base font-medium leading-relaxed text-[#343e56] sm:text-lg dark:text-[#ebecef]">
-              <p>{hero.description}</p>
-              <p>{hero.descriptionSecondary}</p>
+              <p>{renderText(hero.description)}</p>
+              <p>{renderText(hero.descriptionSecondary)}</p>
             </div>
           </div>
 

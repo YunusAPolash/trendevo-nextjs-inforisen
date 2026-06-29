@@ -3,6 +3,7 @@ import Image from 'next/image';
 import PrimaryButton from '@/components/buttons/primary-button';
 import PrimarySection from '@/components/sections/primary-section';
 import { signUpUrl } from '@/lib/auth-urls';
+import { renderText } from '@/lib/utils/renderText';
 
 import {
   getServiceHeroContent,
@@ -29,7 +30,7 @@ export default function ServiceHero({ slug }: ServiceHeroProps) {
               {title}
             </h1>
             <p className="max-w-[762px] text-base font-medium leading-relaxed text-[#343e56] sm:text-lg dark:text-[#ebecef]">
-              {description}
+              {renderText(description)}
             </p>
           </div>
 

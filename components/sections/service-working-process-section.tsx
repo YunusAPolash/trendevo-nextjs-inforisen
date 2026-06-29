@@ -12,6 +12,7 @@ import PrimarySection, {
 } from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
+import { renderText } from '@/lib/utils/renderText';
 
 export type ServiceWorkingProcessStep = {
   number: string;
@@ -106,7 +107,7 @@ function ProcessStepCard({
             </h3>
           </div>
           <p className="text-base leading-normal text-[#5a5a5a] dark:text-[#dfe0e4]">
-            {description}
+            {renderText(description)}
           </p>
         </div>
       </div>

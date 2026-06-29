@@ -5,6 +5,7 @@ import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
+import { renderText } from '@/lib/utils/renderText';
 
 import {
   getServiceAdvantageContent,
@@ -149,7 +150,7 @@ function AdvantageCard({
             </h3>
           </div>
           <p className="text-base leading-normal text-[#313131] dark:text-white">
-            {description}
+            {renderText(description)}
           </p>
         </div>
       </div>

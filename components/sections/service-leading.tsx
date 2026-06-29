@@ -6,6 +6,7 @@ import PrimarySection, {
 } from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
+import { renderText } from '@/lib/utils/renderText';
 
 import {
   getServiceLeadingContent,
@@ -107,7 +108,7 @@ function LeadingCard({
             </h3>
           </div>
           <p className="text-base leading-normal text-[#313131] dark:text-[#dfe0e4]">
-            {description}
+            {renderText(description)}
           </p>
         </div>
       </div>

@@ -154,7 +154,7 @@ export const data: TiktokSmmPanelPageData = {
     description:
       'TrendEvo supports Bangladeshi creators, influencers, businesses, agencies, and resellers in building a stronger TikTok presence with dependable followers, video views, likes, comments, shares, profile activity, and engagement. Our TikTok SMM Panel keeps every order simple, secure, and easy to monitor from one clean dashboard.',
     descriptionSecondary:
-      'Get faster TikTok growth with affordable pricing, bKash, Nagad, Rocket payment support, and services made for short-video marketing, creator growth, and brand visibility in Bangladesh.',
+      'Get faster TikTok growth with affordable pricing, lnk</services|bKash, Nagad, Rocket payment support>, and services made for short-video marketing, creator growth, and brand visibility in Bangladesh.',
     buttonLabel: 'Get Started Now',
     image: {
       src: '/images/service-smm-panel/tiktok-smm-panel/boost-tiktok-reach-and-engagement-with-trendevo.webp',
@@ -167,7 +167,7 @@ export const data: TiktokSmmPanelPageData = {
   socialServices: {
     title: 'TikTok SMM Panel Services gt<Built for Bangladesh>',
     subtitle:
-      'TrendEvo brings all major TikTok growth services into one simple dashboard for Bangladeshi creators, influencers, businesses, agencies, and resellers. Whether you want more profile trust, video views, audience engagement, viral content support, or campaign visibility, our TikTok SMM Panel BD services help you manage growth faster and more affordably.',
+      'TrendEvo brings all major TikTok growth services into one simple dashboard for Bangladeshi creators, influencers, businesses, agencies, and resellers. Whether you want more profile trust, video views, audience engagement, viral content support, or campaign visibility, our TikTok lnk</|SMM Panel BD> services help you manage growth faster and more affordably.',
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
@@ -189,7 +189,7 @@ export const data: TiktokSmmPanelPageData = {
       {
         title: 'TikTok Followers',
         description:
-          'Build a stronger audience base for your TikTok profile by using our tiktok followers service. This service is useful for creators, influencers, online shops, personal brands, musicians, and small businesses that want their profile to look active and trustworthy.',
+          'Build a stronger audience base for your TikTok profile by using our lnk</buy-tiktok-followers|tiktok followers> service. This service is useful for creators, influencers, online shops, personal brands, musicians, and small businesses that want their profile to look active and trustworthy.',
         icon: '/images/our-services/platforms/our-services-tiktok-followers-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
@@ -197,7 +197,7 @@ export const data: TiktokSmmPanelPageData = {
       {
         title: 'TikTok Video Views',
         description:
-          'Increase views on your TikTok videos, product clips, tutorials, reviews, trends, challenges, and promotional content. More tiktok views help your videos look active and worth watching.',
+          'Increase views on your TikTok videos, product clips, tutorials, reviews, trends, challenges, and promotional content. More lnk</buy-tiktok-views|tiktok views> help your videos look active and worth watching.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-video-views-icon.png',
         iconWidth: 40,
         iconHeight: 40,
@@ -253,7 +253,7 @@ export const data: TiktokSmmPanelPageData = {
       {
         title: 'TikTok Engagement Packages',
         description:
-          'Grow multiple engagement signals together with followers, views, likes, comments, shares, live views, and profile activity. These packages help agencies, resellers, creators, and businesses manage balanced TikTok growth more easily.',
+          'Grow multiple engagement signals together with followers, views, likes, comments, shares, live views, and profile activity. These packages help agencies, lnk</api|resellers>, creators, and businesses manage balanced TikTok growth more easily.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-page-follower-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
@@ -266,7 +266,7 @@ export const data: TiktokSmmPanelPageData = {
   advantages: {
     title: 'Why Bangladeshi Brands Use a gt<TikTok SMM Panel> for Faster Growth',
     subtitle:
-      'A reliable TikTok SMM Panel service helps creators, influencers, businesses, and agencies grow their TikTok presence with less manual effort. TrendEvo makes it easier to improve profile trust, video activity, live visibility, content reach, and campaign engagement from one simple dashboard.',
+      'A reliable TikTok lnk</services|SMM Panel service> helps creators, influencers, businesses, and agencies grow their TikTok presence with less manual effort. TrendEvo makes it easier to improve profile trust, video activity, live visibility, content reach, and campaign engagement from one simple dashboard.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
