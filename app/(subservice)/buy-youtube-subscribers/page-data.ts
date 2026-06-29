@@ -262,6 +262,10 @@ export const data: YoutubeSubscribersPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<YouTube Subscribers>',
+    image: {
+      src: '/images/subservice/buy-youtube-subscribers/things-to-know-before-you-buy-youtube-subscribers.png',
+      alt: 'Things to Know Before You Buy YouTube Subscribers',
+    },
     paragraphs: [
       'Buying YouTube subscribers can help your channel look more credible, but the best result comes when your channel is ready for new visitors. Before placing an order on TrendEvo, make sure your YouTube channel is public, your channel link is correct, and your selected package fits your current channel size.',
       'You do not need to share your YouTube password to buy YouTube subscribers in Bangladesh. TrendEvo only needs your public channel URL to process the order. This keeps the process safer and easier for creators, businesses, educators, agencies, and resellers.',

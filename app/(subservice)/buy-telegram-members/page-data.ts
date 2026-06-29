@@ -262,6 +262,10 @@ export const data: TelegramMembersPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Telegram Members>',
+    image: {
+      src: '/images/subservice/buy-telegram-members/things-to-know-before-you-buy-telegram-members.png',
+      alt: 'Things to Know Before You Buy Telegram Members',
+    },
     paragraphs: [
       'Buying Telegram members can help your group or channel look more active, but the best results come when the order supports a real community plan. Before placing an order on TrendEvo, make sure your Telegram group or channel link is correct, accessible, and suitable for the package you choose.',
       'You do not need to share your Telegram password to buy Telegram members in Bangladesh. TrendEvo only needs your group or channel URL to process the order. This keeps the process simple and safer for businesses, creators, agencies, community admins, and resellers.',

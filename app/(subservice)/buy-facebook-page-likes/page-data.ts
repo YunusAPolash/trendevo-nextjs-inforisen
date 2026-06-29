@@ -256,6 +256,10 @@ export const data: FacebookPageLikesPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Facebook Page Likes>',
+    image: {
+      src: '/images/subservice/buy-facebook-page-likes/things-to-know-before-you-buy-facebook-page-likes.png',
+      alt: 'Things to Know Before You Buy Facebook Page Likes',
+    },
     paragraphs: [
       'Buying Facebook Page Likes can improve how your page looks to new visitors, but the best result comes when the service matches your real marketing plan. Before ordering on TrendEvo, check that your Facebook page is public, the URL is correct, and the package size fits your current page activity.',
       'You do not need to share your Facebook password to buy Facebook Page Likes in Bangladesh. TrendEvo only requires your public page link to process the order. This keeps the process safer and easier for businesses, agencies, entrepreneurs, and resellers.',

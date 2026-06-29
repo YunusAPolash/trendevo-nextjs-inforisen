@@ -262,6 +262,10 @@ export const data: YoutubeCommentsPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<YouTube Comments>',
+    image: {
+      src: '/images/subservice/buy-youtube-comments/things-to-know-before-you-buy-youtube-comments.png',
+      alt: 'Things to Know Before You Buy YouTube Comments',
+    },
     paragraphs: [
       'Buying YouTube comments can help your video look more active, but the best result comes when your content gives viewers something to talk about. Before placing an order on TrendEvo, make sure your YouTube video is public, the video link is correct, and your selected package matches your current video activity.',
       'You do not need to share your YouTube password to buy YouTube comments in Bangladesh. TrendEvo only needs your public video URL to process the order. This keeps the process safer and easier for creators, businesses, educators, agencies, and resellers.',

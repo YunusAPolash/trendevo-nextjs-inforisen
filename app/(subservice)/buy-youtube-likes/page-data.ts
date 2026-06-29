@@ -262,6 +262,10 @@ export const data: YoutubeLikesPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<YouTube Likes>',
+    image: {
+      src: '/images/subservice/buy-youtube-likes/things-to-know-before-you-buy-youtube-likes.png',
+      alt: 'Things to Know Before You Buy YouTube Likes',
+    },
     paragraphs: [
       'Buying YouTube likes can help your video look more trusted, but the best result comes when your content is ready for viewers. Before placing an order on TrendEvo, make sure your YouTube video is public, the video link is correct, and your selected package matches your current video activity.',
       'You do not need to share your YouTube password to buy YouTube likes in Bangladesh. TrendEvo only needs your public video URL to process the order. This keeps the process safer and easier for creators, businesses, educators, agencies, and resellers.',

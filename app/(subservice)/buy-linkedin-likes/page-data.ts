@@ -261,7 +261,11 @@ export const data: LinkedinLikesPageData = {
 
   thingsToKnow: {
     badge: 'Things to Know',
-    title: 'Things to Know Before You Buy gt<LinkedIn Likes>',
+    title: 'Things to Know Before You Buy gt<LinkedIn Likes>',
+    image: {
+      src: '/images/subservice/buy-linkedin-likes/things-to-know-before-you-buy-linkedin-likes.png',
+      alt: 'Things to Know Before You Buy LinkedIn Likes',
+    },
     paragraphs: [
       'Buying LinkedIn Likes can help your post look more active, but the best results come when the order matches your content strategy. Before placing an order on TrendEvo, make sure your LinkedIn post is public, the post link is correct, and your selected package fits your current profile or company page size.',
       'You do not need to share your LinkedIn password to buy LinkedIn Likes in Bangladesh. TrendEvo only needs your public LinkedIn post URL to process the order. This keeps your account safer and makes the ordering process simple for professionals, businesses, agencies, freelancers, and resellers.',

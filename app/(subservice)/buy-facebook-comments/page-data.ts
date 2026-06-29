@@ -262,6 +262,10 @@ export const data: FacebookCommentsPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Facebook Comments>',
+    image: {
+      src: '/images/subservice/buy-facebook-comments/things-to-know-before-you-buy-facebook-comments.png',
+      alt: 'Things to Know Before You Buy Facebook Comments',
+    },
     paragraphs: [
       'Buying Facebook comments can help your post look more active, but the best results come when your post already has a clear purpose. Before placing an order on TrendEvo, make sure your Facebook post is public, the post link is correct, and your selected package fits your content type.',
       'You do not need to share your Facebook password to buy Facebook comments in Bangladesh. TrendEvo only needs your public post URL to process the order. This keeps your account safer and makes the process simple for businesses, creators, agencies, and resellers.',

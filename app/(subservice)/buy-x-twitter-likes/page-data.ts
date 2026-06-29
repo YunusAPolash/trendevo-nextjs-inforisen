@@ -266,6 +266,10 @@ export const data: TwitterLikesPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<X (Twitter) Likes>',
+    image: {
+      src: '/images/subservice/buy-x-twitter-likes/things-to-know-before-you-buy-x-twitter-likes.png',
+      alt: 'Things to Know Before You Buy X (Twitter) Likes',
+    },
     paragraphs: [
       'Buying X (Twitter) likes can help your post look more engaging, but the best result comes when your content is ready for attention. Before placing an order on TrendEvo, make sure your X post is public, your post link is correct, and your selected package fits your current post activity.',
       'You do not need to share your X (Twitter) password to buy X (Twitter) likes in Bangladesh. TrendEvo only needs your public post URL to process the order. This keeps the process safer and easier for creators, businesses, entrepreneurs, agencies, and resellers.',

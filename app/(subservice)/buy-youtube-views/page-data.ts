@@ -262,6 +262,10 @@ export const data: YoutubeViewsPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<YouTube Views>',
+    image: {
+      src: '/images/subservice/buy-youtube-views/things-to-know-before-you-buy-youtube-views.png',
+      alt: 'Things to Know Before You Buy YouTube Views',
+    },
     paragraphs: [
       'Buying YouTube views can help your video look more visible, but the best result comes when your video is ready for viewers. Before placing an order on TrendEvo, make sure your YouTube video is public, the video link is correct, and your selected package matches your current channel size.',
       'You do not need to share your YouTube password to buy YouTube views in Bangladesh. TrendEvo only needs your public video URL to process the order. This keeps the process safer and easier for creators, businesses, educators, agencies, and resellers.',

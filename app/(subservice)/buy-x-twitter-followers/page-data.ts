@@ -266,6 +266,10 @@ export const data: TwitterFollowersPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<X (Twitter) Followers>',
+    image: {
+      src: '/images/subservice/buy-x-twitter-followers/things-to-know-before-you-buy-x-twitter-followers.png',
+      alt: 'Things to Know Before You Buy X (Twitter) Followers',
+    },
     paragraphs: [
       'Buying X (Twitter) followers can help your profile look more credible, but the best result comes when your profile is ready for visitors. Before placing an order on TrendEvo, make sure your X profile is public, your profile link or username is correct, and your selected package fits your current profile size.',
       'You do not need to share your X (Twitter) password to buy X (Twitter) followers in Bangladesh. TrendEvo only needs your public profile link or username to process the order. This keeps the process safer and easier for creators, businesses, entrepreneurs, agencies, and resellers.',

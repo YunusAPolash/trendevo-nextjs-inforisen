@@ -525,6 +525,10 @@ export const data: TiktokViewsPageData = {
     badge: 'Things to Know',
 
     title: 'Things to Know Before You Buy gt<TikTok Views>',
+    image: {
+      src: '/images/subservice/buy-tiktok-views/things-to-know-before-you-buy-tiktok-views.png',
+      alt: 'Things to Know Before You Buy TikTok Views',
+    },
 
     paragraphs: [
 

@@ -262,6 +262,10 @@ export const data: SpotifyPlaysPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Spotify Plays>',
+    image: {
+      src: '/images/subservice/buy-spotify-plays/things-to-know-before-you-buy-spotify-plays.png',
+      alt: 'Things to Know Before You Buy Spotify Plays',
+    },
     paragraphs: [
       'Buying Spotify plays can help your song look more active, but the best results come when the order supports a clear music promotion plan. Before placing an order on TrendEvo, make sure your Spotify track is public, the song link is correct, and your selected package fits your current release stage.',
       'You do not need to share your Spotify password to buy Spotify plays in Bangladesh. TrendEvo only needs your public Spotify track URL to process the order. This keeps your account safer and makes the ordering process simple for artists, musicians, labels, agencies, and resellers.',

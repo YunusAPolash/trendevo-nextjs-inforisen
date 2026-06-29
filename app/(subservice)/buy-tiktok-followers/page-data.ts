@@ -262,6 +262,10 @@ export const data: TiktokFollowersPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<TikTok Followers>',
+    image: {
+      src: '/images/subservice/buy-tiktok-followers/things-to-know-before-you-buy-tiktok-followers.png',
+      alt: 'Things to Know Before You Buy TikTok Followers',
+    },
     paragraphs: [
       'Buying TikTok followers can help your profile look more credible, but the best result comes when your account is ready for new viewers. Before placing an order on TrendEvo, make sure your TikTok profile is public, your username or profile link is correct, and your selected package fits your current profile size.',
       'You do not need to share your TikTok password to buy TikTok followers in Bangladesh. TrendEvo only needs your public profile link or username to process the order. This keeps the process safer and easier for creators, businesses, influencers, agencies, and resellers.',

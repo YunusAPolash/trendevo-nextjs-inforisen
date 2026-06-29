@@ -262,6 +262,10 @@ export const data: SoundcloudFollowersPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<SoundCloud Followers>',
+    image: {
+      src: '/images/subservice/buy-soundcloud-followers/things-to-know-before-you-buy-soundcloud-followers.png',
+      alt: 'Things to Know Before You Buy SoundCloud Followers',
+    },
     paragraphs: [
       'Buying SoundCloud followers can help your artist profile look more active, but the best results come when the order matches your real music growth plan. Before placing an order on TrendEvo, make sure your SoundCloud profile is public, your profile link is correct, and your selected package fits your current artist presence.',
       'You do not need to share your SoundCloud password to buy SoundCloud followers in Bangladesh. TrendEvo only needs your public profile URL to process the order. This keeps your account safer and makes the ordering process simple for artists, producers, labels, agencies, and resellers.',

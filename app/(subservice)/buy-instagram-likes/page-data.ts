@@ -262,6 +262,10 @@ export const data: InstagramLikesPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Instagram Likes>',
+    image: {
+      src: '/images/subservice/buy-instagram-likes/things-to-know-before-you-buy-instagram-likes.png',
+      alt: 'Things to Know Before You Buy Instagram Likes',
+    },
     paragraphs: [
       'Buying Instagram likes can help your content look more active, but the best result comes when your post is ready for attention. Before placing an order on TrendEvo, make sure your Instagram account is public, your content link is correct, and your selected package fits your current post activity.',
       'You do not need to share your Instagram password to buy Instagram likes in Bangladesh. TrendEvo only needs your public Instagram post, Reel, or carousel link to process the order. This keeps the process safer and easier for creators, businesses, agencies, influencers, and resellers.',

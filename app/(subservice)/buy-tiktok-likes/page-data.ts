@@ -261,7 +261,11 @@ export const data: TiktokLikesPageData = {
 
   thingsToKnow: {
     badge: 'Things to Know',
-    title: 'Things to Know Before You Buy gt<TikTok Likes>',
+    title: 'Things to Know Before You Buy gt<TikTok Likes>',
+    image: {
+      src: '/images/subservice/buy-tiktok-likes/things-to-know-before-you-buy-tiktok-likes.png',
+      alt: 'Things to Know Before You Buy TikTok Likes',
+    },
     paragraphs: [
       'Buying TikTok likes can help your video look more active, but the best result comes when your content is ready for attention. Before placing an order on TrendEvo, make sure your TikTok video is public, your video link is correct, and your selected package fits your current video activity.',
       'You do not need to share your TikTok password to buy TikTok likes in Bangladesh. TrendEvo only needs your public video URL to process the order. This keeps the process safer and easier for creators, businesses, influencers, agencies, and resellers.',

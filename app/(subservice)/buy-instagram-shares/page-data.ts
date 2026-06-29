@@ -262,6 +262,10 @@ export const data: InstagramSharesPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Instagram Shares>',
+    image: {
+      src: '/images/subservice/buy-instagram-shares/things-to-know-before-you-buy-instagram-shares.png',
+      alt: 'Things to Know Before You Buy Instagram Shares',
+    },
     paragraphs: [
       'Buying Instagram shares can help your content look more distributable, but the best result comes when your post has a clear reason to be shared. Before placing an order on TrendEvo, make sure your Instagram account is public, your content link is correct, and your selected package matches your current content activity.',
       'You do not need to share your Instagram password to buy Instagram shares in Bangladesh. TrendEvo only needs your public Instagram post, Reel, or carousel link to process the order. This keeps the process safer and easier for creators, businesses, influencers, agencies, and resellers.',

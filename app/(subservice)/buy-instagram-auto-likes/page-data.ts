@@ -262,6 +262,10 @@ export const data: InstagramAutoLikesPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Instagram Auto Likes>',
+    image: {
+      src: '/images/subservice/buy-instagram-auto-likes/things-to-know-before-you-buy-instagram-auto-likes.png',
+      alt: 'Things to Know Before You Buy Instagram Auto Likes',
+    },
     paragraphs: [
       'Buying Instagram Auto Likes can help your new content receive steady activity, but the best result comes when your account posts consistently. Before placing an order on TrendEvo, make sure your Instagram account is public, your profile details are correct, and your selected package matches your posting frequency.',
       'You do not need to share your Instagram password to buy Instagram Auto Likes in Bangladesh. TrendEvo only needs the required public profile information to process the service. This keeps the process safer and easier for creators, businesses, influencers, agencies, and resellers.',

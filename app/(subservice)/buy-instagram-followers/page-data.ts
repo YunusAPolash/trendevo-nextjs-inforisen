@@ -262,6 +262,10 @@ export const data: InstagramFollowersPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Instagram Followers>',
+    image: {
+      src: '/images/subservice/buy-instagram-followers/things-to-know-before-you-buy-instagram-followers.png',
+      alt: 'Things to Know Before You Buy Instagram Followers',
+    },
     paragraphs: [
       'Buying Instagram followers can help your profile look more credible, but the best results come when your profile is ready for visitors. Before placing an order on TrendEvo, make sure your Instagram account is public, your profile link or username is correct, and your selected package fits your current profile size.',
       'You do not need to share your Instagram password to buy Instagram followers in Bangladesh. TrendEvo only needs your public profile link or username to process the order. This keeps your account safer and makes the process simple for creators, businesses, influencers, agencies, and resellers.',

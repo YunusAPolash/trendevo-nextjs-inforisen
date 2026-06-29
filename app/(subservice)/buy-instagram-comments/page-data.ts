@@ -262,6 +262,10 @@ export const data: InstagramCommentsPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Instagram Comments>',
+    image: {
+      src: '/images/subservice/buy-instagram-comments/things-to-know-before-you-buy-instagram-comments.png',
+      alt: 'Things to Know Before You Buy Instagram Comments',
+    },
     paragraphs: [
       'Buying Instagram comments can help your content look more active, but the best result comes when your post has a clear message. Before placing an order on TrendEvo, make sure your Instagram account is public, your content link is correct, and your selected package fits your post type.',
       'You do not need to share your Instagram password to buy Instagram comments in Bangladesh. TrendEvo only needs your public Instagram post, Reel, or carousel link to process the order. This keeps the process safer and easier for creators, businesses, agencies, influencers, and resellers.',

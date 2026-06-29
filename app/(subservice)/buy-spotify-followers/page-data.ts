@@ -262,6 +262,10 @@ export const data: SpotifyFollowersPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Spotify Followers>',
+    image: {
+      src: '/images/subservice/buy-spotify-followers/things-to-know-before-you-buy-spotify-followers.png',
+      alt: 'Things to Know Before You Buy Spotify Followers',
+    },
     paragraphs: [
       'Buying Spotify followers can help your artist profile look more credible, but the best results come when the order supports a real music promotion plan. Before placing an order on TrendEvo, make sure your Spotify profile is public, the profile link is correct, and your selected package fits your current artist size.',
       'You do not need to share your Spotify password to buy Spotify followers in Bangladesh. TrendEvo only needs your public Spotify artist profile URL to process the order. This keeps your account safer and makes the ordering process simple for artists, musicians, labels, agencies, and resellers.',

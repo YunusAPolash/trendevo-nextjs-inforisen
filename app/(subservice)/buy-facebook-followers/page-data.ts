@@ -256,6 +256,10 @@ export const data: FacebookFollowersPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Facebook Followers>',
+    image: {
+      src: '/images/subservice/buy-facebook-followers/things-to-know-before-you-buy-facebook-followers.png',
+      alt: 'Things to Know Before You Buy Facebook Followers',
+    },
     paragraphs: [
       'Buying Facebook followers can help your page look more active, but the best results come when the order matches your real growth plan. Before placing an order on TrendEvo, make sure your Facebook page is public, the page link is correct, and your selected package fits your current page size.',
       'You do not need to share your Facebook password to buy Facebook followers in Bangladesh. TrendEvo only needs your public page URL to process the order. This keeps your account safer and makes the ordering process simple for creators, businesses, agencies, and resellers.',

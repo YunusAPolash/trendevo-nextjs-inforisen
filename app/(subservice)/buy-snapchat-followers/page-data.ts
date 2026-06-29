@@ -262,6 +262,10 @@ export const data: SnapchatFollowersPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Snapchat Followers>',
+    image: {
+      src: '/images/subservice/buy-snapchat-followers/things-to-know-before-you-buy-snapchat-followers.png',
+      alt: 'Things to Know Before You Buy Snapchat Followers',
+    },
     paragraphs: [
       'Buying Snapchat followers can help your profile look more active, but the best results come when the order matches your real growth plan. Before placing an order on TrendEvo, make sure your Snapchat profile details are correct, your account is accessible, and your selected package fits your current profile size.',
       'You do not need to share your Snapchat password to buy Snapchat followers in Bangladesh. TrendEvo only needs the required profile link or username to process the order. This keeps your account safer and makes the ordering process simple for creators, businesses, agencies, marketers, and resellers.',

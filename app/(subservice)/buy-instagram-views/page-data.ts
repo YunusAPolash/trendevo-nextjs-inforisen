@@ -262,6 +262,10 @@ export const data: InstagramViewsPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Instagram Views>',
+    image: {
+      src: '/images/subservice/buy-instagram-views/things-to-know-before-you-buy-instagram-views.png',
+      alt: 'Things to Know Before You Buy Instagram Views',
+    },
     paragraphs: [
       'Buying Instagram views can help your video content look more active, but the best result comes when your content is ready to hold attention. Before placing an order on TrendEvo, make sure your Instagram account is public, your content link is correct, and your selected package fits your current video activity.',
       'You do not need to share your Instagram password to buy Instagram views in Bangladesh. TrendEvo only needs your public Instagram Reel, video, or supported content link to process the order. This keeps the process safer and easier for creators, businesses, influencers, agencies, and resellers.',

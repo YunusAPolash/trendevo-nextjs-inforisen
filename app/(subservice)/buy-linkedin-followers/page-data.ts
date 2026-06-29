@@ -261,7 +261,11 @@ export const data: LinkedinFollowersPageData = {
 
   thingsToKnow: {
     badge: 'Things to Know',
-    title: 'Things to Know Before You Buy gt<LinkedIn Followers>',
+    title: 'Things to Know Before You Buy gt<LinkedIn Followers>',
+    image: {
+      src: '/images/subservice/buy-linkedin-followers/things-to-know-before-you-buy-linkedin-followers.png',
+      alt: 'Things to Know Before You Buy LinkedIn Followers',
+    },
     paragraphs: [
       'Buying LinkedIn followers can help your profile or company page look more active, but the best results come when the order matches your professional growth plan. Before placing an order on TrendEvo, make sure your LinkedIn profile or company page is public, the link is correct, and your selected package fits your current brand size.',
       'You do not need to share your LinkedIn password to buy LinkedIn followers in Bangladesh. TrendEvo only needs your public LinkedIn profile URL or company page link to process the order. This keeps your account safer and makes the ordering process simple for professionals, startups, agencies, and B2B marketers.',

@@ -262,6 +262,10 @@ export const data: SoundcloudPlaysPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<SoundCloud Plays>',
+    image: {
+      src: '/images/subservice/buy-soundcloud-plays/things-to-know-before-you-buy-soundcloud-plays.png',
+      alt: 'Things to Know Before You Buy SoundCloud Plays',
+    },
     paragraphs: [
       'Buying SoundCloud plays can help your track look more active, but the best results come when the order matches your real music promotion plan. Before placing an order on TrendEvo, make sure your SoundCloud track is public, the track link is correct, and your selected package fits your current release stage.',
       'You do not need to share your SoundCloud password to buy SoundCloud plays in Bangladesh. TrendEvo only needs your public track URL to process the order. This keeps your account safer and makes the ordering process simple for artists, producers, labels, agencies, and resellers.',

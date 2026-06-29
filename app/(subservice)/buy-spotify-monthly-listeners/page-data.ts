@@ -262,6 +262,10 @@ export const data: SpotifyMonthlyListenersPageData = {
   thingsToKnow: {
     badge: 'Things to Know',
     title: 'Things to Know Before You Buy gt<Spotify Monthly Listeners>',
+    image: {
+      src: '/images/subservice/buy-spotify-monthly-listeners/things-to-know-before-you-buy-spotify-monthly-listeners.png',
+      alt: 'Things to Know Before You Buy Spotify Monthly Listeners',
+    },
     paragraphs: [
       'Buying Spotify monthly listeners can help your artist profile look more active, but the best results come when the order supports a real music promotion plan. Before placing an order on TrendEvo, make sure your Spotify artist profile is public, the profile link is correct, and your selected package fits your current audience size.',
       'You do not need to share your Spotify password to buy Spotify monthly listeners in Bangladesh. TrendEvo only needs your public Spotify artist profile URL to process the order. This keeps your account safer and makes the ordering process simple for artists, musicians, labels, agencies, and resellers.',
