@@ -50,7 +50,7 @@ export default function ServicePanelCard({
         <div className="relative size-20 shrink-0 sm:size-[120px]">
           <Image
             src="/images/services/services-icon-hex-bg-decoration.svg"
-            alt=""
+            alt="Decorative service panel icon hexagon background"
             width={104}
             height={116}
             aria-hidden
@@ -58,7 +58,7 @@ export default function ServicePanelCard({
           />
           <Image
             src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
-            alt=""
+            alt="Decorative hexagon icon background for dark mode"
             width={120}
             height={120}
             aria-hidden

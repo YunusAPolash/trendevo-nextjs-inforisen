@@ -41,7 +41,7 @@ function LeadingCard({
           {iconFrameSrc ? (
             <Image
               src={iconFrameSrc}
-              alt=""
+              alt={`${title} feature icon frame`}
               aria-hidden
               width={77}
               height={77}
@@ -52,7 +52,7 @@ function LeadingCard({
             <>
               <Image
                 src={hexIconSrc}
-                alt=""
+                alt="Decorative hexagon icon background"
                 aria-hidden
                 width={77}
                 height={77}
@@ -61,7 +61,7 @@ function LeadingCard({
               />
               <Image
                 src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
-                alt=""
+            alt="Decorative hexagon icon background for dark mode"
                 aria-hidden
                 width={77}
                 height={77}
@@ -76,7 +76,7 @@ function LeadingCard({
               >
                 <Image
                   src={icon!}
-                  alt=""
+                  alt={`${title} feature icon`}
                   aria-hidden
                   width={iconWidth}
                   height={iconHeight}
@@ -97,7 +97,7 @@ function LeadingCard({
           <div className="flex items-center gap-1.5">
             <Image
               src="/images/why-choose-us/why-choose-us-title-bullet-second-decoration.svg"
-              alt=""
+              alt="Section title bullet decoration"
               aria-hidden
               width={12}
               height={12}
@@ -158,8 +158,7 @@ export default function ServiceLeading({
     >
       {/*
       <Image
-        src="/images/service-smm-panel/facebook-smm-panel-leading-decorative-wave-decoration.svg"
-        alt=""
+        alt="Decorative section wave illustration"
         aria-hidden
         width={1000}
         height={932}

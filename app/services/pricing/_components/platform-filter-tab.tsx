@@ -15,7 +15,7 @@ function WebsiteTrafficIcon() {
     <div className="relative h-[17px] w-[20.621px] shrink-0">
       <Image
         src="/images/our-services/platforms/our-services-wt-5-platform-icon.svg"
-        alt=""
+        alt="Website traffic platform icon layer"
         aria-hidden
         fill
         className="object-contain"
@@ -23,7 +23,7 @@ function WebsiteTrafficIcon() {
       />
       <Image
         src="/images/our-services/platforms/our-services-wt-7-platform-icon.svg"
-        alt=""
+        alt="Website traffic platform icon overlay"
         aria-hidden
         fill
         className="object-contain mix-blend-overlay"
@@ -31,7 +31,7 @@ function WebsiteTrafficIcon() {
       />
       <Image
         src="/images/our-services/platforms/our-services-wt-8-platform-icon.svg"
-        alt=""
+        alt="Website traffic platform icon highlight"
         aria-hidden
         fill
         className="object-contain mix-blend-overlay"
@@ -53,7 +53,7 @@ function PlatformIcon({
       <div className="relative size-[38px] shrink-0">
         <Image
           src={icon}
-          alt=""
+              alt={`${label} platform icon`}
           aria-hidden
           fill
           className="object-contain"
@@ -69,7 +69,7 @@ function PlatformIcon({
       <div className="relative flex size-[38px] shrink-0 items-center justify-center p-[9px]">
         <Image
           src="/images/our-services/ui/hex-tab.svg"
-          alt=""
+          alt="Platform tab hexagon background"
           aria-hidden
           width={38}
           height={38}
@@ -85,7 +85,7 @@ function PlatformIcon({
     <div className="relative flex size-[38px] shrink-0 items-center justify-center p-[9px]">
       <Image
         src="/images/our-services/ui/hex-tab.svg"
-        alt=""
+        alt="Platform tab hexagon background"
         aria-hidden
         width={38}
         height={38}
@@ -93,7 +93,7 @@ function PlatformIcon({
       />
       <Image
         src={icon}
-        alt=""
+              alt={`${label} platform icon`}
         aria-hidden
         width={20}
         height={20}

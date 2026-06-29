@@ -52,7 +52,7 @@ function AccentListItemRow({
       >
         <Image
           src={styles.icon}
-          alt=""
+          alt={variant === 'positive' ? 'Allowed item checkmark icon' : 'Restricted item icon'}
           width={20}
           height={20}
           className="size-5"

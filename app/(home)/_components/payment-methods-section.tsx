@@ -14,7 +14,7 @@ function PaymentMethodsRotatingArt() {
       <div className="pointer-events-none absolute top-[-90px] left-[-52px] z-0 hidden opacity-70 lg:block xl:top-0 dark:hidden">
         <Image
           src="/images/payment-methods/payment-methods-threed-icon-decoration.png"
-          alt=""
+          alt="Decorative 3D payment methods icon"
           aria-hidden
           width={287}
           height={300}
@@ -30,7 +30,7 @@ function PaymentMethodsRotatingArt() {
       >
         <Image
           src="/images/payment-methods/dark/payment-methods-rotating-torus-decoration.png"
-          alt=""
+          alt="Decorative rotating torus payment illustration"
           width={303}
           height={300}
           quality={100}

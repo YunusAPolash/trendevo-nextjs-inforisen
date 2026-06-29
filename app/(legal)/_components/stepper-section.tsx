@@ -225,7 +225,7 @@ export default function StepperSection({
                 <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#f5f5f5]">
                   <Image
                     src={step.icon}
-                    alt=""
+                    alt={`${step.title} step icon`}
                     width={20}
                     height={20}
                     className="size-5"

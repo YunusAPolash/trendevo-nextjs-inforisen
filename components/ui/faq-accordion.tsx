@@ -78,7 +78,7 @@ function FaqAccordionTrigger({
           />
           <Image
             src="/images/icons/faq-plus-icon.svg"
-            alt=""
+            alt="Expand or collapse FAQ item"
             width={25}
             height={25}
             className="hidden size-[25px] dark:block"

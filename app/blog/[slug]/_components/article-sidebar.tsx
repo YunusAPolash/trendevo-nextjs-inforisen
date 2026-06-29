@@ -142,7 +142,7 @@ export default function ArticleSidebar({
                 >
                   <Image
                     src={link.iconSrc}
-                    alt=""
+                    alt={`Share on ${link.label} icon`}
                     width={22}
                     height={22}
                     aria-hidden
@@ -159,7 +159,7 @@ export default function ArticleSidebar({
                 >
                   <Image
                     src={link.iconSrc}
-                    alt=""
+                    alt={`Share on ${link.label} icon`}
                     width={22}
                     height={22}
                     aria-hidden

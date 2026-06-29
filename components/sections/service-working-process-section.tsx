@@ -73,7 +73,7 @@ function ProcessStepCard({
         <div className="relative flex size-[60px] shrink-0 items-center justify-center sm:size-[82px]">
           <Image
             src={stepHexSrc}
-            alt=""
+            alt="Decorative working process step hexagon background"
             aria-hidden
             width={82}
             height={82}
@@ -81,7 +81,7 @@ function ProcessStepCard({
           />
           <Image
             src={stepHexDarkSrc}
-            alt=""
+            alt="Decorative working process step hexagon background for dark mode"
             aria-hidden
             width={82}
             height={82}
@@ -96,7 +96,7 @@ function ProcessStepCard({
           <div className="flex items-center gap-2">
             <Image
               src={titleBulletSrc}
-              alt=""
+              alt="Section title bullet decoration"
               aria-hidden
               width={10}
               height={10}
@@ -175,7 +175,7 @@ export default function ServiceWorkingProcessSection({
 
           <Image
             src={flowConnectorsSrc}
-            alt=""
+            alt="Decorative working process flow connectors"
             aria-hidden
             width={1123}
             height={74}

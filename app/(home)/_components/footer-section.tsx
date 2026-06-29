@@ -173,21 +173,21 @@ function SocialLink({
     >
       <Image
         src="/images/icons/footer-social-hex-bg-decoration.svg"
-        alt=""
+        alt="Decorative footer social link hexagon background"
         fill
         className="object-contain dark:hidden"
         aria-hidden
       />
       <Image
         src="/images/icons/footer-hex-decoration.png"
-        alt=""
+        alt="Decorative footer social link hexagon background for dark mode"
         fill
         className="hidden object-contain dark:block"
         aria-hidden
       />
       <Image
         src={iconSrc}
-        alt=""
+        alt={`${label} social icon`}
         width={18}
         height={18}
         className="relative z-10 size-5 object-contain sm:size-6"

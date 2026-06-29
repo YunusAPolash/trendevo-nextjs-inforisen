@@ -107,7 +107,7 @@ function StarRating({
           <Image
             key={index}
             src={starIconSrc}
-            alt=""
+            alt="Star rating icon"
             aria-hidden
             width={16}
             height={16}
@@ -136,7 +136,7 @@ function AuthorInfo({
     <div className="flex items-center gap-2">
       <Image
         src={avatar}
-        alt=""
+        alt={`${name} avatar`}
         width={55}
         height={55}
         className="size-[51px] shrink-0 rounded-full object-cover"
@@ -156,7 +156,7 @@ function AuthorInfo({
           </p>
           <Image
             src={verifyBadgeSrc}
-            alt=""
+            alt="Verified customer badge"
             aria-hidden
             width={18}
             height={18}
@@ -205,7 +205,7 @@ function ReviewTabSwitcher({
         >
           <Image
             src={assets.customerReviewTabIconSrc}
-            alt=""
+            alt="Customer reviews tab icon"
             aria-hidden
             width={24}
             height={24}
@@ -238,7 +238,7 @@ function ReviewTabSwitcher({
         >
           <Image
             src={assets.videoReviewTabIconSrc}
-            alt=""
+            alt="Video reviews tab icon"
             aria-hidden
             width={24}
             height={24}
@@ -279,7 +279,7 @@ function TextReviewCard({
     >
       <Image
         src={assets.quoteOpenSrc}
-        alt=""
+            alt="Opening quotation mark"
         aria-hidden
         width={90}
         height={78}
@@ -287,7 +287,7 @@ function TextReviewCard({
       />
       <Image
         src={assets.quoteCloseSrc}
-        alt=""
+            alt="Closing quotation mark"
         aria-hidden
         width={90}
         height={78}
@@ -326,7 +326,7 @@ function FeaturedReviewCard({
     <article className="relative mx-auto h-[380px] w-full min-w-0 max-w-[464px] overflow-hidden rounded-[30px] sm:h-[460px] max-[1249px]:md:max-w-[600px] max-[1249px]:md:h-[440px] min-[1250px]:mx-0 min-[1250px]:h-[538px] min-[1250px]:max-w-none min-[1250px]:flex-1">
       <Image
         src={featuredReview.image}
-        alt=""
+            alt={`${featuredReview.name} featured review photo`}
         fill
         sizes="(max-width: 768px) 100vw, 464px"
         className="object-cover"
@@ -347,7 +347,7 @@ function FeaturedReviewCard({
         >
           <Image
             src={assets.playIconSrc}
-            alt=""
+            alt="Play video review"
             aria-hidden
             width={33}
             height={33}
@@ -537,7 +537,7 @@ function VideoReviewCard({
     <article className="relative mx-auto h-[300px] w-full max-w-[336px] overflow-hidden rounded-2xl p-2.5 sm:h-[340px]">
       <Image
         src={review.thumbnail}
-        alt=""
+        alt={`${review.name} video review thumbnail`}
         fill
         sizes="(max-width: 768px) 85vw, 336px"
         className="rounded-2xl object-cover"
@@ -550,7 +550,7 @@ function VideoReviewCard({
         <div className="flex items-center gap-1">
           <Image
             src={assets.starIconSrc}
-            alt=""
+            alt="Star rating icon"
             aria-hidden
             width={16}
             height={16}
@@ -568,7 +568,7 @@ function VideoReviewCard({
       >
         <Image
           src={assets.playIconSrc}
-          alt=""
+            alt="Play video review"
           aria-hidden
           width={22}
           height={22}
@@ -685,7 +685,7 @@ function SectionDecorations({ playOrbSrc }: { playOrbSrc: string }) {
           <div className="relative h-[212px] w-[211px] overflow-hidden blur-[3px]">
             <Image
               src={playOrbSrc}
-              alt=""
+            alt="Video play button background"
               aria-hidden
               width={2000}
               height={2000}
@@ -699,7 +699,7 @@ function SectionDecorations({ playOrbSrc }: { playOrbSrc: string }) {
       <div className="absolute left-[91.5625%] top-[27px] h-[212px] w-[217.591px] overflow-hidden blur-[3px]">
         <Image
           src={playOrbSrc}
-          alt=""
+            alt="Video play button background"
           aria-hidden
           width={2000}
           height={2000}

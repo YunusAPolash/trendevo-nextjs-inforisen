@@ -40,7 +40,7 @@ export default function AuthorBlogCard({ post }: AuthorBlogCardProps) {
         <div className="flex items-center gap-2">
           <Image
             src="/images/icons/blog-details-posted-at-clock-icon.webp"
-            alt=""
+            alt="Blog post published date icon"
             width={18}
             height={18}
             aria-hidden
@@ -51,7 +51,7 @@ export default function AuthorBlogCard({ post }: AuthorBlogCardProps) {
         <div className="flex items-center gap-2">
           <Image
             src="/images/icons/site-blog-read-time-icon.svg"
-            alt=""
+            alt="Blog post read time icon"
             width={18}
             height={18}
             aria-hidden

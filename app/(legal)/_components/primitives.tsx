@@ -120,7 +120,7 @@ export function ListItem({
           iconBg,
         )}
       >
-        <Image src={icon} alt="" width={20} height={20} className="size-5" />
+        <Image src={icon} alt="List item icon" width={20} height={20} className="size-5" />
       </span>
       <span className={cn('text-base leading-relaxed', legalBodyTextClassName)}>
         {children}

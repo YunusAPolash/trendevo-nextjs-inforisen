@@ -26,7 +26,7 @@ const FORM_FACEBOOK_ICON_HEIGHT = 20;
 
 function FacebookIcon({
   variant,
-  alt = '',
+  alt = 'Facebook icon',
 }: {
   variant: 'title' | 'field';
   alt?: string;
@@ -123,7 +123,7 @@ function QuantitySlider({
           >
             <Image
               src={SLIDER_THUMB_SRC}
-              alt=""
+              alt="Quantity slider thumb handle"
               width={SLIDER_THUMB_WIDTH}
               height={SLIDER_THUMB_HEIGHT}
               aria-hidden
@@ -140,7 +140,7 @@ function QuantitySlider({
             >
               <Image
                 src={SLIDER_TOOLTIP_SRC}
-                alt=""
+                alt="Quantity slider value indicator"
                 width={SLIDER_TOOLTIP_WIDTH}
                 height={SLIDER_TOOLTIP_HEIGHT}
                 aria-hidden

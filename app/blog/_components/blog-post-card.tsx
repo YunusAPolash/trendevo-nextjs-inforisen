@@ -68,7 +68,7 @@ export default function BlogPostCard({
                 >
                   <Image
                     src={post.authorAvatarSrc}
-                    alt=""
+                    alt={`${post.authorName} avatar`}
                     fill
                     sizes="59px"
                     className="object-cover object-center"
@@ -104,7 +104,7 @@ export default function BlogPostCard({
             <div className="flex items-center gap-1 pl-[60px] sm:shrink-0 sm:pl-0">
               <Image
                 src="/images/icons/site-blog-read-time-icon.svg"
-                alt=""
+                alt="Blog post read time icon"
                 width={20}
                 height={20}
                 aria-hidden
@@ -124,7 +124,7 @@ export default function BlogPostCard({
           Read More
           <Image
             src="/images/icons/site-blog-read-more-chevron-icon.svg"
-            alt=""
+            alt="Read more chevron icon"
             width={22}
             height={22}
             className="size-4 sm:size-[22px]"

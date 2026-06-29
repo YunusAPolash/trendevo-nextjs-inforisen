@@ -133,7 +133,7 @@ function HeroTrustBadgeBar({ badge }: { badge: HeroTrustBadge }) {
           <Image
             key={`${src}-${index}`}
             src={src}
-            alt=""
+            alt={`TrendEvo customer review avatar ${index + 1}`}
             width={24}
             height={24}
             className="size-6 rounded-full border border-white object-cover dark:border-[0.5px]"
@@ -251,7 +251,7 @@ function HeroIllustrationBlock({
           >
             <Image
               src={HERO_RING_SRC}
-              alt=""
+              alt="Decorative gradient ring around hero illustration"
               fill
               unoptimized
               className="object-contain"
@@ -289,7 +289,7 @@ function HeroIllustrationBlock({
         >
           <Image
             src={HERO_RING_SRC}
-            alt=""
+              alt="Decorative gradient ring around hero illustration"
             fill
             unoptimized
             className="object-contain"

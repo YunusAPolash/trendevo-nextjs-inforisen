@@ -34,7 +34,7 @@ export default function IconSectionCard({
     <PrimaryCard className={cn(cardClassName, 'gap-4', className)}>
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-3">
-          <Image src={icon} alt="" width={24} height={24} className="size-6 shrink-0" />
+          <Image src={icon} alt={`${title} section icon`} width={24} height={24} className="size-6 shrink-0" />
           <h2 className={legalHeadingLgClassName}>{title}</h2>
         </div>
         {intro ? <div className={legalBodyTextClassName}>{intro}</div> : null}

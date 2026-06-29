@@ -64,7 +64,7 @@ export default function PlatformFiltersSection() {
               >
                 <Image
                   src="/images/services/pricing/services-pricing-filter-icon.svg"
-                  alt=""
+                  alt="Filter services icon"
                   aria-hidden
                   width={24}
                   height={24}
@@ -75,7 +75,7 @@ export default function PlatformFiltersSection() {
                 </span>
                 <Image
                   src="/images/services/pricing/services-pricing-filter-arrow-icon.svg"
-                  alt=""
+                  alt="Filter dropdown arrow icon"
                   aria-hidden
                   width={24}
                   height={24}
@@ -102,7 +102,7 @@ export default function PlatformFiltersSection() {
                 >
                   <Image
                     src="/images/services/pricing/services-pricing-search-icon.svg"
-                    alt=""
+                    alt="Search services icon"
                     aria-hidden
                     width={24}
                     height={24}

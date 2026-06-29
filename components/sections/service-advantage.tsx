@@ -110,7 +110,7 @@ function AdvantageCard({
         <div className="relative flex size-[77px] shrink-0 items-center justify-center">
           <Image
             src="/images/why-choose-us/why-choose-us-hex-icon-decoration.svg"
-            alt=""
+            alt="Decorative hexagon icon background"
             aria-hidden
             width={77}
             height={77}
@@ -118,7 +118,7 @@ function AdvantageCard({
           />
           <Image
             src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
-            alt=""
+            alt="Decorative hexagon icon background for dark mode"
             aria-hidden
             width={77}
             height={77}
@@ -126,7 +126,7 @@ function AdvantageCard({
           />
           <Image
             src={icon}
-            alt=""
+              alt={`${title} service icon`}
             aria-hidden
             width={54}
             height={54}
@@ -139,7 +139,7 @@ function AdvantageCard({
           <div className="flex items-center gap-1.5">
             <Image
               src="/images/why-choose-us/why-choose-us-title-bullet-decoration.svg"
-              alt=""
+              alt="Section title bullet decoration"
               aria-hidden
               width={12}
               height={12}
@@ -192,7 +192,7 @@ export default function ServiceAdvantage({ slug, content }: ServiceAdvantageProp
     >
       <Image
         src="/images/service-smm-panel/facebook-smm-panel-decorative-wave-top-left-decoration.png"
-        alt=""
+        alt="Decorative wave background at top left"
         aria-hidden
         width={1651}
         height={932}
@@ -200,7 +200,7 @@ export default function ServiceAdvantage({ slug, content }: ServiceAdvantageProp
       />
       <Image
         src="/images/service-smm-panel/facebook-smm-panel-decorative-wave-bottom-right-decoration.png"
-        alt=""
+        alt="Decorative wave background at bottom right"
         aria-hidden
         width={1651}
         height={932}

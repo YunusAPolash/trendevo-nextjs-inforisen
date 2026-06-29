@@ -33,7 +33,7 @@ export default function ServicePricingGroup({
           <div className="relative h-[30px] w-[31px] shrink-0">
             <Image
               src={group.platformIcon}
-              alt=""
+              alt={`${group.title} platform icon`}
               aria-hidden
               fill
               className="object-contain"
@@ -50,7 +50,7 @@ export default function ServicePricingGroup({
         >
           <Image
             src="/images/services/pricing/services-pricing-accordion-arrow-icon.svg"
-            alt=""
+            alt="Expand or collapse pricing group"
             aria-hidden
             width={34}
             height={34}

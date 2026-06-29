@@ -66,7 +66,7 @@ export default function CtaSection({
             <div className="pointer-events-none absolute inset-0 opacity-[0.06] dark:hidden">
               <Image
                 src="/images/cta/cta-hex-pattern-1-decoration.png"
-                alt=""
+                alt="Decorative hex pattern background"
                 aria-hidden
                 width={1200}
                 height={600}
@@ -75,7 +75,7 @@ export default function CtaSection({
               />
               <Image
                 src="/images/cta/cta-hex-pattern-2-decoration.png"
-                alt=""
+                alt="Decorative hex pattern background"
                 aria-hidden
                 width={1200}
                 height={600}
@@ -92,7 +92,7 @@ export default function CtaSection({
                   <div className="pointer-events-none absolute -left-8 top-[-75px] hidden h-[485px] w-[min(934px,120%)] opacity-[0.06] lg:block dark:lg:hidden">
                     <Image
                       src="/images/cta/cta-world-map-decoration.png"
-                      alt=""
+                      alt="Decorative world map background"
                       aria-hidden
                       fill
                       className="object-cover object-left-top"

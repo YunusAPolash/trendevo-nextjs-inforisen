@@ -46,7 +46,7 @@ export default async function StatsSection() {
             >
               <Image
                 src={stat.icon}
-                alt=""
+                alt={`${stat.label} icon`}
                 width={stat.width}
                 height={stat.height}
                 className="size-full object-contain object-left"

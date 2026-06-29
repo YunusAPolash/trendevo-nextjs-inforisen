@@ -79,7 +79,7 @@ function ServiceTopRightDecoration({ imageSrc }: { imageSrc: string }) {
           <Image
             key={imageSrc}
             src={imageSrc}
-            alt=""
+            alt="Decorative services section illustration"
             aria-hidden
             fill
             className="object-contain object-center"
@@ -103,7 +103,7 @@ function ServiceBottomLeftDecoration({ imageSrc }: { imageSrc: string }) {
           <Image
             key={imageSrc}
             src={imageSrc}
-            alt=""
+            alt="Decorative services section illustration"
             aria-hidden
             fill
             className="object-contain object-center"
@@ -137,7 +137,7 @@ function PlatformIcon({
       />
       <Image
         src={src}
-        alt=""
+        alt={`${label} platform icon`}
         aria-hidden
         width={20}
         height={20}
@@ -159,7 +159,7 @@ function ServiceCardGlow({ src, className }: { src: string; className?: string }
         <div className="relative size-full">
           <Image
             src={src}
-            alt=""
+            alt="Decorative service card glow effect"
             aria-hidden
             fill
             className="object-contain"
@@ -212,7 +212,7 @@ function ServiceIllustrationLayers({
           <div className="absolute h-[122.1%] w-[125%] -left-[15.25%] -top-[10.38%]">
             <Image
               src={bgSrc}
-              alt=""
+              alt="Social media services illustration background"
               aria-hidden
               fill
               className="object-cover"
@@ -228,7 +228,7 @@ function ServiceIllustrationLayers({
           <div className="absolute inset-0 lg:h-[123.39%] lg:w-[114.99%] lg:-left-[8.26%] lg:top-0">
             <Image
               src={foregroundSrc}
-              alt=""
+              alt="Social media services hero illustration"
               aria-hidden
               fill
               className="object-cover object-top"
@@ -268,7 +268,7 @@ function ServiceNumberBadge({ number }: { number: string }) {
     <div className="relative flex size-9 shrink-0 items-center justify-center sm:size-[44px]">
       <Image
         src="/images/our-services/ui/our-services-hex-number-decoration.svg"
-        alt=""
+        alt="Service step number badge decoration"
         aria-hidden
         width={38}
         height={38}

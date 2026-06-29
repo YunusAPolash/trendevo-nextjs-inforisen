@@ -39,7 +39,7 @@ export default function AboutSection() {
                   >
                     <Image
                       src="/images/icons/site-check-icon.svg"
-                      alt=""
+                      alt="Included feature checkmark icon"
                       aria-hidden
                       width={24}
                       height={24}
@@ -74,7 +74,7 @@ export default function AboutSection() {
             {about.ctaLabel}
             <Image
               src="/images/about/about-us-hugeicons-arrow-right-double-icon.svg"
-              alt=""
+              alt="Learn more arrow icon"
               aria-hidden
               width={24}
               height={24}

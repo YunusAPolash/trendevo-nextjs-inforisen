@@ -28,7 +28,7 @@ function CountryWhyCard({
         <div className="relative flex size-[77px] shrink-0 items-center justify-center">
           <Image
             src="/images/why-choose-us/why-choose-us-hex-icon-decoration.svg"
-            alt=""
+            alt="Decorative hexagon icon background"
             aria-hidden
             width={77}
             height={77}
@@ -36,7 +36,7 @@ function CountryWhyCard({
           />
           <Image
             src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
-            alt=""
+            alt="Decorative hexagon icon background for dark mode"
             aria-hidden
             width={77}
             height={77}
@@ -48,7 +48,7 @@ function CountryWhyCard({
           >
             <Image
               src={icon}
-              alt=""
+              alt={`${title} service icon`}
               aria-hidden
               width={iconWidth}
               height={iconHeight}
@@ -62,7 +62,7 @@ function CountryWhyCard({
           <div className="flex items-center gap-1.5">
             <Image
               src="/images/why-choose-us/why-choose-us-title-bullet-decoration.svg"
-              alt=""
+              alt="Section title bullet decoration"
               aria-hidden
               width={12}
               height={12}
@@ -85,7 +85,7 @@ function ColumnConnector({ src }: { src: string }) {
   return (
     <Image
       src={src}
-      alt=""
+      alt="Decorative feature column connector"
       aria-hidden
       width={24}
       height={126}
@@ -122,7 +122,7 @@ export default function CountryWhy({ slug }: CountryWhyProps) {
     >
       <Image
         src="/images/country/uk/uk-why-decorative-wave-decoration.svg"
-        alt=""
+        alt="Decorative country page wave background"
         aria-hidden
         width={1614}
         height={959}

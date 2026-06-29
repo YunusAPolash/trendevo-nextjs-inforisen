@@ -23,9 +23,9 @@ export default function ContactDetailsSection() {
           <div className="relative size-full">
             <div className="absolute inset-[-138%]">
               <Image
-                src="/images/contact-us/contact-us-contact-details-glow-top-left-dark-decoration.svg"
-                alt=""
+                alt="Decorative contact section glow accent"
                 fill
+                src="/images/contact-us/contact-us-contact-details-glow-top-left-dark-decoration.svg"
                 unoptimized
                 className="object-contain"
               />
@@ -36,7 +36,7 @@ export default function ContactDetailsSection() {
         <div className="pointer-events-none absolute bottom-10 left-[-40px] hidden blur-[2px] lg:block dark:hidden">
           <Image
             src="/images/contact-us/contact-us-phone-icon.png"
-            alt=""
+            alt="Decorative phone illustration"
             width={137}
             height={137}
             aria-hidden
@@ -47,7 +47,7 @@ export default function ContactDetailsSection() {
         <div className="pointer-events-none absolute top-[73px] right-[-40px] hidden blur-[2px] lg:block dark:hidden">
           <Image
             src="/images/contact-us/contact-us-phone-icon.png"
-            alt=""
+            alt="Decorative phone illustration"
             width={137}
             height={137}
             aria-hidden

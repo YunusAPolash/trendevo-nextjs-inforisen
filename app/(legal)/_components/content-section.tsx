@@ -84,7 +84,7 @@ export default function TermsContentSection() {
           <div className="flex items-center gap-3">
             <Image
               src="/images/icons/terms-last-updated-clock-icon.svg"
-              alt=""
+              alt="Last updated clock icon"
               width={24}
               height={24}
               className="size-6"
@@ -270,7 +270,7 @@ export default function TermsContentSection() {
                 <span className="flex size-8 items-center justify-center rounded-full bg-[#d1fae5]">
                   <Image
                     src="/images/icons/terms-acceptable-use-check-icon.svg"
-                    alt=""
+                    alt="Allowed use checkmark icon"
                     width={20}
                     height={20}
                     className="size-5"
@@ -298,7 +298,7 @@ export default function TermsContentSection() {
                 <span className="flex size-8 items-center justify-center rounded-full bg-[#ffe4e6]">
                   <Image
                     src="/images/icons/terms-acceptable-use-x-icon.svg"
-                    alt=""
+                    alt="Prohibited use icon"
                     width={20}
                     height={20}
                     className="size-5"

@@ -28,7 +28,7 @@ function SocialServiceCard({
         <div className="relative flex size-[77px] shrink-0 items-center justify-center">
           <Image
             src="/images/why-choose-us/why-choose-us-hex-icon-secondd-decoration.svg"
-            alt=""
+            alt="Decorative hexagon icon background"
             aria-hidden
             width={77}
             height={77}
@@ -36,7 +36,7 @@ function SocialServiceCard({
           />
           <Image
             src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
-            alt=""
+            alt="Decorative hexagon icon background for dark mode"
             aria-hidden
             width={77}
             height={77}
@@ -48,7 +48,7 @@ function SocialServiceCard({
           >
             <Image
               src={icon}
-              alt=""
+              alt={`${title} service icon`}
               aria-hidden
               width={iconWidth}
               height={iconHeight}
@@ -62,7 +62,7 @@ function SocialServiceCard({
           <div className="flex items-center gap-1.5">
             <Image
               src="/images/why-choose-us/why-choose-us-title-bullet-second-decoration.svg"
-              alt=""
+              alt="Section title bullet decoration"
               aria-hidden
               width={12}
               height={12}
@@ -89,7 +89,7 @@ export default function XTwitterSmmPanelSocialServiceSection() {
     >
       <Image
         src={socialServices.decorativeLeft.src}
-        alt=""
+        alt="Decorative social services section background on the left"
         aria-hidden
         width={socialServices.decorativeLeft.width}
         height={socialServices.decorativeLeft.height}
@@ -97,7 +97,7 @@ export default function XTwitterSmmPanelSocialServiceSection() {
       />
       <Image
         src={socialServices.decorativeRight.src}
-        alt=""
+        alt="Decorative social services section background on the right"
         aria-hidden
         width={socialServices.decorativeRight.width}
         height={socialServices.decorativeRight.height}

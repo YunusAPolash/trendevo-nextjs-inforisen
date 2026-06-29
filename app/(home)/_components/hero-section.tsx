@@ -25,8 +25,8 @@ export default async function HeroSection() {
               {hero.trustBadge.avatarSrcs.map((src, index) => (
                 <Image
                   key={`${src}-${index}`}
-                  src={src}
-                  alt=""
+            src={src}
+            alt={`TrendEvo customer review avatar ${index + 1}`}
                   width={24}
                   height={24}
                   className="size-6 rounded-full border border-white object-cover dark:border-[0.5px]"
@@ -58,7 +58,7 @@ export default async function HeroSection() {
             <div className="flex gap-2">
               <Image
                 src={hero.trustBadge.promoIconSrc}
-                alt=""
+        alt="TrendEvo promotional offer icon"
                 width={24}
                 height={24}
                 className="size-6 shrink-0"

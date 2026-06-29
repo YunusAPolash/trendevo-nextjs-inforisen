@@ -48,7 +48,7 @@ function HowToBuyAccordionTrigger({
 
         <Image
           src={inactiveStepIcon}
-          alt=""
+          alt={`${title} step icon`}
           aria-hidden
           width={28}
           height={28}
@@ -57,7 +57,7 @@ function HowToBuyAccordionTrigger({
         />
         <Image
           src={activeStepIcon}
-          alt=""
+          alt={`${title} active step icon`}
           aria-hidden
           width={28}
           height={28}

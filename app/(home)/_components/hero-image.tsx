@@ -42,7 +42,7 @@ function HeroImage() {
         <div className='right-[-10px] absolute'>
           <Image
             src="/images/hero/instagram-smm-panel-services.png"
-            alt="Facebook SMM Panel Services"
+            alt="Instagram SMM Panel Services"
             priority
             fetchPriority='high'
             width={500}
@@ -52,7 +52,7 @@ function HeroImage() {
             />
           <Image
             src="/images/hero/tiktok-smm-panel-services.png"
-            alt="YouTube SMM Panel Services"
+            alt="TikTok SMM Panel Services"
             priority
             fetchPriority='high'
             width={500}
@@ -62,7 +62,7 @@ function HeroImage() {
             />
           <Image
             src="/images/hero/x-twitter-smm-panel-services.png"
-            alt="LinkedIn SMM Panel Services"
+            alt="X Twitter SMM Panel Services"
             priority
             fetchPriority='high'
             width={500}
@@ -74,7 +74,7 @@ function HeroImage() {
 
           <Image
             src="/images/hero/rounded-stroke.svg"
-            alt=""
+            alt="Decorative circular highlight around social media icons"
             priority
             fetchPriority='high'
             width={250}

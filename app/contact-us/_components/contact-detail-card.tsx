@@ -46,7 +46,7 @@ export default function ContactDetailCard({
       <div className="relative z-10 flex size-[100px] shrink-0 items-center justify-center sm:size-[120px]">
         <Image
           src="/images/contact-us/contact-us-icon-hex-bg-decoration.svg"
-          alt=""
+          alt="Decorative contact icon hexagon background"
           fill
           aria-hidden
           unoptimized
@@ -54,7 +54,7 @@ export default function ContactDetailCard({
         />
         <Image
           src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
-          alt=""
+            alt="Decorative hexagon icon background for dark mode"
           fill
           aria-hidden
           className="hidden object-contain dark:block"

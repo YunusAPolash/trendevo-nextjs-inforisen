@@ -73,7 +73,7 @@ function PlatformTab({
           <HexBgIcon className="absolute left-1/2 top-1/2 size-8 -translate-x-1/2 -translate-y-1/2 sm:size-[38px]" />
           <Image
             src={icon}
-            alt=""
+              alt={`${label} service icon`}
             aria-hidden
             width={20}
             height={20}
@@ -109,7 +109,7 @@ function PricingCard({
       >
         <img
           src="/images/backgrounds/card-bg-4-dark.svg"
-          alt=""
+          alt="Decorative pricing plan card background"
           className="size-full object-cover"
         />
       </div>
@@ -153,7 +153,7 @@ function PricingCard({
           <li key={feature} className="flex items-start gap-2">
             <Image
               src="/images/pricing/pricing-guarantee-fast-delivery-icon.svg"
-              alt=""
+              alt="Fast delivery guarantee icon"
               aria-hidden
               width={20}
               height={20}

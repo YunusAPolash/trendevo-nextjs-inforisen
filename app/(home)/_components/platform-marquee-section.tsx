@@ -29,7 +29,7 @@ function PlatformMarqueeItem(platform: HomePlatformMarqueeItem) {
           >
             <Image
               src={icon}
-              alt=""
+              alt={`${name} service icon`}
               aria-hidden
               fill
               sizes={`${iconSize}px`}

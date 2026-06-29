@@ -30,7 +30,7 @@ export default function TrustCard({
         <div className="relative flex size-20 shrink-0 items-center justify-center px-[13px] py-3.5">
           <Image
             src="/images/why-choose-us/why-choose-us-hex-icon-decoration.svg"
-            alt=""
+            alt="Decorative hexagon icon background"
             aria-hidden
             width={77}
             height={77}
@@ -38,7 +38,7 @@ export default function TrustCard({
           />
           <Image
             src="/images/why-choose-us/why-choose-us-hex-icon-dark-decoration.svg"
-            alt=""
+            alt="Decorative hexagon icon background for dark mode"
             aria-hidden
             width={77}
             height={77}
@@ -46,7 +46,7 @@ export default function TrustCard({
           />
           <Image
             src={iconSrc}
-            alt=""
+            alt={`${title} icon`}
             aria-hidden
             width={40}
             height={40}
@@ -58,7 +58,7 @@ export default function TrustCard({
           <div className="flex items-start gap-1.5">
             <Image
               src="/images/why-choose-us/why-choose-us-title-bullet-decoration.svg"
-              alt=""
+              alt="Section title bullet decoration"
               aria-hidden
               width={12}
               height={12}

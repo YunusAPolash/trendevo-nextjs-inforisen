@@ -71,7 +71,7 @@ function FaqSectionDecorations() {
           <div className="relative h-[212px] w-[211px] overflow-hidden blur-[3px]">
             <Image
               src="/images/faq/faq-decorative-purple-question-decoration.webp"
-              alt=""
+              alt="Decorative purple FAQ question mark"
               aria-hidden
               width={224}
               height={234}
@@ -85,7 +85,7 @@ function FaqSectionDecorations() {
       <div className="absolute left-[91.5625%] top-[27px] h-[212px] w-[217.591px] overflow-hidden blur-[3px]">
         <Image
           src="/images/faq/faq-decorative-orange-question-decoration.webp"
-          alt=""
+          alt="Decorative orange FAQ question mark"
           aria-hidden
           width={225}
           height={225}
@@ -157,7 +157,7 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
               <div className="flex items-center gap-1">
                 <Image
                   src="/images/faq/faq-cta-question-dice-decoration.webp"
-                  alt=""
+                  alt="Decorative FAQ call-to-action dice illustration"
                   width={36}
                   height={34}
                   className="size-9 rotate-[-20deg] object-contain"
