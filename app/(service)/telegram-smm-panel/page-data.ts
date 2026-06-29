@@ -167,7 +167,7 @@ export const data: TelegramSmmPanelPageData = {
   socialServices: {
     title: 'Telegram SMM Panel Services gt<Built for Bangladesh>',
     subtitle:
-      'TrendEvo brings all major Telegram growth services into one simple dashboard for Bangladeshi businesses, creators, agencies, community owners, course sellers, and resellers. Whether you want more channel trust, group activity, post visibility, content reach, or campaign support, our Telegram BD SMM Panel services help you manage growth faster and more affordably.',
+      'TrendEvo brings all major Telegram growth services into one simple dashboard for Bangladeshi businesses, creators, agencies, community owners, course sellers, and resellers. Whether you want more channel trust, group activity, post visibility, content reach, or campaign support, our Telegram lnk</|BD SMM Panel> services help you manage growth faster and more affordably.',
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
@@ -197,7 +197,7 @@ export const data: TelegramSmmPanelPageData = {
       {
         title: 'Telegram Members',
         description:
-          'Grow Telegram members for communities, online businesses, coaching programs, reseller networks, customer support groups, and niche discussions. More members help your group look more active and valuable to new joiners.',
+          'Grow lnk</buy-telegram-members|Telegram members> for communities, online businesses, coaching programs, reseller networks, customer support groups, and niche discussions. More members help your group look more active and valuable to new joiners.',
         icon: '/images/our-services/platforms/our-services-telegram-members-platform-icon.webp',
         iconWidth: 54,
         iconHeight: 54,
@@ -266,7 +266,7 @@ export const data: TelegramSmmPanelPageData = {
   advantages: {
     title: 'Why Bangladeshi Brands Use a gt<Telegram SMM Panel> for Faster Growth',
     subtitle:
-      'A reliable Telegram SMM Panel helps businesses, creators, agencies, and community owners grow their Telegram presence with less manual effort. TrendEvo makes it easier to improve channel trust, group activity, post visibility, audience engagement, and campaign support from one simple dashboard.',
+      'A reliable Telegram SMM Panel helps businesses, creators, agencies, and community owners grow their Telegram presence with less manual effort. lnk</about-us|TrendEvo> makes it easier to improve channel trust, group activity, post visibility, audience engagement, and campaign support from one simple dashboard.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -321,7 +321,7 @@ export const data: TelegramSmmPanelPageData = {
   workingProcess: {
     title: 'How TrendEvo gt<Telegram SMM Panel> Works',
     subtitle:
-      'TrendEvo makes Telegram growth simple for Bangladeshi users. You can choose a service, place your order, pay with local methods, and track everything from one easy dashboard.',
+      'TrendEvo makes Telegram growth simple for Bangladeshi users. You can choose a service, place your order, lnk</signup|pay with local methods>, and track everything from one easy dashboard.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -330,7 +330,7 @@ export const data: TelegramSmmPanelPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'Sign up on TrendEvo and access your Telegram SMM Panel dashboard. The process is simple, quick, and made for businesses, creators, agencies, community owners, and resellers in Bangladesh.',
+          'lnk</signup|Sign up> on TrendEvo and access your Telegram SMM Panel dashboard. The process is simple, quick, and made for businesses, creators, agencies, community owners, and resellers in Bangladesh.',
       },
       {
         number: '02',

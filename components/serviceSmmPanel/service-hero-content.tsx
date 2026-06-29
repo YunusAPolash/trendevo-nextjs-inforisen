@@ -169,7 +169,7 @@ export const serviceHeroContent: Record<ServiceHeroSlug, ServiceHeroContent> = {
       </>
     ),
     description:
-      'TrendEvo helps Bangladeshi businesses grow their Twitch presence with real engagement, reliable results, and locally optimized strategies. Our platform ensures smooth, secure, and effective social media growth tailored to your business goals.',
+      'TrendEvo gives Bangladeshi streamers, gamers, esports creators, agencies, influencers, and lnk</api|resellers smm panel> for a smarter way to grow on Twitch. Manage followers, live viewers, channel views, chat activity, clip engagement, and stream promotion from one clean dashboard.',
     buttonLabel: 'Get Started Now',
     image: {
       src: '/images/service-smm-panel/twitch-smm-panel/boost-twitch-reach-and-engagement-with-trendevo.webp',

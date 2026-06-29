@@ -7,6 +7,7 @@ import SectionHeading from '@/components/ui/section-heading';
 import { data } from '@/app/(service)/soundcloud-smm-panel/page-data';
 import type { SocialServiceItem } from '@/components/serviceSmmPanel/social-service-content';
 import { cn } from '@/lib/utils';
+import { renderText } from '@/lib/utils/renderText';
 
 const { socialServices } = data;
 
@@ -72,7 +73,7 @@ function SocialServiceCard({
             </h3>
           </div>
           <p className="text-base leading-normal text-[#313131] dark:text-[#dfe0e4] dark:leading-[1.5]">
-            {description}
+            {renderText(description)}
           </p>
         </div>
       </div>

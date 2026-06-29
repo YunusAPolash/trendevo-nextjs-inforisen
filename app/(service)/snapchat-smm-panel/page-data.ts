@@ -152,7 +152,7 @@ export const data: SnapchatSmmPanelPageData = {
   hero: {
     title: 'Grow Faster with a Trusted gt<Snapchat SMM Panel> in Bangladesh',
     description:
-      'TrendEvo makes Snapchat growth easier for Bangladeshi creators, influencers, lifestyle brands, agencies, local businesses, and resellers. You can manage subscribers, story views, Spotlight views, shares, profile activity, and engagement from one simple Snapchat SMM Panel service in BD dashboard.',
+      'TrendEvo makes Snapchat growth easier for Bangladeshi creators, influencers, lifestyle brands, agencies, local businesses, and resellers. You can manage subscribers, story views, Spotlight views, shares, profile activity, and engagement from one simple Snapchat lnk</services|SMM Panel service in BD> dashboard.',
     descriptionSecondary:
       'Grow your Snapchat presence with affordable pricing, bKash, Nagad, Rocket payment options, and services built for stronger attention, better content reach, and more visible activity in Bangladesh.',
     buttonLabel: 'Get Started Now',
@@ -167,7 +167,7 @@ export const data: SnapchatSmmPanelPageData = {
   socialServices: {
     title: 'Snapchat SMM Panel Services gt<Built for Bangladesh>',
     subtitle:
-      'TrendEvo gives Bangladeshi creators, influencers, agencies, online sellers, lifestyle pages, and resellers a simple way to grow Snapchat without managing every promotion step manually. From daily story updates to Spotlight videos, product previews, event coverage, creator snaps, and brand campaigns, our Snapchat SMM Panel in Bangladesh helps you build stronger activity around your content.',
+      'lnk</about-us|TrendEvo> gives Bangladeshi creators, influencers, agencies, online sellers, lifestyle pages, and resellers a simple way to grow Snapchat without managing every promotion step manually. From daily story updates to Spotlight videos, product previews, event coverage, creator snaps, and brand campaigns, our Snapchat SMM Panel in Bangladesh helps you build stronger activity around your content.',
     titleClassName:
       'text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] max-w-[1200px] lg:text-[48px]',
     subtitleClassName: 'max-w-[996px] text-base sm:text-lg',
@@ -197,7 +197,7 @@ export const data: SnapchatSmmPanelPageData = {
       {
         title: 'Snapchat Story Views',
         description:
-          'Bring more attention to your Snapchat followers. Story views help daily updates, product teasers, event snaps, behind-the-scenes content, and personal brand content look more active.',
+          'Bring more attention to your lnk</buy-snapchat-followers|Snapchat followers>. Story views help daily updates, product teasers, event snaps, behind-the-scenes content, and personal brand content look more active.',
         icon: '/images/service-smm-panel/facebook-smm-panel-facebook-story-views-icon.png',
         iconWidth: 70,
         iconHeight: 54,
@@ -330,7 +330,7 @@ export const data: SnapchatSmmPanelPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'Create free account and open your Snapchat SMM Panel dashboard. The dashboard is made for creators, influencers, agencies, lifestyle brands, online sellers, and resellers who need quick campaign control.',
+          'lnk</signup|Create free account> and open your Snapchat SMM Panel dashboard. The dashboard is made for creators, influencers, agencies, lifestyle brands, online sellers, and resellers who need quick campaign control.',
       },
       {
         number: '02',
