@@ -8,6 +8,8 @@ type SectionHeadingProps = {
   subtitle?: string;
   className?: string;
   align?: 'center' | 'left';
+  /** @deprecated Underline is rendered via UnderlineEffect; kept for call-site compatibility. */
+  underlineSrc?: string;
   underlineWidth?: number;
   titleClassName?: string;
   subtitleClassName?: string;

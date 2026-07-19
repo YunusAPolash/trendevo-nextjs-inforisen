@@ -55,6 +55,7 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   --animate-slow-spin: slow-spin 24s linear infinite;
+  --animate-payment-method-float: payment-method-float 3s ease-in-out infinite;
 }
 
 :root {
@@ -192,6 +193,10 @@
       animation: none;
     }
 
+    .payment-method-float {
+      animation: none;
+    }
+
     [data-shine]:hover .button-shine-layer {
       animation: none;
     }
@@ -215,6 +220,10 @@
   .underline-effect-dot {
     animation: underline-dot-slide 6s ease-in-out infinite;
     will-change: left;
+  }
+  .payment-method-float {
+    @apply animate-[payment-method-float_3s_ease-in-out_infinite];
+    will-change: transform;
   }
 }
   
@@ -330,5 +339,15 @@
   50% {
     left: calc(100% - 0.75rem);
     rotate: 180deg;
+  }
+}
+
+@keyframes payment-method-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
