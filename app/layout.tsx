@@ -4,6 +4,10 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
 import SiteHeader from '@/components/layout/site-header';
+import {
+  GoogleTagManager,
+  GoogleTagManagerNoscript,
+} from '@/components/analytics/google-tag-manager';
 import FooterSection from './(home)/_components/footer-section';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
@@ -43,6 +47,8 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex flex-col">
+        <GoogleTagManagerNoscript />
+        <GoogleTagManager />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
