@@ -2,9 +2,7 @@
 
 import {
   BookOpen,
-  CircleHelp,
   Home,
-  LayoutGrid,
   Mail,
   Users,
   type LucideIcon,
@@ -14,8 +12,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import PrimaryButton from '@/components/buttons/primary-button';
+import {
+  ServicesNavDropdown,
+  ServicesNavMobile,
+} from '@/components/layout/services-nav-menu';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { signInUrl, signUpUrl } from '@/lib/auth-urls';
+import { isServicesNavActive } from '@/lib/navigation/services-nav';
 import { cn } from '@/lib/utils';
 
 const navLinks: {
@@ -24,7 +27,6 @@ const navLinks: {
   icon: LucideIcon;
 }[] = [
   { label: 'Home', href: '/', icon: Home },
-  { label: 'Services', href: '/services', icon: LayoutGrid },
   { label: 'About Us', href: '/about-us', icon: Users },
   { label: 'Blog', href: '/blog', icon: BookOpen },
   { label: 'Contact Us', href: '/contact-us', icon: Mail },
@@ -124,22 +126,36 @@ export default function SiteHeader({ className }: { className?: string }) {
         </Link>
 
         <nav className="hidden min-[1100px]:flex items-center gap-8">
-          {navLinks.map((link) => {
+          <Link
+            href="/"
+            className={cn(
+              'text-base font-medium transition-colors',
+              isNavLinkActive(pathname, '/')
+                ? 'text-gradient font-semibold'
+                : 'text-[#343e56] hover:text-[#071431] dark:text-white dark:hover:text-white/90',
+            )}
+          >
+            Home
+          </Link>
+
+          <ServicesNavDropdown isActive={isServicesNavActive(pathname)} />
+
+          {navLinks.slice(1).map((link) => {
             const isActive = isNavLinkActive(pathname, link.href);
 
             return (
-            <Link
-              key={link.label}
-              href={link.href}
-              className={cn(
-                'text-base font-medium transition-colors',
-                isActive
-                  ? 'text-gradient font-semibold'
-                  : 'text-[#343e56] hover:text-[#071431] dark:text-white dark:hover:text-white/90',
-              )}
-            >
-              {link.label}
-            </Link>
+              <Link
+                key={link.label}
+                href={link.href}
+                className={cn(
+                  'text-base font-medium transition-colors',
+                  isActive
+                    ? 'text-gradient font-semibold'
+                    : 'text-[#343e56] hover:text-[#071431] dark:text-white dark:hover:text-white/90',
+                )}
+              >
+                {link.label}
+              </Link>
             );
           })}
         </nav>
@@ -207,7 +223,52 @@ export default function SiteHeader({ className }: { className?: string }) {
           </div>
 
           <ul className="overflow-hidden rounded-2xl bg-white/75 ring-1 ring-[#f0d8ff] dark:bg-white/[0.06] dark:ring-white/10">
-            {navLinks.map((link, index) => {
+            <li
+              className={cn(
+                'border-b border-[#f0d8ff]/70 transition-[opacity,transform] duration-300 ease-out dark:border-white/10',
+                mobileOpen ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0',
+              )}
+            >
+              <Link
+                href="/"
+                onClick={closeMobileMenu}
+                className={cn(
+                  'flex items-center gap-3 px-4 py-3.5 transition-colors duration-200 sm:py-4',
+                  isNavLinkActive(pathname, '/')
+                    ? 'bg-[#faf2ff]/80 dark:bg-white/[0.08]'
+                    : 'hover:bg-[#fdf6ff]/90 dark:hover:bg-white/[0.05]',
+                )}
+              >
+                <Home
+                  className={cn(
+                    'size-[18px] shrink-0',
+                    isNavLinkActive(pathname, '/')
+                      ? 'text-[#8f2acd] dark:text-[#cb7ef7]'
+                      : 'text-[#8a94a8] dark:text-[#9ca3af]',
+                  )}
+                  strokeWidth={2}
+                />
+                <span
+                  className={cn(
+                    'text-[15px] font-medium sm:text-base',
+                    isNavLinkActive(pathname, '/')
+                      ? 'text-gradient font-semibold'
+                      : 'text-[#13203b] dark:text-[#efedf1]',
+                  )}
+                >
+                  Home
+                </span>
+              </Link>
+            </li>
+
+            <ServicesNavMobile
+              pathname={pathname}
+              onNavigate={closeMobileMenu}
+              mobileOpen={mobileOpen}
+              index={1}
+            />
+
+            {navLinks.slice(1).map((link, index) => {
               const Icon = link.icon;
               const isActive = isNavLinkActive(pathname, link.href);
 
@@ -220,7 +281,7 @@ export default function SiteHeader({ className }: { className?: string }) {
                       ? 'translate-y-0 opacity-100'
                       : 'translate-y-2 opacity-0',
                   )}
-                  style={{ transitionDelay: mobileOpen ? `${index * 35}ms` : '0ms' }}
+                  style={{ transitionDelay: mobileOpen ? `${(index + 2) * 35}ms` : '0ms' }}
                 >
                   <Link
                     href={link.href}

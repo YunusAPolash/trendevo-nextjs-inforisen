@@ -36,59 +36,6 @@ const companyLinks = [
   { label: 'Contact Us', href: '/contact-us' },
 ];
 
-const serviceLinks = [
-  { label: 'Facebook Services', href: '/facebook-smm-panel' },
-  { label: 'Facebook Page Followers', href: '/buy-facebook-followers' },
-  { label: 'Facebook Page Likes', href: '/buy-facebook-page-likes' },
-  { label: 'Facebook Page Comments', href: '/buy-facebook-comments' },
-  { label: 'Youtube Services', href: '/youtube-smm-panel' },
-  { label: 'YouTube Subscribers', href: '/buy-youtube-subscribers' },
-  { label: 'YouTube Views', href: '/buy-youtube-views' },
-  { label: 'YouTube Comments', href: '/buy-youtube-comments' },
-  { label: 'YouTube Likes', href: '/buy-youtube-likes' },
-  { label: 'Instagram Services', href: '/instagram-smm-panel' },
-  { label: 'Instagram Comments', href: '/buy-instagram-comments' },
-  { label: 'Instagram Likes', href: '/buy-instagram-likes' },
-  { label: 'Instagram Followers', href: '/buy-instagram-followers' },
-  { label: 'Instagram Views', href: '/buy-instagram-views' },
-  { label: 'Instagram Shares', href: '/buy-instagram-shares' },
-  { label: 'Instagram Auto-Likes', href: '/buy-instagram-auto-likes' },
-  { label: 'Instagram Story Views', href: '/buy-instagram-story-views' },
-  { label: 'X-Twitter Services', href: '/x-twitter-smm-panel' },
-  { label: 'Twitter Followers', href: '/buy-x-twitter-followers' },
-  { label: 'Twitter Likes', href: '/buy-x-twitter-likes' },
-  { label: 'Telegram Services', href: '/telegram-smm-panel' },
-  { label: 'Telegram Members', href: '/buy-telegram-members' },
-  { label: 'TikTok Services', href: '/tiktok-smm-panel' },
-  { label: 'TikTok Followers', href: '/buy-tiktok-followers' },
-  { label: 'TikTok Likes', href: '/buy-tiktok-likes' },
-  { label: 'TikTok Views', href: '/buy-tiktok-views' },
-  { label: 'LinkedIn Followers', href: '/buy-linkedin-followers' },
-  { label: 'LinkedIn Likes', href: '/buy-linkedin-likes' },
-  { label: 'Spotify Services', href: '/spotify-smm-panel' },
-  { label: 'Spotify Plays', href: '/buy-spotify-plays' },
-  { label: 'Spotify Followers', href: '/buy-spotify-followers' },
-  { label: 'Spotify Monthly Listeners', href: '/buy-spotify-monthly-listeners' },
-  { label: 'Soundcloud Services', href: '/soundcloud-smm-panel' },
-  { label: 'SoundCloud Followers', href: '/buy-soundcloud-followers' },
-  { label: 'SoundCloud Plays', href: '/buy-soundcloud-plays' },
-  { label: 'Twitch Services', href: '/twitch-smm-panel' },
-  { label: 'Twitch Followers', href: '/buy-twitch-followers' },
-  { label: 'Twitch Viewers', href: '/buy-twitch-viewers' },
-  { label: 'Kick Followers', href: '/buy-kick-followers' },
-  { label: 'Kick Viewers', href: '/buy-kick-viewers' },
-  { label: 'Reddit Upvotes', href: '/buy-reddit-upvotes' },
-  { label: 'Reddit Account', href: '/buy-reddit-accounts' },
-  { label: 'Quora Followers', href: '/buy-quora-followers' },
-  { label: 'Quora Upvotes', href: '/buy-quora-upvotes' },
-  { label: 'Vimeo Followers', href: '/buy-vimeo-followers' },
-  { label: 'Threads Followers', href: '/buy-threads-followers' },
-  { label: 'Snapchat Services', href: '/snapchat-smm-panel' },
-  { label: 'Snapchat Followers', href: '/buy-snapchat-followers' },
-  { label: 'Discord Members', href: '/buy-discord-members' },
-  { label: 'Discord Account', href: '/buy-discord-account' },
-];
-
 const socialLinks = [
   {
     label: 'Facebook',
@@ -318,24 +265,6 @@ export default function FooterSection() {
             </div>
           </FooterColumn>
         </div>
-
-        <FooterColumn
-          title="Our Services"
-          className="border-t border-[#d99aff]/25 pt-6 sm:pt-8 dark:border-white/20"
-        >
-          <ul className="grid grid-cols-2 gap-x-4 gap-y-2.5 sm:grid-cols-3 sm:gap-y-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {serviceLinks.map((link) => (
-              <li key={link.label} className="min-w-0">
-                <Link
-                  href={link.href}
-                  className="text-[13px] font-medium leading-snug text-[#222e48] transition-colors hover:text-[#13203b] sm:text-sm sm:leading-normal dark:text-[#ebecef] dark:hover:text-white"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </FooterColumn>
 
         <div className="relative flex min-h-[44px] items-center justify-center overflow-hidden rounded-lg border border-[#d99aff]/50 bg-white px-2 py-2 sm:min-h-[64px] sm:rounded-xl sm:px-4 sm:py-4 md:min-h-[83px] md:rounded-[18px] md:px-6 md:py-6 dark:border-white/20 dark:bg-[rgba(255,255,255,0.06)]">
           <div
