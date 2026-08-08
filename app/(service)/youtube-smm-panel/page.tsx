@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildServiceProvider } from '@/lib/seo/json-ld';
 import FaqSection from '@/components/sections/faq-section';
 import { data as youtubeSmmPanelPageData } from '@/app/(service)/youtube-smm-panel/page-data';
 import YoutubeSmmPanelAdvantageSection from './_components/advantage-section';
@@ -21,11 +22,7 @@ const schema = {
   '@type': 'Service',
   name: youtubeSmmPanelPageData.schema.name,
   description: youtubeSmmPanelPageData.schema.description,
-  provider: {
-    '@type': 'Organization',
-    name: 'TrendEvo',
-    url: 'https://trendevo.com',
-  },
+  provider: buildServiceProvider(),
   areaServed: youtubeSmmPanelPageData.schema.areaServed,
   url: youtubeSmmPanelPageData.schema.url,
 };

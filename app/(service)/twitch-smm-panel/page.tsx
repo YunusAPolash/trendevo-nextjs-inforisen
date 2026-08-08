@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildServiceProvider } from '@/lib/seo/json-ld';
 import StatsMarqueeSection from '@/app/about-us/_components/stats-marquee-section';
 import ServiceAdvantage from '@/components/sections/service-advantage';
 import ServiceHero from '@/components/sections/serviceHero';
@@ -19,11 +20,7 @@ const schema = {
   '@type': 'Service',
   name: twitchSmmPanelPageData.schema.name,
   description: twitchSmmPanelPageData.schema.description,
-  provider: {
-    '@type': 'Organization',
-    name: 'TrendEvo',
-    url: 'https://trendevo.com',
-  },
+  provider: buildServiceProvider(),
   areaServed: twitchSmmPanelPageData.schema.areaServed,
   url: twitchSmmPanelPageData.schema.url,
 };

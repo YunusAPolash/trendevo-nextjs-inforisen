@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildServiceProvider } from '@/lib/seo/json-ld';
 import FaqSection from '@/components/sections/faq-section';
 import { data as spotifySmmPanelPageData } from '@/app/(service)/spotify-smm-panel/page-data';
 import SpotifySmmPanelAdvantageSection from './_components/advantage-section';
@@ -21,11 +22,7 @@ const schema = {
   '@type': 'Service',
   name: spotifySmmPanelPageData.schema.name,
   description: spotifySmmPanelPageData.schema.description,
-  provider: {
-    '@type': 'Organization',
-    name: 'TrendEvo',
-    url: 'https://trendevo.com',
-  },
+  provider: buildServiceProvider(),
   areaServed: spotifySmmPanelPageData.schema.areaServed,
   url: spotifySmmPanelPageData.schema.url,
 };

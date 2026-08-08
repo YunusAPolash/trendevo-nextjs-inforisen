@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildServiceProvider } from '@/lib/seo/json-ld';
 import FaqSection from '@/components/sections/faq-section';
 import { data as tiktokSmmPanelPageData } from '@/app/(service)/tiktok-smm-panel/page-data';
 import TiktokSmmPanelAdvantageSection from './_components/advantage-section';
@@ -21,11 +22,7 @@ const schema = {
   '@type': 'Service',
   name: tiktokSmmPanelPageData.schema.name,
   description: tiktokSmmPanelPageData.schema.description,
-  provider: {
-    '@type': 'Organization',
-    name: 'TrendEvo',
-    url: 'https://trendevo.com',
-  },
+  provider: buildServiceProvider(),
   areaServed: tiktokSmmPanelPageData.schema.areaServed,
   url: tiktokSmmPanelPageData.schema.url,
 };

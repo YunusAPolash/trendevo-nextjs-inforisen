@@ -9,6 +9,7 @@ import {
   GoogleTagManagerNoscript,
 } from '@/components/analytics/google-tag-manager';
 import FooterSection from './(home)/_components/footer-section';
+import { getSiteUrl } from '@/lib/site-url';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -23,6 +24,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getSiteUrl()),
   title: 'Cheapest SMM Panel in Bangladesh Pay with bKash | TrendEvo',
   description:
     'TrendEvo is a trusted SMM Panel Bangladesh platform for Facebook, Instagram, YouTube, TikTok, and more. Pay easily with bKash, Nagad, or Rocket.',

@@ -7,8 +7,11 @@ import RelatedBlogsSection from './_components/related-blogs-section';
 import CtaSection from '@/components/sections/cta-section';
 import PrimaryButton from '@/components/buttons/primary-button';
 import SecondaryButton from '@/components/buttons/secondary-button';
+import JsonLdScript from '@/components/seo/json-ld-script';
 import { signUpUrl } from '@/lib/auth-urls';
 import { buildBlogShareLinks, getBlogBySlug, getBlogs, parseBlogMetaKeywords } from '@/lib/blogs';
+import { buildBlogPostingSchema } from '@/lib/seo/json-ld';
+import { absoluteUrl } from '@/lib/site-url';
 
 type BlogDetailsPageProps = {
   params: Promise<{ slug: string }>;
@@ -30,6 +33,7 @@ export async function generateMetadata({
 
   const { seo, title, summary } = blog;
   const keywords = parseBlogMetaKeywords(seo.metaKeywords);
+  const canonical = seo.canonicalUrl || absoluteUrl(`/blog/${slug}`);
 
   return {
     title: seo.metaTitle || `${title} | TrendEvo Blog`,
@@ -38,13 +42,11 @@ export async function generateMetadata({
       summary ||
       'Read the latest insights on social media marketing and SMM panel strategies from TrendEvo.',
     keywords: keywords.length > 0 ? keywords : undefined,
-    alternates: seo.canonicalUrl
-      ? { canonical: seo.canonicalUrl }
-      : undefined,
+    alternates: { canonical },
     openGraph: {
       title: seo.ogTitle || title,
       description: seo.ogDescription || summary,
-      url: seo.canonicalUrl || undefined,
+      url: canonical,
       type: seo.ogType === 'article' ? 'article' : 'website',
       locale: seo.ogLocale || undefined,
       siteName: seo.ogSiteName || undefined,
@@ -80,6 +82,7 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
 
   return (
     <>
+      <JsonLdScript data={buildBlogPostingSchema(blog)} />
       <ArticleLayoutSection
         breadcrumbLabel={blog.title}
         tableOfContents={blog.tableOfContents}

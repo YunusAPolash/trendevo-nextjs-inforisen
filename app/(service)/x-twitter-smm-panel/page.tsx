@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildServiceProvider } from '@/lib/seo/json-ld';
 import FaqSection from '@/components/sections/faq-section';
 import { data as xTwitterSmmPanelPageData } from '@/app/(service)/x-twitter-smm-panel/page-data';
 import XTwitterSmmPanelAdvantageSection from './_components/advantage-section';
@@ -21,11 +22,7 @@ const schema = {
   '@type': 'Service',
   name: xTwitterSmmPanelPageData.schema.name,
   description: xTwitterSmmPanelPageData.schema.description,
-  provider: {
-    '@type': 'Organization',
-    name: 'TrendEvo',
-    url: 'https://trendevo.com',
-  },
+  provider: buildServiceProvider(),
   areaServed: xTwitterSmmPanelPageData.schema.areaServed,
   url: xTwitterSmmPanelPageData.schema.url,
 };

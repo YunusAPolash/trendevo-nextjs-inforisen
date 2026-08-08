@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildServiceProvider } from '@/lib/seo/json-ld';
 import FaqSection from '@/components/sections/faq-section';
 import { data as soundcloudSmmPanelPageData } from '@/app/(service)/soundcloud-smm-panel/page-data';
 import SoundcloudSmmPanelAdvantageSection from './_components/advantage-section';
@@ -21,11 +22,7 @@ const schema = {
   '@type': 'Service',
   name: soundcloudSmmPanelPageData.schema.name,
   description: soundcloudSmmPanelPageData.schema.description,
-  provider: {
-    '@type': 'Organization',
-    name: 'TrendEvo',
-    url: 'https://trendevo.com',
-  },
+  provider: buildServiceProvider(),
   areaServed: soundcloudSmmPanelPageData.schema.areaServed,
   url: soundcloudSmmPanelPageData.schema.url,
 };

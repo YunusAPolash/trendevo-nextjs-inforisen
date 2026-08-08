@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildServiceProvider } from '@/lib/seo/json-ld';
 import FaqSection from '@/components/sections/faq-section';
 import { data as telegramSmmPanelPageData } from '@/app/(service)/telegram-smm-panel/page-data';
 import TelegramSmmPanelAdvantageSection from './_components/advantage-section';
@@ -21,11 +22,7 @@ const schema = {
   '@type': 'Service',
   name: telegramSmmPanelPageData.schema.name,
   description: telegramSmmPanelPageData.schema.description,
-  provider: {
-    '@type': 'Organization',
-    name: 'TrendEvo',
-    url: 'https://trendevo.com',
-  },
+  provider: buildServiceProvider(),
   areaServed: telegramSmmPanelPageData.schema.areaServed,
   url: telegramSmmPanelPageData.schema.url,
 };

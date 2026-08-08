@@ -125,9 +125,13 @@ function getBlogShareUrl(slug: string, canonicalUrl: string | null): string {
     return canonicalUrl;
   }
 
-  const appUrl = process.env.NEXT_PUBLIC_PERFECT_APP_URL?.replace(/\/$/, '') ?? '';
+  // Prefer marketing site URL; panel app URL is not the public blog origin.
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ||
+    process.env.NEXT_PUBLIC_PERFECT_APP_URL?.replace(/\/$/, '') ||
+    '';
 
-  return `${appUrl}/blog/${slug}`;
+  return `${siteUrl}/blog/${slug}`;
 }
 
 export function parseBlogMetaKeywords(
@@ -410,6 +414,70 @@ export async function getBlogBySlug(slug: string): Promise<BlogDetail | null> {
   } catch {
     return null;
   }
+}
+
+export type BlogSitemapEntry = {
+  slug: string;
+  publishedAt: string;
+  authorSlug: string;
+};
+
+/**
+ * Paginate the blogs API for sitemap generation.
+ * Keeps ISO `publishedAt` (unlike `getBlogs` card mapping) and unique author slugs.
+ */
+export async function getAllBlogsForSitemap(
+  perPage = 100,
+): Promise<BlogSitemapEntry[]> {
+  const apiBase = process.env.NEXT_PUBLIC_API_URL;
+
+  if (!apiBase) {
+    return [];
+  }
+
+  const entries: BlogSitemapEntry[] = [];
+  let page = 1;
+  let lastPage = 1;
+
+  try {
+    do {
+      const response = await fetch(
+        `${apiBase}/blogs?per_page=${perPage}&page=${page}`,
+        { next: { revalidate: 3600 } },
+      );
+
+      if (!response.ok) {
+        break;
+      }
+
+      const json = (await response.json()) as BlogsApiResponse;
+
+      if (!Array.isArray(json.data)) {
+        break;
+      }
+
+      for (const item of json.data) {
+        const slug = item.attributes?.slug;
+        const publishedAt = item.attributes?.publishedAt;
+        const authorSlug = item.relationships?.author?.attributes?.slug;
+
+        if (!slug || !publishedAt) continue;
+
+        entries.push({
+          slug,
+          publishedAt,
+          authorSlug: authorSlug ?? '',
+        });
+      }
+
+      lastPage = Math.max(json.meta?.last_page ?? 1, 1);
+      page += 1;
+    } while (page <= lastPage);
+  } catch {
+    return entries;
+  }
+
+  return entries;
 }
 
 export async function getAuthorPage(

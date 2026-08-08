@@ -14,6 +14,11 @@ import WorkingProcessSection from '@/app/(home)/_components/working-process-sect
 import FaqSection from '@/components/sections/faq-section';
 import OurService from '@/app/(home)/_components/our-service';
 import StatsSection from '@/app/(home)/_components/stats-section';
+import JsonLdScript from '@/components/seo/json-ld-script';
+import {
+  buildOrganizationSchema,
+  buildWebSiteSchema,
+} from '@/lib/seo/json-ld';
 
 export const metadata: Metadata = {
   title: homePageData.seo.title,
@@ -26,6 +31,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <JsonLdScript
+        data={[buildOrganizationSchema(), buildWebSiteSchema()]}
+      />
       <HeroSection />
       <StatsSection />
       <OurService />

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildServiceProvider } from '@/lib/seo/json-ld';
 import FaqSection from '@/components/sections/faq-section';
 import { data as instagramSmmPanelPageData } from '@/app/(service)/instagram-smm-panel/page-data';
 import InstagramSmmPanelAdvantageSection from './_components/advantage-section';
@@ -21,11 +22,7 @@ const schema = {
   '@type': 'Service',
   name: instagramSmmPanelPageData.schema.name,
   description: instagramSmmPanelPageData.schema.description,
-  provider: {
-    '@type': 'Organization',
-    name: 'TrendEvo',
-    url: 'https://trendevo.com',
-  },
+  provider: buildServiceProvider(),
   areaServed: instagramSmmPanelPageData.schema.areaServed,
   url: instagramSmmPanelPageData.schema.url,
 };
