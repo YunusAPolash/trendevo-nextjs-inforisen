@@ -51,13 +51,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <GoogleTagManagerNoscript />
         <GoogleTagManager />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-          storageKey="trendevo-theme"
-        >
+        <ThemeProvider defaultTheme="system" disableTransitionOnChange>
           <SiteHeader />
           <main>{children}</main>
           <FooterSection />

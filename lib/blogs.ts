@@ -12,6 +12,7 @@ type BlogAuthorAttributes = {
   avatar: string | null;
   designation: string;
   bio?: string;
+  socialLinks?: string[] | Record<string, string> | null;
 };
 
 type BlogCategoryAttributes = {
@@ -72,7 +73,12 @@ type BlogDetailApiItem = {
     coverImage: string;
     summary: string;
     htmlContent: string;
+    contentEditor?: string;
     tableOfContent: TableOfContentItem[];
+    editorCss?: {
+      tailwind?: string;
+      compiled?: string;
+    };
     publishedAt: string;
   };
   relationships: {
@@ -109,8 +115,10 @@ type BlogsApiResponse = {
 };
 
 export type BlogTableOfContentLink = {
+  id: string;
   label: string;
   href: string;
+  level: number;
 };
 
 export type BlogShareLink = {
@@ -205,17 +213,31 @@ export function buildBlogShareLinks(blog: {
   ];
 }
 
+export type BlogAuthorSocialLink = {
+  label: string;
+  href: string;
+  iconSrc: string;
+};
+
 export type BlogAuthor = {
   name: string;
   slug: string;
   avatar: string;
   designation: string;
   bio: string;
+  socialLinks: BlogAuthorSocialLink[];
 };
 
 export type BlogSeo = BlogSeoAttributes;
 
 export type BlogCategory = BlogCategoryAttributes;
+
+export type BlogContentEditor = 'richtext' | 'grapes';
+
+export type BlogEditorCss = {
+  tailwind?: string;
+  compiled?: string;
+};
 
 export type BlogDetail = {
   id: number;
@@ -224,6 +246,8 @@ export type BlogDetail = {
   summary: string;
   coverImage: string;
   htmlContent: string;
+  contentEditor: BlogContentEditor;
+  editorCss: BlogEditorCss;
   tableOfContents: BlogTableOfContentLink[];
   publishedAt: string;
   postedAtLabel: string;
@@ -246,9 +270,65 @@ export type AuthorPageResult = {
   totalPages: number;
 };
 
+function normalizeAuthorSocialLinks(
+  links: string[] | Record<string, string> | null | undefined,
+): BlogAuthorSocialLink[] {
+  if (!links) return [];
+
+  const entries: Array<{ key: string; href: string }> = Array.isArray(links)
+    ? links.filter(Boolean).map((href) => ({ key: href, href }))
+    : Object.entries(links)
+        .filter(([, href]) => Boolean(href))
+        .map(([key, href]) => ({ key, href }));
+
+  const iconByKey = [
+    {
+      match: /facebook|fb\.com/i,
+      label: 'Facebook',
+      iconSrc: '/images/icons/blog-details-facebook-icon.webp',
+    },
+    {
+      match: /instagram/i,
+      label: 'Instagram',
+      iconSrc: '/images/icons/blog-details-instagram-icon.webp',
+    },
+    {
+      match: /\bx\b|twitter/i,
+      label: 'X',
+      iconSrc: '/images/icons/blog-details-x-icon.webp',
+    },
+    {
+      match: /linkedin/i,
+      label: 'LinkedIn',
+      iconSrc: '/images/icons/blog-details-linkedin-icon.webp',
+    },
+  ] as const;
+
+  return entries.map(({ key, href }, index) => {
+    const haystack = `${key} ${href}`;
+    const matched = iconByKey.find((entry) => entry.match.test(haystack));
+
+    if (matched) {
+      return {
+        label: matched.label,
+        href,
+        iconSrc: matched.iconSrc,
+      };
+    }
+
+    const fallback = iconByKey[index % iconByKey.length];
+    return {
+      label: fallback.label,
+      href,
+      iconSrc: fallback.iconSrc,
+    };
+  });
+}
+
 function mapAuthorAttributes(
   attributes: BlogAuthorAttributes,
   bio = '',
+  socialLinks?: BlogAuthorSocialLink[],
 ): BlogAuthor {
   return {
     name: attributes.name,
@@ -256,6 +336,8 @@ function mapAuthorAttributes(
     avatar: attributes.avatar ?? DEFAULT_BLOG_DETAIL_AUTHOR_AVATAR,
     designation: attributes.designation,
     bio,
+    socialLinks:
+      socialLinks ?? normalizeAuthorSocialLinks(attributes.socialLinks),
   };
 }
 
@@ -365,9 +447,17 @@ function mapBlogDetailItem(item: BlogDetailApiItem, slug: string): BlogDetail {
     summary: attributes.summary,
     coverImage: attributes.coverImage,
     htmlContent: attributes.htmlContent,
+    contentEditor:
+      attributes.contentEditor === 'richtext' ? 'richtext' : 'grapes',
+    editorCss: {
+      tailwind: attributes.editorCss?.tailwind,
+      compiled: attributes.editorCss?.compiled,
+    },
     tableOfContents: (attributes.tableOfContent ?? []).map((entry) => ({
+      id: entry.id,
       label: entry.text,
       href: `#${entry.id}`,
+      level: entry.level,
     })),
     publishedAt: attributes.publishedAt,
     postedAtLabel: formatBlogHeroPostedAt(attributes.publishedAt),
@@ -378,6 +468,7 @@ function mapBlogDetailItem(item: BlogDetailApiItem, slug: string): BlogDetail {
         authorAttributes.avatar ?? DEFAULT_BLOG_DETAIL_AUTHOR_AVATAR,
       designation: authorAttributes.designation,
       bio: authorAttributes.bio ?? '',
+      socialLinks: normalizeAuthorSocialLinks(authorAttributes.socialLinks),
     },
     category: relationships.category.attributes,
     seo: mapBlogSeo(relationships.seo?.attributes, {
@@ -514,19 +605,21 @@ export async function getAuthorPage(
     }
 
     let bio = firstAuthor.bio ?? '';
+    let socialLinks = normalizeAuthorSocialLinks(firstAuthor.socialLinks);
     const firstPostSlug = json.data[0].attributes.slug;
     const firstPostDetail = await getBlogBySlug(firstPostSlug);
 
-    if (
-      firstPostDetail &&
-      firstPostDetail.author.slug === authorSlug &&
-      firstPostDetail.author.bio
-    ) {
-      bio = firstPostDetail.author.bio;
+    if (firstPostDetail && firstPostDetail.author.slug === authorSlug) {
+      if (firstPostDetail.author.bio) {
+        bio = firstPostDetail.author.bio;
+      }
+      if (firstPostDetail.author.socialLinks.length > 0) {
+        socialLinks = firstPostDetail.author.socialLinks;
+      }
     }
 
     return {
-      author: mapAuthorAttributes(firstAuthor, bio),
+      author: mapAuthorAttributes(firstAuthor, bio, socialLinks),
       posts: json.data.map(mapBlogItemToPost),
       currentPage: json.meta?.current_page ?? page,
       totalPages: Math.max(json.meta?.last_page ?? 1, 1),

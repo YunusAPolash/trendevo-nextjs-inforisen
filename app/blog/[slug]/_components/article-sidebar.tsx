@@ -2,10 +2,51 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useMemo, useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import type { BlogShareLink, BlogTableOfContentLink } from '@/lib/blogs';
 import { cn } from '@/lib/utils';
 
 const HEADER_SCROLL_OFFSET = 112;
+
+type TocNode = {
+  item: BlogTableOfContentLink;
+  children: BlogTableOfContentLink[];
+};
+
+function isParentLevel(level: number | undefined) {
+  return level === undefined || level <= 2;
+}
+
+function buildTocTree(items: BlogTableOfContentLink[]): TocNode[] {
+  const tree: TocNode[] = [];
+  let currentParent: TocNode | null = null;
+
+  for (const item of items) {
+    if (isParentLevel(item.level)) {
+      currentParent = { item, children: [] };
+      tree.push(currentParent);
+      continue;
+    }
+
+    if (currentParent) {
+      currentParent.children.push(item);
+    } else {
+      tree.push({ item, children: [] });
+    }
+  }
+
+  return tree;
+}
+
+function findParentIdForChild(tree: TocNode[], childId: string): string | null {
+  for (const node of tree) {
+    if (node.children.some((child) => child.id === childId)) {
+      return node.item.id;
+    }
+  }
+  return null;
+}
 
 function scrollToSection(sectionId: string) {
   const element = document.getElementById(sectionId);
@@ -43,6 +84,16 @@ async function copyShareUrl(url: string) {
   }
 }
 
+function tocLinkClass(isActive: boolean, nested = false) {
+  return cn(
+    'block cursor-pointer py-2 text-sm font-medium leading-normal transition-colors',
+    nested ? 'pl-6 pr-3' : 'px-3',
+    isActive
+      ? 'rounded-lg bg-brand-gradient text-white'
+      : 'text-[#404a60] hover:text-[#13203b] dark:text-[#dfe0e4] dark:hover:text-white',
+  );
+}
+
 export default function ArticleSidebar({
   tableOfContents = [],
   shareLinks = [],
@@ -51,12 +102,84 @@ export default function ArticleSidebar({
   authorAvatarSrc = '/images/blog-details/blog-details-author-seam-rahman-avatar.webp',
   authorDesignation = 'CEO,Trend Evo',
 }: ArticleSidebarProps) {
+  const tocTree = useMemo(
+    () => buildTocTree(tableOfContents),
+    [tableOfContents],
+  );
+  const [activeId, setActiveId] = useState(tableOfContents[0]?.id ?? '');
+  const [expandedIds, setExpandedIds] = useState<Set<string>>(
+    () => new Set(),
+  );
+
+  useEffect(() => {
+    if (tableOfContents.length === 0) return;
+
+    const headingElements = tableOfContents
+      .map((item) => document.getElementById(item.id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (headingElements.length === 0) return;
+
+    const visibleIds = new Set<string>();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            visibleIds.add(entry.target.id);
+          } else {
+            visibleIds.delete(entry.target.id);
+          }
+        }
+
+        const nextActive = tableOfContents.find((item) =>
+          visibleIds.has(item.id),
+        )?.id;
+
+        if (nextActive) {
+          setActiveId(nextActive);
+          const parentId = findParentIdForChild(tocTree, nextActive);
+          if (parentId) {
+            setExpandedIds((prev) => {
+              if (prev.has(parentId)) return prev;
+              const next = new Set(prev);
+              next.add(parentId);
+              return next;
+            });
+          }
+        }
+      },
+      {
+        rootMargin: '-15% 0px -65% 0px',
+        threshold: [0, 0.25, 1],
+      },
+    );
+
+    for (const el of headingElements) {
+      observer.observe(el);
+    }
+
+    return () => observer.disconnect();
+  }, [tableOfContents, tocTree]);
+
+  const toggleExpanded = (id: string) => {
+    setExpandedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
   return (
-    <aside className="flex w-full max-w-[341px] flex-col gap-12">
-      <div className="flex h-[318px] items-center gap-3">
+    <aside className="flex w-full max-w-[341px] flex-col gap-12 self-start lg:sticky lg:top-28">
+      <div className="flex items-start gap-3">
         <div
           aria-hidden
-          className="flex h-full w-1 shrink-0 overflow-hidden rounded-full bg-[#ebecef] backdrop-blur-[10px] dark:bg-[rgba(235,236,239,0.25)]"
+          className="mt-1 flex min-h-[120px] w-1 shrink-0 self-stretch overflow-hidden rounded-full bg-[#ebecef] backdrop-blur-[10px] dark:bg-[rgba(235,236,239,0.25)]"
         >
           <div className="h-11 w-full rounded-full bg-brand-gradient" />
         </div>
@@ -68,29 +191,93 @@ export default function ArticleSidebar({
             </p>
           </div>
 
-          <ul>
-            {tableOfContents.map((item, index) => (
-              <li
-                key={item.href}
-                className={cn(
-                  'px-3 pt-2 pb-3',
-                  index < tableOfContents.length - 1 &&
-                    'border-b border-dashed border-[#dfe0e4] dark:border-[#6a7283]',
-                )}
-              >
-                <a
-                  href={item.href}
-                  onClick={(event) => {
-                    event.preventDefault();
-                    scrollToSection(item.href.replace('#', ''));
-                  }}
-                  className="block text-base font-medium leading-normal text-[#404a60] hover:text-[#13203b] dark:text-[#dfe0e4] dark:hover:text-white"
+          <div className="mt-1 flex flex-col">
+            {tocTree.map((node) => {
+              const parent = node.item;
+              const isActive = parent.id === activeId;
+              const hasChildren = node.children.length > 0;
+              const isExpanded = expandedIds.has(parent.id);
+              const childActive = node.children.some(
+                (child) => child.id === activeId,
+              );
+
+              return (
+                <div
+                  key={parent.id}
+                  className="border-b border-dashed border-[#dfe0e4] last:border-b-0 dark:border-[#6a7283]"
                 >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+                  <div className="relative flex items-stretch">
+                    <a
+                      href={parent.href}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        setActiveId(parent.id);
+                        scrollToSection(parent.id);
+                        if (hasChildren) {
+                          setExpandedIds((prev) => {
+                            const next = new Set(prev);
+                            next.add(parent.id);
+                            return next;
+                          });
+                        }
+                      }}
+                      className={cn(
+                        tocLinkClass(
+                          isActive || (childActive && !isExpanded),
+                        ),
+                        'min-w-0 flex-1',
+                        hasChildren && 'pr-10',
+                      )}
+                    >
+                      {parent.label}
+                    </a>
+                    {hasChildren ? (
+                      <button
+                        type="button"
+                        aria-expanded={isExpanded}
+                        aria-label={
+                          isExpanded
+                            ? `Collapse ${parent.label}`
+                            : `Expand ${parent.label}`
+                        }
+                        onClick={() => toggleExpanded(parent.id)}
+                        className="absolute right-1 top-1/2 flex size-7 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md text-[#6a7283] transition-colors hover:text-[#13203b] dark:text-[#dfe0e4] dark:hover:text-white"
+                      >
+                        {isExpanded ? (
+                          <ChevronUp className="size-4" aria-hidden />
+                        ) : (
+                          <ChevronDown className="size-4" aria-hidden />
+                        )}
+                      </button>
+                    ) : null}
+                  </div>
+
+                  {hasChildren && isExpanded ? (
+                    <div className="flex flex-col pb-1">
+                      {node.children.map((child) => {
+                        const isChildActive = child.id === activeId;
+
+                        return (
+                          <a
+                            key={child.id}
+                            href={child.href}
+                            onClick={(event) => {
+                              event.preventDefault();
+                              setActiveId(child.id);
+                              scrollToSection(child.id);
+                            }}
+                            className={tocLinkClass(isChildActive, true)}
+                          >
+                            {child.label}
+                          </a>
+                        );
+                      })}
+                    </div>
+                  ) : null}
+                </div>
+              );
+            })}
+          </div>
         </nav>
       </div>
 
@@ -102,6 +289,7 @@ export default function ArticleSidebar({
                 src={authorAvatarSrc}
                 alt={authorName}
                 fill
+                sizes="109px"
                 className="object-cover"
               />
             </div>

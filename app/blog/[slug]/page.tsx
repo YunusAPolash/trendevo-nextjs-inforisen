@@ -99,7 +99,11 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
             featuredImageSrc={blog.coverImage}
             featuredImageAlt={blog.title}
           />
-          <ArticleBodySection htmlContent={blog.htmlContent} />
+          <ArticleBodySection
+            htmlContent={blog.htmlContent}
+            contentEditor={blog.contentEditor}
+            editorCss={blog.editorCss}
+          />
         </div>
       </ArticleLayoutSection>
       <RelatedBlogsSection posts={relatedPosts} />
