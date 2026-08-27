@@ -26,10 +26,26 @@ function GroupIcon({ group }: { group: ServicesNavGroup }) {
   }
 
   if (group.id === 'all') {
-    return <LayoutGrid className="size-5 shrink-0 text-[#8a94a8] dark:text-[#9ca3af]" strokeWidth={2} />;
+    return (
+      <LayoutGrid
+        className="size-5 shrink-0 text-[#8a94a8] dark:text-[#9ca3af]"
+        strokeWidth={2}
+      />
+    );
   }
 
-  return <Users className="size-5 shrink-0 text-[#8a94a8] dark:text-[#9ca3af]" strokeWidth={2} />;
+  return (
+    <Users className="size-5 shrink-0 text-[#8a94a8] dark:text-[#9ca3af]" strokeWidth={2} />
+  );
+}
+
+function categoryRowClassName(isActive: boolean) {
+  return cn(
+    'flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm font-medium transition-colors',
+    isActive
+      ? 'bg-[#faf2ff]/80 text-[#13203b] dark:bg-white/[0.08] dark:text-[#efedf1]'
+      : 'text-[#13203b] hover:bg-[#faf2ff]/80 dark:text-[#efedf1] dark:hover:bg-white/[0.06]',
+  );
 }
 
 function ServicesCategoryList({
@@ -56,10 +72,30 @@ function ServicesCategoryList({
                 href={group.href}
                 onMouseEnter={() => onActiveGroupChange(null)}
                 onClick={onNavigate}
-                className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-[#13203b] transition-colors hover:bg-[#faf2ff]/80 dark:text-[#efedf1] dark:hover:bg-white/[0.06]"
+                className={categoryRowClassName(false)}
               >
                 <GroupIcon group={group} />
                 <span className="flex-1">{group.label}</span>
+              </Link>
+            </li>
+          );
+        }
+
+        if (group.href) {
+          return (
+            <li key={group.id}>
+              <Link
+                href={group.href}
+                onMouseEnter={() => onActiveGroupChange(group.id)}
+                onFocus={() => onActiveGroupChange(group.id)}
+                onClick={onNavigate}
+                className={categoryRowClassName(isActive)}
+              >
+                <GroupIcon group={group} />
+                <span className="flex-1">{group.label}</span>
+                {hasChildren ? (
+                  <ChevronRight className="size-4 shrink-0 text-[#8a94a8] dark:text-[#9ca3af]" />
+                ) : null}
               </Link>
             </li>
           );
@@ -72,16 +108,13 @@ function ServicesCategoryList({
               onMouseEnter={() => onActiveGroupChange(group.id)}
               onFocus={() => onActiveGroupChange(group.id)}
               onClick={() => onActiveGroupChange(group.id)}
-              className={cn(
-                'flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm font-medium transition-colors',
-                isActive
-                  ? 'bg-[#faf2ff]/80 text-[#13203b] dark:bg-white/[0.08] dark:text-[#efedf1]'
-                  : 'text-[#13203b] hover:bg-[#faf2ff]/80 dark:text-[#efedf1] dark:hover:bg-white/[0.06]',
-              )}
+              className={categoryRowClassName(isActive)}
             >
               <GroupIcon group={group} />
               <span className="flex-1">{group.label}</span>
-              <ChevronRight className="size-4 shrink-0 text-[#8a94a8] dark:text-[#9ca3af]" />
+              {hasChildren ? (
+                <ChevronRight className="size-4 shrink-0 text-[#8a94a8] dark:text-[#9ca3af]" />
+              ) : null}
             </button>
           </li>
         );

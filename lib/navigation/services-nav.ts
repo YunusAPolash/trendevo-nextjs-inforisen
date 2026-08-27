@@ -7,6 +7,7 @@ export type ServicesNavGroup = {
   id: string;
   label: string;
   iconSrc?: string;
+  /** Panel overview page — used as the category row link */
   href?: string;
   children?: ServicesNavLink[];
 };
@@ -21,8 +22,8 @@ export const servicesNavGroups: ServicesNavGroup[] = [
     id: 'instagram',
     label: 'Instagram Services',
     iconSrc: '/images/our-services/platforms/instagram-platform-icon.webp',
+    href: '/instagram-smm-panel',
     children: [
-      { label: 'Instagram Services', href: '/instagram-smm-panel' },
       { label: 'Instagram Followers', href: '/buy-instagram-followers' },
       { label: 'Instagram Views', href: '/buy-instagram-views' },
       { label: 'Instagram Likes', href: '/buy-instagram-likes' },
@@ -36,8 +37,8 @@ export const servicesNavGroups: ServicesNavGroup[] = [
     id: 'facebook',
     label: 'Facebook Services',
     iconSrc: '/images/our-services/platforms/facebook-platform-icon.webp',
+    href: '/facebook-smm-panel',
     children: [
-      { label: 'Facebook Services', href: '/facebook-smm-panel' },
       { label: 'Facebook Page Followers', href: '/buy-facebook-followers' },
       { label: 'Facebook Page Likes', href: '/buy-facebook-page-likes' },
       { label: 'Facebook Page Comments', href: '/buy-facebook-comments' },
@@ -47,8 +48,8 @@ export const servicesNavGroups: ServicesNavGroup[] = [
     id: 'youtube',
     label: 'YouTube Services',
     iconSrc: '/images/our-services/platforms/youtube-platform-icon.webp',
+    href: '/youtube-smm-panel',
     children: [
-      { label: 'YouTube Services', href: '/youtube-smm-panel' },
       { label: 'YouTube Subscribers', href: '/buy-youtube-subscribers' },
       { label: 'YouTube Views', href: '/buy-youtube-views' },
       { label: 'YouTube Comments', href: '/buy-youtube-comments' },
@@ -59,8 +60,8 @@ export const servicesNavGroups: ServicesNavGroup[] = [
     id: 'tiktok',
     label: 'TikTok Services',
     iconSrc: '/images/our-services/platforms/tiktok-platform-icon.webp',
+    href: '/tiktok-smm-panel',
     children: [
-      { label: 'TikTok Services', href: '/tiktok-smm-panel' },
       { label: 'TikTok Followers', href: '/buy-tiktok-followers' },
       { label: 'TikTok Likes', href: '/buy-tiktok-likes' },
       { label: 'TikTok Views', href: '/buy-tiktok-views' },
@@ -70,8 +71,8 @@ export const servicesNavGroups: ServicesNavGroup[] = [
     id: 'telegram',
     label: 'Telegram Services',
     iconSrc: '/images/our-services/platforms/telegram-platform-icon.webp',
+    href: '/telegram-smm-panel',
     children: [
-      { label: 'Telegram Services', href: '/telegram-smm-panel' },
       { label: 'Telegram Members', href: '/buy-telegram-members' },
     ],
   },
@@ -79,8 +80,8 @@ export const servicesNavGroups: ServicesNavGroup[] = [
     id: 'twitter',
     label: 'Twitter Services',
     iconSrc: '/images/our-services/platforms/x-twitter-platform-icon.png',
+    href: '/x-twitter-smm-panel',
     children: [
-      { label: 'X-Twitter Services', href: '/x-twitter-smm-panel' },
       { label: 'Twitter Followers', href: '/buy-x-twitter-followers' },
       { label: 'Twitter Likes', href: '/buy-x-twitter-likes' },
     ],
@@ -94,8 +95,8 @@ export const servicesNavGroups: ServicesNavGroup[] = [
     id: 'spotify',
     label: 'Spotify Services',
     iconSrc: '/images/our-services/platforms/spotify-platform-icon.webp',
+    href: '/spotify-smm-panel',
     children: [
-      { label: 'Spotify Services', href: '/spotify-smm-panel' },
       { label: 'Spotify Followers', href: '/buy-spotify-followers' },
       { label: 'Spotify Monthly Listeners', href: '/buy-spotify-monthly-listeners' },
       { label: 'Spotify Plays', href: '/buy-spotify-plays' },
