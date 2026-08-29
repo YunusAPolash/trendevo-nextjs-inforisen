@@ -1,4 +1,5 @@
 import type { BlogPost } from '@/app/blog/_components/blog-post-card';
+import { apiFetch } from '@/lib/api-fetch';
 
 export const DEFAULT_AUTHOR_AVATAR =
   '/images/blog/blog-tiktok-marketing-complete-guide-for-businesses-avatar.webp';
@@ -410,9 +411,9 @@ export async function getBlogs(
   }
 
   try {
-    const response = await fetch(
+    const response = await apiFetch(
       `${apiBase}/blogs?per_page=${perPage}&page=${page}`,
-      { cache: 'no-store' },
+      { next: { revalidate: 60 } },
     );
 
     if (!response.ok) {
@@ -487,8 +488,8 @@ export async function getBlogBySlug(slug: string): Promise<BlogDetail | null> {
   }
 
   try {
-    const response = await fetch(`${apiBase}/blogs/${slug}`, {
-      cache: 'no-store',
+    const response = await apiFetch(`${apiBase}/blogs/${slug}`, {
+      next: { revalidate: 60 },
     });
 
     if (!response.ok) {
@@ -532,7 +533,7 @@ export async function getAllBlogsForSitemap(
 
   try {
     do {
-      const response = await fetch(
+      const response = await apiFetch(
         `${apiBase}/blogs?per_page=${perPage}&page=${page}`,
         { next: { revalidate: 3600 } },
       );
@@ -583,9 +584,9 @@ export async function getAuthorPage(
   }
 
   try {
-    const response = await fetch(
+    const response = await apiFetch(
       `${apiBase}/blogs?author=${encodeURIComponent(authorSlug)}&per_page=${perPage}&page=${page}`,
-      { cache: 'no-store' },
+      { next: { revalidate: 60 } },
     );
 
     if (!response.ok) {

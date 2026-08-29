@@ -1,3 +1,5 @@
+import { apiFetch } from '@/lib/api-fetch';
+
 export type StatsData = {
   ordersAll: number;
   ordersCompleted: number;
@@ -78,8 +80,8 @@ export async function getStats(): Promise<StatsData> {
   }
 
   try {
-    const response = await fetch(`${apiBase}/stats`, {
-      cache: 'no-store',
+    const response = await apiFetch(`${apiBase}/stats`, {
+      next: { revalidate: 60 },
     });
 
     if (!response.ok) {

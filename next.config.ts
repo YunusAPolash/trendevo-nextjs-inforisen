@@ -15,6 +15,7 @@ const remoteImageHostnames = Array.from(
     [
       'smmgen-backend.fexpink.com',
       'api.trendevo.com',
+      'trendevo-api.fexpink.com',
       hostnameFromUrl(process.env.NEXT_PUBLIC_API_URL),
     ].filter((host): host is string => Boolean(host)),
   ),

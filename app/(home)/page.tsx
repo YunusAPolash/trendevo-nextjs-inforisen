@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import AboutSection from '@/app/(home)/_components/about-section';
 import AdvantagesSection from '@/app/(home)/_components/advantages-section';
 import CtaSection from '@/app/(home)/_components/cta-section';
@@ -34,8 +35,12 @@ export default function Home() {
       <JsonLdScript
         data={[buildOrganizationSchema(), buildWebSiteSchema()]}
       />
-      <HeroSection />
-      <StatsSection />
+      <Suspense fallback={null}>
+        <HeroSection />
+      </Suspense>
+      <Suspense fallback={null}>
+        <StatsSection />
+      </Suspense>
       <OurService />
       <AboutSection />
       <WorkingProcessSection />
@@ -46,7 +51,9 @@ export default function Home() {
       <PricingSection />
       <TestimonialsSection data={homePageData.testimonials} />
       <FaqSection data={homePageData.faq} />
-      <HomeBlog />
+      <Suspense fallback={null}>
+        <HomeBlog />
+      </Suspense>
       <CtaSection />
     </>
   );
